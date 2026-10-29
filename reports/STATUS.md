@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-29T18:21:45Z**.
+Verified snapshot: **2026-10-29T18:24:34Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,14 +16,14 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **PASS** (ci, 2026-10-29T18:20:26.768565Z).
-- The governed CI job reached a terminal result. CI is not native qualification.
+- Recorded outcome: **PASS** (correction, 2026-10-29T18:23:38Z).
+- A reviewed correction was merged. A merge is not evidence of a subsequent qualification pass.
 - Actual workload launched in this activity: **false**.
 - Next gate: Proceed only under a separately valid shard authorization and its prerequisites.
 
 ## Evidence and limits
 
-- Source: private `RobLe3/iicp.network`, commit `e313eb306ba5e194b6980c74c671fcaa9ef8fff6`.
+- Source: private `RobLe3/iicp.network`, commit `36ddbe7e49493f2bf3fa45d1c15f9a26793ed363`.
 - [Receipt derivatives](receipts.json) map each credited assignment to its original receipt digest.
 - [Activity history](events.json) is a selected, append-only register, not a complete historical inventory.
 - Accepted totals come only from merged canonical ledgers. Passing CI, diagnostics and unpromoted runs add no credit.
