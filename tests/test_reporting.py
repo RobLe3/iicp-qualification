@@ -19,6 +19,7 @@ import report_common as common  # noqa: E402
 import qualification_status as cli  # noqa: E402
 from collect_status import private_events  # noqa: E402
 from collect_status import validator_modules  # noqa: E402
+from collect_status import validate_shard_binding  # noqa: E402
 
 
 class ReportingTests(unittest.TestCase):
@@ -475,6 +476,33 @@ class ReportingTests(unittest.TestCase):
             self.assertEqual(git("status", "--porcelain"), "")
             with self.assertRaisesRegex(ValueError, "dependency differs"):
                 validator_modules(p, head, {})
+
+    def test_exact_plan_and_assignment_positive_and_foreign_bindings(self):
+        receipt = self.bundle["receipts"]["receipts"][0]
+        plan = {
+            "plan_sha256": self.bundle["status"]["authority"]["shard_plan_sha256"],
+            "shards_per_target": 16,
+            "shards": [
+                {
+                    "target": receipt["target"],
+                    "shard_index": receipt["shard_index"],
+                    "assignment_sha256": receipt["assignment_sha256"],
+                }
+            ],
+        }
+        shard = {
+            **plan["shards"][0],
+            "plan_sha256": plan["plan_sha256"],
+            "shard_count": 16,
+        }
+        validate_shard_binding(shard, plan)
+        for field, value in [
+            ("plan_sha256", "sha256:" + "0" * 64),
+            ("assignment_sha256", "sha256:" + "0" * 64),
+            ("shard_count", 32),
+        ]:
+            with self.assertRaises(ValueError):
+                validate_shard_binding({**shard, field: value}, plan)
 
 
 if __name__ == "__main__":
