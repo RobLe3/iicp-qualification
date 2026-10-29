@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-29T18:24:34Z**.
+Verified snapshot: **2026-10-29T18:38:04Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,10 +16,10 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **PASS** (correction, 2026-10-29T18:23:38Z).
-- A reviewed correction was merged. A merge is not evidence of a subsequent qualification pass.
+- Recorded outcome: **FAIL** (blocker, 2026-10-29T18:37:31.735038+00:00).
+- The recorded blocker or next permitted action changed; no additional authority is granted.
 - Actual workload launched in this activity: **false**.
-- Next gate: Proceed only under a separately valid shard authorization and its prerequisites.
+- Next gate: Obtain the applicable exact authorization before execution.
 
 ## Evidence and limits
 
