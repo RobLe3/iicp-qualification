@@ -21,6 +21,28 @@
       "reason": "blocker-changed",
       "source_sha256": "sha256:b3e22a101b85cb06aabcbe0d8e78356cd3187dcb6908218da8c0dee7324f4b07",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:8ad39f16a0d6177cdccb933e1a33ddbd964fa3d745ed8dd20055225037853a47",
+      "kind": "ci",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-10-29T12:26:54.034626+00:00",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:60398a6b0cac5ec7d51a4a0a9c3d5def813feadb2818e52f2551d1bfa15204cd",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:66adeb384a2ce729b143b1755ea290740c8c18b23ffd8ba6565e3c56567c7b30",
+      "kind": "blocker",
+      "next_gate": "authorization-required",
+      "occurred_at": "2026-10-29T12:26:54.034626+00:00",
+      "outcome": "REFUSED",
+      "qualification_credit": 0,
+      "reason": "preflight-refused",
+      "source_sha256": "sha256:a42d7a8323acb15e212d43d49459c099be488ec6c9077d154c85ea5d85f5bc34",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
