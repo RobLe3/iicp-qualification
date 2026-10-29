@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-29T10:47:44Z**.
+Verified snapshot: **2026-10-29T12:04:43Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,10 +16,10 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **REFUSED** (blocker, 2026-10-29T10:09:35.350236Z).
-- The Windows continuation stopped before tests because the review record used bare digest strings where the caller required a sha256: prefix. The digest values matched. This is a review-to-caller formatting failure, not a new Windows workload result.
+- Recorded outcome: **PASS** (blocker, 2026-10-29T12:03:35.812719Z).
+- The recorded blocker or next permitted action changed; no additional authority is granted.
 - Actual workload launched in this activity: **false**.
-- Next gate: Review the pending metadata-only recovery, then use the existing exact validation and CI gates. No workload is authorized by this report.
+- Next gate: No next action is inferred from this record.
 
 ## Evidence and limits
 
