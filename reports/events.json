@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "event_id": "sha256:4332d503cd493fb14787a15e7c7d28c821e932fcd3ba9817bbecf427c3c8706f",
+      "kind": "blocker",
+      "next_gate": "review-format-recovery",
+      "occurred_at": "2026-10-29T10:09:35.350236Z",
+      "outcome": "REFUSED",
+      "qualification_credit": 0,
+      "reason": "review-format-refusal",
+      "source_sha256": "sha256:88efff69ed8f2b11640ad0b4d868fe44a30816c2ef8e89dcd8ad47904258ac14",
+      "workload_launched": false
+    }
+  ],
+  "schema": "iicp.qualification-events.v1"
+}

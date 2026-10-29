@@ -1,0 +1,147 @@
+{
+  "accepted": {
+    "certificates": 0,
+    "edge_executions": 4373,
+    "sentinels": 4,
+    "shards": 49,
+    "support_cells": 169
+  },
+  "authority": {
+    "candidate_file_sha256": "sha256:a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
+    "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+    "executor_registry_sha256": "sha256:ddcbc2e6c59122b508bc6e24555695f955c4d2770226c5a008a35aed65f750b0",
+    "sentinel_ledger_sha256": "sha256:7e830b504915614688eba07299df9d886d70b39c182fdf3c36c62cf9e65c5cce",
+    "shard_plan_sha256": "sha256:ef93078c50233190137eb0c8861d39e26bd280ce9d09b15d71b0721aa2da6e79"
+  },
+  "events_sha256": "sha256:8807b10ca4d1516455108c101c859772b8c9aa3d40ff0b08d7f7bcff77ef5a6c",
+  "historical_inventory_complete": false,
+  "inputs_sha256": "sha256:a41985b9c2a11e29aea4642f0734e8835a70484786e96ea9ac9cc04f0247c3fb",
+  "non_authorizing": true,
+  "platforms": [
+    {
+      "accepted_shards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "remaining_shards": [],
+      "target": "linux-x86_64"
+    },
+    {
+      "accepted_shards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "remaining_shards": [],
+      "target": "linux-aarch64"
+    },
+    {
+      "accepted_shards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "remaining_shards": [],
+      "target": "macos-arm64"
+    },
+    {
+      "accepted_shards": [
+        0
+      ],
+      "remaining_shards": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "target": "windows-x86_64"
+    }
+  ],
+  "receipts_sha256": "sha256:214f9050b429a9b5756f50ee3ea972fa90777defa58630bf68dbcdfa640403b2",
+  "reporting_policy_sha256": "sha256:5da5eadd6443ba29207e9028999e9c474e4d8d2ffb5b6a3fa77e7cf7962f42ca",
+  "required": {
+    "certificates": 5,
+    "edge_executions": 5590,
+    "sentinels": 4,
+    "shards": 64,
+    "support_cells": 218
+  },
+  "schema": "iicp.qualification-status.v1",
+  "sentinels": [
+    {
+      "extra_campaign_credit": 0,
+      "receipt_file_sha256": "sha256:d4d27d16d2e57b11ce1ecb4978d4ee3f4715cac3081e5393910dc97998319e94",
+      "target": "linux-aarch64"
+    },
+    {
+      "extra_campaign_credit": 0,
+      "receipt_file_sha256": "sha256:0f741194ec8ab1e448c92bb7dc9c885720e9c28b6907cee935da374dcc0f3b24",
+      "target": "linux-x86_64"
+    },
+    {
+      "extra_campaign_credit": 0,
+      "receipt_file_sha256": "sha256:3175b9be92e83d131a34d5ba28c14157a9ea26f7d55263b0db4e42170e26183d",
+      "target": "macos-arm64"
+    },
+    {
+      "extra_campaign_credit": 0,
+      "receipt_file_sha256": "sha256:16a3c5af5f0b0c5bba7d8b8076a5f9491390f2e2bcf5c7b8fab74048a1d716d4",
+      "target": "windows-x86_64"
+    }
+  ],
+  "source_commit": "a8191a952e9fb44ac143ca87921052d106d9a340",
+  "source_repository": "RobLe3/iicp.network",
+  "validation_scope": "retained-receipts-and-merged-ledgers",
+  "verified_at": "2026-10-29T10:47:44Z"
+}

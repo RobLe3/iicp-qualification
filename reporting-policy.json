@@ -1,0 +1,62 @@
+{
+  "authority": {
+    "candidate_file_sha256": "sha256:a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
+    "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+    "executor_registry_sha256": "sha256:ddcbc2e6c59122b508bc6e24555695f955c4d2770226c5a008a35aed65f750b0",
+    "sentinel_ledger_sha256": "sha256:7e830b504915614688eba07299df9d886d70b39c182fdf3c36c62cf9e65c5cce",
+    "shard_plan_sha256": "sha256:ef93078c50233190137eb0c8861d39e26bd280ce9d09b15d71b0721aa2da6e79"
+  },
+  "automatic_publication": {
+    "allowed_paths": [
+      "reports/status.json",
+      "reports/receipts.json",
+      "reports/events.json",
+      "reports/STATUS.md"
+    ],
+    "human_review_required_for_other_changes": true,
+    "qualification_execution_allowed": false,
+    "raw_evidence_upload_allowed": false,
+    "source_authority_changes_allowed": false
+  },
+  "destination": "RobLe3/iicp-qualification",
+  "next_gates": {
+    "authorization-required": "Obtain the applicable exact authorization before execution.",
+    "certificate-gates": "Complete the existing certificate and other readiness gates.",
+    "cleanup-required": "Complete the separately authorized evidence-preserving cleanup.",
+    "evidence-admission": "Complete separately governed evidence review and admission.",
+    "next-authorized-shard": "Proceed only under a separately valid shard authorization and its prerequisites.",
+    "none": "No next action is inferred from this record.",
+    "review-failure": "Review the retained failure before proposing any retry or correction.",
+    "review-format-recovery": "Review the pending metadata-only recovery, then use the existing exact validation and CI gates. No workload is authorized by this report."
+  },
+  "reasons": {
+    "authorization-expired": "The recorded authorization window expired. This report does not renew it.",
+    "blocker-changed": "The recorded blocker or next permitted action changed; no additional authority is granted.",
+    "ci-terminal": "The governed CI job reached a terminal result. CI is not native qualification.",
+    "cleanup-verified": "The registered cleanup record reports verification. This reporter did not inspect live resources.",
+    "correction-merged": "A reviewed correction was merged. A merge is not evidence of a subsequent qualification pass.",
+    "evidence-admitted": "Evidence was admitted through the canonical qualification process; the report only reflects its ledgers.",
+    "evidence-gap": "A retained evidence gap was registered. Missing original content is not reconstructed.",
+    "preflight-refused": "A prerequisite refused execution; this activity is not a workload result.",
+    "review-format-refusal": "The Windows continuation stopped before tests because the review record used bare digest strings where the caller required a sha256: prefix. The digest values matched. This is a review-to-caller formatting failure, not a new Windows workload result.",
+    "run-completed": "The registered run completed; credit changes only after canonical evidence admission.",
+    "run-failed": "The registered run failed. Its original outcome is retained; the cause requires evidence-backed review.",
+    "run-interrupted": "The registered run was interrupted; no successful completion is inferred."
+  },
+  "required": {
+    "certificates": 5,
+    "edge_executions": 5590,
+    "sentinels": 4,
+    "shards": 64,
+    "support_cells": 218
+  },
+  "schema": "iicp.reporting-policy.v1",
+  "scope_sha256": "sha256:9da9a3ac762d76d86ab36c06748e87a6708433b55162e17a8475a6d472571207",
+  "source_repository": "RobLe3/iicp.network",
+  "targets": [
+    "linux-x86_64",
+    "linux-aarch64",
+    "macos-arm64",
+    "windows-x86_64"
+  ]
+}

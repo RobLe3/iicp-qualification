@@ -1,0 +1,452 @@
+{
+  "$defs": {
+    "events": {
+      "additionalProperties": false,
+      "properties": {
+        "events": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "event_id": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "qualification",
+                  "diagnostic",
+                  "ci",
+                  "correction",
+                  "cleanup",
+                  "evidence-admission",
+                  "blocker",
+                  "authorization"
+                ]
+              },
+              "next_gate": {
+                "enum": [
+                  "review-format-recovery",
+                  "review-failure",
+                  "evidence-admission",
+                  "next-authorized-shard",
+                  "authorization-required",
+                  "cleanup-required",
+                  "certificate-gates",
+                  "none"
+                ]
+              },
+              "occurred_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "outcome": {
+                "enum": [
+                  "PASS",
+                  "FAIL",
+                  "REFUSED",
+                  "INTERRUPTED",
+                  "MERGED",
+                  "VERIFIED",
+                  "EXPIRED",
+                  "UNKNOWN"
+                ]
+              },
+              "qualification_credit": {
+                "const": 0
+              },
+              "reason": {
+                "enum": [
+                  "review-format-refusal",
+                  "run-completed",
+                  "run-failed",
+                  "run-interrupted",
+                  "preflight-refused",
+                  "ci-terminal",
+                  "correction-merged",
+                  "evidence-admitted",
+                  "cleanup-verified",
+                  "evidence-gap",
+                  "authorization-expired",
+                  "blocker-changed"
+                ]
+              },
+              "source_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "workload_launched": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "event_id",
+              "source_sha256",
+              "kind",
+              "outcome",
+              "reason",
+              "next_gate",
+              "occurred_at",
+              "workload_launched",
+              "qualification_credit"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "schema": {
+          "const": "iicp.qualification-events.v1"
+        }
+      },
+      "required": [
+        "schema",
+        "events"
+      ],
+      "type": "object"
+    },
+    "receipts": {
+      "additionalProperties": false,
+      "properties": {
+        "receipts": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "admission_status": {
+                "const": "accepted-in-merged-ledgers"
+              },
+              "assignment_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "candidate_manifest_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "edge_executions": {
+                "items": {
+                  "pattern": "^[a-z0-9_.|:-]+$",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "environment_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "evidence_class": {
+                "const": "qualification"
+              },
+              "executor_registry_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "finished_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "is_derivative": {
+                "const": true
+              },
+              "original_access": {
+                "const": "private"
+              },
+              "receipt_file_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "receipt_id": {
+                "pattern": "^pre1-qualification-(linux-x86_64|linux-aarch64|macos-arm64|windows-x86_64)-[0-9a-f]{12}$",
+                "type": "string"
+              },
+              "shard_index": {
+                "maximum": 15,
+                "minimum": 0,
+                "type": "integer"
+              },
+              "started_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "status": {
+                "const": "PASS"
+              },
+              "support_cells": {
+                "items": {
+                  "pattern": "^[a-z0-9_.|:-]+$",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "target": {
+                "enum": [
+                  "linux-x86_64",
+                  "linux-aarch64",
+                  "macos-arm64",
+                  "windows-x86_64"
+                ]
+              }
+            },
+            "required": [
+              "receipt_id",
+              "receipt_file_sha256",
+              "candidate_manifest_sha256",
+              "executor_registry_sha256",
+              "environment_sha256",
+              "assignment_sha256",
+              "target",
+              "shard_index",
+              "started_at",
+              "finished_at",
+              "admission_status",
+              "evidence_class",
+              "status",
+              "original_access",
+              "is_derivative",
+              "support_cells",
+              "edge_executions"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "schema": {
+          "const": "iicp.qualification-receipt-index.v1"
+        }
+      },
+      "required": [
+        "schema",
+        "receipts"
+      ],
+      "type": "object"
+    },
+    "status": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted": {
+          "additionalProperties": false,
+          "properties": {
+            "certificates": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "edge_executions": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "sentinels": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "shards": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "support_cells": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "shards",
+            "support_cells",
+            "edge_executions",
+            "sentinels",
+            "certificates"
+          ],
+          "type": "object"
+        },
+        "authority": {
+          "additionalProperties": false,
+          "properties": {
+            "candidate_file_sha256": {
+              "pattern": "^sha256:[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "candidate_manifest_sha256": {
+              "pattern": "^sha256:[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "executor_registry_sha256": {
+              "pattern": "^sha256:[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "sentinel_ledger_sha256": {
+              "pattern": "^sha256:[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "shard_plan_sha256": {
+              "pattern": "^sha256:[0-9a-f]{64}$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "candidate_file_sha256",
+            "candidate_manifest_sha256",
+            "executor_registry_sha256",
+            "shard_plan_sha256",
+            "sentinel_ledger_sha256"
+          ],
+          "type": "object"
+        },
+        "events_sha256": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "historical_inventory_complete": {
+          "const": false
+        },
+        "inputs_sha256": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "non_authorizing": {
+          "const": true
+        },
+        "platforms": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_shards": {
+                "items": {
+                  "maximum": 15,
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              "remaining_shards": {
+                "items": {
+                  "maximum": 15,
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              "target": {
+                "enum": [
+                  "linux-x86_64",
+                  "linux-aarch64",
+                  "macos-arm64",
+                  "windows-x86_64"
+                ]
+              }
+            },
+            "required": [
+              "target",
+              "accepted_shards",
+              "remaining_shards"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "receipts_sha256": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "reporting_policy_sha256": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "required": {
+          "additionalProperties": false,
+          "properties": {
+            "certificates": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "edge_executions": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "sentinels": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "shards": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "support_cells": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "shards",
+            "support_cells",
+            "edge_executions",
+            "sentinels",
+            "certificates"
+          ],
+          "type": "object"
+        },
+        "schema": {
+          "const": "iicp.qualification-status.v1"
+        },
+        "sentinels": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "extra_campaign_credit": {
+                "const": 0
+              },
+              "receipt_file_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "target": {
+                "enum": [
+                  "linux-x86_64",
+                  "linux-aarch64",
+                  "macos-arm64",
+                  "windows-x86_64"
+                ]
+              }
+            },
+            "required": [
+              "target",
+              "receipt_file_sha256",
+              "extra_campaign_credit"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "source_commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "type": "string"
+        },
+        "source_repository": {
+          "const": "RobLe3/iicp.network"
+        },
+        "validation_scope": {
+          "const": "retained-receipts-and-merged-ledgers"
+        },
+        "verified_at": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema",
+        "source_repository",
+        "source_commit",
+        "verified_at",
+        "authority",
+        "inputs_sha256",
+        "events_sha256",
+        "receipts_sha256",
+        "reporting_policy_sha256",
+        "required",
+        "accepted",
+        "platforms",
+        "sentinels",
+        "non_authorizing",
+        "historical_inventory_complete",
+        "validation_scope"
+      ],
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}
