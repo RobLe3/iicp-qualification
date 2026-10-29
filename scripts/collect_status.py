@@ -133,6 +133,27 @@ def receipt_derivative(receipt: dict, digest: str) -> dict:
     }
 
 
+def validate_shard_binding(shard: dict, plan: dict) -> None:
+    require(
+        shard["plan_sha256"] == plan["plan_sha256"],
+        "receipt binds a different shard plan",
+    )
+    require(
+        shard["shard_count"] == plan["shards_per_target"],
+        "receipt shard count differs from frozen plan",
+    )
+    rows = [
+        row
+        for row in plan["shards"]
+        if row["target"] == shard["target"]
+        and row["shard_index"] == shard["shard_index"]
+    ]
+    require(
+        len(rows) == 1 and rows[0]["assignment_sha256"] == shard["assignment_sha256"],
+        "receipt assignment binding differs from frozen plan",
+    )
+
+
 def collect(
     root: Path,
     commit: str,
@@ -211,6 +232,7 @@ def collect(
             "partial or mismatched edge admission",
         )
         sh = receipt["shard"]
+        validate_shard_binding(sh, plan)
         assignment = shard_check.reconstruct_assignment(
             data["matrix"],
             data["catalog"],
@@ -243,9 +265,16 @@ def collect(
             sha(path.read_bytes()) == row["receipt_sha256"],
             "sentinel receipt digest differs",
         )
+        sentinel_receipt = load(path)
         require(
-            not receipt_check.validate(load(path), candidate, registry),
+            not receipt_check.validate(sentinel_receipt, candidate, registry),
             "sentinel receipt validation failed",
+        )
+        validate_shard_binding(sentinel_receipt["shard"], plan)
+        require(
+            sentinel_receipt["shard"]["shard_index"] == 0
+            and sentinel_receipt["target"] == row["target"],
+            "sentinel target or index differs",
         )
         sentinels.append(
             {
