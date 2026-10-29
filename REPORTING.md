@@ -21,7 +21,7 @@ python3.13 -B scripts/qualification_status.py record \
   --inbox "$PRIVATE_STATE/activity-inbox.json" \
   --source "$RETAINED_TERMINAL_RECORD" \
   --kind diagnostic --outcome FAIL --reason run-failed \
-  --next-gate review-failure --occurred-at "$OBSERVED_UTC"
+  --next-gate review-failure --occurred-at "$OBSERVED_UTC" --workload-launched
 ```
 
 Use `--workload-launched` only when the retained record establishes a workload actually started. Use the source's observed time, not an invented execution time. Supported categories and templates are in the policy. Recording the same event again is a no-op.

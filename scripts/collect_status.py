@@ -90,6 +90,10 @@ def validator_modules(root: Path, commit: str, inputs: dict) -> dict:
             path = root / relative
             require(not path.is_symlink(), "symlinked validator dependency")
             data = path.read_bytes()
+            original = subprocess.check_output(
+                ["git", "-C", str(root), "show", f"{commit}:{relative}"]
+            )
+            require(data == original, "validator dependency differs from pinned commit")
             inputs[relative] = sha(data)
     sys.dont_write_bytecode = True
     sys.path.insert(0, str(root / "scripts"))

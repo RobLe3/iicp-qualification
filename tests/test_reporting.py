@@ -18,9 +18,22 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import report_common as common  # noqa: E402
 import qualification_status as cli  # noqa: E402
 from collect_status import private_events  # noqa: E402
+from collect_status import validator_modules  # noqa: E402
 
 
 class ReportingTests(unittest.TestCase):
+    def protection(self):
+        return {
+            "required_status_checks": {
+                "strict": True,
+                "contexts": ["qualification-report"],
+            },
+            "enforce_admins": {"enabled": True},
+            "required_pull_request_reviews": {},
+            "allow_force_pushes": {"enabled": False},
+            "allow_deletions": {"enabled": False},
+        }
+
     def setUp(self):
         self.bundle = common.check_public()
 
@@ -336,7 +349,9 @@ class ReportingTests(unittest.TestCase):
                     cli.publish(args)
             self.assertEqual(len(list(p.glob("report-*.json"))), 1)
 
-    def publication_fixture(self, changed_head=False, concurrent_base=False):
+    def publication_fixture(
+        self, changed_head=False, concurrent_base=False, final_base_changed=False
+    ):
         successor = copy.deepcopy(self.bundle)
         successor["events"]["events"].append(self.event())
         self.rebinding(successor)
@@ -352,6 +367,10 @@ class ReportingTests(unittest.TestCase):
             def fake(*argv, **kw):
                 calls.append(argv)
                 if argv[:2] == ("gh", "api"):
+                    if argv[2].endswith("/protection"):
+                        return json.dumps(self.protection())
+                    if argv[2] == "repos/RobLe3/iicp-qualification/commits/main":
+                        return ("e" if final_base_changed else "b") * 40
                     return "a" * 40
                 if argv[:3] == ("git", "diff", "--name-only"):
                     return "\n".join(common.REPORT_FILES)
@@ -381,9 +400,10 @@ class ReportingTests(unittest.TestCase):
                 patch.object(cli, "publication_identity", return_value="b" * 40),
                 patch.object(cli, "prepare", return_value=successor),
                 patch.object(cli, "write_report"),
+                patch.object(cli, "verify_committed_report"),
                 patch.object(cli, "run", side_effect=fake),
             ):
-                if changed_head or concurrent_base:
+                if changed_head or concurrent_base or final_base_changed:
                     with self.assertRaises(ValueError):
                         cli.publish(args)
                     self.assertFalse(any(c[:3] == ("gh", "pr", "merge") for c in calls))
@@ -401,12 +421,60 @@ class ReportingTests(unittest.TestCase):
     def test_concurrent_public_base_cannot_merge(self):
         self.publication_fixture(concurrent_base=True)
 
+    def test_base_advances_after_green_check_cannot_merge(self):
+        self.publication_fixture(final_base_changed=True)
+
     def test_refusal_cannot_claim_launched_workload(self):
         e = self.event("REFUSED", True)
         with self.assertRaises(ValueError):
             common.validate(
                 {"schema": "iicp.qualification-events.v1", "events": [e]}, "events"
             )
+
+    def test_protection_positive_and_missing_guards(self):
+        cli.validate_protection(self.protection())
+        for key in self.protection():
+            data = self.protection()
+            del data[key]
+            with self.assertRaises(ValueError):
+                cli.validate_protection(data)
+        data = self.protection()
+        data["required_status_checks"]["strict"] = False
+        with self.assertRaises(ValueError):
+            cli.validate_protection(data)
+
+    def test_committed_report_must_match_generated_bytes(self):
+        with patch.object(cli.subprocess, "check_output", return_value=b"changed"):
+            with self.assertRaisesRegex(ValueError, "committed report differs"):
+                cli.verify_committed_report(
+                    "a" * 40, {"reports/status.json": b"expected"}
+                )
+        with patch.object(cli.subprocess, "check_output", return_value=b"expected"):
+            cli.verify_committed_report("a" * 40, {"reports/status.json": b"expected"})
+
+    def test_assume_unchanged_helper_cannot_bypass_binding(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp).resolve()
+            (p / "scripts").mkdir()
+            helper = p / "scripts/helper.py"
+            helper.write_text("value = 1\n")
+
+            def git(*args):
+                return subprocess.check_output(
+                    ["git", "-C", str(p), *args], stderr=subprocess.PIPE, text=True
+                ).strip()
+
+            git("init", "-b", "main")
+            git("config", "user.name", "Synthetic")
+            git("config", "user.email", "synthetic@example.invalid")
+            git("add", ".")
+            git("commit", "-m", "synthetic helper")
+            head = git("rev-parse", "HEAD")
+            git("update-index", "--assume-unchanged", "scripts/helper.py")
+            helper.write_text("value = 2\n")
+            self.assertEqual(git("status", "--porcelain"), "")
+            with self.assertRaisesRegex(ValueError, "dependency differs"):
+                validator_modules(p, head, {})
 
 
 if __name__ == "__main__":
