@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-29T18:04:06Z**.
+Verified snapshot: **2026-10-29T18:21:45Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,10 +16,10 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **VERIFIED** (blocker, 2026-10-29T18:04:04.397028+00:00).
-- The recorded blocker or next permitted action changed; no additional authority is granted.
+- Recorded outcome: **PASS** (ci, 2026-10-29T18:20:26.768565Z).
+- The governed CI job reached a terminal result. CI is not native qualification.
 - Actual workload launched in this activity: **false**.
-- Next gate: Obtain the applicable exact authorization before execution.
+- Next gate: Proceed only under a separately valid shard authorization and its prerequisites.
 
 ## Evidence and limits
 

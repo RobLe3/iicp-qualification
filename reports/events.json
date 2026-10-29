@@ -76,6 +76,17 @@
       "reason": "blocker-changed",
       "source_sha256": "sha256:d8826a5e408b2c57cea3a11a25180e220eab85c4b2fa487765e0bc28d4790635",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:3a98cfbbc53a57405b8c0613550560b505a88a9347405b7f7344f3a425e921c3",
+      "kind": "ci",
+      "next_gate": "next-authorized-shard",
+      "occurred_at": "2026-10-29T18:20:26.768565Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:fe12f7e141c0c2f1f550bf982a95ae7739ea7286f09244f3b2a10a4a35c91747",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
