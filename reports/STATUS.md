@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-29T23:03:46Z**.
+Verified snapshot: **2026-10-29T23:44:50Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,8 +16,8 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **FAIL** (blocker, 2026-10-29T23:00:49Z).
-- The recorded blocker or next permitted action changed; no additional authority is granted.
+- Recorded outcome: **PASS** (cleanup, 2026-10-29T23:44:39Z).
+- The registered cleanup record reports verification. This reporter did not inspect live resources.
 - Actual workload launched in this activity: **false**.
 - Next gate: Obtain the applicable exact authorization before execution.
 
