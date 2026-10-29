@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-29T22:20:44Z**.
+Verified snapshot: **2026-10-29T23:03:46Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,10 +16,10 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **PASS** (blocker, 2026-10-29T22:20:24Z).
+- Recorded outcome: **FAIL** (blocker, 2026-10-29T23:00:49Z).
 - The recorded blocker or next permitted action changed; no additional authority is granted.
 - Actual workload launched in this activity: **false**.
-- Next gate: Complete the separately authorized evidence-preserving cleanup.
+- Next gate: Obtain the applicable exact authorization before execution.
 
 ## Evidence and limits
 
