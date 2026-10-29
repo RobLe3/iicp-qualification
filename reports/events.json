@@ -10,6 +10,17 @@
       "reason": "review-format-refusal",
       "source_sha256": "sha256:88efff69ed8f2b11640ad0b4d868fe44a30816c2ef8e89dcd8ad47904258ac14",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:2cb0e217c26dd506dab1b24a903516b7b1cba81b3f07f08c475986cdfe7ee7af",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-10-29T12:03:35.812719Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:b3e22a101b85cb06aabcbe0d8e78356cd3187dcb6908218da8c0dee7324f4b07",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
