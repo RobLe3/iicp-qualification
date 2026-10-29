@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-29T12:30:16Z**.
+Verified snapshot: **2026-10-29T13:07:38Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,14 +16,14 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **REFUSED** (blocker, 2026-10-29T12:26:54.034626+00:00).
-- A prerequisite refused execution; this activity is not a workload result.
+- Recorded outcome: **VERIFIED** (blocker, 2026-10-29T13:07:19.139724+00:00).
+- A retained evidence gap was registered. Missing original content is not reconstructed.
 - Actual workload launched in this activity: **false**.
-- Next gate: Obtain the applicable exact authorization before execution.
+- Next gate: Review the retained failure before proposing any retry or correction.
 
 ## Evidence and limits
 
-- Source: private `RobLe3/iicp.network`, commit `a8191a952e9fb44ac143ca87921052d106d9a340`.
+- Source: private `RobLe3/iicp.network`, commit `e313eb306ba5e194b6980c74c671fcaa9ef8fff6`.
 - [Receipt derivatives](receipts.json) map each credited assignment to its original receipt digest.
 - [Activity history](events.json) is a selected, append-only register, not a complete historical inventory.
 - Accepted totals come only from merged canonical ledgers. Passing CI, diagnostics and unpromoted runs add no credit.

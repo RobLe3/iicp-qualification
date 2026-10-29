@@ -43,6 +43,28 @@
       "reason": "preflight-refused",
       "source_sha256": "sha256:a42d7a8323acb15e212d43d49459c099be488ec6c9077d154c85ea5d85f5bc34",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:8e19fdc50ec0c6cc606a683777ee6d95dd35d4f7acb54ffadffb6d75aa8df500",
+      "kind": "correction",
+      "next_gate": "authorization-required",
+      "occurred_at": "2026-10-29T12:56:02Z",
+      "outcome": "MERGED",
+      "qualification_credit": 0,
+      "reason": "correction-merged",
+      "source_sha256": "sha256:6e0e543dfaff7bfb5f21f2100440258e4789f19a51637e937d6e8ec4163e3414",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:76f6a4b3fae16c3fdbfccd5303071ca84c38ad67b5b0a1c4502ba642f8fde06a",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-10-29T13:07:19.139724+00:00",
+      "outcome": "VERIFIED",
+      "qualification_credit": 0,
+      "reason": "evidence-gap",
+      "source_sha256": "sha256:b6b805e1b2d3d4ce42ba8550ef9f14da8533abc52782f698c18f7e272a10a123",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
