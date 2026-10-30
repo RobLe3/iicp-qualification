@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-30T00:10:22Z**.
+Verified snapshot: **2026-10-30T00:33:08Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,8 +16,8 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **PASS** (correction, 2026-10-30T00:09:31Z).
-- A reviewed correction was merged. A merge is not evidence of a subsequent qualification pass.
+- Recorded outcome: **REFUSED** (blocker, 2026-10-30T00:31:02Z).
+- A prerequisite refused execution; this activity is not a workload result.
 - Actual workload launched in this activity: **false**.
 - Next gate: Obtain the applicable exact authorization before execution.
 
