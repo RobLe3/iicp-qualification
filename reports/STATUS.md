@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-29T23:44:50Z**.
+Verified snapshot: **2026-10-30T00:10:22Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,14 +16,14 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **PASS** (cleanup, 2026-10-29T23:44:39Z).
-- The registered cleanup record reports verification. This reporter did not inspect live resources.
+- Recorded outcome: **PASS** (correction, 2026-10-30T00:09:31Z).
+- A reviewed correction was merged. A merge is not evidence of a subsequent qualification pass.
 - Actual workload launched in this activity: **false**.
 - Next gate: Obtain the applicable exact authorization before execution.
 
 ## Evidence and limits
 
-- Source: private `RobLe3/iicp.network`, commit `36ddbe7e49493f2bf3fa45d1c15f9a26793ed363`.
+- Source: private `RobLe3/iicp.network`, commit `cf33c90f4a0f625d8f0c4a7c426f7f2b1dc06253`.
 - [Receipt derivatives](receipts.json) map each credited assignment to its original receipt digest.
 - [Activity history](events.json) is a selected, append-only register, not a complete historical inventory.
 - Accepted totals come only from merged canonical ledgers. Passing CI, diagnostics and unpromoted runs add no credit.
