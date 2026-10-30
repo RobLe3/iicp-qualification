@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-30T01:38:20Z**.
+Verified snapshot: **2026-10-30T02:28:57Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,8 +16,8 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **PASS** (cleanup, 2026-10-30T01:35:35Z).
-- The registered cleanup record reports verification. This reporter did not inspect live resources.
+- Recorded outcome: **FAIL** (ci, 2026-10-30T02:26:28.417553Z).
+- The governed CI job reached a terminal result. CI is not native qualification.
 - Actual workload launched in this activity: **false**.
 - Next gate: Review the retained failure before proposing any retry or correction.
 
