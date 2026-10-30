@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-30T18:02:09Z**.
+Verified snapshot: **2026-10-30T21:18:45Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,14 +16,14 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **FAIL** (diagnostic, 2026-10-30T18:01:52.011950+00:00).
-- The registered run failed. Its original outcome is retained; the cause requires evidence-backed review.
-- Actual workload launched in this activity: **true**.
+- Recorded outcome: **REFUSED** (blocker, 2026-10-30T21:18:27.315421+00:00).
+- The recorded blocker or next permitted action changed; no additional authority is granted.
+- Actual workload launched in this activity: **false**.
 - Next gate: Review the retained failure before proposing any retry or correction.
 
 ## Evidence and limits
 
-- Source: private `RobLe3/iicp.network`, commit `64d404b54cef597aadd5fc70e71792c23e850b24`.
+- Source: private `RobLe3/iicp.network`, commit `2498656e6cdfd5d2390212e5f34e0fafea512a12`.
 - [Receipt derivatives](receipts.json) map each credited assignment to its original receipt digest.
 - [Activity history](events.json) is a selected, append-only register, not a complete historical inventory.
 - Accepted totals come only from merged canonical ledgers. Passing CI, diagnostics and unpromoted runs add no credit.
