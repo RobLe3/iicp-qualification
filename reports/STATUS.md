@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-10-30T15:34:27Z**.
+Verified snapshot: **2026-10-30T18:02:09Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,10 +16,10 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **PASS** (correction, 2026-10-30T15:32:55Z).
-- A reviewed correction was merged. A merge is not evidence of a subsequent qualification pass.
-- Actual workload launched in this activity: **false**.
-- Next gate: Obtain the applicable exact authorization before execution.
+- Recorded outcome: **FAIL** (diagnostic, 2026-10-30T18:01:52.011950+00:00).
+- The registered run failed. Its original outcome is retained; the cause requires evidence-backed review.
+- Actual workload launched in this activity: **true**.
+- Next gate: Review the retained failure before proposing any retry or correction.
 
 ## Evidence and limits
 
