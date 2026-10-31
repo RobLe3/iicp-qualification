@@ -373,6 +373,28 @@
       "reason": "run-completed",
       "source_sha256": "sha256:59425b64daf4335658f620c3a494e38e93978739d9b3c0bdf7e4f0fc3117d6e1",
       "workload_launched": true
+    },
+    {
+      "event_id": "sha256:8e8fdca1825b1e4897fd8bcb23a9c956b295a15d9cbd6827f7f9e5efea54f0d3",
+      "kind": "cleanup",
+      "next_gate": "next-authorized-shard",
+      "occurred_at": "2026-10-31T16:58:22Z",
+      "outcome": "VERIFIED",
+      "qualification_credit": 0,
+      "reason": "cleanup-verified",
+      "source_sha256": "sha256:2ad4b3ab8e22ae141de90291a1c77e45f244a9f7783c20baac5f7558e5f6b6c5",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:838788306fad3105e1d89987f5d4b5ed67d97c6e2ee4dd6c8307a8135eeff5b0",
+      "kind": "qualification",
+      "next_gate": "evidence-admission",
+      "occurred_at": "2026-10-31T16:58:22Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "run-completed",
+      "source_sha256": "sha256:2ad4b3ab8e22ae141de90291a1c77e45f244a9f7783c20baac5f7558e5f6b6c5",
+      "workload_launched": true
     }
   ],
   "schema": "iicp.qualification-events.v1"
