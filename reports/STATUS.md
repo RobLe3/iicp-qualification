@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-11-01T21:32:38Z**.
+Verified snapshot: **2026-11-01T22:27:30Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,10 +16,10 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **VERIFIED** (correction, 2026-11-01T21:32:19.867752+00:00).
-- The recorded blocker or next permitted action changed; no additional authority is granted.
+- Recorded outcome: **FAIL** (blocker, 2026-11-01T22:26:12.962377+00:00).
+- A retained evidence gap was registered. Missing original content is not reconstructed.
 - Actual workload launched in this activity: **false**.
-- Next gate: Proceed only under a separately valid shard authorization and its prerequisites.
+- Next gate: Complete the separately authorized evidence-preserving cleanup.
 
 ## Evidence and limits
 
