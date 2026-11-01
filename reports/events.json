@@ -439,6 +439,17 @@
       "reason": "run-completed",
       "source_sha256": "sha256:559e0e01cb47c391c7a116a73961ad4279c02df2c8e13ca5ad3f6a711bb76667",
       "workload_launched": true
+    },
+    {
+      "event_id": "sha256:0ef830ed5b7a3bfb798a7f52d42153e9646e3fdce9d4c22d729e4d1b596db857",
+      "kind": "qualification",
+      "next_gate": "evidence-admission",
+      "occurred_at": "2026-11-01T21:32:00Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "run-completed",
+      "source_sha256": "sha256:129473b828e623f5781762f7430f01860ae673e9ca1eb900ed25facb56d7f768",
+      "workload_launched": true
     }
   ],
   "schema": "iicp.qualification-events.v1"

@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-11-01T17:36:05Z**.
+Verified snapshot: **2026-11-01T21:31:34Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,7 +16,7 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **PASS** (qualification, 2026-11-01T17:29:51Z).
+- Recorded outcome: **PASS** (qualification, 2026-11-01T21:32:00Z).
 - The registered run completed; credit changes only after canonical evidence admission.
 - Actual workload launched in this activity: **true**.
 - Next gate: Complete separately governed evidence review and admission.
