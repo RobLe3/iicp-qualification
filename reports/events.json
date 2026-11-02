@@ -483,6 +483,17 @@
       "reason": "preflight-refused",
       "source_sha256": "sha256:50fc099e902a0da97c0593881b2b910f098201962f4d9ce254ee56020fa5786a",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:f518f7c01786cd8372472c4b75deef968d6c9e52de8851dbd8424d3fc47b753c",
+      "kind": "correction",
+      "next_gate": "cleanup-required",
+      "occurred_at": "2026-11-02T01:51:04Z",
+      "outcome": "MERGED",
+      "qualification_credit": 0,
+      "reason": "correction-merged",
+      "source_sha256": "sha256:049e815b2edfd7c315565ea1e770b29766f5c9cd154ca76e78d598a3df166916",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
