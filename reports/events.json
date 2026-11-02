@@ -571,6 +571,50 @@
       "reason": "ci-terminal",
       "source_sha256": "sha256:814cecfb368290990132bde57c99b4810cb9294bdddbb6e010f3e8318570a2a0",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:5ed21506b20a5599edd9b73000d8ae11077c1cd9564aca5cbf8e702bfb141aca",
+      "kind": "ci",
+      "next_gate": "evidence-admission",
+      "occurred_at": "2026-11-02T22:56:07Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:37ea4e4e18ca508ef54f0fe2f2f06f6b3d036ef826ae056c20402a6abb9d0a97",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:449fcc9da521e3d60aee5fb378511e4be34f364b40aa24d98aa28ec0f1226085",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-02T22:57:54.735224+00:00",
+      "outcome": "REFUSED",
+      "qualification_credit": 0,
+      "reason": "preflight-refused",
+      "source_sha256": "sha256:74b4c3b2808feba14146fb6b610e0376c03151fdcd000ea4be34d9c501f2ca67",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:d899ec83f600b0d6424ef19f094f3364a37a69e702a4d198d196c4f429a362dc",
+      "kind": "correction",
+      "next_gate": "evidence-admission",
+      "occurred_at": "2026-11-02T22:59:58Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "correction-merged",
+      "source_sha256": "sha256:445d2ae5f4872624beae8f5c93b45fb64c0dfedb17f535f0a961c3a4590da755",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:329bbcf52798417ae74dc329ab068eccf37c143411d457a6f778d0b5e13366c0",
+      "kind": "evidence-admission",
+      "next_gate": "none",
+      "occurred_at": "2026-11-02T23:01:15.913679Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "evidence-admitted",
+      "source_sha256": "sha256:f0ae90ea051d77abe3101ac7233b7a850e56d7c63afcdc3fc28cfefdee23e92b",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
