@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-11-02T02:16:16Z**.
+Verified snapshot: **2026-11-02T02:37:38Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,14 +16,14 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **FAIL** (cleanup, 2026-11-02T02:15:29Z).
-- A retained evidence gap was registered. Missing original content is not reconstructed.
+- Recorded outcome: **VERIFIED** (cleanup, 2026-11-02T02:37:36Z).
+- The registered cleanup record reports verification. This reporter did not inspect live resources.
 - Actual workload launched in this activity: **false**.
-- Next gate: Obtain the applicable exact authorization before execution.
+- Next gate: Proceed only under a separately valid shard authorization and its prerequisites.
 
 ## Evidence and limits
 
-- Source: private `RobLe3/iicp.network`, commit `81bfc38ce03e22177fddd3b3bcd1a5ad673a9d19`.
+- Source: private `RobLe3/iicp.network`, commit `17b3f3750b5ce688e45405a9d4b54acb2c7e287c`.
 - [Receipt derivatives](receipts.json) map each credited assignment to its original receipt digest.
 - [Activity history](events.json) is a selected, append-only register, not a complete historical inventory.
 - Accepted totals come only from merged canonical ledgers. Passing CI, diagnostics and unpromoted runs add no credit.
