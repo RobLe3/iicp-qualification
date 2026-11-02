@@ -494,6 +494,17 @@
       "reason": "correction-merged",
       "source_sha256": "sha256:049e815b2edfd7c315565ea1e770b29766f5c9cd154ca76e78d598a3df166916",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:1e6e52ae594e50c22727905fcddba3314e22b103456480e22492b75c711c6579",
+      "kind": "cleanup",
+      "next_gate": "authorization-required",
+      "occurred_at": "2026-11-02T02:02:33Z",
+      "outcome": "REFUSED",
+      "qualification_credit": 0,
+      "reason": "preflight-refused",
+      "source_sha256": "sha256:312f779572ad21a2ca843a3cbeab81a17562617daac8023903ca2ee648d5e391",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
