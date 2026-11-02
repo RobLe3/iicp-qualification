@@ -62,3 +62,25 @@ Reporting failure blocks the claim that the documentation handoff is complete. I
 Original records remain append-only in their owning archive. The public event list preserves its prior prefix; Git history preserves report snapshots, and main forbids force-push/deletion. A source-admitted credit reduction or new certificate pathway requires explicit review instead of silent automatic recalculation.
 
 Qualification Heritage, a frozen functional reference baseline, DMSC enhancements and a complete historic incident inventory are later work. This reporting repository provides a narrow starting point, not a claim that those programmes are complete.
+
+## Project-operated certificate admission mapping
+
+A private rehearsal is not admission. Certificate reporting reads only the exact
+five canonical target/ecosystem records under
+`reports/pre1-qualification/certificates/` in the selected root commit. That
+commit must be on the locally known merged main lineage; the publisher also
+rechecks the live root main identity before publishing. A prepared or unmerged
+certificate set cannot produce published credit.
+
+The source collector reuses the root certificate validators and binds their
+tracked Python and schema bytes. It cross-checks candidate, registry, shard plan,
+original sentinel, exact accepted campaign receipt sets, coverage and ecosystem
+links. Partial, duplicate, altered, foreign or unsupported evidence is refused.
+No certificate files leaves zero; exactly four valid target records and their
+valid ecosystem record permit five. Reporting does not issue certificates.
+
+Public status contains minimized certificate derivatives and their source
+hashes, not private source manifests or diagnostic payloads. Public validation
+checks their authority, receipt/sentinel links and internal accounting; it does
+not reproduce private evidence or establish independent certification. The old
+zero-only snapshots remain valid historical reports.

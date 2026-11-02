@@ -135,10 +135,8 @@ def check_bundle(status: dict, receipts: dict, events: dict) -> None:
         {x["target"] for x in status["sentinels"]} == set(policy["targets"]),
         "sentinel targets mismatch",
     )
-    require(
-        status["accepted"]["certificates"] == 0,
-        "certificate reporting needs reviewed admission mapping",
-    )
+    from certificate_reporting import validate_derivatives
+    validate_derivatives(status, receipts["receipts"])
     require(
         [x["target"] for x in status["platforms"]] == policy["targets"],
         "platform set mismatch",
@@ -203,7 +201,9 @@ def render(status: dict, events: dict) -> str:
         "- Source validators checked retained receipts and ledger accounting; no workload or live resource inspection was run for this report.",
         "- Original private receipts/captures are not reproduced here. Public consistency checks cannot independently verify their contents or the product behavior.",
         "- Sentinel records are listed separately and grant no extra campaign credit. A receipt counts toward a campaign only when explicitly admitted in its canonical ledgers.",
-        "- Zero certificates means none were found in the inspected canonical tracked evidence. It is not an exhaustive search of private storage.",
+        ("- Five project-operated certificates are admitted in merged canonical evidence; their minimized source-linked records appear in status.json. This is not external certification."
+         if status["accepted"]["certificates"] == 5 else
+         "- Zero certificates means none were found in the inspected canonical tracked evidence. It is not an exhaustive search of private storage."),
         "- This is an as-of report, not a live monitor or execution authorization. Unknown/unregistered activity and retention completeness remain unresolved.",
         "- Qualification within a finite scope is not independent interoperability, external certification, deployment or release readiness.",
         "",
