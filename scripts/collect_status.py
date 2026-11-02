@@ -283,31 +283,9 @@ def collect(
                 "extra_campaign_credit": 0,
             }
         )
-    # Certificate admission is deliberately not inferred from a file name or a successful run.
-    certificate_search = subprocess.run(
-        [
-            "git",
-            "-C",
-            str(root),
-            "grep",
-            "-l",
-            "-E",
-            '"schema"[[:space:]]*:[[:space:]]*"iicp\\.pre1-(target|ecosystem)-certificate\\.',
-            commit,
-            "--",
-            "reports/*.json",
-            "reports/**/*.json",
-            "project/*.json",
-            "project/**/*.json",
-        ],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        check=False,
-    )
-    require(
-        certificate_search.returncode == 1,
-        "certificate evidence or inspection error requires reviewed report mapping",
-    )
+    from certificate_reporting import collect_certificates
+    certificates = collect_certificates(root, commit, inputs, bound_file, data,
+                                        derivatives, ledger, inputs["sentinel-ledger"])
     events, _ = private_events(inbox)
     receipts = {
         "schema": "iicp.qualification-receipt-index.v1",
@@ -329,7 +307,7 @@ def collect(
             "support_cells": sum(len(x["support_cells"]) for x in derivatives),
             "edge_executions": sum(len(x["edge_executions"]) for x in derivatives),
             "sentinels": len(sentinels),
-            "certificates": 0,
+            "certificates": len(certificates),
         },
         "platforms": [],
         "sentinels": sorted(sentinels, key=lambda x: x["target"]),
@@ -337,6 +315,8 @@ def collect(
         "historical_inventory_complete": False,
         "validation_scope": "retained-receipts-and-merged-ledgers",
     }
+    if certificates:
+        status["certificates"] = certificates
     for target in policy["targets"]:
         indexes = sorted(x["shard_index"] for x in derivatives if x["target"] == target)
         status["platforms"].append(

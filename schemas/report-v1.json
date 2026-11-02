@@ -287,6 +287,93 @@
           ],
           "type": "object"
         },
+        "certificates": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "admission_sentinel_file_sha256": {
+                "anyOf": [
+                  {
+                    "pattern": "^sha256:[0-9a-f]{64}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "admission_status": {
+                "const": "accepted-in-merged-canonical-evidence"
+              },
+              "candidate_manifest_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "certificate_file_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "certificate_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "classification": {
+                "const": "project-operated-qualification"
+              },
+              "executor_registry_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "receipt_file_sha256s": {
+                "items": {
+                  "pattern": "^sha256:[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "maxItems": 16,
+                "type": "array",
+                "uniqueItems": true
+              },
+              "shard_plan_sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "target": {
+                "enum": [
+                  "ecosystem",
+                  "linux-aarch64",
+                  "linux-x86_64",
+                  "macos-arm64",
+                  "windows-x86_64"
+                ]
+              },
+              "target_certificate_sha256s": {
+                "items": {
+                  "pattern": "^sha256:[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "maxItems": 4,
+                "type": "array",
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "certificate_file_sha256",
+              "certificate_sha256",
+              "candidate_manifest_sha256",
+              "executor_registry_sha256",
+              "shard_plan_sha256",
+              "target",
+              "receipt_file_sha256s",
+              "admission_sentinel_file_sha256",
+              "target_certificate_sha256s",
+              "classification",
+              "admission_status"
+            ],
+            "type": "object"
+          },
+          "maxItems": 5,
+          "type": "array"
+        },
         "events_sha256": {
           "pattern": "^sha256:[0-9a-f]{64}$",
           "type": "string"
