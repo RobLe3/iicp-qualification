@@ -538,6 +538,39 @@
       "reason": "evidence-admitted",
       "source_sha256": "sha256:66fb5bdd6047c4b388b35ed0b0f231f2bb9d42dc860371e017edc3b50ff8685e",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:7dc4edd3cea2bc70ab17eeddd102da5da6d4cf5d6629645a0117fee1655913f1",
+      "kind": "ci",
+      "next_gate": "evidence-admission",
+      "occurred_at": "2026-11-02T22:39:43Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:4be2db67f1ef71b68cdbe4fa887f9a046e7ab28ac8cb20b700804b82bddcc4aa",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:3955c8d06c527a8398b965d2b100861a0f545afff2cfc0ba8728bb8188161e45",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-02T22:41:06.895819+00:00",
+      "outcome": "REFUSED",
+      "qualification_credit": 0,
+      "reason": "preflight-refused",
+      "source_sha256": "sha256:3a301384d0d1a83b87f56059201a07106583def833745ca99b9e31e4eed1f03e",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:8184bbbb9c935584dc79c2b92cc048bd9c74e181ac18ce73f5ea4e43f149533e",
+      "kind": "ci",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-02T22:47:12.880744+00:00",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:814cecfb368290990132bde57c99b4810cb9294bdddbb6e010f3e8318570a2a0",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
