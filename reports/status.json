@@ -13,9 +13,9 @@
     "sentinel_ledger_sha256": "sha256:7e830b504915614688eba07299df9d886d70b39c182fdf3c36c62cf9e65c5cce",
     "shard_plan_sha256": "sha256:ef93078c50233190137eb0c8861d39e26bd280ce9d09b15d71b0721aa2da6e79"
   },
-  "events_sha256": "sha256:f04cb4a256c6f765add6a791b1fe0d34c0912a82a02cae0eefc8882c9c157d34",
+  "events_sha256": "sha256:34888f7bf2f3c9f2c4659234d1f4dd3f8ae7bbf4c23cd9602f147f39f67c5445",
   "historical_inventory_complete": false,
-  "inputs_sha256": "sha256:79d28225ce25655001ec5764e80529b9241b9e6f3280437592c63e787188b30d",
+  "inputs_sha256": "sha256:29f54676d1fc60665594d2e53d0cf079505c1d650b3f5ba746283778ca7615c4",
   "non_authorizing": true,
   "platforms": [
     {
@@ -140,8 +140,8 @@
       "target": "windows-x86_64"
     }
   ],
-  "source_commit": "81bfc38ce03e22177fddd3b3bcd1a5ad673a9d19",
+  "source_commit": "17b3f3750b5ce688e45405a9d4b54acb2c7e287c",
   "source_repository": "RobLe3/iicp.network",
   "validation_scope": "retained-receipts-and-merged-ledgers",
-  "verified_at": "2026-11-02T02:16:16Z"
+  "verified_at": "2026-11-02T02:37:38Z"
 }

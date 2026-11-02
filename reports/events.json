@@ -516,6 +516,17 @@
       "reason": "evidence-gap",
       "source_sha256": "sha256:8ab2e69ac9db9b6f80f8b9109995b063435d05851dfd03c2c07920b393e1cf38",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:e4430560ce65e155476d3a52e798409ade9e467181d560c742786a03de67ad10",
+      "kind": "cleanup",
+      "next_gate": "next-authorized-shard",
+      "occurred_at": "2026-11-02T02:37:36Z",
+      "outcome": "VERIFIED",
+      "qualification_credit": 0,
+      "reason": "cleanup-verified",
+      "source_sha256": "sha256:466c077e15f41c37fd1e7fa324ecc24de8641ad194e2c07c78f0c77271337859",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
