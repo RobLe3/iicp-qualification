@@ -527,6 +527,17 @@
       "reason": "cleanup-verified",
       "source_sha256": "sha256:466c077e15f41c37fd1e7fa324ecc24de8641ad194e2c07c78f0c77271337859",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:6ac88d7015ec539e9da827b92fd1b79bd2a7f9e198738e484c482bfabcfbf6af",
+      "kind": "evidence-admission",
+      "next_gate": "certificate-gates",
+      "occurred_at": "2026-11-02T15:33:46Z",
+      "outcome": "MERGED",
+      "qualification_credit": 0,
+      "reason": "evidence-admitted",
+      "source_sha256": "sha256:66fb5bdd6047c4b388b35ed0b0f231f2bb9d42dc860371e017edc3b50ff8685e",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"

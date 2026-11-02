@@ -1,10 +1,10 @@
 # Qualification status
 
-Verified snapshot: **2026-11-02T02:37:38Z**.
+Verified snapshot: **2026-11-02T15:33:48Z**.
 
-`[###############-----]` **49/64 accepted shards**
+`[####################]` **64/64 accepted shards**
 
-Support cells: **169/218** · Edge executions: **4373/5590**
+Support cells: **218/218** · Edge executions: **5590/5590**
 Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 | Target | Accepted shard indexes | Remaining indexes |
@@ -12,18 +12,18 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 | linux-x86_64 | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 | None |
 | linux-aarch64 | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 | None |
 | macos-arm64 | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 | None |
-| windows-x86_64 | 0 | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 |
+| windows-x86_64 | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 | None |
 
 ## Latest registered activity
 
-- Recorded outcome: **VERIFIED** (cleanup, 2026-11-02T02:37:36Z).
-- The registered cleanup record reports verification. This reporter did not inspect live resources.
+- Recorded outcome: **MERGED** (evidence-admission, 2026-11-02T15:33:46Z).
+- Evidence was admitted through the canonical qualification process; the report only reflects its ledgers.
 - Actual workload launched in this activity: **false**.
-- Next gate: Proceed only under a separately valid shard authorization and its prerequisites.
+- Next gate: Complete the existing certificate and other readiness gates.
 
 ## Evidence and limits
 
-- Source: private `RobLe3/iicp.network`, commit `17b3f3750b5ce688e45405a9d4b54acb2c7e287c`.
+- Source: private `RobLe3/iicp.network`, commit `916463825703f62dfe1c4fb1643bf757228c0a13`.
 - [Receipt derivatives](receipts.json) map each credited assignment to its original receipt digest.
 - [Activity history](events.json) is a selected, append-only register, not a complete historical inventory.
 - Accepted totals come only from merged canonical ledgers. Passing CI, diagnostics and unpromoted runs add no credit.

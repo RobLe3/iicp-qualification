@@ -1,10 +1,10 @@
 {
   "accepted": {
     "certificates": 0,
-    "edge_executions": 4373,
+    "edge_executions": 5590,
     "sentinels": 4,
-    "shards": 49,
-    "support_cells": 169
+    "shards": 64,
+    "support_cells": 218
   },
   "authority": {
     "candidate_file_sha256": "sha256:a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
@@ -13,9 +13,9 @@
     "sentinel_ledger_sha256": "sha256:7e830b504915614688eba07299df9d886d70b39c182fdf3c36c62cf9e65c5cce",
     "shard_plan_sha256": "sha256:ef93078c50233190137eb0c8861d39e26bd280ce9d09b15d71b0721aa2da6e79"
   },
-  "events_sha256": "sha256:34888f7bf2f3c9f2c4659234d1f4dd3f8ae7bbf4c23cd9602f147f39f67c5445",
+  "events_sha256": "sha256:519d1042b9776f63a9bfd43fe055574fe22a040b4498af9e4b9b669c4648c62c",
   "historical_inventory_complete": false,
-  "inputs_sha256": "sha256:29f54676d1fc60665594d2e53d0cf079505c1d650b3f5ba746283778ca7615c4",
+  "inputs_sha256": "sha256:64c0d22bdf7a193f117c6f37eb89cef4bb8189147fd9243678b662e05ae02a24",
   "non_authorizing": true,
   "platforms": [
     {
@@ -86,9 +86,7 @@
     },
     {
       "accepted_shards": [
-        0
-      ],
-      "remaining_shards": [
+        0,
         1,
         2,
         3,
@@ -105,10 +103,11 @@
         14,
         15
       ],
+      "remaining_shards": [],
       "target": "windows-x86_64"
     }
   ],
-  "receipts_sha256": "sha256:214f9050b429a9b5756f50ee3ea972fa90777defa58630bf68dbcdfa640403b2",
+  "receipts_sha256": "sha256:6dcdd9b57d11bd405eac0b486050bd72c9dcb2189939dbfac56767337ee12498",
   "reporting_policy_sha256": "sha256:5da5eadd6443ba29207e9028999e9c474e4d8d2ffb5b6a3fa77e7cf7962f42ca",
   "required": {
     "certificates": 5,
@@ -140,8 +139,8 @@
       "target": "windows-x86_64"
     }
   ],
-  "source_commit": "17b3f3750b5ce688e45405a9d4b54acb2c7e287c",
+  "source_commit": "916463825703f62dfe1c4fb1643bf757228c0a13",
   "source_repository": "RobLe3/iicp.network",
   "validation_scope": "retained-receipts-and-merged-ledgers",
-  "verified_at": "2026-11-02T02:37:38Z"
+  "verified_at": "2026-11-02T15:33:48Z"
 }
