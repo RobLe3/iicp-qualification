@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-11-01T22:27:30Z**.
+Verified snapshot: **2026-11-02T01:18:33Z**.
 
 `[###############-----]` **49/64 accepted shards**
 
@@ -16,10 +16,10 @@ Sentinels: **4/4** · Project-operated certificates: **0/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **FAIL** (blocker, 2026-11-01T22:26:12.962377+00:00).
-- A retained evidence gap was registered. Missing original content is not reconstructed.
+- Recorded outcome: **REFUSED** (ci, 2026-11-02T01:16:57Z).
+- A prerequisite refused execution; this activity is not a workload result.
 - Actual workload launched in this activity: **false**.
-- Next gate: Complete the separately authorized evidence-preserving cleanup.
+- Next gate: Review the retained failure before proposing any retry or correction.
 
 ## Evidence and limits
 
