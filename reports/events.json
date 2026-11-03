@@ -692,6 +692,28 @@
       "reason": "blocker-changed",
       "source_sha256": "sha256:563d581bf88a0657c8bb61f088a0f6cf54760e27f4db5d99ebe2f0ac676498eb",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:b38037a98c6598c30792574e2cacc9e067a00e7eabd24ded5d509a9ea320bfb7",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-03T15:20:08Z",
+      "outcome": "UNKNOWN",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:b1b786a7edcbddf8ec58dfaa6455b06171683fc36888bbddf7a638efaaa4db9e",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:0058c790dbd0938b340c826caac84547d562faba2a78e64345ce5341eddcaab0",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-03T15:59:30Z",
+      "outcome": "UNKNOWN",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:0c89be40851a1e33d3b2ccb3fc31dc2c40065935256d75b424804d2fa20f6bc0",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
