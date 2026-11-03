@@ -43,3 +43,12 @@ An unchanged input set creates no commit. A reporting failure remains visible in
 - [Management](https://github.com/RobLe3/iicp-management)
 
 Publication, deployment, adoption, qualification and certification remain separate states. Nothing here authorizes a workload, cloud allocation, evidence promotion, release or deployment.
+
+## PRE-1 qualification evidence
+
+The finite integration campaign is complete; release readiness remains separate.
+See [verified qualification status](https://github.com/RobLe3/iicp-qualification/blob/main/reports/STATUS.md)
+and its reporting-policy limitations. Historical inventory is not complete.
+
+Read the [final integration qualification summary](reports/FINAL-QUALIFICATION-SUMMARY.md)
+for scope, platform distinctions and public verification limits.
