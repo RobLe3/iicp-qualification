@@ -1,0 +1,53 @@
+{
+  "canonical_root_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+  "formal_clauses_unverified": 21,
+  "historical_inventory_complete": false,
+  "members": {
+    "HANDOFF.md": {
+      "bytes": 1637,
+      "sha256": "sha256:99af773694c6d194422ff5a04f74b915c72a58a0ec0b38da2afd77d4f5103dea"
+    },
+    "OWNER_DISPOSITION.md": {
+      "bytes": 2712,
+      "sha256": "sha256:d6d73e3e76ab82e947aa7de8e21aaff917ababe5c8b994eb59f841817a021311"
+    },
+    "README.md": {
+      "bytes": 4815,
+      "sha256": "sha256:316ae78b9240a77d0d18e4767054be68c257aa870756211d3155540ce30a75a7"
+    },
+    "SOURCE_PINS.json": {
+      "bytes": 1870,
+      "sha256": "sha256:b3bd1028b2e14a7dd39757e0efaf2acfc045d83cac73ab4e83c5e1190fc28922"
+    },
+    "attempt-history.json": {
+      "bytes": 1484,
+      "sha256": "sha256:92c6aee931e63c45194bce38ccb968c876c1dc24a2ebf265a8ec4810b708a303"
+    },
+    "decision-delta.json": {
+      "bytes": 5141,
+      "sha256": "sha256:b6092c059b89450049032e0bf0593781471f364b7699a27291eb457dc916ed4f"
+    },
+    "decision-matrix.json": {
+      "bytes": 14328,
+      "sha256": "sha256:68d5d713be4e5aefcc03a32eed9010e8a16cc3c63f6f32d481a24146f7c5d0ac"
+    },
+    "history-terminal-gap.json": {
+      "bytes": 873,
+      "sha256": "sha256:ed11abb2f8d0d2647ce8f38236a998ef6a76b0e294080362e7902c7cf455ae0b"
+    },
+    "observer-result.json": {
+      "bytes": 4562,
+      "sha256": "sha256:594f741152a07103f8846b086ceda3e956f2913c78515c6d58548af8f8c83583"
+    },
+    "observer-review.json": {
+      "bytes": 3455,
+      "sha256": "sha256:d0bdcbc7aa1abcd9ce95e43df157faf70b81b6e2811c95587a0c9fb9359a431c"
+    }
+  },
+  "owner_questions_open": 10,
+  "qualification_credit_added": 0,
+  "qualified_candidate_unchanged": true,
+  "readiness_delivery_gates_complete_at_seal": 3,
+  "readiness_delivery_gates_total": 4,
+  "schema": "iicp.stabilization-supplement.v1"
+}

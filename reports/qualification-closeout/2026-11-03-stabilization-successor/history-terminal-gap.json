@@ -1,0 +1,17 @@
+{
+  "automatic_retry": false,
+  "disposition": "STOPPED_SOURCE_DIRECTORY_CHANGED",
+  "exact_changed_directory": "NOT_LOCALIZED",
+  "historical_inventory_complete": false,
+  "last_completed_page": 894,
+  "later_prefix_consolidation": "NOT_PERFORMED",
+  "next_step": "Retain the stopped epoch; independently review any source-change localization and linked successor scope before continuation. Do not reset history or infer original evidence loss.",
+  "original_partitions_preserved": 79,
+  "qualification_credit_added": 0,
+  "refusal_sha256": "sha256:5a7ae8debd9cf6ebd4d88b36de97bc86117225555474218fa5a370fd72104d6e",
+  "refused_page": 895,
+  "reviewed_public_prefix_last_page": 313,
+  "schema": "iicp.history-terminal-gap.v1",
+  "terminal_recorded_successor_partitions": 816,
+  "terminal_sha256": "sha256:40717c6d52535f005775a5b650db1f488205ff59b6d8e90aeccde8f767d3c1d0"
+}

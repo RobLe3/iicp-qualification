@@ -1,0 +1,131 @@
+{
+  "schema": "iicp.numeric-observer-result.v1",
+  "at": "2026-11-03T21:27:50.867913+00:00",
+  "result": "PASS_BOUNDED_TWO_NODE_TRANSITIONS",
+  "all17pins_unchanged": true,
+  "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+  "cases": [
+    {
+      "case": "ownership_control",
+      "result": "PASS",
+      "elapsed_seconds": 0.10798966704169288,
+      "retained_capture_bytes": 261,
+      "truncated": false,
+      "owned_group_killed_before_reap": true,
+      "capture_sha256": "sha256:9b8b98e1cf2fdb15c8da33ad1acfdcb2b0b5e0f6001d0881cc6e0e9056aaea0b",
+      "result_sha256": "sha256:6cfaa6cd930bdcbbecfae3ad88d3858f5a46a30fdc3c412ca60c298273bbf933"
+    },
+    {
+      "case": "network_controls",
+      "result": "PASS",
+      "elapsed_seconds": 0.5988160410197452,
+      "retained_capture_bytes": 143,
+      "truncated": false,
+      "owned_group_killed_before_reap": true,
+      "capture_sha256": "sha256:920848a85709a83132577580c1edb0e22e1f9dd05d58ee040d15c60fa2b92cd0",
+      "result_sha256": "sha256:9ab9c1d53f4f136d78e1ea75333069c3006837ddb54ce5356783155be2e5ecd3",
+      "profile_sha256": "sha256:2ad92a599fe4d325bff04ab5991b401d35dda5cab26aa7e3e536936e1d563c3f"
+    },
+    {
+      "case": "default_route_transition",
+      "result": "PASS",
+      "elapsed_seconds": 271.1291376670124,
+      "retained_capture_bytes": 1535,
+      "truncated": false,
+      "owned_group_killed_before_reap": true,
+      "capture_sha256": "sha256:ddd0cd5738eb07c8071c1a598d921e93925411d4cf21c163dda9d5fed1d43b5f",
+      "result_sha256": "sha256:a8d1c332e4db50358a4e279fd1218d1caa705f572424a7764fd6e39ac442e517",
+      "heartbeats": 9,
+      "heartbeat_statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "availability": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "registration_count": 1,
+      "registration_statuses": [
+        200
+      ],
+      "default_recovery_cadence": true,
+      "restart_count": 0,
+      "listener_ownership_observed": true,
+      "cleanup_assertion_passed": true,
+      "profile_sha256": "sha256:6fc38d6567bd3156c5414311a428cdf8505909140301ba65d0082eb104765f48"
+    },
+    {
+      "case": "heartbeat_refusal_transition",
+      "result": "PASS",
+      "elapsed_seconds": 271.33523237501504,
+      "retained_capture_bytes": 1710,
+      "truncated": false,
+      "owned_group_killed_before_reap": true,
+      "capture_sha256": "sha256:795bc67879a9ae2ff86920f82ef227bc469f3bbe5554397572df84a969f048a2",
+      "result_sha256": "sha256:75c8cca2865628d58c9671b9c922109084e277b7daf5702bbe9cb05d501ec9bc",
+      "heartbeats": 9,
+      "heartbeat_statuses": [
+        200,
+        200,
+        200,
+        401,
+        401,
+        401,
+        200,
+        200,
+        200
+      ],
+      "availability": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "registration_count": 4,
+      "registration_statuses": [
+        200,
+        403,
+        403,
+        403
+      ],
+      "default_recovery_cadence": true,
+      "restart_count": 0,
+      "listener_ownership_observed": true,
+      "cleanup_assertion_passed": true,
+      "profile_sha256": "sha256:31bae8a86c32eb54218bc7d0c3bb4c692fce00e32f5ce2352c1b7d23d4e97dfd"
+    }
+  ],
+  "suite_elapsed_seconds": 543.2318404159741,
+  "attempts": 1,
+  "retries": 0,
+  "qualification_credit": 0,
+  "product_source_changes": false,
+  "suite_sha256": "sha256:d2e7fcdbb39cbb9ee07417ca21b9a04cf3f0e5825c1df6bccadd9d7a9d0c8111",
+  "limits": [
+    "Host-local exact TCP fixture ports, not strict loopback-address isolation or whole-host sandbox.",
+    "Actual frozen Node observer with synthetic runtime_available_handle; not real NAT/tunnel route discovery.",
+    "Nine heartbeats per case at default30secondheartbeat/every2recovery/grace3; restored route avoids grace exhaustion and does not establish default exit76.",
+    "Three heartbeat401/re-register403 observations return to healthy heartbeats when fixture accepts again. No new successful registration is required/proven in this case.",
+    "No CLI tunnel exit75, supervisor restart/cooldown, experimental relay175, original incident cause, independent certification or release-readiness conclusion.",
+    "Prior failures preserved; numeric observer now works but prior missing lsof output prevents retrospective proof of its original failure cause."
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "iicp.numeric-observer-terminal-independent-review.v1",
+  "at": "2026-11-03T21:28:24.119692+00:00",
+  "result": "PASS_BOUNDED_OBSERVATION",
+  "reviewer": "remaining_dispositions",
+  "source_digests": {
+    "suite-result.json": "sha256:d2e7fcdbb39cbb9ee07417ca21b9a04cf3f0e5825c1df6bccadd9d7a9d0c8111",
+    "execution-pins.json": "sha256:acbb900980177bdc884eae5ed8b8ff77ba4655efb13eb47340bb4d9afd8f3654",
+    "independent-preexecution-review.json": "sha256:4dcdf700a156ffd4170738e937b411e69565724a685ed6bad6bc66eeb6c15ec0",
+    "ownership_control/capture.log": "sha256:9b8b98e1cf2fdb15c8da33ad1acfdcb2b0b5e0f6001d0881cc6e0e9056aaea0b",
+    "ownership_control/result.json": "sha256:6cfaa6cd930bdcbbecfae3ad88d3858f5a46a30fdc3c412ca60c298273bbf933",
+    "network_controls/capture.log": "sha256:920848a85709a83132577580c1edb0e22e1f9dd05d58ee040d15c60fa2b92cd0",
+    "network_controls/result.json": "sha256:9ab9c1d53f4f136d78e1ea75333069c3006837ddb54ce5356783155be2e5ecd3",
+    "default_route_transition/capture.log": "sha256:ddd0cd5738eb07c8071c1a598d921e93925411d4cf21c163dda9d5fed1d43b5f",
+    "default_route_transition/result.json": "sha256:a8d1c332e4db50358a4e279fd1218d1caa705f572424a7764fd6e39ac442e517",
+    "default_route_transition/actual-profile.json": "sha256:85f0b07fe2b470fa3157c469637b12e89be6b8217bdb2e4f44fbf459465cc675",
+    "heartbeat_refusal_transition/capture.log": "sha256:795bc67879a9ae2ff86920f82ef227bc469f3bbe5554397572df84a969f048a2",
+    "heartbeat_refusal_transition/result.json": "sha256:75c8cca2865628d58c9671b9c922109084e277b7daf5702bbe9cb05d501ec9bc",
+    "heartbeat_refusal_transition/actual-profile.json": "sha256:2d88ed15a801b490f8c9feac9f7c05f969ee8f3dfbc4f1a726c4913fde10b843"
+  },
+  "controls_passed": 2,
+  "node_cases_passed": 2,
+  "elapsed_seconds": 543.2318404159741,
+  "reverified_input_pins": 17,
+  "node_observations": [
+    {
+      "case": "default_route_transition",
+      "heartbeats": 9,
+      "elapsed_seconds": 271.1291376670124,
+      "listener_ownership": "VERIFIED_FROM_RETAINED_NUMERIC_RECORD",
+      "cleanup": "PASS_EXACT_CHILD_AND_TWO_LISTENERS",
+      "outcome": "PASS_BOUNDED_DEFAULT_CADENCE_TRANSITION"
+    },
+    {
+      "case": "heartbeat_refusal_transition",
+      "heartbeats": 9,
+      "elapsed_seconds": 271.33523237501504,
+      "listener_ownership": "VERIFIED_FROM_RETAINED_NUMERIC_RECORD",
+      "cleanup": "PASS_EXACT_CHILD_AND_TWO_LISTENERS",
+      "outcome": "PASS_BOUNDED_DEFAULT_CADENCE_TRANSITION"
+    }
+  ],
+  "qualification_credit": 0,
+  "source_repairs": 0,
+  "automatic_retry": false,
+  "limitations": [
+    "Actual network samples prove permitted exact fixture port and denied tested unapproved owned ports including inherited child, not universal network isolation.",
+    "Default cadence synthetic route restoration passed without restart. No actual tunnel discovery, exit76 exhaustion, launchd, CLI75 or cooldown observation.",
+    "Heartbeat401/re-register403 refusal and later fakeDirectory200 heartbeats passed. This is not evidence credentials were repaired or the original provider incident diagnosed.",
+    "Earlier lsof failure root cause remains unproved despite numeric successor success; no retained historical poll output.",
+    "Cleanup assertions and raw capture independently rechecked; no extra post-run network probe or host-wide resource census.",
+    "Rust183/175 remain open; Windows lifetime assurance and21 formal criteria unchanged."
+  ]
+}

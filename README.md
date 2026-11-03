@@ -65,3 +65,7 @@ computed from an unverified copy.
 separation. The corpus is a dated documentation foundation, not a complete private
 archive or qualification authority. Historical completeness remains false.
 Inventory work is tracked in [root issue #1676](https://github.com/RobLe3/iicp.network/issues/1676).
+
+## Stabilization-readiness observations
+
+The [3 November bounded successor supplement](reports/qualification-closeout/2026-11-03-stabilization-successor/README.md) records two passing controlled Rust Node transitions and their limits, preserves the earlier diagnostic failures, and retains all ten owner questions. It adds no qualification credit and does not close the Windows assurance or historical-inventory gaps.

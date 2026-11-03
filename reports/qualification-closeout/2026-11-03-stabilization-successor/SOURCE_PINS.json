@@ -1,0 +1,28 @@
+{
+  "adapted_text_sources": {
+    "OWNER_DISPOSITION.md": {
+      "adaptation": "Replace the original private-artifact basename with the corresponding public relative link; no finding changed.",
+      "original_sha256": "sha256:682941a9480aee248a4f4e4e956d75c8ce56f96d7f67acc77cae0804cdb93ca7",
+      "packaged_sha256": "sha256:d6d73e3e76ab82e947aa7de8e21aaff917ababe5c8b994eb59f841817a021311"
+    }
+  },
+  "canonical_root_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+  "copied_derivatives": {
+    "decision-delta.json": "sha256:b6092c059b89450049032e0bf0593781471f364b7699a27291eb457dc916ed4f",
+    "decision-matrix.json": "sha256:68d5d713be4e5aefcc03a32eed9010e8a16cc3c63f6f32d481a24146f7c5d0ac",
+    "history-terminal-gap.json": "sha256:ed11abb2f8d0d2647ce8f38236a998ef6a76b0e294080362e7902c7cf455ae0b",
+    "observer-result.json": "sha256:594f741152a07103f8846b086ceda3e956f2913c78515c6d58548af8f8c83583",
+    "observer-review.json": "sha256:d0bdcbc7aa1abcd9ce95e43df157faf70b81b6e2811c95587a0c9fb9359a431c"
+  },
+  "frozen_rust_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+  "originals": "Retained privately; digests do not make original captures publicly reproducible",
+  "qualification_credit_added": 0,
+  "restricted_review_references": {
+    "decision_delta_review": "sha256:105bb51650591254c6840eafa477298afcf81a78e422900b9f5d4cf747994232",
+    "exact_port_guard_review": "sha256:98899b3daf419cf7cfe720902613974c9fcd09a96b0cf31c482c53811d504ce7",
+    "historical_gap_review": "sha256:35aa59b054eea18b0459510c755ee4a927778f8d94e12c42dd6f1b45236d4673",
+    "numeric_observer_terminal_review": "sha256:d0bdcbc7aa1abcd9ce95e43df157faf70b81b6e2811c95587a0c9fb9359a431c",
+    "original_network_control_review": "sha256:3dea3f10823383c1012d2fb6c34a7c412942ebd618ab62cbc23ee2feb6562c3f"
+  },
+  "schema": "iicp.stabilization-supplement-pins.v1"
+}

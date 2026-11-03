@@ -1,0 +1,92 @@
+{
+  "schema": "iicp.stabilization-decision-delta.v1",
+  "at": "2026-11-03T21:28:24.119692+00:00",
+  "predecessor_matrix_sha256": "sha256:68d5d713be4e5aefcc03a32eed9010e8a16cc3c63f6f32d481a24146f7c5d0ac",
+  "terminal_review_sha256": "sha256:d0bdcbc7aa1abcd9ce95e43df157faf70b81b6e2811c95587a0c9fb9359a431c",
+  "qualification_credit": 0,
+  "source_changes": 0,
+  "decisions": [
+    {
+      "id": "R183-route",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "disposition": "PARTIAL_BOUNDED_EVIDENCE_STRENGTHENED",
+      "new_observation": "Default-cadence synthetic route down/up now observed:3healthy,3unavailable,3healthy; registrychecks2/4/6/8 and no restart. Actual route/tunnel cause remains missing.",
+      "remaining_proof": "Real route/tunnel discovery and original incident causal chain.",
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R183-registration",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "disposition": "PARTIAL_BOUNDED_EVIDENCE_STRENGTHENED",
+      "new_observation": "Heartbeat401 then re-register403 observed at heartbeats4/5/6; later3fakeDirectory200 heartbeats, no restart. Real credential drift/remediation and original cause remain missing.",
+      "remaining_proof": "Actual credential drift/remediation, durable Directory presence and original incident causal chain.",
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R183-exit76",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "disposition": "PARTIAL_BOUNDED_EVIDENCE_STRENGTHENED",
+      "new_observation": "Default every-two-heartbeat cadence now observed in restoring-route case; no grace exhaustion or exit76 occurred in this successor. Existing accelerated exit76 evidence is unchanged.",
+      "remaining_proof": "Default-cadence grace exhaustion, original repeated76/supervisor behavior and cooldown.",
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R183-supervisor",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "disposition": "UNCHANGED_OPEN",
+      "new_observation": "No new evidence in this bounded two-case sequence.",
+      "remaining_proof": "One fixture successor is not launchd ownership, throttling or original launch settings.",
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R183-cooldown",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "disposition": "UNCHANGED_OPEN",
+      "new_observation": "No new evidence in this bounded two-case sequence.",
+      "remaining_proof": "CLI tunnel cooldown belongs to exit75 path; no demonstrated cooldown on repeated Node exit76 path.",
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R175-relay",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "disposition": "UNCHANGED_OPEN",
+      "new_observation": "No new evidence in this bounded two-case sequence.",
+      "remaining_proof": "Source election filters relay_capable and endpoint then derives port default9485; this alone does not prove runtime reachability or supported admission.",
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R175-fallback",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "disposition": "UNCHANGED_OPEN",
+      "new_observation": "No new evidence in this bounded two-case sequence.",
+      "remaining_proof": "Original failure report remains operator evidence; complete native fallback path not observed in current diagnostics.",
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R175-diagnostics",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "disposition": "UNCHANGED_OPEN",
+      "new_observation": "No new evidence in this bounded two-case sequence.",
+      "remaining_proof": "Frozen/current register returns status-only on non-success; missing allowlisted code is source-supported, while normative support classification still needs owner decision.",
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "WIN-isolation",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "disposition": "UNCHANGED_OPEN",
+      "new_observation": "No new evidence in this bounded two-case sequence.",
+      "remaining_proof": "Reviewed caller removes preparation firewall before workload; no alternate lifetime egress enforcement established. Actual prohibited contact is not established.",
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "WIN-authority",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "disposition": "UNCHANGED_OPEN",
+      "new_observation": "No new evidence in this bounded two-case sequence.",
+      "remaining_proof": "Original same-environment and grant/closure clauses remain separately UNVERIFIED; counts do not settle them.",
+      "issue_closure_authorized": false
+    }
+  ],
+  "formal21criteria": "UNCHANGED_UNVERIFIED",
+  "scope": "Additive bounded-observation update; not original root cause, product correction or qualification evidence."
+}
