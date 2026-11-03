@@ -69,3 +69,7 @@ Inventory work is tracked in [root issue #1676](https://github.com/RobLe3/iicp.n
 ## Stabilization-readiness observations
 
 The [3 November bounded successor supplement](reports/qualification-closeout/2026-11-03-stabilization-successor/README.md) records two passing controlled Rust Node transitions and their limits, preserves the earlier diagnostic failures, and retains all ten owner questions. It adds no qualification credit and does not close the Windows assurance or historical-inventory gaps.
+
+## Post-qualification engineering inputs
+
+[Read the reviewed-input package checkpoint](reports/postprocessing-final/2026-11-04/README.md) for normalized assertions, bounded engineering findings, DMSC source bindings and retained historical accounting. Its delivery progress is separate from historical completeness and release readiness.

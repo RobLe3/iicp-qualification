@@ -1,0 +1,31 @@
+{
+  "schema": "iicp.postprocessing-source-index.v1",
+  "canonical_root_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+  "reporting_input_commit": "61fdf8a9ff807e38c5cd06baf289729c6b1cc0de",
+  "public_sources": [
+    {
+      "path": "reports/documentation-handoff/v2/manifest.json",
+      "sha256": "e805148387261890a774b3a68684998947311f6c3d51ec6fcaf683ff6d6bee3b"
+    },
+    {
+      "path": "reports/qualification-closeout/2026-11-03-closeout/checkpoint-manifest.json",
+      "sha256": "2afc3b99bf39a8f7367c00c0c94ae80c3976241e71b1deaf93f6731582fa16b6"
+    },
+    {
+      "path": "reports/qualification-closeout/2026-11-03-stabilization-successor/supplement-manifest.json",
+      "sha256": "101b7b4c16fdbcdd634189cf171593c8a595ec64ab2cc27d50d0fb9f497a6f99"
+    },
+    {
+      "path": "reports/analysis-v2/manifest.json",
+      "sha256": "e0452247d81b6d940907e735dd0073eebf8a10eb84d94a99224b8a91a6ca4c18"
+    },
+    {
+      "path": "reports/analysis-v2/README.md",
+      "sha256": "8921285db010c422b18879ec167c4f00bfb45be1e886ac3f9ae0b1d27e59df1f"
+    }
+  ],
+  "retained_private_review_sha256": "bb00864db1dad069b454e3938ab26d5fff24545ec4fbccb362090808bf6bd1a1",
+  "private_review_availability": "RETAINED_PRIVATE_NOT_DISTRIBUTED",
+  "historical_inventory_complete": false,
+  "qualification_credit_added": 0
+}
