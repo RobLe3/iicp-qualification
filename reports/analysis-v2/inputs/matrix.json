@@ -1,0 +1,168 @@
+{
+  "candidate_stable_rule": "Rust stable is pinned exactly as rust-1.98.0 and must match the immutable candidate manifest before evidence collection.",
+  "components": [
+    {
+      "directory_flavors": [
+        "php",
+        "rust"
+      ],
+      "id": "client-python",
+      "modes": [
+        "public",
+        "restricted",
+        "local-only"
+      ],
+      "repository": "iicp-client-python",
+      "runtimes": [
+        "cpython-3.11",
+        "cpython-3.12",
+        "cpython-3.13",
+        "cpython-3.14"
+      ],
+      "targets": [
+        "linux-x86_64",
+        "linux-aarch64",
+        "macos-arm64",
+        "windows-x86_64"
+      ]
+    },
+    {
+      "directory_flavors": [
+        "php",
+        "rust"
+      ],
+      "id": "client-typescript",
+      "modes": [
+        "public",
+        "restricted",
+        "local-only"
+      ],
+      "repository": "iicp-client-typescript",
+      "runtimes": [
+        "node-22",
+        "node-24"
+      ],
+      "targets": [
+        "linux-x86_64",
+        "linux-aarch64",
+        "macos-arm64",
+        "windows-x86_64"
+      ]
+    },
+    {
+      "directory_flavors": [
+        "php",
+        "rust"
+      ],
+      "id": "client-rust",
+      "modes": [
+        "public",
+        "restricted",
+        "local-only"
+      ],
+      "repository": "iicp-client-rust",
+      "runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "targets": [
+        "linux-x86_64",
+        "linux-aarch64",
+        "macos-arm64",
+        "windows-x86_64"
+      ]
+    },
+    {
+      "directory_flavors": [
+        "php"
+      ],
+      "id": "directory-php",
+      "modes": [
+        "public",
+        "restricted",
+        "local-only"
+      ],
+      "repository": "iicp-directory-php",
+      "runtimes": [
+        "php-8.3"
+      ],
+      "targets": [
+        "linux-x86_64",
+        "linux-aarch64"
+      ]
+    },
+    {
+      "directory_flavors": [
+        "rust"
+      ],
+      "id": "directory-rust",
+      "modes": [
+        "public",
+        "restricted",
+        "local-only"
+      ],
+      "repository": "iicp-directory-rust",
+      "runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "targets": [
+        "linux-x86_64",
+        "linux-aarch64"
+      ]
+    },
+    {
+      "directory_flavors": [
+        "not_applicable"
+      ],
+      "id": "management",
+      "modes": [
+        "local-only"
+      ],
+      "repository": "iicp-management",
+      "runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "targets": [
+        "linux-x86_64",
+        "linux-aarch64",
+        "macos-arm64",
+        "windows-x86_64"
+      ]
+    }
+  ],
+  "declared_directory_flavors": [
+    "php",
+    "rust",
+    "not_applicable"
+  ],
+  "declared_modes": [
+    "public",
+    "restricted",
+    "local-only"
+  ],
+  "declared_targets": [
+    "linux-x86_64",
+    "linux-aarch64",
+    "macos-arm64",
+    "windows-x86_64"
+  ],
+  "exhaustive_within_declared_scope": true,
+  "explicitly_unsupported": [
+    "windows-arm64",
+    "browser-provider-production",
+    "relay-routing-stable",
+    "federation",
+    "cross-domain-management",
+    "meshllm-stable"
+  ],
+  "non_authorizing": true,
+  "required_cell_count": 218,
+  "required_cells_sha256": "sha256:9142349ddcf2fec6c6dfd9f2b8aa2673608c9369c2745b735eec45d79531be28",
+  "schema": "iicp.pre1-support-matrix.v1",
+  "scope_rule": "Every generated cell must pass. An untestable cell must be removed from the supported contract by a reviewed product decision; it cannot be waived.",
+  "status": "OPEN",
+  "updated_at": "2026-09-05",
+  "waivers_allowed": false
+}

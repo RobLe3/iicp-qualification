@@ -1,0 +1,554 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "non_authorizing",
+    "qualification_credit_added",
+    "historical_inventory_complete",
+    "source_commit",
+    "candidate_manifest_sha256",
+    "inputs",
+    "assertions",
+    "comparisons",
+    "chronology",
+    "counts",
+    "limitations"
+  ],
+  "properties": {
+    "schema": {
+      "const": "iicp.qualification-analysis.v2"
+    },
+    "non_authorizing": {
+      "const": true
+    },
+    "qualification_credit_added": {
+      "const": 0
+    },
+    "historical_inventory_complete": {
+      "const": false
+    },
+    "source_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "candidate_manifest_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "receipts",
+        "events",
+        "scope",
+        "links",
+        "matrix",
+        "catalog",
+        "registers"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "receipts": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "events": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "scope": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "links": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "matrix": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "catalog": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "registers": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "assertions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "assertion_id",
+          "receipt_id",
+          "receipt_file_sha256",
+          "candidate_manifest_sha256",
+          "environment_sha256",
+          "contract_mapping_status",
+          "component",
+          "runtime",
+          "target",
+          "directory_flavor",
+          "mode",
+          "cell_id",
+          "scenario_id",
+          "scenario_category",
+          "observed_disposition",
+          "semantic_equivalence"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "support_cells",
+              "edge_executions"
+            ]
+          },
+          "assertion_id": {
+            "type": "string"
+          },
+          "receipt_id": {
+            "type": "string",
+            "pattern": "^pre1-qualification-[a-z0-9_-]+$"
+          },
+          "receipt_file_sha256": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "candidate_manifest_sha256": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "environment_sha256": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "contract_mapping_status": {
+            "const": "UNRESOLVED"
+          },
+          "component": {
+            "enum": [
+              "client-python",
+              "client-rust",
+              "client-typescript",
+              "directory-php",
+              "directory-rust",
+              "management"
+            ]
+          },
+          "runtime": {
+            "enum": [
+              "cpython-3.11",
+              "cpython-3.12",
+              "cpython-3.13",
+              "cpython-3.14",
+              "msrv-1.86",
+              "msrv-1.88",
+              "node-22",
+              "node-24",
+              "php-8.3",
+              "rust-1.98.0"
+            ]
+          },
+          "target": {
+            "enum": [
+              "linux-aarch64",
+              "linux-x86_64",
+              "macos-arm64",
+              "windows-x86_64"
+            ]
+          },
+          "directory_flavor": {
+            "enum": [
+              "not_applicable",
+              "php",
+              "rust"
+            ]
+          },
+          "mode": {
+            "enum": [
+              "local-only",
+              "public",
+              "restricted"
+            ]
+          },
+          "cell_id": {
+            "type": "string"
+          },
+          "scenario_id": {
+            "enum": [
+              null,
+              "config-missing",
+              "config-malformed",
+              "config-permission-denied",
+              "credential-missing",
+              "credential-expired",
+              "credential-replayed",
+              "credential-rotated",
+              "signature-mismatch",
+              "dns-failure",
+              "tls-failure",
+              "request-timeout",
+              "partial-response",
+              "rate-limit",
+              "directory-unavailable",
+              "confidentiality-key-missing",
+              "confidentiality-downgrade",
+              "ciphertext-tamper",
+              "process-crash-restart",
+              "stale-pid-or-lock",
+              "duplicate-registration",
+              "dynamic-public-route-readiness",
+              "interrupted-write",
+              "disk-full",
+              "backup-restore",
+              "migration-interrupted",
+              "rollback-last-supported",
+              "minimum-version",
+              "unsupported-version",
+              "cross-flavor-equivalence",
+              "no-dual-authority",
+              "management-invalid-authority",
+              "management-network-disabled",
+              "management-policy-dispatch-refusal",
+              "management-secret-redaction",
+              "offline-locked-install",
+              "package-version-self-report"
+            ]
+          },
+          "scenario_category": {
+            "enum": [
+              null,
+              "confidentiality",
+              "configuration",
+              "credentials",
+              "directory-parity",
+              "lifecycle",
+              "management-safety",
+              "migration",
+              "network",
+              "packaging",
+              "storage",
+              "version-skew"
+            ]
+          },
+          "observed_disposition": {
+            "const": "ACCEPTED_PASS"
+          },
+          "semantic_equivalence": {
+            "const": "NOT_ESTABLISHED"
+          }
+        }
+      }
+    },
+    "comparisons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "group_id",
+          "kind",
+          "scenario_id",
+          "component",
+          "runtime",
+          "directory_flavor",
+          "mode",
+          "applicable_targets",
+          "denominator",
+          "accepted_rows",
+          "excluded_targets",
+          "assertion_ids",
+          "comparison_scope",
+          "raw_output_equivalence"
+        ],
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "kind": {
+            "enum": [
+              "support_cells",
+              "edge_executions"
+            ]
+          },
+          "scenario_id": {
+            "enum": [
+              null,
+              "config-missing",
+              "config-malformed",
+              "config-permission-denied",
+              "credential-missing",
+              "credential-expired",
+              "credential-replayed",
+              "credential-rotated",
+              "signature-mismatch",
+              "dns-failure",
+              "tls-failure",
+              "request-timeout",
+              "partial-response",
+              "rate-limit",
+              "directory-unavailable",
+              "confidentiality-key-missing",
+              "confidentiality-downgrade",
+              "ciphertext-tamper",
+              "process-crash-restart",
+              "stale-pid-or-lock",
+              "duplicate-registration",
+              "dynamic-public-route-readiness",
+              "interrupted-write",
+              "disk-full",
+              "backup-restore",
+              "migration-interrupted",
+              "rollback-last-supported",
+              "minimum-version",
+              "unsupported-version",
+              "cross-flavor-equivalence",
+              "no-dual-authority",
+              "management-invalid-authority",
+              "management-network-disabled",
+              "management-policy-dispatch-refusal",
+              "management-secret-redaction",
+              "offline-locked-install",
+              "package-version-self-report"
+            ]
+          },
+          "component": {
+            "enum": [
+              "client-python",
+              "client-rust",
+              "client-typescript",
+              "directory-php",
+              "directory-rust",
+              "management"
+            ]
+          },
+          "runtime": {
+            "enum": [
+              "cpython-3.11",
+              "cpython-3.12",
+              "cpython-3.13",
+              "cpython-3.14",
+              "msrv-1.86",
+              "msrv-1.88",
+              "node-22",
+              "node-24",
+              "php-8.3",
+              "rust-1.98.0"
+            ]
+          },
+          "directory_flavor": {
+            "enum": [
+              "not_applicable",
+              "php",
+              "rust"
+            ]
+          },
+          "mode": {
+            "enum": [
+              "local-only",
+              "public",
+              "restricted"
+            ]
+          },
+          "applicable_targets": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "linux-aarch64",
+                "linux-x86_64",
+                "macos-arm64",
+                "windows-x86_64"
+              ]
+            }
+          },
+          "denominator": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "accepted_rows": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "excluded_targets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "target",
+                "reason"
+              ],
+              "properties": {
+                "target": {
+                  "enum": [
+                    "linux-aarch64",
+                    "linux-x86_64",
+                    "macos-arm64",
+                    "windows-x86_64"
+                  ]
+                },
+                "reason": {
+                  "const": "NOT_DECLARED_FOR_COMPONENT_IN_PINNED_MATRIX"
+                }
+              }
+            }
+          },
+          "assertion_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "comparison_scope": {
+            "const": "ACCEPTED_DISPOSITION_ONLY"
+          },
+          "raw_output_equivalence": {
+            "const": "NOT_ESTABLISHED"
+          }
+        }
+      }
+    },
+    "chronology": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "record_type",
+          "reported_event_at",
+          "execution_at",
+          "kind",
+          "outcome",
+          "source_sha256",
+          "qualification_credit",
+          "causal_status",
+          "causal_parent_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "record_type": {
+            "enum": [
+              "REPORTED_EVENT",
+              "REVIEWED_REGISTER"
+            ]
+          },
+          "reported_event_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "execution_at": {
+            "type": "null"
+          },
+          "kind": {
+            "enum": [
+              null,
+              "qualification",
+              "diagnostic",
+              "ci",
+              "correction",
+              "cleanup",
+              "evidence-admission",
+              "blocker",
+              "authorization"
+            ]
+          },
+          "outcome": {
+            "enum": [
+              null,
+              "PASS",
+              "FAIL",
+              "REFUSED",
+              "INTERRUPTED",
+              "MERGED",
+              "VERIFIED",
+              "EXPIRED",
+              "UNKNOWN"
+            ]
+          },
+          "source_sha256": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "qualification_credit": {
+            "const": 0
+          },
+          "causal_status": {
+            "const": "UNKNOWN"
+          },
+          "causal_parent_ids": {
+            "const": []
+          }
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "support_cells",
+        "edge_executions",
+        "assertions",
+        "comparison_groups",
+        "reported_events",
+        "register_anchors"
+      ],
+      "properties": {
+        "support_cells": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "edge_executions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "assertions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "comparison_groups": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reported_events": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "register_anchors": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "limitations": {
+      "const": [
+        "PINNED_DERIVATIVE_NOT_AUTHORITY",
+        "ACCEPTED_DISPOSITION_NOT_SEMANTIC_EQUIVALENCE",
+        "EVENT_TIME_NOT_EXECUTION_TIME",
+        "CAUSALITY_UNKNOWN",
+        "HISTORY_INCOMPLETE",
+        "NO_EXTERNAL_CERTIFICATION_OR_PERFORMANCE_CLAIM"
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

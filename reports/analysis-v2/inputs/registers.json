@@ -1,0 +1,26 @@
+[
+  {
+    "causal_status": "UNKNOWN",
+    "execution_at": null,
+    "id": "six-component-register",
+    "path": "reports/qualification-closeout/2026-11-03-closeout/six-component-register.json",
+    "record_type": "REVIEWED_REGISTER",
+    "sha256": "sha256:61382a025534d9eb695c80666c1dd4b14dd5eb060c1ef9e98d499e994d1e4c66"
+  },
+  {
+    "causal_status": "UNKNOWN",
+    "execution_at": null,
+    "id": "clause-dispositions",
+    "path": "reports/qualification-closeout/2026-11-03-closeout/clause-dispositions.sanitized.json",
+    "record_type": "REVIEWED_REGISTER",
+    "sha256": "sha256:8793b28ffbe8a63cbf019bb42f64f42afbf7efcde6ad2e723f73b15b6ac428f8"
+  },
+  {
+    "causal_status": "UNKNOWN",
+    "execution_at": null,
+    "id": "inventory-prefix",
+    "path": "reports/qualification-closeout/2026-11-03-closeout/inventory-prefix.json",
+    "record_type": "REVIEWED_REGISTER",
+    "sha256": "sha256:36b2ce2f756e5825c3f51f23f5f0847a4e13ad12d397cfc6be11bc5c51b3d734"
+  }
+]

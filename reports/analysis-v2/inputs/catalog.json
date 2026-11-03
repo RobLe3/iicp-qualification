@@ -1,0 +1,455 @@
+{
+  "catalog_rule": "All required scenarios must pass against every applicable support-matrix slice selected by the scenario runner. Newly reproduced failures are added before promotion.",
+  "catalog_sha256": "sha256:4dec70d4618de4b7f9601032ddfffcd79f6ef8a4194d1d0ceff5a5c80156ae90",
+  "non_authorizing": true,
+  "required_categories": [
+    "confidentiality",
+    "configuration",
+    "credentials",
+    "directory-parity",
+    "lifecycle",
+    "management-safety",
+    "migration",
+    "network",
+    "packaging",
+    "storage",
+    "version-skew"
+  ],
+  "required_execution_count": 5590,
+  "required_scenario_count": 36,
+  "scenarios": [
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust",
+        "management"
+      ],
+      "category": "configuration",
+      "expected_behavior": "Reject missing required configuration with a stable actionable reason.",
+      "id": "config-missing",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust",
+        "management"
+      ],
+      "category": "configuration",
+      "expected_behavior": "Reject malformed or unknown fields without applying partial state.",
+      "id": "config-malformed",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-rust",
+        "management"
+      ],
+      "category": "configuration",
+      "expected_behavior": "Fail without exposing content or weakening owner-only storage.",
+      "id": "config-permission-denied",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "credentials",
+      "expected_behavior": "Fail closed without anonymous authority escalation.",
+      "id": "credential-missing",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "credentials",
+      "expected_behavior": "Reject expired credentials with a recoverable reason.",
+      "id": "credential-expired",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "credentials",
+      "expected_behavior": "Reject replay without changing accepted state.",
+      "id": "credential-replayed",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "credentials",
+      "expected_behavior": "Accept the new credential and reject the superseded credential.",
+      "id": "credential-rotated",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "credentials",
+      "expected_behavior": "Reject signature and identity mismatches deterministically.",
+      "id": "signature-mismatch",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust"
+      ],
+      "category": "network",
+      "expected_behavior": "Return a bounded classified error without unsafe endpoint fallback.",
+      "id": "dns-failure",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust"
+      ],
+      "category": "network",
+      "expected_behavior": "Reject invalid TLS rather than downgrading transport.",
+      "id": "tls-failure",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "management"
+      ],
+      "category": "network",
+      "expected_behavior": "Bound the attempt and preserve retry safety.",
+      "id": "request-timeout",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust"
+      ],
+      "category": "network",
+      "expected_behavior": "Reject truncated or schema-invalid responses.",
+      "id": "partial-response",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "network",
+      "expected_behavior": "Expose bounded retry information without an unbounded loop.",
+      "id": "rate-limit",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust"
+      ],
+      "category": "network",
+      "expected_behavior": "Keep local/private behavior explicit and avoid public fallback.",
+      "id": "directory-unavailable",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust"
+      ],
+      "category": "confidentiality",
+      "expected_behavior": "Fail closed when confidentiality is required but no usable key exists.",
+      "id": "confidentiality-key-missing",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust"
+      ],
+      "category": "confidentiality",
+      "expected_behavior": "Reject downgrade or mismatched encrypted-response capability.",
+      "id": "confidentiality-downgrade",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust"
+      ],
+      "category": "confidentiality",
+      "expected_behavior": "Reject modified ciphertext without returning partial plaintext.",
+      "id": "ciphertext-tamper",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust",
+        "management"
+      ],
+      "category": "lifecycle",
+      "expected_behavior": "Recover durable identity and state without duplicate authority.",
+      "id": "process-crash-restart",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-rust",
+        "directory-rust",
+        "management"
+      ],
+      "category": "lifecycle",
+      "expected_behavior": "Recover stale local ownership metadata without bypassing an active owner.",
+      "id": "stale-pid-or-lock",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "lifecycle",
+      "expected_behavior": "Preserve one coherent node identity and deterministic ownership semantics.",
+      "id": "duplicate-registration",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "lifecycle",
+      "expected_behavior": "Withhold credentials and discovery eligibility for a newly allocated public route until its listener and external health endpoint are serving, then recover registration automatically without a manual secret transfer.",
+      "id": "dynamic-public-route-readiness",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "directory-php",
+        "directory-rust",
+        "management"
+      ],
+      "category": "storage",
+      "expected_behavior": "Recover or reject incomplete state without accepting a partial generation.",
+      "id": "interrupted-write",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "directory-php",
+        "directory-rust",
+        "management"
+      ],
+      "category": "storage",
+      "expected_behavior": "Fail without reporting success or corrupting the last verified state.",
+      "id": "disk-full",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "storage",
+      "expected_behavior": "Restore the exact verified schema and observable state.",
+      "id": "backup-restore",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "migration",
+      "expected_behavior": "Resume or roll back according to the documented migration boundary.",
+      "id": "migration-interrupted",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust",
+        "management"
+      ],
+      "category": "migration",
+      "expected_behavior": "Restore the documented last supported generation without silent data loss.",
+      "id": "rollback-last-supported",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust",
+        "management"
+      ],
+      "category": "version-skew",
+      "expected_behavior": "Pass on every declared minimum runtime and dependency boundary.",
+      "id": "minimum-version",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust",
+        "management"
+      ],
+      "category": "version-skew",
+      "expected_behavior": "Reject or clearly classify unsupported versions rather than claiming support.",
+      "id": "unsupported-version",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "directory-parity",
+      "expected_behavior": "Produce fixture-equivalent results against isolated PHP and Rust Directory lanes.",
+      "id": "cross-flavor-equivalence",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "directory-php",
+        "directory-rust"
+      ],
+      "category": "directory-parity",
+      "expected_behavior": "Never turn comparative tests into simultaneous Genesis authority.",
+      "id": "no-dual-authority",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "management"
+      ],
+      "category": "management-safety",
+      "expected_behavior": "Reject misleading authority, activation, or success claims.",
+      "id": "management-invalid-authority",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "management"
+      ],
+      "category": "management-safety",
+      "expected_behavior": "Complete the authorized-local workflow without Directory or production contact.",
+      "id": "management-network-disabled",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "management"
+      ],
+      "category": "management-safety",
+      "expected_behavior": "Apply active policy before ranking and retry so unavailable permitted capacity cannot fall back to a region- or identity-prohibited candidate.",
+      "id": "management-policy-dispatch-refusal",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "management"
+      ],
+      "category": "management-safety",
+      "expected_behavior": "Exclude secrets and private topology from diagnostic and friction evidence.",
+      "id": "management-secret-redaction",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-rust",
+        "management"
+      ],
+      "category": "packaging",
+      "expected_behavior": "Install exactly from the verified offline artifact set.",
+      "id": "offline-locked-install",
+      "required": true
+    },
+    {
+      "applicable_components": [
+        "client-python",
+        "client-typescript",
+        "client-rust",
+        "directory-php",
+        "directory-rust",
+        "management"
+      ],
+      "category": "packaging",
+      "expected_behavior": "Match package metadata, runtime self-report, tag, manifest, and requested version.",
+      "id": "package-version-self-report",
+      "required": true
+    }
+  ],
+  "schema": "iicp.pre1-edge-case-catalog.v1",
+  "status": "OPEN",
+  "updated_at": "2026-09-05",
+  "waivers_allowed": false
+}
