@@ -1,0 +1,50 @@
+{
+  "schema": "iicp.retained-history-reconciliation.v1",
+  "at": "2026-11-03T23:00:40.456954+00:00",
+  "result": "PASS_RETAINED_VALIDATION",
+  "partitions": 895,
+  "last_index": 894,
+  "source_manifest_sha256": "sha256:2d42b79d759d3ee33455d4479e421d66323354b8bfc9a3acce0246a94b133ee3",
+  "chain": {
+    "partitions": 895,
+    "discovered_records": 778851,
+    "history_directories": 116148,
+    "unresolved_discovery_gaps": 1,
+    "discovery_exhausted": false,
+    "historical_inventory_complete": false,
+    "qualification_credit": 0
+  },
+  "unique_evidence_objects": 778978,
+  "unique_content_digests": 71781,
+  "availability": {
+    "RETAINED": 776171,
+    "OVERSIZE": 2797,
+    "UNSAFE": 10
+  },
+  "integrity": {
+    "HASHED": 776044,
+    "UNVERIFIED": 2807,
+    "MATCH": 112,
+    "MISMATCH": 15
+  },
+  "archive_status": {
+    "NOT_ARCHIVE": 778575,
+    "SAFE_METADATA": 257,
+    "UNREADABLE": 146
+  },
+  "unique_object_gap_pairs": 2968,
+  "per_partition_nonobject_gap_occurrences": {
+    "canonical-receipt-unresolved": 56223
+  },
+  "canonical_receipts_resolved_across_prefix": 64,
+  "remaining_frontier_entries": 118,
+  "recorded_directories_compared_once": 116148,
+  "directory_stamps_same": 116147,
+  "current_directory_difference_count": 1,
+  "earlier_refusal_cause": "NOT_ESTABLISHED_BY_CURRENT_COMPARISON",
+  "original_0_313_snapshot_unchanged": true,
+  "historical_inventory_complete": false,
+  "qualification_credit_added": 0,
+  "discovery_executed": false,
+  "elapsed_seconds": 4223.8
+}

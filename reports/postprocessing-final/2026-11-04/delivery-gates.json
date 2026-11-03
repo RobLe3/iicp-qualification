@@ -1,0 +1,51 @@
+{
+  "schema": "iicp.postprocessing-delivery-checkpoint.v1",
+  "as_of": "2026-11-04",
+  "gates": [
+    {
+      "id": 1,
+      "name": "Verified qualification snapshot and receipt traceability",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 2,
+      "name": "Reviewed owner, defect and evidence-gap disposition registers",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 3,
+      "name": "Published portable documentation-agent handoff",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 4,
+      "name": "Reconciliation of retained historical inventory",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 5,
+      "name": "Normalized scenario, platform and component inputs",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 6,
+      "name": "Source-linked chronology and incident inputs",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 7,
+      "name": "Usable DMSC source and evidence bridge",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 8,
+      "name": "Independently verified final post-processing package",
+      "status": "PENDING"
+    }
+  ],
+  "completed": 7,
+  "required": 8,
+  "historical_inventory_complete": false,
+  "qualification_credit_added": 0,
+  "interpretation": "Bounded delivery gates, not historical completeness, elapsed effort, product defect freedom or the full post-certification programme."
+}

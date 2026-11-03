@@ -1,0 +1,27 @@
+{
+  "schema": "iicp.postprocessing-checkpoint-manifest.v1",
+  "files": [
+    {
+      "path": "HISTORY_METHOD_AND_LIMITS.md",
+      "sha256": "6ff38fc10a0f1724a793703530a289f2e3466e4cb614a5c2b5e30996d8ee4748"
+    },
+    {
+      "path": "README.md",
+      "sha256": "142d1e0d8426d88c5764eefdac55649f5576b25a7203737ad5f80a2ff96e8d74"
+    },
+    {
+      "path": "delivery-gates.json",
+      "sha256": "de85516bd41a134aef65df69cc99acde776b08bbef1b9fa36aab5e30a29cbfdc"
+    },
+    {
+      "path": "retained-history.json",
+      "sha256": "dd1a39334f139d99b92218f11f0136239521371a2f91c1457a3ca120914b0562"
+    },
+    {
+      "path": "source-index.json",
+      "sha256": "a6eccf7f01f0d604db789bf579d38b01bcb1e2f2ab4ec7c70fc0dfdfaaec8ede"
+    }
+  ],
+  "historical_inventory_complete": false,
+  "qualification_credit_added": 0
+}
