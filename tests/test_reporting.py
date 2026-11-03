@@ -351,7 +351,7 @@ class ReportingTests(unittest.TestCase):
             self.assertEqual(len(list(p.glob("report-*.json"))), 1)
 
     def publication_fixture(
-        self, changed_head=False, concurrent_base=False, final_base_changed=False
+        self, changed_head=False, concurrent_base=False, final_base_changed=False, check_status="COMPLETED", conclusion="SUCCESS"
     ):
         successor = copy.deepcopy(self.bundle)
         successor["events"]["events"].append(self.event())
@@ -387,8 +387,8 @@ class ReportingTests(unittest.TestCase):
                             "statusCheckRollup": [
                                 {
                                     "name": "qualification-report",
-                                    "status": "COMPLETED",
-                                    "conclusion": "SUCCESS",
+                                    "status": check_status,
+                                    "conclusion": conclusion,
                                 }
                             ],
                         }
@@ -403,8 +403,10 @@ class ReportingTests(unittest.TestCase):
                 patch.object(cli, "write_report"),
                 patch.object(cli, "verify_committed_report"),
                 patch.object(cli, "run", side_effect=fake),
+                patch.object(cli.time, "monotonic", side_effect=[0, 721]),
+                patch.object(cli.time, "sleep"),
             ):
-                if changed_head or concurrent_base or final_base_changed:
+                if changed_head or concurrent_base or final_base_changed or check_status != "COMPLETED" or conclusion != "SUCCESS":
                     with self.assertRaises(ValueError):
                         cli.publish(args)
                     self.assertFalse(any(c[:3] == ("gh", "pr", "merge") for c in calls))
@@ -415,6 +417,15 @@ class ReportingTests(unittest.TestCase):
 
     def test_synthetic_positive_publication_through_actual_implementation(self):
         self.publication_fixture()
+
+    def test_failed_check_cannot_merge(self):
+        self.publication_fixture(conclusion="FAILURE")
+
+    def test_cancelled_check_cannot_merge(self):
+        self.publication_fixture(conclusion="CANCELLED")
+
+    def test_pending_check_cannot_merge(self):
+        self.publication_fixture(check_status="IN_PROGRESS", conclusion=None)
 
     def test_changed_pr_head_cannot_merge(self):
         self.publication_fixture(changed_head=True)
