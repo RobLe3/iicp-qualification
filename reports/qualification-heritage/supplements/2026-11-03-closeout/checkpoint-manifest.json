@@ -1,0 +1,80 @@
+{
+  "delivery_gates_complete": 7,
+  "delivery_gates_total": 10,
+  "historical_inventory_complete": false,
+  "issue_1676_status": "OPEN",
+  "members": {
+    "DELIVERY_GATES.md": {
+      "bytes": 2280,
+      "sha256": "sha256:58fcef533a7d85e02c3a0ac66b281c13622f8b0f80f05ca13cdaf200615ed31d"
+    },
+    "DOCUMENTATION_AGENT_WORKORDER.md": {
+      "bytes": 2122,
+      "sha256": "sha256:3afcfe8d01673774e89ed86d401f7dae2822993fe5161badd73131fd53cb27e0"
+    },
+    "EVIDENCE_PINS.md": {
+      "bytes": 2487,
+      "sha256": "sha256:78d71df62bbc79becae5dbc1f888a7253b81b78095b897521447dcd2d156b2ce"
+    },
+    "INVENTORY_CHECKPOINT.md": {
+      "bytes": 2669,
+      "sha256": "sha256:5c7456c74e79258674ff5755b1a5ef0bb34ed0d959a71a80d6c212d910760016"
+    },
+    "PENDING_INPUTS.md": {
+      "bytes": 769,
+      "sha256": "sha256:4371f5b4707c38e3244bbc8e902f9e2565761368e73287532cdcd017d5f3ea68"
+    },
+    "README.md": {
+      "bytes": 3656,
+      "sha256": "sha256:76ac58316bbdc8d656674984e2b69890e18238627b65b8796768d618ced7d3eb"
+    },
+    "SOURCE_AUTHORITY.md": {
+      "bytes": 1607,
+      "sha256": "sha256:09fba635d13754b1b056a9262f710b4bb8d53af25af89bb093fa2816db01d4d3"
+    },
+    "SOURCE_INDEX.json": {
+      "bytes": 3992,
+      "sha256": "sha256:7d44893aa8775995c54895906d9385dae766feab78013aec1763d521a87f7f1d"
+    },
+    "clause-dispositions.md": {
+      "bytes": 40090,
+      "sha256": "sha256:1d6dab80ba851d5e54fe32e6cfdedc7673314d8550943222f46ec14c6806256e"
+    },
+    "clause-dispositions.sanitized.json": {
+      "bytes": 54203,
+      "sha256": "sha256:8793b28ffbe8a63cbf019bb42f64f42afbf7efcde6ad2e723f73b15b6ac428f8"
+    },
+    "inventory-prefix.json": {
+      "bytes": 1704,
+      "sha256": "sha256:36b2ce2f756e5825c3f51f23f5f0847a4e13ad12d397cfc6be11bc5c51b3d734"
+    },
+    "rust-round5-result.json": {
+      "bytes": 2536,
+      "sha256": "sha256:1e6c842206782c93c88b34c35e8a28f6a30e8a76f583f80f20b1e7ffc84aa034"
+    },
+    "rust-round5-review.json": {
+      "bytes": 3117,
+      "sha256": "sha256:733ea4dd84ae379a9ccda7f616297441bcb9853ae1825f574c9d49d14a8c95f9"
+    },
+    "six-component-register.json": {
+      "bytes": 32972,
+      "sha256": "sha256:61382a025534d9eb695c80666c1dd4b14dd5eb060c1ef9e98d499e994d1e4c66"
+    },
+    "six-component-register.md": {
+      "bytes": 11381,
+      "sha256": "sha256:ce9a755207d07269a66fded0118f1075cecae59274925fba289ddde1a4739638"
+    },
+    "source-delta.md": {
+      "bytes": 2861,
+      "sha256": "sha256:6962389edf7a8a4a20bf1a0431d08d1a21a658fd7043ac8022846a00dedabe68"
+    },
+    "source-delta.sanitized.json": {
+      "bytes": 14721,
+      "sha256": "sha256:abf64ae986e279339095dbffd459ac7a801bbc6bbee7ae1878ad430e7413457d"
+    }
+  },
+  "purpose": "Additive documentation checkpoint, not qualification authority",
+  "qualification_credit_added": 0,
+  "schema": "iicp.closeout-checkpoint-manifest.v1",
+  "source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859"
+}

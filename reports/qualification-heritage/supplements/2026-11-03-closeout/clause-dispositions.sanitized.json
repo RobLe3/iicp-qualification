@@ -1,0 +1,722 @@
+{
+  "schema": "iicp.closeout-clause-dispositions.v1",
+  "at": "2026-11-03T16:38:16.897241+00:00",
+  "non_authorizing": true,
+  "source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+  "sources": [
+    {
+      "role": "original21clause_register",
+      "sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+    },
+    {
+      "role": "targeted_reconciliation_supplement",
+      "sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c"
+    },
+    {
+      "role": "source_preservation_delta_not_clause_proof",
+      "sha256": "sha256:abf64ae986e279339095dbffd459ac7a801bbc6bbee7ae1878ad430e7413457d"
+    },
+    {
+      "role": "reconciliation_review",
+      "sha256": "sha256:ef72fc8ec1bf22bd9785a042b9be26a38cb3b12e2de477332582b716bce3f4f1"
+    },
+    {
+      "role": "source_delta_review",
+      "sha256": "sha256:c331a926f9c0ed78d1d50ff7c25fd92c2acdaeb835e3908c1cc90029425a8ef9"
+    }
+  ],
+  "coverage": {
+    "expected_clauses": 21,
+    "unique_clauses": 21,
+    "supported_full_clauses": 0,
+    "partial_evidence_clauses": 18,
+    "unresolved_scope_decisions": 3,
+    "criterion_verdict_unverified": 21,
+    "new_passes": 0
+  },
+  "disposition_semantics": {
+    "SUPPORTED": "Complete clause proof; no current row qualifies.",
+    "PARTIAL": "Retained evidence supports bounded subclaims but missing proof prevents criterion PASS.",
+    "UNRESOLVED": "An owning scope/applicability interpretation is missing; retained neighboring facts do not decide it."
+  },
+  "rows": [
+    {
+      "id": "root-1106-clause-1",
+      "criterion_index": 1,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1106",
+      "requirement": "Bind the matrix to the frozen rustls-corrected six-component successor `stability-candidate-fb2b2b585d435111f05ca90355b4cf3c0c6a796d45549b0227bc26ea540b9b0c`, materialized as `sha256:42c45e282a3f24e7ad85c3a893c64f7bd5c0b48402b29bf98eb22c5e65ea3186`.",
+      "evidence_disposition": "UNRESOLVED",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Exact issue text names historical fb2b\u2026 candidate / 42c45\u2026 materialization; admitted certificates instead bind e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a. Explicitly reconcile supersession before declaring this exact clause satisfied.",
+      "targeted_observation": "Current pinned root retains both historical fb2b candidate and admitted e7c9 successor manifests. Local Git contains successor freeze commit3db08639c2210e101651181d85710af6fc27e0fb. Preservation of both identities supports a supersession question, not automatic satisfaction of historical wording.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:8bf98be30bda7bfc47a96da3dbdf8ece1255c2576ece93318b3114038884359a",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:91b4b9be94ca9add8b333eb3930df4fafecb3a4450423445ba9b55cbfdbb3241",
+          "observation": "Prior review or bounded corroboration; not independent original runtime proof"
+        },
+        {
+          "source_sha256": "sha256:35d60edbe40d8afb7fb194f51c59f6f93a7a2d200d48cabdef08e32415966540",
+          "observation": "Exact pinned-root candidate manifest retained; historical/successor identities remain distinct."
+        },
+        {
+          "source_sha256": "sha256:a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
+          "observation": "Exact pinned-root candidate manifest retained; historical/successor identities remain distinct."
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Exact issue text names historical fb2b\u2026 candidate / 42c45\u2026 materialization; admitted certificates instead bind e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a. Explicitly reconcile supersession before declaring this exact clause satisfied.",
+      "next_lookup": "Link the original candidate freeze and admitted successor approval. Propose a dated supersession disposition; do not replace historical identifiers.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1106-clause-6",
+      "criterion_index": 6,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1106",
+      "requirement": "Any code, fixture, serialization, package-content or workflow change invalidates affected evidence.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Candidate/source/contract drift and invalidation contradictions are tested and passing. The policy also explicitly allows bounded tooling/documentation exceptions.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:75a26840802575295188bffd38015bc63d21b55ad0eb7198e562092bf7cf3f31",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:dfd02f80eedd7de58c5925f68657ffdd659ecc962fbed79c909ad8fdc12cd5e8",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:75a26840802575295188bffd38015bc63d21b55ad0eb7198e562092bf7cf3f31",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Map serialization/package/workflow changes to their affected evidence dependencies and explain policy exceptions against the literal any-change criterion; no blanket assertion that every edit invalidates all evidence.",
+      "next_lookup": "Build changed-input-to-invalidation mapping for the named input classes, including explicit exceptions; assess against literal criterion.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1117-clause-3",
+      "criterion_index": 3,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Prepare corrected-candidate macOS arm64 and Linux arm64 environments.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Current admitted successor has four classified target lanes and full accepted execution; original corrected-candidate preparation wording is historical.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:099941e47b764d4cfc263c8466a50b97ce4d72684982e00a61d8ce51fe011290",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:8bf98be30bda7bfc47a96da3dbdf8ece1255c2576ece93318b3114038884359a",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Resolve exact historical corrected-candidate environment receipt and separately approved allocation reference for this clause; later successor coverage is not retrospective preparation approval.",
+      "next_lookup": "Find the macOS and Linux ARM64 historical candidate environment preparations and exact approval records; distinguish later successor runs.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1117-clause-4",
+      "criterion_index": 4,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Prepare the separately approved native Linux x86-64 environment.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Current admitted successor has four classified target lanes and full accepted execution; original corrected-candidate preparation wording is historical.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:099941e47b764d4cfc263c8466a50b97ce4d72684982e00a61d8ce51fe011290",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:8bf98be30bda7bfc47a96da3dbdf8ece1255c2576ece93318b3114038884359a",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Resolve exact historical corrected-candidate environment receipt and separately approved allocation reference for this clause; later successor coverage is not retrospective preparation approval.",
+      "next_lookup": "Find original Linux x86 allocation grant and environment receipt, verify digest/scope/validity and candidate.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1117-clause-5",
+      "criterion_index": 5,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Prepare the separately approved Windows x86-64 environment.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Current admitted successor has four classified target lanes and full accepted execution; original corrected-candidate preparation wording is historical.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:099941e47b764d4cfc263c8466a50b97ce4d72684982e00a61d8ce51fe011290",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:8bf98be30bda7bfc47a96da3dbdf8ece1255c2576ece93318b3114038884359a",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Resolve exact historical corrected-candidate environment receipt and separately approved allocation reference for this clause; later successor coverage is not retrospective preparation approval.",
+      "next_lookup": "Find original Windows allocation grant and environment receipt, verify digest/scope/validity and candidate.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1117-clause-6",
+      "criterion_index": 6,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Record OS/kernel, architecture, isolation, storage, exact toolchains and environment-manifest digest per lane.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Lane architecture/kernel/isolation/manifest requirements are validated; accepted receipts expose OS/architecture and environment digests.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:099941e47b764d4cfc263c8466a50b97ce4d72684982e00a61d8ce51fe011290",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:dfd02f80eedd7de58c5925f68657ffdd659ecc962fbed79c909ad8fdc12cd5e8",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Resolve every admitted environment object and verify exact toolchains plus requested/provisioned/peak/returned storage fields per lane; short receipt environment projections alone are incomplete.",
+      "next_lookup": "Enumerate admitted environment manifests and inspect storage requested/provisioned/peak/returned plus OS, isolation and exact runtime identities. Mark genuinely unavailable measurements unknown.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1117-clause-7",
+      "criterion_index": 7,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Prove storage exhaustion aborts safely and removes only run-owned disposable artifacts.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Bounded disk-full fault placement and cleanup paths are tested, while historical rehearsal explicitly has zero qualification credit.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:79bc028efa92900c38e693e671dd69bc9b4ca4ec9e801d74d01db9e1fd047e30",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:2442e52bb2a5f2ec3b70408e24e132acacb707ee32d8e49bf6b3d2314c9fc32c",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Map actual ENOSPC/abort observation to exact owned-artifact-only cleanup and unrelated-object preservation for the relevant runner exhaustion scenario; cleanup-after-generic-failure unit test is not that runtime proof.",
+      "next_lookup": "Inspect retained disk-full rehearsal and original abort/cleanup observations for preservation of unrelated objects. A generic failure test is insufficient.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1117-clause-8",
+      "criterion_index": 8,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Use native Windows semantics for owner IPC and native macOS arm64 semantics for the Mac lane.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Native Windows and Mac classification is supported.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:41906ac2f06b02391ce6d59a56af13abcd6d03e921139d3ba2bf9916202f3d37",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:421e104c3f1e9663ed862f7b969e89aa34d5b711f979ab125160a66133ce454f",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:dfd02f80eedd7de58c5925f68657ffdd659ecc962fbed79c909ad8fdc12cd5e8",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Map the specific owner IPC assertion to native Windows packaged proof and Mac semantics to the corresponding accepted proof; OS labels alone do not establish owner IPC behavior.",
+      "next_lookup": "Link native owner-IPC and Mac semantics assertion IDs to exact commands, source pins and retained result evidence.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1117-clause-9",
+      "criterion_index": 9,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Run all 16 deterministic shards sequentially per target and retain one receipt/closure bundle.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "All 16 indices per target and receipt/closure bindings are admitted.",
+      "targeted_observation": "Retained accepted-receipt interval crosscheck contains64 receipts, unique0\u201315 pertarget, no declared overlap. Failed/interrupted history and independent clocks remain outside that bounded proof.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:b5fde235ffefaf58a06813f5ccdd42463d249996754c49947beefbb953dbc9cb",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:8d870fbbb11fb43e3d3796e7601a229ba2bf438de517d3e927a3bcf6b433aca3",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:421e104c3f1e9663ed862f7b969e89aa34d5b711f979ab125160a66133ce454f",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:41906ac2f06b02391ce6d59a56af13abcd6d03e921139d3ba2bf9916202f3d37",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:4dd6e3bc03fbb85609e2fb932a137ece18e6915fa70cc8eef0f1081fd2d303ae",
+          "observation": "Prior review or bounded corroboration; not independent original runtime proof"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Verify receipt started/finished ordering and chunk-resume histories for sequential execution per target; certificate set membership alone does not prove non-overlap or historical interrupted-attempt order.",
+      "next_lookup": "Extend the accepted-interval crosscheck with failed/interrupted attempt chronology and chunk-resume decisions; retain accepted ARM replacement order explicitly.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1117-clause-10",
+      "criterion_index": 10,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Prove no secrets, production contact, service mutation, Directory contact, skips, flakes, duplicate receipts or digest drift.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Zero skips/flakes/waivers and accepted digest bindings are established for current receipts.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:de51817283d1d81b3dddb20501b9d4a7536876cb895bfb331aa6c4047003ced7",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:8bf98be30bda7bfc47a96da3dbdf8ece1255c2576ece93318b3114038884359a",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Map original safety observations and private-output handling to no-secrets/no-production-contact/no-service-mutation/no-real-Directory-contact clauses; retain distinction between isolated Directory fixtures and production Directory contact. Do not infer universal safety from content-free outputs alone.",
+      "next_lookup": "Use the Windows isolation audit plus equivalent retained controls for other targets; distinguish real endpoints from fixture endpoints and assertions from measured facts.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1481-clause-0",
+      "criterion_index": 0,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1481",
+      "requirement": "Decide, using the released specification and owning implementation contracts, whether public/restricted Directory mode is genuinely applicable. Do not silently shrink the matrix to make the gate green.",
+      "evidence_disposition": "UNRESOLVED",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Reviewed mappings now recognize public/restricted modes and reject altered commands/probes/fixtures.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:a169e085e84eea645202734067d1662e467cb169494c4dfec76b18aa74ec9e78",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:9019ce6e0b3767902842d66e5a0ae86fad25f0f439671dc309b63137e05bf962",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Locate released-specification applicability decision and owning implementation contract references; adapter executability is not the source-grounded scope decision itself.",
+      "next_lookup": "Find released-spec applicability decision and PHP/Rust implementation contracts for public/restricted modes. Do not shrink scope using adapter availability.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1481-clause-3",
+      "criterion_index": 3,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1481",
+      "requirement": "Rebuild any affected registry/shard bindings and revalidate retained macOS evidence; rerun affected qualification, with zero unexplained skips/waivers.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Rebuilt successor bindings and full fresh admitted macOS/whole-matrix coverage exist with zero skips/waivers.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:cef239f049aa19d94727b9f436377cda5ed2c938d1952dac8e074e6ba633c925",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:ff7a001f9e6d22ed9c4982986f0cca9f21313cd88729e4ec46128006c8731db0",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:421e104c3f1e9663ed862f7b969e89aa34d5b711f979ab125160a66133ce454f",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Identify explicit disposition of each retained historical macOS evidence set: rejected as stale, independently revalidated, or replaced by fresh run. Do not silently call successor execution revalidation of old receipts.",
+      "next_lookup": "Enumerate affected historical Mac evidence sets and link explicit stale/revalidated/replaced dispositions to reviewed registry changes.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1470-clause-0",
+      "criterion_index": 0,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "requirement": "Reuse the existing SSM-only ephemeral Windows controller and exact allocation/teardown authority.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Windows qualification reuses the existing ephemeral controller, AWS-RunPowerShellScript profile and no-public-ingress configuration. Accepted runs have allocation-bound clean closures. Exact original grant/expiry/single-use authority receipts for all seven allocations were not mapped in this review.",
+      "targeted_observation": "All seven retained plan/issued-authorization/closure files still match round-4 pins. Continuation approval and launcher-consumption summaries were located in selected accepted-run directories; original complete human and conditional-parent grant chains remain unverified.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:e87273e295247488123e7f547dd25c3728694f68ca1dab179021bb9419e03884",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:1a1e5d89b655fded850d6d907c0a39b1b521dee977a3a6ae4bcbbe404032a309",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:99724e6ede0c4aa5ee9973ce4d5f3a7b2fc2dc6dee576709950fb7530c86de77",
+          "observation": "Prior review or bounded corroboration; not independent original runtime proof"
+        },
+        {
+          "source_sha256": "sha256:e989dd156ab84e1569822cb9b1701f4c698ad6054b74200722ca16407031b631",
+          "observation": "Retained local continuation/consumption summary; not a fully resolved original human grant chain."
+        },
+        {
+          "source_sha256": "sha256:ef75958697fb5e30ba1cac6877cdc6737a91fe842eddcc6026e6d608a2403856",
+          "observation": "Retained local continuation/consumption summary; not a fully resolved original human grant chain."
+        },
+        {
+          "source_sha256": "sha256:87543e8b50ae0fe0f3f2ec94733cb37d3f72ae032e9a51918d3404fd5451613a",
+          "observation": "Retained local continuation/consumption summary; not a fully resolved original human grant chain."
+        },
+        {
+          "source_sha256": "sha256:3b1565b6ac1d3cf55d5bd601be1cd26fda0a30190cc28fcaa0369359ee22dcbc",
+          "observation": "Retained local continuation/consumption summary; not a fully resolved original human grant chain."
+        },
+        {
+          "source_sha256": "sha256:5717a3c878635b303dad9bf9e628d3368adf2cc92019bcb869200ad58ebbdc1d",
+          "observation": "Retained local continuation/consumption summary; not a fully resolved original human grant chain."
+        },
+        {
+          "source_sha256": "sha256:7f6086606d6bf73c34bd2487e911ecd67bb2a7b8f7fe580d756b25aa865e9ece",
+          "observation": "Retained local continuation/consumption summary; not a fully resolved original human grant chain."
+        },
+        {
+          "source_sha256": "sha256:c9623c052316ae62eaf900fc5de509516fc463c6fdfab93ad5a24b0bb7b7f6fe",
+          "observation": "Retained local continuation/consumption summary; not a fully resolved original human grant chain."
+        },
+        {
+          "source_sha256": "sha256:ff6346cc2c94475eff70997822c58c2e8d2a9abcef34a2ccd9f669d2175600c6",
+          "observation": "Retained local continuation/consumption summary; not a fully resolved original human grant chain."
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Original human approval/conditional parent grant chain and exact invocation consumption evidence across all seven grants; local summaries alone are insufficient.",
+      "next_lookup": "Resolve each of seven accepted allocation plans to original authorization, invocation and deadlines; include conditional parent grants where used.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1470-clause-5",
+      "criterion_index": 5,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "requirement": "Persist structured progress, stdout/stderr, content-free receipts and failure evidence before teardown.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Structured journals, digest-bound successful receipts, checkpoint preservation and bounded native-failure stream retention are implemented and tested. The selected successful archives and 7 journals do not enumerate or establish preservation of stdout/stderr and original failures for every interrupted/rejected attempt.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:2a3a56a3964dea0cd07330171a4619b596293efce4439ab4f683b916264f35a2",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:4b9eeff5e035a66508ba87f0202213748ae4de1febdb83a4a3aba5aef0777112",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:792ed614dc47fd8b204eb4172a630cc442343c635bd22bd44cd2224a4499dc2f",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:cf7f60e7fb6bca493349f2fa30c46b13fa92eb507858b9b09cc453b9a960dd66",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:5d7c81534505c6fd794c6eb0cf9b7a639bb522850df3d350ae0451b2c9da11f5",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:5d7c81534505c6fd794c6eb0cf9b7a639bb522850df3d350ae0451b2c9da11f5",
+          "observation": "Prior review or bounded corroboration; not independent original runtime proof"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Enumerate failed/interrupted Windows attempts and link each original private stdout/stderr/capture/export acknowledgement to its pre-teardown terminal event. Preserve unknown missing counts.",
+      "next_lookup": "Enumerate failed/interrupted Windows attempts and compare capture/export acknowledgement times with teardown. Preserve private-envelope loss distinctions.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1470-clause-7",
+      "criterion_index": 7,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "requirement": "Shard 0 passes with no skip, flake, waiver, production contact, Directory contact, service mutation or secret transfer.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "The accepted Windows shard-zero receipt is exactly the certificate admission sentinel and passes with zero skips/flakes/waivers. Its bound original environment declares isolated_vm, windows-firewall-program-rules and qualification_egress=disabled. However receipt safety flags are literal declarations, and the archive lacks the object named by the isolation evidence digest. Preparation has temporary program firewall rules; current Windows qualification dispatch shows a process job wrapper, not equivalent packet-level evidence for the original sentinel interval. Neither contact nor invalid qualification is inferred.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:41906ac2f06b02391ce6d59a56af13abcd6d03e921139d3ba2bf9916202f3d37",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:16a3c5af5f0b0c5bba7d8b8076a5f9491390f2e2bcf5c7b8fab74048a1d716d4",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:4b9eeff5e035a66508ba87f0202213748ae4de1febdb83a4a3aba5aef0777112",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:3935eb69ced3e02cb591b45ec2ec8d4077afded3c183714d1cfc002361fcbce1",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:2a3a56a3964dea0cd07330171a4619b596293efce4439ab4f683b916264f35a2",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Resolve sentinel isolation evidence sha256:b120ec845a861c5a5a14b405910f25ea0ebd5e5ea2c5bc88ce34406eb6c6e0b9 and original bound source/runtime controls to demonstrate rule/program coverage and lifetime through qualification; map production/Directory endpoints, service/credential isolation and any intervention journal. This is an assurance-evidence gap, not a product defect or revoked acceptance.",
+      "next_lookup": "Use independently reviewed Windows isolation report; trace workload-time rules, executable coverage, fixture endpoints and credential/service boundaries. No acceptance revocation from missing evidence alone.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1470-clause-10",
+      "criterion_index": 10,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "requirement": "Every receipt binds the same candidate, artifact materialization, executor registry, environment and shard plan.",
+      "evidence_disposition": "UNRESOLVED",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "All 16 accepted Windows receipts share exactly one candidate, artifact materialization, executor registry and shard-plan identity, but seven environment identities. Current runner binding explicitly permits fresh per-allocation AWS environment manifests when the reviewed source/isolation matches. This resolves the mechanism, not literal same-environment issue wording.",
+      "targeted_observation": "The retained binding reconciliation records seven distinct Windows environment digests across accepted campaigns. Receipt bindings are retained; literal same-environment wording still requires an explicit owner interpretation rather than treating distinct environments as identical.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:41906ac2f06b02391ce6d59a56af13abcd6d03e921139d3ba2bf9916202f3d37",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:4b9eeff5e035a66508ba87f0202213748ae4de1febdb83a4a3aba5aef0777112",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:91b4b9be94ca9add8b333eb3930df4fafecb3a4450423445ba9b55cbfdbb3241",
+          "observation": "Prior review or bounded corroboration; not independent original runtime proof"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Owner must clarify that same environment means exact per-allocation binding under the approved environment recipe, or identify a genuine invariant requirement. Do not silently mark the literal clause satisfied.",
+      "next_lookup": "Request a dated interpretation of literal same-environment wording against seven distinct allocation-bound environments. Record recipe equivalence only if the owning authority establishes it.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1470-clause-11",
+      "criterion_index": 11,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "requirement": "Temporary compute, storage, network, S3, CloudWatch and IAM resources are absent after every allocation.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "All seven admitted Windows allocations have hash-bound clean controller closures; resource, S3, CloudWatch, IAM absence and storage-return booleans are true. This does not cover every historical allocation or failure/interruption.",
+      "targeted_observation": "Four accepted-run allocations have retained independent read-only PASS absence records bound to the exact allocation and current retained state-file bytes, reporting compute/storage/security-group/IAM/bucket/log absence. This is historical readback evidence, not a fresh AWS query. The requirement covers every allocation, including failures; that universe remains unreconciled.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:5d7c81534505c6fd794c6eb0cf9b7a639bb522850df3d350ae0451b2c9da11f5",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:5d7c81534505c6fd794c6eb0cf9b7a639bb522850df3d350ae0451b2c9da11f5",
+          "observation": "Prior review or bounded corroboration; not independent original runtime proof"
+        },
+        {
+          "source_sha256": "sha256:ea37fe3800d3ad75a6770680ca3d1d6ca6f67160e6e94436a362b7aba5b29f56",
+          "observation": "Retained historical independent absence observation; exact allocation/state binding rechecked offline."
+        },
+        {
+          "source_sha256": "sha256:6666ac3bb26132bb5fdcefd966289a30a0219a0c2cfb2d73b112f189e71f37d1",
+          "observation": "Retained historical independent absence observation; exact allocation/state binding rechecked offline."
+        },
+        {
+          "source_sha256": "sha256:9e2dc8849d80cbe090f58ab39b9f3dc4ae18f84195816a58f641e59de84450e9",
+          "observation": "Retained historical independent absence observation; exact allocation/state binding rechecked offline."
+        },
+        {
+          "source_sha256": "sha256:b9f42c5dd64371ca2e2136623a799a33e273925e188709f1d42c14479bc562b3",
+          "observation": "Retained historical independent absence observation; exact allocation/state binding rechecked offline."
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Enumerate expected historical Windows allocation universe and map each to exact terminal independent closure, including failed/diagnostic/interrupted allocations. No new AWS inspection or workload was performed.",
+      "next_lookup": "Declare expected allocation universe including diagnostic/failed attempts, then map every allocation to terminal independent closure; seven successful campaign closures alone are insufficient.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1493-clause-0",
+      "criterion_index": 0,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "requirement": "Select one exact frozen candidate and matching registry, runner inventory and shard plan throughout bundle preparation, controller, guest, local runner, sentinel ledger, result promotion and target/ecosystem certificate compilation. Bind actual bytes/digests, not only filenames or labels.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Windows bundle, guest and accepted receipt invariants are supported; local successor runner/campaign path guards, source-aware certificate reconstruction and five actual-payload mutation refusals are also supported. A complete byte-binding table across every listed Linux/local/controller/promotion entry and its original runtime provenance was not completed.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:655f9828e70f3a60bf0bf5e16781ee9469fa255567a8a68f143094e1df6b867b",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:2a3a56a3964dea0cd07330171a4619b596293efce4439ab4f683b916264f35a2",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:4b9eeff5e035a66508ba87f0202213748ae4de1febdb83a4a3aba5aef0777112",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:0e8ac2f736f3d5770a5b09e699f5d1b04c5ccc22801cd0bf54e414d61e1ddaf4",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:92908d3dce742ed132290c7c34011a35dd575cc35adb83420c4d0cfd2e85213a",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Finish a finite entry-point table for bundle/controller/Linux guest/local runner/sentinel/promotion/target/ecosystem compiler: input bytes, digest check, rejection point and one retained positive/negative check each. Reuse mapped Windows and certificate evidence.",
+      "next_lookup": "Complete input-byte/digest/rejection/positive/negative table across bundle, controller, Linux guest, local runner, sentinel, promotion and certificate compilers.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1493-clause-2",
+      "criterion_index": 2,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "requirement": "Preserve historical candidate behavior for existing historical evidence and preserve public receipt/wire schemas unless a separately reviewed compatibility decision requires change.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Historical control selection retains a tested compatibility path, and source manifests include explicit historical reconciliation. That is not a full public-schema/wire compatibility comparison across the changes covered by #1493.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:cb7aaec7cd89eb8c3ab9ec4ec623412a7351a05f1a60b792086a263395ba3284",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:92908d3dce742ed132290c7c34011a35dd575cc35adb83420c4d0cfd2e85213a",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Identify the reviewed before/after commit range and changed public schemas; map each change to compatibility decision or show no wire/schema change, then replay retained historical fixtures using existing test evidence.",
+      "next_lookup": "Identify original implementation commit range and public schema changes; map compatibility approvals and retained historical-fixture validation.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1493-clause-3",
+      "criterion_index": 3,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "requirement": "Prove source-closed Linux native execution and certificate reconstruction with positive successor fixtures and negative mixed-candidate tests. Keep raw logs private and required S3 evidence/teardown fail-closed.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "Real Linux accepted archive/certificate reconstruction is retained, including sentinel archive validation and source manifest reconstruction. Governed CI passes mixed-candidate rejection, selected-input privilege boundary and private-result exclusion tests. This review did not map the entire original native Linux source closure and all required S3 preservation/teardown failure branches to their retained executions.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:13cd564150225b1d966a7dd3ec80f7a7551adaaa5c5afd89a0d25146a0fb4a37",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:ad2ba99a4cb6f08382dd67e093a827cfa403a10ab2cf7a673da840a16d803f59",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Use Linux source-manifest paths to compare original bundle/source-control pins with the accepted archive and map required S3 export failure/teardown tests. Do not substitute Windows evidence for Linux native execution.",
+      "next_lookup": "Match original Linux source/bundle pins and native result archive; map required export failure and teardown behavior to original tests.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    },
+    {
+      "id": "root-1493-clause-4",
+      "criterion_index": 4,
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "requirement": "Recompute implementation/source-closure digests through established policy, run focused tests, changed-only preflight, documentation gate, full source closure and Sentrux no-degradation.",
+      "evidence_disposition": "PARTIAL",
+      "criterion_verdict": "UNVERIFIED",
+      "supported_subclaims_from_retained_review": "The retained governed run supplies 111/111 PASS at reviewed source, with all 151 contract hashes unchanged in merged d9332b9f; focused tests and full selected source closure are covered. Documentation gate PASS is retained. Sentrux was parent-reported but a gate artifact tied to the original #1493 implementation/digest change has not been mapped here.",
+      "targeted_observation": "No additional substantive proof established by this targeted supplement.",
+      "evidence": [
+        {
+          "source_sha256": "sha256:f551badbc719b53e7e3294ace33e3f3fe090ef5550eb2845bf1aa31235b7cc78",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:b8f4bcdffe5a6778f467e20f82e65cb87ca06eb7f5a8e0ad1d10d1fe0528f70a",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        },
+        {
+          "source_sha256": "sha256:fbd11d87ebb6ea83cc3376b19efc76b5d5ca8dca1fb8ae3ad4c3fb5f76b68e2c",
+          "observation": "File retained; cited assertion/sufficiency not newly established"
+        }
+      ],
+      "source_register_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2",
+      "reconciliation_sha256": "sha256:554d747ff85228762ac6aad321ab3863a9d23a113606211d68d82d16afe8a04c",
+      "missing_proof": "Attach exact implementation-change commit(s), source/pipeline digest regeneration evidence, changed-only preflight and Sentrux no-degradation receipts for that change; distinguish current documentation gates from historical implementation gates.",
+      "next_lookup": "Resolve original implementation change commits to closure regeneration, affected preflight, documentation and Sentrux receipts; do not substitute the current docs-only CI.",
+      "limit": "This is reuse of retained review and targeted readback, not a fresh execution or an owner waiver. No full criterion is promoted to PASS."
+    }
+  ],
+  "source_delta_effect": "The 14 historical DMSC pins remain recoverable and the inbox 62-entry prefix remains preserved; these 15 source deltas do not establish any missing criterion proof.",
+  "qualification_credit_added": 0,
+  "historical_inventory_complete": false,
+  "operations": {
+    "aws": false,
+    "workloads": false,
+    "reruns": false,
+    "issue_closures": false,
+    "canonical_edits": false,
+    "sealed_corpus_edits": false
+  },
+  "next_documentation_order": [
+    "Obtain explicit historical-candidate, Directory-mode applicability and same-environment owner dispositions without rewriting historical wording.",
+    "Complete original grant chains and all-allocation preservation/independent closure universe, retaining missing counts as unknown.",
+    "Finish native semantic assertion, isolation-lifetime and every-entry-point binding evidence maps using original retained sources.",
+    "Attach exact historical change-gate and compatibility receipts; distinguish current documentation validation from historical implementation validation."
+  ]
+}

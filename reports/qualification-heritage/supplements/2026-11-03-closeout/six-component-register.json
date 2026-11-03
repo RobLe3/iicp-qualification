@@ -1,0 +1,658 @@
+{
+  "schema": "iicp.six-component-defect-register.v1",
+  "at": "2026-11-03T16:23:25.440259+00:00",
+  "non_authorizing": true,
+  "frozen_candidate": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "components": [
+    {
+      "component": "client-python",
+      "repository": "RobLe3/iicp-client-python",
+      "frozen_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "frozen_commit_at": "2026-09-07T21:47:21+02:00",
+      "current_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "open_issue_count": 2,
+      "closed_since_frozen_count": 1,
+      "query_limit": 100,
+      "issue_query_truncated": false,
+      "compare_status": "ahead",
+      "ahead_by": 5,
+      "returned_commits": 5,
+      "returned_files": 7,
+      "compare_total_commits": 5,
+      "compare_complete": true,
+      "issues": [
+        {
+          "issue": "https://github.com/RobLe3/iicp-client-python/issues/142",
+          "title": "Clarify the trust scope of MCP gateway policy receipts",
+          "state": "OPEN",
+          "classification": "TRUST_SCOPE_QUESTION_NOT_DEFECT",
+          "frozen_applicability": "Issue explicitly requires no signing/candidate change; Protocol#256 owns shared semantic decision. Reported release is not automatically frozen candidate equivalence.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Reconcile the owning acceptance contract without closing from qualification counters alone."
+        },
+        {
+          "issue": "https://github.com/RobLe3/iicp-client-python/issues/119",
+          "title": "[pre-1.0] Freeze the Python API and qualify the declared support matrix",
+          "state": "OPEN",
+          "classification": "RELEASE_OR_OPERATIONAL_GATE_NOT_CONFIRMED_DEFECT",
+          "frozen_applicability": "Criterion-level reconciliation required; current issue state is not a candidate runtime defect proof.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Reconcile the owning acceptance contract without closing from qualification counters alone."
+        }
+      ],
+      "intervening_files": [
+        "scripts/pre1_environment_contract.py",
+        "scripts/pre1_harness_binding.py",
+        "scripts/pre1_package_execution.py",
+        "scripts/run_pre1_qualification_case.py",
+        "scripts/test_pre1_package_execution.py",
+        "scripts/test_pre1_prepared_home.py",
+        "scripts/test_pre1_qualification_case.py"
+      ],
+      "intervening_classification": "QUALIFICATION_TOOLING_TEST_OR_CI_ONLY_BY_COMPLETE_PATH_DIFF",
+      "product_source_path_changes": 0,
+      "semantic_validation": "NOT_RERUN; path scope and retained patches inspected, no proof of universal behavior equivalence",
+      "source_evidence": [
+        {
+          "name": "client-python-current.json",
+          "sha256": "sha256:1dd8710b677a886ad3d7b3220a22ab04dd34a15e14604890f6ab4a71c81b17a5"
+        },
+        {
+          "name": "client-python-open.json",
+          "sha256": "sha256:53cc91f1c7d7a191fa634b27bc0d9144b8261472e5ae6e375751f797573f93a4"
+        },
+        {
+          "name": "client-python-closed-since-frozen.json",
+          "sha256": "sha256:f8d7f49fb0c357a7830b5999a41e0575e7cdc990e9763fec750d899daf705fa6"
+        },
+        {
+          "name": "client-python-compare.json",
+          "sha256": "sha256:10e4d9b2a6352317aa06f3f28c807335769e0ee629487a4d7d7fa021d5477ac9"
+        }
+      ]
+    },
+    {
+      "component": "client-typescript",
+      "repository": "RobLe3/iicp-client-typescript",
+      "frozen_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "frozen_commit_at": "2026-09-07T21:47:28+02:00",
+      "current_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "open_issue_count": 1,
+      "closed_since_frozen_count": 2,
+      "query_limit": 100,
+      "issue_query_truncated": false,
+      "compare_status": "ahead",
+      "ahead_by": 6,
+      "returned_commits": 6,
+      "returned_files": 7,
+      "compare_total_commits": 6,
+      "compare_complete": true,
+      "issues": [
+        {
+          "issue": "https://github.com/RobLe3/iicp-client-typescript/issues/104",
+          "title": "[pre-1.0] Freeze the TypeScript API and qualify Node 22/24 support",
+          "state": "OPEN",
+          "classification": "RELEASE_OR_OPERATIONAL_GATE_NOT_CONFIRMED_DEFECT",
+          "frozen_applicability": "Criterion-level reconciliation required; current issue state is not a candidate runtime defect proof.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Reconcile the owning acceptance contract without closing from qualification counters alone."
+        }
+      ],
+      "intervening_files": [
+        "scripts/pre1_environment_contract.py",
+        "scripts/pre1_harness_binding.py",
+        "scripts/pre1_package_execution.py",
+        "scripts/run_pre1_qualification_case.py",
+        "scripts/test_pre1_package_execution.py",
+        "scripts/test_pre1_prepared_home.py",
+        "scripts/test_pre1_qualification_case.py"
+      ],
+      "intervening_classification": "QUALIFICATION_TOOLING_TEST_OR_CI_ONLY_BY_COMPLETE_PATH_DIFF",
+      "product_source_path_changes": 0,
+      "semantic_validation": "NOT_RERUN; path scope and retained patches inspected, no proof of universal behavior equivalence",
+      "source_evidence": [
+        {
+          "name": "client-typescript-current.json",
+          "sha256": "sha256:fbccd35ace0408b6f1e8776dfa82be3f0a0b96f21830482f7031cf18725ef4a8"
+        },
+        {
+          "name": "client-typescript-open.json",
+          "sha256": "sha256:98907c301eb16cada6759e440c2d5a06bcd77a8cbfbc9c0e8f3d71e233414508"
+        },
+        {
+          "name": "client-typescript-closed-since-frozen.json",
+          "sha256": "sha256:2be7d8ac05f94959cdcc35b4db0ff26092721835d4fbe0fafa42616d374ad6c2"
+        },
+        {
+          "name": "client-typescript-compare.json",
+          "sha256": "sha256:670ae96f9ee67359e2f6b086d02c7d8dd53733bec47348171097c4242c6b15be"
+        }
+      ]
+    },
+    {
+      "component": "client-rust",
+      "repository": "RobLe3/iicp-client-rust",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "frozen_commit_at": "2026-09-18T19:19:33+02:00",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "open_issue_count": 6,
+      "closed_since_frozen_count": 0,
+      "query_limit": 100,
+      "issue_query_truncated": false,
+      "compare_status": "ahead",
+      "ahead_by": 3,
+      "returned_commits": 3,
+      "returned_files": 4,
+      "compare_total_commits": 3,
+      "compare_complete": true,
+      "issues": [
+        {
+          "issue": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+          "title": "[recovery] Diagnose supervised providers absent from Directory after repeated exit-76 recovery",
+          "state": "OPEN",
+          "classification": "SUPPORTED_SCOPE_INVESTIGATION",
+          "frozen_applicability": "Frozen recovery module matches reported implementation; six actual Node controls passed under synthetic route handling. Full CLI/tunnel/supervisor/original incident cause remains unproven.",
+          "verdict": "SUPPORTED_SCOPE_INVESTIGATION_UNRESOLVED",
+          "next_action": "Assess original route/tunnel/supervisor boundary only under separately scoped investigation; do not repeat six passing controls or infer a correction."
+        },
+        {
+          "issue": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+          "title": "[relay][reachability] Reject self-reported relays without a verified worker endpoint",
+          "state": "OPEN",
+          "classification": "EXPERIMENTAL_RELAY_WITH_SUPPORTED_BOUNDARY_REVIEW",
+          "frozen_applicability": "Keep relay experimental; determine whether fail-closed local-only and safe diagnostic behavior affects supported scope before exclusion.",
+          "verdict": "EXPERIMENTAL_DEFECT_REPORT_WITH_SUPPORTED_BOUNDARY_QUESTION",
+          "next_action": "Keep relay experimental; determine whether supported fail-closed fallback and bounded registration diagnostics require a narrowly reproduced correction."
+        },
+        {
+          "issue": "https://github.com/RobLe3/iicp-client-rust/issues/160",
+          "title": "[post-1.0][transport] Implement experimental QUIC stream-per-CALL",
+          "state": "OPEN",
+          "classification": "DEFERRED_RESEARCH_OR_FEATURE",
+          "frozen_applicability": "Preserve existing activation/support exclusions. Not evidence of a supported-scope product defect.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Retain the existing deferred/experimental scope; no stabilization expansion without supported-boundary evidence."
+        },
+        {
+          "issue": "https://github.com/RobLe3/iicp-client-rust/issues/158",
+          "title": "[research][native] Harden TCP before any later stable admission",
+          "state": "OPEN",
+          "classification": "DEFERRED_RESEARCH_OR_FEATURE",
+          "frozen_applicability": "Preserve existing activation/support exclusions. Not evidence of a supported-scope product defect.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Retain the existing deferred/experimental scope; no stabilization expansion without supported-boundary evidence."
+        },
+        {
+          "issue": "https://github.com/RobLe3/iicp-client-rust/issues/150",
+          "title": "[pre-1.0] Freeze the Rust API and qualify the declared target matrix",
+          "state": "OPEN",
+          "classification": "RELEASE_OR_OPERATIONAL_GATE_NOT_CONFIRMED_DEFECT",
+          "frozen_applicability": "Criterion-level reconciliation required; current issue state is not a candidate runtime defect proof.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Reconcile the owning acceptance contract without closing from qualification counters alone."
+        },
+        {
+          "issue": "https://github.com/RobLe3/iicp-client-rust/issues/98",
+          "title": "Evaluate opt-in MeshLLM ensemble alias after upstream stabilization",
+          "state": "OPEN",
+          "classification": "DEFERRED_RESEARCH_OR_FEATURE",
+          "frozen_applicability": "Preserve existing activation/support exclusions. Not evidence of a supported-scope product defect.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Retain the existing deferred/experimental scope; no stabilization expansion without supported-boundary evidence."
+        }
+      ],
+      "intervening_files": [
+        "scripts/pre1_harness_binding.py",
+        "scripts/pre1_package_execution.py",
+        "scripts/run_pre1_qualification_case.py",
+        "scripts/test_pre1_prepared_home.py"
+      ],
+      "intervening_classification": "QUALIFICATION_TOOLING_TEST_OR_CI_ONLY_BY_COMPLETE_PATH_DIFF",
+      "product_source_path_changes": 0,
+      "semantic_validation": "NOT_RERUN; path scope and retained patches inspected, no proof of universal behavior equivalence",
+      "source_evidence": [
+        {
+          "name": "client-rust-current.json",
+          "sha256": "sha256:91d3b83157af17aeaa2ea879a2f6ac53055d1110547de2495b0e4bc9e56e71ee"
+        },
+        {
+          "name": "client-rust-open.json",
+          "sha256": "sha256:17f33529aaa52542e9bf16666a6ba44aea7977507df4ba41e6597a5e14b29b0c"
+        },
+        {
+          "name": "client-rust-closed-since-frozen.json",
+          "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "name": "client-rust-compare.json",
+          "sha256": "sha256:4faa4caa19340c6aa2ba0beb07847e6d2728103b66af98f5d43f834ff3d9558a"
+        }
+      ]
+    },
+    {
+      "component": "directory-php",
+      "repository": "RobLe3/iicp-directory-php",
+      "frozen_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "frozen_commit_at": "2026-10-01T12:54:56+02:00",
+      "current_commit": "11e63a1b2a3846d376810d260bf9ccbbf59b3d7c",
+      "open_issue_count": 2,
+      "closed_since_frozen_count": 0,
+      "query_limit": 100,
+      "issue_query_truncated": false,
+      "compare_status": "ahead",
+      "ahead_by": 1,
+      "returned_commits": 1,
+      "returned_files": 3,
+      "compare_total_commits": 1,
+      "compare_complete": true,
+      "issues": [
+        {
+          "issue": "https://github.com/RobLe3/iicp-directory-php/issues/140",
+          "title": "[pre-1.0] Qualify the PHP compatibility-anchor support boundary",
+          "state": "OPEN",
+          "classification": "RELEASE_OR_OPERATIONAL_GATE_NOT_CONFIRMED_DEFECT",
+          "frozen_applicability": "Criterion-level reconciliation required; current issue state is not a candidate runtime defect proof.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Reconcile the owning acceptance contract without closing from qualification counters alone."
+        },
+        {
+          "issue": "https://github.com/RobLe3/iicp-directory-php/issues/65",
+          "title": "[research][registration] Tune registration burst and steady-state limits from evidence",
+          "state": "OPEN",
+          "classification": "DEFERRED_RESEARCH_OR_FEATURE",
+          "frozen_applicability": "Preserve existing activation/support exclusions. Not evidence of a supported-scope product defect.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Retain the existing deferred/experimental scope; no stabilization expansion without supported-boundary evidence."
+        }
+      ],
+      "intervening_files": [
+        "scripts/pre1_package_execution.py",
+        "scripts/test_pre1_prepared_home.py",
+        "tests/Unit/NodePolicyManifestVerifierTest.php"
+      ],
+      "intervening_classification": "QUALIFICATION_TOOLING_TEST_OR_CI_ONLY_BY_COMPLETE_PATH_DIFF",
+      "product_source_path_changes": 0,
+      "semantic_validation": "NOT_RERUN; path scope and retained patches inspected, no proof of universal behavior equivalence",
+      "source_evidence": [
+        {
+          "name": "directory-php-current.json",
+          "sha256": "sha256:b2260ffa38c78a37252b6239bfcc719d3009e943281f56bd9ae07d47d4169c0b"
+        },
+        {
+          "name": "directory-php-open.json",
+          "sha256": "sha256:f38f16d44d61c65d24ebaa8a9b8507a35653e478e86c55c8b4ec3077248c014b"
+        },
+        {
+          "name": "directory-php-closed-since-frozen.json",
+          "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "name": "directory-php-compare.json",
+          "sha256": "sha256:9c8721b23669b478930361b573b0fb226c152ff04aedf67f78daab65d20993d7"
+        }
+      ]
+    },
+    {
+      "component": "directory-rust",
+      "repository": "RobLe3/iicp-directory-rust",
+      "frozen_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "frozen_commit_at": "2026-10-01T12:55:02+02:00",
+      "current_commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "open_issue_count": 2,
+      "closed_since_frozen_count": 1,
+      "query_limit": 100,
+      "issue_query_truncated": false,
+      "compare_status": "ahead",
+      "ahead_by": 8,
+      "returned_commits": 8,
+      "returned_files": 4,
+      "compare_total_commits": 8,
+      "compare_complete": true,
+      "issues": [
+        {
+          "issue": "https://github.com/RobLe3/iicp-directory-rust/issues/102",
+          "title": "[pre-1.0] Qualify stable API and persistent non-serving operations",
+          "state": "OPEN",
+          "classification": "RELEASE_OR_OPERATIONAL_GATE_NOT_CONFIRMED_DEFECT",
+          "frozen_applicability": "Criterion-level reconciliation required; current issue state is not a candidate runtime defect proof.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Reconcile the owning acceptance contract without closing from qualification counters alone."
+        },
+        {
+          "issue": "https://github.com/RobLe3/iicp-directory-rust/issues/1",
+          "title": "Complete Rust directory public-preview parity; retain Genesis cutover gates",
+          "state": "OPEN",
+          "classification": "RELEASE_OR_OPERATIONAL_GATE_NOT_CONFIRMED_DEFECT",
+          "frozen_applicability": "Criterion-level reconciliation required; current issue state is not a candidate runtime defect proof.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Reconcile the owning acceptance contract without closing from qualification counters alone."
+        }
+      ],
+      "intervening_files": [
+        ".github/workflows/quality.yml",
+        "scripts/pre1_package_execution.py",
+        "scripts/test_pre1_package_execution.py",
+        "scripts/test_pre1_prepared_home.py"
+      ],
+      "intervening_classification": "QUALIFICATION_TOOLING_TEST_OR_CI_ONLY_BY_COMPLETE_PATH_DIFF",
+      "product_source_path_changes": 0,
+      "semantic_validation": "NOT_RERUN; path scope and retained patches inspected, no proof of universal behavior equivalence",
+      "source_evidence": [
+        {
+          "name": "directory-rust-current.json",
+          "sha256": "sha256:46cb9b1c6ecdc4938ed8c74ce8db3e40b3f9526886e76a38fbec186d326096dd"
+        },
+        {
+          "name": "directory-rust-open.json",
+          "sha256": "sha256:4be2995e448bbf97c3789c4bf750b3a9885c6982a0a5e46a94899229c6a9fac5"
+        },
+        {
+          "name": "directory-rust-closed-since-frozen.json",
+          "sha256": "sha256:4d8e49eb02b186c1f336b3c7a866c8dfb76f3b596e3744afbcd8e783afe78c76"
+        },
+        {
+          "name": "directory-rust-compare.json",
+          "sha256": "sha256:b895558a57fd5d0fccde2feceb23788ced0e918d2bbea0bac25d50099a17540f"
+        }
+      ]
+    },
+    {
+      "component": "management",
+      "repository": "RobLe3/iicp-management",
+      "frozen_commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "frozen_commit_at": "2026-09-18T19:19:42+02:00",
+      "current_commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+      "open_issue_count": 2,
+      "closed_since_frozen_count": 0,
+      "query_limit": 100,
+      "issue_query_truncated": false,
+      "compare_status": "ahead",
+      "ahead_by": 3,
+      "returned_commits": 3,
+      "returned_files": 4,
+      "compare_total_commits": 3,
+      "compare_complete": true,
+      "issues": [
+        {
+          "issue": "https://github.com/RobLe3/iicp-management/issues/168",
+          "title": "External authorization evaluator binding on management-profile-v1",
+          "state": "OPEN",
+          "classification": "OPTIONAL_FUTURE_BINDING",
+          "frozen_applicability": "Non-activating evaluator requirements; explicitly outside frozen qualification baseline.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Reconcile the owning acceptance contract without closing from qualification counters alone."
+        },
+        {
+          "issue": "https://github.com/RobLe3/iicp-management/issues/143",
+          "title": "[pre-1.0] Freeze stable contracts and pass representative administrator workflows",
+          "state": "OPEN",
+          "classification": "RELEASE_OR_OPERATIONAL_GATE_NOT_CONFIRMED_DEFECT",
+          "frozen_applicability": "Criterion-level reconciliation required; current issue state is not a candidate runtime defect proof.",
+          "verdict": "NO_PRODUCT_DEFECT_ESTABLISHED_BY_THIS_REGISTER",
+          "next_action": "Reconcile the owning acceptance contract without closing from qualification counters alone."
+        }
+      ],
+      "intervening_files": [
+        "scripts/pre1_harness_binding.py",
+        "scripts/pre1_package_execution.py",
+        "scripts/run_pre1_qualification_case.py",
+        "scripts/test_pre1_prepared_home.py"
+      ],
+      "intervening_classification": "QUALIFICATION_TOOLING_TEST_OR_CI_ONLY_BY_COMPLETE_PATH_DIFF",
+      "product_source_path_changes": 0,
+      "semantic_validation": "NOT_RERUN; path scope and retained patches inspected, no proof of universal behavior equivalence",
+      "source_evidence": [
+        {
+          "name": "management-current.json",
+          "sha256": "sha256:cd65045c74dc95f3ae7ad760b9c709fa65efd74464c06739d5559a69a329eab3"
+        },
+        {
+          "name": "management-open.json",
+          "sha256": "sha256:147d423fb0c38f1be0202fdbb25ae6496fae7326c3449e99db943cd3b411435a"
+        },
+        {
+          "name": "management-closed-since-frozen.json",
+          "sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "name": "management-compare.json",
+          "sha256": "sha256:b5a058908364504e3875f9724d1bdd69f5f32cc2113b0b65081a600e0c9cf639"
+        }
+      ]
+    }
+  ],
+  "historical_issues": [
+    {
+      "issue": "https://github.com/RobLe3/iicp-client-python/issues/136",
+      "title": "Verify Windows ACL enforcement for the opt-in dispatch trust store",
+      "state": "CLOSED",
+      "classification": "HISTORICAL_CLOSED_PRODUCT_CORRECTION",
+      "evidence_sha256": "sha256:8135eca0173c947964cf4ed8559fb5d21ce7dccb85f5792055231a865e331884",
+      "correction_pr": "https://github.com/RobLe3/iicp-client-python/pull/137",
+      "candidate_disposition": "MERGED_CORRECTION_ANCESTOR_OF_FROZEN_VERIFIED",
+      "limit": "Historical issue closure and present source inclusion do not independently replay the original native acceptance tests."
+    },
+    {
+      "issue": "https://github.com/RobLe3/iicp-client-rust/issues/10",
+      "title": "Add deterministic local recovery controller for serve nodes",
+      "state": "CLOSED",
+      "classification": "HISTORICAL_CLOSED_RECOVERY_WORK_WITH_LATER_RECURRENCE_INVESTIGATION",
+      "evidence_sha256": "sha256:8dc2ad62c84a3bb34320c114c3e26787efcc355765cefe668a3a38ec686a23f7",
+      "correction_pr": null,
+      "candidate_disposition": "CLOSURE_NARRATIVE_RETAINED_NOT_INDEPENDENT_RUNTIME_REPRODUCTION",
+      "limit": "Historical issue closure and present source inclusion do not independently replay the original native acceptance tests."
+    },
+    {
+      "issue": "https://github.com/RobLe3/iicp-client-rust/issues/171",
+      "title": "Close Windows dispatch trust-store commit and permission-validation gaps",
+      "state": "CLOSED",
+      "classification": "HISTORICAL_CLOSED_PRODUCT_CORRECTION",
+      "evidence_sha256": "sha256:b56621f397ae80d7d873a8609ab1a5376010c0117f84a419d8391bddf02da982",
+      "correction_pr": "https://github.com/RobLe3/iicp-client-rust/pull/170",
+      "candidate_disposition": "MERGED_CORRECTION_ANCESTOR_OF_FROZEN_VERIFIED",
+      "limit": "Historical issue closure and present source inclusion do not independently replay the original native acceptance tests."
+    },
+    {
+      "issue": "https://github.com/RobLe3/iicp-client-rust/issues/9",
+      "title": "Re-register fallback exposure after Quick Tunnel dead state",
+      "state": "CLOSED",
+      "classification": "HISTORICAL_CLOSED_RECOVERY_WORK_WITH_LATER_RECURRENCE_INVESTIGATION",
+      "evidence_sha256": "sha256:8e39ce88660343fce727b791d6a86fec5102d44aff20088b634bee62dc7c440c",
+      "correction_pr": null,
+      "candidate_disposition": "CLOSURE_NARRATIVE_RETAINED_NOT_INDEPENDENT_RUNTIME_REPRODUCTION",
+      "limit": "Historical issue closure and present source inclusion do not independently replay the original native acceptance tests."
+    },
+    {
+      "issue": "https://github.com/RobLe3/iicp-client-typescript/issues/115",
+      "title": "Fix Windows npm invocation in the pre-1 artifact builder",
+      "state": "CLOSED",
+      "classification": "HISTORICAL_CLOSED_BUILDER_CORRECTION",
+      "evidence_sha256": "sha256:d47733fb8ff674f24080b745a34cc656abf7550e877a69ccb6cc0e66c0e31c6b",
+      "correction_pr": "https://github.com/RobLe3/iicp-client-typescript/pull/117",
+      "candidate_disposition": "MERGED_CORRECTION_ANCESTOR_OF_FROZEN_VERIFIED",
+      "limit": "Historical issue closure and present source inclusion do not independently replay the original native acceptance tests."
+    },
+    {
+      "issue": "https://github.com/RobLe3/iicp-client-typescript/issues/116",
+      "title": "Validate Windows ACLs for the durable dispatch trust store",
+      "state": "CLOSED",
+      "classification": "HISTORICAL_CLOSED_PRODUCT_CORRECTION",
+      "evidence_sha256": "sha256:4ba24e6c351b4ff7b2a5405d81cf46220472b4b19d95881c8fce4f08e82209a1",
+      "correction_pr": "https://github.com/RobLe3/iicp-client-typescript/pull/117",
+      "candidate_disposition": "MERGED_CORRECTION_ANCESTOR_OF_FROZEN_VERIFIED",
+      "limit": "Historical issue closure and present source inclusion do not independently replay the original native acceptance tests."
+    },
+    {
+      "issue": "https://github.com/RobLe3/iicp-directory-rust/issues/142",
+      "title": "[pre-1.0][endpoint] Fix bracketed IPv6 authority parsing and verify production rejection",
+      "state": "CLOSED",
+      "classification": "HISTORICAL_CLOSED_PRODUCT_CORRECTION",
+      "evidence_sha256": "sha256:56339baaa2e59631d253c795e836a4f392d9779c27f111fcddf66754d9c0d2a0",
+      "correction_pr": "https://github.com/RobLe3/iicp-directory-rust/pull/143",
+      "candidate_disposition": "MERGED_CORRECTION_ANCESTOR_OF_FROZEN_VERIFIED",
+      "limit": "Historical issue closure and present source inclusion do not independently replay the original native acceptance tests."
+    }
+  ],
+  "verified_correction_ancestry": [
+    {
+      "pr": "https://github.com/RobLe3/iicp-client-typescript/pull/117",
+      "merge_commit": "da23060066632edeee7bbe2d4259e8698a4d985f",
+      "merged": true,
+      "ancestor_of_frozen": true,
+      "product_source_blobs": [
+        {
+          "path": "src/dispatch_ticket_trust.ts",
+          "frozen_blob": "e770da76267a9c8a50517172edc7d3e9906ae9e5",
+          "current_blob": "e770da76267a9c8a50517172edc7d3e9906ae9e5",
+          "same_blob": true
+        },
+        {
+          "path": "src/runtime_health.ts",
+          "frozen_blob": "6c0593a6ad840275b854c6fe2faa1947ddf14ec2",
+          "current_blob": "6c0593a6ad840275b854c6fe2faa1947ddf14ec2",
+          "same_blob": true
+        },
+        {
+          "path": "src/windows_private_path.ts",
+          "frozen_blob": "7d23c8d8621c15916a14a018c9a428fca4b95ca1",
+          "current_blob": "7d23c8d8621c15916a14a018c9a428fca4b95ca1",
+          "same_blob": true
+        }
+      ]
+    },
+    {
+      "pr": "https://github.com/RobLe3/iicp-client-rust/pull/170",
+      "merge_commit": "97c2558e298abb57b7295ec0839a7ad8ad70a08f",
+      "merged": true,
+      "ancestor_of_frozen": true,
+      "product_source_blobs": [
+        {
+          "path": "src/bin/iicp_node.rs",
+          "frozen_blob": "6d33e5f2b1e89604af33488d43a9c143171a68ff",
+          "current_blob": "6d33e5f2b1e89604af33488d43a9c143171a68ff",
+          "same_blob": true
+        },
+        {
+          "path": "src/dispatch_ticket_trust.rs",
+          "frozen_blob": "ddd2939612756b484c05a29014380c8d4230ec15",
+          "current_blob": "ddd2939612756b484c05a29014380c8d4230ec15",
+          "same_blob": true
+        },
+        {
+          "path": "src/instance_lock.rs",
+          "frozen_blob": "367320633ada4e516a71760e6075f3d512baa867",
+          "current_blob": "367320633ada4e516a71760e6075f3d512baa867",
+          "same_blob": true
+        },
+        {
+          "path": "src/lib.rs",
+          "frozen_blob": "fd8f6c5d972f31aed9b606701e4ffea4da28a402",
+          "current_blob": "fd8f6c5d972f31aed9b606701e4ffea4da28a402",
+          "same_blob": true
+        },
+        {
+          "path": "src/updater.rs",
+          "frozen_blob": "09f4ffd826b77e181bc2bb73cb9bfff48ca64cf4",
+          "current_blob": "09f4ffd826b77e181bc2bb73cb9bfff48ca64cf4",
+          "same_blob": true
+        },
+        {
+          "path": "src/windows_private_path.ps1",
+          "frozen_blob": "aa495fba453b917c0e1765030cd7fed256214b39",
+          "current_blob": "aa495fba453b917c0e1765030cd7fed256214b39",
+          "same_blob": true
+        },
+        {
+          "path": "src/windows_private_path.rs",
+          "frozen_blob": "9bb1f2e73632b9767fd9e82cdbeacadda4e9bc74",
+          "current_blob": "9bb1f2e73632b9767fd9e82cdbeacadda4e9bc74",
+          "same_blob": true
+        }
+      ]
+    },
+    {
+      "pr": "https://github.com/RobLe3/iicp-directory-rust/pull/143",
+      "merge_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "merged": true,
+      "ancestor_of_frozen": true,
+      "product_source_blobs": [
+        {
+          "path": "src/validate.rs",
+          "frozen_blob": "85ce742c36c683dcf2b1b7723b25270464e08431",
+          "current_blob": "85ce742c36c683dcf2b1b7723b25270464e08431",
+          "same_blob": true
+        }
+      ]
+    },
+    {
+      "pr": "https://github.com/RobLe3/iicp-client-python/pull/137",
+      "merge_commit": "9c1e8812a1cdd5cbd9501778696f264463f5d8ea",
+      "merged": true,
+      "ancestor_of_frozen": true,
+      "product_source_blobs": [
+        {
+          "path": "src/iicp_client/dispatch_ticket_trust.py",
+          "frozen_blob": "e3eaf36c36fbc7934755236b33e344d942e39463",
+          "current_blob": "e3eaf36c36fbc7934755236b33e344d942e39463",
+          "same_blob": true
+        },
+        {
+          "path": "src/iicp_client/windows_private_path.py",
+          "frozen_blob": "754ca97e64b69b097f6e3c53b2d544b5ce115fbc",
+          "current_blob": "754ca97e64b69b097f6e3c53b2d544b5ce115fbc",
+          "same_blob": true
+        }
+      ]
+    },
+    {
+      "pr": "https://github.com/RobLe3/iicp-directory-rust/pull/108",
+      "merge_commit": "096cc11994e588dba92f4bc4e60fadefd093c90f",
+      "merged": true,
+      "ancestor_of_frozen": true,
+      "product_source_blobs": [
+        {
+          "path": "src/registration_store.rs",
+          "frozen_blob": "4c4bc81359da50e71460e5bfff945b0eea919c19",
+          "current_blob": "4c4bc81359da50e71460e5bfff945b0eea919c19",
+          "same_blob": true
+        }
+      ]
+    }
+  ],
+  "additional_historical_correction": {
+    "pr": "https://github.com/RobLe3/iicp-directory-rust/pull/108",
+    "summary": "MySQL registration upsert omitted confidentiality-key persistence; merged correction retains canonical CX keys across registration/re-registration. Merge is an ancestor of frozen candidate and affected source blob equals current main.",
+    "classification": "HISTORICAL_PRODUCT_CORRECTION_INCLUDED_IN_FROZEN",
+    "limit": "No claim that every later similarly named failure has the same cause."
+  },
+  "counts": {
+    "components": 6,
+    "open_issues": 15,
+    "closed_since_component_freeze": 4,
+    "additional_linked_older_closed_issues": 3,
+    "historical_issues_reviewed": 7,
+    "intervening_commits": 26,
+    "intervening_file_paths": 29,
+    "reviewed_correction_prs": 5,
+    "product_blobs_checked": 14
+  },
+  "remaining_21_clause_dispositions": "SEPARATE_UNCHANGED",
+  "zero_known_defect_baseline": "NOT_ESTABLISHED",
+  "proposal": {
+    "stage1": "Complete documentation-first review and criterion dispositions. Preserve original qualified candidate and original failures.",
+    "stage2": "Resolve Rust183 supported-scope investigation and Rust175 supported fallback/diagnostic boundary before deciding a product correction is needed.",
+    "stage3": "If a supported defect is reproduced, consolidate only demonstrated corrections with reproducing regression assertions, threat/compatibility review and exact source identities into one stabilization successor.",
+    "stage4": "Apply existing candidate-impact and qualification rules; do not inherit credit into changed product artifacts without current policy. Independently review before execution or merge.",
+    "no_change_case": "If investigations establish external/operator causes or explicitly excluded experimental behavior, retain the qualified candidate and document bounded dispositions; do not create speculative product fixes."
+  },
+  "limits": [
+    "Read-only GitHub queries and local Git ancestry; no tests or workloads executed by this register.",
+    "Closed query covers closure dates on/after each component frozen-commit date, capped100; all six returned below cap.",
+    "Linked older coverage is specifically Rust9,10,171 and correctionPR108; not every historical issue recursively.",
+    "Current main pins are observed snapshots, not production or released versions.",
+    "Complete returned compare lists cover26commits/29paths; path classification does not establish all quality-only compatibility semantics.",
+    "No issue changes, product edits, candidate rebind, source-pin rewrite or acceptance change.",
+    "Full native regression receipts for historical closures were not independently reconstructed here.",
+    "All21root issue-clause questions remain separately unresolved."
+  ]
+}

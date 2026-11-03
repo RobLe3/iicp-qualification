@@ -1,0 +1,47 @@
+{
+  "schema": "iicp.rust-recovery-round5-result.v1",
+  "status": "STOPPED_NETWORK_CONTROL_LAUNCH_REFUSAL",
+  "at": "2026-11-03T16:27:55.847536+00:00",
+  "attempts": {
+    "network_control_launch": 1,
+    "default_route_transition": 0,
+    "heartbeat_refusal_transition": 0,
+    "automatic_retry": 0
+  },
+  "causal_observation": {
+    "component": "macOS sandbox-exec profile parser",
+    "exit_code": 65,
+    "message": "host must be * or localhost in network address",
+    "scope": "Literal IP host in reviewed network profile refused before Python network controls; no positive/negative runtime control result and no Node launch."
+  },
+  "cleanup": {
+    "owned_group_killed_before_reap": true,
+    "current_matching_observer_processes": 0,
+    "installed_service_changes": false
+  },
+  "preservation": {
+    "original_frozen_git_blobs_matched": 242,
+    "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+    "all10execution_pins_unchanged": true,
+    "capture_retained_bytes": 218,
+    "capture_truncated": false,
+    "artifacts": {
+      "execution-pins.json": "sha256:279054d8fadbe9f4eff8fc8fc4173a70a9199a798d0efeaa67942b2264d98e51",
+      "suite-result.json": "sha256:c129bf30442ae91545cb8f354bae15a6312990507dc4ad7e36927ee9734060bb",
+      "execution.stdout": "sha256:fe7d764011b33c9fedfc72fe6e7fffcad0b227bc8824ad1a263c5c4f7798acdb",
+      "execution.stderr": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "case-network_controls/capture.log": "sha256:3bf5f3aad8e1a6da7ebd255c70cd348ce6f916350121d9cc3e0a66b60a94ac97",
+      "case-network_controls/result.json": "sha256:6deee8ed52e011b521300aa044fc9e066a4d326cf604b9eb6cfe5ba9bbd03dd1"
+    }
+  },
+  "qualification_credit": 0,
+  "product_source_changes": 0,
+  "network_observations": "NOT_EXECUTED",
+  "scope_limits": [
+    "No new defaultcadence,route-restoration or heartbeatcredential-refusal evidence obtained.",
+    "ActualCLI/tunnel/restartcooldown remain untested; originalRust183cause unresolved.",
+    "NoAWS, externalendpoint, installedservice or credential operation.",
+    "Failedpacket/profile preserved unchanged; no retry or amendment executed."
+  ],
+  "next_proposal": "Prepare separately reviewed successor macOS-supported loopback sandbox policy, with positive/negative controls proving actual scope. If localhost matcher includes127.0.0.2, use an explicitly justified noncontact denial test rather than pretending that address is denied. Do not reuse consumed attempt or weaken no-external-network restriction."
+}

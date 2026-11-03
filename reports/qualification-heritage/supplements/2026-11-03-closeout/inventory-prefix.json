@@ -1,0 +1,53 @@
+{
+  "archive_status": {
+    "NOT_ARCHIVE": 271458
+  },
+  "availability": {
+    "OVERSIZE": 556,
+    "RETAINED": 270901,
+    "UNSAFE": 1
+  },
+  "canonical_receipts_resolved_across_prefix": 64,
+  "chain": {
+    "discovered_records": 271331,
+    "discovery_exhausted": false,
+    "historical_inventory_complete": false,
+    "history_directories": 42669,
+    "partitions": 314,
+    "qualification_credit": 0,
+    "unresolved_discovery_gaps": 0
+  },
+  "completed_partitions": 314,
+  "cutoff_utc": "2026-11-03T17:04:42.603904+00:00",
+  "first_page": 0,
+  "historical_inventory_complete": false,
+  "history_segments": 4,
+  "integrity": {
+    "HASHED": 270774,
+    "MATCH": 112,
+    "MISMATCH": 15,
+    "UNVERIFIED": 557
+  },
+  "last_page": 313,
+  "limitations": [
+    "Declared bounded roots and exclusions, not whole historical universe",
+    "Excluded paths unexamined; oversized/unsafe/mismatched records unresolved",
+    "Per-partition missing canonical joins repeat; not missing canonical receipts globally",
+    "Content duplicates not additional accepted credit",
+    "Discovery remains active; later pages outside this immutable prefix"
+  ],
+  "manifest_sha256": "sha256:17bae9686ac6261320486577fc07c47fd408e1edb87049a88e602197420c663f",
+  "original_partitions": 79,
+  "per_partition_nonobject_gap_occurrences": {
+    "canonical-receipt-unresolved": 19964
+  },
+  "qualification_credit_added": 0,
+  "remaining_frontier_entries": 1250,
+  "result": "VALIDATED_PARTIAL_PREFIX",
+  "scan_continues_separately": true,
+  "schema": "iicp.bounded-history-prefix-summary.v1",
+  "successor_partitions": 235,
+  "unique_content_digests": 33936,
+  "unique_evidence_objects": 271458,
+  "unique_object_gap_pairs": 572
+}

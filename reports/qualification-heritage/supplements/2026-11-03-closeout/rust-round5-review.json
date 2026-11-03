@@ -1,0 +1,37 @@
+{
+  "schema": "iicp.rust-round5-terminal-independent-review.v1",
+  "reviewer": "remaining_dispositions",
+  "at": "2026-11-03T16:28:55.587278+00:00",
+  "disposition": "PASS_REFUSAL_ACCOUNTING_NO_PRODUCT_RESULT",
+  "result_sha256": "sha256:1e6c842206782c93c88b34c35e8a28f6a30e8a76f583f80f20b1e7ffc84aa034",
+  "checks": {
+    "retained_terminal_artifact_hashes": 6,
+    "execution_pins_match": 10,
+    "suite_results": 1,
+    "network_control_launch_exit": 65,
+    "node_case_directories_absent": true,
+    "capture_bytes": 218,
+    "reviewer_executed_controls": false
+  },
+  "causal_finding": "sandbox-exec rejected the literal-IP SBPL host at profile parsing before launching Python network controls. Therefore no positive or negative network control and no Node observation occurred. This is a diagnostic-harness admission failure, not a Rust product failure.",
+  "existing_review_missed": "The pre-execution review assessed policy intent and fail-closed sequence but did not establish that the installed macOS SBPL parser accepts the literal127.0.0.1 host syntax. AST parsing of Python does not validate SBPL. The initial control gate correctly stopped execution, but the static review should have identified parser compatibility as unresolved before claiming readiness.",
+  "cleanup_scope": "Retained runner result records owned-group kill before reap; author separately reports zero matching observer processes. Reviewer verified no Node case directories and no second suite result, not an independent live process census.",
+  "successor_proposal": {
+    "status": "PREPARATION_ONLY_REVIEW_REQUIRED_NOT_EXECUTED",
+    "preserve": "Keep failed packet, consumed first control attempt and all refusal bytes unchanged.",
+    "next_gate": "Prepare and independently review a separately identified parser-compatibility/control-validation plan using the installed SBPL contract. Validate the actual accepted syntax before any Node scenario.",
+    "requirements": [
+      "Do not replace the exact address with localhost and assume equivalent denial semantics. Its actual scope must be established.",
+      "Keep no-external-network restriction and explicit allowed-positive/denied-negative controls; denial tests must avoid external endpoint contact and distinguish permission denial from absent listener or timeout.",
+      "Retain one-attempt, bounded capture/process lifetime and stop-on-first-failure controls. Do not reuse the consumed attempt.",
+      "Any successfully validated control successor must be independently reviewed before conditional continuation of only the two unstarted observations.",
+      "No broader sandbox migration, product correction, existing six-control rerun or qualification activity is proposed."
+    ],
+    "policy_choice": "NOT_SELECTED; no speculative replacement profile or broader isolation alternative implemented."
+  },
+  "remaining_limits": [
+    "Default cadence and heartbeat-refusal observations remain unexecuted.",
+    "Actual CLI/tunnel/supervisor/cooldown and original Rust183 cause remain unresolved.",
+    "No new qualification credit, source changes or retry."
+  ]
+}
