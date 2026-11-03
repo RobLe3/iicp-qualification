@@ -1,0 +1,53 @@
+{
+  "historical_inventory_complete": false,
+  "members": {
+    "README.md": {
+      "bytes": 4278,
+      "sha256": "sha256:8921285db010c422b18879ec167c4f00bfb45be1e886ac3f9ae0b1d27e59df1f"
+    },
+    "analysis.json": {
+      "bytes": 7369497,
+      "sha256": "sha256:22da722de8d0c203e6eb7aca041551b5b9dce3f606523f2bcd4b1df64e887438"
+    },
+    "dmsc-association.json": {
+      "bytes": 23853,
+      "sha256": "sha256:f3cea847bd0bdbdb331281ca37415ed63303d4e3eba7d3a9242b35b62f38dad5"
+    },
+    "inputs/catalog.json": {
+      "bytes": 13222,
+      "sha256": "sha256:bf11370545d54934673469d2dca34d3358093de1e59bebf32d62ee1c8ea59630"
+    },
+    "inputs/events.json": {
+      "bytes": 32853,
+      "sha256": "sha256:d6d4be78891dbd4d3d4d67b86af6a3daf67386a5c2aa098bfe78c739c2878993"
+    },
+    "inputs/links.json": {
+      "bytes": 8774,
+      "sha256": "sha256:d7150b215c8ae1449c48a5d338e9eca1757ec07b197bdef11b12a335f1c33127"
+    },
+    "inputs/matrix.json": {
+      "bytes": 3582,
+      "sha256": "sha256:627af9b927665e2d33ccd9ff8226abcf281c1b16f8c545f0e61d212a44650db2"
+    },
+    "inputs/receipts.json": {
+      "bytes": 558230,
+      "sha256": "sha256:630a9abc45452151b2797f0bd24b3a2394b21cb4fd07b3492ffca8a66ab4316c"
+    },
+    "inputs/registers.json": {
+      "bytes": 970,
+      "sha256": "sha256:efbae6badfd03fb3b2b6207a37d4df9f43b48e80f2d29abe9c1e981c1437ebd6"
+    },
+    "inputs/scope.json": {
+      "bytes": 470505,
+      "sha256": "sha256:7c2959da319754993f30ee90ca29646254edf9df0bcf5f57afe2929e8c5dbf49"
+    },
+    "inputs/status.json": {
+      "bytes": 13549,
+      "sha256": "sha256:a764a7dba3ce2b96b164dfa1c107e07c8592a9699611cbcdaf46b4731c352908"
+    }
+  },
+  "qualification_credit_added": 0,
+  "report_commit": "feaa4ef4d465665caf0fa8d78b45c71c00787eb5",
+  "schema": "iicp.analysis-v2-source-manifest.v1",
+  "source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859"
+}
