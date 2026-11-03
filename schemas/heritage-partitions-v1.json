@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "config_sha256",
+    "page_sha256",
+    "previous_sha256",
+    "index",
+    "frontier",
+    "records",
+    "gaps",
+    "discovery_exhausted",
+    "historical_inventory_complete",
+    "qualification_credit",
+    "directories"
+  ],
+  "properties": {
+    "schema": {
+      "const": "iicp.heritage-partition.v1"
+    },
+    "config_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "page_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "previous_sha256": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "frontier": {
+      "type": "array",
+      "maxItems": 20000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "root_id",
+          "relative_path",
+          "directory_stamp"
+        ],
+        "properties": {
+          "root_id": {
+            "type": "string"
+          },
+          "relative_path": {
+            "type": "string"
+          },
+          "directory_stamp": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "minItems": 4,
+                "maxItems": 4
+              }
+            ]
+          }
+        }
+      }
+    },
+    "records": {
+      "type": "array",
+      "maxItems": 10000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "root_id",
+          "relative_path"
+        ],
+        "properties": {
+          "root_id": {
+            "type": "string"
+          },
+          "relative_path": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "maxItems": 10000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "root_id",
+          "relative_path",
+          "directory_stamp",
+          "code"
+        ],
+        "properties": {
+          "root_id": {
+            "type": "string"
+          },
+          "relative_path": {
+            "type": "string"
+          },
+          "directory_stamp": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "minItems": 4,
+                "maxItems": 4
+              }
+            ]
+          },
+          "code": {
+            "enum": [
+              "unsafe-root",
+              "directory-bound",
+              "unavailable-path"
+            ]
+          }
+        }
+      }
+    },
+    "discovery_exhausted": {
+      "type": "boolean"
+    },
+    "historical_inventory_complete": {
+      "const": false
+    },
+    "qualification_credit": {
+      "const": 0
+    },
+    "directories": {
+      "type": "array",
+      "maxItems": 10000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "root_id",
+          "relative_path",
+          "directory_stamp"
+        ],
+        "properties": {
+          "root_id": {
+            "type": "string"
+          },
+          "relative_path": {
+            "type": "string"
+          },
+          "directory_stamp": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "minItems": 4,
+                "maxItems": 4
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

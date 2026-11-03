@@ -1,0 +1,67 @@
+{
+  "qualification_authority": "RobLe3/iicp.network",
+  "records": [
+    {
+      "path": "project/pre1-edge-case-catalog.json",
+      "sha256": "sha256:bf11370545d54934673469d2dca34d3358093de1e59bebf32d62ee1c8ea59630",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/project/pre1-edge-case-catalog.json"
+    },
+    {
+      "path": "project/pre1-edge-case-results.json",
+      "sha256": "sha256:968a8eb73ea2670038dd65d330a9a4be227e238603ed5039fdac004dd26f906e",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/project/pre1-edge-case-results.json"
+    },
+    {
+      "path": "project/pre1-stability-successor-frozen.json",
+      "sha256": "sha256:a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/project/pre1-stability-successor-frozen.json"
+    },
+    {
+      "path": "project/pre1-successor-executor-registry.json",
+      "sha256": "sha256:cef239f049aa19d94727b9f436377cda5ed2c938d1952dac8e074e6ba633c925",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/project/pre1-successor-executor-registry.json"
+    },
+    {
+      "path": "project/pre1-successor-qualification-shard-plan.json",
+      "sha256": "sha256:ff7a001f9e6d22ed9c4982986f0cca9f21313cd88729e4ec46128006c8731db0",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/project/pre1-successor-qualification-shard-plan.json"
+    },
+    {
+      "path": "project/pre1-support-matrix.json",
+      "sha256": "sha256:627af9b927665e2d33ccd9ff8226abcf281c1b16f8c545f0e61d212a44650db2",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/project/pre1-support-matrix.json"
+    },
+    {
+      "path": "project/pre1-support-results.json",
+      "sha256": "sha256:81d853197e42763068bf5c31e5bf8e75ee922ef688ce0c3997f287b230ddf9bb",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/project/pre1-support-results.json"
+    },
+    {
+      "path": "reports/pre1-qualification/certificates/ecosystem.json",
+      "sha256": "sha256:8bf98be30bda7bfc47a96da3dbdf8ece1255c2576ece93318b3114038884359a",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/reports/pre1-qualification/certificates/ecosystem.json"
+    },
+    {
+      "path": "reports/pre1-qualification/certificates/linux-aarch64.json",
+      "sha256": "sha256:8d870fbbb11fb43e3d3796e7601a229ba2bf438de517d3e927a3bcf6b433aca3",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/reports/pre1-qualification/certificates/linux-aarch64.json"
+    },
+    {
+      "path": "reports/pre1-qualification/certificates/linux-x86_64.json",
+      "sha256": "sha256:b5fde235ffefaf58a06813f5ccdd42463d249996754c49947beefbb953dbc9cb",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/reports/pre1-qualification/certificates/linux-x86_64.json"
+    },
+    {
+      "path": "reports/pre1-qualification/certificates/macos-arm64.json",
+      "sha256": "sha256:421e104c3f1e9663ed862f7b969e89aa34d5b711f979ab125160a66133ce454f",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/reports/pre1-qualification/certificates/macos-arm64.json"
+    },
+    {
+      "path": "reports/pre1-qualification/certificates/windows-x86_64.json",
+      "sha256": "sha256:41906ac2f06b02391ce6d59a56af13abcd6d03e921139d3ba2bf9916202f3d37",
+      "url": "https://github.com/RobLe3/iicp.network/blob/d9332b9f5a8e88bda28d48643dd4d9be6e1d0859/reports/pre1-qualification/certificates/windows-x86_64.json"
+    }
+  ],
+  "schema": "iicp.qualification-documentation-sources.v1",
+  "source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859"
+}

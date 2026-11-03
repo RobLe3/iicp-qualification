@@ -1,0 +1,101 @@
+{
+  "accepted": {
+    "certificates": 5,
+    "edge_executions": 5590,
+    "sentinels": 4,
+    "shards": 64,
+    "support_cells": 218
+  },
+  "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "historical_inventory_complete": false,
+  "independent_external_certification": "NOT_ESTABLISHED",
+  "members": {
+    "AGENT_BRIEF.md": {
+      "bytes": 3339,
+      "sha256": "sha256:6b0b6ae56f95015cf62b9c5ab6e1f71b84da7ab18db6a2433bb95d297aa2cc97"
+    },
+    "COMPONENT_BASELINE.md": {
+      "bytes": 3026,
+      "sha256": "sha256:b7ab5453c3131243ec8f79a1b872541ab17b2a2ea049b4ef367d74a298e14ca2"
+    },
+    "COVERAGE_AND_GAPS.md": {
+      "bytes": 4184,
+      "sha256": "sha256:7bb1f7b69ac49a2be03b0a7dc3c9b7c445fc5a0d6a7b15b9c0c3ce45fd850420"
+    },
+    "REVIEWED_FINDINGS.md": {
+      "bytes": 6315,
+      "sha256": "sha256:624c1b0c6999edd5803f82ab22b9f330cb098e95eff4d9681b1e7f26bd6bc53b"
+    },
+    "SOURCE_AUTHORITY.md": {
+      "bytes": 3629,
+      "sha256": "sha256:a4a082f22e3fcb8cb43ae7e2da03aefbdde4ccf08609df74ddfec251bd65543b"
+    },
+    "SOURCE_INDEX.json": {
+      "bytes": 3992,
+      "sha256": "sha256:7d44893aa8775995c54895906d9385dae766feab78013aec1763d521a87f7f1d"
+    },
+    "START_HERE.md": {
+      "bytes": 3885,
+      "sha256": "sha256:168798c5a090c4c1dc7b1fb841790efbe7144cee60631df7e257c59bb145b0f5"
+    },
+    "contracts/scope.json": {
+      "bytes": 470505,
+      "sha256": "sha256:7c2959da319754993f30ee90ca29646254edf9df0bcf5f57afe2929e8c5dbf49"
+    },
+    "data/certificates.json": {
+      "bytes": 10142,
+      "sha256": "sha256:d1d264bef2b16a739e70915e4db47e21097ed46370f5b87f5f92a7d307017212"
+    },
+    "data/coverage.json": {
+      "bytes": 472726,
+      "sha256": "sha256:4041e669fa959a3592f89c822c1103c1b2dbca781f7c8a3363b0d0c369c8dad2"
+    },
+    "data/events.json": {
+      "bytes": 28033,
+      "sha256": "sha256:6cf6c717e8ea3273b3d7abf4d8b91d470910ac84ea47870bc63944e080fc9ef8"
+    },
+    "data/receipts.json": {
+      "bytes": 558230,
+      "sha256": "sha256:630a9abc45452151b2797f0bd24b3a2394b21cb4fd07b3492ffca8a66ab4316c"
+    },
+    "data/reporting-policy.json": {
+      "bytes": 3751,
+      "sha256": "sha256:5da5eadd6443ba29207e9028999e9c474e4d8d2ffb5b6a3fa77e7cf7962f42ca"
+    },
+    "data/scope.json": {
+      "bytes": 470505,
+      "sha256": "sha256:7c2959da319754993f30ee90ca29646254edf9df0bcf5f57afe2929e8c5dbf49"
+    },
+    "data/status.json": {
+      "bytes": 13549,
+      "sha256": "sha256:4c48b6604e3574403ce5b8501b7ef7345881595e085ab74fb044e2833caee4d8"
+    },
+    "reporting-policy.json": {
+      "bytes": 3751,
+      "sha256": "sha256:5da5eadd6443ba29207e9028999e9c474e4d8d2ffb5b6a3fa77e7cf7962f42ca"
+    },
+    "requirements.txt": {
+      "bytes": 19,
+      "sha256": "sha256:756cc9e506ae4ee1a6f6c0507088b5cfc0dc8ba350fb2d2d46f1ffa72033adb6"
+    },
+    "schemas/report-v1.json": {
+      "bytes": 15381,
+      "sha256": "sha256:68cd637d01f6928b927712c05d6d3ed866ecdfea34e16baca6c4a7292bc38b64"
+    },
+    "validation/certificate_reporting.py": {
+      "bytes": 8819,
+      "sha256": "sha256:045a4f3cac3f07878a9b6c27ebd94e5ab1d0ee35cdd9a6d94f665357569b624f"
+    },
+    "validation/report_common.py": {
+      "bytes": 10117,
+      "sha256": "sha256:e36af3cb270ff3c8b04f29e764da0a247fca61fbcb7bd128891bfea0e0356878"
+    },
+    "verify.py": {
+      "bytes": 7913,
+      "sha256": "sha256:27e8e840ee59f6fb64913a416e15028e6737cccf1b8cd07bbeb2a6295e700094"
+    }
+  },
+  "qualification_credit": 0,
+  "schema": "iicp.qualification-documentation-handoff.v1",
+  "source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859"
+}
