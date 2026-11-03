@@ -153,7 +153,7 @@
       "target_certificate_sha256s": []
     }
   ],
-  "events_sha256": "sha256:8d419d54cb1f79d57fd5877c991a935d4e595d5ede0f49c7930eb8f50bce77ce",
+  "events_sha256": "sha256:c326f55bb0f3532dca3f3b712da31468edbcc5e84183bad2423f69d8fac23f09",
   "historical_inventory_complete": false,
   "inputs_sha256": "sha256:8ef9f47a4b2960b1bd4a85d1e4d457342ac2c445388d22aa675787c847ef94e7",
   "non_authorizing": true,
@@ -282,5 +282,5 @@
   "source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
   "source_repository": "RobLe3/iicp.network",
   "validation_scope": "retained-receipts-and-merged-ledgers",
-  "verified_at": "2026-11-03T13:18:07Z"
+  "verified_at": "2026-11-03T16:20:35Z"
 }
