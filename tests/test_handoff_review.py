@@ -11,7 +11,6 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import package_qualification_handoff as p
 from report_common import check_public
-from collect_status import INPUTS
 
 
 class IndependentHandoffTests(unittest.TestCase):
@@ -19,29 +18,15 @@ class IndependentHandoffTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name).resolve() / "corpus"
         self.root.mkdir()
-        source = Path(__file__).resolve().parents[2] / "merged-closeout-source"
-        paths = set(INPUTS.values()) | {
-            f"reports/pre1-qualification/certificates/{t}.json"
-            for t in (
-                "linux-aarch64",
-                "linux-x86_64",
-                "macos-arm64",
-                "windows-x86_64",
-                "ecosystem",
-            )
-        }
-        records = [
-            {
-                "path": name,
-                "sha256": p.sha(
-                    subprocess.check_output(
-                        ["git", "-C", str(source), "show", p.SOURCE + ":" + name]
-                    )
-                ),
-                "url": f"https://github.com/RobLe3/iicp.network/blob/{p.SOURCE}/{name}",
-            }
-            for name in sorted(paths)
-        ]
+        # Public committed derivative: this portability test must not depend on
+        # private sibling checkouts or re-fetch canonical source material.
+        source_index = json.loads(
+            (
+                Path(__file__).resolve().parents[1]
+                / "reports/qualification-heritage/SOURCE_INDEX.json"
+            ).read_text()
+        )
+        records = source_index["records"]
         members = p.build_members(
             check_public(),
             records,
