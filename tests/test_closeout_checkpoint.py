@@ -5,13 +5,15 @@ import json
 from pathlib import Path
 import re
 import sys
+import shutil
+import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from report_common import check_public  # noqa: E402 - repository-local script import
 
-CORPUS = ROOT / "reports/qualification-heritage/supplements/2026-11-03-closeout"
+CORPUS = ROOT / "reports/qualification-closeout/2026-11-03-closeout"
 
 
 class CloseoutCheckpointTests(unittest.TestCase):
@@ -112,6 +114,28 @@ class CloseoutCheckpointTests(unittest.TestCase):
         self.assertIsNone(outside["total_historical_attempts"])
         self.assertFalse(gaps["historical_inventory_complete"])
         self.assertEqual(gaps["qualification_credit_added"], 0)
+
+    def test_checkpoint_is_outside_sealed_corpora(self):
+        for sealed in (
+            ROOT / "reports/qualification-heritage",
+            ROOT / "reports/documentation-handoff/v2",
+        ):
+            self.assertFalse(CORPUS.resolve().is_relative_to(sealed.resolve()))
+
+    def test_sealed_verifier_rejects_unexpected_nested_file(self):
+        import package_qualification_handoff as package
+
+        with tempfile.TemporaryDirectory() as temp:
+            copied = Path(temp).resolve() / "v1"
+            shutil.copytree(ROOT / "reports/qualification-heritage", copied)
+            extra = copied / "supplements" / "unexpected.txt"
+            extra.parent.mkdir()
+            extra.write_text("synthetic unexpected member\n")
+            with self.assertRaisesRegex(ValueError, "portable verification refused"):
+                package.verify_corpus(
+                    copied,
+                    "sha256:5f790e2ae92594baa2ffa0de8c7d7a7f37ecfbb97d35188105a81eca4cb766b3",
+                )
 
     def test_json_links_and_targeted_privacy_scan(self):
         for path in CORPUS.iterdir():

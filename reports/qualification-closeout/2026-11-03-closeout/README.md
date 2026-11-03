@@ -7,7 +7,7 @@ qualification campaign, certificate authority or stable-release decision.
 The canonical finite qualification remains 64 accepted shards, 218 support cells,
 5,590 edge executions, four sentinels and five project-operated certificates.
 Independent external certification is not established. Historical inventory
-completeness remains **false**. See the [current reporting surface](../../../STATUS.md)
+completeness remains **false**. See the [current reporting surface](../../STATUS.md)
 and the [source-authority guide](SOURCE_AUTHORITY.md).
 
 ## Read in this order
