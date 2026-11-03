@@ -1,0 +1,88 @@
+{
+  "delivery_gates_complete": 9,
+  "delivery_gates_total": 10,
+  "historical_inventory_complete": false,
+  "issue_1676_status": "OPEN",
+  "members": {
+    "DELIVERY_GATES.md": {
+      "bytes": 2448,
+      "sha256": "sha256:39e82fe42db9e4b026fe5d94189ba41d4a26be608f287cd8a2a4dfebf841985c"
+    },
+    "DOCUMENTATION_AGENT_WORKORDER.md": {
+      "bytes": 2172,
+      "sha256": "sha256:82231b7f444f57ac1af3e45bea01b0a8de84b64092fb0f11ee2ea10118d63e23"
+    },
+    "EVIDENCE_PINS.md": {
+      "bytes": 2608,
+      "sha256": "sha256:f7c2af64c72ab803682c3b5438a73cf6b5e2a981b4f79af80545252560755546"
+    },
+    "GAP_DISPOSITIONS.md": {
+      "bytes": 1553,
+      "sha256": "sha256:def513b58973b975e545f2d07130d40bcc7449fa74cffad36ccdbec67fb0faf2"
+    },
+    "INVENTORY_CHECKPOINT.md": {
+      "bytes": 2669,
+      "sha256": "sha256:5c7456c74e79258674ff5755b1a5ef0bb34ed0d959a71a80d6c212d910760016"
+    },
+    "PENDING_INPUTS.md": {
+      "bytes": 769,
+      "sha256": "sha256:4371f5b4707c38e3244bbc8e902f9e2565761368e73287532cdcd017d5f3ea68"
+    },
+    "README.md": {
+      "bytes": 4297,
+      "sha256": "sha256:f23dd8a866e83dd3a34b41c343f64581ba33f627e773935af67f2fe3a4239593"
+    },
+    "SOURCE_AUTHORITY.md": {
+      "bytes": 1607,
+      "sha256": "sha256:09fba635d13754b1b056a9262f710b4bb8d53af25af89bb093fa2816db01d4d3"
+    },
+    "SOURCE_INDEX.json": {
+      "bytes": 3992,
+      "sha256": "sha256:7d44893aa8775995c54895906d9385dae766feab78013aec1763d521a87f7f1d"
+    },
+    "clause-dispositions.md": {
+      "bytes": 40090,
+      "sha256": "sha256:1d6dab80ba851d5e54fe32e6cfdedc7673314d8550943222f46ec14c6806256e"
+    },
+    "clause-dispositions.sanitized.json": {
+      "bytes": 54203,
+      "sha256": "sha256:8793b28ffbe8a63cbf019bb42f64f42afbf7efcde6ad2e723f73b15b6ac428f8"
+    },
+    "gap-dispositions.json": {
+      "bytes": 2745,
+      "sha256": "sha256:dabb458a6a7b669e12e51bd9407baf203f57be842516c03fc6569310973648dd"
+    },
+    "inventory-prefix.json": {
+      "bytes": 1704,
+      "sha256": "sha256:36b2ce2f756e5825c3f51f23f5f0847a4e13ad12d397cfc6be11bc5c51b3d734"
+    },
+    "rust-round5-result.json": {
+      "bytes": 2536,
+      "sha256": "sha256:1e6c842206782c93c88b34c35e8a28f6a30e8a76f583f80f20b1e7ffc84aa034"
+    },
+    "rust-round5-review.json": {
+      "bytes": 3117,
+      "sha256": "sha256:733ea4dd84ae379a9ccda7f616297441bcb9853ae1825f574c9d49d14a8c95f9"
+    },
+    "six-component-register.json": {
+      "bytes": 32972,
+      "sha256": "sha256:61382a025534d9eb695c80666c1dd4b14dd5eb060c1ef9e98d499e994d1e4c66"
+    },
+    "six-component-register.md": {
+      "bytes": 11381,
+      "sha256": "sha256:ce9a755207d07269a66fded0118f1075cecae59274925fba289ddde1a4739638"
+    },
+    "source-delta.md": {
+      "bytes": 2861,
+      "sha256": "sha256:6962389edf7a8a4a20bf1a0431d08d1a21a658fd7043ac8022846a00dedabe68"
+    },
+    "source-delta.sanitized.json": {
+      "bytes": 14721,
+      "sha256": "sha256:abf64ae986e279339095dbffd459ac7a801bbc6bbee7ae1878ad430e7413457d"
+    }
+  },
+  "purpose": "Additive documentation checkpoint, not qualification authority",
+  "qualification_credit_added": 0,
+  "schema": "iicp.closeout-checkpoint-manifest.v1",
+  "source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859"
+}
