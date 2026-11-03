@@ -1,0 +1,286 @@
+{
+  "accepted": {
+    "certificates": 5,
+    "edge_executions": 5590,
+    "sentinels": 4,
+    "shards": 64,
+    "support_cells": 218
+  },
+  "authority": {
+    "candidate_file_sha256": "sha256:a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
+    "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+    "executor_registry_sha256": "sha256:ddcbc2e6c59122b508bc6e24555695f955c4d2770226c5a008a35aed65f750b0",
+    "sentinel_ledger_sha256": "sha256:7e830b504915614688eba07299df9d886d70b39c182fdf3c36c62cf9e65c5cce",
+    "shard_plan_sha256": "sha256:ef93078c50233190137eb0c8861d39e26bd280ce9d09b15d71b0721aa2da6e79"
+  },
+  "certificates": [
+    {
+      "admission_sentinel_file_sha256": null,
+      "admission_status": "accepted-in-merged-canonical-evidence",
+      "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+      "certificate_file_sha256": "sha256:8bf98be30bda7bfc47a96da3dbdf8ece1255c2576ece93318b3114038884359a",
+      "certificate_sha256": "sha256:9548948ebc80af64fa5f58d972ca5322a62173de4da1006c6e961bf7b1879df3",
+      "classification": "project-operated-qualification",
+      "executor_registry_sha256": "sha256:ddcbc2e6c59122b508bc6e24555695f955c4d2770226c5a008a35aed65f750b0",
+      "receipt_file_sha256s": [],
+      "shard_plan_sha256": "sha256:ef93078c50233190137eb0c8861d39e26bd280ce9d09b15d71b0721aa2da6e79",
+      "target": "ecosystem",
+      "target_certificate_sha256s": [
+        "sha256:254a0fc5cdff78cf335eae1f116bf75b2456979ceb4d726228bdaa50f8997478",
+        "sha256:5f1cd8e79ea05ff1919f51dd5046aa333cebfdd3df68881684c8e86b238b1160",
+        "sha256:86aa09b7717f01cc088126395a5c1ac279d565f87ecb6078050a8789ad5a34d8",
+        "sha256:9c9917a6d47fa28b009f3b03b8f09a1e56d45d94d9a9392b7eaf06c3aeeb0153"
+      ]
+    },
+    {
+      "admission_sentinel_file_sha256": "sha256:d4d27d16d2e57b11ce1ecb4978d4ee3f4715cac3081e5393910dc97998319e94",
+      "admission_status": "accepted-in-merged-canonical-evidence",
+      "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+      "certificate_file_sha256": "sha256:8d870fbbb11fb43e3d3796e7601a229ba2bf438de517d3e927a3bcf6b433aca3",
+      "certificate_sha256": "sha256:9c9917a6d47fa28b009f3b03b8f09a1e56d45d94d9a9392b7eaf06c3aeeb0153",
+      "classification": "project-operated-qualification",
+      "executor_registry_sha256": "sha256:ddcbc2e6c59122b508bc6e24555695f955c4d2770226c5a008a35aed65f750b0",
+      "receipt_file_sha256s": [
+        "sha256:158b2832ee8d7888e3135c662fdf55edaeac82339cd8b8f3c2251379544edd8b",
+        "sha256:1abc5e74de690b7bea7c8c1aded5311c32ce6c056ec7171ee185a9c6d7083e1b",
+        "sha256:220e9cc5853a53a0d72fb016ec28611320a7bc0deb984b3c010d861a7d4d1428",
+        "sha256:291bc65495a6c82240b31d57069cb250f8eae86bb432e186bd46174ab9830b08",
+        "sha256:4322222cf7b13037f0671f7c16fbba13503640572aa8e93465c16a822365c183",
+        "sha256:4887a18d66ea5cf5a7bcdd350608a2f033fd14a075b95e9ac65490d7761f2f15",
+        "sha256:7180cccfb72bbb3be6c6b98e0fb7e79d2b2771d1e4325aa3a2e035c7ca99f0a1",
+        "sha256:8045b1b84f3cf7ee880cf5c9aaa828de89c2c6ab03768cab454acaabd6c4d9c2",
+        "sha256:848f63ff205108842d598a2c6900a9811c1a920d80a803604a3e2e2e1465700f",
+        "sha256:9b736e3a703d72eddf6908f95a96fe09ee22bc7cdf1c51e642045589137d74e4",
+        "sha256:aabed9e8ca1ee28cf417288da53fe61f5fb8cad3a6463a4d0e25fca6a36679c6",
+        "sha256:b2f32358d5229f5036bd8f255532eb598afed36d19dcaffb2a6cf33299b6a86e",
+        "sha256:bb472d06e58277d5e14847ec9fb97c605074a3ecb9153f3e755683c39dc95cf5",
+        "sha256:bcc4f6886769cc63239faad9157ce0f39bcbdba6cd78e53ceddf5a8315b9e214",
+        "sha256:e3259779c37f0c87c3813797a3df5c715d9d7801c282c12c0583a3f2153a4439",
+        "sha256:eabf59a1f6c6e6e7a0fbe0a379bf21a274a643ddd01cb7bbafd6df28e7fad37e"
+      ],
+      "shard_plan_sha256": "sha256:ef93078c50233190137eb0c8861d39e26bd280ce9d09b15d71b0721aa2da6e79",
+      "target": "linux-aarch64",
+      "target_certificate_sha256s": []
+    },
+    {
+      "admission_sentinel_file_sha256": "sha256:0f741194ec8ab1e448c92bb7dc9c885720e9c28b6907cee935da374dcc0f3b24",
+      "admission_status": "accepted-in-merged-canonical-evidence",
+      "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+      "certificate_file_sha256": "sha256:b5fde235ffefaf58a06813f5ccdd42463d249996754c49947beefbb953dbc9cb",
+      "certificate_sha256": "sha256:254a0fc5cdff78cf335eae1f116bf75b2456979ceb4d726228bdaa50f8997478",
+      "classification": "project-operated-qualification",
+      "executor_registry_sha256": "sha256:ddcbc2e6c59122b508bc6e24555695f955c4d2770226c5a008a35aed65f750b0",
+      "receipt_file_sha256s": [
+        "sha256:0b3e59fb8d0b61231b25201fd9295120cca8b24a5f6582db40380a00d4b6a0d4",
+        "sha256:0f741194ec8ab1e448c92bb7dc9c885720e9c28b6907cee935da374dcc0f3b24",
+        "sha256:25e3e60361ef0cddab8d97be031e5d0548643ece21d6faa8494149c40723f11c",
+        "sha256:2e6ce84b3b02943f4c08dae3c45391fdf26e4ead7bd486f6bff7759921ce621f",
+        "sha256:4634fce8c07a05289d66a8d9773aea98653691aa251243d6f2754382b31b5a8b",
+        "sha256:5642102db9c38c9221ce2687739716bfb0e30d67cdbcb58e405e82882a4ebbf3",
+        "sha256:682f4c23c6e5e73514252a1440c47387fd27fda3337e59513000b7f460c30787",
+        "sha256:7f3eb55a65337d3123b40cf00d8133eef23c7a5174d77fc575616f77bb3e889e",
+        "sha256:8adcb9b8fcf9e962b3e180ac7609fa7f979598db6438f0016bd929972daba827",
+        "sha256:90e1a3f75d6d369acc09ebb421a8ed3cebcdf1fd8aa655894d8dd389a58e5382",
+        "sha256:9937cf257f2aa33d20a5570c07966cb577c47f5f2e523c99ba618bb138cd3725",
+        "sha256:a48445d926fdc4cd1079567024ea9aa635668c48b9493e2c77341aa587c93f6b",
+        "sha256:aaa3d257f5a70ca00815b189006daaaed68f13c225392f94932a905ffbc40523",
+        "sha256:ec5572c980cf5f2e2cbf1330366a38f43caa7545f259249beda0149c6650f423",
+        "sha256:f43fff9fc54656e96bd0f247923b675b7f81d3321857f248275a63d8d80e18de",
+        "sha256:ffe3f8205e2da5a9368fef7b8c25a42c7ce1ade6c8b3898c65f51ea432f9a855"
+      ],
+      "shard_plan_sha256": "sha256:ef93078c50233190137eb0c8861d39e26bd280ce9d09b15d71b0721aa2da6e79",
+      "target": "linux-x86_64",
+      "target_certificate_sha256s": []
+    },
+    {
+      "admission_sentinel_file_sha256": "sha256:3175b9be92e83d131a34d5ba28c14157a9ea26f7d55263b0db4e42170e26183d",
+      "admission_status": "accepted-in-merged-canonical-evidence",
+      "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+      "certificate_file_sha256": "sha256:421e104c3f1e9663ed862f7b969e89aa34d5b711f979ab125160a66133ce454f",
+      "certificate_sha256": "sha256:5f1cd8e79ea05ff1919f51dd5046aa333cebfdd3df68881684c8e86b238b1160",
+      "classification": "project-operated-qualification",
+      "executor_registry_sha256": "sha256:ddcbc2e6c59122b508bc6e24555695f955c4d2770226c5a008a35aed65f750b0",
+      "receipt_file_sha256s": [
+        "sha256:14d5c323e9898300a61af21ad2a09e63b0ec6b3743eb2913699fa61ab43cc8f2",
+        "sha256:165e165651a4706c6747578603f32fd54445eab3685501a8d53d44d609dc0a27",
+        "sha256:21889b3a44389f058043bdbffc55293d15e09f8590af9ad530b9530319adc696",
+        "sha256:376a3802fdcef141987008be9720ec493cb409b8d5b0d9cba077dc8ddd07d192",
+        "sha256:3fcf7ce33c379c8fed9b0ac1df7d1cea1a60b0a72607bc3bdcd206f997b5f706",
+        "sha256:5b5d59115bde2a4512d320ff5b881c182fb0ed0eea6bfd16363f2fec7170f454",
+        "sha256:8709ee2abdc92eb5eea97f1991dea41c38dcf0b821897a0a2a652f07590d1228",
+        "sha256:919a8f52c3f543036f9b46e14fea754a202addb6876c0a50d13de4d1c84ae031",
+        "sha256:a26c6e2203c062b2ebce6c3a0208d09f6b1d9202f90864b8762818bfb4967cfe",
+        "sha256:cb62d16dbc666cd2d528d9c0066b54f2e97b0dab9aaec3834de4fd11502437e4",
+        "sha256:cf6c2b9306ab6cb824d4b9003a203014ef5542819f33c2780244be2ea76c2ed0",
+        "sha256:cf6fdc42823999d8a633139defc692ddb4ae4e5d55441daeb085981bf9946a2e",
+        "sha256:d41408d58b0927029db698e118fd1112584308059adf6279620828692f581e48",
+        "sha256:d61aa68a70c072695dcbc6979e75b8be886dab3d61fcf2e7748e65ca94c7e221",
+        "sha256:ed70267a08e13661050283b505d80e088cbcec3f29309c6a7d6b9d63ecddb5d0",
+        "sha256:f94a366a6f36ecc3881a1b2d589f8e8c616b8101af2eb04d7559ab0bec4be318"
+      ],
+      "shard_plan_sha256": "sha256:ef93078c50233190137eb0c8861d39e26bd280ce9d09b15d71b0721aa2da6e79",
+      "target": "macos-arm64",
+      "target_certificate_sha256s": []
+    },
+    {
+      "admission_sentinel_file_sha256": "sha256:16a3c5af5f0b0c5bba7d8b8076a5f9491390f2e2bcf5c7b8fab74048a1d716d4",
+      "admission_status": "accepted-in-merged-canonical-evidence",
+      "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+      "certificate_file_sha256": "sha256:41906ac2f06b02391ce6d59a56af13abcd6d03e921139d3ba2bf9916202f3d37",
+      "certificate_sha256": "sha256:86aa09b7717f01cc088126395a5c1ac279d565f87ecb6078050a8789ad5a34d8",
+      "classification": "project-operated-qualification",
+      "executor_registry_sha256": "sha256:ddcbc2e6c59122b508bc6e24555695f955c4d2770226c5a008a35aed65f750b0",
+      "receipt_file_sha256s": [
+        "sha256:00c5eca93163ce161986a7f2ca901d57ad0644c449acbe68745b0c1258923587",
+        "sha256:0b0337197d896e7214f4b59a57049b4d2cd027ffac5bb440c3742059561f3a26",
+        "sha256:16a3c5af5f0b0c5bba7d8b8076a5f9491390f2e2bcf5c7b8fab74048a1d716d4",
+        "sha256:35aaef2563f03cb0e70e3ed0c57bc67f3a38d299c370854449420da3f904779d",
+        "sha256:4676c7f3e0f2f3b6429b6c31e216398d204c79b73e9b0550fff1f3f4500d6cc5",
+        "sha256:59d4180e0c4e7aa7e8ceb9e2d8627f46e59a9c487b59685d8fcceb18c801e7f3",
+        "sha256:6c178862d0bdea2124aaaaafd1b5941fb1f3542547a73be207dec59edf0f0569",
+        "sha256:738edd503119612baa3480a41193824293620e7d96a6b3d4eace0651ab30a715",
+        "sha256:78807473f41cf72804198697859191bb6a3a2b018cfea31cdd204c2bd469c570",
+        "sha256:8e4c653916f10c87b2c36207df539e5fb0a8971ef443feadb8a4a1e8b00b0108",
+        "sha256:8ff1bdaea779b61e875f20299c9e29d880108e7d3a29dcd20d221e204099d3e0",
+        "sha256:ba0ffe4a3196644db2577122462458530aa814fb234801741d9b07c17f7d1ca1",
+        "sha256:dec0b406fb3ebf856ffcf8bd3149ae70eb7b380359ced4c75a8e7be95e953df2",
+        "sha256:dec38c6a0e3599abffce9e58a5f8a665fcc15464a57caf23523ac8f173f20b00",
+        "sha256:e613e4cec1ee8180d516bac604f23abb90e109a3120f38f35598ae05da5806a1",
+        "sha256:e8b23907e2137ea2c1f85788134a916838a6786a99987b937e2fd660d586fe70"
+      ],
+      "shard_plan_sha256": "sha256:ef93078c50233190137eb0c8861d39e26bd280ce9d09b15d71b0721aa2da6e79",
+      "target": "windows-x86_64",
+      "target_certificate_sha256s": []
+    }
+  ],
+  "events_sha256": "sha256:8d419d54cb1f79d57fd5877c991a935d4e595d5ede0f49c7930eb8f50bce77ce",
+  "historical_inventory_complete": false,
+  "inputs_sha256": "sha256:8ef9f47a4b2960b1bd4a85d1e4d457342ac2c445388d22aa675787c847ef94e7",
+  "non_authorizing": true,
+  "platforms": [
+    {
+      "accepted_shards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "remaining_shards": [],
+      "target": "linux-x86_64"
+    },
+    {
+      "accepted_shards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "remaining_shards": [],
+      "target": "linux-aarch64"
+    },
+    {
+      "accepted_shards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "remaining_shards": [],
+      "target": "macos-arm64"
+    },
+    {
+      "accepted_shards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "remaining_shards": [],
+      "target": "windows-x86_64"
+    }
+  ],
+  "receipts_sha256": "sha256:6dcdd9b57d11bd405eac0b486050bd72c9dcb2189939dbfac56767337ee12498",
+  "reporting_policy_sha256": "sha256:5da5eadd6443ba29207e9028999e9c474e4d8d2ffb5b6a3fa77e7cf7962f42ca",
+  "required": {
+    "certificates": 5,
+    "edge_executions": 5590,
+    "sentinels": 4,
+    "shards": 64,
+    "support_cells": 218
+  },
+  "schema": "iicp.qualification-status.v1",
+  "sentinels": [
+    {
+      "extra_campaign_credit": 0,
+      "receipt_file_sha256": "sha256:d4d27d16d2e57b11ce1ecb4978d4ee3f4715cac3081e5393910dc97998319e94",
+      "target": "linux-aarch64"
+    },
+    {
+      "extra_campaign_credit": 0,
+      "receipt_file_sha256": "sha256:0f741194ec8ab1e448c92bb7dc9c885720e9c28b6907cee935da374dcc0f3b24",
+      "target": "linux-x86_64"
+    },
+    {
+      "extra_campaign_credit": 0,
+      "receipt_file_sha256": "sha256:3175b9be92e83d131a34d5ba28c14157a9ea26f7d55263b0db4e42170e26183d",
+      "target": "macos-arm64"
+    },
+    {
+      "extra_campaign_credit": 0,
+      "receipt_file_sha256": "sha256:16a3c5af5f0b0c5bba7d8b8076a5f9491390f2e2bcf5c7b8fab74048a1d716d4",
+      "target": "windows-x86_64"
+    }
+  ],
+  "source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+  "source_repository": "RobLe3/iicp.network",
+  "validation_scope": "retained-receipts-and-merged-ledgers",
+  "verified_at": "2026-11-03T13:18:07Z"
+}

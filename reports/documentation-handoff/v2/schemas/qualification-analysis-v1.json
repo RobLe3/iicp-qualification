@@ -1,0 +1,413 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "source_commit",
+        "requirements",
+        "history",
+        "dmsc_sources"
+      ],
+      "properties": {
+        "schema": {
+          "const": "iicp.qualification-analysis-links.v1"
+        },
+        "source_commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "owner",
+              "source_sha256",
+              "disposition",
+              "receipt_ids",
+              "mapping_status",
+              "causal_status",
+              "causal_parent_ids"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9._:-]{1,160}$"
+              },
+              "owner": {
+                "type": "string",
+                "pattern": "^https://github.com/RobLe3/[A-Za-z0-9_.-]+/issues/[0-9]+$"
+              },
+              "source_sha256": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              },
+              "disposition": {
+                "const": "UNRESOLVED"
+              },
+              "receipt_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9._:-]{1,160}$"
+                },
+                "uniqueItems": true
+              },
+              "mapping_status": {
+                "const": "UNASSESSED"
+              },
+              "causal_status": {
+                "const": "UNKNOWN"
+              },
+              "causal_parent_ids": {
+                "type": "array",
+                "maxItems": 0
+              }
+            }
+          },
+          "uniqueItems": true
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "owner",
+              "source_sha256",
+              "disposition",
+              "receipt_ids",
+              "mapping_status",
+              "causal_status",
+              "causal_parent_ids"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9._:-]{1,160}$"
+              },
+              "owner": {
+                "type": "string",
+                "pattern": "^https://github.com/RobLe3/[A-Za-z0-9_.-]+/issues/[0-9]+$"
+              },
+              "source_sha256": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              },
+              "disposition": {
+                "const": "UNRESOLVED"
+              },
+              "receipt_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9._:-]{1,160}$"
+                },
+                "uniqueItems": true
+              },
+              "mapping_status": {
+                "const": "UNASSESSED"
+              },
+              "causal_status": {
+                "const": "UNKNOWN"
+              },
+              "causal_parent_ids": {
+                "type": "array",
+                "maxItems": 0
+              }
+            }
+          },
+          "uniqueItems": true
+        },
+        "dmsc_sources": {
+          "const": {
+            "architecture_crosswalk": "sha256:fc966e33388ab934a0e6aafe2994eb18e6d5446c42038c81309097674c04dd92",
+            "reviewer_crosswalk": "sha256:9fb95bf870e95b59aae12ca16aae1d77c3d69e317a33c7fa96522e07e637a3d2",
+            "source_registry": "sha256:d047386446a4485b5fb5fa787bab9caf8bc56bc2b750f186fb58b930a47a6cc9"
+          }
+        }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "non_authorizing",
+        "qualification_credit_added",
+        "historical_inventory_complete",
+        "source_commit",
+        "inputs",
+        "assertions",
+        "requirements",
+        "history",
+        "dmsc",
+        "limitations",
+        "dmsc_sources"
+      ],
+      "properties": {
+        "schema": {
+          "const": "iicp.qualification-analysis.v1"
+        },
+        "non_authorizing": {
+          "const": true
+        },
+        "qualification_credit_added": {
+          "const": 0
+        },
+        "historical_inventory_complete": {
+          "const": false
+        },
+        "source_commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "inputs": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "receipts",
+            "events",
+            "scope",
+            "links"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "receipts": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "events": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "scope": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "links": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            }
+          }
+        },
+        "assertions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "assertion_id",
+              "receipt_id",
+              "receipt_file_sha256",
+              "candidate_manifest_sha256",
+              "environment_sha256",
+              "target",
+              "contract_mapping_status"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "support_cells",
+                  "edge_executions"
+                ]
+              },
+              "assertion_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "receipt_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9._:-]{1,160}$"
+              },
+              "receipt_file_sha256": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              },
+              "candidate_manifest_sha256": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              },
+              "environment_sha256": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              },
+              "target": {
+                "enum": [
+                  "linux-aarch64",
+                  "linux-x86_64",
+                  "macos-arm64",
+                  "windows-x86_64"
+                ]
+              },
+              "contract_mapping_status": {
+                "const": "UNRESOLVED"
+              }
+            }
+          },
+          "uniqueItems": true
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "owner",
+              "source_sha256",
+              "disposition",
+              "receipt_ids",
+              "mapping_status",
+              "causal_status",
+              "causal_parent_ids"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9._:-]{1,160}$"
+              },
+              "owner": {
+                "type": "string",
+                "pattern": "^https://github.com/RobLe3/[A-Za-z0-9_.-]+/issues/[0-9]+$"
+              },
+              "source_sha256": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              },
+              "disposition": {
+                "const": "UNRESOLVED"
+              },
+              "receipt_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9._:-]{1,160}$"
+                },
+                "uniqueItems": true
+              },
+              "mapping_status": {
+                "const": "UNASSESSED"
+              },
+              "causal_status": {
+                "const": "UNKNOWN"
+              },
+              "causal_parent_ids": {
+                "type": "array",
+                "maxItems": 0
+              }
+            }
+          },
+          "uniqueItems": true
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "owner",
+              "source_sha256",
+              "disposition",
+              "receipt_ids",
+              "mapping_status",
+              "causal_status",
+              "causal_parent_ids"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9._:-]{1,160}$"
+              },
+              "owner": {
+                "type": "string",
+                "pattern": "^https://github.com/RobLe3/[A-Za-z0-9_.-]+/issues/[0-9]+$"
+              },
+              "source_sha256": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              },
+              "disposition": {
+                "const": "UNRESOLVED"
+              },
+              "receipt_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9._:-]{1,160}$"
+                },
+                "uniqueItems": true
+              },
+              "mapping_status": {
+                "const": "UNASSESSED"
+              },
+              "causal_status": {
+                "const": "UNKNOWN"
+              },
+              "causal_parent_ids": {
+                "type": "array",
+                "maxItems": 0
+              }
+            }
+          },
+          "uniqueItems": true
+        },
+        "dmsc": {
+          "type": "array",
+          "minItems": 27,
+          "maxItems": 27,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "assessment",
+              "assertion_ids"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^(D(0[1-9]|1[0-4])|V(0[1-9]|1[0-3]))$"
+              },
+              "assessment": {
+                "const": "UNASSESSED"
+              },
+              "assertion_ids": {
+                "type": "array",
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        "limitations": {
+          "const": [
+            "DERIVATIVE_NOT_AUTHORITY",
+            "REQUIREMENT_LINKS_UNRESOLVED",
+            "HISTORY_PARTIAL",
+            "NO_INTEROPERABILITY_CLAIM"
+          ]
+        },
+        "dmsc_sources": {
+          "const": {
+            "architecture_crosswalk": "sha256:fc966e33388ab934a0e6aafe2994eb18e6d5446c42038c81309097674c04dd92",
+            "reviewer_crosswalk": "sha256:9fb95bf870e95b59aae12ca16aae1d77c3d69e317a33c7fa96522e07e637a3d2",
+            "source_registry": "sha256:d047386446a4485b5fb5fa787bab9caf8bc56bc2b750f186fb58b930a47a6cc9"
+          }
+        }
+      }
+    }
+  }
+}

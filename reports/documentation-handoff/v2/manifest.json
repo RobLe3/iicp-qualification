@@ -1,0 +1,129 @@
+{
+  "accepted": {
+    "certificates": 5,
+    "edge_executions": 5590,
+    "sentinels": 4,
+    "shards": 64,
+    "support_cells": 218
+  },
+  "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "historical_inventory_complete": false,
+  "independent_external_certification": "NOT_ESTABLISHED",
+  "members": {
+    "AGENT_BRIEF.md": {
+      "bytes": 3223,
+      "sha256": "sha256:1e5963fadf8de6c5153a61619f73e62d068c2018a646452bb72f57595e894a66"
+    },
+    "COMPONENT_BASELINE.md": {
+      "bytes": 3026,
+      "sha256": "sha256:b7ab5453c3131243ec8f79a1b872541ab17b2a2ea049b4ef367d74a298e14ca2"
+    },
+    "COVERAGE_AND_GAPS.md": {
+      "bytes": 7997,
+      "sha256": "sha256:c7afb3077f96e453c6edf116af733b17ba30ba7b531928dc94436b1bff5af6d7"
+    },
+    "REVIEWED_FINDINGS.md": {
+      "bytes": 6315,
+      "sha256": "sha256:624c1b0c6999edd5803f82ab22b9f330cb098e95eff4d9681b1e7f26bd6bc53b"
+    },
+    "SOURCE_AUTHORITY.md": {
+      "bytes": 4628,
+      "sha256": "sha256:49a038a5ac3b144a7dce80e1a08d68304a1ca1651a939cd48e6cf17d9e2fabc0"
+    },
+    "SOURCE_INDEX.json": {
+      "bytes": 3992,
+      "sha256": "sha256:7d44893aa8775995c54895906d9385dae766feab78013aec1763d521a87f7f1d"
+    },
+    "START_HERE.md": {
+      "bytes": 4365,
+      "sha256": "sha256:74501c92e56f53c80ffe3120b5d80460893aecf2b38bb733660f356917cccd20"
+    },
+    "contracts/scope.json": {
+      "bytes": 470505,
+      "sha256": "sha256:7c2959da319754993f30ee90ca29646254edf9df0bcf5f57afe2929e8c5dbf49"
+    },
+    "data/analysis.json": {
+      "bytes": 3548592,
+      "sha256": "sha256:200a0c45248c809334265b9d0a7855434fb427169fc262677edcf41cec841370"
+    },
+    "data/certificates.json": {
+      "bytes": 10142,
+      "sha256": "sha256:d1d264bef2b16a739e70915e4db47e21097ed46370f5b87f5f92a7d307017212"
+    },
+    "data/coverage.json": {
+      "bytes": 472726,
+      "sha256": "sha256:4041e669fa959a3592f89c822c1103c1b2dbca781f7c8a3363b0d0c369c8dad2"
+    },
+    "data/dmsc-sources.json": {
+      "bytes": 2873,
+      "sha256": "sha256:ba09b6c9851b521ba73cdc3537079803a46f098069274f96f6b1dcbd8085fb97"
+    },
+    "data/events.json": {
+      "bytes": 28033,
+      "sha256": "sha256:6cf6c717e8ea3273b3d7abf4d8b91d470910ac84ea47870bc63944e080fc9ef8"
+    },
+    "data/history-gaps.json": {
+      "bytes": 519,
+      "sha256": "sha256:7d0b41bbf13c4ae803fd6d4bcb403e2d5d2eb762ad15de07f42ad8b343c4b66c"
+    },
+    "data/receipts.json": {
+      "bytes": 558230,
+      "sha256": "sha256:630a9abc45452151b2797f0bd24b3a2394b21cb4fd07b3492ffca8a66ab4316c"
+    },
+    "data/reporting-policy.json": {
+      "bytes": 3751,
+      "sha256": "sha256:5da5eadd6443ba29207e9028999e9c474e4d8d2ffb5b6a3fa77e7cf7962f42ca"
+    },
+    "data/scope.json": {
+      "bytes": 470505,
+      "sha256": "sha256:7c2959da319754993f30ee90ca29646254edf9df0bcf5f57afe2929e8c5dbf49"
+    },
+    "data/status.json": {
+      "bytes": 13549,
+      "sha256": "sha256:4c48b6604e3574403ce5b8501b7ef7345881595e085ab74fb044e2833caee4d8"
+    },
+    "data/unresolved-clauses.json": {
+      "bytes": 7976,
+      "sha256": "sha256:1d475113848bcc31ae5d2bad799d6087d51f28539d5607c4fadc7fdd37362847"
+    },
+    "reporting-policy.json": {
+      "bytes": 3751,
+      "sha256": "sha256:5da5eadd6443ba29207e9028999e9c474e4d8d2ffb5b6a3fa77e7cf7962f42ca"
+    },
+    "requirements.txt": {
+      "bytes": 19,
+      "sha256": "sha256:756cc9e506ae4ee1a6f6c0507088b5cfc0dc8ba350fb2d2d46f1ffa72033adb6"
+    },
+    "schemas/handoff-v2-metadata.json": {
+      "bytes": 10950,
+      "sha256": "sha256:ff24526a7a008ed95fd5ca1e5583ab459e49a12bbeef2e21d805cc9411588f4c"
+    },
+    "schemas/qualification-analysis-v1.json": {
+      "bytes": 11970,
+      "sha256": "sha256:03600077cea3e1a2aaa5daab0f174d6d88cae9f1862441934873e7702eff3dea"
+    },
+    "schemas/report-v1.json": {
+      "bytes": 15381,
+      "sha256": "sha256:68cd637d01f6928b927712c05d6d3ed866ecdfea34e16baca6c4a7292bc38b64"
+    },
+    "validation/certificate_reporting.py": {
+      "bytes": 8819,
+      "sha256": "sha256:045a4f3cac3f07878a9b6c27ebd94e5ab1d0ee35cdd9a6d94f665357569b624f"
+    },
+    "validation/qualification_analysis.py": {
+      "bytes": 4611,
+      "sha256": "sha256:ed01c0794d7444144e2ea3eb30134991b510bad9115ee1706462696508d0f9b9"
+    },
+    "validation/report_common.py": {
+      "bytes": 10117,
+      "sha256": "sha256:e36af3cb270ff3c8b04f29e764da0a247fca61fbcb7bd128891bfea0e0356878"
+    },
+    "verify.py": {
+      "bytes": 9597,
+      "sha256": "sha256:5e689ddd0f706838ce1c4c721c4209b196e38b3ff189e5094de61a0b181f093a"
+    }
+  },
+  "qualification_credit": 0,
+  "schema": "iicp.qualification-documentation-handoff.v2",
+  "source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859"
+}
