@@ -1,0 +1,45 @@
+{
+  "schema": "iicp.closeout-gap-dispositions.v1",
+  "scope": "Aggregate category disposition of the independently reviewed 314-partition checkpoint; private object locators are not published.",
+  "source_summary_sha256": "sha256:36b2ce2f756e5825c3f51f23f5f0847a4e13ad12d397cfc6be11bc5c51b3d734",
+  "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1676",
+  "historical_inventory_complete": false,
+  "qualification_credit_added": 0,
+  "object_gap_pairs": 572,
+  "categories": [
+    {
+      "id": "oversize",
+      "count": 556,
+      "status": "UNRESOLVED_BOUNDED_READ_LIMIT",
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1676",
+      "source_sha256": "sha256:36b2ce2f756e5825c3f51f23f5f0847a4e13ad12d397cfc6be11bc5c51b3d734",
+      "next_action": "Determine which oversized objects are necessary for a named historical claim, then propose bounded reads under existing retention and privacy controls. Do not call unread content preserved or verified."
+    },
+    {
+      "id": "unsafe",
+      "count": 1,
+      "status": "UNRESOLVED_UNSAFE_OBJECT",
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1676",
+      "source_sha256": "sha256:36b2ce2f756e5825c3f51f23f5f0847a4e13ad12d397cfc6be11bc5c51b3d734",
+      "next_action": "Inspect retained metadata and ownership without following the unsafe path. Prepare a safe read-only retrieval decision if needed; do not bypass path protections."
+    },
+    {
+      "id": "mismatch",
+      "count": 15,
+      "status": "DISPOSITIONED_SOURCE_DELTA_NOT_GAP_ERASURE",
+      "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1676",
+      "source_sha256": "sha256:36b2ce2f756e5825c3f51f23f5f0847a4e13ad12d397cfc6be11bc5c51b3d734",
+      "corroboration_sha256": "sha256:abf64ae986e279339095dbffd459ac7a801bbc6bbee7ae1878ad430e7413457d",
+      "next_action": "Retain original mismatch classifications and dated source-delta evidence. For each future claim select the correct pinned version; do not rebind originals or infer approval from preserved bytes."
+    }
+  ],
+  "outside_object_gap_denominator": {
+    "remaining_frontier_entries": 1250,
+    "status": "UNEXAMINED_REMAINING_DISCOVERY",
+    "excluded_path_census": "UNKNOWN",
+    "total_historical_attempts": null,
+    "owner_issue": "https://github.com/RobLe3/iicp.network/issues/1676",
+    "next_action": "Use a separately bounded continuation or declared exclusion audit when needed. Neither frontier entries nor unknown exclusions belong in the 572 object-gap denominator."
+  },
+  "coverage_semantics": "556 oversized + 1 unsafe + 15 mismatches = 572 unique object/gap pairs. Disposition coverage is complete for this checkpoint; gap resolution and historical completeness are not."
+}

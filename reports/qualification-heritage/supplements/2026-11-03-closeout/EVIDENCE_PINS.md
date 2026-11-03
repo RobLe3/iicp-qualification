@@ -17,6 +17,8 @@ These digests identify reviewed records. They do not expose private originals or
 
 | [inventory-prefix.json](inventory-prefix.json) | `36b2ce2f756e5825c3f51f23f5f0847a4e13ad12d397cfc6be11bc5c51b3d734` |
 
+| [gap-dispositions.json](gap-dispositions.json) | `dabb458a6a7b669e12e51bd9407baf203f57be842516c03fc6569310973648dd` |
+
 ## Independent review records
 
 The following review records remain retained outside this public supplement. Their publication-safe conclusions are stated in the linked summaries; raw private locators are not copied.

@@ -12,7 +12,7 @@ and the [source-authority guide](SOURCE_AUTHORITY.md).
 
 ## Read in this order
 
-1. [Delivery gates](DELIVERY_GATES.md): seven complete and three pending delivery gates;
+1. [Delivery gates](DELIVERY_GATES.md): nine complete and one pending delivery gate;
    not a measurement of historical evidence completeness.
 2. [Six-component register](six-component-register.md): 15 open issues and bounded
    historical corrections, with no speculative product-repair batch proposed.
@@ -26,7 +26,9 @@ and the [source-authority guide](SOURCE_AUTHORITY.md).
    retain owners, evidence boundaries and next actions; no new criterion passes.
 7. [Inventory checkpoint](INVENTORY_CHECKPOINT.md): a reviewed 314-partition
    prefix, not completed discovery or a complete historical census.
-8. [Remaining work](PENDING_INPUTS.md): terminal history and publication gates.
+8. [Gap dispositions](GAP_DISPOSITIONS.md): all 572 object/gap pairs have category
+   owners and next actions; frontier and unknown exclusions remain separate.
+9. [Remaining work](PENDING_INPUTS.md): terminal history and publication gates.
 
 ## What changed in understanding
 
@@ -58,3 +60,12 @@ No raw captures, credentials, account/resource identities, original authorizatio
 records or private manuscript are included. Source digests do not make restricted
 originals publicly retrievable. No AWS allocation, execution, cleanup, product
 repair, publication of a release or deployment follows from this supplement.
+
+## Reading dated findings
+
+The copied source-delta report is a historical observation: its wording about
+“current” files, a 64-entry inbox and a refused scan refers to that report’s
+recorded observation, not a fresh claim about today’s sources or the later
+segmented scan. It remains unchanged to preserve provenance. The later
+[reviewed checkpoint](INVENTORY_CHECKPOINT.md) records continuation beyond the
+original refusal while retaining the original mismatch classifications.

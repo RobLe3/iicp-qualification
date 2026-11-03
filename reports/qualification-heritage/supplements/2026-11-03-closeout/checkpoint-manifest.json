@@ -1,20 +1,24 @@
 {
-  "delivery_gates_complete": 7,
+  "delivery_gates_complete": 9,
   "delivery_gates_total": 10,
   "historical_inventory_complete": false,
   "issue_1676_status": "OPEN",
   "members": {
     "DELIVERY_GATES.md": {
-      "bytes": 2280,
-      "sha256": "sha256:58fcef533a7d85e02c3a0ac66b281c13622f8b0f80f05ca13cdaf200615ed31d"
+      "bytes": 2448,
+      "sha256": "sha256:39e82fe42db9e4b026fe5d94189ba41d4a26be608f287cd8a2a4dfebf841985c"
     },
     "DOCUMENTATION_AGENT_WORKORDER.md": {
-      "bytes": 2122,
-      "sha256": "sha256:3afcfe8d01673774e89ed86d401f7dae2822993fe5161badd73131fd53cb27e0"
+      "bytes": 2172,
+      "sha256": "sha256:82231b7f444f57ac1af3e45bea01b0a8de84b64092fb0f11ee2ea10118d63e23"
     },
     "EVIDENCE_PINS.md": {
-      "bytes": 2487,
-      "sha256": "sha256:78d71df62bbc79becae5dbc1f888a7253b81b78095b897521447dcd2d156b2ce"
+      "bytes": 2608,
+      "sha256": "sha256:f7c2af64c72ab803682c3b5438a73cf6b5e2a981b4f79af80545252560755546"
+    },
+    "GAP_DISPOSITIONS.md": {
+      "bytes": 1553,
+      "sha256": "sha256:def513b58973b975e545f2d07130d40bcc7449fa74cffad36ccdbec67fb0faf2"
     },
     "INVENTORY_CHECKPOINT.md": {
       "bytes": 2669,
@@ -25,8 +29,8 @@
       "sha256": "sha256:4371f5b4707c38e3244bbc8e902f9e2565761368e73287532cdcd017d5f3ea68"
     },
     "README.md": {
-      "bytes": 3656,
-      "sha256": "sha256:76ac58316bbdc8d656674984e2b69890e18238627b65b8796768d618ced7d3eb"
+      "bytes": 4300,
+      "sha256": "sha256:65d5e3130700c546d5547b8d50092145cf41401e854e81b53a75cf8b469b6d11"
     },
     "SOURCE_AUTHORITY.md": {
       "bytes": 1607,
@@ -43,6 +47,10 @@
     "clause-dispositions.sanitized.json": {
       "bytes": 54203,
       "sha256": "sha256:8793b28ffbe8a63cbf019bb42f64f42afbf7efcde6ad2e723f73b15b6ac428f8"
+    },
+    "gap-dispositions.json": {
+      "bytes": 2745,
+      "sha256": "sha256:dabb458a6a7b669e12e51bd9407baf203f57be842516c03fc6569310973648dd"
     },
     "inventory-prefix.json": {
       "bytes": 1704,

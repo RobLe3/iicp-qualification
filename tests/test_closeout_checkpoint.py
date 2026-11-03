@@ -20,7 +20,7 @@ class CloseoutCheckpointTests(unittest.TestCase):
         self.assertFalse(manifest["historical_inventory_complete"])
         self.assertEqual(manifest["qualification_credit_added"], 0)
         self.assertEqual(manifest["issue_1676_status"], "OPEN")
-        self.assertEqual(manifest["delivery_gates_complete"], 7)
+        self.assertEqual(manifest["delivery_gates_complete"], 9)
         self.assertEqual(
             set(manifest["members"]),
             {p.name for p in CORPUS.iterdir()} - {"checkpoint-manifest.json"},
@@ -84,6 +84,34 @@ class CloseoutCheckpointTests(unittest.TestCase):
         self.assertFalse(data["historical_inventory_complete"])
         self.assertFalse(data["chain"]["discovery_exhausted"])
         self.assertEqual(data["qualification_credit_added"], 0)
+
+    def test_gap_dispositions_cover_only_checkpoint_denominator(self):
+        gaps = json.loads((CORPUS / "gap-dispositions.json").read_text())
+        summary = json.loads((CORPUS / "inventory-prefix.json").read_text())
+        categories = {row["id"]: row for row in gaps["categories"]}
+        self.assertEqual(set(categories), {"oversize", "unsafe", "mismatch"})
+        self.assertEqual(
+            categories["oversize"]["count"], summary["availability"]["OVERSIZE"]
+        )
+        self.assertEqual(
+            categories["unsafe"]["count"], summary["availability"]["UNSAFE"]
+        )
+        self.assertEqual(
+            categories["mismatch"]["count"], summary["integrity"]["MISMATCH"]
+        )
+        self.assertEqual(sum(row["count"] for row in categories.values()), 572)
+        for row in categories.values():
+            self.assertEqual(
+                row["owner_issue"], "https://github.com/RobLe3/iicp.network/issues/1676"
+            )
+            self.assertTrue(row["next_action"])
+            self.assertEqual(row["source_sha256"], gaps["source_summary_sha256"])
+        outside = gaps["outside_object_gap_denominator"]
+        self.assertEqual(outside["remaining_frontier_entries"], 1250)
+        self.assertEqual(outside["excluded_path_census"], "UNKNOWN")
+        self.assertIsNone(outside["total_historical_attempts"])
+        self.assertFalse(gaps["historical_inventory_complete"])
+        self.assertEqual(gaps["qualification_credit_added"], 0)
 
     def test_json_links_and_targeted_privacy_scan(self):
         for path in CORPUS.iterdir():

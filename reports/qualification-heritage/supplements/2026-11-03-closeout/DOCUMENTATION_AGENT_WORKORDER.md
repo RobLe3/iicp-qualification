@@ -5,14 +5,15 @@ v2 handoff before selecting work. Preserve the frozen candidate, accepted
 receipts, certificate records and original failures. Treat this package as dated
 evidence; do not substitute current component main branches for qualified bytes.
 
-1. Incorporate the independently reviewed final inventory/continuation result.
-   Report configured source scope, exclusions, remaining frontier, unique object
-   gaps and original refusals. Do not sum repeated per-page receipt gaps as
-   distinct missing records. Keep historical completeness false unless its
-   existing completeness policy is actually met.
-2. Incorporate final dispositions for the 21 clauses. Each needs its existing
-   owner, observed evidence, missing proof and next action. An unresolved
-   disposition is valid documentation, not a completed qualification criterion.
+1. Consume the completed [inventory checkpoint](INVENTORY_CHECKPOINT.md) and
+   [gap dispositions](GAP_DISPOSITIONS.md); do not repeat their verified prefix
+   consolidation. Select remaining work from their explicit next actions. Keep
+   frontier/exclusions separate from the 572 object/gap denominator and retain
+   historical completeness false.
+2. Consume the completed [21-clause disposition](clause-dispositions.md). All
+   21 remain formally UNVERIFIED. Obtain missing proof or owner decisions for a
+   specific clause; do not repeat the completed disposition exercise or promote
+   documentation completion into criterion acceptance.
 3. Link the reviewed source deltas and six-component register. Retain historical
    fixes, failed hypotheses and bounded root-cause confidence. Do not treat a
    similarly named later failure as proof that an earlier correction was absent.
