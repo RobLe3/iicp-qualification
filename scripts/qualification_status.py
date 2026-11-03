@@ -324,7 +324,7 @@ def publish(args: argparse.Namespace) -> None:
             "Deterministic report-only update under the reviewed reporting policy. No qualification authority or credit is granted by this PR.",
         )
         # Polling observes one required check. It never reruns CI or a workload.
-        deadline = time.monotonic() + 180
+        deadline = time.monotonic() + 720
         while True:
             pr = json.loads(
                 run(

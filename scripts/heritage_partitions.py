@@ -272,6 +272,22 @@ def validate_inventory(config, value):
     )
 
 
+def refusal_code(error):
+    """Stable public reason codes; never emit arbitrary source paths/messages."""
+    known = {
+        "directory history bound": "DIRECTORY_HISTORY_LIMIT",
+        "frontier bound": "FRONTIER_LIMIT",
+        "previously discovered directory changed": "SOURCE_DIRECTORY_CHANGED",
+        "directory changed since checkpoint": "SOURCE_DIRECTORY_CHANGED",
+        "directory changed during discovery": "SOURCE_DIRECTORY_CHANGED",
+        "changed config": "CONFIG_CHANGED",
+        "changed checkpoint": "CHECKPOINT_CHANGED",
+    }
+    return known.get(
+        str(error), "IO_REFUSAL" if isinstance(error, OSError) else "INVALID_INPUT"
+    )
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("command", choices=["discover", "inventory", "check-chain"])
@@ -301,4 +317,4 @@ if __name__ == "__main__":
     try:
         main()
     except (ValueError, OSError, KeyError) as error:
-        raise SystemExit("REFUSED: " + type(error).__name__)
+        raise SystemExit("REFUSED: " + refusal_code(error))
