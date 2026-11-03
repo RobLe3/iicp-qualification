@@ -1,0 +1,15 @@
+{
+  "discovery_bound_records": 3,
+  "excluded_path_census": "UNEXAMINED",
+  "expected_hash_matches": 127,
+  "historical_inventory_complete": false,
+  "inspected_objects": 10000,
+  "newly_hashed_objects": 9813,
+  "object_gap_records": 61,
+  "qualification_credit_added": 0,
+  "retained_objects": 9940,
+  "schema": "iicp.handoff-history-gaps.v1",
+  "source_inventory_sha256": "sha256:70a6c5678969b3e73f141a08300ab65f66b58b9a5fedc12d21fdf38d869eb894",
+  "total_historical_attempts": null,
+  "unknown_causal_links": true
+}

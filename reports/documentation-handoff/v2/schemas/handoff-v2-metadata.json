@@ -1,0 +1,256 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Reviewed bounded November3 inventory summary, not complete historical census.",
+  "const": {
+    "schema": "iicp.handoff-history-gaps.v1",
+    "historical_inventory_complete": false,
+    "source_inventory_sha256": "sha256:70a6c5678969b3e73f141a08300ab65f66b58b9a5fedc12d21fdf38d869eb894",
+    "inspected_objects": 10000,
+    "retained_objects": 9940,
+    "object_gap_records": 61,
+    "discovery_bound_records": 3,
+    "expected_hash_matches": 127,
+    "newly_hashed_objects": 9813,
+    "excluded_path_census": "UNEXAMINED",
+    "total_historical_attempts": null,
+    "unknown_causal_links": true,
+    "qualification_credit_added": 0
+  },
+  "$defs": {
+    "reviewed_links": {
+      "const": {
+        "schema": "iicp.qualification-analysis-links.v1",
+        "source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+        "requirements": [
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1106-clause-1",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1106",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1106-clause-6",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1106",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1117-clause-3",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1117-clause-4",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1117-clause-5",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1117-clause-6",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1117-clause-7",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1117-clause-8",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1117-clause-9",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1117-clause-10",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1481-clause-0",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1481",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1481-clause-3",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1481",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1470-clause-0",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1470-clause-5",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1470-clause-7",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1470-clause-10",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1470-clause-11",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1493-clause-0",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1493-clause-2",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1493-clause-3",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          },
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "root-1493-clause-4",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+            "receipt_ids": [],
+            "source_sha256": "sha256:16edcb0b9e5947b99fdb9643681060bab9c659e5175fd5b3335a5d42fbd419c2"
+          }
+        ],
+        "history": [
+          {
+            "causal_parent_ids": [],
+            "causal_status": "UNKNOWN",
+            "disposition": "UNRESOLVED",
+            "id": "partial-historical-inventory",
+            "mapping_status": "UNASSESSED",
+            "owner": "https://github.com/RobLe3/iicp.network/issues/1676",
+            "receipt_ids": [],
+            "source_sha256": "sha256:70a6c5678969b3e73f141a08300ab65f66b58b9a5fedc12d21fdf38d869eb894"
+          }
+        ],
+        "dmsc_sources": {
+          "architecture_crosswalk": "sha256:fc966e33388ab934a0e6aafe2994eb18e6d5446c42038c81309097674c04dd92",
+          "reviewer_crosswalk": "sha256:9fb95bf870e95b59aae12ca16aae1d77c3d69e317a33c7fa96522e07e637a3d2",
+          "source_registry": "sha256:d047386446a4485b5fb5fa787bab9caf8bc56bc2b750f186fb58b930a47a6cc9"
+        }
+      }
+    }
+  }
+}

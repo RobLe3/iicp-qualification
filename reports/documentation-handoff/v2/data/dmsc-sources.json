@@ -1,0 +1,145 @@
+{
+  "records": [
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D01"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D02"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D03"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D04"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D05"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D06"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D07"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D08"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D09"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D10"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D11"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D12"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D13"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "D14"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V01"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V02"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V03"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V04"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V05"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V06"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V07"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V08"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V09"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V10"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V11"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V12"
+    },
+    {
+      "assertion_ids": [],
+      "assessment": "UNASSESSED",
+      "id": "V13"
+    }
+  ],
+  "schema": "iicp.handoff-dmsc-sources.v1",
+  "sources": {
+    "architecture_crosswalk": "sha256:fc966e33388ab934a0e6aafe2994eb18e6d5446c42038c81309097674c04dd92",
+    "reviewer_crosswalk": "sha256:9fb95bf870e95b59aae12ca16aae1d77c3d69e317a33c7fa96522e07e637a3d2",
+    "source_registry": "sha256:d047386446a4485b5fb5fa787bab9caf8bc56bc2b750f186fb58b930a47a6cc9"
+  }
+}
