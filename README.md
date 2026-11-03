@@ -52,3 +52,16 @@ and its reporting-policy limitations. Historical inventory is not complete.
 
 Read the [final integration qualification summary](reports/FINAL-QUALIFICATION-SUMMARY.md)
 for scope, platform distinctions and public verification limits.
+
+## Documentation-agent handoff
+
+Start with the [portable heritage corpus](reports/qualification-heritage/START_HERE.md)
+for the source-linked baseline, coverage, reviewed findings and limitations.
+Its manifest and offline verifier bind the packaged snapshot; obtain the expected
+manifest digest from the reviewed publication rather than trusting a digest
+computed from an unverified copy.
+
+[Heritage tooling](HERITAGE.md) describes bounded inventory and private/public
+separation. The corpus is a dated documentation foundation, not a complete private
+archive or qualification authority. Historical completeness remains false.
+Inventory work is tracked in [root issue #1676](https://github.com/RobLe3/iicp.network/issues/1676).

@@ -1,0 +1,535 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "iicp.qualification-heritage.v1"
+    },
+    "historical_inventory_complete": {
+      "const": false
+    },
+    "qualification_credit": {
+      "const": 0
+    },
+    "config_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "roots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{0,79}$"
+          },
+          "kind": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "kind"
+        ]
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "root_id": {
+            "type": "string"
+          },
+          "pattern": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "root_id",
+          "pattern"
+        ]
+      }
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "root_id": {
+            "type": "string"
+          },
+          "relative_path": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "availability": {
+            "enum": [
+              "RETAINED",
+              "MISSING",
+              "UNREADABLE",
+              "UNSAFE",
+              "OVERSIZE"
+            ]
+          },
+          "integrity": {
+            "enum": [
+              "HASHED",
+              "MATCH",
+              "MISMATCH",
+              "UNVERIFIED"
+            ]
+          },
+          "sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^sha256:[0-9a-f]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "size_bytes": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "occurred_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "admission_status": {
+            "enum": [
+              "ACCEPTED_REFERENCE",
+              "NOT_ESTABLISHED"
+            ]
+          },
+          "supersedes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            }
+          },
+          "archive_status": {
+            "enum": [
+              "NOT_ARCHIVE",
+              "SAFE_METADATA",
+              "UNSAFE",
+              "OVERSIZE",
+              "UNREADABLE"
+            ]
+          },
+          "original_outcome": {
+            "enum": [
+              null,
+              "PASS",
+              "FAIL",
+              "REFUSED",
+              "INTERRUPTED",
+              "UNKNOWN"
+            ]
+          }
+        },
+        "required": [
+          "evidence_id",
+          "root_id",
+          "relative_path",
+          "kind",
+          "availability",
+          "integrity",
+          "sha256",
+          "size_bytes",
+          "occurred_at",
+          "admission_status",
+          "supersedes",
+          "archive_status",
+          "original_outcome"
+        ]
+      }
+    },
+    "canonical": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "status_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "receipt_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "receipts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "receipt_file_sha256": {
+                "type": "string",
+                "pattern": "^sha256:[0-9a-f]{64}$"
+              },
+              "target": {
+                "enum": [
+                  "linux-x86_64",
+                  "linux-aarch64",
+                  "macos-arm64",
+                  "windows-x86_64"
+                ]
+              },
+              "shard_index": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 15
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^sha256:[0-9a-f]{64}$"
+                }
+              }
+            },
+            "required": [
+              "receipt_file_sha256",
+              "target",
+              "shard_index",
+              "evidence_ids"
+            ]
+          }
+        }
+      },
+      "required": [
+        "source_commit",
+        "status_sha256",
+        "receipt_count",
+        "receipts"
+      ]
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "evidence_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^sha256:[0-9a-f]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "code",
+          "evidence_id"
+        ]
+      }
+    },
+    "dmsc": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "architecture": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "D01",
+              "D02",
+              "D03",
+              "D04",
+              "D05",
+              "D06",
+              "D07",
+              "D08",
+              "D09",
+              "D10",
+              "D11",
+              "D12",
+              "D13",
+              "D14"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "reviewer": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "V01",
+              "V02",
+              "V03",
+              "V04",
+              "V05",
+              "V06",
+              "V07",
+              "V08",
+              "V09",
+              "V10",
+              "V11",
+              "V12",
+              "V13"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "claim_status": {
+          "const": "UNASSESSED"
+        }
+      },
+      "required": [
+        "architecture",
+        "reviewer",
+        "claim_status"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "objects": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "retained": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unresolved": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "credited_receipt_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "objects",
+        "retained",
+        "unresolved",
+        "credited_receipt_count"
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "historical_inventory_complete",
+    "qualification_credit",
+    "config_sha256",
+    "roots",
+    "exclusions",
+    "objects",
+    "canonical",
+    "gaps",
+    "dmsc",
+    "summary"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "public": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "historical_inventory_complete",
+        "qualification_credit",
+        "config_sha256",
+        "canonical",
+        "summary",
+        "dmsc"
+      ],
+      "properties": {
+        "schema": {
+          "const": "iicp.qualification-heritage-public.v1"
+        },
+        "historical_inventory_complete": {
+          "const": false
+        },
+        "qualification_credit": {
+          "const": 0
+        },
+        "config_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "canonical": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "source_commit": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "status_sha256": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            },
+            "receipt_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "receipts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "receipt_file_sha256": {
+                    "type": "string",
+                    "pattern": "^sha256:[0-9a-f]{64}$"
+                  },
+                  "target": {
+                    "enum": [
+                      "linux-x86_64",
+                      "linux-aarch64",
+                      "macos-arm64",
+                      "windows-x86_64"
+                    ]
+                  },
+                  "shard_index": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 15
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^sha256:[0-9a-f]{64}$"
+                    }
+                  }
+                },
+                "required": [
+                  "receipt_file_sha256",
+                  "target",
+                  "shard_index",
+                  "evidence_ids"
+                ]
+              }
+            }
+          },
+          "required": [
+            "source_commit",
+            "status_sha256",
+            "receipt_count",
+            "receipts"
+          ]
+        },
+        "summary": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "objects": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "retained": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unresolved": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "credited_receipt_count": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "objects",
+            "retained",
+            "unresolved",
+            "credited_receipt_count"
+          ]
+        },
+        "dmsc": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "architecture": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "D01",
+                  "D02",
+                  "D03",
+                  "D04",
+                  "D05",
+                  "D06",
+                  "D07",
+                  "D08",
+                  "D09",
+                  "D10",
+                  "D11",
+                  "D12",
+                  "D13",
+                  "D14"
+                ]
+              },
+              "uniqueItems": true
+            },
+            "reviewer": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "V01",
+                  "V02",
+                  "V03",
+                  "V04",
+                  "V05",
+                  "V06",
+                  "V07",
+                  "V08",
+                  "V09",
+                  "V10",
+                  "V11",
+                  "V12",
+                  "V13"
+                ]
+              },
+              "uniqueItems": true
+            },
+            "claim_status": {
+              "const": "UNASSESSED"
+            }
+          },
+          "required": [
+            "architecture",
+            "reviewer",
+            "claim_status"
+          ]
+        }
+      }
+    }
+  }
+}
