@@ -1,0 +1,32 @@
+{
+  "attempts": [
+    {
+      "attempt": "initial-network-control",
+      "full_node_cases_completed": 0,
+      "limitation": "The reachable host-owned denied endpoint accepted a connection; no Node execution followed. No broader network reachability claim.",
+      "node_cases_started": 0,
+      "result": "FAIL_NETWORK_ISOLATION_CONTROL",
+      "review_sha256": "sha256:3dea3f10823383c1012d2fb6c34a7c412942ebd618ab62cbc23ee2feb6562c3f"
+    },
+    {
+      "attempt": "exact-port-successor",
+      "full_node_cases_completed": 0,
+      "limitation": "Network controls passed; runtime ownership guard stopped the first Node case. Missing historical polling output prevents exact cause attribution.",
+      "node_cases_started": 1,
+      "result": "STOP_NODE_LISTENER_OWNERSHIP_UNESTABLISHED",
+      "review_sha256": "sha256:98899b3daf419cf7cfe720902613974c9fcd09a96b0cf31c482c53811d504ce7"
+    },
+    {
+      "attempt": "numeric-observer-successor",
+      "full_node_cases_completed": 2,
+      "limitation": "Two controls and two bounded Node cases passed; this does not diagnose earlier refusals or the original product incident.",
+      "node_cases_started": 2,
+      "result": "PASS_BOUNDED_TWO_NODE_TRANSITIONS",
+      "review_sha256": "sha256:d0bdcbc7aa1abcd9ce95e43df157faf70b81b6e2811c95587a0c9fb9359a431c"
+    }
+  ],
+  "automatic_retry": false,
+  "original_dispositions_preserved": true,
+  "qualification_credit_added": 0,
+  "schema": "iicp.stabilization-attempt-history.v1"
+}

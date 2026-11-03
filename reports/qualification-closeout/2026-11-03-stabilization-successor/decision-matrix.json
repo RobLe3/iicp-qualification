@@ -1,0 +1,276 @@
+{
+  "schema": "iicp.stabilization-readiness.v1",
+  "at": "2026-11-03T20:58:13.457662+00:00",
+  "authority": "Non-authorizing source/evidence decision matrix",
+  "component_identities": [
+    {
+      "component": "client-python",
+      "repository": "RobLe3/iicp-client-python",
+      "frozen_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "current_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "refreshed_current_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "changed": false
+    },
+    {
+      "component": "client-typescript",
+      "repository": "RobLe3/iicp-client-typescript",
+      "frozen_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "current_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "refreshed_current_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "changed": false
+    },
+    {
+      "component": "client-rust",
+      "repository": "RobLe3/iicp-client-rust",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "refreshed_current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "changed": false
+    },
+    {
+      "component": "directory-php",
+      "repository": "RobLe3/iicp-directory-php",
+      "frozen_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "current_commit": "11e63a1b2a3846d376810d260bf9ccbbf59b3d7c",
+      "refreshed_current_commit": "11e63a1b2a3846d376810d260bf9ccbbf59b3d7c",
+      "changed": false
+    },
+    {
+      "component": "directory-rust",
+      "repository": "RobLe3/iicp-directory-rust",
+      "frozen_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "current_commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "refreshed_current_commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "changed": false
+    },
+    {
+      "component": "management",
+      "repository": "RobLe3/iicp-management",
+      "frozen_commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "current_commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+      "refreshed_current_commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+      "changed": false
+    }
+  ],
+  "rust_source_bindings": [
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "path": "src/recovery.rs",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "same_bytes": true,
+      "sha256": "sha256:4b2f1f31fcd094d324ae22bda386ebd2e592a6ae671c3d25040d0d0c5acedece"
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "path": "src/node.rs",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "same_bytes": true,
+      "sha256": "sha256:1cbe1e77c0c90781a57bbc5eba67cd37c3da37671bbb1e85bd2fcb84ebe88cca"
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "path": "src/bin/iicp_node.rs",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "same_bytes": true,
+      "sha256": "sha256:bc53dae87b685bf946615244f547a063863c6e2af063e39dfc649267c7423915"
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "path": "src/tunnel.rs",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "same_bytes": true,
+      "sha256": "sha256:c81efe3f57d4c4a4fe68416dd801d2d978cbc907b7de0af89657e17f42664337"
+    }
+  ],
+  "sources": {
+    "six_component_register": {
+      "sha256": "sha256:61382a025534d9eb695c80666c1dd4b14dd5eb060c1ef9e98d499e994d1e4c66"
+    },
+    "identity_refresh": {
+      "sha256": "sha256:f7e1fd3599d58b465d8dc809c0f05a88555ef9838b3a290fc812a697c726a346"
+    },
+    "issue183": {
+      "sha256": "sha256:7fa2b88a5b90fb333c67a1cfe6329ac385c47abed04a2bda926579b08a62bcc7"
+    },
+    "issue175": {
+      "sha256": "sha256:0e11be116eb328e2995f9e618680ae675c04c5acbafb533ac3933d7631eaf384"
+    },
+    "node_round4": {
+      "sha256": "sha256:4f88b1a2ccb8b77dd8259f7d41815b1953af63d044d468bb477b26e3ccec46bc"
+    },
+    "node_round4_review": {
+      "sha256": "sha256:5077181d0e498ac09c2575367b890ba5b23e401bc236a973763dd60bfb3b69aa"
+    },
+    "round5_refusal": {
+      "sha256": "sha256:1e6c842206782c93c88b34c35e8a28f6a30e8a76f583f80f20b1e7ffc84aa034"
+    },
+    "round5_review": {
+      "sha256": "sha256:733ea4dd84ae379a9ccda7f616297441bcb9853ae1825f574c9d49d14a8c95f9"
+    },
+    "windows_assurance": {
+      "sha256": "sha256:a6deb1c386ff6a38b3704adda1e269d74d5825ecbeb29970811354a3e04217f1"
+    },
+    "windows_review": {
+      "sha256": "sha256:d865dde39ac96d410e744813b009bdb204474f91e56d1339bbb06eda4332dae7"
+    }
+  },
+  "decisions": [
+    {
+      "id": "R183-route",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "contract": "Distinguish real route loss from healthy local serving and absent Directory presence.",
+      "evidence": [
+        "node_round4",
+        "issue183"
+      ],
+      "missing_proof": "Synthetic route handle is not NAT/tunnel discovery; original incident cause remains unknown.",
+      "discriminating_case": "Compare route unavailable/restored with real registration and three healthy heartbeat intervals.",
+      "existing_seam": "Existing Node example can exercise route handle; full real tunnel requires a separately reviewed orchestration seam.",
+      "scope": "Supported recovery investigation; no diagnosis from six passing controls.",
+      "disposition": "OPEN_BOUNDED_INVESTIGATION",
+      "qualification_credit": 0
+    },
+    {
+      "id": "R183-registration",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "contract": "Differentiate missing registration, credential drift and re-registration failure.",
+      "evidence": [
+        "node_round4",
+        "issue183"
+      ],
+      "missing_proof": "Initial403 and missing-registration controls passed; heartbeat401 followed by re-register403 was not executed in round5.",
+      "discriminating_case": "Healthy positive control versus heartbeat401/re-register403, exact POST count and secret-free outcomes.",
+      "existing_seam": "Existing fake Directory/actual Node seam can supply HTTP statuses without changing product source.",
+      "scope": "Local zero-credit diagnostic only.",
+      "disposition": "OPEN_BOUNDED_INVESTIGATION",
+      "qualification_credit": 0
+    },
+    {
+      "id": "R183-exit76",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "contract": "Explain three failed route checks and repeated76 without durable recovery.",
+      "evidence": [
+        "node_round4",
+        "round5_refusal"
+      ],
+      "missing_proof": "Default every-two-heartbeat cadence not observed; original restart repetition not reconstructed.",
+      "discriminating_case": "Default cadence persistent route-loss case; observed three failed recovery checks then exact76; stop once.",
+      "existing_seam": "Existing Node environment knobs can be omitted to preserve defaults; no product edit needed.",
+      "scope": "Do not repeat already passing accelerated cases as new proof.",
+      "disposition": "OPEN_BOUNDED_INVESTIGATION",
+      "qualification_credit": 0
+    },
+    {
+      "id": "R183-supervisor",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "contract": "Verify bounded real supervisor restart and no restart storm.",
+      "evidence": [
+        "node_round4",
+        "issue183"
+      ],
+      "missing_proof": "One fixture successor is not launchd ownership, throttling or original launch settings.",
+      "discriminating_case": "First inspect retained sanitized supervisor contract; only then propose an isolated supervisor fixture with bounded restart count.",
+      "existing_seam": "Current Node seam does not test launchd; no production service restart or live plist disclosure.",
+      "scope": "Original operator-host cause remains unproved.",
+      "disposition": "OPEN_BOUNDED_INVESTIGATION",
+      "qualification_credit": 0
+    },
+    {
+      "id": "R183-cooldown",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "contract": "Verify cooldown and retry behavior at the actual path responsible.",
+      "evidence": [
+        "issue183",
+        "node_round4"
+      ],
+      "missing_proof": "CLI tunnel cooldown belongs to exit75 path; no demonstrated cooldown on repeated Node exit76 path.",
+      "discriminating_case": "Map exit75 versus76 caller contracts before a bounded CLI observation; test parsed cooldown positive/invalid inputs without waiting arbitrary real durations.",
+      "existing_seam": "src/bin/iicp_node.rs public_fallback_retry_delay_hint and existing unit tests; private helper not callable from existing Node example.",
+      "scope": "Do not equate tunnel-dead exit75 with recovery exit76.",
+      "disposition": "OPEN_BOUNDED_INVESTIGATION",
+      "qualification_credit": 0
+    },
+    {
+      "id": "R175-relay",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "contract": "Select verified compatible relay endpoint, not self-report or derived HTTPS-to-native mapping.",
+      "evidence": [
+        "issue175"
+      ],
+      "missing_proof": "Source election filters relay_capable and endpoint then derives port default9485; this alone does not prove runtime reachability or supported admission.",
+      "discriminating_case": "HTTPS health reachable/native accept unavailable, self-reported-only candidate, and verified eligible positive control.",
+      "existing_seam": "Existing full CLI discovery is cfg nat; no-default-features Node observer cannot exercise it. A separate bounded seam proposal is needed.",
+      "scope": "Relay remains experimental; no stable relay support claim.",
+      "disposition": "OPEN_BOUNDED_INVESTIGATION",
+      "qualification_credit": 0
+    },
+    {
+      "id": "R175-fallback",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "contract": "Fail closed to local-only when neither tunnel nor eligible relay exists.",
+      "evidence": [
+        "issue175"
+      ],
+      "missing_proof": "Original failure report remains operator evidence; complete native fallback path not observed in current diagnostics.",
+      "discriminating_case": "No eligible route must not advertise private endpoint; compare explicitly valid local-only mode with failed public registration.",
+      "existing_seam": "Node local fixture can inspect payload; it cannot prove CLI route-selection orchestration.",
+      "scope": "Potential supported safety boundary must not be excluded just because relay is experimental.",
+      "disposition": "OPEN_BOUNDED_INVESTIGATION",
+      "qualification_credit": 0
+    },
+    {
+      "id": "R175-diagnostics",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "contract": "Retain only allowlisted structured Directory code plus HTTP status on REGISTER failure.",
+      "evidence": [
+        "issue175"
+      ],
+      "missing_proof": "Frozen/current register returns status-only on non-success; missing allowlisted code is source-supported, while normative support classification still needs owner decision.",
+      "discriminating_case": "Fake422 with allowed IICP-E050 plus sensitive synthetic markers; require status/code only and reject arbitrary body disclosure.",
+      "existing_seam": "Existing fake Directory/Node seam can observe error safely without product changes. Passing requires evidence, not speculative fix.",
+      "scope": "Candidate correction only after reproduced contract failure and approved impact review.",
+      "disposition": "OPEN_BOUNDED_INVESTIGATION",
+      "qualification_credit": 0
+    },
+    {
+      "id": "WIN-isolation",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "contract": "Preserve original isolated-fixtures-only caller obligation throughout native workload lifetime.",
+      "evidence": [
+        "windows_assurance",
+        "windows_review"
+      ],
+      "missing_proof": "Reviewed caller removes preparation firewall before workload; no alternate lifetime egress enforcement established. Actual prohibited contact is not established.",
+      "discriminating_case": "Any successor guard needs allowed positive control and denied external/cross-scope controls for all descendants, phase-bound evidence and exact teardown.",
+      "existing_seam": "Current offline selector/file audit cannot establish Windows effective firewall state; no AWS or native execution in this batch.",
+      "scope": "100selectors/1344commands map SDKs+Management, not Windows native Directories. Existing accepted evidence unchanged.",
+      "disposition": "OPEN_BOUNDED_INVESTIGATION",
+      "qualification_credit": 0
+    },
+    {
+      "id": "WIN-authority",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "contract": "Do not substitute diagnostics, sentinels or passing unadmitted runs for accepted qualification.",
+      "evidence": [
+        "windows_assurance",
+        "six_component_register"
+      ],
+      "missing_proof": "Original same-environment and grant/closure clauses remain separately UNVERIFIED; counts do not settle them.",
+      "discriminating_case": "Read-only original-contract to retained receipt mapping before any correction/admission decision.",
+      "existing_seam": "Existing validators and21-clause register; no new authority.",
+      "scope": "No rerun, revocation or certificate rewrite implied.",
+      "disposition": "OPEN_BOUNDED_INVESTIGATION",
+      "qualification_credit": 0
+    }
+  ],
+  "limits": [
+    "Six component main identities refreshed read-only; all unchanged. Existing15-open-issue audit reused, not a new exhaustive issue search. Only Rust183/175 issue bodies refreshed.",
+    "Static source path is distinguished from runtime observation. No live endpoint, AWS, workload or source edit.",
+    "Parser compatibility remains unproved until a separately reviewed bounded positive/denial control actually runs. Round5 parser refusal is not product failure.",
+    "21 root clauses remain separately UNVERIFIED; no zero-known-defect claim."
+  ]
+}
