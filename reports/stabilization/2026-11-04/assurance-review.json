@@ -1,0 +1,25 @@
+{
+  "schema": "iicp.assurance-refresh-independent-review.v1",
+  "at": "2026-11-04T02:22:37.781511+00:00",
+  "result": "PASS_BOUNDED_READONLY_SOURCE_REFRESH",
+  "reviewer": "remaining_dispositions",
+  "artifact_sha256": "sha256:a12ce7ba900e61596b3c5b1df7aa7720fed7dbc5c490dbcf0f5ddc9f84b5755e",
+  "lookups_sha256": "sha256:9e1fe963d3e5da4ec366b5fb06013e5a9d469bcd3b2a72b17a642a56e8cb89ce",
+  "checks": {
+    "targeted_originalfile_hashes": 20,
+    "rust_frozen_current_blob_pairs": 6,
+    "windows_bound_guest_blobs": 7,
+    "component_heads_unchanged": 6,
+    "retained_openissue_count": 15,
+    "formal_clauses_unverified": 21,
+    "owner_questions_open": 10,
+    "sanitized_privacy_scan": true
+  },
+  "limits": [
+    "Main refs are authorreadonlyAPI observations retained in componentrefresh; localblob identities independentlyverified. No additionalremotequery required.",
+    "Generated supervisor contract is not installedlaunchd/systemd state; issue183latercomments support uncertainty and laterrestart nonclosure.",
+    "Existingfrozen/current comparisons cannot establish nativeWindows lifetime enforcement or actualprohibitedcontact.",
+    "This refresh predates pending missingcasesruntime and supplies no runtimeclosure; retain alongside lateradditivedelta.",
+    "No workload,AWS,canonicalchange,issueclosureorqualificationcredit."
+  ]
+}

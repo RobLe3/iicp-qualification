@@ -1,0 +1,41 @@
+{
+  "schema": "iicp.stabilization-diagnostic-supplement.v1",
+  "scope": "Append-only zero-credit observations; local correction not published or merged",
+  "owner_issue": "https://github.com/RobLe3/iicp-client-rust/issues/185",
+  "postprocessing_delivery_unchanged": "8/8",
+  "qualification_credit_added": 0,
+  "members": {
+    "README.md": {
+      "sha256": "sha256:2e74fb704c0b517a66271e64d528bcb91476ff2149491a1eaf81d2cf41df1ad1",
+      "bytes": 4406
+    },
+    "assurance-review.json": {
+      "sha256": "sha256:ab820e6995d47c2987bca14c40a05f28f5ab0c68c8aeaeab80d1ba36f2bbccf1",
+      "bytes": 1350
+    },
+    "invalid-proof-preexecution-refusal.json": {
+      "sha256": "sha256:836729511a1b753f9484105d2ae7ab6f67a9ed255d621f71414c30b919143d44",
+      "bytes": 649
+    },
+    "owner-delta-review.json": {
+      "sha256": "sha256:3588201164a916511db3f303edecf9e5fb28979536f924735a2590a6eec144e6",
+      "bytes": 1692
+    },
+    "owner-delta.json": {
+      "sha256": "sha256:bbdea51a350b700710d68963e0efb568ea1d504cafc6a7bf859294747ac7e9b4",
+      "bytes": 7682
+    },
+    "pre-runtime-assurance.json": {
+      "sha256": "sha256:a12ce7ba900e61596b3c5b1df7aa7720fed7dbc5c490dbcf0f5ddc9f84b5755e",
+      "bytes": 35572
+    },
+    "runtime-summary-review.json": {
+      "sha256": "sha256:0089e1993ee3221d2a1ea59b84c4d324c8328cda6b9ab497d998d1f920de69f5",
+      "bytes": 898
+    },
+    "runtime-summary.json": {
+      "sha256": "sha256:bd1c913a8ed8e77aba8cd646c742bcbd1893e7ccb74fe08bf57a8469b9070570",
+      "bytes": 3045
+    }
+  }
+}

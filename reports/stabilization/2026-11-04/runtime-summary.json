@@ -1,0 +1,59 @@
+{
+  "schema": "iicp.rust-stabilization-bounded-summary.v1",
+  "at": "2026-11-04T02:41:27.170193+00:00",
+  "initial_sequence": {
+    "pass": 9,
+    "fail": 1,
+    "stopped_on_failure": true,
+    "result_sha256": "f5ff866befe12e832550288284ec7defb7fa8fecc55d5270b1c852efa6e1a3e0",
+    "terminal_review_sha256": "7e58b5dbe1c5b58371ce3af16a91c69cc875bef6aa201ef7e9070664b05cb651"
+  },
+  "correction": {
+    "tracked_files": [
+      "src/node.rs"
+    ],
+    "base_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+    "node_source_sha256": "24f4b087990f3cdbd15e4b8b3cb8bf2a17d393effaef776206931703d2a54ce4",
+    "diff_sha256": "e432f0a3ad2742bb7a80a3835b86c7d1bbb3b25c786e7ed5bf2a1e1449a27eed",
+    "source_manifest_sha256": "440f1d5dbc78f5dd54d03dde19bc49b212243e4d6d8f94df2bc507a2e4f4d7b7",
+    "pure_regression_tests": 2,
+    "offline_locked_build": "PASS",
+    "affected_case_replay": "PASS",
+    "replay_attempts": 1,
+    "terminal_review_sha256": "ae549eaa61ef1fb50f16ddaeef8d730ff46f39284d8729993c7281f17bd60308",
+    "branch": "fix/stabilization-registration-response-redaction-20261104",
+    "committed": false,
+    "published": false,
+    "merged": false
+  },
+  "unused_invalid_ownership_case": {
+    "status": "PASS",
+    "attempts": 1,
+    "elapsed_seconds": 181.13993079197826,
+    "capture_sha256": "24553d031e84e9e43c7440783380b5a5254e9e33d45d6b049b278aca6b60a7c5",
+    "independent_terminal_review": "PASS",
+    "terminal_review_sha256": "5b578010a09ff57b5918efb397fd721b9cf609b4e2d6870b072d43f03be5b047"
+  },
+  "execution_seconds_total": 758.90323979198,
+  "execution_limit_seconds": 2700,
+  "original_pins_and_new_replay_pins": "ALL_MATCH",
+  "cleanup": "All executed cases recorded child reap and exact listener bind/listen absence. Runner-owned groups terminated before leader reap. Not an independent whole-host census.",
+  "findings": [
+    "Default2heartbeat cadence and3failedsyntheticroutechecks produceexit76 withoutautorestart",
+    "Strict-secured mocked ownership grantsnewtoken,3subsequentheartbeatsuseit",
+    "Refusedrenewal and revokedownership do notcreate successfulregistration",
+    "HTTP403recognized/unknown/malformed/oversize bodies notdisclosed in these cases; recognizedcode visibility observationonly",
+    "HTTP200missingtoken disclosedsyntheticbody; narrowcorrectedhelper removesbody and retainsrejection andaliasbehavior"
+  ],
+  "limitations": [
+    "No actualPHPserver interoperability; selectedfrozenstrict-securedoption,notdefaultorproductionpolicy",
+    "No actualroute/tunnel loss; runtimehandle synthetic",
+    "No CLIexit75,cooldown,supervisorrestart,relay175ororiginal183cause conclusion",
+    "No HMACchallenge rotation proof; newcredentialpositive measuredtokenadoption",
+    "Oversize/malformed diagnostic cases use403; no universalresponseparser safetyclaim",
+    "No qualifiedcandidateupdate or creditcarryforward; proposedcorrection requiresnormalgovernance and impactdetermination"
+  ],
+  "qualification_credit_added": 0,
+  "aws_access": false,
+  "installed_services_modified": false
+}
