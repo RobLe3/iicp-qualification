@@ -77,3 +77,7 @@ The [3 November bounded successor supplement](reports/qualification-closeout/202
 ## Stabilization observations
 
 [The bounded 4 November findings](reports/stabilization/2026-11-04/README.md) preserve a diagnostic-disclosure failure and locally tested, unmerged correction. They do not alter qualification credit or close the remaining owner questions.
+
+## Rust diagnostic correction
+
+[Governed merge and successor qualification boundary](reports/stabilization/rust185-governed-closure-2026-11-04/README.md) records the narrow registration diagnostic fix, preserved failed validation and remaining candidate-impact gates.

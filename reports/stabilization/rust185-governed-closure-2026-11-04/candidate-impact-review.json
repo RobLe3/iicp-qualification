@@ -1,0 +1,22 @@
+{
+  "schema": "iicp.candidate-impact-independent-review.v1",
+  "at": "2026-11-04T11:49:47.073206+00:00",
+  "result": "PASS_BOUNDED_PROPOSAL",
+  "artifact_sha256": "sha256:8bbd4ccd55c84da415cfd9e3537df30799dd2b9b76a2524dab97e0d2259cc0f8",
+  "narrative_sha256": "sha256:9e3b99fd09d416d3471c2df6a747ea6028b415d15a9ebd38e66c7fc3efed6961",
+  "checks": [
+    "All15 retained policy/source pins and1588 snapshot verified.",
+    "Direct Rust48cells1296executions independently reproduced with existing pure expansion helpers.",
+    "Exact one-file proposed head/source/diff and four intervening harness identities verified.",
+    "Whole-candidate and global registry receipt binding inspected; no1588 exception or automatic carryforward inferred.",
+    "Original64shards/five certificates retained as original-candidate evidence, not corrected-main certificates.",
+    "New regression assertions and future catalog scope require owner decisions; no blind reuse of old totals."
+  ],
+  "limits": [
+    "Direct Rust denominator does not prove every assertion exercises the changed registration path.",
+    "No successor builder, qualification workload, artifact freeze, or certificate validator was executed.",
+    "Product publication remains stopped at known local Python environment failure; exact-head gate review still pending.",
+    "Full successor scope is a policy-bound preparation proposal, not allocation or execution authority."
+  ],
+  "qualification_credit_added": 0
+}

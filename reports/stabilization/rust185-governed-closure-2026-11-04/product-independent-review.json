@@ -1,0 +1,33 @@
+{
+  "schema": "iicp.rust185-exact-head-independent-review.v1",
+  "at": "2026-11-04T12:06:44.904017+00:00",
+  "result": "PASS_FOR_APPROVED_PUBLICATION_GATES",
+  "head": "077c1cb9b05a8b5406dcd689ba578fd1a38b9366",
+  "tree": "b6dca547fb2dd9ffea3866782f418ba233fd41a5",
+  "base": "4020dadd150d7975be468f04a588dfa5346899a5",
+  "source_sha256": "352f9d9e47e4998af32b017120ffc9ba8a7be9411bcbc8f94ebd9197ae958ec1",
+  "combined_validation_sha256": "46234c48a982d7d89db7060eadd237280be2946b64c3e1af123d01ecef7bcafb",
+  "recovery_proposal_sha256": "143ff8f12b2ebe6ff2fffa4967d5a5e3e7c79185b643df9c82d8178d6a1f4b7a",
+  "checks": [
+    "Clean exact one-file diff; no version or authority edits.",
+    "Body redaction preserves primary/alias/empty selection and rejection.",
+    "Formatted versus replayed source differs only test layout and array trailing comma; production helper/call unchanged. Initial whitespace-only equality check refused the trailing comma; inspected actual diff before accepting semantic equivalence.",
+    "Two new regressions pass in retained final-head log.",
+    "All original and14recovery log hashes verified.644passes reused; only failed systemd group repeated;658combined passes and8existing ignored.",
+    "Doctests included; Sentrux no-degradation/rules pass without baseline change."
+  ],
+  "scope_limits": [
+    "Original failure and corrected replay remain separate. Replay binary preceded formatting; no new final-head binary replay claimed.",
+    "Eight preexisting ignored developer/doc tests disclosed; not qualification waivers.",
+    "Linux container/systemd remain required CI gates, not established by local macOS checks.",
+    "No Rust183/175 closure or qualified successor claim.",
+    "Independent source/evidence review only; no runtime/cargo rerun."
+  ],
+  "remaining_gates": [
+    "Approved exact-head normal PR publication",
+    "One required SDK quality CI and repository gates",
+    "Conditional merge only if every gate passes",
+    "Merged-source equality and candidate-impact reconciliation"
+  ],
+  "qualification_credit_added": 0
+}

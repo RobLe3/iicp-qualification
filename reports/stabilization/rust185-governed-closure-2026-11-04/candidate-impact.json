@@ -1,0 +1,215 @@
+{
+  "schema": "iicp.rust185-candidate-impact.v1",
+  "at": "2026-11-04T11:46:54.504134+00:00",
+  "root_source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+  "frozen_candidate": {
+    "manifest_sha256": "sha256:fb2b2b585d435111f05ca90355b4cf3c0c6a796d45549b0227bc26ea540b9b0c",
+    "component": {
+      "id": "client-rust",
+      "repository": "RobLe3/iicp-client-rust",
+      "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "source_version": "0.7.110",
+      "published_version": "0.7.109",
+      "state": "BUILT",
+      "artifacts": [
+        {
+          "kind": "crate",
+          "name": "iicp-client-0.7.110.crate",
+          "sha256": "sha256:da1b358bf2aba2160bd8e4c2de48f2e0369c778348a848402c4aa24c38431309",
+          "size_bytes": 601394,
+          "target": "any"
+        },
+        {
+          "kind": "vendored-offline-package",
+          "name": "iicp-client-0.7.110-vendored-offline.tar.gz",
+          "sha256": "sha256:e6abc65b1d55088989c8f109747960b68bf5b2e0f695f75b4bf0088e25c78dea",
+          "size_bytes": 37172959,
+          "target": "any"
+        }
+      ],
+      "package_manifest_sha256": "sha256:8a43f6a3efae7482b9a7c076a67c36bbbd9bc02c708b75de252788b7467bc3ec",
+      "build_receipt_sha256": "sha256:34114adc7e06ab0b838f62b64c3c7f4edd344049fa8a285798fb631487a53e63"
+    },
+    "accepted_shards": 64,
+    "accepted_support_cells": 218,
+    "accepted_edges": 5590,
+    "project_operated_certificates": 5,
+    "unchanged": true
+  },
+  "proposed_source": {
+    "base": "4020dadd150d7975be468f04a588dfa5346899a5",
+    "head": "077c1cb9b05a8b5406dcd689ba578fd1a38b9366",
+    "tree": "b6dca547fb2dd9ffea3866782f418ba233fd41a5",
+    "source_path": "src/node.rs",
+    "source_sha256": "sha256:352f9d9e47e4998af32b017120ffc9ba8a7be9411bcbc8f94ebd9197ae958ec1",
+    "diff_sha256": "sha256:89e6f60e48914e619232fccd60e0ca519b856912481afb69de210ea3e14a358a",
+    "state": "LOCAL_PROPOSED_NOT_MERGE_VERIFIED",
+    "version_bump_or_release": false
+  },
+  "intervening_harness_changes": [
+    {
+      "path": "scripts/pre1_harness_binding.py",
+      "frozen_sha256": "sha256:ff2e96f01320a97362f81bc4223cf879897b2f8478dcb881a6df79889d2f32df",
+      "admitted_harness_sha256": "sha256:80ec2491ab947f1b1791138d8c087bfdbb05e18b94bee49ea80f3f79cf456ba3",
+      "status": "EXISTING_ADMITTED_HARNESS_CHANGE_NOT_NEW_PRODUCT_FIX"
+    },
+    {
+      "path": "scripts/pre1_package_execution.py",
+      "frozen_sha256": "sha256:bc72c8b5a249af3bf3a5586043675d555663e543af08d4cd7e85951ef0b25260",
+      "admitted_harness_sha256": "sha256:0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df",
+      "status": "EXISTING_ADMITTED_HARNESS_CHANGE_NOT_NEW_PRODUCT_FIX"
+    },
+    {
+      "path": "scripts/run_pre1_qualification_case.py",
+      "frozen_sha256": "sha256:f2008651b668cb097f10588c20b6ba04bad27d49b5771ea9f6fa51145f87f067",
+      "admitted_harness_sha256": "sha256:1045af3516105a33ae2d08c228dc5a3825dcafd6b9517e1139656d14fd3a3b1b",
+      "status": "EXISTING_ADMITTED_HARNESS_CHANGE_NOT_NEW_PRODUCT_FIX"
+    },
+    {
+      "path": "scripts/test_pre1_prepared_home.py",
+      "frozen_sha256": null,
+      "admitted_harness_sha256": "sha256:3cfd9fd5bc743fb0389b02ddb543f9ee976887b2e89eec149bba255a2b8b4581",
+      "status": "EXISTING_ADMITTED_HARNESS_CHANGE_NOT_NEW_PRODUCT_FIX"
+    }
+  ],
+  "new_product_change_not_tool_only": true,
+  "direct_rust_scope": {
+    "support_cells": 48,
+    "edge_executions": 1296,
+    "targets": [
+      "linux-aarch64",
+      "linux-x86_64",
+      "macos-arm64",
+      "windows-x86_64"
+    ],
+    "cell_ids": [
+      "client-rust|msrv-1.86|linux-aarch64|php|local-only",
+      "client-rust|msrv-1.86|linux-aarch64|php|public",
+      "client-rust|msrv-1.86|linux-aarch64|php|restricted",
+      "client-rust|msrv-1.86|linux-aarch64|rust|local-only",
+      "client-rust|msrv-1.86|linux-aarch64|rust|public",
+      "client-rust|msrv-1.86|linux-aarch64|rust|restricted",
+      "client-rust|msrv-1.86|linux-x86_64|php|local-only",
+      "client-rust|msrv-1.86|linux-x86_64|php|public",
+      "client-rust|msrv-1.86|linux-x86_64|php|restricted",
+      "client-rust|msrv-1.86|linux-x86_64|rust|local-only",
+      "client-rust|msrv-1.86|linux-x86_64|rust|public",
+      "client-rust|msrv-1.86|linux-x86_64|rust|restricted",
+      "client-rust|msrv-1.86|macos-arm64|php|local-only",
+      "client-rust|msrv-1.86|macos-arm64|php|public",
+      "client-rust|msrv-1.86|macos-arm64|php|restricted",
+      "client-rust|msrv-1.86|macos-arm64|rust|local-only",
+      "client-rust|msrv-1.86|macos-arm64|rust|public",
+      "client-rust|msrv-1.86|macos-arm64|rust|restricted",
+      "client-rust|msrv-1.86|windows-x86_64|php|local-only",
+      "client-rust|msrv-1.86|windows-x86_64|php|public",
+      "client-rust|msrv-1.86|windows-x86_64|php|restricted",
+      "client-rust|msrv-1.86|windows-x86_64|rust|local-only",
+      "client-rust|msrv-1.86|windows-x86_64|rust|public",
+      "client-rust|msrv-1.86|windows-x86_64|rust|restricted",
+      "client-rust|rust-1.98.0|linux-aarch64|php|local-only",
+      "client-rust|rust-1.98.0|linux-aarch64|php|public",
+      "client-rust|rust-1.98.0|linux-aarch64|php|restricted",
+      "client-rust|rust-1.98.0|linux-aarch64|rust|local-only",
+      "client-rust|rust-1.98.0|linux-aarch64|rust|public",
+      "client-rust|rust-1.98.0|linux-aarch64|rust|restricted",
+      "client-rust|rust-1.98.0|linux-x86_64|php|local-only",
+      "client-rust|rust-1.98.0|linux-x86_64|php|public",
+      "client-rust|rust-1.98.0|linux-x86_64|php|restricted",
+      "client-rust|rust-1.98.0|linux-x86_64|rust|local-only",
+      "client-rust|rust-1.98.0|linux-x86_64|rust|public",
+      "client-rust|rust-1.98.0|linux-x86_64|rust|restricted",
+      "client-rust|rust-1.98.0|macos-arm64|php|local-only",
+      "client-rust|rust-1.98.0|macos-arm64|php|public",
+      "client-rust|rust-1.98.0|macos-arm64|php|restricted",
+      "client-rust|rust-1.98.0|macos-arm64|rust|local-only",
+      "client-rust|rust-1.98.0|macos-arm64|rust|public",
+      "client-rust|rust-1.98.0|macos-arm64|rust|restricted",
+      "client-rust|rust-1.98.0|windows-x86_64|php|local-only",
+      "client-rust|rust-1.98.0|windows-x86_64|php|public",
+      "client-rust|rust-1.98.0|windows-x86_64|php|restricted",
+      "client-rust|rust-1.98.0|windows-x86_64|rust|local-only",
+      "client-rust|rust-1.98.0|windows-x86_64|rust|public",
+      "client-rust|rust-1.98.0|windows-x86_64|rust|restricted"
+    ],
+    "existing_assertion_map": {
+      "ciphertext-tamper": "confidentiality::tests::tampered_ciphertext_is_rejected",
+      "confidentiality-downgrade": "submit_refuses_all_keyless_nodes_by_default",
+      "confidentiality-key-missing": "submit_skips_keyless_nodes_by_default",
+      "config-malformed": "invalid_private_and_reserved_federation_do_not_write",
+      "config-missing": "runtime_config::tests::private_preset_fails_until_domain_and_authority_are_explicit",
+      "config-permission-denied": "tests::configuration_permission_denial_does_not_commit_destination",
+      "credential-expired": "expired_dispatch_ticket_key_fails_closed",
+      "credential-missing": "unavailable_secret_fails_at_construction_before_network_use",
+      "credential-replayed": "replayed_dispatch_ticket_fails_closed",
+      "credential-rotated": "revoked_dispatch_ticket_key_fails_closed_after_rotation",
+      "cross-flavor-equivalence": "profile_fixture_native_policy_scenarios_use_routing_gate",
+      "directory-unavailable": "missing_decision_fails_closed_without_retry_or_public_fallback",
+      "dns-failure": "tunnel::tests::likely_dns_error_detection_covers_macos_resolver_wording",
+      "duplicate-registration": "shared_e050_client_lifecycle_projects_current_tokens_and_rotated_endpoints",
+      "dynamic-public-route-readiness": "node::reregister_tests::empty_startup_token_recovery_has_no_initial_delay",
+      "minimum-version": "minimum_rust_version_is_declared_and_candidate_remains_pre1",
+      "offline-locked-install": "offline_candidate_contract_pins_locked_release_inputs",
+      "package-version-self-report": "package_version_self_report_matches_candidate_contract",
+      "partial-response": "test_health01_fails_when_required_field_missing",
+      "process-crash-restart": "sqlite_two_process_crash_recovery_and_single_terminal_winner",
+      "rate-limit": "relay_session::tests::bind_rate_limit_is_per_source_and_recovers",
+      "request-timeout": "test_timeout_is_classified_deterministically",
+      "rollback-last-supported": "failed_update_preserves_current_runtime_and_uses_bounded_retry",
+      "signature-mismatch": "tampered_dispatch_ticket_signature_fails_closed",
+      "stale-pid-or-lock": "instance_lock::tests::stale_pid_is_recovered",
+      "support": "candidate_ranker_sees_only_eligible_nodes_and_cannot_bypass_dispatch",
+      "tls-failure": "http::tests::tls_handshake_failure_is_transient_and_bounded",
+      "unsupported-version": "runtime_config::tests::unknown_fields_and_versions_fail_closed"
+    },
+    "new_regression_assertions": [
+      "registration_token_missing_never_discloses_response_fields",
+      "registration_token_preserves_alias_precedence_and_existing_empty_behavior"
+    ],
+    "new_assertions_in_admitted_catalog": false
+  },
+  "renewal_policy": {
+    "source_artifact_fixture_package_or_workflow_changes_require_renewal": true,
+    "complete_candidate_and_artifact_map_binding": "check_pre1_qualification_receipt.py:validate_qualification_binding rejects different manifest or six-component artifact map",
+    "global_registry_binding": "validate_execution_bindings rejects registry digest mismatch; shardplan/sentinels/certificates are exact-bound",
+    "unchanged_component_artifact_reuse": "Potentially composable under existing fragment verifier if every required component/source/toolchain pin remains valid; not receipt-credit reuse",
+    "old_certificates": "Remain valid records of original frozen candidate; not certificates for corrected development main",
+    "new_candidate_credit": "No automatic carry-forward for any old receipt under a different candidate digest",
+    "scoped_exception": "NONE_APPROVED; root#1588 is research only and explicitly forbids compatibility exceptions for existing receipts",
+    "prospective_extent": "Existing global contract requires a complete successor ledger under one reviewed successor identity. Do not substitute direct Rust scope for full candidate certificate requirements."
+  },
+  "owners": [
+    "RobLe3/iicp-client-rust#185",
+    "RobLe3/iicp.network#1106",
+    "RobLe3/iicp.network#1117",
+    "RobLe3/iicp.network#1493",
+    "RobLe3/iicp.network#1588"
+  ],
+  "blocking_decisions": [
+    "Exact correction merge and source-closure acceptance pending current governed gates",
+    "Successor candidate/artifact construction and edge-catalog admission not authorized by this read-only proposal",
+    "Choose explicit successor verification campaign under existing global policy; no scoped credit exception presumed",
+    "No AWS/allocation, qualification execution, ledger rewrite or certificate replacement authorized"
+  ],
+  "source_pins": {
+    "project/PRE1_SUPPORT_AND_COMPATIBILITY_POLICY.md": "sha256:ba3e2a38c86b0f64e94f6dc60c92b37028f74f4f2ae81b4786728e8985b84441",
+    "project/PRE1_NATIVE_ARTIFACT_AND_RUNNER_HANDOFF.md": "sha256:843497a992ac01abf9fb1ed09e81a092c5daa6f13de1b98b31a623da3024f241",
+    "project/pre1-stability-candidate-manifest.json": "sha256:35d60edbe40d8afb7fb194f51c59f6f93a7a2d200d48cabdef08e32415966540",
+    "project/pre1-successor-executor-registry.json": "sha256:cef239f049aa19d94727b9f436377cda5ed2c938d1952dac8e074e6ba633c925",
+    "project/pre1-successor-qualification-shard-plan.json": "sha256:ff7a001f9e6d22ed9c4982986f0cca9f21313cd88729e4ec46128006c8731db0",
+    "project/pre1-support-matrix.json": "sha256:627af9b927665e2d33ccd9ff8226abcf281c1b16f8c545f0e61d212a44650db2",
+    "project/pre1-edge-case-catalog.json": "sha256:bf11370545d54934673469d2dca34d3358093de1e59bebf32d62ee1c8ea59630",
+    "scripts/check_pre1_qualification_receipt.py": "sha256:de51817283d1d81b3dddb20501b9d4a7536876cb895bfb331aa6c4047003ced7",
+    "scripts/check_pre1_stability_candidate.py": "sha256:b74b0147cb1f5a7a7e9ba44e41fbb2fa0f7d13f2205dad81b17d39c8d9595434",
+    "scripts/check_pre1_executor_registry.py": "sha256:a169e085e84eea645202734067d1662e467cb169494c4dfec76b18aa74ec9e78",
+    "scripts/compile_pre1_sentinel_ledger.py": "sha256:dd01f788ec90b607eb93b948fdb13f145c7145abdc9c6ea37da0c94170a353d9",
+    "scripts/compile_pre1_target_certificate.py": "sha256:b2e35837094fd268de17075e9a9d1f8728ec89f804ae3d87296a4bde25c3fbbb",
+    "scripts/compile_pre1_ecosystem_certificate.py": "sha256:92908d3dce742ed132290c7c34011a35dd575cc35adb83420c4d0cfd2e85213a",
+    "scripts/freeze_pre1_candidate_artifacts.py": "sha256:d15f7005d50f9fba2e87ed071df1d1942622f1176a5a067730ca1bf30a2039a8",
+    "scripts/compose_pre1_candidate_artifacts.py": "sha256:9b0f8681ea4f81bd1272464c8869937026e879f971cb06c77d82c462fde6d724"
+  },
+  "issue1588_sha256": "sha256:22dc157cd86ca426945bfef6f4cfd0005190812c4f3b5ddb0de4d6b2bdd4493b",
+  "qualification_credit_added": 0,
+  "accepted_evidence_modified": false,
+  "commands_executed": "Read-only git/source/issue inspection and existing pure scope expansion only; no validator execution against successor, build, manifest writing, ledger mutation or workload"
+}
