@@ -1,0 +1,13 @@
+{
+  "schema": "iicp.rust185-closure-manifest.v1",
+  "qualification_credit_added": 0,
+  "files": {
+    "PREMERGE_SUCCESSOR_PROPOSAL.md": "9e3b99fd09d416d3471c2df6a747ea6028b415d15a9ebd38e66c7fc3efed6961",
+    "README.md": "f39d076f6918d7b18c5fa0b0512482fa22ac3d5c6bd190770fb0e4ecab0b9161",
+    "candidate-impact-review.json": "37d4d7172ec78b7b8979b7981bbe906e46cd9fd1564a60fdad9d49356a4fde7e",
+    "candidate-impact.json": "8bbd4ccd55c84da415cfd9e3537df30799dd2b9b76a2524dab97e0d2259cc0f8",
+    "local-validation.json": "46234c48a982d7d89db7060eadd237280be2946b64c3e1af123d01ecef7bcafb",
+    "product-independent-review.json": "b511f34687c8d9152383057968375a40f3ed172ad88d887885cc81fa65d6a32b",
+    "product-merge.json": "b849237d1623a9480cc964468d920c2ca662c3656a3c489f9b91ab67e26292b4"
+  }
+}

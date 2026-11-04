@@ -1,0 +1,32 @@
+{
+  "schema": "iicp.rust185-governed-completion.v1",
+  "at": "2026-11-04T12:17:04.424264+00:00",
+  "result": "MERGED_AFTER_REQUIRED_GATES_PASS",
+  "issue": "https://github.com/RobLe3/iicp-client-rust/issues/185",
+  "issue_state_at_merge": "OPEN_PENDING_OWNER_DISPOSITION",
+  "pr": "https://github.com/RobLe3/iicp-client-rust/pull/186",
+  "head": "077c1cb9b05a8b5406dcd689ba578fd1a38b9366",
+  "base": "4020dadd150d7975be468f04a588dfa5346899a5",
+  "tree": "b6dca547fb2dd9ffea3866782f418ba233fd41a5",
+  "merge": "6bf7e0102560b9ab6217049374d3ee79629fd9ed",
+  "merged_at": "2026-11-04T12:16:32Z",
+  "exact_merged_tree_equals_reviewed": true,
+  "changed_files": [
+    "src/node.rs"
+  ],
+  "independent_review_sha256": "b511f34687c8d9152383057968375a40f3ed172ad88d887885cc81fa65d6a32b",
+  "local_validation_sha256": "46234c48a982d7d89db7060eadd237280be2946b64c3e1af123d01ecef7bcafb",
+  "ci_run": 41826531854,
+  "ci_result": "SUCCESS",
+  "ci_duration": "8m38s",
+  "required_check": "test",
+  "ci_attempts": 1,
+  "ci_metadata_sha256": "3af4cbb0893535b28a11f87ab917581b935120c787d6fd81795887028b969e25",
+  "linux_container_and_systemd_steps": "PASS_IN_REQUIRED_CI",
+  "original_environment_failure_preserved": true,
+  "diagnostic_replay_for_formatted_head": false,
+  "qualification_credit_added": 0,
+  "frozen_candidate_or_certificates_changed": false,
+  "version_tag_release_deployment_or_AWS": false,
+  "remaining_gate": "Owner disposition and source-aware report refresh; successor candidate/evidence impact remains separate."
+}
