@@ -73,3 +73,7 @@ The [3 November bounded successor supplement](reports/qualification-closeout/202
 ## Post-qualification engineering inputs
 
 [Read the reviewed-input package checkpoint](reports/postprocessing-final/2026-11-04/README.md) for normalized assertions, bounded engineering findings, DMSC source bindings and retained historical accounting. Its delivery progress is separate from historical completeness and release readiness.
+
+## Stabilization observations
+
+[The bounded 4 November findings](reports/stabilization/2026-11-04/README.md) preserve a diagnostic-disclosure failure and locally tested, unmerged correction. They do not alter qualification credit or close the remaining owner questions.

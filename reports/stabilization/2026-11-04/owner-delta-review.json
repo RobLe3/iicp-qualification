@@ -1,0 +1,27 @@
+{
+  "schema": "iicp.owner-delta-independent-review.v1",
+  "at": "2026-11-04T02:46:29.390731+00:00",
+  "result": "PASS",
+  "reviewed_sha256": "bbdea51a350b700710d68963e0efb568ea1d504cafc6a7bf859294747ac7e9b4",
+  "predecessor_matrix_sha256": "68d5d713be4e5aefcc03a32eed9010e8a16cc3c63f6f32d481a24146f7c5d0ac",
+  "scope": "Non-authoring review of owner-disposition delta and candidate-impact synthesis. Reviewer authored underlying runtime fixtures/correction; independent runtime review is supplied separately by the three pinned terminal reviews, not claimed by this review.",
+  "checks": {
+    "three_terminal_review_hashes": "PASS",
+    "predecessor_matrix_identity": "PASS",
+    "ten_unique_owner_questions_stay_open": "PASS",
+    "21_formal_clauses_unchanged": "PASS",
+    "runtime_claims_match_retained_cases": "PASS",
+    "original_FAIL_preserved_correction_local_only": "PASS",
+    "candidate_impact_no_carry_forward": "PASS",
+    "privacy_and_no_qualification_inflation": "PASS"
+  },
+  "observations": [
+    "Defaultcadence exit76 does not explain real tunnel or supervisor incident.",
+    "Newtoken and revokedproof claims describe mocked strict-secured option, not actualPHPinterop.",
+    "Missing-token response disclosure and local correction are bounded separately from recognized-code visibility.",
+    "Speculative missingproof credential fix correctly rejected by positive runtime observation.",
+    "Windows findings unchanged and do not establish actual forbidden contact."
+  ],
+  "publication_caveat": "Dense field prose is unchanged from author; documentary rendering should preserve spaces and readable phrasing. No semantic blocker.",
+  "qualification_credit_added": 0
+}

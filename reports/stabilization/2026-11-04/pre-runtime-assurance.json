@@ -1,0 +1,822 @@
+{
+  "schema": "iicp.stabilization-assurance-refresh.v1",
+  "at": "2026-11-04T02:20:50.369346+00:00",
+  "components": [
+    {
+      "component": "client-python",
+      "repository": "RobLe3/iicp-client-python",
+      "frozen_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "prior_main": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "current_main": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "main_changed": false,
+      "open_issue_count": 2,
+      "adoption": "NOT_OBSERVED",
+      "version_equivalence": "NOT_INFERRED_FROM_COMMIT"
+    },
+    {
+      "component": "client-typescript",
+      "repository": "RobLe3/iicp-client-typescript",
+      "frozen_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "prior_main": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "current_main": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "main_changed": false,
+      "open_issue_count": 1,
+      "adoption": "NOT_OBSERVED",
+      "version_equivalence": "NOT_INFERRED_FROM_COMMIT"
+    },
+    {
+      "component": "client-rust",
+      "repository": "RobLe3/iicp-client-rust",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "prior_main": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "current_main": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "main_changed": false,
+      "open_issue_count": 6,
+      "adoption": "NOT_OBSERVED",
+      "version_equivalence": "NOT_INFERRED_FROM_COMMIT"
+    },
+    {
+      "component": "directory-php",
+      "repository": "RobLe3/iicp-directory-php",
+      "frozen_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "prior_main": "11e63a1b2a3846d376810d260bf9ccbbf59b3d7c",
+      "current_main": "11e63a1b2a3846d376810d260bf9ccbbf59b3d7c",
+      "main_changed": false,
+      "open_issue_count": 2,
+      "adoption": "NOT_OBSERVED",
+      "version_equivalence": "NOT_INFERRED_FROM_COMMIT"
+    },
+    {
+      "component": "directory-rust",
+      "repository": "RobLe3/iicp-directory-rust",
+      "frozen_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "prior_main": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "current_main": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "main_changed": false,
+      "open_issue_count": 2,
+      "adoption": "NOT_OBSERVED",
+      "version_equivalence": "NOT_INFERRED_FROM_COMMIT"
+    },
+    {
+      "component": "management",
+      "repository": "RobLe3/iicp-management",
+      "frozen_commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "prior_main": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+      "current_main": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+      "main_changed": false,
+      "open_issue_count": 2,
+      "adoption": "NOT_OBSERVED",
+      "version_equivalence": "NOT_INFERRED_FROM_COMMIT"
+    }
+  ],
+  "issue_refresh": [
+    {
+      "component": "client-python",
+      "added_issue_numbers": [],
+      "removed_issue_numbers": [],
+      "current_issue_numbers": [
+        119,
+        142
+      ],
+      "all_current_bodies_retained": true
+    },
+    {
+      "component": "client-typescript",
+      "added_issue_numbers": [],
+      "removed_issue_numbers": [],
+      "current_issue_numbers": [
+        104
+      ],
+      "all_current_bodies_retained": true
+    },
+    {
+      "component": "client-rust",
+      "added_issue_numbers": [],
+      "removed_issue_numbers": [],
+      "current_issue_numbers": [
+        98,
+        150,
+        158,
+        160,
+        175,
+        183
+      ],
+      "all_current_bodies_retained": true
+    },
+    {
+      "component": "directory-php",
+      "added_issue_numbers": [],
+      "removed_issue_numbers": [],
+      "current_issue_numbers": [
+        65,
+        140
+      ],
+      "all_current_bodies_retained": true
+    },
+    {
+      "component": "directory-rust",
+      "added_issue_numbers": [],
+      "removed_issue_numbers": [],
+      "current_issue_numbers": [
+        1,
+        102
+      ],
+      "all_current_bodies_retained": true
+    },
+    {
+      "component": "management",
+      "added_issue_numbers": [],
+      "removed_issue_numbers": [],
+      "current_issue_numbers": [
+        143,
+        168
+      ],
+      "all_current_bodies_retained": true
+    }
+  ],
+  "rust_source_bindings": [
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "path": "src/recovery.rs",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "frozen_sha256": "sha256:4b2f1f31fcd094d324ae22bda386ebd2e592a6ae671c3d25040d0d0c5acedece",
+      "current_sha256": "sha256:4b2f1f31fcd094d324ae22bda386ebd2e592a6ae671c3d25040d0d0c5acedece",
+      "same_bytes": true
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "path": "src/node.rs",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "frozen_sha256": "sha256:1cbe1e77c0c90781a57bbc5eba67cd37c3da37671bbb1e85bd2fcb84ebe88cca",
+      "current_sha256": "sha256:1cbe1e77c0c90781a57bbc5eba67cd37c3da37671bbb1e85bd2fcb84ebe88cca",
+      "same_bytes": true
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "path": "src/bin/iicp_node.rs",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "frozen_sha256": "sha256:bc53dae87b685bf946615244f547a063863c6e2af063e39dfc649267c7423915",
+      "current_sha256": "sha256:bc53dae87b685bf946615244f547a063863c6e2af063e39dfc649267c7423915",
+      "same_bytes": true
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "path": "src/tunnel.rs",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "frozen_sha256": "sha256:c81efe3f57d4c4a4fe68416dd801d2d978cbc907b7de0af89657e17f42664337",
+      "current_sha256": "sha256:c81efe3f57d4c4a4fe68416dd801d2d978cbc907b7de0af89657e17f42664337",
+      "same_bytes": true
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "path": "tests/service_manager_cli.rs",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "frozen_sha256": "sha256:9ca97836e055cb044ca1171c1df88d27879665f6fa9d729b6637bf938edcdaa0",
+      "current_sha256": "sha256:9ca97836e055cb044ca1171c1df88d27879665f6fa9d729b6637bf938edcdaa0",
+      "same_bytes": true
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "path": "README.md",
+      "frozen_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "current_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "frozen_sha256": "sha256:d384fa68ff77e307f7cf156ea7ddc025cf97f2c3ec8dca138f475ad13815aadb",
+      "current_sha256": "sha256:d384fa68ff77e307f7cf156ea7ddc025cf97f2c3ec8dca138f475ad13815aadb",
+      "same_bytes": true
+    }
+  ],
+  "supervisor_contract": {
+    "kind": "GENERATED_SOURCE_CONTRACT_NOT_ORIGINAL_INSTALLED_STATE",
+    "source": "src/bin/iicp_node.rs",
+    "lines": [
+      1429,
+      1430,
+      1469,
+      1470,
+      1471,
+      1575,
+      7102,
+      7106
+    ],
+    "launchd": {
+      "RunAtLoad": true,
+      "KeepAlive": true,
+      "ThrottleInterval": 30
+    },
+    "systemd": {
+      "Restart": "on-failure",
+      "RestartSec": 30
+    },
+    "supervised_default": "1",
+    "original_installed_contract": "NOT_ESTABLISHED_FROM_TARGETED_RETAINED_SOURCES",
+    "original_operator_observations": "Issue183 reports changed PIDs/exit76 and later restart failing to restore presence; no root cause inferred.",
+    "operational_plists_read": false
+  },
+  "windows_bound_source_checks": [
+    {
+      "campaign_index": 0,
+      "source_commit": "755b925946d624f52d9bf999d30a5a72b374f5e3",
+      "path": "scripts/pre1_aws_windows_environment_guest.py",
+      "sha256": "sha256:568d71b81f312bd3ea17d5b3d7486ad7b548202509785d29f47f37e2dbc97d1f",
+      "matches_retained_binding": true,
+      "firewall_related_lines": [
+        6,
+        84,
+        86,
+        87,
+        91,
+        95,
+        98,
+        105,
+        177,
+        324,
+        351,
+        363,
+        369,
+        380
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "source_commit": "2498656e6cdfd5d2390212e5f34e0fafea512a12",
+      "path": "scripts/pre1_aws_windows_environment_guest.py",
+      "sha256": "sha256:568d71b81f312bd3ea17d5b3d7486ad7b548202509785d29f47f37e2dbc97d1f",
+      "matches_retained_binding": true,
+      "firewall_related_lines": [
+        6,
+        84,
+        86,
+        87,
+        91,
+        95,
+        98,
+        105,
+        177,
+        324,
+        351,
+        363,
+        369,
+        380
+      ]
+    },
+    {
+      "campaign_index": 2,
+      "source_commit": "2498656e6cdfd5d2390212e5f34e0fafea512a12",
+      "path": "scripts/pre1_aws_windows_environment_guest.py",
+      "sha256": "sha256:568d71b81f312bd3ea17d5b3d7486ad7b548202509785d29f47f37e2dbc97d1f",
+      "matches_retained_binding": true,
+      "firewall_related_lines": [
+        6,
+        84,
+        86,
+        87,
+        91,
+        95,
+        98,
+        105,
+        177,
+        324,
+        351,
+        363,
+        369,
+        380
+      ]
+    },
+    {
+      "campaign_index": 3,
+      "source_commit": "6377def5b69c79eb72b3f0e96e8084206aefaaf6",
+      "path": "scripts/pre1_aws_windows_environment_guest.py",
+      "sha256": "sha256:568d71b81f312bd3ea17d5b3d7486ad7b548202509785d29f47f37e2dbc97d1f",
+      "matches_retained_binding": true,
+      "firewall_related_lines": [
+        6,
+        84,
+        86,
+        87,
+        91,
+        95,
+        98,
+        105,
+        177,
+        324,
+        351,
+        363,
+        369,
+        380
+      ]
+    },
+    {
+      "campaign_index": 4,
+      "source_commit": "6377def5b69c79eb72b3f0e96e8084206aefaaf6",
+      "path": "scripts/pre1_aws_windows_environment_guest.py",
+      "sha256": "sha256:568d71b81f312bd3ea17d5b3d7486ad7b548202509785d29f47f37e2dbc97d1f",
+      "matches_retained_binding": true,
+      "firewall_related_lines": [
+        6,
+        84,
+        86,
+        87,
+        91,
+        95,
+        98,
+        105,
+        177,
+        324,
+        351,
+        363,
+        369,
+        380
+      ]
+    },
+    {
+      "campaign_index": 5,
+      "source_commit": "17b3f3750b5ce688e45405a9d4b54acb2c7e287c",
+      "path": "scripts/pre1_aws_windows_environment_guest.py",
+      "sha256": "sha256:568d71b81f312bd3ea17d5b3d7486ad7b548202509785d29f47f37e2dbc97d1f",
+      "matches_retained_binding": true,
+      "firewall_related_lines": [
+        6,
+        84,
+        86,
+        87,
+        91,
+        95,
+        98,
+        105,
+        177,
+        324,
+        351,
+        363,
+        369,
+        380
+      ]
+    },
+    {
+      "campaign_index": 6,
+      "source_commit": "17b3f3750b5ce688e45405a9d4b54acb2c7e287c",
+      "path": "scripts/pre1_aws_windows_environment_guest.py",
+      "sha256": "sha256:568d71b81f312bd3ea17d5b3d7486ad7b548202509785d29f47f37e2dbc97d1f",
+      "matches_retained_binding": true,
+      "firewall_related_lines": [
+        6,
+        84,
+        86,
+        87,
+        91,
+        95,
+        98,
+        105,
+        177,
+        324,
+        351,
+        363,
+        369,
+        380
+      ]
+    }
+  ],
+  "targeted_retained_hash_checks": [
+    {
+      "campaign_index": 1,
+      "role": "continuation-approval.json",
+      "sha256": "sha256:e989dd156ab84e1569822cb9b1701f4c698ad6054b74200722ca16407031b631",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 2,
+      "role": "continuation-approval.json",
+      "sha256": "sha256:ef75958697fb5e30ba1cac6877cdc6737a91fe842eddcc6026e6d608a2403856",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 3,
+      "role": "continuation-approval.json",
+      "sha256": "sha256:87543e8b50ae0fe0f3f2ec94733cb37d3f72ae032e9a51918d3404fd5451613a",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 3,
+      "role": "launcher.invocation.json",
+      "sha256": "sha256:3b1565b6ac1d3cf55d5bd601be1cd26fda0a30190cc28fcaa0369359ee22dcbc",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 3,
+      "role": "independent-live-absence.json",
+      "sha256": "sha256:ea37fe3800d3ad75a6770680ca3d1d6ca6f67160e6e94436a362b7aba5b29f56",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 4,
+      "role": "continuation-approval.json",
+      "sha256": "sha256:5717a3c878635b303dad9bf9e628d3368adf2cc92019bcb869200ad58ebbdc1d",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 4,
+      "role": "launcher.invocation.json",
+      "sha256": "sha256:7f6086606d6bf73c34bd2487e911ecd67bb2a7b8f7fe580d756b25aa865e9ece",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 4,
+      "role": "independent-live-absence.json",
+      "sha256": "sha256:6666ac3bb26132bb5fdcefd966289a30a0219a0c2cfb2d73b112f189e71f37d1",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 5,
+      "role": "continuation-approval.json",
+      "sha256": "sha256:c9623c052316ae62eaf900fc5de509516fc463c6fdfab93ad5a24b0bb7b7f6fe",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 5,
+      "role": "independent-live-absence.json",
+      "sha256": "sha256:9e2dc8849d80cbe090f58ab39b9f3dc4ae18f84195816a58f641e59de84450e9",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 6,
+      "role": "continuation-approval.json",
+      "sha256": "sha256:ff6346cc2c94475eff70997822c58c2e8d2a9abcef34a2ccd9f669d2175600c6",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 6,
+      "role": "independent-live-absence-renewed.json",
+      "sha256": "sha256:b9f42c5dd64371ca2e2136623a799a33e273925e188709f1d42c14479bc562b3",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 6,
+      "role": "independent-terminal-final-review.json",
+      "sha256": "sha256:5f3331e04b67ec7c5ffbf611dbfdb507a21f54e1535482450d146a74c84b4113",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 0,
+      "role": "retained_result_container",
+      "sha256": "sha256:b938477271d3049cd5e7353fc74b8aed558bcb93b4b9224cadf07d8b22066d13",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 1,
+      "role": "retained_result_container",
+      "sha256": "sha256:85e315204f855176cc954403415845ff793b8c11ea964f164671fc443b7b926d",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 2,
+      "role": "retained_result_container",
+      "sha256": "sha256:84d06d44a671ad7629120da52d24cf0b3c29149cf42ae5b6ee01da7dcdc3cf28",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 3,
+      "role": "retained_result_container",
+      "sha256": "sha256:da15aaf78a440c7c7c2a88aeffc7f9b292ef38ef92dc14e2dc6da0255ace89b6",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 4,
+      "role": "retained_result_container",
+      "sha256": "sha256:265b03c2266f69124d651cb91c9afca604589f7b8f6f1bef6f2d97b4c2a8d9f0",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 5,
+      "role": "retained_result_container",
+      "sha256": "sha256:df0b6f8d0484cb30e194e69d1fb89f6e53a2ba8a4678ea13c46c30712236146d",
+      "matches_prior": true
+    },
+    {
+      "campaign_index": 6,
+      "role": "retained_result_container",
+      "sha256": "sha256:824d46e51adb54a2655adf414ed10be9821d1764b4992d7064f431b2917e618c",
+      "matches_prior": true
+    }
+  ],
+  "formal_clause_dispositions": [
+    {
+      "id": "root-1106-clause-1",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1106",
+      "requirement": "Bind the matrix to the frozen rustls-corrected six-component successor `stability-candidate-fb2b2b585d435111f05ca90355b4cf3c0c6a796d45549b0227bc26ea540b9b0c`, materialized as `sha256:42c45e282a3f24e7ad85c3a893c64f7bd5c0b48402b29bf98eb22c5e65ea3186`.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "UNRESOLVED",
+      "missing_proof": "Exact issue text names historical fb2b\u2026 candidate / 42c45\u2026 materialization; admitted certificates instead bind e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a. Explicitly reconcile supersession before declaring this exact clause satisfied.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1106-clause-6",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1106",
+      "requirement": "Any code, fixture, serialization, package-content or workflow change invalidates affected evidence.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Map serialization/package/workflow changes to their affected evidence dependencies and explain policy exceptions against the literal any-change criterion; no blanket assertion that every edit invalidates all evidence.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1117-clause-3",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Prepare corrected-candidate macOS arm64 and Linux arm64 environments.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Resolve exact historical corrected-candidate environment receipt and separately approved allocation reference for this clause; later successor coverage is not retrospective preparation approval.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1117-clause-4",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Prepare the separately approved native Linux x86-64 environment.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Resolve exact historical corrected-candidate environment receipt and separately approved allocation reference for this clause; later successor coverage is not retrospective preparation approval.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1117-clause-5",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Prepare the separately approved Windows x86-64 environment.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Resolve exact historical corrected-candidate environment receipt and separately approved allocation reference for this clause; later successor coverage is not retrospective preparation approval.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1117-clause-6",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Record OS/kernel, architecture, isolation, storage, exact toolchains and environment-manifest digest per lane.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Resolve every admitted environment object and verify exact toolchains plus requested/provisioned/peak/returned storage fields per lane; short receipt environment projections alone are incomplete.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1117-clause-7",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Prove storage exhaustion aborts safely and removes only run-owned disposable artifacts.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Map actual ENOSPC/abort observation to exact owned-artifact-only cleanup and unrelated-object preservation for the relevant runner exhaustion scenario; cleanup-after-generic-failure unit test is not that runtime proof.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1117-clause-8",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Use native Windows semantics for owner IPC and native macOS arm64 semantics for the Mac lane.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Map the specific owner IPC assertion to native Windows packaged proof and Mac semantics to the corresponding accepted proof; OS labels alone do not establish owner IPC behavior.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1117-clause-9",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Run all 16 deterministic shards sequentially per target and retain one receipt/closure bundle.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Verify receipt started/finished ordering and chunk-resume histories for sequential execution per target; certificate set membership alone does not prove non-overlap or historical interrupted-attempt order.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1117-clause-10",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1117",
+      "requirement": "Prove no secrets, production contact, service mutation, Directory contact, skips, flakes, duplicate receipts or digest drift.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Map original safety observations and private-output handling to no-secrets/no-production-contact/no-service-mutation/no-real-Directory-contact clauses; retain distinction between isolated Directory fixtures and production Directory contact. Do not infer universal safety from content-free outputs alone.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1481-clause-0",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1481",
+      "requirement": "Decide, using the released specification and owning implementation contracts, whether public/restricted Directory mode is genuinely applicable. Do not silently shrink the matrix to make the gate green.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "UNRESOLVED",
+      "missing_proof": "Locate released-specification applicability decision and owning implementation contract references; adapter executability is not the source-grounded scope decision itself.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1481-clause-3",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1481",
+      "requirement": "Rebuild any affected registry/shard bindings and revalidate retained macOS evidence; rerun affected qualification, with zero unexplained skips/waivers.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Identify explicit disposition of each retained historical macOS evidence set: rejected as stale, independently revalidated, or replaced by fresh run. Do not silently call successor execution revalidation of old receipts.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1470-clause-0",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "requirement": "Reuse the existing SSM-only ephemeral Windows controller and exact allocation/teardown authority.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Original human approval/conditional parent grant chain and exact invocation consumption evidence across all seven grants; local summaries alone are insufficient.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1470-clause-5",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "requirement": "Persist structured progress, stdout/stderr, content-free receipts and failure evidence before teardown.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Enumerate failed/interrupted Windows attempts and link each original private stdout/stderr/capture/export acknowledgement to its pre-teardown terminal event. Preserve unknown missing counts.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1470-clause-7",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "requirement": "Shard 0 passes with no skip, flake, waiver, production contact, Directory contact, service mutation or secret transfer.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Resolve sentinel isolation evidence sha256:b120ec845a861c5a5a14b405910f25ea0ebd5e5ea2c5bc88ce34406eb6c6e0b9 and original bound source/runtime controls to demonstrate rule/program coverage and lifetime through qualification; map production/Directory endpoints, service/credential isolation and any intervention journal. This is an assurance-evidence gap, not a product defect or revoked acceptance.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1470-clause-10",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "requirement": "Every receipt binds the same candidate, artifact materialization, executor registry, environment and shard plan.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "UNRESOLVED",
+      "missing_proof": "Owner must clarify that same environment means exact per-allocation binding under the approved environment recipe, or identify a genuine invariant requirement. Do not silently mark the literal clause satisfied.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1470-clause-11",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "requirement": "Temporary compute, storage, network, S3, CloudWatch and IAM resources are absent after every allocation.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Enumerate expected historical Windows allocation universe and map each to exact terminal independent closure, including failed/diagnostic/interrupted allocations. No new AWS inspection or workload was performed.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1493-clause-0",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "requirement": "Select one exact frozen candidate and matching registry, runner inventory and shard plan throughout bundle preparation, controller, guest, local runner, sentinel ledger, result promotion and target/ecosystem certificate compilation. Bind actual bytes/digests, not only filenames or labels.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Finish a finite entry-point table for bundle/controller/Linux guest/local runner/sentinel/promotion/target/ecosystem compiler: input bytes, digest check, rejection point and one retained positive/negative check each. Reuse mapped Windows and certificate evidence.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1493-clause-2",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "requirement": "Preserve historical candidate behavior for existing historical evidence and preserve public receipt/wire schemas unless a separately reviewed compatibility decision requires change.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Identify the reviewed before/after commit range and changed public schemas; map each change to compatibility decision or show no wire/schema change, then replay retained historical fixtures using existing test evidence.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1493-clause-3",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "requirement": "Prove source-closed Linux native execution and certificate reconstruction with positive successor fixtures and negative mixed-candidate tests. Keep raw logs private and required S3 evidence/teardown fail-closed.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Use Linux source-manifest paths to compare original bundle/source-control pins with the accepted archive and map required S3 export failure/teardown tests. Do not substitute Windows evidence for Linux native execution.",
+      "new_full_clause_proof": false
+    },
+    {
+      "id": "root-1493-clause-4",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "requirement": "Recompute implementation/source-closure digests through established policy, run focused tests, changed-only preflight, documentation gate, full source closure and Sentrux no-degradation.",
+      "verdict": "UNVERIFIED",
+      "prior_disposition": "PARTIAL",
+      "missing_proof": "Attach exact implementation-change commit(s), source/pipeline digest regeneration evidence, changed-only preflight and Sentrux no-degradation receipts for that change; distinguish current documentation gates from historical implementation gates.",
+      "new_full_clause_proof": false
+    }
+  ],
+  "owner_decisions": [
+    {
+      "id": "R183-route",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "original_contract": "Distinguish real route loss from healthy local serving and absent Directory presence.",
+      "disposition": "OPEN",
+      "missing_proof": "Synthetic restoration observed in reviewed successor; actual NAT/tunnel route path and original incident cause remain unproved.",
+      "new_runtime_evidence": false,
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R183-registration",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "original_contract": "Differentiate missing registration, credential drift and re-registration failure.",
+      "disposition": "OPEN",
+      "missing_proof": "Reviewed heartbeat401/re-register403 transition returned to acceptance of existing token; successful credential repair and original credential state remain unproved.",
+      "new_runtime_evidence": false,
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R183-exit76",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "original_contract": "Explain three failed route checks and repeated76 without durable recovery.",
+      "disposition": "OPEN",
+      "missing_proof": "Default every-two-heartbeat cadence observed, but persistent loss through third failed check and exact exit76 remain unproved by completed two-case successor.",
+      "new_runtime_evidence": false,
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R183-supervisor",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "original_contract": "Verify bounded real supervisor restart and no restart storm.",
+      "disposition": "OPEN",
+      "missing_proof": "Frozen/current generator specifies KeepAlive=true, ThrottleInterval30, RunAtLoad=true, supervised default1; exact original installed settings and durable real supervisor behavior not established by retained issue/index. No installed plist read.",
+      "new_runtime_evidence": false,
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R183-cooldown",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "original_contract": "Verify cooldown and retry behavior at the actual path responsible.",
+      "disposition": "OPEN",
+      "missing_proof": "CLI tunnel cooldown belongs to exit75 path; no demonstrated cooldown on repeated Node exit76 path.",
+      "new_runtime_evidence": false,
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R175-relay",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "original_contract": "Select verified compatible relay endpoint, not self-report or derived HTTPS-to-native mapping.",
+      "disposition": "OPEN",
+      "missing_proof": "Source election filters relay_capable and endpoint then derives port default9485; this alone does not prove runtime reachability or supported admission.",
+      "new_runtime_evidence": false,
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R175-fallback",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "original_contract": "Fail closed to local-only when neither tunnel nor eligible relay exists.",
+      "disposition": "OPEN",
+      "missing_proof": "Original failure report remains operator evidence; complete native fallback path not observed in current diagnostics.",
+      "new_runtime_evidence": false,
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "R175-diagnostics",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "original_contract": "Retain only allowlisted structured Directory code plus HTTP status on REGISTER failure.",
+      "disposition": "OPEN",
+      "missing_proof": "Frozen/current register returns status-only on non-success; missing allowlisted code is source-supported, while normative support classification still needs owner decision.",
+      "new_runtime_evidence": false,
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "WIN-isolation",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "original_contract": "Preserve original isolated-fixtures-only caller obligation throughout native workload lifetime.",
+      "disposition": "OPEN",
+      "missing_proof": "Reviewed caller removes preparation firewall before workload; no alternate lifetime egress enforcement established. Actual prohibited contact is not established.",
+      "new_runtime_evidence": false,
+      "issue_closure_authorized": false
+    },
+    {
+      "id": "WIN-authority",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "original_contract": "Do not substitute diagnostics, sentinels or passing unadmitted runs for accepted qualification.",
+      "disposition": "OPEN",
+      "missing_proof": "Original same-environment and grant/closure clauses remain separately UNVERIFIED; counts do not settle them.",
+      "new_runtime_evidence": false,
+      "issue_closure_authorized": false
+    }
+  ],
+  "sources": {
+    "prior_matrix": {
+      "sha256": "sha256:68d5d713be4e5aefcc03a32eed9010e8a16cc3c63f6f32d481a24146f7c5d0ac"
+    },
+    "prior_delta": {
+      "sha256": "sha256:b6092c059b89450049032e0bf0593781471f364b7699a27291eb457dc916ed4f"
+    },
+    "clause_register": {
+      "sha256": "sha256:8793b28ffbe8a63cbf019bb42f64f42afbf7efcde6ad2e723f73b15b6ac428f8"
+    },
+    "targeted_windows_index": {
+      "sha256": "sha256:da8395c2848c77cfc3c190fb45328c51f9eb806395ce83df83bd60380d394f40"
+    },
+    "windows_source_review": {
+      "sha256": "sha256:22539baf91fd96d9950411dd6ecb4756b21e0768778cba6fe7f35531681b0ded"
+    },
+    "windows_selector_review": {
+      "sha256": "sha256:a6deb1c386ff6a38b3704adda1e269d74d5825ecbeb29970811354a3e04217f1"
+    },
+    "supervisor_issue": {
+      "sha256": "sha256:1898e308fa64a7e984b3e8945a610e2e9f739d663af42b01bcead2bfe4ac7e6a"
+    }
+  },
+  "limits": [
+    "Targeted reads of existing indexes and exact retained files only; no archive discovery or extraction.",
+    "Static source controls and fixture declarations are not Windows runtime enforcement; local macOS controls cannot establish native Windows isolation.",
+    "No proof of prohibited contact is inferred from missing lifetime-enforcement assurance.",
+    "Current main source identity, published version and installed/adopted runtime remain distinct. No registry, deployment or service probe performed.",
+    "No automatic closure, accepted-evidence alteration, product edit, workload, AWS action or new qualification credit.",
+    "Completed post-processing8/8 remains unchanged; this is separate stabilization work."
+  ],
+  "owner_questions_open": 10,
+  "formal_clauses_unverified": 21,
+  "qualification_credit_added": 0
+}

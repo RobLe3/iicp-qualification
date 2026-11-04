@@ -1,0 +1,11 @@
+{
+  "schema": "iicp.preexecution-finding.v1",
+  "at": "2026-11-04T02:37:15.514358+00:00",
+  "original_proposal_sha256": "78dcd115f7eabca7fbe87cfc451d13c02e6b1e8fe065a01c9c05609dea9fffbc",
+  "result": "REFUSED_BEFORE_EXECUTION",
+  "finding": "Case-name guard always denied renewal, so denial could not be attributed to revoked ownership.",
+  "successor_proposal_sha256": "886fd924bf1559aacc5c63ebcf2393db37500eb94b418935259fc4d817a94775",
+  "correction": "Shared explicit ownership predicate with four pure positive/negative checks; valid prior proof grants, revoked or missing proof refuses.",
+  "runtime_attempts": 0,
+  "qualification_credit": 0
+}

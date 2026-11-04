@@ -1,0 +1,129 @@
+{
+  "schema": "iicp.stabilization-missingcases-owner-delta.v1",
+  "at": "2026-11-04T02:41:52.400087+00:00",
+  "predecessor_matrix_sha256": "sha256:68d5d713be4e5aefcc03a32eed9010e8a16cc3c63f6f32d481a24146f7c5d0ac",
+  "reviews": {
+    "terminal-independent-review.json": "sha256:7e58b5dbe1c5b58371ce3af16a91c69cc875bef6aa201ef7e9070664b05cb651",
+    "corrected-terminal-independent-review.json": "sha256:ae549eaa61ef1fb50f16ddaeef8d730ff46f39284d8729993c7281f17bd60308",
+    "invalid-ownership-terminal-independent-review.json": "sha256:5b578010a09ff57b5918efb397fd721b9cf609b4e2d6870b072d43f03be5b047"
+  },
+  "decisions": [
+    {
+      "id": "R183-route",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "original_contract": "Distinguish real route loss from healthy local serving and absent Directory presence.",
+      "bounded_disposition": "UNCHANGED_OPEN",
+      "observation": "No new observation settles this owner boundary.",
+      "remaining_proof": "Synthetic route handle is not NAT/tunnel discovery; original incident cause remains unknown.",
+      "owner_issue_status": "OPEN",
+      "closure_authorized": false
+    },
+    {
+      "id": "R183-registration",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "original_contract": "Differentiate missing registration, credential drift and re-registration failure.",
+      "bounded_disposition": "BOUNDED_SUBCLAIMS_ESTABLISHED",
+      "observation": "Validcurrentownershipproof mintednewtoken followedby3newtokenHB; generalrefusal andrevokedproof cases denied3renewals withoutnewtoken.",
+      "remaining_proof": "Mockstrictsecuredpolicy only; actualcredential state/originaloperatorincident andPHPinterop remainunproved.",
+      "owner_issue_status": "OPEN",
+      "closure_authorized": false
+    },
+    {
+      "id": "R183-exit76",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "original_contract": "Explain three failed route checks and repeated76 without durable recovery.",
+      "bounded_disposition": "BOUNDED_SUBCLAIM_ESTABLISHED",
+      "observation": "Defaultcadence syntheticpersistentroute loss produced6unavailableHB,checks2/4/6 andactualNodeexit76 withoutrestart.",
+      "remaining_proof": "Actualpublicroute/tunnel cause,real supervisor/cooldown anddurability remainunproved.",
+      "owner_issue_status": "OPEN",
+      "closure_authorized": false
+    },
+    {
+      "id": "R183-supervisor",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "original_contract": "Verify bounded real supervisor restart and no restart storm.",
+      "bounded_disposition": "UNCHANGED_OPEN",
+      "observation": "No new observation settles this owner boundary.",
+      "remaining_proof": "One fixture successor is not launchd ownership, throttling or original launch settings.",
+      "owner_issue_status": "OPEN",
+      "closure_authorized": false
+    },
+    {
+      "id": "R183-cooldown",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "original_contract": "Verify cooldown and retry behavior at the actual path responsible.",
+      "bounded_disposition": "UNCHANGED_OPEN",
+      "observation": "No new observation settles this owner boundary.",
+      "remaining_proof": "CLI tunnel cooldown belongs to exit75 path; no demonstrated cooldown on repeated Node exit76 path.",
+      "owner_issue_status": "OPEN",
+      "closure_authorized": false
+    },
+    {
+      "id": "R175-relay",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "original_contract": "Select verified compatible relay endpoint, not self-report or derived HTTPS-to-native mapping.",
+      "bounded_disposition": "UNCHANGED_OPEN",
+      "observation": "No new observation settles this owner boundary.",
+      "remaining_proof": "Source election filters relay_capable and endpoint then derives port default9485; this alone does not prove runtime reachability or supported admission.",
+      "owner_issue_status": "OPEN",
+      "closure_authorized": false
+    },
+    {
+      "id": "R175-fallback",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "original_contract": "Fail closed to local-only when neither tunnel nor eligible relay exists.",
+      "bounded_disposition": "UNCHANGED_OPEN",
+      "observation": "No new observation settles this owner boundary.",
+      "remaining_proof": "Original failure report remains operator evidence; complete native fallback path not observed in current diagnostics.",
+      "owner_issue_status": "OPEN",
+      "closure_authorized": false
+    },
+    {
+      "id": "R175-diagnostics",
+      "owner": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "original_contract": "Retain only allowlisted structured Directory code plus HTTP status on REGISTER failure.",
+      "bounded_disposition": "NARROW_DEFECT_REPRODUCED_AND_LOCALLY_CORRECTED",
+      "observation": "HTTP200 missingtoken exposed syntheticprivateJSON via publicerror. Stablemissingtokenmessage correctedonecurrentbasefile;2puretests andoneaffectedreplayPASS. FourHTTPerror safetycasesPASS;codevisibilityonlyobserved.",
+      "remaining_proof": "Correctionunmerged; candidateimpactreviewrequired. Structuredcodevisibilitycontract andrelay/fallbackscope notclosed.",
+      "owner_issue_status": "OPEN",
+      "closure_authorized": false
+    },
+    {
+      "id": "WIN-isolation",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1470",
+      "original_contract": "Preserve original isolated-fixtures-only caller obligation throughout native workload lifetime.",
+      "bounded_disposition": "UNCHANGED_OPEN",
+      "observation": "No new observation settles this owner boundary.",
+      "remaining_proof": "Reviewed caller removes preparation firewall before workload; no alternate lifetime egress enforcement established. Actual prohibited contact is not established.",
+      "owner_issue_status": "OPEN",
+      "closure_authorized": false
+    },
+    {
+      "id": "WIN-authority",
+      "owner": "https://github.com/RobLe3/iicp.network/issues/1493",
+      "original_contract": "Do not substitute diagnostics, sentinels or passing unadmitted runs for accepted qualification.",
+      "bounded_disposition": "UNCHANGED_OPEN",
+      "observation": "No new observation settles this owner boundary.",
+      "remaining_proof": "Original same-environment and grant/closure clauses remain separately UNVERIFIED; counts do not settle them.",
+      "owner_issue_status": "OPEN",
+      "closure_authorized": false
+    }
+  ],
+  "candidate_impact": {
+    "original_qualified_candidate": "UNCHANGED",
+    "local_correction_base": "4020dadd150d7975be468f04a588dfa5346899a5",
+    "product_delta": "src/node.rs missing-token error privacy only; helpertests included",
+    "successor_identity_required": true,
+    "automatic_evidence_carry_forward": false,
+    "next_gate": "Reviewed candidate-impact determination and ordinary component validation/publication governance; no qualification rerun or rebind under this diagnostic."
+  },
+  "formal_unverified_clauses": 21,
+  "owner_questions_open": 10,
+  "qualification_credit_added": 0,
+  "negative_finding": "Suspected absence of current_node_token inheartbeatrenewal was NOT reproduced: proofandnew-token renewal passed. Do not implement speculativecredentialfix.",
+  "limits": [
+    "Earlierfailedfixtures retained; no originalincidentrootcause inferred fromsuccessful successor.",
+    "NoCLI75/supervisor/cooldown,experimentalrelay,Windowslifetimeguard orreleaseclaim.",
+    "Nineoriginalpassingstages retained,oneaffectedcorrectedreplay andoneunusedinvalidproofcase; noautomaticretry."
+  ]
+}
