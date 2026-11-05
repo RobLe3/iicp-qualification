@@ -1077,6 +1077,17 @@
       "reason": "ci-terminal",
       "source_sha256": "sha256:ddc55a837c9fb807e4e66271c587605ff8543a160e49115250553f8f83e2b29c",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:57765213dbeb9ddc0838f2d24c47abd7ddd77c0481f3f19877b384d497a7e826",
+      "kind": "diagnostic",
+      "next_gate": "none",
+      "occurred_at": "2026-11-05T12:58:37.791823+00:00",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "run-completed",
+      "source_sha256": "sha256:11c93130ea2797f5b8d821fddf8a8de8b46e1bf575d95b1449cfd01802d65c68",
+      "workload_launched": true
     }
   ],
   "schema": "iicp.qualification-events.v1"
