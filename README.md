@@ -89,3 +89,7 @@ The [3 November bounded successor supplement](reports/qualification-closeout/202
 ## Reviewed criterion and DMSC assessments
 
 [The 5 November assessment package](reports/postprocessing-assessments/2026-11-05/README.md) distinguishes 41 reviewed criterion dispositions from 20 supported criteria, and 27 reviewed DMSC assessments from unestablished external interoperability. This additive package is under publication review.
+
+## Lifecycle diagnostic follow-up
+
+[The reviewed 5 November lifecycle supplement](reports/stabilization/2026-11-05-lifecycle/README.md) separates the instrumented CLI result, SUP76 recovery and a failing FALLBACK availability observation. It preserves the original uncertain results, unexecuted cases and unresolved owner requirements. These diagnostics add no qualification credit.
