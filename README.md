@@ -95,3 +95,7 @@ The [3 November bounded successor supplement](reports/qualification-closeout/202
 [The reviewed 5 November lifecycle supplement](reports/stabilization/2026-11-05-lifecycle/README.md) separates the instrumented CLI result, SUP76 recovery and a failing FALLBACK availability observation. It preserves the original uncertain results, unexecuted cases and unresolved owner requirements. These diagnostics add no qualification credit.
 
 See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-fallback-successor/README.md) for bounded corrected outcomes, preserved original failures and remaining relay-eligibility limits.
+
+## Post-certification source-semantic checkpoint
+
+[Read the 5 November source and recorded-proof analysis](reports/postcert/2026-11-05-source-semantics/README.md) for exact test-body limits, Directory assertion-depth differences and existing accepted case-proof linkage. This is an informative supplement, not a frozen executable baseline or new qualification credit.

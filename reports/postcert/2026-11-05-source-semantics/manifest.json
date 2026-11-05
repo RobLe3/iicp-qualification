@@ -1,0 +1,14 @@
+{
+  "schema": "iicp.postcert-source-semantic-supplement-manifest.v1",
+  "authority": "informative reporting derivative; not qualification acceptance",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "185524e90859ce88af9e7df56cb01f3bde76d7228319ae5153ad65fac7f219cc"
+    },
+    {
+      "path": "source-map.json",
+      "sha256": "aab50d48a9f8d5699f37ae4c3b36f005619f3e54c0a1f68c1ab28c7759707ef3"
+    }
+  ]
+}
