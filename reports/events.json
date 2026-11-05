@@ -1132,6 +1132,28 @@
       "reason": "cleanup-verified",
       "source_sha256": "sha256:7e59c48dbd1e39121d576e90eaf63bb4d1368048a4bdabd74a637a9e9591abd5",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:c805f798d3e15c15343fd502e936657ae2512f4960a84d90f4585ec081919677",
+      "kind": "diagnostic",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-05T16:17:09.858708+00:00",
+      "outcome": "FAIL",
+      "qualification_credit": 0,
+      "reason": "run-failed",
+      "source_sha256": "sha256:fd6a7597cfdff08b47977d7b262b685d7ccf8f9647e06fe99be50f2c4e681ffb",
+      "workload_launched": true
+    },
+    {
+      "event_id": "sha256:76b9840385b504fe4d905a1c9b7f623a2d6d121a47e50c4e2548f307a8e65a35",
+      "kind": "cleanup",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-05T16:18:11.125819+00:00",
+      "outcome": "VERIFIED",
+      "qualification_credit": 0,
+      "reason": "cleanup-verified",
+      "source_sha256": "sha256:b6fab3713d42a453a657c5f3928f39bc4bf466674e0baa2b9dabdbf80e0d4fdc",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
