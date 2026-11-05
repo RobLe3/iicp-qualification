@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-11-05T16:23:22Z**.
+Verified snapshot: **2026-11-05T17:14:00Z**.
 
 `[####################]` **64/64 accepted shards**
 
@@ -16,10 +16,10 @@ Sentinels: **4/4** · Project-operated certificates: **5/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **VERIFIED** (cleanup, 2026-11-05T16:18:11.125819+00:00).
-- The registered cleanup record reports verification. This reporter did not inspect live resources.
+- Recorded outcome: **REFUSED** (blocker, 2026-11-05T17:10:04.777910+00:00).
+- A prerequisite refused execution; this activity is not a workload result.
 - Actual workload launched in this activity: **false**.
-- Next gate: Review the retained failure before proposing any retry or correction.
+- Next gate: Obtain the applicable exact authorization before execution.
 
 ## Evidence and limits
 
