@@ -1,0 +1,178 @@
+{
+  "schema": "iicp.postcert-source-semantic-checkpoint.v1",
+  "state": "REVIEWED_SOURCE_AND_ACCEPTED_RECORD_ANALYSIS_NOT_FROZEN_BASELINE",
+  "canonical_root_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+  "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "source_files": [
+    {
+      "repository": "RobLe3/iicp-client-python",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "tests/test_client.py",
+      "sha256": "1bf47305597951c17c1893a6c0649df010320fe6f150f6bcdbc9a4472112b470"
+    },
+    {
+      "repository": "RobLe3/iicp-client-typescript",
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "tests/client.test.ts",
+      "sha256": "4a48c0d5cf35046bdf977be88b7899f7d5c8686fea8ffd27fdf8e4e861f52afd"
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "tests/client_tests.rs",
+      "sha256": "55a7255181b9825f88eebb9abece3d2f84e5879d5c2db725ffbc6b2c575b9579"
+    },
+    {
+      "repository": "RobLe3/iicp-client-python",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "tests/test_effective_capability.py",
+      "sha256": "20b8757017414da089cfc9bb79c30e376a2bc47d157bc93e69e2bb42b304c874"
+    },
+    {
+      "repository": "RobLe3/iicp-client-typescript",
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "tests/effective_capability.test.ts",
+      "sha256": "42c4f842ec5d8c4403ec978ec9f09d06587778f42e05757e3bf8c9669a3cd1ea"
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "tests/effective_capability_fixture.rs",
+      "sha256": "025a22abae676b53b6588fb38cacb4f45d6da7168b48b97af37301df651e9e20"
+    },
+    {
+      "repository": "RobLe3/iicp-directory-php",
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "tests/Unit/Services/EffectiveCapabilityMatcherTest.php",
+      "sha256": "3065517b1f6f2e3d45439ab5bd702150139625a366b2596ee0285d931256117c"
+    },
+    {
+      "repository": "RobLe3/iicp-directory-php",
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "tests/Feature/EffectiveCapabilityProfileTest.php",
+      "sha256": "25f2235fb239c1eeaa5e163f33b2e82f2c8b52dbe2664e5e99d06de924b063c0"
+    },
+    {
+      "repository": "RobLe3/iicp-directory-rust",
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/effective_capability.rs",
+      "sha256": "1c869aa67e8da7014f372e8199ab76e76b2aeb7a95d4cd806f704a41b16c6da5"
+    },
+    {
+      "repository": "RobLe3/iicp-directory-rust",
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/main_tests.rs",
+      "sha256": "80672e4fe2c45ddd325e41e02df09e28bb24f6e19444dd004b2d57eac9446251"
+    },
+    {
+      "repository": "RobLe3/iicp-directory-rust",
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/db.rs",
+      "sha256": "895ba60c765f6b0639819bc6baf9bd2e9e33256c696528c2407b22dcee2ff89a"
+    }
+  ],
+  "effective_capability_fixture": {
+    "path": "parity/effective-capability-v1/fixture.json",
+    "sha256": "e6e3c32aa7c4cf814e639d3a97cd1c1cb49ac020ed6ebe7e1e16bc2314e14761",
+    "status": "pre-normative-parity-contract",
+    "matching_vectors": 9,
+    "invalid_advertisement_vectors": 3,
+    "sdk_source_links": 36,
+    "directory_matching_source_links": 18,
+    "execution_count_inferred": false
+  },
+  "accepted_record_trace": {
+    "receipt_count": 64,
+    "command_coordinate_count": 5808,
+    "groups": [
+      {
+        "contract_id": "routing-eligibility-before-ranking",
+        "language": "python",
+        "recorded_proof_links": 96,
+        "body_semantically_reviewed_in_this_increment": true
+      },
+      {
+        "contract_id": "routing-eligibility-before-ranking",
+        "language": "typescript",
+        "recorded_proof_links": 48,
+        "body_semantically_reviewed_in_this_increment": true
+      },
+      {
+        "contract_id": "routing-eligibility-before-ranking",
+        "language": "rust",
+        "recorded_proof_links": 48,
+        "body_semantically_reviewed_in_this_increment": true
+      },
+      {
+        "contract_id": "routing-policy-hard-constraints",
+        "language": "python",
+        "recorded_proof_links": 96,
+        "body_semantically_reviewed_in_this_increment": false
+      },
+      {
+        "contract_id": "routing-policy-hard-constraints",
+        "language": "typescript",
+        "recorded_proof_links": 48,
+        "body_semantically_reviewed_in_this_increment": false
+      },
+      {
+        "contract_id": "routing-policy-hard-constraints",
+        "language": "rust",
+        "recorded_proof_links": 48,
+        "body_semantically_reviewed_in_this_increment": false
+      }
+    ],
+    "total_recorded_proof_links": 384,
+    "proof_link_interpretation": "Existing accepted package-case records; not independent execution or proof of every semantic obligation."
+  },
+  "offline_derivative_validation": {
+    "negative_controls_rejected": 7,
+    "input_objects_pinned": 74,
+    "loaded_canonical_helpers_pinned": 3,
+    "byte_identical_reproduction": true,
+    "qualification_workloads_executed": 0
+  },
+  "reviews": [
+    {
+      "name": "eligibility-independent-review-final.json",
+      "sha256": "44387e9b5ab2bf239a2b337527e4995b5682075390d6a1a314126eda64701a19",
+      "access": "Retained controlled review record; digest alone is not public evidence preservation."
+    },
+    {
+      "name": "effective-capability-source-map-independent-review.json",
+      "sha256": "03b12c202e36cab1f5d2d12b1aae3b698169d92dbf95efe42db0f5d1671ca28c",
+      "access": "Retained controlled review record; digest alone is not public evidence preservation."
+    },
+    {
+      "name": "independent-review-final.json",
+      "sha256": "ea18e2e3ebc78147d02093c64e434014036fbfa62e347e558e715d95fee85469",
+      "access": "Retained controlled review record; digest alone is not public evidence preservation."
+    },
+    {
+      "name": "reproducibility-review-addendum.json",
+      "sha256": "ae0b88d9dd2d78a424211440b08f63a505ab32ebef039e7c56b4b1dcd9aeca99",
+      "access": "Retained controlled review record; digest alone is not public evidence preservation."
+    },
+    {
+      "name": "independent-review.json",
+      "sha256": "5a9fa2dde3523c01b60abe29ce803548bd2c689533647709526e5ada51e9a32c",
+      "access": "Retained controlled review record; digest alone is not public evidence preservation."
+    },
+    {
+      "name": "reproducibility-independent-review.json",
+      "sha256": "c24ad4b8cca3b35ed116d583d8f9d2ee4383eb8c17006874cd946d37a12b036b",
+      "access": "Retained controlled review record; digest alone is not public evidence preservation."
+    }
+  ],
+  "limits": [
+    "Only three ranker test bodies receive the eligibility source-semantic assessment; the other marker group is an identity/proof trace, not a new whole-body semantic assessment.",
+    "Directory matching loops assert eligibility, variant IDs and refusal codes, not every expected fixture field.",
+    "SDK extension assertions check identifier membership, not deep value preservation; refusal assertions check codes, not full envelopes.",
+    "Rust in-memory registration test skips liveness; ignored MySQL test manually seeds SQL and reads records, not registration-write-path proof.",
+    "Raw output availability and full executable IFRB remain unresolved by this increment.",
+    "Historical completeness remains false; no qualification credit, frozen candidate or certificate changed."
+  ],
+  "qualification_credit_changed": false,
+  "independent_external_certification_established": false,
+  "programme_complete": false
+}
