@@ -81,3 +81,7 @@ The [3 November bounded successor supplement](reports/qualification-closeout/202
 ## Rust diagnostic correction
 
 [Governed merge and successor qualification boundary](reports/stabilization/rust185-governed-closure-2026-11-04/README.md) records the narrow registration diagnostic fix, preserved failed validation and remaining candidate-impact gates.
+
+## Post-processing continuation
+
+[Staged milestone plan and documentation-agent supplement](reports/postprocessing-next/2026-11-05/README.md) separates completed inputs from pending lifecycle diagnostics and analysis. This additive plan is under review; it does not alter the sealed corpus or qualification results.
