@@ -1088,6 +1088,28 @@
       "reason": "run-completed",
       "source_sha256": "sha256:11c93130ea2797f5b8d821fddf8a8de8b46e1bf575d95b1449cfd01802d65c68",
       "workload_launched": true
+    },
+    {
+      "event_id": "sha256:45f699caa1d17f413d1121d0b8c29104f3be3c3b63fc75b58a7f66fa4923f488",
+      "kind": "diagnostic",
+      "next_gate": "authorization-required",
+      "occurred_at": "2026-11-05T13:52:12.429547+00:00",
+      "outcome": "UNKNOWN",
+      "qualification_credit": 0,
+      "reason": "run-interrupted",
+      "source_sha256": "sha256:87853306b2990fad1d64727c6d1e172f9bdb10fae53314ddcb0c51c4b4d10475",
+      "workload_launched": true
+    },
+    {
+      "event_id": "sha256:e818ef5d6ad2f965101227b1b1123be3d0a4621041e8811d26d84dfccfb19852",
+      "kind": "cleanup",
+      "next_gate": "authorization-required",
+      "occurred_at": "2026-11-05T13:53:21.523435+00:00",
+      "outcome": "VERIFIED",
+      "qualification_credit": 0,
+      "reason": "cleanup-verified",
+      "source_sha256": "sha256:d68b6056ccec847a3ad3e44406f135126d8306e6d18a09ede8ec5060f9324334",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
