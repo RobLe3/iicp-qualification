@@ -56,6 +56,16 @@ Rust's selected body seeds a token, changes an endpoint and calls a helper that 
 
 A fixture row named `supervised-restart` does not establish that a supervised process restarted. A declared invariant about Directory-loss liveness is not evidence that the selected test asserted it. These source bodies cannot close historical provider-recovery questions such as Rust issue #183. Other retained evidence must be examined separately before deciding whether a behavior is established, defective or unresolved.
 
+## Catalog expectations versus selected assertions
+
+The canonical edge-case catalog uses broader scenario descriptions than some selected test predicates. In particular, `confidentiality-downgrade` names downgrade **or mismatched encrypted-response capability**, while the three bound bodies above test request-side all-keyless refusal. They do not independently assert a negotiated encrypted-response capability mismatch. The selected `confidentiality-key-missing` bodies exercise keyed fallback; the no-usable-key refusal is asserted under a separately bound case. This analytical cross-reference does not reassign qualification credit.
+
+The tamper helpers reject modified ciphertext without returning a successful plaintext result, but the selected assertions do not inspect every possible partial-plaintext exposure channel. The identity bodies likewise do not establish the entire multi-component identity/lifecycle contract.
+
+This comparison is pinned to canonical root commit `d9332b9f5a8e88bda28d48643dd4d9be6e1d0859` and full catalog-file SHA-256 `bf11370545d54934673469d2dca34d3358093de1e59bebf32d62ee1c8ea59630`. The registry's `catalog_sha256` hashes **sorted scenario identifiers only**, not the complete expected-behavior prose. The separate full-file hash and commit identify the exact text assessed here; they do not make a private original publicly available.
+
+These are traceability and assertion-scope limits. They do not, by themselves, demonstrate a product failure, reinterpret an original admission or invalidate accepted credit. Catalog-to-assertion completeness remains unresolved under the existing qualification owner. No stronger conclusion should be inferred from the case name or its accepted coordinate count.
+
 ## What can be checked publicly
 
 The source analysis provides immutable repository/commit/path links and complete-file digests. Readers can inspect each assertion at its pinned source range and verify the source bytes with Git. Public receipt derivatives support the selected coordinate counts; they do not expose private raw output or replace original receipt verification.

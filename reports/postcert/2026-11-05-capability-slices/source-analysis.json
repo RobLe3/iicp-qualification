@@ -41,6 +41,9 @@
     {
       "capability_id": "payload-confidentiality",
       "case_id": "client-python::ciphertext-tamper",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject modified ciphertext without returning partial plaintext.",
+      "catalog_scope_caveat": "Selected local helper rejects modified ciphertext without a successful plaintext return; other partial-plaintext exposure channels are not asserted.",
       "existing_accepted_coordinate_count": 96,
       "payload_absence_explicitly_asserted": false,
       "per_target_existing_coordinates": {
@@ -61,6 +64,9 @@
     {
       "capability_id": "payload-confidentiality",
       "case_id": "client-python::confidentiality-downgrade",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject downgrade or mismatched encrypted-response capability.",
+      "catalog_scope_caveat": "Selected request-side all-keyless refusal does not assert negotiated encrypted-response capability mismatch handling.",
       "existing_accepted_coordinate_count": 96,
       "payload_absence_explicitly_asserted": false,
       "per_target_existing_coordinates": {
@@ -81,6 +87,9 @@
     {
       "capability_id": "payload-confidentiality",
       "case_id": "client-python::confidentiality-key-missing",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Fail closed when confidentiality is required but no usable key exists.",
+      "catalog_scope_caveat": "Selected body exercises keyed fallback, not the no-usable-key condition; all-keyless refusal is asserted under the separately bound confidentiality-downgrade case. No credit is reassigned.",
       "existing_accepted_coordinate_count": 96,
       "payload_absence_explicitly_asserted": true,
       "per_target_existing_coordinates": {
@@ -101,6 +110,9 @@
     {
       "capability_id": "identity-token-lifecycle",
       "case_id": "client-python::duplicate-registration",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Preserve one coherent node identity and deterministic ownership semantics.",
+      "catalog_scope_caveat": "Selected SDK bodies address token/payload projection and some mocked acknowledgment continuity, not the complete multi-component identity/lifecycle contract.",
       "exact_e050_error_semantics_asserted": false,
       "existing_accepted_coordinate_count": 96,
       "per_target_existing_coordinates": {
@@ -129,6 +141,9 @@
     {
       "capability_id": "payload-confidentiality",
       "case_id": "client-rust::ciphertext-tamper",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject modified ciphertext without returning partial plaintext.",
+      "catalog_scope_caveat": "Selected local helper rejects modified ciphertext without a successful plaintext return; other partial-plaintext exposure channels are not asserted.",
       "existing_accepted_coordinate_count": 48,
       "payload_absence_explicitly_asserted": false,
       "per_target_existing_coordinates": {
@@ -149,6 +164,9 @@
     {
       "capability_id": "payload-confidentiality",
       "case_id": "client-rust::confidentiality-downgrade",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject downgrade or mismatched encrypted-response capability.",
+      "catalog_scope_caveat": "Selected request-side all-keyless refusal does not assert negotiated encrypted-response capability mismatch handling.",
       "existing_accepted_coordinate_count": 48,
       "payload_absence_explicitly_asserted": false,
       "per_target_existing_coordinates": {
@@ -169,6 +187,9 @@
     {
       "capability_id": "payload-confidentiality",
       "case_id": "client-rust::confidentiality-key-missing",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Fail closed when confidentiality is required but no usable key exists.",
+      "catalog_scope_caveat": "Selected body exercises keyed fallback, not the no-usable-key condition; all-keyless refusal is asserted under the separately bound confidentiality-downgrade case. No credit is reassigned.",
       "existing_accepted_coordinate_count": 48,
       "payload_absence_explicitly_asserted": false,
       "per_target_existing_coordinates": {
@@ -189,6 +210,9 @@
     {
       "capability_id": "identity-token-lifecycle",
       "case_id": "client-rust::duplicate-registration",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Preserve one coherent node identity and deterministic ownership semantics.",
+      "catalog_scope_caveat": "Selected SDK bodies address token/payload projection and some mocked acknowledgment continuity, not the complete multi-component identity/lifecycle contract.",
       "exact_e050_error_semantics_asserted": false,
       "existing_accepted_coordinate_count": 48,
       "per_target_existing_coordinates": {
@@ -217,6 +241,9 @@
     {
       "capability_id": "payload-confidentiality",
       "case_id": "client-typescript::ciphertext-tamper",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject modified ciphertext without returning partial plaintext.",
+      "catalog_scope_caveat": "Selected local helper rejects modified ciphertext without a successful plaintext return; other partial-plaintext exposure channels are not asserted.",
       "existing_accepted_coordinate_count": 48,
       "payload_absence_explicitly_asserted": false,
       "per_target_existing_coordinates": {
@@ -237,6 +264,9 @@
     {
       "capability_id": "payload-confidentiality",
       "case_id": "client-typescript::confidentiality-downgrade",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject downgrade or mismatched encrypted-response capability.",
+      "catalog_scope_caveat": "Selected request-side all-keyless refusal does not assert negotiated encrypted-response capability mismatch handling.",
       "existing_accepted_coordinate_count": 48,
       "payload_absence_explicitly_asserted": false,
       "per_target_existing_coordinates": {
@@ -257,6 +287,9 @@
     {
       "capability_id": "payload-confidentiality",
       "case_id": "client-typescript::confidentiality-key-missing",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Fail closed when confidentiality is required but no usable key exists.",
+      "catalog_scope_caveat": "Selected body exercises keyed fallback, not the no-usable-key condition; all-keyless refusal is asserted under the separately bound confidentiality-downgrade case. No credit is reassigned.",
       "existing_accepted_coordinate_count": 48,
       "payload_absence_explicitly_asserted": true,
       "per_target_existing_coordinates": {
@@ -277,6 +310,9 @@
     {
       "capability_id": "identity-token-lifecycle",
       "case_id": "client-typescript::duplicate-registration",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Preserve one coherent node identity and deterministic ownership semantics.",
+      "catalog_scope_caveat": "Selected SDK bodies address token/payload projection and some mocked acknowledgment continuity, not the complete multi-component identity/lifecycle contract.",
       "exact_e050_error_semantics_asserted": false,
       "existing_accepted_coordinate_count": 48,
       "per_target_existing_coordinates": {
@@ -303,6 +339,15 @@
       "source_url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/current_node_token.test.ts#L28-L71"
     }
   ],
+  "catalog_text_context": {
+    "acceptance_decisions_changed": false,
+    "binding_scope": "The registry catalog digest hashes sorted scenario IDs only; full expected-behavior text is separately pinned by this full-file SHA and commit.",
+    "commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+    "full_file_sha256": "bf11370545d54934673469d2dca34d3358093de1e59bebf32d62ee1c8ea59630",
+    "path": "project/pre1-edge-case-catalog.json",
+    "registry_scenario_id_set_sha256": "sha256:4dec70d4618de4b7f9601032ddfffcd79f6ef8a4194d1d0ceff5a5c80156ae90",
+    "repository": "RobLe3/iicp.network"
+  },
   "contract": {
     "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
     "path": "spec/v1.9/iicp-confidentiality.md",
@@ -378,7 +423,8 @@
     "Five shared fixture rows do not establish identical SDK test coverage or fifteen native executions. A supervised-restart row is not a process restart.",
     "No selected identity body establishes external Directory-loss liveness; these cases cannot close historical provider-recovery questions.",
     "Public receipt derivatives support selected coordinate counting, not private raw-output recovery or original receipt verification.",
-    "Current SDK development corrections are not newly qualified successor artifacts. Original accepted evidence remains bound to its frozen candidate."
+    "Current SDK development corrections are not newly qualified successor artifacts. Original accepted evidence remains bound to its frozen candidate.",
+    "Canonical catalog expectations are broader than some selected predicates. These maps expose traceability limits, not demonstrated product failures or a decision to invalidate accepted records."
   ],
   "offline_analysis_validation": {
     "confidentiality_derivative_controls_passed": 27,
