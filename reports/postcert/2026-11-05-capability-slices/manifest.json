@@ -1,0 +1,14 @@
+{
+  "schema": "iicp.postcert-informative-supplement-manifest.v1",
+  "authority": "Informative source-analysis derivative, not qualification acceptance.",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "e69c063308db60e0a101bc1763c114baf35dccaf5463cc19235945a2a2c97942"
+    },
+    {
+      "path": "source-analysis.json",
+      "sha256": "33ea03cf47c8b12143f0f552454492a8ff5160243dbbdf3c96c4ac09dc316995"
+    }
+  ]
+}
