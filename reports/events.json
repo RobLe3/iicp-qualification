@@ -1242,6 +1242,17 @@
       "reason": "correction-merged",
       "source_sha256": "sha256:c2cf71b7cc9fd30f6745973f627f0cd9ed14b9263ab3f4d66ec0e3a907a53a56",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:e152003054befbe7a14d233022af3d359f32fe91597254a888e206412707e81d",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-05T21:21:22.972334+00:00",
+      "outcome": "VERIFIED",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:528763dee399e9683a5089c8bb2c7b2198c315b58a5c5e512dc0f5035ae5f17b",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
