@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-11-04T18:00:15Z**.
+Verified snapshot: **2026-11-05T11:35:39Z**.
 
 `[####################]` **64/64 accepted shards**
 
@@ -16,8 +16,8 @@ Sentinels: **4/4** · Project-operated certificates: **5/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **MERGED** (correction, 2026-11-04T16:23:24Z).
-- A reviewed correction was merged. A merge is not evidence of a subsequent qualification pass.
+- Recorded outcome: **PASS** (ci, 2026-11-05T11:34:05Z).
+- The governed CI job reached a terminal result. CI is not native qualification.
 - Actual workload launched in this activity: **false**.
 - Next gate: No next action is inferred from this record.
 
