@@ -99,3 +99,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Post-certification source-semantic checkpoint
 
 [Read the 5 November source and recorded-proof analysis](reports/postcert/2026-11-05-source-semantics/README.md) for exact test-body limits, Directory assertion-depth differences and existing accepted case-proof linkage. This is an informative supplement, not a frozen executable baseline or new qualification credit.
+
+## Selected confidentiality and identity assertions
+
+[Read the reviewed capability-source slices](reports/postcert/2026-11-05-capability-slices/README.md) for selected confidentiality and identity-lifecycle predicates, exact source links and public coordinate-count verification. Shared fixtures do not imply identical assertion coverage or actual process restarts. This is partial source analysis, not a new qualification result or frozen reference baseline.

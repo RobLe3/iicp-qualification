@@ -1,0 +1,543 @@
+{
+  "additional_positive_source_controls": [
+    {
+      "assertion": "test_encrypt_decrypt_roundtrip",
+      "component": "client-python",
+      "evidence_class": "SOURCE_ONLY_NO_ADDITIONAL_ACCEPTED_JOIN_OR_EXECUTION_CLAIM",
+      "source_line_range": [
+        41,
+        51
+      ],
+      "source_sha256": "644a2c10ca0607a192ea96151e999bc26c4bfd1b1e222f4bbb12bcb95733dd99",
+      "source_url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_confidentiality.py#L41-L51"
+    },
+    {
+      "assertion": "encrypt-decrypt roundtrip recovers original payload",
+      "component": "client-typescript",
+      "evidence_class": "SOURCE_ONLY_NO_ADDITIONAL_ACCEPTED_JOIN_OR_EXECUTION_CLAIM",
+      "source_line_range": [
+        46,
+        52
+      ],
+      "source_sha256": "5530dcffdfa983c5588b99e00f8c792b1a75340b013c290d32d17ef48d778ff2",
+      "source_url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/confidentiality.test.ts#L46-L52"
+    },
+    {
+      "assertion": "confidentiality::tests::test_encrypt_decrypt_roundtrip",
+      "component": "client-rust",
+      "evidence_class": "SOURCE_ONLY_NO_ADDITIONAL_ACCEPTED_JOIN_OR_EXECUTION_CLAIM",
+      "source_line_range": [
+        421,
+        428
+      ],
+      "source_sha256": "0d982c5cb5d4a0ad27f965051d33eba040b407c7ef99fd2ca1a8dc52238e1078",
+      "source_url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/confidentiality.rs#L421-L428"
+    }
+  ],
+  "baseline_frozen": false,
+  "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "canonical_root_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+  "case_mappings": [
+    {
+      "capability_id": "payload-confidentiality",
+      "case_id": "client-python::ciphertext-tamper",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject modified ciphertext without returning partial plaintext.",
+      "catalog_scope_caveat": "Selected local helper rejects modified ciphertext without a successful plaintext return; other partial-plaintext exposure channels are not asserted.",
+      "existing_accepted_coordinate_count": 96,
+      "payload_absence_explicitly_asserted": false,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 24,
+        "linux-x86_64": 24,
+        "macos-arm64": 24,
+        "windows-x86_64": 24
+      },
+      "scoped_predicate": "A generated request envelope with one ciphertext byte changed is rejected by the local decrypt helper.",
+      "source_assertion": "test_tampered_ciphertext_fails",
+      "source_line_range": [
+        76,
+        89
+      ],
+      "source_sha256": "644a2c10ca0607a192ea96151e999bc26c4bfd1b1e222f4bbb12bcb95733dd99",
+      "source_url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_confidentiality.py#L76-L89"
+    },
+    {
+      "capability_id": "payload-confidentiality",
+      "case_id": "client-python::confidentiality-downgrade",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject downgrade or mismatched encrypted-response capability.",
+      "catalog_scope_caveat": "Selected request-side all-keyless refusal does not assert negotiated encrypted-response capability mismatch handling.",
+      "existing_accepted_coordinate_count": 96,
+      "payload_absence_explicitly_asserted": false,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 24,
+        "linux-x86_64": 24,
+        "macos-arm64": 24,
+        "windows-x86_64": 24
+      },
+      "scoped_predicate": "With default plaintext override disabled/unset, an all-keyless discovery result is refused before provider task dispatch.",
+      "source_assertion": "test_p0a_no_key_is_refused_by_default",
+      "source_line_range": [
+        530,
+        541
+      ],
+      "source_sha256": "1bf47305597951c17c1893a6c0649df010320fe6f150f6bcdbc9a4472112b470",
+      "source_url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_client.py#L530-L541"
+    },
+    {
+      "capability_id": "payload-confidentiality",
+      "case_id": "client-python::confidentiality-key-missing",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Fail closed when confidentiality is required but no usable key exists.",
+      "catalog_scope_caveat": "Selected body exercises keyed fallback, not the no-usable-key condition; all-keyless refusal is asserted under the separately bound confidentiality-downgrade case. No credit is reassigned.",
+      "existing_accepted_coordinate_count": 96,
+      "payload_absence_explicitly_asserted": true,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 24,
+        "linux-x86_64": 24,
+        "macos-arm64": 24,
+        "windows-x86_64": 24
+      },
+      "scoped_predicate": "A keyless higher-score candidate is skipped and a keyed candidate receives an iicp_conf request naming its key.",
+      "source_assertion": "test_p0a_skips_keyless_node_and_uses_keyed_candidate",
+      "source_line_range": [
+        501,
+        527
+      ],
+      "source_sha256": "1bf47305597951c17c1893a6c0649df010320fe6f150f6bcdbc9a4472112b470",
+      "source_url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_client.py#L501-L527"
+    },
+    {
+      "capability_id": "identity-token-lifecycle",
+      "case_id": "client-python::duplicate-registration",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Preserve one coherent node identity and deterministic ownership semantics.",
+      "catalog_scope_caveat": "Selected SDK bodies address token/payload projection and some mocked acknowledgment continuity, not the complete multi-component identity/lifecycle contract.",
+      "exact_e050_error_semantics_asserted": false,
+      "existing_accepted_coordinate_count": 96,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 24,
+        "linux-x86_64": 24,
+        "macos-arm64": 24,
+        "windows-x86_64": 24
+      },
+      "selected_body_assertion_scope": {
+        "durable_credential_storage_asserted": false,
+        "endpoint_commit_or_rollback_asserted": false,
+        "external_directory_loss_liveness_asserted": false,
+        "in_memory_successor_token_and_http_refusal_asserted": true,
+        "request_token_asserted": true,
+        "requested_endpoint_projection_asserted": false,
+        "supervisor_process_restart_executed_by_test": false
+      },
+      "source_assertion": "test_e050_client_credential_lifecycle_fixture",
+      "source_line_range": [
+        61,
+        88
+      ],
+      "source_sha256": "04a9825e7fbc519c5e05644b83e12d16a4cdcc322d8adf4c795a847ef660b308",
+      "source_url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_current_node_token.py#L61-L88"
+    },
+    {
+      "capability_id": "payload-confidentiality",
+      "case_id": "client-rust::ciphertext-tamper",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject modified ciphertext without returning partial plaintext.",
+      "catalog_scope_caveat": "Selected local helper rejects modified ciphertext without a successful plaintext return; other partial-plaintext exposure channels are not asserted.",
+      "existing_accepted_coordinate_count": 48,
+      "payload_absence_explicitly_asserted": false,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scoped_predicate": "A generated request envelope with one ciphertext byte changed is rejected by the local decrypt helper.",
+      "source_assertion": "confidentiality::tests::tampered_ciphertext_is_rejected",
+      "source_line_range": [
+        482,
+        500
+      ],
+      "source_sha256": "0d982c5cb5d4a0ad27f965051d33eba040b407c7ef99fd2ca1a8dc52238e1078",
+      "source_url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/confidentiality.rs#L482-L500"
+    },
+    {
+      "capability_id": "payload-confidentiality",
+      "case_id": "client-rust::confidentiality-downgrade",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject downgrade or mismatched encrypted-response capability.",
+      "catalog_scope_caveat": "Selected request-side all-keyless refusal does not assert negotiated encrypted-response capability mismatch handling.",
+      "existing_accepted_coordinate_count": 48,
+      "payload_absence_explicitly_asserted": false,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scoped_predicate": "With default plaintext override disabled/unset, an all-keyless discovery result is refused before provider task dispatch.",
+      "source_assertion": "submit_refuses_all_keyless_nodes_by_default",
+      "source_line_range": [
+        704,
+        750
+      ],
+      "source_sha256": "55a7255181b9825f88eebb9abece3d2f84e5879d5c2db725ffbc6b2c575b9579",
+      "source_url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/client_tests.rs#L704-L750"
+    },
+    {
+      "capability_id": "payload-confidentiality",
+      "case_id": "client-rust::confidentiality-key-missing",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Fail closed when confidentiality is required but no usable key exists.",
+      "catalog_scope_caveat": "Selected body exercises keyed fallback, not the no-usable-key condition; all-keyless refusal is asserted under the separately bound confidentiality-downgrade case. No credit is reassigned.",
+      "existing_accepted_coordinate_count": 48,
+      "payload_absence_explicitly_asserted": false,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scoped_predicate": "A keyless higher-score candidate is skipped and a keyed candidate receives an iicp_conf request naming its key.",
+      "source_assertion": "submit_skips_keyless_nodes_by_default",
+      "source_line_range": [
+        611,
+        700
+      ],
+      "source_sha256": "55a7255181b9825f88eebb9abece3d2f84e5879d5c2db725ffbc6b2c575b9579",
+      "source_url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/client_tests.rs#L611-L700"
+    },
+    {
+      "capability_id": "identity-token-lifecycle",
+      "case_id": "client-rust::duplicate-registration",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Preserve one coherent node identity and deterministic ownership semantics.",
+      "catalog_scope_caveat": "Selected SDK bodies address token/payload projection and some mocked acknowledgment continuity, not the complete multi-component identity/lifecycle contract.",
+      "exact_e050_error_semantics_asserted": false,
+      "existing_accepted_coordinate_count": 48,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "selected_body_assertion_scope": {
+        "durable_credential_storage_asserted": false,
+        "endpoint_commit_or_rollback_asserted": false,
+        "external_directory_loss_liveness_asserted": false,
+        "in_memory_successor_token_and_http_refusal_asserted": false,
+        "request_token_asserted": true,
+        "requested_endpoint_projection_asserted": true,
+        "supervisor_process_restart_executed_by_test": false
+      },
+      "source_assertion": "shared_e050_client_lifecycle_projects_current_tokens_and_rotated_endpoints",
+      "source_line_range": [
+        163,
+        189
+      ],
+      "source_sha256": "f77d52c39be690ac1511afba816066e854c28569243352bbb904f85163d9121e",
+      "source_url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/node_register_tests.rs#L163-L189"
+    },
+    {
+      "capability_id": "payload-confidentiality",
+      "case_id": "client-typescript::ciphertext-tamper",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject modified ciphertext without returning partial plaintext.",
+      "catalog_scope_caveat": "Selected local helper rejects modified ciphertext without a successful plaintext return; other partial-plaintext exposure channels are not asserted.",
+      "existing_accepted_coordinate_count": 48,
+      "payload_absence_explicitly_asserted": false,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scoped_predicate": "A generated request envelope with one ciphertext byte changed is rejected by the local decrypt helper.",
+      "source_assertion": "rejects tampered ciphertext",
+      "source_line_range": [
+        68,
+        75
+      ],
+      "source_sha256": "5530dcffdfa983c5588b99e00f8c792b1a75340b013c290d32d17ef48d778ff2",
+      "source_url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/confidentiality.test.ts#L68-L75"
+    },
+    {
+      "capability_id": "payload-confidentiality",
+      "case_id": "client-typescript::confidentiality-downgrade",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Reject downgrade or mismatched encrypted-response capability.",
+      "catalog_scope_caveat": "Selected request-side all-keyless refusal does not assert negotiated encrypted-response capability mismatch handling.",
+      "existing_accepted_coordinate_count": 48,
+      "payload_absence_explicitly_asserted": false,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scoped_predicate": "With default plaintext override disabled/unset, an all-keyless discovery result is refused before provider task dispatch.",
+      "source_assertion": "no key → refused by default",
+      "source_line_range": [
+        1284,
+        1304
+      ],
+      "source_sha256": "4a48c0d5cf35046bdf977be88b7899f7d5c8686fea8ffd27fdf8e4e861f52afd",
+      "source_url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/client.test.ts#L1284-L1304"
+    },
+    {
+      "capability_id": "payload-confidentiality",
+      "case_id": "client-typescript::confidentiality-key-missing",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Fail closed when confidentiality is required but no usable key exists.",
+      "catalog_scope_caveat": "Selected body exercises keyed fallback, not the no-usable-key condition; all-keyless refusal is asserted under the separately bound confidentiality-downgrade case. No credit is reassigned.",
+      "existing_accepted_coordinate_count": 48,
+      "payload_absence_explicitly_asserted": true,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scoped_predicate": "A keyless higher-score candidate is skipped and a keyed candidate receives an iicp_conf request naming its key.",
+      "source_assertion": "skips keyless node and uses keyed candidate",
+      "source_line_range": [
+        1260,
+        1282
+      ],
+      "source_sha256": "4a48c0d5cf35046bdf977be88b7899f7d5c8686fea8ffd27fdf8e4e861f52afd",
+      "source_url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/client.test.ts#L1260-L1282"
+    },
+    {
+      "capability_id": "identity-token-lifecycle",
+      "case_id": "client-typescript::duplicate-registration",
+      "catalog_completeness": "UNRESOLVED_NOT_A_NEW_ACCEPTANCE_DECISION",
+      "catalog_expected_behavior": "Preserve one coherent node identity and deterministic ownership semantics.",
+      "catalog_scope_caveat": "Selected SDK bodies address token/payload projection and some mocked acknowledgment continuity, not the complete multi-component identity/lifecycle contract.",
+      "exact_e050_error_semantics_asserted": false,
+      "existing_accepted_coordinate_count": 48,
+      "per_target_existing_coordinates": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "selected_body_assertion_scope": {
+        "durable_credential_storage_asserted": false,
+        "endpoint_commit_or_rollback_asserted": false,
+        "external_directory_loss_liveness_asserted": false,
+        "in_memory_successor_token_and_http_refusal_asserted": true,
+        "request_token_asserted": true,
+        "requested_endpoint_projection_asserted": false,
+        "supervisor_process_restart_executed_by_test": false
+      },
+      "source_assertion": "applies the shared credential rotation and refusal lifecycle",
+      "source_line_range": [
+        28,
+        71
+      ],
+      "source_sha256": "7c2eeda77a40851177e38d0f4b60bc96d7846235f5227c0068698706e29d6a04",
+      "source_url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/current_node_token.test.ts#L28-L71"
+    }
+  ],
+  "catalog_text_context": {
+    "acceptance_decisions_changed": false,
+    "binding_scope": "The registry catalog digest hashes sorted scenario IDs only; full expected-behavior text is separately pinned by this full-file SHA and commit.",
+    "commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+    "full_file_sha256": "bf11370545d54934673469d2dca34d3358093de1e59bebf32d62ee1c8ea59630",
+    "path": "project/pre1-edge-case-catalog.json",
+    "registry_scenario_id_set_sha256": "sha256:4dec70d4618de4b7f9601032ddfffcd79f6ef8a4194d1d0ceff5a5c80156ae90",
+    "repository": "RobLe3/iicp.network"
+  },
+  "contract": {
+    "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+    "path": "spec/v1.9/iicp-confidentiality.md",
+    "repository": "RobLe3/IICP",
+    "reviewed_excerpts": [
+      {
+        "analysis_label": "request-envelope-no-plaintext",
+        "line_range": [
+          148,
+          148
+        ]
+      },
+      {
+        "analysis_label": "tier1-security-boundaries",
+        "line_range": [
+          203,
+          214
+        ]
+      },
+      {
+        "analysis_label": "shipped-default-no-auto-downgrade",
+        "line_range": [
+          289,
+          307
+        ]
+      }
+    ],
+    "sha256": "af4df2a42a37b840ec907ad6de3f00bf02fb3bc6530080c0f43e90abab769229",
+    "source_url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/spec/v1.9/iicp-confidentiality.md"
+  },
+  "existing_record_trace": {
+    "case_mappings": 12,
+    "confidentiality_coordinates": 576,
+    "distinct_selected_coordinates": 768,
+    "identity_coordinates": 192,
+    "interpretation": "Minimized links to existing accepted accounting records; not a new admission or independently reproduced execution."
+  },
+  "family_completion_claimed": false,
+  "historical_inventory_complete": false,
+  "identity_fixture": {
+    "classification": "implementation-evidence-only",
+    "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+    "native_executions_inferred_from_fixture_rows": false,
+    "path": "research/pre-normative-profiles/fixtures/e050-client-credential-lifecycle-v1.json",
+    "repository": "RobLe3/IICP",
+    "scenario_ids": [
+      "fresh-registration",
+      "tunnel-rotation",
+      "supervised-restart",
+      "stale-token-replay",
+      "failed-current-token-rotation"
+    ],
+    "sha256": "4f71c44380f7a95249e7f6233fc4bce56de4e344b97a5ecc11c8740e88af12d6",
+    "source_assertion_applications": 15
+  },
+  "identity_request_helper": {
+    "assertion_scope": "register_payload_for_test delegates to build_register_payload, not HTTP registration.",
+    "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+    "path": "src/node.rs",
+    "repository": "RobLe3/iicp-client-rust",
+    "sha256": "1cbe1e77c0c90781a57bbc5eba67cd37c3da37671bbb1e85bd2fcb84ebe88cca",
+    "source_url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/node.rs"
+  },
+  "independent_interoperability_established": false,
+  "limitations": [
+    "Tamper cases assert local decrypt-helper rejection, not provider HTTP error codes or full wire interoperability.",
+    "Python and TypeScript explicitly assert absent plaintext payload for keyed-route selection; Rust PartialJson matching does not. This is an assertion-coverage difference, not evidence of plaintext transmission.",
+    "Default refusal is configuration-sensitive: Rust clears the plaintext-debug override in its selected body; Python and TypeScript selected bodies do not independently clear it.",
+    "S.16 shipped-conformance section6 explicitly permits a transitional opt-in plaintext debugging override. Broad purpose-level no-opt-out wording must not erase that exception.",
+    "Tier1 has no forward secrecy against node-key compromise. Request encryption does not establish response protection, executor blindness, metadata privacy, key rotation or Tier2 compliance.",
+    "The selected Rust identity case checks request-payload projection only; it does not consume HTTP acknowledgment status/token.",
+    "Python and TypeScript identity cases check mocked acknowledgments and in-memory token continuity, not durable storage, endpoint commitment, actual restart or exact E050 refusal semantics.",
+    "Five shared fixture rows do not establish identical SDK test coverage or fifteen native executions. A supervised-restart row is not a process restart.",
+    "No selected identity body establishes external Directory-loss liveness; these cases cannot close historical provider-recovery questions.",
+    "Public receipt derivatives support selected coordinate counting, not private raw-output recovery or original receipt verification.",
+    "Current SDK development corrections are not newly qualified successor artifacts. Original accepted evidence remains bound to its frozen candidate.",
+    "Canonical catalog expectations are broader than some selected predicates. These maps expose traceability limits, not demonstrated product failures or a decision to invalidate accepted records."
+  ],
+  "offline_analysis_validation": {
+    "confidentiality_derivative_controls_passed": 27,
+    "confidentiality_derivative_reproduction": "BYTE_IDENTICAL",
+    "identity_derivative_reproduction": "BYTE_IDENTICAL",
+    "identity_structural_checks_passed": 12,
+    "qualification_workloads_executed_in_analysis": 0,
+    "sdk_tests_executed_in_analysis": 0
+  },
+  "programme_complete": false,
+  "public_receipt_derivative": {
+    "path": "reports/receipts.json",
+    "sha256": "630a9abc45452151b2797f0bd24b3a2394b21cb4fd07b3492ffca8a66ab4316c",
+    "source_reporting_commit": "d1bdd81ab2bbc1b971b0982b26505d3f699a29d0",
+    "use": "Count already-published accepted coordinates, not validate original private receipts."
+  },
+  "qualification_credit_added": 0,
+  "reviews": [
+    {
+      "access": "Controlled retained review; digest is an identity reference, not public preservation.",
+      "name": "confidentiality-semantic-review/independent-code-review-v3.json",
+      "sha256": "8bd9586e97c758b6637bd75ba1dd4fb7aad6dca4e329d05e0f948dfcf67c50aa"
+    },
+    {
+      "access": "Controlled retained review; digest is an identity reference, not public preservation.",
+      "name": "confidentiality-semantic-review/independent-semantic-review-v3.json",
+      "sha256": "91f7134c37b193d79dd682ef2f41cbb9cfe766231a36d68cb9a30319a3fd42e4"
+    },
+    {
+      "access": "Controlled retained review; digest is an identity reference, not public preservation.",
+      "name": "identity-lifecycle-semantic-review/independent-source-review.json",
+      "sha256": "72917190b670eb07d5ed13eb54affc3af67507beee28afe6ee7c6280ed0e5d1e"
+    },
+    {
+      "access": "Controlled retained review; digest is an identity reference, not public preservation.",
+      "name": "identity-lifecycle-semantic-review/delivery-review.json",
+      "sha256": "aa3e021408ceae9e99753d86dc14bb46be73ac5d0cf53c3bd08d606e7d76dd4b"
+    }
+  ],
+  "schema": "iicp.postcert-capability-source-slices.v1",
+  "source_files": [
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "path": "tests/test_client.py",
+      "qualified_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "1bf47305597951c17c1893a6c0649df010320fe6f150f6bcdbc9a4472112b470",
+      "source_url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_client.py"
+    },
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "path": "tests/test_confidentiality.py",
+      "qualified_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "644a2c10ca0607a192ea96151e999bc26c4bfd1b1e222f4bbb12bcb95733dd99",
+      "source_url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_confidentiality.py"
+    },
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "path": "tests/test_current_node_token.py",
+      "qualified_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "04a9825e7fbc519c5e05644b83e12d16a4cdcc322d8adf4c795a847ef660b308",
+      "source_url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_current_node_token.py"
+    },
+    {
+      "accepted_harness_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "path": "src/confidentiality.rs",
+      "qualified_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "0d982c5cb5d4a0ad27f965051d33eba040b407c7ef99fd2ca1a8dc52238e1078",
+      "source_url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/confidentiality.rs"
+    },
+    {
+      "accepted_harness_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "path": "tests/client_tests.rs",
+      "qualified_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "55a7255181b9825f88eebb9abece3d2f84e5879d5c2db725ffbc6b2c575b9579",
+      "source_url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/client_tests.rs"
+    },
+    {
+      "accepted_harness_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "path": "tests/node_register_tests.rs",
+      "qualified_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "f77d52c39be690ac1511afba816066e854c28569243352bbb904f85163d9121e",
+      "source_url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/node_register_tests.rs"
+    },
+    {
+      "accepted_harness_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "path": "tests/client.test.ts",
+      "qualified_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "4a48c0d5cf35046bdf977be88b7899f7d5c8686fea8ffd27fdf8e4e861f52afd",
+      "source_url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/client.test.ts"
+    },
+    {
+      "accepted_harness_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "path": "tests/confidentiality.test.ts",
+      "qualified_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "5530dcffdfa983c5588b99e00f8c792b1a75340b013c290d32d17ef48d778ff2",
+      "source_url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/confidentiality.test.ts"
+    },
+    {
+      "accepted_harness_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "path": "tests/current_node_token.test.ts",
+      "qualified_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "7c2eeda77a40851177e38d0f4b60bc96d7846235f5227c0068698706e29d6a04",
+      "source_url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/current_node_token.test.ts"
+    }
+  ],
+  "state": "REVIEWED_PARTIAL_SOURCE_ANALYSIS_NOT_FULL_CAPABILITY_OR_FROZEN_IFRB"
+}
