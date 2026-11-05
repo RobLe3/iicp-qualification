@@ -1,0 +1,266 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "analysis_sha256",
+    "counts",
+    "criteria",
+    "criteria_review_sha256",
+    "dmsc",
+    "dmsc_assessment_sha256",
+    "dmsc_review_sha256",
+    "historical_inventory_complete",
+    "limits",
+    "non_authorizing",
+    "owner",
+    "paper_modified",
+    "qualification_credit_added",
+    "schema",
+    "source_commit"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "analysis_sha256": {
+      "type": "string"
+    },
+    "counts": {
+      "type": "object"
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "assessment",
+          "classification",
+          "criterion_index",
+          "evidence",
+          "id",
+          "issue",
+          "missing_proof",
+          "next_lookup_or_decision",
+          "requirement",
+          "reviewed_disposition",
+          "targeted_retained_observation",
+          "review_notes"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "assessment": {
+            "type": "string"
+          },
+          "classification": {
+            "type": "string"
+          },
+          "criterion_index": {
+            "type": "integer"
+          },
+          "evidence": {
+            "type": "array"
+          },
+          "id": {
+            "type": "string"
+          },
+          "issue": {
+            "type": "string"
+          },
+          "missing_proof": {
+            "type": "string"
+          },
+          "next_lookup_or_decision": {
+            "type": "string"
+          },
+          "requirement": {
+            "type": "string"
+          },
+          "reviewed_disposition": {
+            "type": "string"
+          },
+          "targeted_retained_observation": {
+            "type": "string"
+          },
+          "review_notes": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "criteria_review_sha256": {
+      "type": "string"
+    },
+    "dmsc": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "assessment_class",
+          "components",
+          "crosswalk_relation_change",
+          "evidence_maturity",
+          "external_experiment_status",
+          "id",
+          "original_claim_ids",
+          "original_concern",
+          "related_assertion_count",
+          "related_assertion_ids",
+          "related_receipt_ids",
+          "review_status",
+          "scenario_ids",
+          "source_crosswalk_sha256",
+          "source_entry_pointer",
+          "supported_assertion",
+          "targets",
+          "unsupported_assertion_or_missing_evidence",
+          "original_gap",
+          "original_dimensions",
+          "original_coverage_questions"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "assessment_class": {
+            "type": "string"
+          },
+          "components": {
+            "type": "array"
+          },
+          "crosswalk_relation_change": {
+            "type": "string"
+          },
+          "evidence_maturity": {
+            "type": "string"
+          },
+          "external_experiment_status": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "original_claim_ids": {
+            "type": "array"
+          },
+          "original_concern": {
+            "type": "string"
+          },
+          "related_assertion_count": {
+            "type": "integer"
+          },
+          "related_assertion_ids": {
+            "type": "array"
+          },
+          "related_receipt_ids": {
+            "type": "array"
+          },
+          "review_status": {
+            "type": "string"
+          },
+          "scenario_ids": {
+            "type": "array"
+          },
+          "source_crosswalk_sha256": {
+            "type": "string"
+          },
+          "source_entry_pointer": {
+            "type": "string"
+          },
+          "supported_assertion": {
+            "type": "string"
+          },
+          "targets": {
+            "type": "array"
+          },
+          "unsupported_assertion_or_missing_evidence": {
+            "type": "string"
+          },
+          "original_gap": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "original_dimensions": {
+            "type": "object"
+          },
+          "original_coverage_questions": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "dmsc_assessment_sha256": {
+      "type": "string"
+    },
+    "dmsc_review_sha256": {
+      "type": "string"
+    },
+    "historical_inventory_complete": {
+      "const": false
+    },
+    "limits": {
+      "type": "array"
+    },
+    "non_authorizing": {
+      "const": true
+    },
+    "owner": {
+      "const": "IICP qualification documentation maintainers"
+    },
+    "paper_modified": {
+      "const": false
+    },
+    "qualification_credit_added": {
+      "const": 0
+    },
+    "schema": {
+      "const": "iicp.reviewed-postprocessing-assessments.v1"
+    },
+    "source_commit": {
+      "const": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859"
+    }
+  },
+  "$defs": {
+    "publicationManifest": {
+      "type": "object",
+      "required": [
+        "schema",
+        "non_authorizing",
+        "files",
+        "private_sources",
+        "record_sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "iicp.assessment-publication-manifest.v1"
+        },
+        "non_authorizing": {
+          "const": true
+        },
+        "files": {
+          "type": "object",
+          "required": [
+            "assessments.json"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "assessments.json": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          }
+        },
+        "private_sources": {
+          "type": "string"
+        },
+        "record_sha256": {
+          "type": "object",
+          "minProperties": 68,
+          "maxProperties": 68,
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    }
+  }
+}

@@ -85,3 +85,7 @@ The [3 November bounded successor supplement](reports/qualification-closeout/202
 ## Post-processing continuation
 
 [Staged milestone plan and documentation-agent supplement](reports/postprocessing-next/2026-11-05/README.md) separates completed inputs from pending lifecycle diagnostics and analysis. This additive plan is under review; it does not alter the sealed corpus or qualification results.
+
+## Reviewed criterion and DMSC assessments
+
+[The 5 November assessment package](reports/postprocessing-assessments/2026-11-05/README.md) distinguishes 41 reviewed criterion dispositions from 20 supported criteria, and 27 reviewed DMSC assessments from unestablished external interoperability. This additive package is under publication review.
