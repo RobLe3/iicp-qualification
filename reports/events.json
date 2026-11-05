@@ -1253,6 +1253,17 @@
       "reason": "blocker-changed",
       "source_sha256": "sha256:528763dee399e9683a5089c8bb2c7b2198c315b58a5c5e512dc0f5035ae5f17b",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:4f4c71df2339569c938dce9dccb675f4d07caccf45be478ac8e1a5d5134b0816",
+      "kind": "ci",
+      "next_gate": "none",
+      "occurred_at": "2026-11-05T21:57:37Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:1195fe0b4b06e910b5e82569c6c5ffe11c087e70285919cbfc18eb7ec4dd0c75",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
