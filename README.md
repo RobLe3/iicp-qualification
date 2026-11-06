@@ -107,3 +107,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Successor-source and owner-boundary audit
 
 [The 6 November source and owner audit](reports/postcert/2026-11-06-source-owner-audit/README.md) compares six pinned component sources, preserves intermediate changes and separates six owner questions from whole-issue completion. It grants no artifact equivalence, qualification credit or execution authority.
+
+## SDK network and readiness assertion scope
+
+[The reviewed network/readiness source supplement](reports/postcert/2026-11-06-sdk-network-readiness/README.md) connects twelve existing SDK cases to catalog obligations, exact source assertions and recorded assignments. It distinguishes schema-invalid response checks from truncation, DNS classifiers from resolver tests, and initial token recovery from the complete public-route lifecycle. It adds no execution, qualification credit or frozen-baseline claim.

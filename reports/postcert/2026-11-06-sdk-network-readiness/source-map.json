@@ -1,0 +1,2264 @@
+{
+  "accepted_results_changed": false,
+  "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "canonical_root_context": "106aae6568d12884603068e82248bf1413371690",
+  "cases": [
+    {
+      "case_id": "client-python::dns-failure",
+      "catalog_expected_behavior": "Return a bounded classified error without unsafe endpoint fallback.",
+      "component": "client-python",
+      "control_limit": "Selected source is one positive classifier control, not an authorized-success transport plus failure pair.",
+      "coverage": "CLASSIFIER_SUBPROPERTY_ONLY_NOT_FULL_CATALOG",
+      "existing_assignment_ids": [
+        "dns-failure::client-python|cpython-3.11|linux-aarch64|php|local-only",
+        "dns-failure::client-python|cpython-3.11|linux-aarch64|php|public",
+        "dns-failure::client-python|cpython-3.11|linux-aarch64|php|restricted",
+        "dns-failure::client-python|cpython-3.11|linux-aarch64|rust|local-only",
+        "dns-failure::client-python|cpython-3.11|linux-aarch64|rust|public",
+        "dns-failure::client-python|cpython-3.11|linux-aarch64|rust|restricted",
+        "dns-failure::client-python|cpython-3.11|linux-x86_64|php|local-only",
+        "dns-failure::client-python|cpython-3.11|linux-x86_64|php|public",
+        "dns-failure::client-python|cpython-3.11|linux-x86_64|php|restricted",
+        "dns-failure::client-python|cpython-3.11|linux-x86_64|rust|local-only",
+        "dns-failure::client-python|cpython-3.11|linux-x86_64|rust|public",
+        "dns-failure::client-python|cpython-3.11|linux-x86_64|rust|restricted",
+        "dns-failure::client-python|cpython-3.11|macos-arm64|php|local-only",
+        "dns-failure::client-python|cpython-3.11|macos-arm64|php|public",
+        "dns-failure::client-python|cpython-3.11|macos-arm64|php|restricted",
+        "dns-failure::client-python|cpython-3.11|macos-arm64|rust|local-only",
+        "dns-failure::client-python|cpython-3.11|macos-arm64|rust|public",
+        "dns-failure::client-python|cpython-3.11|macos-arm64|rust|restricted",
+        "dns-failure::client-python|cpython-3.11|windows-x86_64|php|local-only",
+        "dns-failure::client-python|cpython-3.11|windows-x86_64|php|public",
+        "dns-failure::client-python|cpython-3.11|windows-x86_64|php|restricted",
+        "dns-failure::client-python|cpython-3.11|windows-x86_64|rust|local-only",
+        "dns-failure::client-python|cpython-3.11|windows-x86_64|rust|public",
+        "dns-failure::client-python|cpython-3.11|windows-x86_64|rust|restricted",
+        "dns-failure::client-python|cpython-3.12|linux-aarch64|php|local-only",
+        "dns-failure::client-python|cpython-3.12|linux-aarch64|php|public",
+        "dns-failure::client-python|cpython-3.12|linux-aarch64|php|restricted",
+        "dns-failure::client-python|cpython-3.12|linux-aarch64|rust|local-only",
+        "dns-failure::client-python|cpython-3.12|linux-aarch64|rust|public",
+        "dns-failure::client-python|cpython-3.12|linux-aarch64|rust|restricted",
+        "dns-failure::client-python|cpython-3.12|linux-x86_64|php|local-only",
+        "dns-failure::client-python|cpython-3.12|linux-x86_64|php|public",
+        "dns-failure::client-python|cpython-3.12|linux-x86_64|php|restricted",
+        "dns-failure::client-python|cpython-3.12|linux-x86_64|rust|local-only",
+        "dns-failure::client-python|cpython-3.12|linux-x86_64|rust|public",
+        "dns-failure::client-python|cpython-3.12|linux-x86_64|rust|restricted",
+        "dns-failure::client-python|cpython-3.12|macos-arm64|php|local-only",
+        "dns-failure::client-python|cpython-3.12|macos-arm64|php|public",
+        "dns-failure::client-python|cpython-3.12|macos-arm64|php|restricted",
+        "dns-failure::client-python|cpython-3.12|macos-arm64|rust|local-only",
+        "dns-failure::client-python|cpython-3.12|macos-arm64|rust|public",
+        "dns-failure::client-python|cpython-3.12|macos-arm64|rust|restricted",
+        "dns-failure::client-python|cpython-3.12|windows-x86_64|php|local-only",
+        "dns-failure::client-python|cpython-3.12|windows-x86_64|php|public",
+        "dns-failure::client-python|cpython-3.12|windows-x86_64|php|restricted",
+        "dns-failure::client-python|cpython-3.12|windows-x86_64|rust|local-only",
+        "dns-failure::client-python|cpython-3.12|windows-x86_64|rust|public",
+        "dns-failure::client-python|cpython-3.12|windows-x86_64|rust|restricted",
+        "dns-failure::client-python|cpython-3.13|linux-aarch64|php|local-only",
+        "dns-failure::client-python|cpython-3.13|linux-aarch64|php|public",
+        "dns-failure::client-python|cpython-3.13|linux-aarch64|php|restricted",
+        "dns-failure::client-python|cpython-3.13|linux-aarch64|rust|local-only",
+        "dns-failure::client-python|cpython-3.13|linux-aarch64|rust|public",
+        "dns-failure::client-python|cpython-3.13|linux-aarch64|rust|restricted",
+        "dns-failure::client-python|cpython-3.13|linux-x86_64|php|local-only",
+        "dns-failure::client-python|cpython-3.13|linux-x86_64|php|public",
+        "dns-failure::client-python|cpython-3.13|linux-x86_64|php|restricted",
+        "dns-failure::client-python|cpython-3.13|linux-x86_64|rust|local-only",
+        "dns-failure::client-python|cpython-3.13|linux-x86_64|rust|public",
+        "dns-failure::client-python|cpython-3.13|linux-x86_64|rust|restricted",
+        "dns-failure::client-python|cpython-3.13|macos-arm64|php|local-only",
+        "dns-failure::client-python|cpython-3.13|macos-arm64|php|public",
+        "dns-failure::client-python|cpython-3.13|macos-arm64|php|restricted",
+        "dns-failure::client-python|cpython-3.13|macos-arm64|rust|local-only",
+        "dns-failure::client-python|cpython-3.13|macos-arm64|rust|public",
+        "dns-failure::client-python|cpython-3.13|macos-arm64|rust|restricted",
+        "dns-failure::client-python|cpython-3.13|windows-x86_64|php|local-only",
+        "dns-failure::client-python|cpython-3.13|windows-x86_64|php|public",
+        "dns-failure::client-python|cpython-3.13|windows-x86_64|php|restricted",
+        "dns-failure::client-python|cpython-3.13|windows-x86_64|rust|local-only",
+        "dns-failure::client-python|cpython-3.13|windows-x86_64|rust|public",
+        "dns-failure::client-python|cpython-3.13|windows-x86_64|rust|restricted",
+        "dns-failure::client-python|cpython-3.14|linux-aarch64|php|local-only",
+        "dns-failure::client-python|cpython-3.14|linux-aarch64|php|public",
+        "dns-failure::client-python|cpython-3.14|linux-aarch64|php|restricted",
+        "dns-failure::client-python|cpython-3.14|linux-aarch64|rust|local-only",
+        "dns-failure::client-python|cpython-3.14|linux-aarch64|rust|public",
+        "dns-failure::client-python|cpython-3.14|linux-aarch64|rust|restricted",
+        "dns-failure::client-python|cpython-3.14|linux-x86_64|php|local-only",
+        "dns-failure::client-python|cpython-3.14|linux-x86_64|php|public",
+        "dns-failure::client-python|cpython-3.14|linux-x86_64|php|restricted",
+        "dns-failure::client-python|cpython-3.14|linux-x86_64|rust|local-only",
+        "dns-failure::client-python|cpython-3.14|linux-x86_64|rust|public",
+        "dns-failure::client-python|cpython-3.14|linux-x86_64|rust|restricted",
+        "dns-failure::client-python|cpython-3.14|macos-arm64|php|local-only",
+        "dns-failure::client-python|cpython-3.14|macos-arm64|php|public",
+        "dns-failure::client-python|cpython-3.14|macos-arm64|php|restricted",
+        "dns-failure::client-python|cpython-3.14|macos-arm64|rust|local-only",
+        "dns-failure::client-python|cpython-3.14|macos-arm64|rust|public",
+        "dns-failure::client-python|cpython-3.14|macos-arm64|rust|restricted",
+        "dns-failure::client-python|cpython-3.14|windows-x86_64|php|local-only",
+        "dns-failure::client-python|cpython-3.14|windows-x86_64|php|public",
+        "dns-failure::client-python|cpython-3.14|windows-x86_64|php|restricted",
+        "dns-failure::client-python|cpython-3.14|windows-x86_64|rust|local-only",
+        "dns-failure::client-python|cpython-3.14|windows-x86_64|rust|public",
+        "dns-failure::client-python|cpython-3.14|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            362,
+            372
+          ],
+          "role": "PRODUCTION_CLASSIFIER",
+          "source_id": "sha256:05d1dbad4ba085d4d6b8e479f0c16de36251ff3ca51cfe87db3c4cf4fabed1dd",
+          "span_sha256": "dbf9758f09d8a084462ca0f585f55dff255023f957b5537ae99baadec59203d3"
+        },
+        {
+          "lines": [
+            397,
+            417
+          ],
+          "role": "ADJACENT_UNEXERCISED_CONTEXT",
+          "source_id": "sha256:05d1dbad4ba085d4d6b8e479f0c16de36251ff3ca51cfe87db3c4cf4fabed1dd",
+          "span_sha256": "c6e8c4ae3c97fe2cd576608dc7e5016e6c2badd442704dfda1d01d3c64c9a671"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Actual DNS failure handling or a bounded request",
+        "Absence of unsafe endpoint fallback",
+        "Negative non-DNS classifier control in the selected body"
+      ],
+      "positive_source_controls": [],
+      "protocol_context": {
+        "capability_association": "NETWORK_BOUNDARY_CONTEXT_NOT_COMPLETE_CAPABILITY_JOIN",
+        "limits": [
+          "The cited retry table is explicitly proxy-to-adapter, not an automatic mandate for all SDK resolvers. Catalog DNS classification/bound/fallback obligations remain separately scoped."
+        ],
+        "requirement_authority": "Existing qualification catalog expected_behavior, not a new universal SDK retry policy.",
+        "sources": [
+          {
+            "lines": [
+              353,
+              373
+            ],
+            "role": "PROXY_RETRY_CONTEXT_NOT_SDK_REQUIREMENT",
+            "source_id": "sha256:7f5179e970137a9c4954bcb8ce8ce24cc71c024243210e50c1a7974fb3bff461",
+            "span_sha256": "c3e31400cdcc918c9c1af002d68b12e9ef9557b31c4b19287347ae8063eb2ba9"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "cpython-3.11": 24,
+        "cpython-3.12": 24,
+        "cpython-3.13": 24,
+        "cpython-3.14": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 24,
+        "linux-x86_64": 24,
+        "macos-arm64": 24,
+        "windows-x86_64": 24
+      },
+      "scenario_id": "dns-failure",
+      "selected_assertion": "test_dns_error_detection_covers_macos_resolver_wording",
+      "selected_sources": [
+        {
+          "lines": [
+            119,
+            123
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:f0790f24db55a07f08161b24ed5134d634f8a07565a5a1c2791514ce90109f67",
+          "span_sha256": "f729fac51cf43c5dbc34281cb22bba4642c4584be0553d7756fb1def5d18323e"
+        }
+      ],
+      "source_assertions": [
+        "A fixed macOS-style resolver-error string is classified as likely DNS."
+      ],
+      "standalone_execution_authorized": false
+    },
+    {
+      "case_id": "client-python::dynamic-public-route-readiness",
+      "catalog_expected_behavior": "Withhold credentials and discovery eligibility for a newly allocated public route until its listener and external health endpoint are serving, then recover registration automatically without a manual secret transfer.",
+      "component": "client-python",
+      "control_limit": "Recovery methods are mocked; source assertions cover loop sequencing, not public-route admission.",
+      "coverage": "AUTOMATIC_TOKEN_RECOVERY_SUBPROPERTY_ONLY",
+      "existing_assignment_ids": [
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-aarch64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-aarch64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-aarch64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-aarch64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-aarch64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-aarch64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-x86_64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|linux-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|macos-arm64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|macos-arm64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|macos-arm64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|macos-arm64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|macos-arm64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|macos-arm64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|windows-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|windows-x86_64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|windows-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|windows-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|windows-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.11|windows-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-aarch64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-aarch64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-aarch64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-aarch64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-aarch64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-aarch64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-x86_64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|linux-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|macos-arm64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|macos-arm64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|macos-arm64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|macos-arm64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|macos-arm64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|macos-arm64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|windows-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|windows-x86_64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|windows-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|windows-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|windows-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.12|windows-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-aarch64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-aarch64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-aarch64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-aarch64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-aarch64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-aarch64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-x86_64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|linux-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|macos-arm64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|macos-arm64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|macos-arm64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|macos-arm64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|macos-arm64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|macos-arm64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|windows-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|windows-x86_64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|windows-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|windows-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|windows-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.13|windows-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-aarch64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-aarch64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-aarch64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-aarch64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-aarch64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-aarch64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-x86_64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|linux-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|macos-arm64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|macos-arm64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|macos-arm64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|macos-arm64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|macos-arm64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|macos-arm64|rust|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|windows-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|windows-x86_64|php|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|windows-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|windows-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|windows-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-python|cpython-3.14|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            975,
+            1091
+          ],
+          "role": "PRODUCTION_RECOVERY_LOOP",
+          "source_id": "sha256:3e72b8994bceb67091eab3a769e0f09dc2b2f53573d4ea4976eeb6a8d8ea358b",
+          "span_sha256": "c2eda37a6ebf0a854887c39c2774b8cf898413e4d5b36410b12d1518c40036f0"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Real registration or credential transport",
+        "Public listener/tunnel readiness or Directory credential-withholding gate",
+        "Complete multi-component public-route recovery workflow"
+      ],
+      "positive_source_controls": [
+        {
+          "lines": [
+            484,
+            534
+          ],
+          "role": "ADJACENT_MOCKED_404_RECOVERY",
+          "source_id": "sha256:9133dfb80fd167e81679427c7bfd95f64f8eaa76a55c05692cdd68e4356f282d",
+          "span_sha256": "cffa405bb296319ea047ca57424ee65f7dd921cd6b07f731a58f8680e103568a"
+        }
+      ],
+      "protocol_context": {
+        "capability_association": "provider-route-readiness",
+        "limits": [
+          "Automatic token recovery, admission liveness, credential withholding and current discovery eligibility are separate obligations. Selected SDK assertions cover only limited recovery/scheduling subproperties."
+        ],
+        "requirement_authority": "Existing catalog combined lifecycle obligation and accepted Protocol liveness/current-eligibility boundary.",
+        "sources": [
+          {
+            "lines": [
+              177,
+              182
+            ],
+            "role": "NORMATIVE_LIVENESS_BEFORE_TOKEN",
+            "source_id": "sha256:0261e9d8380959a438d85100590dda95cf1ec2a13e988990edf07f1f2e20766e",
+            "span_sha256": "7eda045e37f23258b4e4ba5b75a92eeed5d20e949ad50534994df0c629237acb"
+          },
+          {
+            "lines": [
+              34,
+              55
+            ],
+            "role": "ACCEPTED_CURRENT_ROUTE_ELIGIBILITY_BOUNDARY",
+            "source_id": "sha256:1fa7d52f5dcf78f7207dd2282f2c48f739d679b28ddf976a57907cef311cd9ab",
+            "span_sha256": "f52a8c7b173399e564e9bc48a071d9e865733fb9f6611a5920b049d8e033cd8a"
+          },
+          {
+            "lines": [
+              342,
+              349
+            ],
+            "role": "NORMATIVE_HEARTBEAT_RECONNECT_CONTEXT",
+            "source_id": "sha256:7f5179e970137a9c4954bcb8ce8ce24cc71c024243210e50c1a7974fb3bff461",
+            "span_sha256": "1dea692d61780610d642119d42194dfaefa7f904c08e6ac96acb874085756f42"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "cpython-3.11": 24,
+        "cpython-3.12": 24,
+        "cpython-3.13": 24,
+        "cpython-3.14": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 24,
+        "linux-x86_64": 24,
+        "macos-arm64": 24,
+        "windows-x86_64": 24
+      },
+      "scenario_id": "dynamic-public-route-readiness",
+      "selected_assertion": "test_heartbeat_self_heals_from_empty_initial_token",
+      "selected_sources": [
+        {
+          "lines": [
+            537,
+            594
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:9133dfb80fd167e81679427c7bfd95f64f8eaa76a55c05692cdd68e4356f282d",
+          "span_sha256": "c1c9df057401eb4bcaccd6def65b635a7caeb429c300d5d8dfe69e8b4d8107c7"
+        }
+      ],
+      "source_assertions": [
+        "Mocked heartbeat rejects empty token with 401; loop calls mocked register and resumes using recovered-token within a one-second test wait."
+      ],
+      "standalone_execution_authorized": false
+    },
+    {
+      "case_id": "client-python::partial-response",
+      "catalog_expected_behavior": "Reject truncated or schema-invalid responses.",
+      "component": "client-python",
+      "control_limit": "Positive control is source-located, not separately rerun or separately credited here.",
+      "coverage": "SCHEMA_INVALID_OR_BRANCH_NOT_TRUNCATION",
+      "existing_assignment_ids": [
+        "partial-response::client-python|cpython-3.11|linux-aarch64|php|local-only",
+        "partial-response::client-python|cpython-3.11|linux-aarch64|php|public",
+        "partial-response::client-python|cpython-3.11|linux-aarch64|php|restricted",
+        "partial-response::client-python|cpython-3.11|linux-aarch64|rust|local-only",
+        "partial-response::client-python|cpython-3.11|linux-aarch64|rust|public",
+        "partial-response::client-python|cpython-3.11|linux-aarch64|rust|restricted",
+        "partial-response::client-python|cpython-3.11|linux-x86_64|php|local-only",
+        "partial-response::client-python|cpython-3.11|linux-x86_64|php|public",
+        "partial-response::client-python|cpython-3.11|linux-x86_64|php|restricted",
+        "partial-response::client-python|cpython-3.11|linux-x86_64|rust|local-only",
+        "partial-response::client-python|cpython-3.11|linux-x86_64|rust|public",
+        "partial-response::client-python|cpython-3.11|linux-x86_64|rust|restricted",
+        "partial-response::client-python|cpython-3.11|macos-arm64|php|local-only",
+        "partial-response::client-python|cpython-3.11|macos-arm64|php|public",
+        "partial-response::client-python|cpython-3.11|macos-arm64|php|restricted",
+        "partial-response::client-python|cpython-3.11|macos-arm64|rust|local-only",
+        "partial-response::client-python|cpython-3.11|macos-arm64|rust|public",
+        "partial-response::client-python|cpython-3.11|macos-arm64|rust|restricted",
+        "partial-response::client-python|cpython-3.11|windows-x86_64|php|local-only",
+        "partial-response::client-python|cpython-3.11|windows-x86_64|php|public",
+        "partial-response::client-python|cpython-3.11|windows-x86_64|php|restricted",
+        "partial-response::client-python|cpython-3.11|windows-x86_64|rust|local-only",
+        "partial-response::client-python|cpython-3.11|windows-x86_64|rust|public",
+        "partial-response::client-python|cpython-3.11|windows-x86_64|rust|restricted",
+        "partial-response::client-python|cpython-3.12|linux-aarch64|php|local-only",
+        "partial-response::client-python|cpython-3.12|linux-aarch64|php|public",
+        "partial-response::client-python|cpython-3.12|linux-aarch64|php|restricted",
+        "partial-response::client-python|cpython-3.12|linux-aarch64|rust|local-only",
+        "partial-response::client-python|cpython-3.12|linux-aarch64|rust|public",
+        "partial-response::client-python|cpython-3.12|linux-aarch64|rust|restricted",
+        "partial-response::client-python|cpython-3.12|linux-x86_64|php|local-only",
+        "partial-response::client-python|cpython-3.12|linux-x86_64|php|public",
+        "partial-response::client-python|cpython-3.12|linux-x86_64|php|restricted",
+        "partial-response::client-python|cpython-3.12|linux-x86_64|rust|local-only",
+        "partial-response::client-python|cpython-3.12|linux-x86_64|rust|public",
+        "partial-response::client-python|cpython-3.12|linux-x86_64|rust|restricted",
+        "partial-response::client-python|cpython-3.12|macos-arm64|php|local-only",
+        "partial-response::client-python|cpython-3.12|macos-arm64|php|public",
+        "partial-response::client-python|cpython-3.12|macos-arm64|php|restricted",
+        "partial-response::client-python|cpython-3.12|macos-arm64|rust|local-only",
+        "partial-response::client-python|cpython-3.12|macos-arm64|rust|public",
+        "partial-response::client-python|cpython-3.12|macos-arm64|rust|restricted",
+        "partial-response::client-python|cpython-3.12|windows-x86_64|php|local-only",
+        "partial-response::client-python|cpython-3.12|windows-x86_64|php|public",
+        "partial-response::client-python|cpython-3.12|windows-x86_64|php|restricted",
+        "partial-response::client-python|cpython-3.12|windows-x86_64|rust|local-only",
+        "partial-response::client-python|cpython-3.12|windows-x86_64|rust|public",
+        "partial-response::client-python|cpython-3.12|windows-x86_64|rust|restricted",
+        "partial-response::client-python|cpython-3.13|linux-aarch64|php|local-only",
+        "partial-response::client-python|cpython-3.13|linux-aarch64|php|public",
+        "partial-response::client-python|cpython-3.13|linux-aarch64|php|restricted",
+        "partial-response::client-python|cpython-3.13|linux-aarch64|rust|local-only",
+        "partial-response::client-python|cpython-3.13|linux-aarch64|rust|public",
+        "partial-response::client-python|cpython-3.13|linux-aarch64|rust|restricted",
+        "partial-response::client-python|cpython-3.13|linux-x86_64|php|local-only",
+        "partial-response::client-python|cpython-3.13|linux-x86_64|php|public",
+        "partial-response::client-python|cpython-3.13|linux-x86_64|php|restricted",
+        "partial-response::client-python|cpython-3.13|linux-x86_64|rust|local-only",
+        "partial-response::client-python|cpython-3.13|linux-x86_64|rust|public",
+        "partial-response::client-python|cpython-3.13|linux-x86_64|rust|restricted",
+        "partial-response::client-python|cpython-3.13|macos-arm64|php|local-only",
+        "partial-response::client-python|cpython-3.13|macos-arm64|php|public",
+        "partial-response::client-python|cpython-3.13|macos-arm64|php|restricted",
+        "partial-response::client-python|cpython-3.13|macos-arm64|rust|local-only",
+        "partial-response::client-python|cpython-3.13|macos-arm64|rust|public",
+        "partial-response::client-python|cpython-3.13|macos-arm64|rust|restricted",
+        "partial-response::client-python|cpython-3.13|windows-x86_64|php|local-only",
+        "partial-response::client-python|cpython-3.13|windows-x86_64|php|public",
+        "partial-response::client-python|cpython-3.13|windows-x86_64|php|restricted",
+        "partial-response::client-python|cpython-3.13|windows-x86_64|rust|local-only",
+        "partial-response::client-python|cpython-3.13|windows-x86_64|rust|public",
+        "partial-response::client-python|cpython-3.13|windows-x86_64|rust|restricted",
+        "partial-response::client-python|cpython-3.14|linux-aarch64|php|local-only",
+        "partial-response::client-python|cpython-3.14|linux-aarch64|php|public",
+        "partial-response::client-python|cpython-3.14|linux-aarch64|php|restricted",
+        "partial-response::client-python|cpython-3.14|linux-aarch64|rust|local-only",
+        "partial-response::client-python|cpython-3.14|linux-aarch64|rust|public",
+        "partial-response::client-python|cpython-3.14|linux-aarch64|rust|restricted",
+        "partial-response::client-python|cpython-3.14|linux-x86_64|php|local-only",
+        "partial-response::client-python|cpython-3.14|linux-x86_64|php|public",
+        "partial-response::client-python|cpython-3.14|linux-x86_64|php|restricted",
+        "partial-response::client-python|cpython-3.14|linux-x86_64|rust|local-only",
+        "partial-response::client-python|cpython-3.14|linux-x86_64|rust|public",
+        "partial-response::client-python|cpython-3.14|linux-x86_64|rust|restricted",
+        "partial-response::client-python|cpython-3.14|macos-arm64|php|local-only",
+        "partial-response::client-python|cpython-3.14|macos-arm64|php|public",
+        "partial-response::client-python|cpython-3.14|macos-arm64|php|restricted",
+        "partial-response::client-python|cpython-3.14|macos-arm64|rust|local-only",
+        "partial-response::client-python|cpython-3.14|macos-arm64|rust|public",
+        "partial-response::client-python|cpython-3.14|macos-arm64|rust|restricted",
+        "partial-response::client-python|cpython-3.14|windows-x86_64|php|local-only",
+        "partial-response::client-python|cpython-3.14|windows-x86_64|php|public",
+        "partial-response::client-python|cpython-3.14|windows-x86_64|php|restricted",
+        "partial-response::client-python|cpython-3.14|windows-x86_64|rust|local-only",
+        "partial-response::client-python|cpython-3.14|windows-x86_64|rust|public",
+        "partial-response::client-python|cpython-3.14|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            109,
+            125
+          ],
+          "role": "PRODUCTION_HEALTH_VALIDATOR",
+          "source_id": "sha256:fb12121da3f38b003f086e83523308a563e398a0856ab515619b5653ced8713a",
+          "span_sha256": "1269d832db7c14e8af70961c6d8bbc6381284bcfbe906a8595a612192ba2fc35"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Truncated TCP/body or streaming failure handling",
+        "Universal model-field requirements for non-model intents"
+      ],
+      "positive_source_controls": [
+        {
+          "lines": [
+            97,
+            110
+          ],
+          "role": "ADJACENT_COMPLETE_SCHEMA_SUCCESS",
+          "source_id": "sha256:e03db4197a8277be7b83033a3ec431578806f6b8c4be4cab2f5b08e54c929b64",
+          "span_sha256": "0718a002dd3c1ec5fd7f76e5945b6737ab6de0a69a70abb0fe1781c227fb3e73"
+        }
+      ],
+      "protocol_context": {
+        "capability_association": "SCHEMA_VALIDATION_CONTEXT_NOT_FULL_INTENT_CONTRACT",
+        "limits": [
+          "The core passage addresses registration capabilities, not a direct definition of the health output schema. The selected SDK health validator defines this finite check; do not generalize models to all non-model intents."
+        ],
+        "requirement_authority": "Catalog permits truncated OR schema-invalid response rejection; selected source exercises schema-invalid health output only.",
+        "sources": [
+          {
+            "lines": [
+              129,
+              147
+            ],
+            "role": "CONDITIONAL_MODEL_FIELD_CONTEXT_NOT_HEALTH_SCHEMA_AUTHORITY",
+            "source_id": "sha256:0261e9d8380959a438d85100590dda95cf1ec2a13e988990edf07f1f2e20766e",
+            "span_sha256": "7af657551c96a00e90ed66a5343e39ba7765472849aa1336ba3d7d85bbd08b82"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "cpython-3.11": 24,
+        "cpython-3.12": 24,
+        "cpython-3.13": 24,
+        "cpython-3.14": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 24,
+        "linux-x86_64": 24,
+        "macos-arm64": 24,
+        "windows-x86_64": 24
+      },
+      "scenario_id": "partial-response",
+      "selected_assertion": "test_returns_fail_when_required_field_missing",
+      "selected_sources": [
+        {
+          "lines": [
+            112,
+            125
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:e03db4197a8277be7b83033a3ec431578806f6b8c4be4cab2f5b08e54c929b64",
+          "span_sha256": "9ccd1144abb2741a8c76b01d8a5509e15dc3ffc9cd8b5133df70a1effb8f198a"
+        }
+      ],
+      "source_assertions": [
+        "Complete HTTP 200 JSON lacking models yields failed CONF-HEALTH-01 with models in its message."
+      ],
+      "standalone_execution_authorized": false
+    },
+    {
+      "case_id": "client-python::tls-failure",
+      "catalog_expected_behavior": "Reject invalid TLS rather than downgrading transport.",
+      "component": "client-python",
+      "control_limit": "The successful adjacent provider test uses HTTP and tls_verify=false; not positive certificate-validation proof.",
+      "coverage": "TLS_PROTOCOL_MISMATCH_REJECTION_BRANCH_ONLY",
+      "existing_assignment_ids": [
+        "tls-failure::client-python|cpython-3.11|linux-aarch64|php|local-only",
+        "tls-failure::client-python|cpython-3.11|linux-aarch64|php|public",
+        "tls-failure::client-python|cpython-3.11|linux-aarch64|php|restricted",
+        "tls-failure::client-python|cpython-3.11|linux-aarch64|rust|local-only",
+        "tls-failure::client-python|cpython-3.11|linux-aarch64|rust|public",
+        "tls-failure::client-python|cpython-3.11|linux-aarch64|rust|restricted",
+        "tls-failure::client-python|cpython-3.11|linux-x86_64|php|local-only",
+        "tls-failure::client-python|cpython-3.11|linux-x86_64|php|public",
+        "tls-failure::client-python|cpython-3.11|linux-x86_64|php|restricted",
+        "tls-failure::client-python|cpython-3.11|linux-x86_64|rust|local-only",
+        "tls-failure::client-python|cpython-3.11|linux-x86_64|rust|public",
+        "tls-failure::client-python|cpython-3.11|linux-x86_64|rust|restricted",
+        "tls-failure::client-python|cpython-3.11|macos-arm64|php|local-only",
+        "tls-failure::client-python|cpython-3.11|macos-arm64|php|public",
+        "tls-failure::client-python|cpython-3.11|macos-arm64|php|restricted",
+        "tls-failure::client-python|cpython-3.11|macos-arm64|rust|local-only",
+        "tls-failure::client-python|cpython-3.11|macos-arm64|rust|public",
+        "tls-failure::client-python|cpython-3.11|macos-arm64|rust|restricted",
+        "tls-failure::client-python|cpython-3.11|windows-x86_64|php|local-only",
+        "tls-failure::client-python|cpython-3.11|windows-x86_64|php|public",
+        "tls-failure::client-python|cpython-3.11|windows-x86_64|php|restricted",
+        "tls-failure::client-python|cpython-3.11|windows-x86_64|rust|local-only",
+        "tls-failure::client-python|cpython-3.11|windows-x86_64|rust|public",
+        "tls-failure::client-python|cpython-3.11|windows-x86_64|rust|restricted",
+        "tls-failure::client-python|cpython-3.12|linux-aarch64|php|local-only",
+        "tls-failure::client-python|cpython-3.12|linux-aarch64|php|public",
+        "tls-failure::client-python|cpython-3.12|linux-aarch64|php|restricted",
+        "tls-failure::client-python|cpython-3.12|linux-aarch64|rust|local-only",
+        "tls-failure::client-python|cpython-3.12|linux-aarch64|rust|public",
+        "tls-failure::client-python|cpython-3.12|linux-aarch64|rust|restricted",
+        "tls-failure::client-python|cpython-3.12|linux-x86_64|php|local-only",
+        "tls-failure::client-python|cpython-3.12|linux-x86_64|php|public",
+        "tls-failure::client-python|cpython-3.12|linux-x86_64|php|restricted",
+        "tls-failure::client-python|cpython-3.12|linux-x86_64|rust|local-only",
+        "tls-failure::client-python|cpython-3.12|linux-x86_64|rust|public",
+        "tls-failure::client-python|cpython-3.12|linux-x86_64|rust|restricted",
+        "tls-failure::client-python|cpython-3.12|macos-arm64|php|local-only",
+        "tls-failure::client-python|cpython-3.12|macos-arm64|php|public",
+        "tls-failure::client-python|cpython-3.12|macos-arm64|php|restricted",
+        "tls-failure::client-python|cpython-3.12|macos-arm64|rust|local-only",
+        "tls-failure::client-python|cpython-3.12|macos-arm64|rust|public",
+        "tls-failure::client-python|cpython-3.12|macos-arm64|rust|restricted",
+        "tls-failure::client-python|cpython-3.12|windows-x86_64|php|local-only",
+        "tls-failure::client-python|cpython-3.12|windows-x86_64|php|public",
+        "tls-failure::client-python|cpython-3.12|windows-x86_64|php|restricted",
+        "tls-failure::client-python|cpython-3.12|windows-x86_64|rust|local-only",
+        "tls-failure::client-python|cpython-3.12|windows-x86_64|rust|public",
+        "tls-failure::client-python|cpython-3.12|windows-x86_64|rust|restricted",
+        "tls-failure::client-python|cpython-3.13|linux-aarch64|php|local-only",
+        "tls-failure::client-python|cpython-3.13|linux-aarch64|php|public",
+        "tls-failure::client-python|cpython-3.13|linux-aarch64|php|restricted",
+        "tls-failure::client-python|cpython-3.13|linux-aarch64|rust|local-only",
+        "tls-failure::client-python|cpython-3.13|linux-aarch64|rust|public",
+        "tls-failure::client-python|cpython-3.13|linux-aarch64|rust|restricted",
+        "tls-failure::client-python|cpython-3.13|linux-x86_64|php|local-only",
+        "tls-failure::client-python|cpython-3.13|linux-x86_64|php|public",
+        "tls-failure::client-python|cpython-3.13|linux-x86_64|php|restricted",
+        "tls-failure::client-python|cpython-3.13|linux-x86_64|rust|local-only",
+        "tls-failure::client-python|cpython-3.13|linux-x86_64|rust|public",
+        "tls-failure::client-python|cpython-3.13|linux-x86_64|rust|restricted",
+        "tls-failure::client-python|cpython-3.13|macos-arm64|php|local-only",
+        "tls-failure::client-python|cpython-3.13|macos-arm64|php|public",
+        "tls-failure::client-python|cpython-3.13|macos-arm64|php|restricted",
+        "tls-failure::client-python|cpython-3.13|macos-arm64|rust|local-only",
+        "tls-failure::client-python|cpython-3.13|macos-arm64|rust|public",
+        "tls-failure::client-python|cpython-3.13|macos-arm64|rust|restricted",
+        "tls-failure::client-python|cpython-3.13|windows-x86_64|php|local-only",
+        "tls-failure::client-python|cpython-3.13|windows-x86_64|php|public",
+        "tls-failure::client-python|cpython-3.13|windows-x86_64|php|restricted",
+        "tls-failure::client-python|cpython-3.13|windows-x86_64|rust|local-only",
+        "tls-failure::client-python|cpython-3.13|windows-x86_64|rust|public",
+        "tls-failure::client-python|cpython-3.13|windows-x86_64|rust|restricted",
+        "tls-failure::client-python|cpython-3.14|linux-aarch64|php|local-only",
+        "tls-failure::client-python|cpython-3.14|linux-aarch64|php|public",
+        "tls-failure::client-python|cpython-3.14|linux-aarch64|php|restricted",
+        "tls-failure::client-python|cpython-3.14|linux-aarch64|rust|local-only",
+        "tls-failure::client-python|cpython-3.14|linux-aarch64|rust|public",
+        "tls-failure::client-python|cpython-3.14|linux-aarch64|rust|restricted",
+        "tls-failure::client-python|cpython-3.14|linux-x86_64|php|local-only",
+        "tls-failure::client-python|cpython-3.14|linux-x86_64|php|public",
+        "tls-failure::client-python|cpython-3.14|linux-x86_64|php|restricted",
+        "tls-failure::client-python|cpython-3.14|linux-x86_64|rust|local-only",
+        "tls-failure::client-python|cpython-3.14|linux-x86_64|rust|public",
+        "tls-failure::client-python|cpython-3.14|linux-x86_64|rust|restricted",
+        "tls-failure::client-python|cpython-3.14|macos-arm64|php|local-only",
+        "tls-failure::client-python|cpython-3.14|macos-arm64|php|public",
+        "tls-failure::client-python|cpython-3.14|macos-arm64|php|restricted",
+        "tls-failure::client-python|cpython-3.14|macos-arm64|rust|local-only",
+        "tls-failure::client-python|cpython-3.14|macos-arm64|rust|public",
+        "tls-failure::client-python|cpython-3.14|macos-arm64|rust|restricted",
+        "tls-failure::client-python|cpython-3.14|windows-x86_64|php|local-only",
+        "tls-failure::client-python|cpython-3.14|windows-x86_64|php|public",
+        "tls-failure::client-python|cpython-3.14|windows-x86_64|php|restricted",
+        "tls-failure::client-python|cpython-3.14|windows-x86_64|rust|local-only",
+        "tls-failure::client-python|cpython-3.14|windows-x86_64|rust|public",
+        "tls-failure::client-python|cpython-3.14|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            34,
+            41
+          ],
+          "role": "PRODUCTION_TLS_CONFIGURATION",
+          "source_id": "sha256:2da43a9e628b029db85c487c4db27a03f463a215ecb0d29db0d216850853c1ca",
+          "span_sha256": "a62f45dde5a480db72a69d56c5c9e48e86a76c2338997638d79a554d01609f72"
+        },
+        {
+          "lines": [
+            174,
+            197
+          ],
+          "role": "PRODUCTION_NETWORK_ERROR_CLASSIFICATION",
+          "source_id": "sha256:2da43a9e628b029db85c487c4db27a03f463a215ecb0d29db0d216850853c1ca",
+          "span_sha256": "47ee7c9591fb67ce97105ad16ef8348095e330a29d5cb8a74fe08dc7b7576a94"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Measured elapsed-time upper bound",
+        "Successful valid-certificate TLS path",
+        "Safe retry execution or all TLS-certificate failure classes"
+      ],
+      "positive_source_controls": [
+        {
+          "lines": [
+            66,
+            82
+          ],
+          "role": "ADJACENT_HTTP_SUCCESS_WITH_TLS_VERIFY_FALSE",
+          "source_id": "sha256:e3fc53735958dcff92a97dab59272b3f4a9fe9dc054e4ed119b76714fdfa4c5f",
+          "span_sha256": "a8ceea63c02ae5062a37456859e33b2070e3b3bb2df52b3ac48e970997d1dac2"
+        }
+      ],
+      "protocol_context": {
+        "capability_association": "TRANSPORT_SECURITY_CONTEXT_NOT_FULL_TLS_QUALIFICATION",
+        "limits": [
+          "HTTPS-to-plain-HTTP rejection does not prove the entire certificate-validation/TLS-version/production scheme matrix. Explicit development HTTP permissions are not a TLS downgrade authorization."
+        ],
+        "requirement_authority": "Existing catalog rejection obligation; Protocol core supplies broader certificate and scheme requirements.",
+        "sources": [
+          {
+            "lines": [
+              470,
+              483
+            ],
+            "role": "NORMATIVE_TLS_AND_SCHEME_CONTEXT",
+            "source_id": "sha256:0261e9d8380959a438d85100590dda95cf1ec2a13e988990edf07f1f2e20766e",
+            "span_sha256": "5f8eff647cea102ce3bd774390448ffc5204bea8bab22c1d4ed6803694b52c23"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "cpython-3.11": 24,
+        "cpython-3.12": 24,
+        "cpython-3.13": 24,
+        "cpython-3.14": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 24,
+        "linux-x86_64": 24,
+        "macos-arm64": 24,
+        "windows-x86_64": 24
+      },
+      "scenario_id": "tls-failure",
+      "selected_assertion": "test_tls_handshake_failure_is_transient_and_bounded",
+      "selected_sources": [
+        {
+          "lines": [
+            86,
+            103
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:e3fc53735958dcff92a97dab59272b3f4a9fe9dc054e4ed119b76714fdfa4c5f",
+          "span_sha256": "fe3ae4cca6045f01487502b2941fdfc495b168d098c0b9edd66134d7c4214f53"
+        }
+      ],
+      "source_assertions": [
+        "HTTPS request to a plain-HTTP loopback server raises IICP-E004 with retryable=true; configured timeout is 2,000 ms."
+      ],
+      "standalone_execution_authorized": false
+    },
+    {
+      "case_id": "client-rust::dns-failure",
+      "catalog_expected_behavior": "Return a bounded classified error without unsafe endpoint fallback.",
+      "component": "client-rust",
+      "control_limit": "Selected source is one positive classifier control, not a complete transport control pair.",
+      "coverage": "CLASSIFIER_SUBPROPERTY_ONLY_NOT_FULL_CATALOG",
+      "existing_assignment_ids": [
+        "dns-failure::client-rust|msrv-1.86|linux-aarch64|php|local-only",
+        "dns-failure::client-rust|msrv-1.86|linux-aarch64|php|public",
+        "dns-failure::client-rust|msrv-1.86|linux-aarch64|php|restricted",
+        "dns-failure::client-rust|msrv-1.86|linux-aarch64|rust|local-only",
+        "dns-failure::client-rust|msrv-1.86|linux-aarch64|rust|public",
+        "dns-failure::client-rust|msrv-1.86|linux-aarch64|rust|restricted",
+        "dns-failure::client-rust|msrv-1.86|linux-x86_64|php|local-only",
+        "dns-failure::client-rust|msrv-1.86|linux-x86_64|php|public",
+        "dns-failure::client-rust|msrv-1.86|linux-x86_64|php|restricted",
+        "dns-failure::client-rust|msrv-1.86|linux-x86_64|rust|local-only",
+        "dns-failure::client-rust|msrv-1.86|linux-x86_64|rust|public",
+        "dns-failure::client-rust|msrv-1.86|linux-x86_64|rust|restricted",
+        "dns-failure::client-rust|msrv-1.86|macos-arm64|php|local-only",
+        "dns-failure::client-rust|msrv-1.86|macos-arm64|php|public",
+        "dns-failure::client-rust|msrv-1.86|macos-arm64|php|restricted",
+        "dns-failure::client-rust|msrv-1.86|macos-arm64|rust|local-only",
+        "dns-failure::client-rust|msrv-1.86|macos-arm64|rust|public",
+        "dns-failure::client-rust|msrv-1.86|macos-arm64|rust|restricted",
+        "dns-failure::client-rust|msrv-1.86|windows-x86_64|php|local-only",
+        "dns-failure::client-rust|msrv-1.86|windows-x86_64|php|public",
+        "dns-failure::client-rust|msrv-1.86|windows-x86_64|php|restricted",
+        "dns-failure::client-rust|msrv-1.86|windows-x86_64|rust|local-only",
+        "dns-failure::client-rust|msrv-1.86|windows-x86_64|rust|public",
+        "dns-failure::client-rust|msrv-1.86|windows-x86_64|rust|restricted",
+        "dns-failure::client-rust|rust-1.98.0|linux-aarch64|php|local-only",
+        "dns-failure::client-rust|rust-1.98.0|linux-aarch64|php|public",
+        "dns-failure::client-rust|rust-1.98.0|linux-aarch64|php|restricted",
+        "dns-failure::client-rust|rust-1.98.0|linux-aarch64|rust|local-only",
+        "dns-failure::client-rust|rust-1.98.0|linux-aarch64|rust|public",
+        "dns-failure::client-rust|rust-1.98.0|linux-aarch64|rust|restricted",
+        "dns-failure::client-rust|rust-1.98.0|linux-x86_64|php|local-only",
+        "dns-failure::client-rust|rust-1.98.0|linux-x86_64|php|public",
+        "dns-failure::client-rust|rust-1.98.0|linux-x86_64|php|restricted",
+        "dns-failure::client-rust|rust-1.98.0|linux-x86_64|rust|local-only",
+        "dns-failure::client-rust|rust-1.98.0|linux-x86_64|rust|public",
+        "dns-failure::client-rust|rust-1.98.0|linux-x86_64|rust|restricted",
+        "dns-failure::client-rust|rust-1.98.0|macos-arm64|php|local-only",
+        "dns-failure::client-rust|rust-1.98.0|macos-arm64|php|public",
+        "dns-failure::client-rust|rust-1.98.0|macos-arm64|php|restricted",
+        "dns-failure::client-rust|rust-1.98.0|macos-arm64|rust|local-only",
+        "dns-failure::client-rust|rust-1.98.0|macos-arm64|rust|public",
+        "dns-failure::client-rust|rust-1.98.0|macos-arm64|rust|restricted",
+        "dns-failure::client-rust|rust-1.98.0|windows-x86_64|php|local-only",
+        "dns-failure::client-rust|rust-1.98.0|windows-x86_64|php|public",
+        "dns-failure::client-rust|rust-1.98.0|windows-x86_64|php|restricted",
+        "dns-failure::client-rust|rust-1.98.0|windows-x86_64|rust|local-only",
+        "dns-failure::client-rust|rust-1.98.0|windows-x86_64|rust|public",
+        "dns-failure::client-rust|rust-1.98.0|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            86,
+            98
+          ],
+          "role": "PRODUCTION_CLASSIFIER",
+          "source_id": "sha256:5b9d6d334ad144a367f7b18eb7f1a93834229737bbf7b59e4f3153f66c64aa01",
+          "span_sha256": "d5918a43f38e034142a87dd716a696720ffac8eeabeeb4409cdcb7a0f889e0ef"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Actual native resolver or bounded request behavior",
+        "Absence of unsafe endpoint fallback",
+        "Negative non-DNS classifier control in the selected body"
+      ],
+      "positive_source_controls": [],
+      "protocol_context": {
+        "capability_association": "NETWORK_BOUNDARY_CONTEXT_NOT_COMPLETE_CAPABILITY_JOIN",
+        "limits": [
+          "The cited retry table is explicitly proxy-to-adapter, not an automatic mandate for all SDK resolvers. Catalog DNS classification/bound/fallback obligations remain separately scoped."
+        ],
+        "requirement_authority": "Existing qualification catalog expected_behavior, not a new universal SDK retry policy.",
+        "sources": [
+          {
+            "lines": [
+              353,
+              373
+            ],
+            "role": "PROXY_RETRY_CONTEXT_NOT_SDK_REQUIREMENT",
+            "source_id": "sha256:7f5179e970137a9c4954bcb8ce8ce24cc71c024243210e50c1a7974fb3bff461",
+            "span_sha256": "c3e31400cdcc918c9c1af002d68b12e9ef9557b31c4b19287347ae8063eb2ba9"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "msrv-1.86": 24,
+        "rust-1.98.0": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scenario_id": "dns-failure",
+      "selected_assertion": "tunnel::tests::likely_dns_error_detection_covers_macos_resolver_wording",
+      "selected_sources": [
+        {
+          "lines": [
+            1391,
+            1397
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:5b9d6d334ad144a367f7b18eb7f1a93834229737bbf7b59e4f3153f66c64aa01",
+          "span_sha256": "47548f4afb1e240914b08f58a0aead40a84f2e67fa3f2fae0b03e53b829f9b28"
+        }
+      ],
+      "source_assertions": [
+        "A fixed macOS-style resolver-error string is classified as likely DNS."
+      ],
+      "standalone_execution_authorized": false
+    },
+    {
+      "case_id": "client-rust::dynamic-public-route-readiness",
+      "catalog_expected_behavior": "Withhold credentials and discovery eligibility for a newly allocated public route until its listener and external health endpoint are serving, then recover registration automatically without a manual secret transfer.",
+      "component": "client-rust",
+      "control_limit": "Selected predicate includes two scheduling controls; the adjacent registration mock is a distinct test, not selected execution.",
+      "coverage": "INITIAL_DELAY_DECISION_SUBPROPERTY_ONLY",
+      "existing_assignment_ids": [
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-aarch64|php|local-only",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-aarch64|php|public",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-aarch64|php|restricted",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-aarch64|rust|local-only",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-aarch64|rust|public",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-aarch64|rust|restricted",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-x86_64|php|public",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|linux-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|macos-arm64|php|local-only",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|macos-arm64|php|public",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|macos-arm64|php|restricted",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|macos-arm64|rust|local-only",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|macos-arm64|rust|public",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|macos-arm64|rust|restricted",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|windows-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|windows-x86_64|php|public",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|windows-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|windows-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|windows-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-rust|msrv-1.86|windows-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-aarch64|php|local-only",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-aarch64|php|public",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-aarch64|php|restricted",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-aarch64|rust|local-only",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-aarch64|rust|public",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-aarch64|rust|restricted",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-x86_64|php|public",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|linux-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|macos-arm64|php|local-only",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|macos-arm64|php|public",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|macos-arm64|php|restricted",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|macos-arm64|rust|local-only",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|macos-arm64|rust|public",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|macos-arm64|rust|restricted",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|windows-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|windows-x86_64|php|public",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|windows-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|windows-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|windows-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-rust|rust-1.98.0|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            146,
+            148
+          ],
+          "role": "PRODUCTION_INITIAL_DELAY_PREDICATE",
+          "source_id": "sha256:8999cc717eb36d33467fb2a82531c0de1e25a2e33d5c01309a32713cde813953",
+          "span_sha256": "ced8690d99fe60d66f1230a69c7464583c742bbdd972d7345ac0db7dbb224214"
+        },
+        {
+          "lines": [
+            2886,
+            2902
+          ],
+          "role": "PRODUCTION_HEARTBEAT_LOOP_WIRING",
+          "source_id": "sha256:8999cc717eb36d33467fb2a82531c0de1e25a2e33d5c01309a32713cde813953",
+          "span_sha256": "614460dd284fbbdb6c8866e0ee1ec06e21a3e79a06c446a8fce4d1a1f858c32f"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Listener started or register/heartbeat request made",
+        "A recovered token or Directory presence",
+        "Public health admission or whole recovery workflow"
+      ],
+      "positive_source_controls": [
+        {
+          "lines": [
+            4015,
+            4039
+          ],
+          "role": "ADJACENT_MOCK_REGISTRATION_RETURNS_TOKEN",
+          "source_id": "sha256:8999cc717eb36d33467fb2a82531c0de1e25a2e33d5c01309a32713cde813953",
+          "span_sha256": "fa195f469cc1a7385dc34115c5bed910d27ceedf25e5a831080f4ef944d8e5b0"
+        }
+      ],
+      "protocol_context": {
+        "capability_association": "provider-route-readiness",
+        "limits": [
+          "Automatic token recovery, admission liveness, credential withholding and current discovery eligibility are separate obligations. Selected SDK assertions cover only limited recovery/scheduling subproperties."
+        ],
+        "requirement_authority": "Existing catalog combined lifecycle obligation and accepted Protocol liveness/current-eligibility boundary.",
+        "sources": [
+          {
+            "lines": [
+              177,
+              182
+            ],
+            "role": "NORMATIVE_LIVENESS_BEFORE_TOKEN",
+            "source_id": "sha256:0261e9d8380959a438d85100590dda95cf1ec2a13e988990edf07f1f2e20766e",
+            "span_sha256": "7eda045e37f23258b4e4ba5b75a92eeed5d20e949ad50534994df0c629237acb"
+          },
+          {
+            "lines": [
+              34,
+              55
+            ],
+            "role": "ACCEPTED_CURRENT_ROUTE_ELIGIBILITY_BOUNDARY",
+            "source_id": "sha256:1fa7d52f5dcf78f7207dd2282f2c48f739d679b28ddf976a57907cef311cd9ab",
+            "span_sha256": "f52a8c7b173399e564e9bc48a071d9e865733fb9f6611a5920b049d8e033cd8a"
+          },
+          {
+            "lines": [
+              342,
+              349
+            ],
+            "role": "NORMATIVE_HEARTBEAT_RECONNECT_CONTEXT",
+            "source_id": "sha256:7f5179e970137a9c4954bcb8ce8ce24cc71c024243210e50c1a7974fb3bff461",
+            "span_sha256": "1dea692d61780610d642119d42194dfaefa7f904c08e6ac96acb874085756f42"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "msrv-1.86": 24,
+        "rust-1.98.0": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scenario_id": "dynamic-public-route-readiness",
+      "selected_assertion": "node::reregister_tests::empty_startup_token_recovery_has_no_initial_delay",
+      "selected_sources": [
+        {
+          "lines": [
+            4007,
+            4010
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:8999cc717eb36d33467fb2a82531c0de1e25a2e33d5c01309a32713cde813953",
+          "span_sha256": "4649ddc4b77a93ea391292d02ee709c20974b3a2e5bcd39c6b86036b4e310377"
+        }
+      ],
+      "source_assertions": [
+        "Pure scheduling predicate returns false for empty token and true for registered-token."
+      ],
+      "standalone_execution_authorized": false
+    },
+    {
+      "case_id": "client-rust::partial-response",
+      "catalog_expected_behavior": "Reject truncated or schema-invalid responses.",
+      "component": "client-rust",
+      "control_limit": "Positive control is source-located; no new runtime or separate credit here.",
+      "coverage": "SCHEMA_INVALID_OR_BRANCH_NOT_TRUNCATION",
+      "existing_assignment_ids": [
+        "partial-response::client-rust|msrv-1.86|linux-aarch64|php|local-only",
+        "partial-response::client-rust|msrv-1.86|linux-aarch64|php|public",
+        "partial-response::client-rust|msrv-1.86|linux-aarch64|php|restricted",
+        "partial-response::client-rust|msrv-1.86|linux-aarch64|rust|local-only",
+        "partial-response::client-rust|msrv-1.86|linux-aarch64|rust|public",
+        "partial-response::client-rust|msrv-1.86|linux-aarch64|rust|restricted",
+        "partial-response::client-rust|msrv-1.86|linux-x86_64|php|local-only",
+        "partial-response::client-rust|msrv-1.86|linux-x86_64|php|public",
+        "partial-response::client-rust|msrv-1.86|linux-x86_64|php|restricted",
+        "partial-response::client-rust|msrv-1.86|linux-x86_64|rust|local-only",
+        "partial-response::client-rust|msrv-1.86|linux-x86_64|rust|public",
+        "partial-response::client-rust|msrv-1.86|linux-x86_64|rust|restricted",
+        "partial-response::client-rust|msrv-1.86|macos-arm64|php|local-only",
+        "partial-response::client-rust|msrv-1.86|macos-arm64|php|public",
+        "partial-response::client-rust|msrv-1.86|macos-arm64|php|restricted",
+        "partial-response::client-rust|msrv-1.86|macos-arm64|rust|local-only",
+        "partial-response::client-rust|msrv-1.86|macos-arm64|rust|public",
+        "partial-response::client-rust|msrv-1.86|macos-arm64|rust|restricted",
+        "partial-response::client-rust|msrv-1.86|windows-x86_64|php|local-only",
+        "partial-response::client-rust|msrv-1.86|windows-x86_64|php|public",
+        "partial-response::client-rust|msrv-1.86|windows-x86_64|php|restricted",
+        "partial-response::client-rust|msrv-1.86|windows-x86_64|rust|local-only",
+        "partial-response::client-rust|msrv-1.86|windows-x86_64|rust|public",
+        "partial-response::client-rust|msrv-1.86|windows-x86_64|rust|restricted",
+        "partial-response::client-rust|rust-1.98.0|linux-aarch64|php|local-only",
+        "partial-response::client-rust|rust-1.98.0|linux-aarch64|php|public",
+        "partial-response::client-rust|rust-1.98.0|linux-aarch64|php|restricted",
+        "partial-response::client-rust|rust-1.98.0|linux-aarch64|rust|local-only",
+        "partial-response::client-rust|rust-1.98.0|linux-aarch64|rust|public",
+        "partial-response::client-rust|rust-1.98.0|linux-aarch64|rust|restricted",
+        "partial-response::client-rust|rust-1.98.0|linux-x86_64|php|local-only",
+        "partial-response::client-rust|rust-1.98.0|linux-x86_64|php|public",
+        "partial-response::client-rust|rust-1.98.0|linux-x86_64|php|restricted",
+        "partial-response::client-rust|rust-1.98.0|linux-x86_64|rust|local-only",
+        "partial-response::client-rust|rust-1.98.0|linux-x86_64|rust|public",
+        "partial-response::client-rust|rust-1.98.0|linux-x86_64|rust|restricted",
+        "partial-response::client-rust|rust-1.98.0|macos-arm64|php|local-only",
+        "partial-response::client-rust|rust-1.98.0|macos-arm64|php|public",
+        "partial-response::client-rust|rust-1.98.0|macos-arm64|php|restricted",
+        "partial-response::client-rust|rust-1.98.0|macos-arm64|rust|local-only",
+        "partial-response::client-rust|rust-1.98.0|macos-arm64|rust|public",
+        "partial-response::client-rust|rust-1.98.0|macos-arm64|rust|restricted",
+        "partial-response::client-rust|rust-1.98.0|windows-x86_64|php|local-only",
+        "partial-response::client-rust|rust-1.98.0|windows-x86_64|php|public",
+        "partial-response::client-rust|rust-1.98.0|windows-x86_64|php|restricted",
+        "partial-response::client-rust|rust-1.98.0|windows-x86_64|rust|local-only",
+        "partial-response::client-rust|rust-1.98.0|windows-x86_64|rust|public",
+        "partial-response::client-rust|rust-1.98.0|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            76,
+            150
+          ],
+          "role": "PRODUCTION_HEALTH_VALIDATOR",
+          "source_id": "sha256:0d8de4f7434dd56ce48e699f5192918d97f832ae3e0cbf87c8ca3654967df515",
+          "span_sha256": "ac9d0b63d69a16f92e87e0c1ff3ddf7781a491558b36ffe82996cb509d3f7bf1"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Truncated TCP/body or streaming failure handling",
+        "Universal model-field requirements for non-model intents"
+      ],
+      "positive_source_controls": [
+        {
+          "lines": [
+            168,
+            192
+          ],
+          "role": "ADJACENT_COMPLETE_SCHEMA_SUCCESS",
+          "source_id": "sha256:8e618776a6e96be0e43042b57d79130915b55f5c4897ffe831a5c8bb79777ff8",
+          "span_sha256": "c98efbca26c1ebbae906b2f17bee3776a0a948e6ebaa4e47edfe8f99087755bf"
+        }
+      ],
+      "protocol_context": {
+        "capability_association": "SCHEMA_VALIDATION_CONTEXT_NOT_FULL_INTENT_CONTRACT",
+        "limits": [
+          "The core passage addresses registration capabilities, not a direct definition of the health output schema. The selected SDK health validator defines this finite check; do not generalize models to all non-model intents."
+        ],
+        "requirement_authority": "Catalog permits truncated OR schema-invalid response rejection; selected source exercises schema-invalid health output only.",
+        "sources": [
+          {
+            "lines": [
+              129,
+              147
+            ],
+            "role": "CONDITIONAL_MODEL_FIELD_CONTEXT_NOT_HEALTH_SCHEMA_AUTHORITY",
+            "source_id": "sha256:0261e9d8380959a438d85100590dda95cf1ec2a13e988990edf07f1f2e20766e",
+            "span_sha256": "7af657551c96a00e90ed66a5343e39ba7765472849aa1336ba3d7d85bbd08b82"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "msrv-1.86": 24,
+        "rust-1.98.0": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scenario_id": "partial-response",
+      "selected_assertion": "test_health01_fails_when_required_field_missing",
+      "selected_sources": [
+        {
+          "lines": [
+            195,
+            221
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:8e618776a6e96be0e43042b57d79130915b55f5c4897ffe831a5c8bb79777ff8",
+          "span_sha256": "3f83505b8e97d893db64b4ecc04c1ef1f7dea672ff0b39b3b8e89ea1d6cb8f68"
+        }
+      ],
+      "source_assertions": [
+        "Complete HTTP 200 JSON lacking models yields failed CONF-HEALTH-01 with models in its message."
+      ],
+      "standalone_execution_authorized": false
+    },
+    {
+      "case_id": "client-rust::tls-failure",
+      "catalog_expected_behavior": "Reject invalid TLS rather than downgrading transport.",
+      "component": "client-rust",
+      "control_limit": "No valid-TLS positive control established by this selected body.",
+      "coverage": "TLS_PROTOCOL_MISMATCH_REJECTION_BRANCH_ONLY",
+      "existing_assignment_ids": [
+        "tls-failure::client-rust|msrv-1.86|linux-aarch64|php|local-only",
+        "tls-failure::client-rust|msrv-1.86|linux-aarch64|php|public",
+        "tls-failure::client-rust|msrv-1.86|linux-aarch64|php|restricted",
+        "tls-failure::client-rust|msrv-1.86|linux-aarch64|rust|local-only",
+        "tls-failure::client-rust|msrv-1.86|linux-aarch64|rust|public",
+        "tls-failure::client-rust|msrv-1.86|linux-aarch64|rust|restricted",
+        "tls-failure::client-rust|msrv-1.86|linux-x86_64|php|local-only",
+        "tls-failure::client-rust|msrv-1.86|linux-x86_64|php|public",
+        "tls-failure::client-rust|msrv-1.86|linux-x86_64|php|restricted",
+        "tls-failure::client-rust|msrv-1.86|linux-x86_64|rust|local-only",
+        "tls-failure::client-rust|msrv-1.86|linux-x86_64|rust|public",
+        "tls-failure::client-rust|msrv-1.86|linux-x86_64|rust|restricted",
+        "tls-failure::client-rust|msrv-1.86|macos-arm64|php|local-only",
+        "tls-failure::client-rust|msrv-1.86|macos-arm64|php|public",
+        "tls-failure::client-rust|msrv-1.86|macos-arm64|php|restricted",
+        "tls-failure::client-rust|msrv-1.86|macos-arm64|rust|local-only",
+        "tls-failure::client-rust|msrv-1.86|macos-arm64|rust|public",
+        "tls-failure::client-rust|msrv-1.86|macos-arm64|rust|restricted",
+        "tls-failure::client-rust|msrv-1.86|windows-x86_64|php|local-only",
+        "tls-failure::client-rust|msrv-1.86|windows-x86_64|php|public",
+        "tls-failure::client-rust|msrv-1.86|windows-x86_64|php|restricted",
+        "tls-failure::client-rust|msrv-1.86|windows-x86_64|rust|local-only",
+        "tls-failure::client-rust|msrv-1.86|windows-x86_64|rust|public",
+        "tls-failure::client-rust|msrv-1.86|windows-x86_64|rust|restricted",
+        "tls-failure::client-rust|rust-1.98.0|linux-aarch64|php|local-only",
+        "tls-failure::client-rust|rust-1.98.0|linux-aarch64|php|public",
+        "tls-failure::client-rust|rust-1.98.0|linux-aarch64|php|restricted",
+        "tls-failure::client-rust|rust-1.98.0|linux-aarch64|rust|local-only",
+        "tls-failure::client-rust|rust-1.98.0|linux-aarch64|rust|public",
+        "tls-failure::client-rust|rust-1.98.0|linux-aarch64|rust|restricted",
+        "tls-failure::client-rust|rust-1.98.0|linux-x86_64|php|local-only",
+        "tls-failure::client-rust|rust-1.98.0|linux-x86_64|php|public",
+        "tls-failure::client-rust|rust-1.98.0|linux-x86_64|php|restricted",
+        "tls-failure::client-rust|rust-1.98.0|linux-x86_64|rust|local-only",
+        "tls-failure::client-rust|rust-1.98.0|linux-x86_64|rust|public",
+        "tls-failure::client-rust|rust-1.98.0|linux-x86_64|rust|restricted",
+        "tls-failure::client-rust|rust-1.98.0|macos-arm64|php|local-only",
+        "tls-failure::client-rust|rust-1.98.0|macos-arm64|php|public",
+        "tls-failure::client-rust|rust-1.98.0|macos-arm64|php|restricted",
+        "tls-failure::client-rust|rust-1.98.0|macos-arm64|rust|local-only",
+        "tls-failure::client-rust|rust-1.98.0|macos-arm64|rust|public",
+        "tls-failure::client-rust|rust-1.98.0|macos-arm64|rust|restricted",
+        "tls-failure::client-rust|rust-1.98.0|windows-x86_64|php|local-only",
+        "tls-failure::client-rust|rust-1.98.0|windows-x86_64|php|public",
+        "tls-failure::client-rust|rust-1.98.0|windows-x86_64|php|restricted",
+        "tls-failure::client-rust|rust-1.98.0|windows-x86_64|rust|local-only",
+        "tls-failure::client-rust|rust-1.98.0|windows-x86_64|rust|public",
+        "tls-failure::client-rust|rust-1.98.0|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            62,
+            74
+          ],
+          "role": "PRODUCTION_TIMEOUT_CONFIGURATION",
+          "source_id": "sha256:2fe511f21069e4fdb06d3146dbb4c4486ea3236c410593a8f6865f21b2f1b1a9",
+          "span_sha256": "fb82c48a5f1daf54ceef731d98d860097ee3bdae243f651010b5099197f7fc7a"
+        },
+        {
+          "lines": [
+            49,
+            58
+          ],
+          "role": "PRODUCTION_TRANSIENT_CLASSIFICATION",
+          "source_id": "sha256:d3c27d30f97226e00f383ab3acb33db1db49e32dc559860e197bc7d47f1d6159",
+          "span_sha256": "bf58245cd32fd19168964ab60109753a2fcaafc7a01ce8e24f7f08d236d06a40"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Measured elapsed-time upper bound",
+        "Successful valid-certificate TLS path",
+        "Actual retry execution or certificate-failure matrix"
+      ],
+      "positive_source_controls": [],
+      "protocol_context": {
+        "capability_association": "TRANSPORT_SECURITY_CONTEXT_NOT_FULL_TLS_QUALIFICATION",
+        "limits": [
+          "HTTPS-to-plain-HTTP rejection does not prove the entire certificate-validation/TLS-version/production scheme matrix. Explicit development HTTP permissions are not a TLS downgrade authorization."
+        ],
+        "requirement_authority": "Existing catalog rejection obligation; Protocol core supplies broader certificate and scheme requirements.",
+        "sources": [
+          {
+            "lines": [
+              470,
+              483
+            ],
+            "role": "NORMATIVE_TLS_AND_SCHEME_CONTEXT",
+            "source_id": "sha256:0261e9d8380959a438d85100590dda95cf1ec2a13e988990edf07f1f2e20766e",
+            "span_sha256": "5f8eff647cea102ce3bd774390448ffc5204bea8bab22c1d4ed6803694b52c23"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "msrv-1.86": 24,
+        "rust-1.98.0": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scenario_id": "tls-failure",
+      "selected_assertion": "http::tests::tls_handshake_failure_is_transient_and_bounded",
+      "selected_sources": [
+        {
+          "lines": [
+            309,
+            329
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:2fe511f21069e4fdb06d3146dbb4c4486ea3236c410593a8f6865f21b2f1b1a9",
+          "span_sha256": "189c48daf239d9a280ab96236ee5f0220744896843907d28257ce1d68e5c8f53"
+        }
+      ],
+      "source_assertions": [
+        "HTTPS request to a plain-HTTP loopback socket returns Http error classified transient; configured timeout is 2,000 ms."
+      ],
+      "standalone_execution_authorized": false
+    },
+    {
+      "case_id": "client-typescript::dns-failure",
+      "catalog_expected_behavior": "Return a bounded classified error without unsafe endpoint fallback.",
+      "component": "client-typescript",
+      "control_limit": "Literal IP success bypasses DNS; it is not a positive hostname-resolution control.",
+      "coverage": "INJECTED_RESOLVER_REFUSAL_PARTIAL_CATALOG",
+      "existing_assignment_ids": [
+        "dns-failure::client-typescript|node-22|linux-aarch64|php|local-only",
+        "dns-failure::client-typescript|node-22|linux-aarch64|php|public",
+        "dns-failure::client-typescript|node-22|linux-aarch64|php|restricted",
+        "dns-failure::client-typescript|node-22|linux-aarch64|rust|local-only",
+        "dns-failure::client-typescript|node-22|linux-aarch64|rust|public",
+        "dns-failure::client-typescript|node-22|linux-aarch64|rust|restricted",
+        "dns-failure::client-typescript|node-22|linux-x86_64|php|local-only",
+        "dns-failure::client-typescript|node-22|linux-x86_64|php|public",
+        "dns-failure::client-typescript|node-22|linux-x86_64|php|restricted",
+        "dns-failure::client-typescript|node-22|linux-x86_64|rust|local-only",
+        "dns-failure::client-typescript|node-22|linux-x86_64|rust|public",
+        "dns-failure::client-typescript|node-22|linux-x86_64|rust|restricted",
+        "dns-failure::client-typescript|node-22|macos-arm64|php|local-only",
+        "dns-failure::client-typescript|node-22|macos-arm64|php|public",
+        "dns-failure::client-typescript|node-22|macos-arm64|php|restricted",
+        "dns-failure::client-typescript|node-22|macos-arm64|rust|local-only",
+        "dns-failure::client-typescript|node-22|macos-arm64|rust|public",
+        "dns-failure::client-typescript|node-22|macos-arm64|rust|restricted",
+        "dns-failure::client-typescript|node-22|windows-x86_64|php|local-only",
+        "dns-failure::client-typescript|node-22|windows-x86_64|php|public",
+        "dns-failure::client-typescript|node-22|windows-x86_64|php|restricted",
+        "dns-failure::client-typescript|node-22|windows-x86_64|rust|local-only",
+        "dns-failure::client-typescript|node-22|windows-x86_64|rust|public",
+        "dns-failure::client-typescript|node-22|windows-x86_64|rust|restricted",
+        "dns-failure::client-typescript|node-24|linux-aarch64|php|local-only",
+        "dns-failure::client-typescript|node-24|linux-aarch64|php|public",
+        "dns-failure::client-typescript|node-24|linux-aarch64|php|restricted",
+        "dns-failure::client-typescript|node-24|linux-aarch64|rust|local-only",
+        "dns-failure::client-typescript|node-24|linux-aarch64|rust|public",
+        "dns-failure::client-typescript|node-24|linux-aarch64|rust|restricted",
+        "dns-failure::client-typescript|node-24|linux-x86_64|php|local-only",
+        "dns-failure::client-typescript|node-24|linux-x86_64|php|public",
+        "dns-failure::client-typescript|node-24|linux-x86_64|php|restricted",
+        "dns-failure::client-typescript|node-24|linux-x86_64|rust|local-only",
+        "dns-failure::client-typescript|node-24|linux-x86_64|rust|public",
+        "dns-failure::client-typescript|node-24|linux-x86_64|rust|restricted",
+        "dns-failure::client-typescript|node-24|macos-arm64|php|local-only",
+        "dns-failure::client-typescript|node-24|macos-arm64|php|public",
+        "dns-failure::client-typescript|node-24|macos-arm64|php|restricted",
+        "dns-failure::client-typescript|node-24|macos-arm64|rust|local-only",
+        "dns-failure::client-typescript|node-24|macos-arm64|rust|public",
+        "dns-failure::client-typescript|node-24|macos-arm64|rust|restricted",
+        "dns-failure::client-typescript|node-24|windows-x86_64|php|local-only",
+        "dns-failure::client-typescript|node-24|windows-x86_64|php|public",
+        "dns-failure::client-typescript|node-24|windows-x86_64|php|restricted",
+        "dns-failure::client-typescript|node-24|windows-x86_64|rust|local-only",
+        "dns-failure::client-typescript|node-24|windows-x86_64|rust|public",
+        "dns-failure::client-typescript|node-24|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            67,
+            105
+          ],
+          "role": "PRODUCTION_RESOLVER",
+          "source_id": "sha256:95d556c384825899b096958000b64fc2263b2a749aab09aa28878a0abb19fd43",
+          "span_sha256": "5834fabe9b43cd6bfeb1c221b82a784204df1a475fbe6483fcdf00bacbd0ca07"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Real platform DNS behavior",
+        "Measured timeout or full request/fallback sequence",
+        "Successful nonliteral hostname lookup in the selected body"
+      ],
+      "positive_source_controls": [
+        {
+          "lines": [
+            26,
+            29
+          ],
+          "role": "ADJACENT_LITERAL_ADDRESS_SUCCESS",
+          "source_id": "sha256:41e346c36593c54aac549889f5a2d7fc7ab48d8ccce16a4c6053dd3a5ab0b3b7",
+          "span_sha256": "7925d9649f29ace40b1e1daa423a784d430ba48e6cd012a7d5f0da2eb99521a9"
+        }
+      ],
+      "protocol_context": {
+        "capability_association": "NETWORK_BOUNDARY_CONTEXT_NOT_COMPLETE_CAPABILITY_JOIN",
+        "limits": [
+          "The cited retry table is explicitly proxy-to-adapter, not an automatic mandate for all SDK resolvers. Catalog DNS classification/bound/fallback obligations remain separately scoped."
+        ],
+        "requirement_authority": "Existing qualification catalog expected_behavior, not a new universal SDK retry policy.",
+        "sources": [
+          {
+            "lines": [
+              353,
+              373
+            ],
+            "role": "PROXY_RETRY_CONTEXT_NOT_SDK_REQUIREMENT",
+            "source_id": "sha256:7f5179e970137a9c4954bcb8ce8ce24cc71c024243210e50c1a7974fb3bff461",
+            "span_sha256": "c3e31400cdcc918c9c1af002d68b12e9ef9557b31c4b19287347ae8063eb2ba9"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "node-22": 24,
+        "node-24": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scenario_id": "dns-failure",
+      "selected_assertion": "fails closed when DNS resolution fails",
+      "selected_sources": [
+        {
+          "lines": [
+            31,
+            40
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:41e346c36593c54aac549889f5a2d7fc7ab48d8ccce16a4c6053dd3a5ab0b3b7",
+          "span_sha256": "a52ae30f77962999d38b1cd3b968d0da04591c9e77f5a802fd1bef7a92018499"
+        }
+      ],
+      "source_assertions": [
+        "Injected lookup rejection causes resolveEndpoint to reject with hostname-resolution-failed text."
+      ],
+      "standalone_execution_authorized": false
+    },
+    {
+      "case_id": "client-typescript::dynamic-public-route-readiness",
+      "catalog_expected_behavior": "Withhold credentials and discovery eligibility for a newly allocated public route until its listener and external health endpoint are serving, then recover registration automatically without a manual secret transfer.",
+      "component": "client-typescript",
+      "control_limit": "Selected tick is replaced; adjacent healthy tick control does not exercise the recovery route.",
+      "coverage": "LISTENER_TRIGGERED_INITIAL_TICK_SUBPROPERTY_ONLY",
+      "existing_assignment_ids": [
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-aarch64|php|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-aarch64|php|public",
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-aarch64|php|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-aarch64|rust|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-aarch64|rust|public",
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-aarch64|rust|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-x86_64|php|public",
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-typescript|node-22|linux-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-22|macos-arm64|php|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-22|macos-arm64|php|public",
+        "dynamic-public-route-readiness::client-typescript|node-22|macos-arm64|php|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-22|macos-arm64|rust|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-22|macos-arm64|rust|public",
+        "dynamic-public-route-readiness::client-typescript|node-22|macos-arm64|rust|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-22|windows-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-22|windows-x86_64|php|public",
+        "dynamic-public-route-readiness::client-typescript|node-22|windows-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-22|windows-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-22|windows-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-typescript|node-22|windows-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-aarch64|php|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-aarch64|php|public",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-aarch64|php|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-aarch64|rust|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-aarch64|rust|public",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-aarch64|rust|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-x86_64|php|public",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-typescript|node-24|linux-x86_64|rust|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-24|macos-arm64|php|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-24|macos-arm64|php|public",
+        "dynamic-public-route-readiness::client-typescript|node-24|macos-arm64|php|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-24|macos-arm64|rust|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-24|macos-arm64|rust|public",
+        "dynamic-public-route-readiness::client-typescript|node-24|macos-arm64|rust|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-24|windows-x86_64|php|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-24|windows-x86_64|php|public",
+        "dynamic-public-route-readiness::client-typescript|node-24|windows-x86_64|php|restricted",
+        "dynamic-public-route-readiness::client-typescript|node-24|windows-x86_64|rust|local-only",
+        "dynamic-public-route-readiness::client-typescript|node-24|windows-x86_64|rust|public",
+        "dynamic-public-route-readiness::client-typescript|node-24|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            1194,
+            1209
+          ],
+          "role": "PRODUCTION_LISTENER_TICK_WIRING",
+          "source_id": "sha256:59631ff00668914c998b981c4c7b9832ab42d4d36ef2dcd8a71303917678de2b",
+          "span_sha256": "570760b6e378d90e48d32ce5f72c43de8e173445dcb9b36196099c5dfb0ba646"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Actual register/heartbeat recovery implementation in that selected body",
+        "Credential withholding or external health serving",
+        "Complete public-route lifecycle"
+      ],
+      "positive_source_controls": [
+        {
+          "lines": [
+            389,
+            402
+          ],
+          "role": "ADJACENT_HEALTHY_TICK_NO_REREGISTRATION",
+          "source_id": "sha256:539c921cdc6a62a8d723cc32b90eddca83159b29c970976f56a461997989de3e",
+          "span_sha256": "41a9f4bf6a8a3907cf87e640f51c9a855f9e3ca8a5c553aabd2e65e39bc1a7a1"
+        }
+      ],
+      "protocol_context": {
+        "capability_association": "provider-route-readiness",
+        "limits": [
+          "Automatic token recovery, admission liveness, credential withholding and current discovery eligibility are separate obligations. Selected SDK assertions cover only limited recovery/scheduling subproperties."
+        ],
+        "requirement_authority": "Existing catalog combined lifecycle obligation and accepted Protocol liveness/current-eligibility boundary.",
+        "sources": [
+          {
+            "lines": [
+              177,
+              182
+            ],
+            "role": "NORMATIVE_LIVENESS_BEFORE_TOKEN",
+            "source_id": "sha256:0261e9d8380959a438d85100590dda95cf1ec2a13e988990edf07f1f2e20766e",
+            "span_sha256": "7eda045e37f23258b4e4ba5b75a92eeed5d20e949ad50534994df0c629237acb"
+          },
+          {
+            "lines": [
+              34,
+              55
+            ],
+            "role": "ACCEPTED_CURRENT_ROUTE_ELIGIBILITY_BOUNDARY",
+            "source_id": "sha256:1fa7d52f5dcf78f7207dd2282f2c48f739d679b28ddf976a57907cef311cd9ab",
+            "span_sha256": "f52a8c7b173399e564e9bc48a071d9e865733fb9f6611a5920b049d8e033cd8a"
+          },
+          {
+            "lines": [
+              342,
+              349
+            ],
+            "role": "NORMATIVE_HEARTBEAT_RECONNECT_CONTEXT",
+            "source_id": "sha256:7f5179e970137a9c4954bcb8ce8ce24cc71c024243210e50c1a7974fb3bff461",
+            "span_sha256": "1dea692d61780610d642119d42194dfaefa7f904c08e6ac96acb874085756f42"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "node-22": 24,
+        "node-24": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scenario_id": "dynamic-public-route-readiness",
+      "selected_assertion": "starts empty-token recovery as soon as the listener is ready",
+      "selected_sources": [
+        {
+          "lines": [
+            363,
+            387
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:539c921cdc6a62a8d723cc32b90eddca83159b29c970976f56a461997989de3e",
+          "span_sha256": "1f64d3e69708166b030df0046faceda4df52ddcb7f3e1cbc425f3ea387c23d71"
+        }
+      ],
+      "source_assertions": [
+        "On a loopback listener, a replaced heartbeat tick is called with empty token before a one-second wait expires."
+      ],
+      "standalone_execution_authorized": false
+    },
+    {
+      "case_id": "client-typescript::partial-response",
+      "catalog_expected_behavior": "Reject truncated or schema-invalid responses.",
+      "component": "client-typescript",
+      "control_limit": "Routed-fetch source control is not a new native HTTP observation.",
+      "coverage": "SCHEMA_INVALID_OR_BRANCH_NOT_TRUNCATION",
+      "existing_assignment_ids": [
+        "partial-response::client-typescript|node-22|linux-aarch64|php|local-only",
+        "partial-response::client-typescript|node-22|linux-aarch64|php|public",
+        "partial-response::client-typescript|node-22|linux-aarch64|php|restricted",
+        "partial-response::client-typescript|node-22|linux-aarch64|rust|local-only",
+        "partial-response::client-typescript|node-22|linux-aarch64|rust|public",
+        "partial-response::client-typescript|node-22|linux-aarch64|rust|restricted",
+        "partial-response::client-typescript|node-22|linux-x86_64|php|local-only",
+        "partial-response::client-typescript|node-22|linux-x86_64|php|public",
+        "partial-response::client-typescript|node-22|linux-x86_64|php|restricted",
+        "partial-response::client-typescript|node-22|linux-x86_64|rust|local-only",
+        "partial-response::client-typescript|node-22|linux-x86_64|rust|public",
+        "partial-response::client-typescript|node-22|linux-x86_64|rust|restricted",
+        "partial-response::client-typescript|node-22|macos-arm64|php|local-only",
+        "partial-response::client-typescript|node-22|macos-arm64|php|public",
+        "partial-response::client-typescript|node-22|macos-arm64|php|restricted",
+        "partial-response::client-typescript|node-22|macos-arm64|rust|local-only",
+        "partial-response::client-typescript|node-22|macos-arm64|rust|public",
+        "partial-response::client-typescript|node-22|macos-arm64|rust|restricted",
+        "partial-response::client-typescript|node-22|windows-x86_64|php|local-only",
+        "partial-response::client-typescript|node-22|windows-x86_64|php|public",
+        "partial-response::client-typescript|node-22|windows-x86_64|php|restricted",
+        "partial-response::client-typescript|node-22|windows-x86_64|rust|local-only",
+        "partial-response::client-typescript|node-22|windows-x86_64|rust|public",
+        "partial-response::client-typescript|node-22|windows-x86_64|rust|restricted",
+        "partial-response::client-typescript|node-24|linux-aarch64|php|local-only",
+        "partial-response::client-typescript|node-24|linux-aarch64|php|public",
+        "partial-response::client-typescript|node-24|linux-aarch64|php|restricted",
+        "partial-response::client-typescript|node-24|linux-aarch64|rust|local-only",
+        "partial-response::client-typescript|node-24|linux-aarch64|rust|public",
+        "partial-response::client-typescript|node-24|linux-aarch64|rust|restricted",
+        "partial-response::client-typescript|node-24|linux-x86_64|php|local-only",
+        "partial-response::client-typescript|node-24|linux-x86_64|php|public",
+        "partial-response::client-typescript|node-24|linux-x86_64|php|restricted",
+        "partial-response::client-typescript|node-24|linux-x86_64|rust|local-only",
+        "partial-response::client-typescript|node-24|linux-x86_64|rust|public",
+        "partial-response::client-typescript|node-24|linux-x86_64|rust|restricted",
+        "partial-response::client-typescript|node-24|macos-arm64|php|local-only",
+        "partial-response::client-typescript|node-24|macos-arm64|php|public",
+        "partial-response::client-typescript|node-24|macos-arm64|php|restricted",
+        "partial-response::client-typescript|node-24|macos-arm64|rust|local-only",
+        "partial-response::client-typescript|node-24|macos-arm64|rust|public",
+        "partial-response::client-typescript|node-24|macos-arm64|rust|restricted",
+        "partial-response::client-typescript|node-24|windows-x86_64|php|local-only",
+        "partial-response::client-typescript|node-24|windows-x86_64|php|public",
+        "partial-response::client-typescript|node-24|windows-x86_64|php|restricted",
+        "partial-response::client-typescript|node-24|windows-x86_64|rust|local-only",
+        "partial-response::client-typescript|node-24|windows-x86_64|rust|public",
+        "partial-response::client-typescript|node-24|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            69,
+            104
+          ],
+          "role": "PRODUCTION_HEALTH_VALIDATOR",
+          "source_id": "sha256:6fc3a591280c4146bce50812faa3b913399932e75d99162aede0745de5b8b9fd",
+          "span_sha256": "513fe9c0d827b01f5d6903ca5bee13158550491c95af26f10064a35240fd3886"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Truncated TCP/body or streaming failure handling",
+        "Universal model-field requirements for non-model intents"
+      ],
+      "positive_source_controls": [
+        {
+          "lines": [
+            92,
+            101
+          ],
+          "role": "ADJACENT_COMPLETE_SCHEMA_SUCCESS",
+          "source_id": "sha256:40520bbcc5af96a71126ecc64c2c9db10f4ff1c9d4536a5aa4cf7b9d1ea19d7b",
+          "span_sha256": "cf8d2082bb94e917ccd256a6d6c4b51dcd66edf38be31a84868d4f3baab3a42b"
+        }
+      ],
+      "protocol_context": {
+        "capability_association": "SCHEMA_VALIDATION_CONTEXT_NOT_FULL_INTENT_CONTRACT",
+        "limits": [
+          "The core passage addresses registration capabilities, not a direct definition of the health output schema. The selected SDK health validator defines this finite check; do not generalize models to all non-model intents."
+        ],
+        "requirement_authority": "Catalog permits truncated OR schema-invalid response rejection; selected source exercises schema-invalid health output only.",
+        "sources": [
+          {
+            "lines": [
+              129,
+              147
+            ],
+            "role": "CONDITIONAL_MODEL_FIELD_CONTEXT_NOT_HEALTH_SCHEMA_AUTHORITY",
+            "source_id": "sha256:0261e9d8380959a438d85100590dda95cf1ec2a13e988990edf07f1f2e20766e",
+            "span_sha256": "7af657551c96a00e90ed66a5343e39ba7765472849aa1336ba3d7d85bbd08b82"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "node-22": 24,
+        "node-24": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scenario_id": "partial-response",
+      "selected_assertion": "fails when required field missing",
+      "selected_sources": [
+        {
+          "lines": [
+            103,
+            113
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:40520bbcc5af96a71126ecc64c2c9db10f4ff1c9d4536a5aa4cf7b9d1ea19d7b",
+          "span_sha256": "8bb85324a2894a03a9892cebed879c853a5f8a2898399c297807a0ecdff0d445"
+        }
+      ],
+      "source_assertions": [
+        "Routed fetch fixture supplies complete HTTP 200 JSON lacking models; CONF-HEALTH-01 fails and reports models."
+      ],
+      "standalone_execution_authorized": false
+    },
+    {
+      "case_id": "client-typescript::tls-failure",
+      "catalog_expected_behavior": "Reject invalid TLS rather than downgrading transport.",
+      "component": "client-typescript",
+      "control_limit": "A rejected promise is not positive valid-TLS interoperability.",
+      "coverage": "TLS_PROTOCOL_MISMATCH_REJECTION_BRANCH_ONLY",
+      "existing_assignment_ids": [
+        "tls-failure::client-typescript|node-22|linux-aarch64|php|local-only",
+        "tls-failure::client-typescript|node-22|linux-aarch64|php|public",
+        "tls-failure::client-typescript|node-22|linux-aarch64|php|restricted",
+        "tls-failure::client-typescript|node-22|linux-aarch64|rust|local-only",
+        "tls-failure::client-typescript|node-22|linux-aarch64|rust|public",
+        "tls-failure::client-typescript|node-22|linux-aarch64|rust|restricted",
+        "tls-failure::client-typescript|node-22|linux-x86_64|php|local-only",
+        "tls-failure::client-typescript|node-22|linux-x86_64|php|public",
+        "tls-failure::client-typescript|node-22|linux-x86_64|php|restricted",
+        "tls-failure::client-typescript|node-22|linux-x86_64|rust|local-only",
+        "tls-failure::client-typescript|node-22|linux-x86_64|rust|public",
+        "tls-failure::client-typescript|node-22|linux-x86_64|rust|restricted",
+        "tls-failure::client-typescript|node-22|macos-arm64|php|local-only",
+        "tls-failure::client-typescript|node-22|macos-arm64|php|public",
+        "tls-failure::client-typescript|node-22|macos-arm64|php|restricted",
+        "tls-failure::client-typescript|node-22|macos-arm64|rust|local-only",
+        "tls-failure::client-typescript|node-22|macos-arm64|rust|public",
+        "tls-failure::client-typescript|node-22|macos-arm64|rust|restricted",
+        "tls-failure::client-typescript|node-22|windows-x86_64|php|local-only",
+        "tls-failure::client-typescript|node-22|windows-x86_64|php|public",
+        "tls-failure::client-typescript|node-22|windows-x86_64|php|restricted",
+        "tls-failure::client-typescript|node-22|windows-x86_64|rust|local-only",
+        "tls-failure::client-typescript|node-22|windows-x86_64|rust|public",
+        "tls-failure::client-typescript|node-22|windows-x86_64|rust|restricted",
+        "tls-failure::client-typescript|node-24|linux-aarch64|php|local-only",
+        "tls-failure::client-typescript|node-24|linux-aarch64|php|public",
+        "tls-failure::client-typescript|node-24|linux-aarch64|php|restricted",
+        "tls-failure::client-typescript|node-24|linux-aarch64|rust|local-only",
+        "tls-failure::client-typescript|node-24|linux-aarch64|rust|public",
+        "tls-failure::client-typescript|node-24|linux-aarch64|rust|restricted",
+        "tls-failure::client-typescript|node-24|linux-x86_64|php|local-only",
+        "tls-failure::client-typescript|node-24|linux-x86_64|php|public",
+        "tls-failure::client-typescript|node-24|linux-x86_64|php|restricted",
+        "tls-failure::client-typescript|node-24|linux-x86_64|rust|local-only",
+        "tls-failure::client-typescript|node-24|linux-x86_64|rust|public",
+        "tls-failure::client-typescript|node-24|linux-x86_64|rust|restricted",
+        "tls-failure::client-typescript|node-24|macos-arm64|php|local-only",
+        "tls-failure::client-typescript|node-24|macos-arm64|php|public",
+        "tls-failure::client-typescript|node-24|macos-arm64|php|restricted",
+        "tls-failure::client-typescript|node-24|macos-arm64|rust|local-only",
+        "tls-failure::client-typescript|node-24|macos-arm64|rust|public",
+        "tls-failure::client-typescript|node-24|macos-arm64|rust|restricted",
+        "tls-failure::client-typescript|node-24|windows-x86_64|php|local-only",
+        "tls-failure::client-typescript|node-24|windows-x86_64|php|public",
+        "tls-failure::client-typescript|node-24|windows-x86_64|php|restricted",
+        "tls-failure::client-typescript|node-24|windows-x86_64|rust|local-only",
+        "tls-failure::client-typescript|node-24|windows-x86_64|rust|public",
+        "tls-failure::client-typescript|node-24|windows-x86_64|rust|restricted"
+      ],
+      "full_catalog_obligation_proven": false,
+      "helper_sources": [
+        {
+          "lines": [
+            106,
+            145
+          ],
+          "role": "PRODUCTION_TLS_REQUEST_CONFIGURATION",
+          "source_id": "sha256:95d556c384825899b096958000b64fc2263b2a749aab09aa28878a0abb19fd43",
+          "span_sha256": "be457329d7a95e94ea568ee7d4aac0ca0154bfc8c9189671620d9535f139295d"
+        }
+      ],
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "not_established": [
+        "Measured deadline",
+        "Exact error class or retryability",
+        "Successful valid-certificate TLS path",
+        "Universal cleanup from source alone"
+      ],
+      "positive_source_controls": [],
+      "protocol_context": {
+        "capability_association": "TRANSPORT_SECURITY_CONTEXT_NOT_FULL_TLS_QUALIFICATION",
+        "limits": [
+          "HTTPS-to-plain-HTTP rejection does not prove the entire certificate-validation/TLS-version/production scheme matrix. Explicit development HTTP permissions are not a TLS downgrade authorization."
+        ],
+        "requirement_authority": "Existing catalog rejection obligation; Protocol core supplies broader certificate and scheme requirements.",
+        "sources": [
+          {
+            "lines": [
+              470,
+              483
+            ],
+            "role": "NORMATIVE_TLS_AND_SCHEME_CONTEXT",
+            "source_id": "sha256:0261e9d8380959a438d85100590dda95cf1ec2a13e988990edf07f1f2e20766e",
+            "span_sha256": "5f8eff647cea102ce3bd774390448ffc5204bea8bab22c1d4ed6803694b52c23"
+          }
+        ]
+      },
+      "raw_private_outputs_reinspected": false,
+      "recorded_mode_caveat": "Coordinate labels are recorded contexts, not proof the selected mock/unit body exercises every real Directory mode.",
+      "recorded_runtimes": {
+        "node-22": 24,
+        "node-24": 24
+      },
+      "recorded_targets": {
+        "linux-aarch64": 12,
+        "linux-x86_64": 12,
+        "macos-arm64": 12,
+        "windows-x86_64": 12
+      },
+      "scenario_id": "tls-failure",
+      "selected_assertion": "TLS handshake failure is bounded and visible",
+      "selected_sources": [
+        {
+          "lines": [
+            101,
+            119
+          ],
+          "role": "SELECTED_ASSERTION",
+          "source_id": "sha256:41e346c36593c54aac549889f5a2d7fc7ab48d8ccce16a4c6053dd3a5ab0b3b7",
+          "span_sha256": "d69e0bfbf3c4e53db59703c3d04e9fdc4cf8aa11de62a1a5e1ca6ebaa483381f"
+        }
+      ],
+      "source_assertions": [
+        "Pinned HTTPS request to a plain-HTTP loopback server rejects; configured timeout is 2,000 ms; loopback override restoration is in finally."
+      ],
+      "standalone_execution_authorized": false
+    }
+  ],
+  "controlled_review_sha256": "ec2f0f85554cafa18787771038aea155cfda1cd52decb61536d9dd2f9c740410",
+  "counts": {
+    "case_definitions": 12,
+    "coordinate_references_per_target": 192,
+    "existing_coordinate_references": 768,
+    "source_findings": 5,
+    "source_references": 33
+  },
+  "findings": [
+    {
+      "cases": [
+        "client-python::dns-failure",
+        "client-rust::dns-failure",
+        "client-typescript::dns-failure"
+      ],
+      "classification": "OBSERVED_DIFFERENCE",
+      "id": "SDK-NET-SOURCE-01",
+      "limits": [
+        "No real resolver failure, measured bound or complete unsafe-fallback sequence established by this source selection."
+      ],
+      "scope": "Selected DNS assertion mechanisms, not observed platform resolver behavior.",
+      "statement": "Python/Rust test a resolver-error string classifier; TypeScript injects a failing resolver into endpoint resolution. These are not matched end-to-end DNS experiments."
+    },
+    {
+      "cases": [
+        "client-python::tls-failure",
+        "client-rust::tls-failure",
+        "client-typescript::tls-failure"
+      ],
+      "classification": "OBSERVED_DIFFERENCE",
+      "id": "SDK-NET-SOURCE-02",
+      "limits": [
+        "No valid-certificate success, TLS1.3 negotiation matrix or actual retry experiment established here."
+      ],
+      "scope": "Selected TLS negative assertions.",
+      "statement": "All three select HTTPS-to-plain-HTTP rejection. Python/Rust additionally assert an error classification; TypeScript asserts rejection only. A configured 2,000 ms timeout is not a measured elapsed bound."
+    },
+    {
+      "cases": [
+        "client-python::partial-response",
+        "client-rust::partial-response",
+        "client-typescript::partial-response"
+      ],
+      "classification": "COMMON_SELECTED_SOURCE_ASSERTION",
+      "id": "SDK-NET-SOURCE-03",
+      "limits": [
+        "Truncation is the alternative catalog branch, not silently executed or required by this mapping. Model fields are not universal requirements for every non-model intent.",
+        "Project-owned source parity is not independent third-party interoperability."
+      ],
+      "scope": "Source assertions for the schema-invalid branch of the finite catalog; no new runtime observation.",
+      "statement": "All three selected tests reject a complete HTTP 200 health object missing models and assert models in the failure message. This satisfies the described assertion branch, not proof of every response failure mode."
+    },
+    {
+      "cases": [
+        "client-python::dynamic-public-route-readiness",
+        "client-rust::dynamic-public-route-readiness",
+        "client-typescript::dynamic-public-route-readiness"
+      ],
+      "classification": "OBSERVED_DIFFERENCE",
+      "id": "SDK-NET-SOURCE-04",
+      "limits": [
+        "Independent Directory admission tests remain separate evidence; no whole multi-component lifecycle claim follows."
+      ],
+      "scope": "Selected empty-token recovery assertions.",
+      "statement": "Python tests mocked recovery-loop sequencing, TypeScript listener-triggered mocked tick and Rust a two-input initial-delay decision. They cannot alone substantiate the whole credential-withholding/public-health/admission/recovery catalog contract."
+    },
+    {
+      "cases": [
+        "client-python::partial-response",
+        "client-rust::partial-response",
+        "client-typescript::partial-response"
+      ],
+      "classification": "OBSERVED_DIFFERENCE",
+      "id": "SDK-NET-SOURCE-05",
+      "limits": [
+        "This is not a demonstrated current product defect or normative violation. Normative applicability, additional tests and runtime behavior need separate assessment."
+      ],
+      "scope": "Static health-validator status acceptance paths; not target response observations.",
+      "statement": "Python helper requires status200; TypeScript resp.ok and Rust is_success accept success status ranges before checking fields. The selected tests use 200 and do not exercise another 2xx response."
+    }
+  ],
+  "historical_inventory_complete": false,
+  "independent_interoperability_established": false,
+  "new_qualification_credit": 0,
+  "new_runtime_executions": 0,
+  "programme_complete": false,
+  "public_analysis_sha256": "22da722de8d0c203e6eb7aca041551b5b9dce3f606523f2bcd4b1df64e887438",
+  "public_reproduction_limit": "Public source links and original public assignment metadata are inspectable. The complete private archive and raw execution outputs are not supplied or newly reconstructed.",
+  "schema": "iicp.postcert-sdk-network-readiness-source-review.v1",
+  "sources": [
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "spec/v1.9/iicp-core.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "72ecc4746db302b33196cb06294e1765458542271912ca772b846e9fa99914c3",
+      "source_id": "sha256:0261e9d8380959a438d85100590dda95cf1ec2a13e988990edf07f1f2e20766e",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/spec/v1.9/iicp-core.md"
+    },
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/tunnel.py",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "489d4749771c8ac365359628087458b84573453cb509833d4e1c1e4adbad32b0",
+      "source_id": "sha256:05d1dbad4ba085d4d6b8e479f0c16de36251ff3ca51cfe87db3c4cf4fabed1dd",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/tunnel.py"
+    },
+    {
+      "accepted_harness_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/conformance.rs",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "f49a572eda4a47d76ca7ad948ffa9a5a1a3379b133e3e9c64322e55971dfcbad",
+      "source_id": "sha256:0d8de4f7434dd56ce48e699f5192918d97f832ae3e0cbf87c8ca3654967df515",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/conformance.rs"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "docs/architecture/directory-state-semantics.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "cd36bbd4cf0119d558247eaf3685c5971722506d37bdf820f972b94eef5f73dc",
+      "source_id": "sha256:1fa7d52f5dcf78f7207dd2282f2c48f739d679b28ddf976a57907cef311cd9ab",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/docs/architecture/directory-state-semantics.md"
+    },
+    {
+      "commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "path": "scripts/pre1_package_execution.py",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df",
+      "source_id": "sha256:211931e6e3985a11854f909ba522a3314b53848d39babf97582a91947b7726ba",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/4020dadd150d7975be468f04a588dfa5346899a5/scripts/pre1_package_execution.py"
+    },
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/_http.py",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "2276cf7759c39cc28ce4b742b4536d44ea463fb6859a7165d8a267404aa2c7a2",
+      "source_id": "sha256:2da43a9e628b029db85c487c4db27a03f463a215ecb0d29db0d216850853c1ca",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/_http.py"
+    },
+    {
+      "commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "path": "scripts/pre1_package_execution.py",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df",
+      "source_id": "sha256:2e17671404cd9eec70730de0bb23316638c47f02f9805f4de8c1a95077b6805f",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/23a57f7c17cabd9867514d85f248004cdb40617e/scripts/pre1_package_execution.py"
+    },
+    {
+      "accepted_harness_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/http.rs",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "12e636998dfc287e30312af06e6fa7456153746273a12ae0c4ee6869ae24f7cc",
+      "source_id": "sha256:2fe511f21069e4fdb06d3146dbb4c4486ea3236c410593a8f6865f21b2f1b1a9",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/http.rs"
+    },
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/node.py",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "f19b7f06154297271391a4f6cc8bb0210c20056da23a7363e4ef8e1ab0fc8e02",
+      "source_id": "sha256:3e72b8994bceb67091eab3a769e0f09dc2b2f53573d4ea4976eeb6a8d8ea358b",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/node.py"
+    },
+    {
+      "accepted_harness_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "tests/conformance.test.ts",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "52deb552be9237a94b65df285b165a2435119e9f20b61fbdcfc6741786a0c513",
+      "source_id": "sha256:40520bbcc5af96a71126ecc64c2c9db10f4ff1c9d4536a5aa4cf7b9d1ea19d7b",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/conformance.test.ts"
+    },
+    {
+      "accepted_harness_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "tests/endpoint_security.test.ts",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "c95d20e51f0de161a0d18a4a61e5d1a29a0201b938cdded6898a2b83b5724c0c",
+      "source_id": "sha256:41e346c36593c54aac549889f5a2d7fc7ab48d8ccce16a4c6053dd3a5ab0b3b7",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/endpoint_security.test.ts"
+    },
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/endpoint_security.py",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "65cdc0307e3ba97955d33d5afee006bbc8486eac1aea877cf26bdc574bd9cc35",
+      "source_id": "sha256:4336573ea6dfe974905d399c0f2c45acf988454a54d7b1e13ba4b7729ccb6c66",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/endpoint_security.py"
+    },
+    {
+      "commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "path": "scripts/run_pre1_qualification_case.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "76fb9ce99cb76216c97de8f52c5ee40e4160cad75c116f839cadfafd61dc45b3",
+      "source_id": "sha256:508ed87bf2e4189c473652826f0844f190e0c73dd34ae626ad4e08083c5b217c",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/0cf46aae4beba4304de55ef99cc3a22f72784f30/scripts/run_pre1_qualification_case.py"
+    },
+    {
+      "accepted_harness_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "tests/serve.test.ts",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "85abe683fe103e0cf3596aff28424d8ad5e4ce390dfa436ac3ab7c08bfe82099",
+      "source_id": "sha256:539c921cdc6a62a8d723cc32b90eddca83159b29c970976f56a461997989de3e",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/tests/serve.test.ts"
+    },
+    {
+      "accepted_harness_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "src/node.ts",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "2e607e4fb654afed109c341ab036fb246db69f1bd952c38844e65ffe527a8f52",
+      "source_id": "sha256:59631ff00668914c998b981c4c7b9832ab42d4d36ef2dcd8a71303917678de2b",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/node.ts"
+    },
+    {
+      "accepted_harness_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/tunnel.rs",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "c81efe3f57d4c4a4fe68416dd801d2d978cbc907b7de0af89657e17f42664337",
+      "source_id": "sha256:5b9d6d334ad144a367f7b18eb7f1a93834229737bbf7b59e4f3153f66c64aa01",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/tunnel.rs"
+    },
+    {
+      "accepted_harness_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "src/conformance.ts",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "f21dd906d0373ca2ff694d25ebc54c58daae31628cc4cb0ca6071f12f672d5cb",
+      "source_id": "sha256:6fc3a591280c4146bce50812faa3b913399932e75d99162aede0745de5b8b9fd",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/conformance.ts"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "spec/v1.9/iicp-semantics.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "b05878cf5c1018f6ac6ea1615f39b0396e2a8fdd8a59190e0c0a59675943a790",
+      "source_id": "sha256:7f5179e970137a9c4954bcb8ce8ce24cc71c024243210e50c1a7974fb3bff461",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/spec/v1.9/iicp-semantics.md"
+    },
+    {
+      "accepted_harness_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/node.rs",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "1cbe1e77c0c90781a57bbc5eba67cd37c3da37671bbb1e85bd2fcb84ebe88cca",
+      "source_id": "sha256:8999cc717eb36d33467fb2a82531c0de1e25a2e33d5c01309a32713cde813953",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/node.rs"
+    },
+    {
+      "commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "path": "scripts/run_pre1_qualification_case.py",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "1045af3516105a33ae2d08c228dc5a3825dcafd6b9517e1139656d14fd3a3b1b",
+      "source_id": "sha256:8a3d7ff8c09e7371fdcd7e5daba8ef60f5ebe87ded515698a88f035b509c0b5b",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/4020dadd150d7975be468f04a588dfa5346899a5/scripts/run_pre1_qualification_case.py"
+    },
+    {
+      "accepted_harness_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "tests/conformance_tests.rs",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "dbba2ac4584d250184996dc3dec80dc14830739c0e247af880d9940ffecc45fd",
+      "source_id": "sha256:8e618776a6e96be0e43042b57d79130915b55f5c4897ffe831a5c8bb79777ff8",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/conformance_tests.rs"
+    },
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "tests/test_serve.py",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "641ead1a022bd2c5445758b9746be480e254df6617dabfb4b9524c8ba5331119",
+      "source_id": "sha256:9133dfb80fd167e81679427c7bfd95f64f8eaa76a55c05692cdd68e4356f282d",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_serve.py"
+    },
+    {
+      "accepted_harness_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "src/endpoint_security.ts",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "2faf4780dd005a93a109222d506d803a004c03d4a60f659f788fcd3c2a61ad59",
+      "source_id": "sha256:95d556c384825899b096958000b64fc2263b2a749aab09aa28878a0abb19fd43",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/endpoint_security.ts"
+    },
+    {
+      "commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "path": "scripts/run_pre1_qualification_case.py",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "7236effff67e6b8459008f1f649eefc4a0f18f54435e660e875c873b740ada7e",
+      "source_id": "sha256:b02b8e5302ea6f023c8f52753ef8ea63b0a2bb28d263e9841ea94585f5686df9",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/23a57f7c17cabd9867514d85f248004cdb40617e/scripts/run_pre1_qualification_case.py"
+    },
+    {
+      "accepted_harness_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/endpoint_security.rs",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "d1ecb9c60544b2cdd2df2df3a205162f9896b41bfd8352659ff7c5acfd5093b7",
+      "source_id": "sha256:b4f3e27f75760f4b7e6e1ef823534d1e4f74e84ac24dba7d29a8ccda74a3a539",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/endpoint_security.rs"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "spec/v1.9/iicp-dir.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "80f3a0bb60f08640f89b87993c4e61c2364e16334097cb644560d23e8023efd8",
+      "source_id": "sha256:c348bfec3d28444617ce729a998677a56041eb4091e90db98e83adbbff7b4088",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/spec/v1.9/iicp-dir.md"
+    },
+    {
+      "accepted_harness_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/errors.rs",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "4b629f47afb639e5acb838b6c94399c3b07453c823d0fcaeb982251806ccc47e",
+      "source_id": "sha256:d3c27d30f97226e00f383ab3acb33db1db49e32dc559860e197bc7d47f1d6159",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/errors.rs"
+    },
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "tests/test_conformance.py",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "c3ea85a1279e48ae18a4ae7db420953f26228c0bbf7f733fdc864069824b18d2",
+      "source_id": "sha256:e03db4197a8277be7b83033a3ec431578806f6b8c4be4cab2f5b08e54c929b64",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_conformance.py"
+    },
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "tests/test_endpoint_security.py",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "59014b789635055cd31af8c15eac0f6593746e28d38a18422ba5c46dcda35b94",
+      "source_id": "sha256:e3fc53735958dcff92a97dab59272b3f4a9fe9dc054e4ed119b76714fdfa4c5f",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_endpoint_security.py"
+    },
+    {
+      "commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "path": "scripts/pre1_package_execution.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df",
+      "source_id": "sha256:e83fdd5eb56fcc52a7ccd4b7c544f6066f585bb94e529081b9fc3693888e255c",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/0cf46aae4beba4304de55ef99cc3a22f72784f30/scripts/pre1_package_execution.py"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "docs/architecture/directory-state-semantics-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "45c5328611249b5346924e8603803b08db26db0af1fafba15d0a1774454db030",
+      "source_id": "sha256:e9a3c6617b55815f4a43af4b7cf599691db1adb62b58e2b91b698807855852f9",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/docs/architecture/directory-state-semantics-v1.json"
+    },
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "tests/test_tunnel.py",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "50e50bd6a853541e6c53f548d6ac646cff954defff6919d4415072835c2bac66",
+      "source_id": "sha256:f0790f24db55a07f08161b24ed5134d634f8a07565a5a1c2791514ce90109f67",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/tests/test_tunnel.py"
+    },
+    {
+      "accepted_harness_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/conformance.py",
+      "qualified_harness_file_equal": true,
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "79fbb218cc103bb607ed7c9bd50fe4024ba78e4ba77f179e8686662c29a81c9b",
+      "source_id": "sha256:fb12121da3f38b003f086e83523308a563e398a0856ab515619b5653ced8713a",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/conformance.py"
+    }
+  ],
+  "state": "PARTIAL_SOURCE_ASSERTION_ANALYSIS_NOT_FROZEN_REFERENCE",
+  "successor_qualified_or_frozen": false
+}
