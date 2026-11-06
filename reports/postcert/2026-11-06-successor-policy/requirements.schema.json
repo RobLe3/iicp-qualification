@@ -1,0 +1,282 @@
+{
+  "$id": "urn:iicp:postcert:successor-policy-determination:v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bounded_verification": {
+      "additionalProperties": false,
+      "properties": {
+        "non_authoring_agent_review_sha256": {
+          "type": "string"
+        },
+        "old_receipt_binding_refusals_per_mutation": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "original_candidate_receipt_binding_positive_controls": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "private_primary_proof_publicly_reproducible": {
+          "const": false
+        },
+        "private_proof_sha256": {
+          "type": "string"
+        },
+        "private_source_and_schema_controls": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "review_is_external_certification": {
+          "const": false
+        },
+        "source_functions_and_guard_spans": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "synthetic_component_mutations": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "target_certificate_envelope_positive_controls": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "original_candidate_receipt_binding_positive_controls",
+        "synthetic_component_mutations",
+        "old_receipt_binding_refusals_per_mutation",
+        "target_certificate_envelope_positive_controls",
+        "private_source_and_schema_controls",
+        "source_functions_and_guard_spans",
+        "private_proof_sha256",
+        "non_authoring_agent_review_sha256",
+        "review_is_external_certification",
+        "private_primary_proof_publicly_reproducible"
+      ],
+      "type": "object"
+    },
+    "canonical_policy_source_commit": {
+      "type": "string"
+    },
+    "certificate_issued": {
+      "const": false
+    },
+    "condition": {
+      "const": "Candidate identity changes while the current target/support/edge policy remains unchanged."
+    },
+    "conditional_requirements": {
+      "additionalProperties": false,
+      "properties": {
+        "additional_sentinel_execution_count": {
+          "type": "string"
+        },
+        "condition": {
+          "const": "If the candidate manifest identity changes and the current target/support/edge policy remains unchanged."
+        },
+        "ecosystem_certificate": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "sentinel_entries": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source_bound_target_certificates": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "targets": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "campaign_shards": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "edge_executions": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "support_cells": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "target": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "campaign_shards",
+              "edge_executions",
+              "support_cells",
+              "target"
+            ],
+            "type": "object"
+          },
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "totals": {
+          "additionalProperties": false,
+          "properties": {
+            "edge_executions": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "shards": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "support_cells": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "edge_executions",
+            "shards",
+            "support_cells"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "additional_sentinel_execution_count",
+        "condition",
+        "ecosystem_certificate",
+        "sentinel_entries",
+        "source_bound_target_certificates",
+        "targets",
+        "totals"
+      ],
+      "type": "object"
+    },
+    "determination": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_row_retention_exists": {
+          "const": true
+        },
+        "artifact_row_retention_is_different_candidate_certificate_eligibility": {
+          "const": false
+        },
+        "current_candidate_bound_receipts_reuse_with_different_candidate": {
+          "const": false
+        },
+        "unchanged_candidate_reporting_changes_automatically_require_requalification": {
+          "const": false
+        }
+      },
+      "required": [
+        "artifact_row_retention_exists",
+        "artifact_row_retention_is_different_candidate_certificate_eligibility",
+        "current_candidate_bound_receipts_reuse_with_different_candidate",
+        "unchanged_candidate_reporting_changes_automatically_require_requalification"
+      ],
+      "type": "object"
+    },
+    "digest_domain_note": {
+      "type": "string"
+    },
+    "execution_authorized": {
+      "const": false
+    },
+    "historical_inventory_complete": {
+      "const": false
+    },
+    "independent_external_certification_established": {
+      "const": false
+    },
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 7,
+      "minItems": 7,
+      "type": "array"
+    },
+    "non_authorizing": {
+      "const": true
+    },
+    "original_candidate_manifest_sha256": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "primary_authority": {
+      "type": "string"
+    },
+    "public_analysis_file_sha256": {
+      "type": "string"
+    },
+    "qualification_credit_added": {
+      "const": 0
+    },
+    "schema": {
+      "const": "iicp.postcert-successor-policy-determination.v1"
+    },
+    "source_files": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "commit": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "repository",
+          "commit",
+          "path",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "maxItems": 7,
+      "minItems": 7,
+      "type": "array"
+    },
+    "state": {
+      "const": "CONDITIONAL_POLICY_DETERMINATION_NOT_EXECUTABLE_PLAN"
+    },
+    "successor_frozen": {
+      "const": false
+    }
+  },
+  "required": [
+    "schema",
+    "state",
+    "owner",
+    "primary_authority",
+    "canonical_policy_source_commit",
+    "original_candidate_manifest_sha256",
+    "public_analysis_file_sha256",
+    "condition",
+    "conditional_requirements",
+    "determination",
+    "bounded_verification",
+    "source_files",
+    "digest_domain_note",
+    "limits",
+    "non_authorizing",
+    "execution_authorized",
+    "qualification_credit_added",
+    "successor_frozen",
+    "certificate_issued",
+    "historical_inventory_complete",
+    "independent_external_certification_established"
+  ],
+  "type": "object"
+}

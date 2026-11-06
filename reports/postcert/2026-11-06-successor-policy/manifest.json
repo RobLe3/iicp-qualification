@@ -1,0 +1,9 @@
+{
+  "files": {
+    "README.md": "239afc1964f842000e7ab7b31324356f9f790729492942109074e9dc467ee483",
+    "requirements.json": "64eec67f3e5f85bb523ddf74a0a0406196f64ade4d0a07ac2ecbf70266643771",
+    "requirements.schema.json": "7c02a654e4a5915f0a93c7395c69ebacf9d489ab34b468d4e695884b45aa4890"
+  },
+  "non_authorizing": true,
+  "schema": "iicp.postcert-policy-projection-manifest.v1"
+}
