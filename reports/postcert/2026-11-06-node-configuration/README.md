@@ -11,3 +11,5 @@ The shared scenario labels do not imply identical inputs:
 Use [the machine-readable source map](source-map.json) for exact commits, source spans, postconditions, explicit limitations and existing coordinate links. Its references are public SDK/Protocol Git sources and the already published analysis-v2 derivative. Private root catalog prose, raw execution captures, host paths and private incident material are not included.
 
 The original acceptance records remain authoritative. This is partial source interpretation, not complete catalog conformance, an executable frozen reference, a new runtime result, independent interoperability, a certificate, or release permission. Candidate, source and environment identities must still be resolved under the existing gates before any authorized reproduction.
+
+The [versioned JSON Schema](source-map.schema.json) checks data shape. Source, coordinate and privacy validation plus independent review remain separate requirements.

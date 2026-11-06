@@ -1,0 +1,356 @@
+{
+  "$comment": "Informative data-shape contract only. Source hashes, coordinate joins, semantic interpretations and privacy still require the existing validator and independent review. It grants no execution or qualification authority.",
+  "$id": "urn:iicp:postcert:node-configuration-source-capsule:1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "accepted_results_changed": {
+      "const": false
+    },
+    "candidate_manifest_sha256": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "cases": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "accepted_harness_source_commit": {
+            "pattern": "^[0-9a-f]{40}$",
+            "type": "string"
+          },
+          "assertion": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "capability_context": {
+            "additionalProperties": false,
+            "properties": {
+              "association": {
+                "const": "INDIRECT_SCOPE_CONTEXT_NOT_CAPABILITY_COMPLETION"
+              },
+              "candidate_id": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "association",
+              "candidate_id"
+            ],
+            "type": "object"
+          },
+          "case_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "command_template_not_authorization": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "component": {
+            "enum": [
+              "client-python",
+              "client-typescript",
+              "client-rust"
+            ]
+          },
+          "existing_coordinate_refs": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "assertion_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "directory_flavor": {
+                  "enum": [
+                    "php",
+                    "rust"
+                  ]
+                },
+                "mode": {
+                  "enum": [
+                    "public",
+                    "restricted",
+                    "local-only"
+                  ]
+                },
+                "receipt_file_sha256": {
+                  "pattern": "^sha256:[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "runtime": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "target": {
+                  "enum": [
+                    "linux-aarch64",
+                    "linux-x86_64",
+                    "macos-arm64",
+                    "windows-x86_64"
+                  ]
+                }
+              },
+              "required": [
+                "assertion_id",
+                "directory_flavor",
+                "mode",
+                "receipt_file_sha256",
+                "runtime",
+                "target"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "fixture": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "full_catalog_obligation_proven": {
+            "const": false
+          },
+          "limitations": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "new_qualification_credit": {
+            "const": 0
+          },
+          "new_runtime_execution": {
+            "const": false
+          },
+          "qualified_product_source_commit": {
+            "pattern": "^[0-9a-f]{40}$",
+            "type": "string"
+          },
+          "scenario_id": {
+            "enum": [
+              "config-malformed",
+              "config-missing",
+              "config-permission-denied"
+            ]
+          },
+          "source_assertion": {
+            "additionalProperties": false,
+            "properties": {
+              "lines": {
+                "items": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              },
+              "source_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "span_sha256": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "lines",
+              "source_id",
+              "span_sha256"
+            ],
+            "type": "object"
+          },
+          "source_postconditions": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "tested_object": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "accepted_harness_source_commit",
+          "assertion",
+          "capability_context",
+          "case_id",
+          "command_template_not_authorization",
+          "component",
+          "existing_coordinate_refs",
+          "fixture",
+          "full_catalog_obligation_proven",
+          "limitations",
+          "new_qualification_credit",
+          "new_runtime_execution",
+          "qualified_product_source_commit",
+          "scenario_id",
+          "source_assertion",
+          "source_postconditions",
+          "tested_object"
+        ],
+        "type": "object"
+      },
+      "maxItems": 9,
+      "minItems": 9,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "catalog_file_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "catalog_text_republished": {
+      "const": false
+    },
+    "counts": {
+      "const": {
+        "case_definitions": 9,
+        "coordinate_references_per_target": {
+          "linux-aarch64": 144,
+          "linux-x86_64": 144,
+          "macos-arm64": 144,
+          "windows-x86_64": 144
+        },
+        "existing_coordinate_references": 576,
+        "source_references": 32
+      }
+    },
+    "historical_inventory_complete": {
+      "const": false
+    },
+    "independent_interoperability_established": {
+      "const": false
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "new_qualification_credit": {
+      "const": 0
+    },
+    "new_runtime_executions": {
+      "const": 0
+    },
+    "non_authorizing": {
+      "const": true
+    },
+    "programme_complete": {
+      "const": false
+    },
+    "public_analysis_file_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "qualification_derivative_source_commit": {
+      "pattern": "^[0-9a-f]{40}$",
+      "type": "string"
+    },
+    "schema": {
+      "const": "iicp.postcert-node-configuration-source-capsule.v1"
+    },
+    "source_index_file_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "commit": {
+            "pattern": "^[0-9a-f]{40}$",
+            "type": "string"
+          },
+          "path": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "repository": {
+            "enum": [
+              "RobLe3/iicp-client-python",
+              "RobLe3/iicp-client-typescript",
+              "RobLe3/iicp-client-rust",
+              "RobLe3/IICP"
+            ]
+          },
+          "sha256": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "source_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "url": {
+            "pattern": "^https://github.com/",
+            "type": "string"
+          }
+        },
+        "required": [
+          "commit",
+          "path",
+          "repository",
+          "sha256",
+          "source_id",
+          "url"
+        ],
+        "type": "object"
+      },
+      "maxItems": 32,
+      "minItems": 32,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "state": {
+      "const": "SOURCE_INTERPRETATION_NOT_FROZEN_IFRB"
+    },
+    "successor_qualified_or_frozen": {
+      "const": false
+    },
+    "whole_capability_completion": {
+      "const": false
+    }
+  },
+  "required": [
+    "accepted_results_changed",
+    "candidate_manifest_sha256",
+    "cases",
+    "catalog_file_sha256",
+    "catalog_text_republished",
+    "counts",
+    "historical_inventory_complete",
+    "independent_interoperability_established",
+    "limitations",
+    "new_qualification_credit",
+    "new_runtime_executions",
+    "non_authorizing",
+    "programme_complete",
+    "public_analysis_file_sha256",
+    "qualification_derivative_source_commit",
+    "schema",
+    "source_index_file_sha256",
+    "sources",
+    "state",
+    "successor_qualified_or_frozen",
+    "whole_capability_completion"
+  ],
+  "type": "object"
+}

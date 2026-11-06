@@ -1,6 +1,7 @@
 """Validate an informative public source capsule; never run SDK or qualification commands."""
 from pathlib import Path
 import copy,hashlib,json,unittest
+from jsonschema import Draft202012Validator,ValidationError
 from test_sdk_network_readiness_supplement import false_flags,zero_counts,validate_source,validate_reference
 ROOT=Path(__file__).resolve().parents[1]
 REPORT=ROOT/'reports/postcert/2026-11-06-node-configuration'
@@ -55,9 +56,17 @@ class NodeConfigurationCapsuleTests(unittest.TestCase):
     def test_valid_capsule(self):validate_capsule(self.data,self.analysis)
     def test_manifest_and_public_analysis_pins(self):
         manifest=json.loads((REPORT/'manifest.json').read_text())
-        self.assertEqual({r['path'] for r in manifest['files']},{'README.md','source-map.json'})
+        self.assertEqual({r['path'] for r in manifest['files']},{'README.md','source-map.json','source-map.schema.json'})
         for row in manifest['files']:self.assertEqual(hashlib.sha256((REPORT/row['path']).read_bytes()).hexdigest(),row['sha256'])
         self.assertEqual(hashlib.sha256((ROOT/'reports/analysis-v2/analysis.json').read_bytes()).hexdigest(),self.data['public_analysis_file_sha256'])
+    def test_json_schema_valid(self):
+        schema=json.loads((REPORT/'source-map.schema.json').read_text());Draft202012Validator.check_schema(schema);Draft202012Validator(schema).validate(self.data)
+    def test_json_schema_rejects_authority(self):
+        schema=json.loads((REPORT/'source-map.schema.json').read_text());data=copy.deepcopy(self.data);data['non_authorizing']=False
+        with self.assertRaises(ValidationError):Draft202012Validator(schema).validate(data)
+    def test_json_schema_rejects_case_private_field(self):
+        schema=json.loads((REPORT/'source-map.schema.json').read_text());data=copy.deepcopy(self.data);data['cases'][0]['raw_private_capture']='SYNTHETIC'
+        with self.assertRaises(ValidationError):Draft202012Validator(schema).validate(data)
     def test_wrong_candidate(self):self.rejects(lambda d:d.update(candidate_manifest_sha256='sha256:'+'0'*64))
     def test_duplicate_case(self):self.rejects(lambda d:d['cases'].__setitem__(0,copy.deepcopy(d['cases'][1])))
     def test_missing_case(self):self.rejects(lambda d:d['cases'].pop())
