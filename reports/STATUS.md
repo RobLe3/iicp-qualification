@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-11-06T03:42:24Z**.
+Verified snapshot: **2026-11-06T04:41:09Z**.
 
 `[####################]` **64/64 accepted shards**
 
@@ -16,14 +16,14 @@ Sentinels: **4/4** · Project-operated certificates: **5/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **VERIFIED** (blocker, 2026-11-06T03:40:46Z).
+- Recorded outcome: **VERIFIED** (blocker, 2026-11-06T04:09:12.539513+00:00).
 - The recorded blocker or next permitted action changed; no additional authority is granted.
 - Actual workload launched in this activity: **false**.
 - Next gate: No next action is inferred from this record.
 
 ## Evidence and limits
 
-- Source: private `RobLe3/iicp.network`, commit `853b24f889eb23df7343af3d06c738a6a6be0c43`.
+- Source: private `RobLe3/iicp.network`, commit `22db468b1e72610b98beffcfb3ec4919b30a4065`.
 - [Receipt derivatives](receipts.json) map each credited assignment to its original receipt digest.
 - [Activity history](events.json) is a selected, append-only register, not a complete historical inventory.
 - Accepted totals come only from merged canonical ledgers. Passing CI, diagnostics and unpromoted runs add no credit.
