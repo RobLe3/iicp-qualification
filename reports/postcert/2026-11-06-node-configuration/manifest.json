@@ -1,0 +1,17 @@
+{
+  "schema": "iicp.postcert-supplement-manifest.v1",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "f0f8c739034b9e7f7fbdb84a1bb2594cb9d7533374ac85069d2e714fa5e8baf7"
+    },
+    {
+      "path": "source-map.json",
+      "sha256": "b32ae60ba34b874091f6612c0edb957cfa1ccd089bad91a8430083dc7953ff9d"
+    },
+    {
+      "path": "source-map.schema.json",
+      "sha256": "4f0fbe005a753dc60e1bedc9ae0b1865910198acf425af7e89750c8a70b44595"
+    }
+  ]
+}
