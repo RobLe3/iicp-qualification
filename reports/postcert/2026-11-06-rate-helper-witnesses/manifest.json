@@ -1,0 +1,12 @@
+{
+  "files": {
+    "README.md": "92cfb98fe54ff5ba4dbcce4b7fab1d077d4319abc3795b5efc4684e90aec9823",
+    "bundle.schema.json": "de3d654ca09a4e54d872b01a89a7bc44191f147270a29506c8bc544d83e7b26f",
+    "fragments.json": "c57a0cf828a5498c470e3ddc4f5a5e9b5202950efd9b07ae05af61404b2463b0",
+    "vectors.json": "23ac2c47ae6bf4cde0c72d2fff82efbe837e274cb296953c806806c6371275af"
+  },
+  "non_authorizing": true,
+  "qualification_credit": 0,
+  "runner_sha256": "da44564dd75c015cb04a00f90be247f72dd7d53eb0d15f79e508b51859aa84f1",
+  "schema": "iicp.offline-rate-helper-bundle-manifest.v1"
+}

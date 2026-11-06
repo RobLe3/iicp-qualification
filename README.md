@@ -115,3 +115,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Node-configuration assertion scope
 
 [The node-configuration source capsule](reports/postcert/2026-11-06-node-configuration/README.md) distinguishes nine existing saved-identity and runtime-policy assertions. Missing files, missing required fields, malformed JSON, injected write failures, directory collisions and read-only staging are not interchangeable conditions. The capsule adds source context for 576 previously published coordinates, not new execution or qualification credit.
+
+### Executable reference preparation
+
+[Offline rate-helper reference slice](reports/postcert/2026-11-06-rate-helper-witnesses/README.md) preserves five exact source fragments and fixed synthetic controls. It is not a frozen baseline or new qualification evidence.

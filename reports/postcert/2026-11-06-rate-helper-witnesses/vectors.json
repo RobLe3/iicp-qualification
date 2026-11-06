@@ -1,0 +1,432 @@
+{
+  "schema": "iicp.offline-rate-helper-vectors.v1",
+  "time_unit": "milliseconds",
+  "relay": [
+    {
+      "id": "allow-before-limit",
+      "limit": 2,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": "deny-third-hit",
+      "limit": 2,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "separate-source-positive",
+      "limit": 1,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": false
+        },
+        {
+          "source": "b",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": "before-window-denied",
+      "limit": 1,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 69999,
+          "rebind": false,
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "exact-window-resets",
+      "limit": 1,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 70000,
+          "rebind": false,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": "after-window-resets",
+      "limit": 1,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 70001,
+          "rebind": false,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": "rebind-bypasses-denial",
+      "limit": 1,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": true,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "rebind-does-not-consume",
+      "limit": 1,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": true,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "zero-disables-cap",
+      "limit": 0,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": "denial-does-not-slide-window",
+      "limit": 1,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 69999,
+          "rebind": false,
+          "expected": false
+        },
+        {
+          "source": "a",
+          "now_ms": 70000,
+          "rebind": false,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": "second-window-limits",
+      "limit": 1,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 70000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 70001,
+          "rebind": false,
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "independent-window-starts",
+      "limit": 1,
+      "steps": [
+        {
+          "source": "a",
+          "now_ms": 10000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "b",
+          "now_ms": 20000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "a",
+          "now_ms": 70000,
+          "rebind": false,
+          "expected": true
+        },
+        {
+          "source": "b",
+          "now_ms": 70000,
+          "rebind": false,
+          "expected": false
+        },
+        {
+          "source": "b",
+          "now_ms": 80000,
+          "rebind": false,
+          "expected": true
+        }
+      ]
+    }
+  ],
+  "registration_step": [
+    {
+      "id": "first",
+      "prev": null,
+      "now_ms": 1000,
+      "ttl_ms": 60000,
+      "expected": [
+        1,
+        1000
+      ]
+    },
+    {
+      "id": "in-window",
+      "prev": [
+        1,
+        1000
+      ],
+      "now_ms": 1500,
+      "ttl_ms": 60000,
+      "expected": [
+        2,
+        1000
+      ]
+    },
+    {
+      "id": "before-expiry",
+      "prev": [
+        60,
+        1000
+      ],
+      "now_ms": 60999,
+      "ttl_ms": 60000,
+      "expected": [
+        61,
+        1000
+      ]
+    },
+    {
+      "id": "exact-expiry",
+      "prev": [
+        5,
+        1000
+      ],
+      "now_ms": 61000,
+      "ttl_ms": 60000,
+      "expected": [
+        1,
+        61000
+      ]
+    },
+    {
+      "id": "after-expiry",
+      "prev": [
+        60,
+        1000
+      ],
+      "now_ms": 61001,
+      "ttl_ms": 60000,
+      "expected": [
+        1,
+        61001
+      ]
+    },
+    {
+      "id": "zero-ttl",
+      "prev": [
+        5,
+        1000
+      ],
+      "now_ms": 1000,
+      "ttl_ms": 0,
+      "expected": [
+        1,
+        1000
+      ]
+    },
+    {
+      "id": "future-start-saturates",
+      "prev": [
+        1,
+        1000
+      ],
+      "now_ms": 500,
+      "ttl_ms": 60000,
+      "expected": [
+        2,
+        1000
+      ]
+    },
+    {
+      "id": "fresh-zero-time",
+      "prev": null,
+      "now_ms": 0,
+      "ttl_ms": 60000,
+      "expected": [
+        1,
+        0
+      ]
+    }
+  ],
+  "retry_after_clamp": [
+    {
+      "id": "int--7",
+      "input": -7,
+      "expected": 1
+    },
+    {
+      "id": "int-0",
+      "input": 0,
+      "expected": 1
+    },
+    {
+      "id": "int-1",
+      "input": 1,
+      "expected": 1
+    },
+    {
+      "id": "int-2",
+      "input": 2,
+      "expected": 2
+    },
+    {
+      "id": "int-5",
+      "input": 5,
+      "expected": 5
+    },
+    {
+      "id": "int-60",
+      "input": 60,
+      "expected": 60
+    },
+    {
+      "id": "numeric-string",
+      "input": "3",
+      "expected": 3
+    },
+    {
+      "id": "nonnumeric-string",
+      "input": "invalid",
+      "expected": 1
+    }
+  ],
+  "qualification_credit": 0,
+  "endpoint_execution": false
+}
