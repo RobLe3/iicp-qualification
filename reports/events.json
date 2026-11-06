@@ -2265,6 +2265,50 @@
       "reason": "preflight-refused",
       "source_sha256": "sha256:5ee152c875600526fa6c540d69c2b5b0bb9f1a458e277f3b30a9f716e3245dc5",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:c2680151e475e2182e4e4c96de0f0f50a0f845a3bd9456368786b245bf18b6e6",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-06T20:45:13.529375+00:00",
+      "outcome": "REFUSED",
+      "qualification_credit": 0,
+      "reason": "preflight-refused",
+      "source_sha256": "sha256:e3c240e98524e6b03ecd9997b0d6c68774fc9415a2735efdb37ce1ab2934cf77",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:202a9d9d562e0526b957d915f1883d31e9fc00cf0eb94ef21ed34569f6ec69fb",
+      "kind": "correction",
+      "next_gate": "authorization-required",
+      "occurred_at": "2026-11-06T21:13:32.808344+00:00",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:901221c51e2a489fee7d4b9bda19d5908b6f30d5c28e52f7792106e401c633bd",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:29e5911852eafa1cde863083839fb191f1a92ee5c6da6760cc5b48b9343bcce3",
+      "kind": "ci",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T21:12:23Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:5a9e5944f2a3587ac0628932941f65b4b0a0f670ad08285ec54daeedf0050e5a",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:00ea8d622feadd79cbc26922d5b4b9f5d05bf6c4f05ab4707e7f7ee0635340f1",
+      "kind": "correction",
+      "next_gate": "authorization-required",
+      "occurred_at": "2026-11-06T21:12:50Z",
+      "outcome": "MERGED",
+      "qualification_credit": 0,
+      "reason": "correction-merged",
+      "source_sha256": "sha256:ab12f9207ad95a5f9dff9f540b5f3d6cb0bda57148303cd58516203a0bf87217",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
