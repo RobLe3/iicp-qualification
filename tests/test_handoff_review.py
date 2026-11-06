@@ -10,12 +10,14 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import package_qualification_handoff as p
-from report_common import check_public
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from handoff_fixture import historical_fixture
 
 
 class IndependentHandoffTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name).resolve() / "corpus"
         self.root.mkdir()
         # Public committed derivative: this portability test must not depend on
@@ -27,18 +29,17 @@ class IndependentHandoffTests(unittest.TestCase):
             ).read_text()
         )
         records = source_index["records"]
+        bundle, self.fixture_repo = historical_fixture(Path(self.tmp.name).resolve())
         members = p.build_members(
-            check_public(),
+            bundle,
             records,
             {n: ("# Synthetic " + n + "\n").encode() for n in p.NARRATIVES},
+            repo=self.fixture_repo,
         )
         for name, data in members.items():
             target = self.root / name
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(data)
-
-    def tearDown(self):
-        self.tmp.cleanup()
 
     def reseal(self, name, value=None, remove=False):
         manifest = json.loads((self.root / "manifest.json").read_text())
