@@ -2166,6 +2166,50 @@
       "reason": "correction-merged",
       "source_sha256": "sha256:46081cfc7040cd420ec7dd420ccf39ef2c65def8e4cd1df8d47da1134fe5ccb7",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:86343e5e1ca7994c0d9d826e7a4064fadd3b4f9b23a7df126443d23cee4f9c06",
+      "kind": "correction",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T19:26:47.007843+00:00",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:4bb3db096ba59ecdbffca26a1879a92bfe836aa40784565e97de031cc373e075",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:ad270821b7b9abb996ba83071dd3c4b40a6e7e8c1229f2562f78c76ffa61fb74",
+      "kind": "ci",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T19:26:47.007843+00:00",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:1c4359daaa9fdcc62e7e8d06a7235a723064a575d0499e2ecd6856f157694b66",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:5c858a6d728ba3d3d791f51c1acf3288a2e3b0397975c6406701edb11acdf4af",
+      "kind": "correction",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T19:26:47.007843+00:00",
+      "outcome": "MERGED",
+      "qualification_credit": 0,
+      "reason": "correction-merged",
+      "source_sha256": "sha256:090b79f15b289e74f62a880f5a70cbcc85a049fcb66cd2f25e4ac32cdc3a1094",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:de2db7f1dd707927fae8129e2fd650ffd25cc01485953cd6d19e9360cc69bb8d",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T19:26:47.007843+00:00",
+      "outcome": "UNKNOWN",
+      "qualification_credit": 0,
+      "reason": "evidence-gap",
+      "source_sha256": "sha256:554339f8f136746c94449016dfe0be451e3b3bf42641625f347d88a306e84071",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
