@@ -119,3 +119,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ### Executable reference preparation
 
 [Offline rate-helper reference slice](reports/postcert/2026-11-06-rate-helper-witnesses/README.md) preserves five exact source fragments and fixed synthetic controls. It is not a frozen baseline or new qualification evidence.
+
+### Successor policy determination
+
+[Conditional successor requirements](reports/postcert/2026-11-06-successor-policy/README.md) distinguish artifact-row retention from candidate-bound certification. This is an informative determination, not execution authority.

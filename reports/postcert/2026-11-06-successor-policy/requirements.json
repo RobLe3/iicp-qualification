@@ -1,0 +1,127 @@
+{
+  "bounded_verification": {
+    "non_authoring_agent_review_sha256": "ade25400d22b91b0d807aa7470de82f7aadbbb0aa42acbd355da7c10584cdcaa",
+    "old_receipt_binding_refusals_per_mutation": 64,
+    "original_candidate_receipt_binding_positive_controls": 64,
+    "private_primary_proof_publicly_reproducible": false,
+    "private_proof_sha256": "de4b0c40355fb9796776853e8a1161eb2cd8a70b16b0668618b192b08fa0f2d8",
+    "private_source_and_schema_controls": 30,
+    "review_is_external_certification": false,
+    "source_functions_and_guard_spans": 20,
+    "synthetic_component_mutations": 6,
+    "target_certificate_envelope_positive_controls": 4
+  },
+  "canonical_policy_source_commit": "106aae6568d12884603068e82248bf1413371690",
+  "certificate_issued": false,
+  "condition": "Candidate identity changes while the current target/support/edge policy remains unchanged.",
+  "conditional_requirements": {
+    "additional_sentinel_execution_count": "NOT_DETERMINED;admission may be distinct from campaign shard0 and never adds duplicate credit",
+    "condition": "If the candidate manifest identity changes and the current target/support/edge policy remains unchanged.",
+    "ecosystem_certificate": 1,
+    "sentinel_entries": 4,
+    "source_bound_target_certificates": 4,
+    "targets": [
+      {
+        "campaign_shards": 16,
+        "edge_executions": 1501,
+        "support_cells": 59,
+        "target": "linux-aarch64"
+      },
+      {
+        "campaign_shards": 16,
+        "edge_executions": 1501,
+        "support_cells": 59,
+        "target": "linux-x86_64"
+      },
+      {
+        "campaign_shards": 16,
+        "edge_executions": 1294,
+        "support_cells": 50,
+        "target": "macos-arm64"
+      },
+      {
+        "campaign_shards": 16,
+        "edge_executions": 1294,
+        "support_cells": 50,
+        "target": "windows-x86_64"
+      }
+    ],
+    "totals": {
+      "edge_executions": 5590,
+      "shards": 64,
+      "support_cells": 218
+    }
+  },
+  "determination": {
+    "artifact_row_retention_exists": true,
+    "artifact_row_retention_is_different_candidate_certificate_eligibility": false,
+    "current_candidate_bound_receipts_reuse_with_different_candidate": false,
+    "unchanged_candidate_reporting_changes_automatically_require_requalification": false
+  },
+  "digest_domain_note": "Logical ledger identity and raw-file integrity are distinct and must be checked against their own authorities.",
+  "execution_authorized": false,
+  "historical_inventory_complete": false,
+  "independent_external_certification_established": false,
+  "limits": [
+    "The 64campaign assignments are not an assumed 68physical executions;sentinel admission and campaign shard-zero relationships require the exact reviewed packet.",
+    "The current coverage figures are conditional on unchanged scope,not a standing workload authorization.",
+    "The proof ran selected read-only binding/envelope predicates and one exact index guard,not the full compiler/source-evidence reconstruction or admission pipeline.",
+    "A private source review and hashes do not make private primary code/artifacts publicly retrievable. Authorized operators retain the reproducible proof.",
+    "Actual successor source/artifact/build/dependency/environment identities,defect clearance,resource plan and execution authority are still pending.",
+    "Artifact-scoped ledger retention does not by itself admit old receipts for a new global candidate. Scoped future compatibility remains separate reviewed work.",
+    "Original accepted qualification,failures,candidate,receipts and certificates are unchanged."
+  ],
+  "non_authorizing": true,
+  "original_candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "owner": "RobLe3/iicp.network#1678",
+  "primary_authority": "Canonical qualification validators and admitted evidence;not this derivative",
+  "public_analysis_file_sha256": "22da722de8d0c203e6eb7aca041551b5b9dce3f606523f2bcd4b1df64e887438",
+  "qualification_credit_added": 0,
+  "schema": "iicp.postcert-successor-policy-determination.v1",
+  "source_files": [
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "scripts/check_pre1_qualification_receipt.py",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "de51817283d1d81b3dddb20501b9d4a7536876cb895bfb331aa6c4047003ced7"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "scripts/check_pre1_stability_candidate.py",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "b74b0147cb1f5a7a7e9ba44e41fbb2fa0f7d13f2205dad81b17d39c8d9595434"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "scripts/compile_pre1_ecosystem_certificate.py",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "92908d3dce742ed132290c7c34011a35dd575cc35adb83420c4d0cfd2e85213a"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "scripts/compile_pre1_sentinel_ledger.py",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "dd01f788ec90b607eb93b948fdb13f145c7145abdc9c6ea37da0c94170a353d9"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "scripts/compile_pre1_target_certificate.py",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "b2e35837094fd268de17075e9a9d1f8728ec89f804ae3d87296a4bde25c3fbbb"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "scripts/merge_pre1_qualification_receipts.py",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "b470726f756b3f1ae8560d7950641fdfd0e1ff909eec12335591c2cfa513c7ea"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "scripts/pre1_evidence.py",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "ee5f7f42c2ca98a2ed32ee15aa5a4aee78dcc66164ef1604498e48f6f6ac6df1"
+    }
+  ],
+  "state": "CONDITIONAL_POLICY_DETERMINATION_NOT_EXECUTABLE_PLAN",
+  "successor_frozen": false
+}
