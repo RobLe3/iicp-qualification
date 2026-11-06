@@ -1,0 +1,220 @@
+{
+  "schema": "iicp.postcert-timeout-source-checkpoint.v1",
+  "authority": "INFORMATIVE_DERIVATIVE_NOT_QUALIFICATION_ACCEPTANCE",
+  "owners": [
+    "RobLe3/iicp.network#1676",
+    "RobLe3/iicp.network#1678"
+  ],
+  "canonical_root_commit": "22db468b1e72610b98beffcfb3ec4919b30a4065",
+  "qualified_candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "source_files": [
+    {
+      "repository": "RobLe3/IICP",
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "pre1/feature-baseline-v1.json",
+      "sha256": "da4ef33aacdd363bbd2830a069efc73aa2e321efaa9753606303651d27d6f133"
+    },
+    {
+      "repository": "RobLe3/IICP",
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "spec/v1.9/iicp-service-lifecycle-profile.md",
+      "sha256": "e825fc5afbeeae0d7b8ef33993a95ea333ee3545bd484f9ca6cdcb90ececd2fa"
+    },
+    {
+      "repository": "RobLe3/iicp-client-python",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/backends/base.py",
+      "sha256": "40f1fcb7729bbf65a8fcfbcf5ebc33609618db650d49929bedba81fd0342c6ea"
+    },
+    {
+      "repository": "RobLe3/iicp-client-python",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/backends/openai_compat.py",
+      "sha256": "9fff5dc8d24e9cd30e76903accc8ae5f0224f3834464e567cc4456af0f365fc0"
+    },
+    {
+      "repository": "RobLe3/iicp-client-python",
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "tests/test_backends.py",
+      "sha256": "ecdb9548f2328c45e633c15fcfeae8dd923a078a3e30f6a1d692a3e3452b8883"
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/backends/openai_compat.rs",
+      "sha256": "9179c0989327f7f2a9ae3093bdf61917ef9e8dccdecfc225eacd4c4d06e86458"
+    },
+    {
+      "repository": "RobLe3/iicp-client-rust",
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "tests/backends_tests.rs",
+      "sha256": "bbe41aee2a9cf65d8477bfa2ed3723be5cb133952bfb96a620eaee8810964f2b"
+    },
+    {
+      "repository": "RobLe3/iicp-client-typescript",
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "src/backends/base.ts",
+      "sha256": "010bf113ba64b70a8bb1c6c38760ecf47f635e1dd256e99aef5921390852cf95"
+    },
+    {
+      "repository": "RobLe3/iicp-client-typescript",
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "src/backends/openai_compat.ts",
+      "sha256": "94dd985b0c5cad2914957e27449f1a063db9f76ff58d46e70b6349c4fb3a0324"
+    },
+    {
+      "repository": "RobLe3/iicp-client-typescript",
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "tests/backends.test.ts",
+      "sha256": "f17a90106ba47564a8dd6b7a27b626e38f70f6bc7fbc731be40a3f3281fde212"
+    },
+    {
+      "repository": "RobLe3/iicp.network",
+      "commit": "22db468b1e72610b98beffcfb3ec4919b30a4065",
+      "path": "project/pre1-edge-case-catalog.json",
+      "sha256": "bf11370545d54934673469d2dca34d3358093de1e59bebf32d62ee1c8ea59630"
+    }
+  ],
+  "timeout_source_links": [
+    {
+      "case_id": "client-python::request-timeout",
+      "assertion": "test_timeout_is_classified_deterministically",
+      "qualified_product_source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "accepted_harness_source_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "test_obligation": "Selected non-streaming OpenAI-compatible backend timeout path returns numeric error_code408; Python additionally checks message contains timed out.",
+      "test_mechanism": "Injects httpx.TimeoutException through respx; does not wait for a configured deadline.",
+      "existing_accepted_coordinate_references": 96,
+      "accepted_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "scope": "SELECTED_SOURCE_ASSERTION_AND_RECORDED_CASE_BINDING_NOT_NEW_OUTPUT_INSPECTION",
+      "catalog_obligation_complete": false,
+      "retry_safety_proven": false,
+      "provider_terminal_state_proven": false,
+      "performance_comparability_proven": false
+    },
+    {
+      "case_id": "client-rust::request-timeout",
+      "assertion": "test_timeout_is_classified_deterministically",
+      "qualified_product_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "accepted_harness_source_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "test_obligation": "Selected non-streaming OpenAI-compatible backend timeout path returns numeric error_code408; Python additionally checks message contains timed out.",
+      "test_mechanism": "Local listener accepts a socket and sleeps1s while reqwest timeout is10ms; tests timeout classification, not a timing benchmark.",
+      "existing_accepted_coordinate_references": 48,
+      "accepted_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "scope": "SELECTED_SOURCE_ASSERTION_AND_RECORDED_CASE_BINDING_NOT_NEW_OUTPUT_INSPECTION",
+      "catalog_obligation_complete": false,
+      "retry_safety_proven": false,
+      "provider_terminal_state_proven": false,
+      "performance_comparability_proven": false
+    },
+    {
+      "case_id": "client-typescript::request-timeout",
+      "assertion": "timeout is classified deterministically",
+      "qualified_product_source_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "accepted_harness_source_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "test_obligation": "Selected non-streaming OpenAI-compatible backend timeout path returns numeric error_code408; Python additionally checks message contains timed out.",
+      "test_mechanism": "Synthetic fetch waits for an AbortSignal; timeoutMs=1 drives the handler timer and rejection.",
+      "existing_accepted_coordinate_references": 48,
+      "accepted_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "scope": "SELECTED_SOURCE_ASSERTION_AND_RECORDED_CASE_BINDING_NOT_NEW_OUTPUT_INSPECTION",
+      "catalog_obligation_complete": false,
+      "retry_safety_proven": false,
+      "provider_terminal_state_proven": false,
+      "performance_comparability_proven": false
+    }
+  ],
+  "timeout_existing_coordinate_references": 192,
+  "catalog_obligation": "Bound the attempt and preserve retry safety.",
+  "profile_context": {
+    "capability": "service-lifecycle",
+    "spec_version": "0.1.2-draft",
+    "spec_status": "Proposed semantic profile; not required for base IICP conformance",
+    "relationship": "INDIRECT_NOT_COMPLETE_PROFILE_CONFORMANCE",
+    "limitation": "Backend timeout classification does not establish provider cancellation, terminality, retry safety or idempotency."
+  },
+  "bounded_source_review_frontier": {
+    "reviewed_case_definitions": 26,
+    "remaining_case_definitions": 121,
+    "declared_case_definitions": 147,
+    "existing_coordinate_references": 1224,
+    "scope": "Partial source assertion/dispatch reviews, not complete normative contract conformance",
+    "accounting_correction": "Earlier private checkpoint retained an overlapping remainder after eight Directory links were added; current partition is disjoint. No original accepted result changed."
+  },
+  "merged_development_sources": [
+    {
+      "role": "rust-sdk",
+      "pr": "https://github.com/RobLe3/iicp-client-rust/pull/192",
+      "head": "bfec688d6933aa983ac0c456290e5ad5244917fe",
+      "base": "63e28d1b6c0aa8af460a71ecf79344a06ef80619",
+      "merge": "54e4bdaaee6daadc07d27e1258ed9c27539bd9a0",
+      "tree": "0a4a4d5132030331bec5448ee61dabe2a3fd6b3c",
+      "required_jobs": 1,
+      "ci": "PASS",
+      "iicp_component_versions_changed": false
+    },
+    {
+      "role": "rust-directory",
+      "pr": "https://github.com/RobLe3/iicp-directory-rust/pull/151",
+      "head": "cab543fe2c1d5a3fd2704d38e6ee6ddcf3e75588",
+      "base": "99142283340954423975fd3f9b57c8ee0d0ae58a",
+      "merge": "407818227036b37eb12e8f37eb4bb9926387255e",
+      "tree": "7f6d951a473a60f988bab366f655ef81c1884156",
+      "required_jobs": 7,
+      "ci": "PASS",
+      "iicp_component_versions_changed": false
+    },
+    {
+      "role": "management",
+      "pr": "https://github.com/RobLe3/iicp-management/pull/169",
+      "head": "d8e88d02202ad6c1da04a8ad4bbeaa477d45348d",
+      "base": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+      "merge": "53f8ad0736c2abec89e0297d244ee5871a82e904",
+      "tree": "6be1de2cc2f17103283dd6654eb7a3189cd0f680",
+      "required_jobs": 2,
+      "ci": "PASS",
+      "iicp_component_versions_changed": false
+    }
+  ],
+  "public_reporting_checkpoint": {
+    "pr": 99,
+    "commit": "aff77311ae237e83f0e3546e894aea8c8b1392a9",
+    "events": 160,
+    "accepted_receipt_derivatives": 64,
+    "historical_inventory_complete": false
+  },
+  "controlled_review_digests": {
+    "timeout_source_review": "47016ba91cf40509c04fcba713ed477d8e470bce663bc00f0373da6ced6f51e0",
+    "source_merge_delivery_review": "9e52525a8482bca41703edb3ccc85d7e873f129301cb56681166be8587c4dfbe",
+    "frontier_and_reporting_review": "c6701464b5ba380bd88a66f67a4d6c6dd3da0ee78d0afaf4d6b2c76dd000c0d2"
+  },
+  "private_index_digest": "d0ba92aeb95eebdca7f98a4ea8bacd57de404b26d1a5a27e491cad1738d43329",
+  "private_review_and_index_publicly_retrievable": false,
+  "new_runtime_executions": 0,
+  "qualification_credit_changed": false,
+  "successor_qualified": false,
+  "independent_interoperability_established": false,
+  "programme_complete": false,
+  "limits": [
+    "Source assertions reference existing accepted coordinates; raw runtime outputs were not reinspected for this supplement.",
+    "Positive chat and separate connection-refusal tests are source context, not additional selected assertion credit.",
+    "Timer fixtures differ; no cross-platform timing or performance equivalence is claimed.",
+    "Current development merges are not artifact-equivalent or qualified successors of the frozen candidate.",
+    "Original local Management FAIL and passing recovery segments remain distinct; hosted CI success does not erase that failure.",
+    "Directory inherited RSA package advisory remains; bounded public-key callsite review is not global security clearance.",
+    "Private review/index digests do not make restricted original content publicly retrievable."
+  ]
+}
