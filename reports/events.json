@@ -2001,6 +2001,39 @@
       "reason": "evidence-gap",
       "source_sha256": "sha256:4a55629606edf9c380a3ce379e9d3064e09f0e57da9a59f13643394ee91f8c9c",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:b7e15f53d26d6093b28513e00b6038aa4c7b76a4dece205847e0b321c598a4f3",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-06T16:02:56.291664+00:00",
+      "outcome": "FAIL",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:c1bf75e21cd98a1a27835c89ada358933eebc74ed6880f2d46fc95cb61b831a6",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:7885a5aa9ba97a263ffeb290fc1594e2d510ad5e60b92ea9a29f712cdaf2ce24",
+      "kind": "correction",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-06T16:02:56.291664+00:00",
+      "outcome": "MERGED",
+      "qualification_credit": 0,
+      "reason": "correction-merged",
+      "source_sha256": "sha256:2e5d969ca9d59de83ab750f747e024761c6fb66e57ef09343b4c224a2b50965a",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:d33bd5ae4fa557158571009bdc3fa342f2b0589408c1cdf7f6dc7fea586757cd",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-06T16:02:56.291664+00:00",
+      "outcome": "UNKNOWN",
+      "qualification_credit": 0,
+      "reason": "evidence-gap",
+      "source_sha256": "sha256:05862c01e6e29e64379b5f497c4c9214b4d3cd65173a0e2f6b9c1a089de6b68d",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
