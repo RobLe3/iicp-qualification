@@ -123,3 +123,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ### Successor policy determination
 
 [Conditional successor requirements](reports/postcert/2026-11-06-successor-policy/README.md) distinguish artifact-row retention from candidate-bound certification. This is an informative determination, not execution authority.
+
+## Capability and selection reference slice
+
+[Bounded helper observations](reports/postcert/2026-11-06-capability-selection/README.md) distinguish matching/selection checks from unexecuted Directory wire and storage obligations, preserve an observed diagnostic difference, and document local environment and private-evidence limits. They add no qualification credit.

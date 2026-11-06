@@ -1,0 +1,723 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidate_digest": {
+      "const": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a"
+    },
+    "diagnostic_difference": {
+      "additionalProperties": false,
+      "properties": {
+        "classification": {
+          "type": "string"
+        },
+        "directory_marker": {
+          "const": false
+        },
+        "hard_eligibility_and_variant_membership_agree": {
+          "const": true
+        },
+        "normative_defect_confirmed": {
+          "const": false
+        },
+        "original_shared_fixture_oracle_for_extra_marker": {
+          "const": false
+        },
+        "protocol_reference_marker": {
+          "type": "string"
+        },
+        "sdk_marker": {
+          "const": true
+        }
+      },
+      "required": [
+        "classification",
+        "directory_marker",
+        "hard_eligibility_and_variant_membership_agree",
+        "normative_defect_confirmed",
+        "original_shared_fixture_oracle_for_extra_marker",
+        "protocol_reference_marker",
+        "sdk_marker"
+      ],
+      "type": "object"
+    },
+    "directory_wire_or_storage_executed": {
+      "const": false
+    },
+    "distinct_source_contents": {
+      "const": 28,
+      "type": "integer"
+    },
+    "evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "php_retained_source_members": {
+          "const": 239,
+          "type": "integer"
+        },
+        "private_bundle_included_in_public_package": {
+          "const": false
+        },
+        "private_bundle_manifest_sha256": {
+          "type": "string"
+        },
+        "private_controls_pass": {
+          "const": 59,
+          "type": "integer"
+        },
+        "private_observations_sha256": {
+          "type": "string"
+        },
+        "public_verification_reexecutes_helpers": {
+          "const": false
+        },
+        "selected_rust_packages": {
+          "const": 86,
+          "type": "integer"
+        },
+        "selected_rust_source_files": {
+          "const": 3184,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "php_retained_source_members",
+        "private_bundle_included_in_public_package",
+        "private_bundle_manifest_sha256",
+        "private_controls_pass",
+        "private_observations_sha256",
+        "public_verification_reexecutes_helpers",
+        "selected_rust_packages",
+        "selected_rust_source_files"
+      ],
+      "type": "object"
+    },
+    "extra_observations": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "diagnostic_flag_oracle": {
+                "type": "string"
+              },
+              "eligible": {
+                "const": true
+              },
+              "hard_projection": {
+                "type": "string"
+              },
+              "implementation": {
+                "type": "string"
+              },
+              "observed_preference_unavailable": {
+                "const": true
+              },
+              "qualification_case": {
+                "const": false
+              },
+              "scenario": {
+                "type": "string"
+              },
+              "variant_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              }
+            },
+            "required": [
+              "diagnostic_flag_oracle",
+              "eligible",
+              "hard_projection",
+              "implementation",
+              "observed_preference_unavailable",
+              "qualification_case",
+              "scenario",
+              "variant_ids"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "diagnostic_flag_oracle": {
+                "type": "string"
+              },
+              "eligible": {
+                "const": true
+              },
+              "hard_projection": {
+                "type": "string"
+              },
+              "implementation": {
+                "type": "string"
+              },
+              "observed_preference_unavailable": {
+                "const": true
+              },
+              "qualification_case": {
+                "const": false
+              },
+              "scenario": {
+                "type": "string"
+              },
+              "variant_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 1,
+                "minItems": 1,
+                "type": "array"
+              }
+            },
+            "required": [
+              "diagnostic_flag_oracle",
+              "eligible",
+              "hard_projection",
+              "implementation",
+              "observed_preference_unavailable",
+              "qualification_case",
+              "scenario",
+              "variant_ids"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "diagnostic_flag_oracle": {
+                "type": "string"
+              },
+              "eligible": {
+                "const": true
+              },
+              "hard_projection": {
+                "type": "string"
+              },
+              "implementation": {
+                "type": "string"
+              },
+              "observed_preference_unavailable": {
+                "const": false
+              },
+              "qualification_case": {
+                "const": false
+              },
+              "scenario": {
+                "type": "string"
+              },
+              "variant_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              }
+            },
+            "required": [
+              "diagnostic_flag_oracle",
+              "eligible",
+              "hard_projection",
+              "implementation",
+              "observed_preference_unavailable",
+              "qualification_case",
+              "scenario",
+              "variant_ids"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "diagnostic_flag_oracle": {
+                "type": "string"
+              },
+              "eligible": {
+                "const": true
+              },
+              "hard_projection": {
+                "type": "string"
+              },
+              "implementation": {
+                "type": "string"
+              },
+              "observed_preference_unavailable": {
+                "const": false
+              },
+              "qualification_case": {
+                "const": false
+              },
+              "scenario": {
+                "type": "string"
+              },
+              "variant_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 1,
+                "minItems": 1,
+                "type": "array"
+              }
+            },
+            "required": [
+              "diagnostic_flag_oracle",
+              "eligible",
+              "hard_projection",
+              "implementation",
+              "observed_preference_unavailable",
+              "qualification_case",
+              "scenario",
+              "variant_ids"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 10,
+      "minItems": 10,
+      "type": "array"
+    },
+    "historical_inventory_complete": {
+      "const": false
+    },
+    "independent_interoperability_established": {
+      "const": false
+    },
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10,
+      "minItems": 10,
+      "type": "array"
+    },
+    "primary_implementations": {
+      "const": 5,
+      "type": "integer"
+    },
+    "qualification_credit": {
+      "const": 0,
+      "type": "integer"
+    },
+    "runtime_profiles": {
+      "const": 6,
+      "type": "integer"
+    },
+    "schema": {
+      "const": "iicp.capability-selection-public-findings.v1"
+    },
+    "scope": {
+      "const": "SOURCE_BOUND_HELPER_OBSERVATIONS_ONE_LOCAL_HOST"
+    },
+    "sdk_and_selection_checks": {
+      "additionalProperties": false,
+      "properties": {
+        "client-rust-run": {
+          "additionalProperties": false,
+          "properties": {
+            "draws_per_histogram": {
+              "const": 1000,
+              "type": "integer"
+            },
+            "enclosing_policy_filter_or_dispatch": {
+              "type": "string"
+            },
+            "holder_validation": {
+              "type": "string"
+            },
+            "invalid_advertisements_rejected": {
+              "const": 3,
+              "type": "integer"
+            },
+            "precedence_and_label_controls": {
+              "const": 4,
+              "type": "integer"
+            },
+            "ranker_decisions": {
+              "const": 6,
+              "type": "integer"
+            },
+            "receipt_profiles": {
+              "const": 2,
+              "type": "integer"
+            },
+            "rust_wrapper_limits_pool_not_real_caller": {
+              "const": true
+            },
+            "weighted_distribution_histograms": {
+              "const": 2,
+              "type": "integer"
+            },
+            "weighted_fixed_vectors": {
+              "const": 4,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "draws_per_histogram",
+            "enclosing_policy_filter_or_dispatch",
+            "holder_validation",
+            "invalid_advertisements_rejected",
+            "precedence_and_label_controls",
+            "ranker_decisions",
+            "receipt_profiles",
+            "rust_wrapper_limits_pool_not_real_caller",
+            "weighted_distribution_histograms",
+            "weighted_fixed_vectors"
+          ],
+          "type": "object"
+        },
+        "python": {
+          "additionalProperties": false,
+          "properties": {
+            "draws_per_histogram": {
+              "const": 1000,
+              "type": "integer"
+            },
+            "enclosing_policy_filter_or_dispatch": {
+              "type": "string"
+            },
+            "holder_validation": {
+              "type": "string"
+            },
+            "invalid_advertisements_rejected": {
+              "const": 3,
+              "type": "integer"
+            },
+            "precedence_and_label_controls": {
+              "const": 4,
+              "type": "integer"
+            },
+            "ranker_decisions": {
+              "const": 6,
+              "type": "integer"
+            },
+            "receipt_profiles": {
+              "const": 2,
+              "type": "integer"
+            },
+            "rust_wrapper_limits_pool_not_real_caller": {
+              "const": false
+            },
+            "weighted_distribution_histograms": {
+              "const": 2,
+              "type": "integer"
+            },
+            "weighted_fixed_vectors": {
+              "const": 4,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "draws_per_histogram",
+            "enclosing_policy_filter_or_dispatch",
+            "holder_validation",
+            "invalid_advertisements_rejected",
+            "precedence_and_label_controls",
+            "ranker_decisions",
+            "receipt_profiles",
+            "rust_wrapper_limits_pool_not_real_caller",
+            "weighted_distribution_histograms",
+            "weighted_fixed_vectors"
+          ],
+          "type": "object"
+        },
+        "typescript22": {
+          "additionalProperties": false,
+          "properties": {
+            "draws_per_histogram": {
+              "const": 1000,
+              "type": "integer"
+            },
+            "enclosing_policy_filter_or_dispatch": {
+              "type": "string"
+            },
+            "holder_validation": {
+              "type": "string"
+            },
+            "invalid_advertisements_rejected": {
+              "const": 3,
+              "type": "integer"
+            },
+            "precedence_and_label_controls": {
+              "const": 4,
+              "type": "integer"
+            },
+            "ranker_decisions": {
+              "const": 6,
+              "type": "integer"
+            },
+            "receipt_profiles": {
+              "const": 2,
+              "type": "integer"
+            },
+            "rust_wrapper_limits_pool_not_real_caller": {
+              "const": false
+            },
+            "weighted_distribution_histograms": {
+              "const": 2,
+              "type": "integer"
+            },
+            "weighted_fixed_vectors": {
+              "const": 4,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "draws_per_histogram",
+            "enclosing_policy_filter_or_dispatch",
+            "holder_validation",
+            "invalid_advertisements_rejected",
+            "precedence_and_label_controls",
+            "ranker_decisions",
+            "receipt_profiles",
+            "rust_wrapper_limits_pool_not_real_caller",
+            "weighted_distribution_histograms",
+            "weighted_fixed_vectors"
+          ],
+          "type": "object"
+        },
+        "typescript24": {
+          "additionalProperties": false,
+          "properties": {
+            "draws_per_histogram": {
+              "const": 1000,
+              "type": "integer"
+            },
+            "enclosing_policy_filter_or_dispatch": {
+              "type": "string"
+            },
+            "holder_validation": {
+              "type": "string"
+            },
+            "invalid_advertisements_rejected": {
+              "const": 3,
+              "type": "integer"
+            },
+            "precedence_and_label_controls": {
+              "const": 4,
+              "type": "integer"
+            },
+            "ranker_decisions": {
+              "const": 6,
+              "type": "integer"
+            },
+            "receipt_profiles": {
+              "const": 2,
+              "type": "integer"
+            },
+            "rust_wrapper_limits_pool_not_real_caller": {
+              "const": false
+            },
+            "weighted_distribution_histograms": {
+              "const": 2,
+              "type": "integer"
+            },
+            "weighted_fixed_vectors": {
+              "const": 4,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "draws_per_histogram",
+            "enclosing_policy_filter_or_dispatch",
+            "holder_validation",
+            "invalid_advertisements_rejected",
+            "precedence_and_label_controls",
+            "ranker_decisions",
+            "receipt_profiles",
+            "rust_wrapper_limits_pool_not_real_caller",
+            "weighted_distribution_histograms",
+            "weighted_fixed_vectors"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "client-rust-run",
+        "python",
+        "typescript22",
+        "typescript24"
+      ],
+      "type": "object"
+    },
+    "shared_matching_projection": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "asserted_fields": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+              },
+              "directory_extension_storage_or_wire_preservation": {
+                "type": "string"
+              },
+              "implementation": {
+                "type": "string"
+              },
+              "scenario": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "asserted_fields",
+              "directory_extension_storage_or_wire_preservation",
+              "implementation",
+              "scenario",
+              "status"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "asserted_fields": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              },
+              "directory_extension_storage_or_wire_preservation": {
+                "type": "string"
+              },
+              "implementation": {
+                "type": "string"
+              },
+              "scenario": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "asserted_fields",
+              "directory_extension_storage_or_wire_preservation",
+              "implementation",
+              "scenario",
+              "status"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "asserted_fields": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 4,
+                "minItems": 4,
+                "type": "array"
+              },
+              "directory_extension_storage_or_wire_preservation": {
+                "type": "string"
+              },
+              "implementation": {
+                "type": "string"
+              },
+              "scenario": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "asserted_fields",
+              "directory_extension_storage_or_wire_preservation",
+              "implementation",
+              "scenario",
+              "status"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 45,
+      "minItems": 45,
+      "type": "array"
+    },
+    "source_records": {
+      "const": 33,
+      "type": "integer"
+    },
+    "sources": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "commit": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "commit",
+          "path",
+          "repository",
+          "sha256",
+          "url"
+        ],
+        "type": "object"
+      },
+      "maxItems": 33,
+      "minItems": 33,
+      "type": "array"
+    },
+    "successor_frozen": {
+      "const": false
+    },
+    "whole_capability_complete": {
+      "const": false
+    }
+  },
+  "required": [
+    "candidate_digest",
+    "diagnostic_difference",
+    "directory_wire_or_storage_executed",
+    "distinct_source_contents",
+    "evidence",
+    "extra_observations",
+    "historical_inventory_complete",
+    "independent_interoperability_established",
+    "limits",
+    "primary_implementations",
+    "qualification_credit",
+    "runtime_profiles",
+    "schema",
+    "scope",
+    "sdk_and_selection_checks",
+    "shared_matching_projection",
+    "source_records",
+    "sources",
+    "successor_frozen",
+    "whole_capability_complete"
+  ],
+  "type": "object"
+}
