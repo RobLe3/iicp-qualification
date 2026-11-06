@@ -1,7 +1,10 @@
-import unittest,json,tempfile,shutil,copy,ast
+import unittest,json,tempfile,shutil,copy,ast,re
 from pathlib import Path
 from unittest.mock import patch
 from scripts import ifrb_rate_helpers as w
+PRIVATE_LOCATOR_MARKERS=('/Users/', '/root/', 'arn:aws:', 'authorization.json', 'GHSA-')
+ACCOUNT_NUMBER_PATTERN=re.compile(r"\b[0-9]{12}\b")
+
 
 class Controls(unittest.TestCase):
  def expected(self):
@@ -90,7 +93,8 @@ class BundleControls(unittest.TestCase):
   self.assertEqual(len(seen),210);self.assertEqual(len(set(seen)),210)
  def test_privacy_and_authority_boundaries(self):
   raw=(w.D/'fragments.json').read_text()
-  for forbidden in ['/Users/','/root/','arn:aws:','authorization.json','GHSA-','052530']:self.assertNotIn(forbidden,raw)
+  for forbidden in PRIVATE_LOCATOR_MARKERS:self.assertNotIn(forbidden,raw)
+  self.assertIsNone(ACCOUNT_NUMBER_PATTERN.search(raw))
   d=json.loads(raw)
   for flag in ['acceptance_changed','successor_frozen','independent_interoperability_established','full_capability_complete','historical_inventory_complete']:self.assertIs(d[flag],False)
  def test_no_original_execution_entrypoint(self):
@@ -112,5 +116,13 @@ class BundleControls(unittest.TestCase):
    p=Path(temp)
    with patch.object(w.subprocess,'run',side_effect=subprocess.TimeoutExpired('unused',1)),self.assertRaises(subprocess.TimeoutExpired):w.run_bounded(['unused'],p,'timed')
    self.assertTrue((p/'timed.stdout').exists());self.assertFalse((p/'observations.json').exists())
+
+
+ def test_account_pattern_rejects_synthetic_account_token(self):
+  self.assertIsNotNone(ACCOUNT_NUMBER_PATTERN.search('synthetic-account=123456789012'))
+  self.assertTrue(all(not marker.isdigit() for marker in PRIVATE_LOCATOR_MARKERS))
+ def test_account_pattern_preserves_hash_substrings(self):
+  self.assertIsNone(ACCOUNT_NUMBER_PATTERN.search('a123456789012b'))
+  self.assertIsNone(ACCOUNT_NUMBER_PATTERN.search('1234567890123'))
 
 if __name__=='__main__':unittest.main()
