@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-11-06T19:26:49Z**.
+Verified snapshot: **2026-11-06T20:17:49Z**.
 
 `[####################]` **64/64 accepted shards**
 
@@ -16,8 +16,8 @@ Sentinels: **4/4** · Project-operated certificates: **5/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **UNKNOWN** (blocker, 2026-11-06T19:26:47.007843+00:00).
-- A retained evidence gap was registered. Missing original content is not reconstructed.
+- Recorded outcome: **REFUSED** (blocker, 2026-11-06T20:17:47.528902+00:00).
+- A prerequisite refused execution; this activity is not a workload result.
 - Actual workload launched in this activity: **false**.
 - Next gate: No next action is inferred from this record.
 
