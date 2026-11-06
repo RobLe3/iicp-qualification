@@ -1792,6 +1792,28 @@
       "reason": "correction-merged",
       "source_sha256": "sha256:3d4d7c282f61f69cd201871df6ca868969d2d6f4e5b7d5ff2c65f027ab1a48e5",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:d748470ac7422a26878502b1f0b56f8c3aa73f45904d9cea3ff9f94fff6c8e01",
+      "kind": "ci",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T10:10:58.302942+00:00",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:ae67ae88d6c19b40e5c94b1e9bbd0fe7bb3a0ff152b8c129d70a7a1efa6d1455",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:9694b696e63de05dda90180b93e67e80f607aec8db86221e528bd45f74ffa45e",
+      "kind": "correction",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T10:17:23Z",
+      "outcome": "MERGED",
+      "qualification_credit": 0,
+      "reason": "correction-merged",
+      "source_sha256": "sha256:32d255a68d7bd70aa618848a958bb503c490b31ccd44ddf9d6555e95cc77d91c",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
