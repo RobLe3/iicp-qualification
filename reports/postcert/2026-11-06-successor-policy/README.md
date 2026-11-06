@@ -4,7 +4,7 @@ This source-bound policy determination explains the gate for a future changed ca
 
 **Condition:** the candidate identity changes and the current target/support/edge policy remains unchanged.
 
-Under that condition, the current certification path requires candidate-bound evidence for all 64 campaign assignments across four targets, 218 support cells and 5,590 edge executions; four validated sentinel entries; four target certificates and one ecosystem certificate. This is **not an assumed 68physical executions**. Admission sentinels may be distinct from campaign shard zero; their exact relationship and execution count must be resolved in the reviewed future packet without duplicate credit.
+Under that condition, the current certification path requires candidate-bound evidence for all 64 campaign assignments across four targets, 218 support cells and 5,590 edge executions; four validated sentinel entries; four target certificates and one ecosystem certificate. This is **not an assumed 68 physical executions**. Admission sentinels may be distinct from campaign shard zero; their exact relationship and execution count must be resolved in the reviewed future packet without duplicate credit.
 
 ## Two different kinds of reuse
 
@@ -14,9 +14,9 @@ Conversely, a report or tooling change does not automatically mean the product c
 
 ## Bounded verification
 
-The retained private proof checks 64original receipt bindings positively. Each of six synthetic single-component artifact mutations is rejected by all 64 old receipt bindings. Four original target certificate envelopes pass. Thirty private source/schema controls and a non-authoring source review support this determination.
+The retained private proof checks 64 original receipt bindings positively. Each of six synthetic single-component artifact mutations is rejected by all 64 old receipt bindings. Four original target certificate envelopes pass. Thirty private source/schema controls and a non-authoring source review support this determination.
 
-The proof uses 20pinned function/guard spans and exact existing inputs; it does not run full certificate compilation, source-evidence reconstruction, workloads or admission. Synthetic mutations remain in memory and are not proposed successor manifests. The private primary code and proof are not distributed here: public readers can check this projection and its public coverage joins, but cannot independently reproduce the private source audit from digests alone.
+The proof uses 20 pinned function/guard spans and exact existing inputs; it does not run full certificate compilation, source-evidence reconstruction, workloads or admission. Synthetic mutations remain in memory and are not proposed successor manifests. The private primary code and proof are not distributed here: public readers can check this projection and its public coverage joins, but cannot independently reproduce the private source audit from digests alone.
 
 Logical sentinel-ledger identity and raw-file integrity use different digests. They must not be compared interchangeably.
 
