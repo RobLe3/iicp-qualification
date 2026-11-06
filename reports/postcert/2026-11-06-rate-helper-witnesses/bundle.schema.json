@@ -1,0 +1,675 @@
+{
+  "$id": "https://github.com/RobLe3/iicp-qualification/schemas/offline-rate-helper-bundle.v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "additionalProperties": false,
+      "properties": {
+        "acceptance_changed": {
+          "const": false
+        },
+        "candidate_manifest_sha256": {
+          "type": "string"
+        },
+        "counts": {
+          "additionalProperties": false,
+          "properties": {
+            "existing_coordinate_references": {
+              "type": "integer"
+            },
+            "fragments": {
+              "type": "integer"
+            },
+            "source_case_definitions": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fragments",
+            "source_case_definitions",
+            "existing_coordinate_references"
+          ],
+          "type": "object"
+        },
+        "fragments": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_assertion": {
+                "type": "string"
+              },
+              "existing_coordinate_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assertion_id": {
+                      "type": "string"
+                    },
+                    "directory_flavor": {
+                      "type": "string"
+                    },
+                    "mode": {
+                      "type": "string"
+                    },
+                    "receipt_file_sha256": {
+                      "type": "string"
+                    },
+                    "runtime": {
+                      "type": "string"
+                    },
+                    "target": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "assertion_id",
+                    "target",
+                    "runtime",
+                    "mode",
+                    "directory_flavor",
+                    "receipt_file_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "fragment_sha256": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "line_end": {
+                "type": "integer"
+              },
+              "line_start": {
+                "type": "integer"
+              },
+              "qualified_source_commit": {
+                "type": "string"
+              },
+              "source_path": {
+                "type": "string"
+              },
+              "source_scope": {
+                "additionalProperties": false,
+                "properties": {
+                  "fixture": {
+                    "type": "string"
+                  },
+                  "fragment": {
+                    "type": "string"
+                  },
+                  "not_established": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "source_postcondition": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "fixture",
+                  "fragment",
+                  "not_established",
+                  "source_postcondition"
+                ],
+                "type": "object"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "component",
+              "source_path",
+              "source_sha256",
+              "line_start",
+              "line_end",
+              "fragment_sha256",
+              "code",
+              "source_url",
+              "qualified_source_commit",
+              "accepted_harness_source_commit",
+              "case_id",
+              "declared_assertion",
+              "source_scope",
+              "existing_coordinate_refs"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "full_capability_complete": {
+          "const": false
+        },
+        "historical_inventory_complete": {
+          "const": false
+        },
+        "independent_interoperability_established": {
+          "const": false
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "public_analysis_file_sha256": {
+          "type": "string"
+        },
+        "qualification_credit": {
+          "const": 0
+        },
+        "qualification_derivative_source_commit": {
+          "type": "string"
+        },
+        "schema": {
+          "const": "iicp.offline-rate-helper-fragments.v1"
+        },
+        "state": {
+          "const": "PARTIAL_EXECUTABLE_HELPER_REFERENCE_NOT_FROZEN_IFRB"
+        },
+        "successor_frozen": {
+          "const": false
+        }
+      },
+      "required": [
+        "schema",
+        "state",
+        "fragments",
+        "candidate_manifest_sha256",
+        "public_analysis_file_sha256",
+        "qualification_derivative_source_commit",
+        "historical_inventory_complete",
+        "qualification_credit",
+        "acceptance_changed",
+        "successor_frozen",
+        "independent_interoperability_established",
+        "full_capability_complete",
+        "counts",
+        "limitations"
+      ],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "endpoint_execution": {
+          "const": false
+        },
+        "qualification_credit": {
+          "const": 0
+        },
+        "registration_step": {
+          "items": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "expected": {
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "now_ms": {
+                    "type": "integer"
+                  },
+                  "prev": {
+                    "type": "null"
+                  },
+                  "ttl_ms": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "prev",
+                  "now_ms",
+                  "ttl_ms",
+                  "expected"
+                ],
+                "type": "object"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "expected": {
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "now_ms": {
+                    "type": "integer"
+                  },
+                  "prev": {
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "ttl_ms": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "prev",
+                  "now_ms",
+                  "ttl_ms",
+                  "expected"
+                ],
+                "type": "object"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "relay": {
+          "items": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "limit": {
+                    "type": "integer"
+                  },
+                  "steps": {
+                    "items": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "expected": {
+                          "const": true
+                        },
+                        "now_ms": {
+                          "type": "integer"
+                        },
+                        "rebind": {
+                          "const": false
+                        },
+                        "source": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "source",
+                        "now_ms",
+                        "rebind",
+                        "expected"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "id",
+                  "limit",
+                  "steps"
+                ],
+                "type": "object"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "limit": {
+                    "type": "integer"
+                  },
+                  "steps": {
+                    "items": {
+                      "anyOf": [
+                        {
+                          "additionalProperties": false,
+                          "properties": {
+                            "expected": {
+                              "const": true
+                            },
+                            "now_ms": {
+                              "type": "integer"
+                            },
+                            "rebind": {
+                              "const": false
+                            },
+                            "source": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "source",
+                            "now_ms",
+                            "rebind",
+                            "expected"
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "additionalProperties": false,
+                          "properties": {
+                            "expected": {
+                              "const": false
+                            },
+                            "now_ms": {
+                              "type": "integer"
+                            },
+                            "rebind": {
+                              "const": false
+                            },
+                            "source": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "source",
+                            "now_ms",
+                            "rebind",
+                            "expected"
+                          ],
+                          "type": "object"
+                        }
+                      ]
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "id",
+                  "limit",
+                  "steps"
+                ],
+                "type": "object"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "limit": {
+                    "type": "integer"
+                  },
+                  "steps": {
+                    "items": {
+                      "anyOf": [
+                        {
+                          "additionalProperties": false,
+                          "properties": {
+                            "expected": {
+                              "const": true
+                            },
+                            "now_ms": {
+                              "type": "integer"
+                            },
+                            "rebind": {
+                              "const": false
+                            },
+                            "source": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "source",
+                            "now_ms",
+                            "rebind",
+                            "expected"
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "additionalProperties": false,
+                          "properties": {
+                            "expected": {
+                              "const": true
+                            },
+                            "now_ms": {
+                              "type": "integer"
+                            },
+                            "rebind": {
+                              "const": true
+                            },
+                            "source": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "source",
+                            "now_ms",
+                            "rebind",
+                            "expected"
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "additionalProperties": false,
+                          "properties": {
+                            "expected": {
+                              "const": false
+                            },
+                            "now_ms": {
+                              "type": "integer"
+                            },
+                            "rebind": {
+                              "const": false
+                            },
+                            "source": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "source",
+                            "now_ms",
+                            "rebind",
+                            "expected"
+                          ],
+                          "type": "object"
+                        }
+                      ]
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "id",
+                  "limit",
+                  "steps"
+                ],
+                "type": "object"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "limit": {
+                    "type": "integer"
+                  },
+                  "steps": {
+                    "items": {
+                      "anyOf": [
+                        {
+                          "additionalProperties": false,
+                          "properties": {
+                            "expected": {
+                              "const": true
+                            },
+                            "now_ms": {
+                              "type": "integer"
+                            },
+                            "rebind": {
+                              "const": true
+                            },
+                            "source": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "source",
+                            "now_ms",
+                            "rebind",
+                            "expected"
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "additionalProperties": false,
+                          "properties": {
+                            "expected": {
+                              "const": true
+                            },
+                            "now_ms": {
+                              "type": "integer"
+                            },
+                            "rebind": {
+                              "const": false
+                            },
+                            "source": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "source",
+                            "now_ms",
+                            "rebind",
+                            "expected"
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "additionalProperties": false,
+                          "properties": {
+                            "expected": {
+                              "const": false
+                            },
+                            "now_ms": {
+                              "type": "integer"
+                            },
+                            "rebind": {
+                              "const": false
+                            },
+                            "source": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "source",
+                            "now_ms",
+                            "rebind",
+                            "expected"
+                          ],
+                          "type": "object"
+                        }
+                      ]
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "id",
+                  "limit",
+                  "steps"
+                ],
+                "type": "object"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "retry_after_clamp": {
+          "items": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "expected": {
+                    "type": "integer"
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "input": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "input",
+                  "expected"
+                ],
+                "type": "object"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "expected": {
+                    "type": "integer"
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "input": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "input",
+                  "expected"
+                ],
+                "type": "object"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "schema": {
+          "const": "iicp.offline-rate-helper-vectors.v1"
+        },
+        "time_unit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema",
+        "time_unit",
+        "relay",
+        "registration_step",
+        "retry_after_clamp",
+        "qualification_credit",
+        "endpoint_execution"
+      ],
+      "type": "object"
+    }
+  ]
+}

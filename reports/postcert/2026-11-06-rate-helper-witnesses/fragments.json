@@ -1,0 +1,1855 @@
+{
+  "acceptance_changed": false,
+  "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "counts": {
+    "existing_coordinate_references": 210,
+    "fragments": 5,
+    "source_case_definitions": 5
+  },
+  "fragments": [
+    {
+      "accepted_harness_source_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "case_id": "client-python::rate-limit",
+      "code": "    def allow_bind(self, source: str, *, rebind: bool = False, now: float | None = None) -> bool:\n        \"\"\"Bound relay-bind attempts per transport source.\n\n        Dead-session reconnects are exempt so recovery is not delayed.  The\n        source is used only as an in-memory key and is never written to logs.\n        \"\"\"\n        if rebind or self._bind_rate_limit == 0:\n            return True\n        current = time.monotonic() if now is None else now\n        with self._lock:\n            start, count = self._bind_rate_buckets.get(source, (current, 0))\n            if current - start >= RELAY_BIND_RATE_WINDOW_S:\n                start, count = current, 0\n            count += 1\n            self._bind_rate_buckets[source] = (start, count)\n            if len(self._bind_rate_buckets) > 4096:\n                self._bind_rate_buckets = {\n                    key: bucket\n                    for key, bucket in self._bind_rate_buckets.items()\n                    if current - bucket[0] < RELAY_BIND_RATE_WINDOW_S\n                }\n            return count <= self._bind_rate_limit\n",
+      "component": "client-python",
+      "declared_assertion": "test_relay_bind_rate_limit_is_per_source_and_recovers",
+      "existing_coordinate_refs": [
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-aarch64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:158b2832ee8d7888e3135c662fdf55edaeac82339cd8b8f3c2251379544edd8b",
+          "runtime": "cpython-3.11",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-aarch64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:bcc4f6886769cc63239faad9157ce0f39bcbdba6cd78e53ceddf5a8315b9e214",
+          "runtime": "cpython-3.11",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-aarch64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:848f63ff205108842d598a2c6900a9811c1a920d80a803604a3e2e2e1465700f",
+          "runtime": "cpython-3.11",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-aarch64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:158b2832ee8d7888e3135c662fdf55edaeac82339cd8b8f3c2251379544edd8b",
+          "runtime": "cpython-3.11",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-aarch64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:9b736e3a703d72eddf6908f95a96fe09ee22bc7cdf1c51e642045589137d74e4",
+          "runtime": "cpython-3.11",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-aarch64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:eabf59a1f6c6e6e7a0fbe0a379bf21a274a643ddd01cb7bbafd6df28e7fad37e",
+          "runtime": "cpython-3.11",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:682f4c23c6e5e73514252a1440c47387fd27fda3337e59513000b7f460c30787",
+          "runtime": "cpython-3.11",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:5642102db9c38c9221ce2687739716bfb0e30d67cdbcb58e405e82882a4ebbf3",
+          "runtime": "cpython-3.11",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:4634fce8c07a05289d66a8d9773aea98653691aa251243d6f2754382b31b5a8b",
+          "runtime": "cpython-3.11",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:4634fce8c07a05289d66a8d9773aea98653691aa251243d6f2754382b31b5a8b",
+          "runtime": "cpython-3.11",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:5642102db9c38c9221ce2687739716bfb0e30d67cdbcb58e405e82882a4ebbf3",
+          "runtime": "cpython-3.11",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|linux-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:0b3e59fb8d0b61231b25201fd9295120cca8b24a5f6582db40380a00d4b6a0d4",
+          "runtime": "cpython-3.11",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|macos-arm64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:ed70267a08e13661050283b505d80e088cbcec3f29309c6a7d6b9d63ecddb5d0",
+          "runtime": "cpython-3.11",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|macos-arm64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:cb62d16dbc666cd2d528d9c0066b54f2e97b0dab9aaec3834de4fd11502437e4",
+          "runtime": "cpython-3.11",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|macos-arm64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:f94a366a6f36ecc3881a1b2d589f8e8c616b8101af2eb04d7559ab0bec4be318",
+          "runtime": "cpython-3.11",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|macos-arm64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:cb62d16dbc666cd2d528d9c0066b54f2e97b0dab9aaec3834de4fd11502437e4",
+          "runtime": "cpython-3.11",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|macos-arm64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:a26c6e2203c062b2ebce6c3a0208d09f6b1d9202f90864b8762818bfb4967cfe",
+          "runtime": "cpython-3.11",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|macos-arm64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:d41408d58b0927029db698e118fd1112584308059adf6279620828692f581e48",
+          "runtime": "cpython-3.11",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|windows-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:e613e4cec1ee8180d516bac604f23abb90e109a3120f38f35598ae05da5806a1",
+          "runtime": "cpython-3.11",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|windows-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:59d4180e0c4e7aa7e8ceb9e2d8627f46e59a9c487b59685d8fcceb18c801e7f3",
+          "runtime": "cpython-3.11",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|windows-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:ba0ffe4a3196644db2577122462458530aa814fb234801741d9b07c17f7d1ca1",
+          "runtime": "cpython-3.11",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|windows-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:4676c7f3e0f2f3b6429b6c31e216398d204c79b73e9b0550fff1f3f4500d6cc5",
+          "runtime": "cpython-3.11",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|windows-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:59d4180e0c4e7aa7e8ceb9e2d8627f46e59a9c487b59685d8fcceb18c801e7f3",
+          "runtime": "cpython-3.11",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.11|windows-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:00c5eca93163ce161986a7f2ca901d57ad0644c449acbe68745b0c1258923587",
+          "runtime": "cpython-3.11",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-aarch64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:4887a18d66ea5cf5a7bcdd350608a2f033fd14a075b95e9ac65490d7761f2f15",
+          "runtime": "cpython-3.12",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-aarch64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:848f63ff205108842d598a2c6900a9811c1a920d80a803604a3e2e2e1465700f",
+          "runtime": "cpython-3.12",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-aarch64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:7180cccfb72bbb3be6c6b98e0fb7e79d2b2771d1e4325aa3a2e035c7ca99f0a1",
+          "runtime": "cpython-3.12",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-aarch64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:220e9cc5853a53a0d72fb016ec28611320a7bc0deb984b3c010d861a7d4d1428",
+          "runtime": "cpython-3.12",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-aarch64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:220e9cc5853a53a0d72fb016ec28611320a7bc0deb984b3c010d861a7d4d1428",
+          "runtime": "cpython-3.12",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-aarch64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:4322222cf7b13037f0671f7c16fbba13503640572aa8e93465c16a822365c183",
+          "runtime": "cpython-3.12",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:ffe3f8205e2da5a9368fef7b8c25a42c7ce1ade6c8b3898c65f51ea432f9a855",
+          "runtime": "cpython-3.12",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:8adcb9b8fcf9e962b3e180ac7609fa7f979598db6438f0016bd929972daba827",
+          "runtime": "cpython-3.12",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:90e1a3f75d6d369acc09ebb421a8ed3cebcdf1fd8aa655894d8dd389a58e5382",
+          "runtime": "cpython-3.12",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:0f741194ec8ab1e448c92bb7dc9c885720e9c28b6907cee935da374dcc0f3b24",
+          "runtime": "cpython-3.12",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:90e1a3f75d6d369acc09ebb421a8ed3cebcdf1fd8aa655894d8dd389a58e5382",
+          "runtime": "cpython-3.12",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|linux-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:0b3e59fb8d0b61231b25201fd9295120cca8b24a5f6582db40380a00d4b6a0d4",
+          "runtime": "cpython-3.12",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|macos-arm64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:ed70267a08e13661050283b505d80e088cbcec3f29309c6a7d6b9d63ecddb5d0",
+          "runtime": "cpython-3.12",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|macos-arm64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:8709ee2abdc92eb5eea97f1991dea41c38dcf0b821897a0a2a652f07590d1228",
+          "runtime": "cpython-3.12",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|macos-arm64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:a26c6e2203c062b2ebce6c3a0208d09f6b1d9202f90864b8762818bfb4967cfe",
+          "runtime": "cpython-3.12",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|macos-arm64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:cf6fdc42823999d8a633139defc692ddb4ae4e5d55441daeb085981bf9946a2e",
+          "runtime": "cpython-3.12",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|macos-arm64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:a26c6e2203c062b2ebce6c3a0208d09f6b1d9202f90864b8762818bfb4967cfe",
+          "runtime": "cpython-3.12",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|macos-arm64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:a26c6e2203c062b2ebce6c3a0208d09f6b1d9202f90864b8762818bfb4967cfe",
+          "runtime": "cpython-3.12",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|windows-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:35aaef2563f03cb0e70e3ed0c57bc67f3a38d299c370854449420da3f904779d",
+          "runtime": "cpython-3.12",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|windows-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:8ff1bdaea779b61e875f20299c9e29d880108e7d3a29dcd20d221e204099d3e0",
+          "runtime": "cpython-3.12",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|windows-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:dec38c6a0e3599abffce9e58a5f8a665fcc15464a57caf23523ac8f173f20b00",
+          "runtime": "cpython-3.12",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|windows-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:4676c7f3e0f2f3b6429b6c31e216398d204c79b73e9b0550fff1f3f4500d6cc5",
+          "runtime": "cpython-3.12",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|windows-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:00c5eca93163ce161986a7f2ca901d57ad0644c449acbe68745b0c1258923587",
+          "runtime": "cpython-3.12",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.12|windows-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:00c5eca93163ce161986a7f2ca901d57ad0644c449acbe68745b0c1258923587",
+          "runtime": "cpython-3.12",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-aarch64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:220e9cc5853a53a0d72fb016ec28611320a7bc0deb984b3c010d861a7d4d1428",
+          "runtime": "cpython-3.13",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-aarch64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:1abc5e74de690b7bea7c8c1aded5311c32ce6c056ec7171ee185a9c6d7083e1b",
+          "runtime": "cpython-3.13",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-aarch64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:eabf59a1f6c6e6e7a0fbe0a379bf21a274a643ddd01cb7bbafd6df28e7fad37e",
+          "runtime": "cpython-3.13",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-aarch64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:7180cccfb72bbb3be6c6b98e0fb7e79d2b2771d1e4325aa3a2e035c7ca99f0a1",
+          "runtime": "cpython-3.13",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-aarch64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:8045b1b84f3cf7ee880cf5c9aaa828de89c2c6ab03768cab454acaabd6c4d9c2",
+          "runtime": "cpython-3.13",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-aarch64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:1abc5e74de690b7bea7c8c1aded5311c32ce6c056ec7171ee185a9c6d7083e1b",
+          "runtime": "cpython-3.13",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:ec5572c980cf5f2e2cbf1330366a38f43caa7545f259249beda0149c6650f423",
+          "runtime": "cpython-3.13",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:5642102db9c38c9221ce2687739716bfb0e30d67cdbcb58e405e82882a4ebbf3",
+          "runtime": "cpython-3.13",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:aaa3d257f5a70ca00815b189006daaaed68f13c225392f94932a905ffbc40523",
+          "runtime": "cpython-3.13",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:4634fce8c07a05289d66a8d9773aea98653691aa251243d6f2754382b31b5a8b",
+          "runtime": "cpython-3.13",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:aaa3d257f5a70ca00815b189006daaaed68f13c225392f94932a905ffbc40523",
+          "runtime": "cpython-3.13",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|linux-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:90e1a3f75d6d369acc09ebb421a8ed3cebcdf1fd8aa655894d8dd389a58e5382",
+          "runtime": "cpython-3.13",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|macos-arm64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:14d5c323e9898300a61af21ad2a09e63b0ec6b3743eb2913699fa61ab43cc8f2",
+          "runtime": "cpython-3.13",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|macos-arm64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:5b5d59115bde2a4512d320ff5b881c182fb0ed0eea6bfd16363f2fec7170f454",
+          "runtime": "cpython-3.13",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|macos-arm64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:d61aa68a70c072695dcbc6979e75b8be886dab3d61fcf2e7748e65ca94c7e221",
+          "runtime": "cpython-3.13",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|macos-arm64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:376a3802fdcef141987008be9720ec493cb409b8d5b0d9cba077dc8ddd07d192",
+          "runtime": "cpython-3.13",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|macos-arm64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:cf6fdc42823999d8a633139defc692ddb4ae4e5d55441daeb085981bf9946a2e",
+          "runtime": "cpython-3.13",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|macos-arm64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:21889b3a44389f058043bdbffc55293d15e09f8590af9ad530b9530319adc696",
+          "runtime": "cpython-3.13",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|windows-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:dec0b406fb3ebf856ffcf8bd3149ae70eb7b380359ced4c75a8e7be95e953df2",
+          "runtime": "cpython-3.13",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|windows-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:59d4180e0c4e7aa7e8ceb9e2d8627f46e59a9c487b59685d8fcceb18c801e7f3",
+          "runtime": "cpython-3.13",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|windows-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:35aaef2563f03cb0e70e3ed0c57bc67f3a38d299c370854449420da3f904779d",
+          "runtime": "cpython-3.13",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|windows-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:6c178862d0bdea2124aaaaafd1b5941fb1f3542547a73be207dec59edf0f0569",
+          "runtime": "cpython-3.13",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|windows-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:16a3c5af5f0b0c5bba7d8b8076a5f9491390f2e2bcf5c7b8fab74048a1d716d4",
+          "runtime": "cpython-3.13",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.13|windows-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:00c5eca93163ce161986a7f2ca901d57ad0644c449acbe68745b0c1258923587",
+          "runtime": "cpython-3.13",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-aarch64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:158b2832ee8d7888e3135c662fdf55edaeac82339cd8b8f3c2251379544edd8b",
+          "runtime": "cpython-3.14",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-aarch64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:b2f32358d5229f5036bd8f255532eb598afed36d19dcaffb2a6cf33299b6a86e",
+          "runtime": "cpython-3.14",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-aarch64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:220e9cc5853a53a0d72fb016ec28611320a7bc0deb984b3c010d861a7d4d1428",
+          "runtime": "cpython-3.14",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-aarch64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:158b2832ee8d7888e3135c662fdf55edaeac82339cd8b8f3c2251379544edd8b",
+          "runtime": "cpython-3.14",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-aarch64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:bcc4f6886769cc63239faad9157ce0f39bcbdba6cd78e53ceddf5a8315b9e214",
+          "runtime": "cpython-3.14",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-aarch64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:b2f32358d5229f5036bd8f255532eb598afed36d19dcaffb2a6cf33299b6a86e",
+          "runtime": "cpython-3.14",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:0b3e59fb8d0b61231b25201fd9295120cca8b24a5f6582db40380a00d4b6a0d4",
+          "runtime": "cpython-3.14",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:5642102db9c38c9221ce2687739716bfb0e30d67cdbcb58e405e82882a4ebbf3",
+          "runtime": "cpython-3.14",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:4634fce8c07a05289d66a8d9773aea98653691aa251243d6f2754382b31b5a8b",
+          "runtime": "cpython-3.14",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:682f4c23c6e5e73514252a1440c47387fd27fda3337e59513000b7f460c30787",
+          "runtime": "cpython-3.14",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:9937cf257f2aa33d20a5570c07966cb577c47f5f2e523c99ba618bb138cd3725",
+          "runtime": "cpython-3.14",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|linux-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:25e3e60361ef0cddab8d97be031e5d0548643ece21d6faa8494149c40723f11c",
+          "runtime": "cpython-3.14",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|macos-arm64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:cb62d16dbc666cd2d528d9c0066b54f2e97b0dab9aaec3834de4fd11502437e4",
+          "runtime": "cpython-3.14",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|macos-arm64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:165e165651a4706c6747578603f32fd54445eab3685501a8d53d44d609dc0a27",
+          "runtime": "cpython-3.14",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|macos-arm64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:5b5d59115bde2a4512d320ff5b881c182fb0ed0eea6bfd16363f2fec7170f454",
+          "runtime": "cpython-3.14",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|macos-arm64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:3fcf7ce33c379c8fed9b0ac1df7d1cea1a60b0a72607bc3bdcd206f997b5f706",
+          "runtime": "cpython-3.14",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|macos-arm64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:a26c6e2203c062b2ebce6c3a0208d09f6b1d9202f90864b8762818bfb4967cfe",
+          "runtime": "cpython-3.14",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|macos-arm64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:376a3802fdcef141987008be9720ec493cb409b8d5b0d9cba077dc8ddd07d192",
+          "runtime": "cpython-3.14",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|windows-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:78807473f41cf72804198697859191bb6a3a2b018cfea31cdd204c2bd469c570",
+          "runtime": "cpython-3.14",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|windows-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:6c178862d0bdea2124aaaaafd1b5941fb1f3542547a73be207dec59edf0f0569",
+          "runtime": "cpython-3.14",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|windows-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:ba0ffe4a3196644db2577122462458530aa814fb234801741d9b07c17f7d1ca1",
+          "runtime": "cpython-3.14",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|windows-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:59d4180e0c4e7aa7e8ceb9e2d8627f46e59a9c487b59685d8fcceb18c801e7f3",
+          "runtime": "cpython-3.14",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|windows-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:dec0b406fb3ebf856ffcf8bd3149ae70eb7b380359ced4c75a8e7be95e953df2",
+          "runtime": "cpython-3.14",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-python|cpython-3.14|windows-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:8e4c653916f10c87b2c36207df539e5fb0a8971ef443feadb8a4a1e8b00b0108",
+          "runtime": "cpython-3.14",
+          "target": "windows-x86_64"
+        }
+      ],
+      "fragment_sha256": "2b8f90338eea0a71244d98dbe14bd8bf4aab6e2f27902215b051e7092d11b490",
+      "id": "python-relay",
+      "line_end": 354,
+      "line_start": 333,
+      "qualified_source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "source_path": "src/iicp_client/relay_session.py",
+      "source_scope": {
+        "fixture": "RelaySessionRegistry limit=2; source-a allowed twice, third denied, source-b allowed, source-a allowed at 71 seconds.",
+        "fragment": "python-relay",
+        "not_established": [
+          "HTTP429 or Retry-After exposure",
+          "actual authenticated relay binding or transport-source identity",
+          "unbounded retry-loop behavior",
+          "constructor configuration equivalence",
+          "stable relay support"
+        ],
+        "source_postcondition": "Boolean admission is per provided source and resets after a 60-second window in the selected state helper."
+      },
+      "source_sha256": "cfe0be3266f1163ec64633efcb09b0c37ee32e8b23c647ece0056184868ada42",
+      "source_url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/relay_session.py#L333-L354"
+    },
+    {
+      "accepted_harness_source_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "case_id": "client-typescript::rate-limit",
+      "code": "  allowBind(source: string, opts: { rebind?: boolean; now?: number } = {}): boolean {\n    if (opts.rebind || this._bindRateLimit === 0) return true;\n    const now = opts.now ?? Date.now();\n    let bucket = this._bindRateBuckets.get(source);\n    if (!bucket || now - bucket.start >= RELAY_BIND_RATE_WINDOW_MS) bucket = { start: now, count: 0 };\n    bucket.count += 1;\n    this._bindRateBuckets.set(source, bucket);\n    if (this._bindRateBuckets.size > 4096) {\n      const cutoff = now - RELAY_BIND_RATE_WINDOW_MS;\n      for (const [key, value] of this._bindRateBuckets) {\n        if (value.start < cutoff) this._bindRateBuckets.delete(key);\n      }\n    }\n    return bucket.count <= this._bindRateLimit;\n  }\n",
+      "component": "client-typescript",
+      "declared_assertion": "rate-limits each source independently and recovers after the window",
+      "existing_coordinate_refs": [
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-aarch64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:4887a18d66ea5cf5a7bcdd350608a2f033fd14a075b95e9ac65490d7761f2f15",
+          "runtime": "node-22",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-aarch64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:bcc4f6886769cc63239faad9157ce0f39bcbdba6cd78e53ceddf5a8315b9e214",
+          "runtime": "node-22",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-aarch64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:bcc4f6886769cc63239faad9157ce0f39bcbdba6cd78e53ceddf5a8315b9e214",
+          "runtime": "node-22",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-aarch64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:291bc65495a6c82240b31d57069cb250f8eae86bb432e186bd46174ab9830b08",
+          "runtime": "node-22",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-aarch64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:848f63ff205108842d598a2c6900a9811c1a920d80a803604a3e2e2e1465700f",
+          "runtime": "node-22",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-aarch64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:e3259779c37f0c87c3813797a3df5c715d9d7801c282c12c0583a3f2153a4439",
+          "runtime": "node-22",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:ec5572c980cf5f2e2cbf1330366a38f43caa7545f259249beda0149c6650f423",
+          "runtime": "node-22",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:ffe3f8205e2da5a9368fef7b8c25a42c7ce1ade6c8b3898c65f51ea432f9a855",
+          "runtime": "node-22",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:0f741194ec8ab1e448c92bb7dc9c885720e9c28b6907cee935da374dcc0f3b24",
+          "runtime": "node-22",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:7f3eb55a65337d3123b40cf00d8133eef23c7a5174d77fc575616f77bb3e889e",
+          "runtime": "node-22",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:25e3e60361ef0cddab8d97be031e5d0548643ece21d6faa8494149c40723f11c",
+          "runtime": "node-22",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|linux-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:0f741194ec8ab1e448c92bb7dc9c885720e9c28b6907cee935da374dcc0f3b24",
+          "runtime": "node-22",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|macos-arm64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:ed70267a08e13661050283b505d80e088cbcec3f29309c6a7d6b9d63ecddb5d0",
+          "runtime": "node-22",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|macos-arm64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:cf6fdc42823999d8a633139defc692ddb4ae4e5d55441daeb085981bf9946a2e",
+          "runtime": "node-22",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|macos-arm64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:165e165651a4706c6747578603f32fd54445eab3685501a8d53d44d609dc0a27",
+          "runtime": "node-22",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|macos-arm64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:3fcf7ce33c379c8fed9b0ac1df7d1cea1a60b0a72607bc3bdcd206f997b5f706",
+          "runtime": "node-22",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|macos-arm64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:f94a366a6f36ecc3881a1b2d589f8e8c616b8101af2eb04d7559ab0bec4be318",
+          "runtime": "node-22",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|macos-arm64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:919a8f52c3f543036f9b46e14fea754a202addb6876c0a50d13de4d1c84ae031",
+          "runtime": "node-22",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|windows-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:78807473f41cf72804198697859191bb6a3a2b018cfea31cdd204c2bd469c570",
+          "runtime": "node-22",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|windows-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:dec38c6a0e3599abffce9e58a5f8a665fcc15464a57caf23523ac8f173f20b00",
+          "runtime": "node-22",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|windows-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:35aaef2563f03cb0e70e3ed0c57bc67f3a38d299c370854449420da3f904779d",
+          "runtime": "node-22",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|windows-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:8e4c653916f10c87b2c36207df539e5fb0a8971ef443feadb8a4a1e8b00b0108",
+          "runtime": "node-22",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|windows-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:16a3c5af5f0b0c5bba7d8b8076a5f9491390f2e2bcf5c7b8fab74048a1d716d4",
+          "runtime": "node-22",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-22|windows-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:00c5eca93163ce161986a7f2ca901d57ad0644c449acbe68745b0c1258923587",
+          "runtime": "node-22",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-aarch64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:aabed9e8ca1ee28cf417288da53fe61f5fb8cad3a6463a4d0e25fca6a36679c6",
+          "runtime": "node-24",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-aarch64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:848f63ff205108842d598a2c6900a9811c1a920d80a803604a3e2e2e1465700f",
+          "runtime": "node-24",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-aarch64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:bcc4f6886769cc63239faad9157ce0f39bcbdba6cd78e53ceddf5a8315b9e214",
+          "runtime": "node-24",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-aarch64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:4322222cf7b13037f0671f7c16fbba13503640572aa8e93465c16a822365c183",
+          "runtime": "node-24",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-aarch64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:e3259779c37f0c87c3813797a3df5c715d9d7801c282c12c0583a3f2153a4439",
+          "runtime": "node-24",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-aarch64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:b2f32358d5229f5036bd8f255532eb598afed36d19dcaffb2a6cf33299b6a86e",
+          "runtime": "node-24",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:90e1a3f75d6d369acc09ebb421a8ed3cebcdf1fd8aa655894d8dd389a58e5382",
+          "runtime": "node-24",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:8adcb9b8fcf9e962b3e180ac7609fa7f979598db6438f0016bd929972daba827",
+          "runtime": "node-24",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:4634fce8c07a05289d66a8d9773aea98653691aa251243d6f2754382b31b5a8b",
+          "runtime": "node-24",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:ffe3f8205e2da5a9368fef7b8c25a42c7ce1ade6c8b3898c65f51ea432f9a855",
+          "runtime": "node-24",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:5642102db9c38c9221ce2687739716bfb0e30d67cdbcb58e405e82882a4ebbf3",
+          "runtime": "node-24",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|linux-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:2e6ce84b3b02943f4c08dae3c45391fdf26e4ead7bd486f6bff7759921ce621f",
+          "runtime": "node-24",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|macos-arm64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:a26c6e2203c062b2ebce6c3a0208d09f6b1d9202f90864b8762818bfb4967cfe",
+          "runtime": "node-24",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|macos-arm64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:3fcf7ce33c379c8fed9b0ac1df7d1cea1a60b0a72607bc3bdcd206f997b5f706",
+          "runtime": "node-24",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|macos-arm64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:d41408d58b0927029db698e118fd1112584308059adf6279620828692f581e48",
+          "runtime": "node-24",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|macos-arm64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:d61aa68a70c072695dcbc6979e75b8be886dab3d61fcf2e7748e65ca94c7e221",
+          "runtime": "node-24",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|macos-arm64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:cf6c2b9306ab6cb824d4b9003a203014ef5542819f33c2780244be2ea76c2ed0",
+          "runtime": "node-24",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|macos-arm64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:d61aa68a70c072695dcbc6979e75b8be886dab3d61fcf2e7748e65ca94c7e221",
+          "runtime": "node-24",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|windows-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:e8b23907e2137ea2c1f85788134a916838a6786a99987b937e2fd660d586fe70",
+          "runtime": "node-24",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|windows-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:dec38c6a0e3599abffce9e58a5f8a665fcc15464a57caf23523ac8f173f20b00",
+          "runtime": "node-24",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|windows-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:16a3c5af5f0b0c5bba7d8b8076a5f9491390f2e2bcf5c7b8fab74048a1d716d4",
+          "runtime": "node-24",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|windows-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:78807473f41cf72804198697859191bb6a3a2b018cfea31cdd204c2bd469c570",
+          "runtime": "node-24",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|windows-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:738edd503119612baa3480a41193824293620e7d96a6b3d4eace0651ab30a715",
+          "runtime": "node-24",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-typescript|node-24|windows-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:8ff1bdaea779b61e875f20299c9e29d880108e7d3a29dcd20d221e204099d3e0",
+          "runtime": "node-24",
+          "target": "windows-x86_64"
+        }
+      ],
+      "fragment_sha256": "16917ed39f30c8899eea14bb83aae04b042b4c1aa9b9c7b6c40f2bf6650fd572",
+      "id": "typescript-relay",
+      "line_end": 352,
+      "line_start": 338,
+      "qualified_source_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "source_path": "src/relay_session.ts",
+      "source_scope": {
+        "fixture": "RelaySessionRegistry limit=2; same sequence; injected clock 10 and 60011 milliseconds.",
+        "fragment": "typescript-relay",
+        "not_established": [
+          "HTTP429 or Retry-After exposure",
+          "actual authenticated relay binding or transport-source identity",
+          "unbounded retry-loop behavior",
+          "constructor configuration equivalence",
+          "stable relay support"
+        ],
+        "source_postcondition": "Boolean admission is per provided source and resets after a 60000-millisecond window in the selected state helper."
+      },
+      "source_sha256": "33c77889b673da3b1d6e2e7c9540f3a6bd1b4c18a23aee742b42838ec7c07524",
+      "source_url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/relay_session.ts#L338-L352"
+    },
+    {
+      "accepted_harness_source_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "case_id": "client-rust::rate-limit",
+      "code": "    pub fn allow_bind(&self, source: &str, rebind: bool, now: Instant) -> bool {\n        if rebind || self.bind_rate_limit == 0 {\n            return true;\n        }\n        let mut buckets = self.bind_rate_buckets.lock().unwrap();\n        let entry = buckets.entry(source.to_string()).or_insert((now, 0));\n        if now.duration_since(entry.0) >= RELAY_BIND_RATE_WINDOW {\n            *entry = (now, 0);\n        }\n        entry.1 += 1;\n        let allowed = entry.1 <= self.bind_rate_limit;\n        if buckets.len() > 4096 {\n            buckets.retain(|_, (start, _)| now.duration_since(*start) < RELAY_BIND_RATE_WINDOW);\n        }\n        allowed\n    }\n",
+      "component": "client-rust",
+      "declared_assertion": "relay_session::tests::bind_rate_limit_is_per_source_and_recovers",
+      "existing_coordinate_refs": [
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-aarch64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:eabf59a1f6c6e6e7a0fbe0a379bf21a274a643ddd01cb7bbafd6df28e7fad37e",
+          "runtime": "msrv-1.86",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-aarch64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:eabf59a1f6c6e6e7a0fbe0a379bf21a274a643ddd01cb7bbafd6df28e7fad37e",
+          "runtime": "msrv-1.86",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-aarch64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:7180cccfb72bbb3be6c6b98e0fb7e79d2b2771d1e4325aa3a2e035c7ca99f0a1",
+          "runtime": "msrv-1.86",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-aarch64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:291bc65495a6c82240b31d57069cb250f8eae86bb432e186bd46174ab9830b08",
+          "runtime": "msrv-1.86",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-aarch64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:eabf59a1f6c6e6e7a0fbe0a379bf21a274a643ddd01cb7bbafd6df28e7fad37e",
+          "runtime": "msrv-1.86",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-aarch64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:eabf59a1f6c6e6e7a0fbe0a379bf21a274a643ddd01cb7bbafd6df28e7fad37e",
+          "runtime": "msrv-1.86",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:682f4c23c6e5e73514252a1440c47387fd27fda3337e59513000b7f460c30787",
+          "runtime": "msrv-1.86",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:5642102db9c38c9221ce2687739716bfb0e30d67cdbcb58e405e82882a4ebbf3",
+          "runtime": "msrv-1.86",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:682f4c23c6e5e73514252a1440c47387fd27fda3337e59513000b7f460c30787",
+          "runtime": "msrv-1.86",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:f43fff9fc54656e96bd0f247923b675b7f81d3321857f248275a63d8d80e18de",
+          "runtime": "msrv-1.86",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:7f3eb55a65337d3123b40cf00d8133eef23c7a5174d77fc575616f77bb3e889e",
+          "runtime": "msrv-1.86",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|linux-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:5642102db9c38c9221ce2687739716bfb0e30d67cdbcb58e405e82882a4ebbf3",
+          "runtime": "msrv-1.86",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|macos-arm64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:165e165651a4706c6747578603f32fd54445eab3685501a8d53d44d609dc0a27",
+          "runtime": "msrv-1.86",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|macos-arm64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:cb62d16dbc666cd2d528d9c0066b54f2e97b0dab9aaec3834de4fd11502437e4",
+          "runtime": "msrv-1.86",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|macos-arm64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:8709ee2abdc92eb5eea97f1991dea41c38dcf0b821897a0a2a652f07590d1228",
+          "runtime": "msrv-1.86",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|macos-arm64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:a26c6e2203c062b2ebce6c3a0208d09f6b1d9202f90864b8762818bfb4967cfe",
+          "runtime": "msrv-1.86",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|macos-arm64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:cb62d16dbc666cd2d528d9c0066b54f2e97b0dab9aaec3834de4fd11502437e4",
+          "runtime": "msrv-1.86",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|macos-arm64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:919a8f52c3f543036f9b46e14fea754a202addb6876c0a50d13de4d1c84ae031",
+          "runtime": "msrv-1.86",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|windows-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:e8b23907e2137ea2c1f85788134a916838a6786a99987b937e2fd660d586fe70",
+          "runtime": "msrv-1.86",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|windows-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:78807473f41cf72804198697859191bb6a3a2b018cfea31cdd204c2bd469c570",
+          "runtime": "msrv-1.86",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|windows-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:dec38c6a0e3599abffce9e58a5f8a665fcc15464a57caf23523ac8f173f20b00",
+          "runtime": "msrv-1.86",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|windows-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:16a3c5af5f0b0c5bba7d8b8076a5f9491390f2e2bcf5c7b8fab74048a1d716d4",
+          "runtime": "msrv-1.86",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|windows-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:59d4180e0c4e7aa7e8ceb9e2d8627f46e59a9c487b59685d8fcceb18c801e7f3",
+          "runtime": "msrv-1.86",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|msrv-1.86|windows-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:0b0337197d896e7214f4b59a57049b4d2cd027ffac5bb440c3742059561f3a26",
+          "runtime": "msrv-1.86",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-aarch64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:e3259779c37f0c87c3813797a3df5c715d9d7801c282c12c0583a3f2153a4439",
+          "runtime": "rust-1.98.0",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-aarch64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:e3259779c37f0c87c3813797a3df5c715d9d7801c282c12c0583a3f2153a4439",
+          "runtime": "rust-1.98.0",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-aarch64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:1abc5e74de690b7bea7c8c1aded5311c32ce6c056ec7171ee185a9c6d7083e1b",
+          "runtime": "rust-1.98.0",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-aarch64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:220e9cc5853a53a0d72fb016ec28611320a7bc0deb984b3c010d861a7d4d1428",
+          "runtime": "rust-1.98.0",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-aarch64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:bcc4f6886769cc63239faad9157ce0f39bcbdba6cd78e53ceddf5a8315b9e214",
+          "runtime": "rust-1.98.0",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-aarch64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:4887a18d66ea5cf5a7bcdd350608a2f033fd14a075b95e9ac65490d7761f2f15",
+          "runtime": "rust-1.98.0",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:90e1a3f75d6d369acc09ebb421a8ed3cebcdf1fd8aa655894d8dd389a58e5382",
+          "runtime": "rust-1.98.0",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:aaa3d257f5a70ca00815b189006daaaed68f13c225392f94932a905ffbc40523",
+          "runtime": "rust-1.98.0",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:25e3e60361ef0cddab8d97be031e5d0548643ece21d6faa8494149c40723f11c",
+          "runtime": "rust-1.98.0",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:682f4c23c6e5e73514252a1440c47387fd27fda3337e59513000b7f460c30787",
+          "runtime": "rust-1.98.0",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:ffe3f8205e2da5a9368fef7b8c25a42c7ce1ade6c8b3898c65f51ea432f9a855",
+          "runtime": "rust-1.98.0",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|linux-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:25e3e60361ef0cddab8d97be031e5d0548643ece21d6faa8494149c40723f11c",
+          "runtime": "rust-1.98.0",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|macos-arm64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:21889b3a44389f058043bdbffc55293d15e09f8590af9ad530b9530319adc696",
+          "runtime": "rust-1.98.0",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|macos-arm64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:8709ee2abdc92eb5eea97f1991dea41c38dcf0b821897a0a2a652f07590d1228",
+          "runtime": "rust-1.98.0",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|macos-arm64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:d61aa68a70c072695dcbc6979e75b8be886dab3d61fcf2e7748e65ca94c7e221",
+          "runtime": "rust-1.98.0",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|macos-arm64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:21889b3a44389f058043bdbffc55293d15e09f8590af9ad530b9530319adc696",
+          "runtime": "rust-1.98.0",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|macos-arm64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:3fcf7ce33c379c8fed9b0ac1df7d1cea1a60b0a72607bc3bdcd206f997b5f706",
+          "runtime": "rust-1.98.0",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|macos-arm64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:f94a366a6f36ecc3881a1b2d589f8e8c616b8101af2eb04d7559ab0bec4be318",
+          "runtime": "rust-1.98.0",
+          "target": "macos-arm64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|windows-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:e613e4cec1ee8180d516bac604f23abb90e109a3120f38f35598ae05da5806a1",
+          "runtime": "rust-1.98.0",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|windows-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:0b0337197d896e7214f4b59a57049b4d2cd027ffac5bb440c3742059561f3a26",
+          "runtime": "rust-1.98.0",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|windows-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:00c5eca93163ce161986a7f2ca901d57ad0644c449acbe68745b0c1258923587",
+          "runtime": "rust-1.98.0",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|windows-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:8e4c653916f10c87b2c36207df539e5fb0a8971ef443feadb8a4a1e8b00b0108",
+          "runtime": "rust-1.98.0",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|windows-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:16a3c5af5f0b0c5bba7d8b8076a5f9491390f2e2bcf5c7b8fab74048a1d716d4",
+          "runtime": "rust-1.98.0",
+          "target": "windows-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::client-rust|rust-1.98.0|windows-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:8e4c653916f10c87b2c36207df539e5fb0a8971ef443feadb8a4a1e8b00b0108",
+          "runtime": "rust-1.98.0",
+          "target": "windows-x86_64"
+        }
+      ],
+      "fragment_sha256": "d4bd10130effc01baff56d5fb65bf2ee60e72981beb752197c8794e69d67936b",
+      "id": "rust-relay",
+      "line_end": 615,
+      "line_start": 600,
+      "qualified_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "source_path": "src/relay_session.rs",
+      "source_scope": {
+        "fixture": "RelaySessionRegistry::with_bind_rate_limit(2); same sequence with Instant plus window + 1 millisecond.",
+        "fragment": "rust-relay",
+        "not_established": [
+          "HTTP429 or Retry-After exposure",
+          "actual authenticated relay binding or transport-source identity",
+          "unbounded retry-loop behavior",
+          "default constructor environment parsing",
+          "stable relay support"
+        ],
+        "source_postcondition": "Boolean admission is per provided source and resets after a 60-second Instant window in the selected state helper."
+      },
+      "source_sha256": "3368ed7e3db65bec04f853359a9c4da557aab8aa1842e3054c00b9421d1f5a9a",
+      "source_url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/relay_session.rs#L600-L615"
+    },
+    {
+      "accepted_harness_source_commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "case_id": "directory-rust::rate-limit",
+      "code": "pub(crate) fn register_rate_step(prev: Option<(u32, u64)>, now_ms: u64, ttl_ms: u64) -> (u32, u64) {\n    match prev {\n        Some((count, start_ms)) if now_ms.saturating_sub(start_ms) < ttl_ms => {\n            (count + 1, start_ms)\n        }\n        _ => (1, now_ms),\n    }\n}\n",
+      "component": "directory-rust",
+      "declared_assertion": "tests::register_rate_step_increments_in_window_and_resets_after_ttl",
+      "existing_coordinate_refs": [
+        {
+          "assertion_id": "rate-limit::directory-rust|msrv-1.88|linux-aarch64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:158b2832ee8d7888e3135c662fdf55edaeac82339cd8b8f3c2251379544edd8b",
+          "runtime": "msrv-1.88",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-rust|msrv-1.88|linux-aarch64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:eabf59a1f6c6e6e7a0fbe0a379bf21a274a643ddd01cb7bbafd6df28e7fad37e",
+          "runtime": "msrv-1.88",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-rust|msrv-1.88|linux-aarch64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:7180cccfb72bbb3be6c6b98e0fb7e79d2b2771d1e4325aa3a2e035c7ca99f0a1",
+          "runtime": "msrv-1.88",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-rust|msrv-1.88|linux-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:a48445d926fdc4cd1079567024ea9aa635668c48b9493e2c77341aa587c93f6b",
+          "runtime": "msrv-1.88",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-rust|msrv-1.88|linux-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:8adcb9b8fcf9e962b3e180ac7609fa7f979598db6438f0016bd929972daba827",
+          "runtime": "msrv-1.88",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-rust|msrv-1.88|linux-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:9937cf257f2aa33d20a5570c07966cb577c47f5f2e523c99ba618bb138cd3725",
+          "runtime": "msrv-1.88",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-rust|rust-1.98.0|linux-aarch64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:4887a18d66ea5cf5a7bcdd350608a2f033fd14a075b95e9ac65490d7761f2f15",
+          "runtime": "rust-1.98.0",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-rust|rust-1.98.0|linux-aarch64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:220e9cc5853a53a0d72fb016ec28611320a7bc0deb984b3c010d861a7d4d1428",
+          "runtime": "rust-1.98.0",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-rust|rust-1.98.0|linux-aarch64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:4322222cf7b13037f0671f7c16fbba13503640572aa8e93465c16a822365c183",
+          "runtime": "rust-1.98.0",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-rust|rust-1.98.0|linux-x86_64|rust|local-only",
+          "directory_flavor": "rust",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:90e1a3f75d6d369acc09ebb421a8ed3cebcdf1fd8aa655894d8dd389a58e5382",
+          "runtime": "rust-1.98.0",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-rust|rust-1.98.0|linux-x86_64|rust|public",
+          "directory_flavor": "rust",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:25e3e60361ef0cddab8d97be031e5d0548643ece21d6faa8494149c40723f11c",
+          "runtime": "rust-1.98.0",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-rust|rust-1.98.0|linux-x86_64|rust|restricted",
+          "directory_flavor": "rust",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:ec5572c980cf5f2e2cbf1330366a38f43caa7545f259249beda0149c6650f423",
+          "runtime": "rust-1.98.0",
+          "target": "linux-x86_64"
+        }
+      ],
+      "fragment_sha256": "0aa6f031e47d0fd0acb703beeffdc311c873cc880937ed2d6ce5e1b18e5adca6",
+      "id": "rust-registration",
+      "line_end": 236,
+      "line_start": 229,
+      "qualified_source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "source_path": "src/node_lifecycle.rs",
+      "source_scope": {
+        "fixture": "Pure register_rate_step(None/in-window/after/exact-TTL) expected count and window-start tuples.",
+        "fragment": "rust-registration",
+        "not_established": [
+          "HTTP429 execution or actual response retry_after",
+          "source-IP extraction correctness",
+          "handler threshold or synchronization behavior",
+          "retry-loop boundedness",
+          "cross-flavor equivalence"
+        ],
+        "source_postcondition": "In-window count increments with prior start; expiration at>=TTL or no prior state resets to(1,now)."
+      },
+      "source_sha256": "60253939ed2020a6e90fa9e76f131252dcb3409f322b5f9a40d29b923865da7f",
+      "source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/node_lifecycle.rs#L229-L236"
+    },
+    {
+      "accepted_harness_source_commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "case_id": "directory-php::rate-limit",
+      "code": "        $retry = max(1, (int) config('iicp.replica.redirect.retry_after', 5));\n",
+      "component": "directory-php",
+      "declared_assertion": "test_retry_after_clamped_to_minimum_one",
+      "existing_coordinate_refs": [
+        {
+          "assertion_id": "rate-limit::directory-php|php-8.3|linux-aarch64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:220e9cc5853a53a0d72fb016ec28611320a7bc0deb984b3c010d861a7d4d1428",
+          "runtime": "php-8.3",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-php|php-8.3|linux-aarch64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:848f63ff205108842d598a2c6900a9811c1a920d80a803604a3e2e2e1465700f",
+          "runtime": "php-8.3",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-php|php-8.3|linux-aarch64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:bb472d06e58277d5e14847ec9fb97c605074a3ecb9153f3e755683c39dc95cf5",
+          "runtime": "php-8.3",
+          "target": "linux-aarch64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-php|php-8.3|linux-x86_64|php|local-only",
+          "directory_flavor": "php",
+          "mode": "local-only",
+          "receipt_file_sha256": "sha256:ec5572c980cf5f2e2cbf1330366a38f43caa7545f259249beda0149c6650f423",
+          "runtime": "php-8.3",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-php|php-8.3|linux-x86_64|php|public",
+          "directory_flavor": "php",
+          "mode": "public",
+          "receipt_file_sha256": "sha256:ffe3f8205e2da5a9368fef7b8c25a42c7ce1ade6c8b3898c65f51ea432f9a855",
+          "runtime": "php-8.3",
+          "target": "linux-x86_64"
+        },
+        {
+          "assertion_id": "rate-limit::directory-php|php-8.3|linux-x86_64|php|restricted",
+          "directory_flavor": "php",
+          "mode": "restricted",
+          "receipt_file_sha256": "sha256:ec5572c980cf5f2e2cbf1330366a38f43caa7545f259249beda0149c6650f423",
+          "runtime": "php-8.3",
+          "target": "linux-x86_64"
+        }
+      ],
+      "fragment_sha256": "3a6549c5272f02a1b96596426fec21531a41579e37c480983832b6d642f1d2da",
+      "id": "php-redirect-clamp",
+      "line_end": 52,
+      "line_start": 52,
+      "qualified_source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "source_path": "app/Http/Middleware/LoadRedirect.php",
+      "source_scope": {
+        "fixture": "Feature probe with replica redirect enabled, one HTTPS replica and retry_after = 0; only Retry-After header 1 is asserted in this selected test.",
+        "fragment": "php-redirect-clamp",
+        "not_established": [
+          "registration request throttling",
+          "actual measured overload",
+          "retry-loop boundedness",
+          "cross-flavor equivalence",
+          "all headers/statuses of this selected test"
+        ],
+        "source_postcondition": "The selected clamp expression takes max(1,(int)configured_value); offline wrapper substitutes config(), not an HTTP response."
+      },
+      "source_sha256": "58454864ddc90601449207ee331168cc6bb362d8433147782287a1d6b36cbce9",
+      "source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Http/Middleware/LoadRedirect.php#L52-L52"
+    }
+  ],
+  "full_capability_complete": false,
+  "historical_inventory_complete": false,
+  "independent_interoperability_established": false,
+  "limitations": [
+    "Original accepted receipts remain authoritative;source gaps do not automatically invalidate credit.",
+    "Catalogue bounded retry information is not fully established by these selected helper assertions.",
+    "Relay-routing remains experimental under the pinned Protocol feature baseline.",
+    "No native platform matrix, transport, request retry, generated identifier or actual Directory endpoint executed.",
+    "Synthetic holders replace constructors/session state;time-unit adaptation and standard lock/map primitives are explicit harness context.",
+    "Counter overflow, large-bucket eviction, concurrent-thread interleavings and endpoint integration are outside these observations.",
+    "At the >4096-bucket eviction boundary, static TS retention includes an entry at exactly the cutoff; Python/Rust remove it. This was not exercised and is not classified as a defect.",
+    "Subprocess timeout applies per direct process; output sizes are checked after exit. No process-tree deadline, sandbox or streaming hard quota is claimed."
+  ],
+  "public_analysis_file_sha256": "22da722de8d0c203e6eb7aca041551b5b9dce3f606523f2bcd4b1df64e887438",
+  "qualification_credit": 0,
+  "qualification_derivative_source_commit": "d9332b9f5a8e88bda28d48643dd4d9be6e1d0859",
+  "schema": "iicp.offline-rate-helper-fragments.v1",
+  "state": "PARTIAL_EXECUTABLE_HELPER_REFERENCE_NOT_FROZEN_IFRB",
+  "successor_frozen": false
+}
