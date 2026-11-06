@@ -2067,6 +2067,50 @@
       "reason": "evidence-gap",
       "source_sha256": "sha256:2c85561ffc4ac5d47a9d96bd44051c82a2981ffed0c232e4b45cbabf59e6864e",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:3e87844c42763056c4bdf2b5209df4a65c9b229d92a190bfe0a77b384aa843fc",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-06T17:39:10.598913+00:00",
+      "outcome": "FAIL",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:b36541433879dc0cbf032ec158f341b0d92f5fe202a0ca2ea619afb5bd35c270",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:3306628df5f6aa12ebd8cd55b25f16ed2af25deb513ff1dd7b7fd96be50bf025",
+      "kind": "authorization",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T17:39:10.598913+00:00",
+      "outcome": "VERIFIED",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:fbec6a91cb0a4803c49f7c88a2bb3491f926a9d132eabd63dd525da3ce1f73ed",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:5cd60368c7a63622c8baf1ddbbc9452aaa1eadbe9243bfece47bcc9e16ce1c4b",
+      "kind": "correction",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T17:39:10.598913+00:00",
+      "outcome": "VERIFIED",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:8860944fc1322b7cedef8d77a7fed3d8264c1f655d952a98d54819840ad8c639",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:fa38a73202bee8ac4e8cb91920052157975870eb31c4d6dbe714aa6b1f071826",
+      "kind": "blocker",
+      "next_gate": "authorization-required",
+      "occurred_at": "2026-11-06T17:39:10.598913+00:00",
+      "outcome": "UNKNOWN",
+      "qualification_credit": 0,
+      "reason": "evidence-gap",
+      "source_sha256": "sha256:9a2cd291b8982db74b7d30f3948b59e2c6be609fb0761fe9ae3f1fc8fcf10dde",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
