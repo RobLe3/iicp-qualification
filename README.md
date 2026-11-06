@@ -111,3 +111,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## SDK network and readiness assertion scope
 
 [The reviewed network/readiness source supplement](reports/postcert/2026-11-06-sdk-network-readiness/README.md) connects twelve existing SDK cases to catalog obligations, exact source assertions and recorded assignments. It distinguishes schema-invalid response checks from truncation, DNS classifiers from resolver tests, and initial token recovery from the complete public-route lifecycle. It adds no execution, qualification credit or frozen-baseline claim.
+
+## Node-configuration assertion scope
+
+[The node-configuration source capsule](reports/postcert/2026-11-06-node-configuration/README.md) distinguishes nine existing saved-identity and runtime-policy assertions. Missing files, missing required fields, malformed JSON, injected write failures, directory collisions and read-only staging are not interchangeable conditions. The capsule adds source context for 576 previously published coordinates, not new execution or qualification credit.
