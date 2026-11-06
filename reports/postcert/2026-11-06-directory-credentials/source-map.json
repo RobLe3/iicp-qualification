@@ -1,0 +1,826 @@
+{
+  "accepted_results_changed": false,
+  "authority": "INFORMATIVE_DERIVATIVE_NOT_QUALIFICATION_ACCEPTANCE",
+  "bounded_review_frontier": {
+    "all_existing_accepted_coordinates": 5808,
+    "case_definitions_not_reconciled_to_this_review_frontier": 93,
+    "declared_case_definitions": 147,
+    "existing_accepted_coordinates_in_selected_cases": 2466,
+    "explicitly_reconciled_case_definition_reviews": 54
+  },
+  "candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "case_links": [
+    {
+      "accepted_harness_source_commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "applicable_recorded_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_recorded_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "assertion": "test_returns_token_expired_for_expired_jwt",
+      "case_id": "directory-php::credential-expired",
+      "catalog_expected_behavior": "Reject expired credentials with a recoverable reason.",
+      "command_is_standalone_reproduction": false,
+      "component": "directory-php",
+      "credential_contract": "REPLICA_HS256_JWT_EXPIRY",
+      "declared_case_argv": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Feature/SnapshotEndpointTest.php",
+        "--filter",
+        "/::test_returns_token_expired_for_expired_jwt$/"
+      ],
+      "existing_coordinate_references": 6,
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "Does not assert the recovery message, perform re-registration or test every expiry/clock boundary.",
+        "Different credential contract from SDK test-local signing-key validity."
+      ],
+      "mechanism": "Laravel feature request; setup uses replica legacy scope, expiry60seconds before current test time, signed with normalized application key.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "positive_source_control": "Separate same-file authenticated snapshot test asserts HTTP200 and snapshot content; inspected source only.",
+      "production_paths": [
+        "routes/api_public.php",
+        "app/Http/Middleware/ReplicaTokenAuth.php",
+        "app/Services/JwtService.php"
+      ],
+      "qualified_source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "raw_runtime_outputs_reinspected": false,
+      "reason_code_asserted": "token_expired",
+      "recorded_modes_prove_test_body_mode_configuration": false,
+      "selected_assertions": [
+        "HTTP401 for a manually signed expired replica JWT at /api/v1/snapshot.",
+        "JSON error.code equals token_expired."
+      ],
+      "selected_recovery_workflow_asserted": false,
+      "test_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Feature/SnapshotEndpointTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "faa0851938306b227fce083168b190414e72bb59d275c5d23f0b4f4a9602caad"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "applicable_recorded_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_recorded_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "assertion": "test_consumer_token_requires_auth",
+      "case_id": "directory-php::credential-missing",
+      "catalog_expected_behavior": "Fail closed without anonymous authority escalation.",
+      "command_is_standalone_reproduction": false,
+      "component": "directory-php",
+      "credential_contract": "NODE_BEARER_FOR_CONSUMER_TOKEN_ISSUANCE",
+      "declared_case_argv": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Feature/ConsumerTokenTest.php",
+        "--filter",
+        "/::test_consumer_token_requires_auth$/"
+      ],
+      "endpoint": "/api/v1/consumer-token",
+      "existing_coordinate_references": 6,
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "Selected assertion is status-only; no exact error reason or token-state mutation assertion.",
+        "Positive issuance test in the module can skip when its Genesis key prerequisite is absent; its execution is not inferred here.",
+        "This is not the same endpoint as Rust peers or SDK secret resolution."
+      ],
+      "mechanism": "Laravel feature request with mocked node health endpoints; caller credential is not attached to issuance request.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "positive_source_control": "test_consumer_token_is_issued_with_expected_claims asserts201 when the Genesis signing key is configured; otherwise it skips. Source context only.",
+      "positive_source_control_conditional": true,
+      "production_paths": [
+        "routes/api_consumer_token.php",
+        "app/Http/Middleware/NodeTokenAuth.php",
+        "app/Http/Controllers/ConsumerTokenController.php"
+      ],
+      "qualified_source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "raw_runtime_outputs_reinspected": false,
+      "recorded_modes_prove_test_body_mode_configuration": false,
+      "selected_assertions": [
+        "After caller and target registration fixtures, POST /api/v1/consumer-token without Authorization returns HTTP401."
+      ],
+      "test_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Feature/ConsumerTokenTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "d364ae0b69bb03540f55a8c15eff34479361ee0722efbc6bda6ed41ac4404550"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "applicable_recorded_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_recorded_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "assertion": "test_shared_gossip_vectors_bind_member_signature_payload_and_replay_id",
+      "case_id": "directory-php::credential-replayed",
+      "catalog_expected_behavior": "Reject replay without changing accepted state.",
+      "command_is_standalone_reproduction": false,
+      "component": "directory-php",
+      "credential_contract": "PRE_NORMATIVE_RESTRICTED_DOMAIN_GOSSIP_PROOF_REPLAY_ID",
+      "declared_case_argv": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Unit/RestrictedDomainMembershipAssertionTest.php",
+        "--filter",
+        "/::test_shared_gossip_vectors_bind_member_signature_payload_and_replay_id$/"
+      ],
+      "existing_coordinate_references": 6,
+      "full_catalog_obligation_proven": false,
+      "in_memory_challenge_repository_invoked": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "No live first-accept/second-use sequence or production replay-state snapshot.",
+        "Does not call RestrictedDomainMembershipAssertionService::verify in this selected body; a neighboring authority-signature case does.",
+        "Pre-normative gossip replay IDs differ from heartbeat challenge responses or SDK dispatch-ticket jti fixtures."
+      ],
+      "mechanism": "Fixture loop with production NodeEventLogger canonical JSON helper and test-local in_array decision; no live replay store invoked.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "persistent_replay_store_exercised": false,
+      "positive_source_control": "The same selected loop includes gossip-valid and gossip-replay fixture vectors; both cryptographic signatures are asserted valid.",
+      "production_paths": [
+        "app/Services/NodeEventLogger.php",
+        "parity/restricted-trust-domain-membership-v0.json"
+      ],
+      "qualified_source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "raw_runtime_outputs_reinspected": false,
+      "recorded_modes_prove_test_body_mode_configuration": false,
+      "selected_assertions": [
+        "Real Sodium Ed25519 verification succeeds for shared gossip proof vectors.",
+        "Payload SHA256 equals proof.payload_sha256.",
+        "Fixture replay_id membership in supplied seen_replay_ids matches expected replay_detected."
+      ],
+      "supplied_replay_list_used": true,
+      "test_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Unit/RestrictedDomainMembershipAssertionTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "0749cf9524b642d978e850e9798befd08cef67a000debb81f5a885c6f16ec9c6"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "applicable_recorded_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_recorded_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "assertion": "test_registration_token_authenticates_snapshot_and_rotation_revokes_it",
+      "case_id": "directory-php::credential-rotated",
+      "catalog_expected_behavior": "Accept the new credential and reject the superseded credential.",
+      "command_is_standalone_reproduction": false,
+      "component": "directory-php",
+      "credential_contract": "REPLICA_REGISTRATION_BEARER_ROTATION",
+      "declared_case_argv": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Feature/ReplicaTokenRoundTripTest.php",
+        "--filter",
+        "/::test_registration_token_authenticates_snapshot_and_rotation_revokes_it$/"
+      ],
+      "existing_coordinate_references": 6,
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "Development loopback DID/health setup is not arbitrary remote or production deployment evidence.",
+        "No cross-process crash persistence, every concurrency interleaving or all token families is established."
+      ],
+      "mechanism": "Laravel feature HTTP flow plus a loopback PHP DID/health fixture; app.env local and explicit development HTTP DID allowance.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "old_token_rejection_asserted": true,
+      "positive_source_control": "Initial and replacement token acceptance are assertions within the selected body.",
+      "production_paths": [
+        "routes/api_public.php",
+        "app/Http/Controllers/ReplicasController.php",
+        "app/Http/Middleware/ReplicaTokenAuth.php",
+        "app/Services/JwtService.php"
+      ],
+      "qualified_source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "raw_runtime_outputs_reinspected": false,
+      "recorded_modes_prove_test_body_mode_configuration": false,
+      "replacement_token_acceptance_asserted": true,
+      "selected_assertions": [
+        "Initial registration returns a token that authenticates a snapshot.",
+        "Re-registration returns a distinct token for the same replica.",
+        "Old token is refused401 with rotation message; replacement token authenticates snapshot200."
+      ],
+      "selected_catalog_transition_asserted": true,
+      "test_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Feature/ReplicaTokenRoundTripTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "08a29898c7ab82f3e0e222860a06ed707bed0c7ce643ccb80ca7567f602d3d9a"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "applicable_recorded_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_recorded_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "assertion": "test_invalid_signature_rejects_event",
+      "case_id": "directory-php::signature-mismatch",
+      "catalog_expected_behavior": "Reject signature and identity mismatches deterministically.",
+      "command_is_standalone_reproduction": false,
+      "component": "directory-php",
+      "credential_contract": "REPLICA_SIGNED_EVENT_APPLICATION",
+      "declared_case_argv": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Feature/ReplicaEventApplierSigVerifyTest.php",
+        "--filter",
+        "/::test_invalid_signature_rejects_event$/"
+      ],
+      "discoverable_state_unchanged_asserted": false,
+      "existing_coordinate_references": 6,
+      "full_catalog_obligation_proven": false,
+      "high_water_unchanged_asserted": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "Selected body has no explicit high-water or database-state snapshot assertion.",
+        "Does not pass expectedPrevHash; does not establish complete chain continuity or all identity mismatches.",
+        "Unsigned-event production enforcement belongs to separate source branches/tests."
+      ],
+      "mechanism": "Fresh Sodium key pair, signed fixture event, explicit verify key; test setup permits development unsigned events.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "positive_source_control": "Separate same-file valid-signature case asserts application; source context, not new execution.",
+      "production_paths": [
+        "app/Services/ReplicaEventApplier.php",
+        "app/Services/NodeEventLogger.php"
+      ],
+      "qualified_source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "raw_runtime_outputs_reinspected": false,
+      "recorded_modes_prove_test_body_mode_configuration": false,
+      "selected_assertions": [
+        "A guaranteed changed signature nibble causes production ReplicaEventApplier rejection.",
+        "Returned detail contains signature verification failed."
+      ],
+      "test_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Feature/ReplicaEventApplierSigVerifyTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "926f6a41c4bbc4d451ed85291db4bd2a0f9e2102ecbf3f81790b491e20d6b381"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "applicable_recorded_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_recorded_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "assertion": "auth::tests::expired_replica_token_is_distinguished",
+      "case_id": "directory-rust::credential-expired",
+      "catalog_expected_behavior": "Reject expired credentials with a recoverable reason.",
+      "command_is_standalone_reproduction": false,
+      "component": "directory-rust",
+      "credential_contract": "REPLICA_HS256_JWT_EXPIRY",
+      "declared_case_argv": [
+        "@cargo",
+        "test",
+        "--locked",
+        "auth::tests::expired_replica_token_is_distinguished",
+        "--",
+        "--exact"
+      ],
+      "existing_coordinate_references": 12,
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "No HTTP endpoint or recovery workflow is invoked by the selected body.",
+        "Production snapshot handler maps Expired to HTTP401/token_expired, but that branch is supporting source, not this selected assertion."
+      ],
+      "mechanism": "Direct production verifier call with a fixed synthetic signing secret and expired claims.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "positive_source_control": "Other auth tests issue and verify current replica tokens; source context, not additional execution.",
+      "production_paths": [
+        "src/auth.rs",
+        "src/federation_handlers.rs"
+      ],
+      "qualified_source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "raw_runtime_outputs_reinspected": false,
+      "reason_code_asserted": "ReplicaTokenError::Expired",
+      "recorded_modes_prove_test_body_mode_configuration": false,
+      "selected_assertions": [
+        "HS256 replica claims with iat1/exp2 produce ReplicaTokenError::Expired from verify_replica_jwt_with_secret."
+      ],
+      "selected_recovery_workflow_asserted": false,
+      "test_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/auth.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "d8742e74962f9f0dcd2f9b643643e0816d2c17d23b68bdc3497133b7cfbb9e34"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "applicable_recorded_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_recorded_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "assertion": "tests::peers_requires_token",
+      "case_id": "directory-rust::credential-missing",
+      "catalog_expected_behavior": "Fail closed without anonymous authority escalation.",
+      "command_is_standalone_reproduction": false,
+      "component": "directory-rust",
+      "credential_contract": "NODE_BEARER_FOR_PEER_EXCHANGE",
+      "declared_case_argv": [
+        "@cargo",
+        "test",
+        "--locked",
+        "tests::peers_requires_token",
+        "--",
+        "--exact"
+      ],
+      "endpoint": "/v1/peers",
+      "existing_coordinate_references": 12,
+      "fixture_token_verification_enabled": false,
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "InMemoryRepo::new has verify_tokens=false; neighboring positive peers controls use Bearer any-token. They do not establish signature/credential validity.",
+        "Selected body does not test persistent token checking or all anonymous escalation paths.",
+        "PHP consumer-token issuance and this peers endpoint are different operations."
+      ],
+      "mechanism": "Production router/handler with test_state and InMemoryRepo::new; missing bearer is rejected before token-repository checking.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "positive_source_control": "Same-file peers_returns_nodes_excluding_known expects200 using the fixture bearer with permissive in-memory repository; source context only.",
+      "production_paths": [
+        "src/router.rs",
+        "src/peer_access.rs",
+        "src/repo.rs"
+      ],
+      "qualified_source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "raw_runtime_outputs_reinspected": false,
+      "recorded_modes_prove_test_body_mode_configuration": false,
+      "selected_assertions": [
+        "Axum oneshot POST /v1/peers without Authorization returns HTTP401."
+      ],
+      "test_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/main_tests.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "80672e4fe2c45ddd325e41e02df09e28bb24f6e19444dd004b2d57eac9446251"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "applicable_recorded_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_recorded_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "assertion": "tests::heartbeat_challenge_is_single_use_and_rotates_after_replay",
+      "case_id": "directory-rust::credential-replayed",
+      "catalog_expected_behavior": "Reject replay without changing accepted state.",
+      "command_is_standalone_reproduction": false,
+      "component": "directory-rust",
+      "credential_contract": "ADR047_HEARTBEAT_HMAC_CHALLENGE_RESPONSE",
+      "declared_case_argv": [
+        "@cargo",
+        "test",
+        "--locked",
+        "tests::heartbeat_challenge_is_single_use_and_rotates_after_replay",
+        "--",
+        "--exact"
+      ],
+      "existing_coordinate_references": 12,
+      "full_catalog_obligation_proven": false,
+      "in_memory_challenge_repository_invoked": true,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "Not a persistent database or production heartbeat endpoint execution.",
+        "Repository source installs the next challenge on every call, including refusal; selected body does not assert globally unchanged repository state after replay.",
+        "This is not a generic nonce table or the PHP gossip replay-list contract."
+      ],
+      "mechanism": "Production InMemoryRepo challenge method and real HMAC-SHA256; repository source serializes challenge verification/rotation under its mutex.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "persistent_replay_store_exercised": false,
+      "positive_source_control": "The selected body itself includes a successful first challenge response before refused reuse.",
+      "production_paths": [
+        "src/repo.rs"
+      ],
+      "qualified_source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "raw_runtime_outputs_reinspected": false,
+      "recorded_modes_prove_test_body_mode_configuration": false,
+      "selected_assertions": [
+        "First repository call with no answer installs challenge-one and returns Some(false).",
+        "HMAC response to challenge-one returns Some(true) while installing challenge-two.",
+        "Reusing the old response returns Some(false) while passing challenge-three as the next value."
+      ],
+      "supplied_replay_list_used": false,
+      "test_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/main_tests.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "80672e4fe2c45ddd325e41e02df09e28bb24f6e19444dd004b2d57eac9446251"
+      },
+      "unchanged_repository_state_after_replay_asserted": false
+    },
+    {
+      "accepted_harness_source_commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "applicable_recorded_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_recorded_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "assertion": "auth::tests::replica_profile_round_trip_and_rotation",
+      "case_id": "directory-rust::credential-rotated",
+      "catalog_expected_behavior": "Accept the new credential and reject the superseded credential.",
+      "command_is_standalone_reproduction": false,
+      "component": "directory-rust",
+      "credential_contract": "REPLICA_HS256_JWT_ISSUANCE_AND_CLAIMS",
+      "declared_case_argv": [
+        "@cargo",
+        "test",
+        "--locked",
+        "auth::tests::replica_profile_round_trip_and_rotation",
+        "--",
+        "--exact"
+      ],
+      "existing_coordinate_references": 12,
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "Does not assert rejection of the first token or endpoint acceptance of the replacement.",
+        "Separate production registration stores a token hash and snapshot compares it; absence of that endpoint assertion is not proof that rotation enforcement is missing."
+      ],
+      "mechanism": "Direct stateless production issue/verify helper calls with synthetic signing secret; no registration or snapshot endpoint invoked.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "old_token_rejection_asserted": false,
+      "positive_source_control": "Selected body verifies first token; other source tests/handlers are not added as execution credit.",
+      "production_paths": [
+        "src/auth.rs",
+        "src/federation_handlers.rs"
+      ],
+      "qualified_source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "raw_runtime_outputs_reinspected": false,
+      "recorded_modes_prove_test_body_mode_configuration": false,
+      "replacement_token_acceptance_asserted": false,
+      "selected_assertions": [
+        "Two replica-token issuance calls produce different strings.",
+        "First token still verifies and has expected subject, replica role, snapshot scope and32-character jti."
+      ],
+      "selected_catalog_transition_asserted": false,
+      "test_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/auth.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "d8742e74962f9f0dcd2f9b643643e0816d2c17d23b68bdc3497133b7cfbb9e34"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "applicable_recorded_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_recorded_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "assertion": "replica::tests::bad_signature_is_rejected_and_seq_not_advanced",
+      "case_id": "directory-rust::signature-mismatch",
+      "catalog_expected_behavior": "Reject signature and identity mismatches deterministically.",
+      "command_is_standalone_reproduction": false,
+      "component": "directory-rust",
+      "credential_contract": "REPLICA_SIGNED_EVENT_APPLICATION",
+      "declared_case_argv": [
+        "@cargo",
+        "test",
+        "--locked",
+        "replica::tests::bad_signature_is_rejected_and_seq_not_advanced",
+        "--",
+        "--exact"
+      ],
+      "discoverable_state_unchanged_asserted": true,
+      "existing_coordinate_references": 12,
+      "full_catalog_obligation_proven": false,
+      "high_water_unchanged_asserted": true,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "No persistent database, process restart or remote poller exercised.",
+        "expected_prev_hash is None; complete chain continuity and every identity mismatch are not established."
+      ],
+      "mechanism": "Production verify_and_apply before application with InMemoryRepo, bad signature fixture and explicit verify key.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "positive_source_control": "Separate signed_unknown_service_id test signs a valid event and asserts application/high-water11; source context only.",
+      "production_paths": [
+        "src/replica.rs",
+        "src/repo.rs"
+      ],
+      "qualified_source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "raw_runtime_outputs_reinspected": false,
+      "recorded_modes_prove_test_body_mode_configuration": false,
+      "selected_assertions": [
+        "Bad signature with explicit expected public key returns Rejected.",
+        "High-water remains0 and in-memory discoverable set stays empty."
+      ],
+      "test_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/replica.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "b65c96746458cf56930fafc9e6b0e88bdb6362e48424b0cb2d8c45551e0322e0"
+      }
+    }
+  ],
+  "controlled_evidence": {
+    "case_index_sha256": "d0ba92aeb95eebdca7f98a4ea8bacd57de404b26d1a5a27e491cad1738d43329",
+    "controls_review_sha256": "a689f91595d67008754ece9c8ecf35331e1c989ad8b8616c9987504f323c91fc",
+    "frontier_sha256": "bfe83b6c4009773957f8a3aa19c5abac487bfe7f0daa2f55d322f8c35cc27911",
+    "private_records_publicly_retrievable": false,
+    "source_assessment_sha256": "5f0ae3e9b042a2f0c000078e2f21db224ebf8fd4f8aa869b0bb735b6c9fc89b2",
+    "source_review_sha256": "e0e0448ddff23a27aadb925468e4a7740845307886b53a0190f2bcfacf95a99e"
+  },
+  "counts": {
+    "case_definitions": 10,
+    "existing_coordinate_references": 90,
+    "per_component": {
+      "directory-php": 5,
+      "directory-rust": 5
+    },
+    "qualified_harness_git_reads": 52,
+    "source_files": 26
+  },
+  "historical_inventory_complete": false,
+  "independent_interoperability_established": false,
+  "limits": [
+    "Source-file equality is not installed-package equivalence or new runtime reproduction.",
+    "Same scenario names refer to distinct credentials, endpoints and state stores; do not pool them as identical cross-component contracts.",
+    "Supporting positive assertions are source context unless explicitly within the selected test body. No new execution or credit follows.",
+    "Historical completeness, current product clearance, external interoperability and a qualified/frozen successor remain unestablished."
+  ],
+  "membership_fixture_context": {
+    "fixture_version": "0.1.0-draft",
+    "sha256": "78cb70b19dabed5be0175555cf2b4bb123dd4bc77ce36b67b745f311f3d941d4",
+    "status": "pre-normative"
+  },
+  "new_qualification_credit": 0,
+  "new_runtime_executions": 0,
+  "product_defect_or_qualification_invalidation_inferred": false,
+  "programme_complete": false,
+  "schema": "iicp.postcert-directory-credential-source-review.v1",
+  "source_files": [
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "research/pre-normative-profiles/fixtures/restricted-trust-domain-membership-v0.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "78cb70b19dabed5be0175555cf2b4bb123dd4bc77ce36b67b745f311f3d941d4"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "app/Http/Controllers/ConsumerTokenController.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "ce470b212851b7877f557800811ba3493e122ca8be2ad708acf025e1d9973d32"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "app/Http/Controllers/ReplicasController.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "d2e24ce35b5a159e0ca1811d4290a50c02cb5c6e876d85f55919ed468571785e"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "app/Http/Middleware/NodeTokenAuth.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "ea0081cb64b3b3b833f9afa982c6b940c67974f45ccde133653b771a9ccd2c6c"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "app/Http/Middleware/ReplicaTokenAuth.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "f6f6b9db3cba0c3652c100f055af35e85d74bcaf346c67cc1cc130cf8b34fb8b"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "app/Services/JwtService.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "892f704ac858f82c083b2ce764844f67415b417c663cb46382f3fd60ccd4bed1"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "app/Services/NodeEventLogger.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "384706b63333ba70f8d572a02855095492e01ad0f83a8a65d07db0b8e561626d"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "app/Services/ReplicaEventApplier.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "93232245db0114eea3f77ba88b6087611cc39251e2d75fba912f466524b5f470"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "parity/restricted-trust-domain-membership-v0.json",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "78cb70b19dabed5be0175555cf2b4bb123dd4bc77ce36b67b745f311f3d941d4"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "routes/api.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "77c0ce49a5dc6bf5bfa4eb8232bf8c18c6afff3721e45723ce43eedc0730141a"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "routes/api_consumer_token.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "b95f6398426016e8de27b6dafb47f6bdca65df57730db80bc3c346a3e95e1067"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "routes/api_protocol.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "08c622870b131f107fa2821b7ac7c69adc617b62f48d2f468dfff622dab6e400"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "routes/api_public.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "2d223816669edd650f81641dcad337505d9b05cd2a196f6b819e1578059b2751"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "tests/Feature/ConsumerTokenTest.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "d364ae0b69bb03540f55a8c15eff34479361ee0722efbc6bda6ed41ac4404550"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "tests/Feature/ReplicaEventApplierSigVerifyTest.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "926f6a41c4bbc4d451ed85291db4bd2a0f9e2102ecbf3f81790b491e20d6b381"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "tests/Feature/ReplicaTokenRoundTripTest.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "08a29898c7ab82f3e0e222860a06ed707bed0c7ce643ccb80ca7567f602d3d9a"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "tests/Feature/SnapshotEndpointTest.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "faa0851938306b227fce083168b190414e72bb59d275c5d23f0b4f4a9602caad"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "tests/TestCase.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "c7c209f5579c42647c1f7b2a79ac828e8b54ac62a98442045a6e94fa2c0d0ebc"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "tests/Unit/RestrictedDomainMembershipAssertionTest.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "0749cf9524b642d978e850e9798befd08cef67a000debb81f5a885c6f16ec9c6"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/auth.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "d8742e74962f9f0dcd2f9b643643e0816d2c17d23b68bdc3497133b7cfbb9e34"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/federation_handlers.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "47cdb77fd541c99b1de9abb1c9639f136a9487dcf444a6e370a4ccc5a000440c"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/main.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "9de172ee8f008ae43977e91a23dc66cf9cf499c31a74251944331d848577d1a9"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/main_tests.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "80672e4fe2c45ddd325e41e02df09e28bb24f6e19444dd004b2d57eac9446251"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/peer_access.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "9ce30ee78646b4f55dc99216e2dcc4d9df0417f7c57a6b4c1bb3d02cbe6a91af"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/replica.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "b65c96746458cf56930fafc9e6b0e88bdb6362e48424b0cb2d8c45551e0322e0"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/repo.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "00a44453ef632cda1e5af47867a8de7c20dad52b231543d4df9e54b8032d053f"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/router.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "c9a6de04e6fa7607e1840803fbbf58abdbf2c649b577b3a8a0873d59a2cb4d19"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "project/pre1-edge-case-catalog.json",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "bf11370545d54934673469d2dca34d3358093de1e59bebf32d62ee1c8ea59630"
+    }
+  ],
+  "successor_qualified_or_frozen": false
+}
