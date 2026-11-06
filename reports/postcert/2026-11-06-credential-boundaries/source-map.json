@@ -1,0 +1,1219 @@
+{
+  "authority": "INFORMATIVE_SOURCE_ANALYSIS_NOT_QUALIFICATION_ACCEPTANCE",
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "case_links": [
+    {
+      "accepted_harness_source_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "test_expired_dispatch_ticket_key_fails_closed",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-python::credential-expired",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Reject expired credentials with a recoverable reason.",
+      "component": "client-python",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_dispatch_ticket_trust_crypto.py::test_expired_dispatch_ticket_key_fails_closed"
+      ],
+      "existing_accepted_coordinates": 96,
+      "expected_test_local_result": "reject_key_expired",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F02"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "expired_key_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "This is signing-key expiry, not ticket-claim or membership expiry. The key-time rejection precedes the signature-validity branch; the selected wrapper does not independently assert the signature-validity Boolean.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "Test-local policy rejects a signing key whose valid_until precedes the fixture now.",
+      "test_source": {
+        "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+        "path": "tests/test_dispatch_ticket_trust_crypto.py",
+        "repository": "RobLe3/iicp-client-python",
+        "sha256": "71d7abeb6dace636372a1e555a7fc5acc984d8279358a120208de73814183258"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "test_missing_restricted_credential_fails_before_network",
+      "capability_context": "restricted-trust-domain; opt-in context under pinned pre-normative fixture",
+      "case_id": "client-python::credential-missing",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Fail closed without anonymous authority escalation.",
+      "client_constructor_invoked": false,
+      "component": "client-python",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_restricted_directory.py::test_missing_restricted_credential_fails_before_network"
+      ],
+      "existing_accepted_coordinates": 96,
+      "explicit_network_call_count_asserted": false,
+      "finding_ids": [
+        "CRED-F06"
+      ],
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "The selected body calls only the secret resolver, not client construction, discovery or an authorization endpoint. No network spy or end-to-end anonymous-escalation assertion is included."
+      ],
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Other same-file test source successfully discovers with membership headers and a matching restricted decision; it was not executed for this review.",
+      "proof_kind": "PRODUCTION_SECRET_RESOLVER_SOURCE",
+      "qualified_source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "The production secret resolver raises an error matching credential is unavailable for a missing environment reference.",
+      "test_source": {
+        "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+        "path": "tests/test_restricted_directory.py",
+        "repository": "RobLe3/iicp-client-python",
+        "sha256": "7c918acebd18800da94986321852030de132bc67777a7b9878601fd6f7d7d71d"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "test_replayed_dispatch_ticket_fails_closed",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-python::credential-replayed",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Reject replay without changing accepted state.",
+      "component": "client-python",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_dispatch_ticket_trust_crypto.py::test_replayed_dispatch_ticket_fails_closed"
+      ],
+      "existing_accepted_coordinates": 96,
+      "expected_test_local_result": "reject_local_replay",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F03"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "local_replay_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "No real replay store, first-accept/second-use sequence, or unchanged production accepted-state snapshot is exercised.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "Test-local policy reaches reject_local_replay for a fixture with supplied jti_seen=true after earlier key/signature gates.",
+      "test_source": {
+        "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+        "path": "tests/test_dispatch_ticket_trust_crypto.py",
+        "repository": "RobLe3/iicp-client-python",
+        "sha256": "71d7abeb6dace636372a1e555a7fc5acc984d8279358a120208de73814183258"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "test_revoked_dispatch_ticket_key_fails_closed_after_rotation",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-python::credential-rotated",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Accept the new credential and reject the superseded credential.",
+      "component": "client-python",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_dispatch_ticket_trust_crypto.py::test_revoked_dispatch_ticket_key_fails_closed_after_rotation"
+      ],
+      "existing_accepted_coordinates": 96,
+      "expected_test_local_result": "reject_key_revoked",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F04"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "revoked_key_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "No rotation operation or acceptance of a newly installed credential is asserted in the selected body. Active/retiring positive vectors belong to a separate portable-vector source control.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "Test-local policy rejects a fixture key already marked revoked.",
+      "test_source": {
+        "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+        "path": "tests/test_dispatch_ticket_trust_crypto.py",
+        "repository": "RobLe3/iicp-client-python",
+        "sha256": "71d7abeb6dace636372a1e555a7fc5acc984d8279358a120208de73814183258"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "test_restricted_directory_failure_does_not_fall_back",
+      "capability_context": "restricted-trust-domain; configured private authority without public fallback",
+      "case_id": "client-python::directory-unavailable",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Keep local/private behavior explicit and avoid public fallback.",
+      "component": "client-python",
+      "configured_discovery_url_explicitly_asserted": true,
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_restricted_directory.py::test_restricted_directory_failure_does_not_fall_back"
+      ],
+      "existing_accepted_coordinates": 96,
+      "expected_request_count": 1,
+      "explicit_request_count_asserted": true,
+      "finding_ids": [
+        "CRED-F07"
+      ],
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "Rust does not simulate an unavailable/transport-failing Directory in this selected body. Other SDK fixtures are transport-error mocks; their conditions are not interchangeable.",
+        "No universal outbound-network isolation, all redirect cases or every private-domain failure class is established."
+      ],
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Same retained module includes successful authenticated discovery with matching membership decision; this is source context, not additional execution.",
+      "proof_kind": "PRODUCTION_DISCOVERY_CONNECTION_ERROR_FIXTURE",
+      "qualified_source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "MockTransport raises httpx.ConnectError; discover_async raises Network error, counts one request and checks configured discovery URL prefix.",
+      "test_source": {
+        "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+        "path": "tests/test_restricted_directory.py",
+        "repository": "RobLe3/iicp-client-python",
+        "sha256": "7c918acebd18800da94986321852030de132bc67777a7b9878601fd6f7d7d71d"
+      },
+      "transport_failure_exercised_by_fixture": true
+    },
+    {
+      "accepted_harness_source_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "test_tampered_dispatch_ticket_signature_fails_closed",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-python::signature-mismatch",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Reject signature and identity mismatches deterministically.",
+      "component": "client-python",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_dispatch_ticket_trust_crypto.py::test_tampered_dispatch_ticket_signature_fails_closed"
+      ],
+      "existing_accepted_coordinates": 96,
+      "expected_test_local_result": "reject_signature",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F05"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "tampered_claim_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "The selected case does not test every identity/domain mismatch or an SDK production trust-bundle admission path.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "A real Ed25519 verification result feeds test-local policy; the tampered-claim fixture is rejected as a signature mismatch.",
+      "test_source": {
+        "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+        "path": "tests/test_dispatch_ticket_trust_crypto.py",
+        "repository": "RobLe3/iicp-client-python",
+        "sha256": "71d7abeb6dace636372a1e555a7fc5acc984d8279358a120208de73814183258"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "expired_dispatch_ticket_key_fails_closed",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-rust::credential-expired",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Reject expired credentials with a recoverable reason.",
+      "component": "client-rust",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "dispatch_ticket_trust_crypto",
+        "expired_dispatch_ticket_key_fails_closed",
+        "--",
+        "--exact"
+      ],
+      "existing_accepted_coordinates": 48,
+      "expected_test_local_result": "reject_key_expired",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F02"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "expired_key_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "This is signing-key expiry, not ticket-claim or membership expiry. The key-time rejection precedes the signature-validity branch; the selected wrapper does not independently assert the signature-validity Boolean.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "Test-local policy rejects a signing key whose valid_until precedes the fixture now.",
+      "test_source": {
+        "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+        "path": "tests/dispatch_ticket_trust_crypto.rs",
+        "repository": "RobLe3/iicp-client-rust",
+        "sha256": "7996391d7d99468cbd26b31e0f62930e6e3e71bb0b2920329fa5f6dc3e970346"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "unavailable_secret_fails_at_construction_before_network_use",
+      "capability_context": "restricted-trust-domain; opt-in context under pinned pre-normative fixture",
+      "case_id": "client-rust::credential-missing",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Fail closed without anonymous authority escalation.",
+      "client_constructor_invoked": true,
+      "component": "client-rust",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "restricted_directory_client",
+        "unavailable_secret_fails_at_construction_before_network_use",
+        "--",
+        "--exact"
+      ],
+      "existing_accepted_coordinates": 48,
+      "explicit_network_call_count_asserted": false,
+      "finding_ids": [
+        "CRED-F06"
+      ],
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "Selected Rust assertion checks is_err without an exact error classification or network spy; constructor source resolves the secret before constructing the HTTP client."
+      ],
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Other same-file test source successfully discovers with membership headers and a matching restricted decision; it was not executed for this review.",
+      "proof_kind": "PRODUCTION_CONSTRUCTOR_REFUSAL_SOURCE",
+      "qualified_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "IicpClient construction returns Err after the configured secret file locator is replaced with an unavailable path.",
+      "test_source": {
+        "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+        "path": "tests/restricted_directory_client.rs",
+        "repository": "RobLe3/iicp-client-rust",
+        "sha256": "07ba83ac4b3cb41b0bd6af974e8c9ba4f5291a86db9c7263860e1142f2ca2995"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "replayed_dispatch_ticket_fails_closed",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-rust::credential-replayed",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Reject replay without changing accepted state.",
+      "component": "client-rust",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "dispatch_ticket_trust_crypto",
+        "replayed_dispatch_ticket_fails_closed",
+        "--",
+        "--exact"
+      ],
+      "existing_accepted_coordinates": 48,
+      "expected_test_local_result": "reject_local_replay",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F03"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "local_replay_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "No real replay store, first-accept/second-use sequence, or unchanged production accepted-state snapshot is exercised.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "Test-local policy reaches reject_local_replay for a fixture with supplied jti_seen=true after earlier key/signature gates.",
+      "test_source": {
+        "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+        "path": "tests/dispatch_ticket_trust_crypto.rs",
+        "repository": "RobLe3/iicp-client-rust",
+        "sha256": "7996391d7d99468cbd26b31e0f62930e6e3e71bb0b2920329fa5f6dc3e970346"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "revoked_dispatch_ticket_key_fails_closed_after_rotation",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-rust::credential-rotated",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Accept the new credential and reject the superseded credential.",
+      "component": "client-rust",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "dispatch_ticket_trust_crypto",
+        "revoked_dispatch_ticket_key_fails_closed_after_rotation",
+        "--",
+        "--exact"
+      ],
+      "existing_accepted_coordinates": 48,
+      "expected_test_local_result": "reject_key_revoked",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F04"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "revoked_key_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "No rotation operation or acceptance of a newly installed credential is asserted in the selected body. Active/retiring positive vectors belong to a separate portable-vector source control.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "Test-local policy rejects a fixture key already marked revoked.",
+      "test_source": {
+        "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+        "path": "tests/dispatch_ticket_trust_crypto.rs",
+        "repository": "RobLe3/iicp-client-rust",
+        "sha256": "7996391d7d99468cbd26b31e0f62930e6e3e71bb0b2920329fa5f6dc3e970346"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "missing_decision_fails_closed_without_retry_or_public_fallback",
+      "capability_context": "restricted-trust-domain; configured private authority without public fallback",
+      "case_id": "client-rust::directory-unavailable",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Keep local/private behavior explicit and avoid public fallback.",
+      "component": "client-rust",
+      "configured_discovery_url_explicitly_asserted": false,
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "restricted_directory_client",
+        "missing_decision_fails_closed_without_retry_or_public_fallback",
+        "--",
+        "--exact"
+      ],
+      "existing_accepted_coordinates": 48,
+      "expected_request_count": 1,
+      "explicit_request_count_asserted": true,
+      "finding_ids": [
+        "CRED-F07"
+      ],
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "Rust does not simulate an unavailable/transport-failing Directory in this selected body. Other SDK fixtures are transport-error mocks; their conditions are not interchangeable.",
+        "No universal outbound-network isolation, all redirect cases or every private-domain failure class is established."
+      ],
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Same retained module includes successful authenticated discovery with matching membership decision; this is source context, not additional execution.",
+      "proof_kind": "PRODUCTION_DISCOVERY_MISSING_DECISION_FIXTURE",
+      "qualified_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "Local Axum server returns HTTP200 with compatible negotiation but no restricted-domain decision; discover returns Err and server counts one request.",
+      "test_source": {
+        "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+        "path": "tests/restricted_directory_client.rs",
+        "repository": "RobLe3/iicp-client-rust",
+        "sha256": "07ba83ac4b3cb41b0bd6af974e8c9ba4f5291a86db9c7263860e1142f2ca2995"
+      },
+      "transport_failure_exercised_by_fixture": false
+    },
+    {
+      "accepted_harness_source_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "tampered_dispatch_ticket_signature_fails_closed",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-rust::signature-mismatch",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Reject signature and identity mismatches deterministically.",
+      "component": "client-rust",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "dispatch_ticket_trust_crypto",
+        "tampered_dispatch_ticket_signature_fails_closed",
+        "--",
+        "--exact"
+      ],
+      "existing_accepted_coordinates": 48,
+      "expected_test_local_result": "reject_signature",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F05"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "tampered_claim_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "The selected case does not test every identity/domain mismatch or an SDK production trust-bundle admission path.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "A real Ed25519 verification result feeds test-local policy; the tampered-claim fixture is rejected as a signature mismatch.",
+      "test_source": {
+        "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+        "path": "tests/dispatch_ticket_trust_crypto.rs",
+        "repository": "RobLe3/iicp-client-rust",
+        "sha256": "7996391d7d99468cbd26b31e0f62930e6e3e71bb0b2920329fa5f6dc3e970346"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "expired dispatch-ticket key fails closed",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-typescript::credential-expired",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Reject expired credentials with a recoverable reason.",
+      "component": "client-typescript",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@node",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=^expired\\ dispatch\\-ticket\\ key\\ fails\\ closed$",
+        "tests/dispatch_ticket_trust_crypto.test.ts"
+      ],
+      "existing_accepted_coordinates": 48,
+      "expected_test_local_result": "reject_key_expired",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F02"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "expired_key_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "This is signing-key expiry, not ticket-claim or membership expiry. The key-time rejection precedes the signature-validity branch; the selected wrapper does not independently assert the signature-validity Boolean.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "Test-local policy rejects a signing key whose valid_until precedes the fixture now.",
+      "test_source": {
+        "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+        "path": "tests/dispatch_ticket_trust_crypto.test.ts",
+        "repository": "RobLe3/iicp-client-typescript",
+        "sha256": "caaa48935e3d31172e3dbaec893253fd8a2b6b38fbc7a5a4e07c1d2cd545330a"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "missing restricted credential fails before network",
+      "capability_context": "restricted-trust-domain; opt-in context under pinned pre-normative fixture",
+      "case_id": "client-typescript::credential-missing",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Fail closed without anonymous authority escalation.",
+      "client_constructor_invoked": false,
+      "component": "client-typescript",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@node",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=^missing\\ restricted\\ credential\\ fails\\ before\\ network$",
+        "tests/restricted_directory.test.ts"
+      ],
+      "existing_accepted_coordinates": 48,
+      "explicit_network_call_count_asserted": false,
+      "finding_ids": [
+        "CRED-F06"
+      ],
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "The selected body calls only the secret resolver, not client construction, discovery or an authorization endpoint. No network spy or end-to-end anonymous-escalation assertion is included."
+      ],
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Other same-file test source successfully discovers with membership headers and a matching restricted decision; it was not executed for this review.",
+      "proof_kind": "PRODUCTION_SECRET_RESOLVER_SOURCE",
+      "qualified_source_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "The production secret resolver raises an error matching credential is unavailable for a missing environment reference.",
+      "test_source": {
+        "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+        "path": "tests/restricted_directory.test.ts",
+        "repository": "RobLe3/iicp-client-typescript",
+        "sha256": "5744a3323ed1463bf2924a792074d9d55c9776008c53ca69302900a75458af48"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "replayed dispatch ticket fails closed",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-typescript::credential-replayed",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Reject replay without changing accepted state.",
+      "component": "client-typescript",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@node",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=^replayed\\ dispatch\\ ticket\\ fails\\ closed$",
+        "tests/dispatch_ticket_trust_crypto.test.ts"
+      ],
+      "existing_accepted_coordinates": 48,
+      "expected_test_local_result": "reject_local_replay",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F03"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "local_replay_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "No real replay store, first-accept/second-use sequence, or unchanged production accepted-state snapshot is exercised.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "Test-local policy reaches reject_local_replay for a fixture with supplied jti_seen=true after earlier key/signature gates.",
+      "test_source": {
+        "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+        "path": "tests/dispatch_ticket_trust_crypto.test.ts",
+        "repository": "RobLe3/iicp-client-typescript",
+        "sha256": "caaa48935e3d31172e3dbaec893253fd8a2b6b38fbc7a5a4e07c1d2cd545330a"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "revoked dispatch-ticket key fails closed after rotation",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-typescript::credential-rotated",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Accept the new credential and reject the superseded credential.",
+      "component": "client-typescript",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@node",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=^revoked\\ dispatch\\-ticket\\ key\\ fails\\ closed\\ after\\ rotation$",
+        "tests/dispatch_ticket_trust_crypto.test.ts"
+      ],
+      "existing_accepted_coordinates": 48,
+      "expected_test_local_result": "reject_key_revoked",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F04"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "revoked_key_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "No rotation operation or acceptance of a newly installed credential is asserted in the selected body. Active/retiring positive vectors belong to a separate portable-vector source control.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "Test-local policy rejects a fixture key already marked revoked.",
+      "test_source": {
+        "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+        "path": "tests/dispatch_ticket_trust_crypto.test.ts",
+        "repository": "RobLe3/iicp-client-typescript",
+        "sha256": "caaa48935e3d31172e3dbaec893253fd8a2b6b38fbc7a5a4e07c1d2cd545330a"
+      }
+    },
+    {
+      "accepted_harness_source_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "restricted directory failure does not fall back",
+      "capability_context": "restricted-trust-domain; configured private authority without public fallback",
+      "case_id": "client-typescript::directory-unavailable",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Keep local/private behavior explicit and avoid public fallback.",
+      "component": "client-typescript",
+      "configured_discovery_url_explicitly_asserted": false,
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@node",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=^restricted\\ directory\\ failure\\ does\\ not\\ fall\\ back$",
+        "tests/restricted_directory.test.ts"
+      ],
+      "existing_accepted_coordinates": 48,
+      "expected_request_count": 1,
+      "explicit_request_count_asserted": true,
+      "finding_ids": [
+        "CRED-F07"
+      ],
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "Rust does not simulate an unavailable/transport-failing Directory in this selected body. Other SDK fixtures are transport-error mocks; their conditions are not interchangeable.",
+        "No universal outbound-network isolation, all redirect cases or every private-domain failure class is established."
+      ],
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Same retained module includes successful authenticated discovery with matching membership decision; this is source context, not additional execution.",
+      "proof_kind": "PRODUCTION_DISCOVERY_CONNECTION_ERROR_FIXTURE",
+      "qualified_source_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "Synthetic fetch rejects with a connection-like TypeError; discoverWithNegotiation propagates that error and counts exactly one fetch.",
+      "test_source": {
+        "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+        "path": "tests/restricted_directory.test.ts",
+        "repository": "RobLe3/iicp-client-typescript",
+        "sha256": "5744a3323ed1463bf2924a792074d9d55c9776008c53ca69302900a75458af48"
+      },
+      "transport_failure_exercised_by_fixture": true
+    },
+    {
+      "accepted_harness_source_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "applicable_recorded_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "assertion": "tampered dispatch-ticket signature fails closed",
+      "capability_context": "ticketed-dispatch; related pre-normative trust fixture, not universal base-protocol enforcement",
+      "case_id": "client-typescript::signature-mismatch",
+      "catalog_alignment": "BOUNDED_SELECTED_ASSERTION_NOT_FULL_OBLIGATION_ATTESTATION",
+      "catalog_expected_behavior": "Reject signature and identity mismatches deterministically.",
+      "component": "client-typescript",
+      "current_development_runtime_verified": false,
+      "declared_case_argv": [
+        "@node",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=^tampered\\ dispatch\\-ticket\\ signature\\ fails\\ closed$",
+        "tests/dispatch_ticket_trust_crypto.test.ts"
+      ],
+      "existing_accepted_coordinates": 48,
+      "expected_test_local_result": "reject_signature",
+      "finding_ids": [
+        "CRED-F01",
+        "CRED-F05"
+      ],
+      "fixture_mutation_applied_to_live_state": false,
+      "fixture_vector": "tampered_claim_refused",
+      "full_catalog_obligation_proven": false,
+      "installed_package_equivalence_proven": false,
+      "limitations": [
+        "The selected case does not test every identity/domain mismatch or an SDK production trust-bundle admission path.",
+        "Selected case imports crypto/serialization primitives and calls its own decision helper; no SDK production ticket validator is invoked."
+      ],
+      "new_credential_acceptance_tested": false,
+      "new_execution_count": 0,
+      "new_qualification_credit": 0,
+      "original_recorded_exit_codes": [
+        0
+      ],
+      "positive_source_control": "Separate portable-vector method in the same file checks active_key_accepts and retiring_overlap_accepts along with rejected vectors. It is source context, not an additional selected execution here.",
+      "production_replay_store_tested": false,
+      "production_sdk_validator_invoked": false,
+      "proof_kind": "TEST_LOCAL_CRYPTO_POLICY_WITH_REAL_ED25519_LIBRARY",
+      "qualified_source_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "raw_runtime_outputs_reinspected": false,
+      "selected_assertion": "A real Ed25519 verification result feeds test-local policy; the tampered-claim fixture is rejected as a signature mismatch.",
+      "test_source": {
+        "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+        "path": "tests/dispatch_ticket_trust_crypto.test.ts",
+        "repository": "RobLe3/iicp-client-typescript",
+        "sha256": "caaa48935e3d31172e3dbaec893253fd8a2b6b38fbc7a5a4e07c1d2cd545330a"
+      }
+    }
+  ],
+  "controlled_evidence": {
+    "case_index_sha256": "d0ba92aeb95eebdca7f98a4ea8bacd57de404b26d1a5a27e491cad1738d43329",
+    "private_records_publicly_retrievable": false,
+    "private_source_assessment_sha256": "ee9c1bbd250ebd0534fe6352c3ce39f3bdd09930ecab165e858329a2ed0b58ac",
+    "qualified_to_harness_equality_sha256": "385df001ddd61f00170272f6ee5ede63a0f2914323c3b0e422068bc46a2de577"
+  },
+  "counts": {
+    "existing_accepted_coordinate_references": 1152,
+    "per_component": {
+      "client-python": 6,
+      "client-rust": 6,
+      "client-typescript": 6
+    },
+    "production_boundary_cases": 6,
+    "selected_cases": 18,
+    "test_local_crypto_cases": 12
+  },
+  "crypto_fixture_context": {
+    "fixture_sha256": "48be1f06e79da7849367f48deeb7a5ffa71a1de0e21800491dc6bf55d016fb94",
+    "status": "pre-normative",
+    "version": "0.2.0-draft"
+  },
+  "findings": [
+    {
+      "class": "TEST_HARNESS_SCOPE_BOUNDARY",
+      "id": "CRED-F01",
+      "text": "Twelve selected crypto cases call real crypto libraries but test-local policy functions, not SDK production ticket validators."
+    },
+    {
+      "class": "EVIDENCE_LIMITATION",
+      "id": "CRED-F02",
+      "text": "Expired fixture concerns signing-key validity and a local reason code, not all credential expiry axes or production recoverability."
+    },
+    {
+      "class": "EVIDENCE_LIMITATION",
+      "id": "CRED-F03",
+      "text": "Replay fixture supplies jti_seen; no live replay store or first-accept/second-use state transition is exercised."
+    },
+    {
+      "class": "PARTIAL_CATALOG_ASSERTION",
+      "id": "CRED-F04",
+      "text": "Rotation selected bodies check revocation refusal only, not new-credential acceptance or rotation operation."
+    },
+    {
+      "class": "PARTIAL_CATALOG_ASSERTION",
+      "id": "CRED-F05",
+      "text": "Tampered-claim cases check signature rejection; every identity/domain mismatch is not covered by those bodies."
+    },
+    {
+      "class": "CROSS_IMPLEMENTATION_TEST_SCOPE_DIFFERENCE",
+      "id": "CRED-F06",
+      "text": "Missing-secret selected tests call direct resolvers in Python/TypeScript, client construction in Rust."
+    },
+    {
+      "class": "CROSS_IMPLEMENTATION_TEST_SCOPE_DIFFERENCE",
+      "id": "CRED-F07",
+      "text": "Directory unavailable selected fixtures use transport errors in Python/TypeScript, HTTP200 missing decision in Rust."
+    }
+  ],
+  "historical_inventory_complete": false,
+  "independent_interoperability_established": false,
+  "limits": [
+    "19 retained test/production/fixture files match accepted harness source bytes; this is not installed-package equivalence or runtime reproduction.",
+    "Original accepted outcomes are preserved. Selected-assertion gaps do not automatically establish a product defect or invalidate accepted evidence.",
+    "Supporting positive tests and unselected fixture vectors are source context, not new credited execution.",
+    "Current development sources, all normative clauses, independent interoperability and external certification are outside this analysis."
+  ],
+  "new_runtime_executions": 0,
+  "product_defect_or_evidence_invalidation_inferred": false,
+  "programme_complete": false,
+  "qualification_credit_changed": false,
+  "qualified_candidate_manifest_sha256": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "schema": "iicp.postcert-credential-boundaries.v1",
+  "source_files": [
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "conformance-runner/src/iicp_conformance/fixtures/dispatch-ticket-trust-v2-crypto.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "48be1f06e79da7849367f48deeb7a5ffa71a1de0e21800491dc6bf55d016fb94"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "parity/dispatch-ticket-trust-v2-crypto.json",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "48be1f06e79da7849367f48deeb7a5ffa71a1de0e21800491dc6bf55d016fb94"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/_http.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "2276cf7759c39cc28ce4b742b4536d44ea463fb6859a7165d8a267404aa2c7a2"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/client.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "eef900811aafc824c3e36a1dc04964d59dce83aa23f3fb16664c29bccccc9f4a"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/restricted_directory.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "7b38c15bd7d88ff8672f71f7d48d38c87516f7b4243dddb9269e596d42b5fd7f"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "tests/test_dispatch_ticket_trust_crypto.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "71d7abeb6dace636372a1e555a7fc5acc984d8279358a120208de73814183258"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "tests/test_restricted_directory.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "7c918acebd18800da94986321852030de132bc67777a7b9878601fd6f7d7d71d"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "parity/dispatch-ticket-trust-v2-crypto.json",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "48be1f06e79da7849367f48deeb7a5ffa71a1de0e21800491dc6bf55d016fb94"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/client.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "0b8b2d1944d23b4ac3d7192c093b827d5bb3c37afa32a964da92eaee3ecfad3c"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/http.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "12e636998dfc287e30312af06e6fa7456153746273a12ae0c4ee6869ae24f7cc"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/restricted_directory.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "0c093ca2b7db80ba928772d3abcb78446cef55fadab04393d236a51cfc8e6edd"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/runtime_config.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "0fff50fd4d922b6c99fa3469f57235c7c864e078dd8e3121a7400e892b138155"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/secret_store.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "600ba260e988ee8325bd65b53b414c61a146dbe8a11d52027b79fe0cd1fe28d8"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "tests/dispatch_ticket_trust_crypto.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "7996391d7d99468cbd26b31e0f62930e6e3e71bb0b2920329fa5f6dc3e970346"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "tests/restricted_directory_client.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "07ba83ac4b3cb41b0bd6af974e8c9ba4f5291a86db9c7263860e1142f2ca2995"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "parity/dispatch-ticket-trust-v2-crypto.json",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "48be1f06e79da7849367f48deeb7a5ffa71a1de0e21800491dc6bf55d016fb94"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "src/client.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "ca1ca2e3364e4b869714b9bb47fd0a168830de4328ea16b2aa295edda7983ba9"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "src/restricted_directory.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "e5d917ac94a5072af8f5b1e2da2e907324dbd282d2216b9cce1291bad75fe4f2"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "tests/dispatch_ticket_trust_crypto.test.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "caaa48935e3d31172e3dbaec893253fd8a2b6b38fbc7a5a4e07c1d2cd545330a"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "tests/restricted_directory.test.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "5744a3323ed1463bf2924a792074d9d55c9776008c53ca69302900a75458af48"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "project/pre1-edge-case-catalog.json",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "bf11370545d54934673469d2dca34d3358093de1e59bebf32d62ee1c8ea59630"
+    }
+  ],
+  "successor_qualified": false
+}
