@@ -9,15 +9,17 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import package_qualification_handoff as package
-from report_common import check_public
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from handoff_fixture import historical_fixture
 
 
 class PackageTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name).resolve() / "corpus"
         self.root.mkdir()
-        self.bundle = check_public()
+        self.bundle, self.fixture_repo = historical_fixture(Path(self.temp.name).resolve())
         self.notes = {
             n: ("# Reviewed " + n + "\n").encode() for n in package.NARRATIVES
         }
@@ -42,9 +44,6 @@ class PackageTests(unittest.TestCase):
             for n in sorted(paths)
         ]
 
-    def tearDown(self):
-        self.temp.cleanup()
-
     def write(self, members):
         for n, b in members.items():
             p = self.root / n
@@ -53,12 +52,12 @@ class PackageTests(unittest.TestCase):
 
     def test_deterministic_builder(self):
         self.assertEqual(
-            package.build_members(self.bundle, self.records, self.notes),
-            package.build_members(self.bundle, self.records, self.notes),
+            package.build_members(self.bundle, self.records, self.notes, repo=self.fixture_repo),
+            package.build_members(self.bundle, self.records, self.notes, repo=self.fixture_repo),
         )
 
     def test_portable_positive(self):
-        m = package.build_members(self.bundle, self.records, self.notes)
+        m = package.build_members(self.bundle, self.records, self.notes, repo=self.fixture_repo)
         self.write(m)
         d = "sha256:" + hashlib.sha256(m["manifest.json"]).hexdigest()
         r = package.verify_corpus(self.root, d)
@@ -66,7 +65,7 @@ class PackageTests(unittest.TestCase):
         self.assertFalse(r["private_source_reverification"])
 
     def test_changed_narrative(self):
-        self.write(package.build_members(self.bundle, self.records, self.notes))
+        self.write(package.build_members(self.bundle, self.records, self.notes, repo=self.fixture_repo))
         (self.root / "START_HERE.md").write_text("altered")
         with self.assertRaises(ValueError):
             package.verify_corpus(self.root)
@@ -74,27 +73,27 @@ class PackageTests(unittest.TestCase):
     def test_private_marker_refused(self):
         self.notes["START_HERE.md"] = b"private /Users/synthetic/no-real-data"
         with self.assertRaises(ValueError):
-            package.build_members(self.bundle, self.records, self.notes)
+            package.build_members(self.bundle, self.records, self.notes, repo=self.fixture_repo)
 
     def test_wrong_source_refused(self):
         b = copy.deepcopy(self.bundle)
         b["status"]["source_commit"] = "a" * 40
         with self.assertRaises(ValueError):
-            package.build_members(b, self.records, self.notes)
+            package.build_members(b, self.records, self.notes, repo=self.fixture_repo)
 
     def test_trusted_manifest_required_for_identity(self):
-        self.write(package.build_members(self.bundle, self.records, self.notes))
+        self.write(package.build_members(self.bundle, self.records, self.notes, repo=self.fixture_repo))
         with self.assertRaises(ValueError):
             package.verify_corpus(self.root, "sha256:" + "0" * 64)
 
     def test_extra_member_refused(self):
-        self.write(package.build_members(self.bundle, self.records, self.notes))
+        self.write(package.build_members(self.bundle, self.records, self.notes, repo=self.fixture_repo))
         (self.root / "extra.txt").write_text("synthetic")
         with self.assertRaises(ValueError):
             package.verify_corpus(self.root)
 
     def test_symlink_refused(self):
-        self.write(package.build_members(self.bundle, self.records, self.notes))
+        self.write(package.build_members(self.bundle, self.records, self.notes, repo=self.fixture_repo))
         p = self.root / "START_HERE.md"
         p.unlink()
         p.symlink_to(self.root / "AGENT_BRIEF.md")
