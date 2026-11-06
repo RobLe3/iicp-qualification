@@ -2210,6 +2210,61 @@
       "reason": "evidence-gap",
       "source_sha256": "sha256:554339f8f136746c94449016dfe0be451e3b3bf42641625f347d88a306e84071",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:a3b086ede9eaa89b462c2106263b1502540c6101accb8bed6e54bbe168d425c9",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T20:17:15.468660+00:00",
+      "outcome": "FAIL",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:fece58f69be5b7e679e66902478a207d4b043b97b774bdf3d6f6aad4a8102d4a",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:5eee58cb9b0efd5c6156672140ae1e01ff5cbbb05361f932685485b0ccd1d0f8",
+      "kind": "correction",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T20:17:15.468660+00:00",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:22c61e1d2ee4f6b499e0e5ebe47bbf8b18b3c2172f45d7234b9d228437c5d183",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:c0898783225408f506470de76e24d0b31e66894b171302cbd3ba100d7ab1685f",
+      "kind": "ci",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T20:17:15.468660+00:00",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:b3024fc0cf11551afdc8b5a5124c9dd7b353267fb843e2662af59a721cbb5bb3",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:d1ce3183ef57bdd88ce6db30ce0396f9828975dc1201f35e161c76cc06f70c0b",
+      "kind": "correction",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T20:17:15.468660+00:00",
+      "outcome": "MERGED",
+      "qualification_credit": 0,
+      "reason": "correction-merged",
+      "source_sha256": "sha256:e4be37e11a447aaec5216a1d290ec6d6ac77bf6e2b389d45d8684c74a71a4599",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:e68e2b20fb1977c045c064f3395fcc284a210a27d3471b6710c516589fd61401",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-06T20:17:47.528902+00:00",
+      "outcome": "REFUSED",
+      "qualification_credit": 0,
+      "reason": "preflight-refused",
+      "source_sha256": "sha256:5ee152c875600526fa6c540d69c2b5b0bb9f1a458e277f3b30a9f716e3245dc5",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
