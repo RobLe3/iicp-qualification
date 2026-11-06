@@ -1,0 +1,18 @@
+{
+  "authority": "Informative source/owner analysis, not qualification acceptance.",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "61e4ef4a4840cda4a1438c7b6dbe1aa0bae7daf64b7da8c3554b2a79ba6061ac"
+    },
+    {
+      "path": "source-analysis.json",
+      "sha256": "f41868322027db6aa9459bd0e66f40a8b2e6bce19731c2cef8b5f713b050c309"
+    },
+    {
+      "path": "schema.json",
+      "sha256": "4c57550fc70dd3d31f6d01e791bc9543aa8d568f92406c2c1abc017cb741fd97"
+    }
+  ],
+  "schema": "iicp.postcert-informative-supplement-manifest.v1"
+}

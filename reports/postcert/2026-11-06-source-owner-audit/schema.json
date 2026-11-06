@@ -1,0 +1,637 @@
+{
+  "$id": "https://github.com/RobLe3/iicp-qualification/source-owner-analysis-v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_equivalence_established": {
+      "const": false
+    },
+    "authority": {
+      "const": "INFORMATIVE_NOT_QUALIFICATION_ACCEPTANCE"
+    },
+    "canonical_policy_source": {
+      "const": "853b24f889eb23df7343af3d06c738a6a6be0c43"
+    },
+    "captured_source_horizon": {
+      "type": "string"
+    },
+    "components": {
+      "allOf": [
+        {
+          "contains": {
+            "properties": {
+              "repository": {
+                "const": "RobLe3/iicp-client-python"
+              }
+            },
+            "required": [
+              "repository"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "repository": {
+                "const": "RobLe3/iicp-client-typescript"
+              }
+            },
+            "required": [
+              "repository"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "repository": {
+                "const": "RobLe3/iicp-client-rust"
+              }
+            },
+            "required": [
+              "repository"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "repository": {
+                "const": "RobLe3/iicp-directory-php"
+              }
+            },
+            "required": [
+              "repository"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "repository": {
+                "const": "RobLe3/iicp-directory-rust"
+              }
+            },
+            "required": [
+              "repository"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "repository": {
+                "const": "RobLe3/iicp-management"
+              }
+            },
+            "required": [
+              "repository"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        }
+      ],
+      "items": {
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "repository": {
+                  "const": "RobLe3/iicp-client-python"
+                }
+              },
+              "required": [
+                "repository"
+              ]
+            },
+            "then": {
+              "properties": {
+                "comparison_sha256": {
+                  "const": "23fc88d7dc8f151baaae1e8aed182551a3edea7fae08ffaaa993ea8895fd7403"
+                },
+                "comparison_url": {
+                  "const": "https://github.com/RobLe3/iicp-client-python/compare/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183...6504a6001003cf3a95c16614101da94fe8adcb50"
+                },
+                "development_source": {
+                  "const": "6504a6001003cf3a95c16614101da94fe8adcb50"
+                },
+                "qualified_source": {
+                  "const": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "repository": {
+                  "const": "RobLe3/iicp-client-typescript"
+                }
+              },
+              "required": [
+                "repository"
+              ]
+            },
+            "then": {
+              "properties": {
+                "comparison_sha256": {
+                  "const": "32dc12c8c52c00fb5d871b77e464bcdf1205b0e2c6de21ee5e5eb13a1e5c7edc"
+                },
+                "comparison_url": {
+                  "const": "https://github.com/RobLe3/iicp-client-typescript/compare/97c768d8b9e90756773103e432c273a7d98ba08e...65f2c213d321a400f1f92d89ab138519d9b2b11f"
+                },
+                "development_source": {
+                  "const": "65f2c213d321a400f1f92d89ab138519d9b2b11f"
+                },
+                "qualified_source": {
+                  "const": "97c768d8b9e90756773103e432c273a7d98ba08e"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "repository": {
+                  "const": "RobLe3/iicp-client-rust"
+                }
+              },
+              "required": [
+                "repository"
+              ]
+            },
+            "then": {
+              "properties": {
+                "comparison_sha256": {
+                  "const": "155bc512821b4139f52ceba320bf673b04b6d3a1b9f2564b81bec0b86717c44c"
+                },
+                "comparison_url": {
+                  "const": "https://github.com/RobLe3/iicp-client-rust/compare/0b8b529262977b6482dd7900d473e7d152ba9293...63e28d1b6c0aa8af460a71ecf79344a06ef80619"
+                },
+                "development_source": {
+                  "const": "63e28d1b6c0aa8af460a71ecf79344a06ef80619"
+                },
+                "qualified_source": {
+                  "const": "0b8b529262977b6482dd7900d473e7d152ba9293"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "repository": {
+                  "const": "RobLe3/iicp-directory-php"
+                }
+              },
+              "required": [
+                "repository"
+              ]
+            },
+            "then": {
+              "properties": {
+                "comparison_sha256": {
+                  "const": "297d1408ebb79e655cac5da0761254f869899d9d59393d6026d0fde7d26f4f95"
+                },
+                "comparison_url": {
+                  "const": "https://github.com/RobLe3/iicp-directory-php/compare/2dfd228b49c587150a44f448cea1351a9f039d32...11e63a1b2a3846d376810d260bf9ccbbf59b3d7c"
+                },
+                "development_source": {
+                  "const": "11e63a1b2a3846d376810d260bf9ccbbf59b3d7c"
+                },
+                "qualified_source": {
+                  "const": "2dfd228b49c587150a44f448cea1351a9f039d32"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "repository": {
+                  "const": "RobLe3/iicp-directory-rust"
+                }
+              },
+              "required": [
+                "repository"
+              ]
+            },
+            "then": {
+              "properties": {
+                "comparison_sha256": {
+                  "const": "86d452f9a0fc5f7c059e553cd24fa624ab1829c303ed04b0f01d008607975c09"
+                },
+                "comparison_url": {
+                  "const": "https://github.com/RobLe3/iicp-directory-rust/compare/b95a362ad8f974334994ca73cd20210388a2362f...6a886a633d50e106ef1e2d5ff21b9e9002e070da"
+                },
+                "development_source": {
+                  "const": "6a886a633d50e106ef1e2d5ff21b9e9002e070da"
+                },
+                "qualified_source": {
+                  "const": "b95a362ad8f974334994ca73cd20210388a2362f"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "repository": {
+                  "const": "RobLe3/iicp-management"
+                }
+              },
+              "required": [
+                "repository"
+              ]
+            },
+            "then": {
+              "properties": {
+                "comparison_sha256": {
+                  "const": "eea27cb75832e8d553d57ffa7bd036d25fd7fdd1474c7ebcbc9457dc3cbbd0bb"
+                },
+                "comparison_url": {
+                  "const": "https://github.com/RobLe3/iicp-management/compare/9b9c910fe6443068e71152f1a95f41639041c647...723de26a5f0d62dbd160546fd598c513b0b3bee6"
+                },
+                "development_source": {
+                  "const": "723de26a5f0d62dbd160546fd598c513b0b3bee6"
+                },
+                "qualified_source": {
+                  "const": "9b9c910fe6443068e71152f1a95f41639041c647"
+                }
+              }
+            }
+          }
+        ],
+        "properties": {
+          "artifact_equivalence_established": {
+            "const": false
+          },
+          "comparison_sha256": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "comparison_url": {
+            "type": "string"
+          },
+          "development_source": {
+            "pattern": "^[0-9a-f]{40}$",
+            "type": "string"
+          },
+          "net_changed_path_count": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "net_src_path_count": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "paths": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "path_roles": {
+                  "items": {
+                    "enum": [
+                      "PRODUCT_RUNTIME_SOURCE",
+                      "DEVELOPMENT_REGRESSION",
+                      "HARNESS_REGRESSION",
+                      "QUALIFICATION_HARNESS",
+                      "DEVELOPMENT_CI",
+                      "BUILD_OR_DEPENDENCY_IDENTITY",
+                      "NARRATIVE_REQUIRES_CONTRACT_REVIEW",
+                      "UNKNOWN_REQUIRES_REVIEW"
+                    ]
+                  },
+                  "minItems": 1,
+                  "type": "array",
+                  "uniqueItems": true
+                },
+                "previous_path": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "status": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "previous_path",
+                "status",
+                "path_roles"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "qualified_source": {
+            "pattern": "^[0-9a-f]{40}$",
+            "type": "string"
+          },
+          "range_commit_count": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "repository": {
+            "type": "string"
+          },
+          "source_touching_commits_including_merges": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "repository",
+          "qualified_source",
+          "development_source",
+          "comparison_url",
+          "comparison_sha256",
+          "net_changed_path_count",
+          "net_src_path_count",
+          "source_touching_commits_including_merges",
+          "range_commit_count",
+          "paths",
+          "artifact_equivalence_established"
+        ],
+        "type": "object"
+      },
+      "maxItems": 6,
+      "minItems": 6,
+      "type": "array"
+    },
+    "external_interoperability_established": {
+      "const": false
+    },
+    "heritage_owner": {
+      "const": "RobLe3/iicp.network#1676"
+    },
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 9,
+      "type": "array"
+    },
+    "original_candidate_digest": {
+      "const": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a"
+    },
+    "owner_findings": {
+      "allOf": [
+        {
+          "contains": {
+            "properties": {
+              "owner": {
+                "const": "RobLe3/iicp-client-python#142"
+              }
+            },
+            "required": [
+              "owner"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "owner": {
+                "const": "RobLe3/iicp-client-rust#175"
+              }
+            },
+            "required": [
+              "owner"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "owner": {
+                "const": "RobLe3/iicp-client-rust#183"
+              }
+            },
+            "required": [
+              "owner"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "owner": {
+                "const": "RobLe3/iicp-directory-php#65"
+              }
+            },
+            "required": [
+              "owner"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "owner": {
+                "const": "RobLe3/iicp-directory-rust#1"
+              }
+            },
+            "required": [
+              "owner"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "owner": {
+                "const": "RobLe3/iicp-management#168"
+              }
+            },
+            "required": [
+              "owner"
+            ],
+            "type": "object"
+          },
+          "maxContains": 1,
+          "minContains": 1
+        }
+      ],
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "classification": {
+            "type": "string"
+          },
+          "new_qualification_credit": {
+            "const": 0
+          },
+          "observation_and_interpretation": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "owner_contract_complete": {
+            "const": false
+          },
+          "owner_state": {
+            "const": "OPEN"
+          },
+          "owner_url": {
+            "type": "string"
+          },
+          "proposed_disposition": {
+            "enum": [
+              "YES",
+              "NO",
+              "MAYBE"
+            ]
+          },
+          "proposition": {
+            "type": "string"
+          },
+          "remaining_evidence_or_decision": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "owner",
+          "owner_url",
+          "owner_state",
+          "classification",
+          "proposition",
+          "proposed_disposition",
+          "observation_and_interpretation",
+          "remaining_evidence_or_decision",
+          "owner_contract_complete",
+          "new_qualification_credit"
+        ],
+        "type": "object"
+      },
+      "maxItems": 6,
+      "minItems": 6,
+      "type": "array"
+    },
+    "qualification_credit_added": {
+      "const": 0
+    },
+    "qualification_execution_authorized": {
+      "const": false
+    },
+    "review_digests": {
+      "additionalProperties": false,
+      "properties": {
+        "owner_boundaries": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "source_tool": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_tool",
+        "owner_boundaries"
+      ],
+      "type": "object"
+    },
+    "schema": {
+      "const": "iicp.postcert-informative-source-owner-analysis.v1"
+    },
+    "semantic_analysis_complete": {
+      "const": false
+    },
+    "source_collection_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "successor_frozen": {
+      "const": false
+    },
+    "supported_scope_defect_audit_complete": {
+      "const": false
+    },
+    "validation": {
+      "additionalProperties": false,
+      "properties": {
+        "component_candidate_source_bindings_verified": {
+          "const": 6
+        },
+        "source_controls_passed": {
+          "const": 24
+        },
+        "source_histories_reproduced": {
+          "const": 6
+        },
+        "unchanged_existing_policy_files_verified": {
+          "const": 3
+        }
+      },
+      "required": [
+        "source_controls_passed",
+        "source_histories_reproduced",
+        "component_candidate_source_bindings_verified",
+        "unchanged_existing_policy_files_verified"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema",
+    "authority",
+    "heritage_owner",
+    "original_candidate_digest",
+    "canonical_policy_source",
+    "captured_source_horizon",
+    "source_collection_manifest_sha256",
+    "components",
+    "owner_findings",
+    "validation",
+    "limits",
+    "supported_scope_defect_audit_complete",
+    "semantic_analysis_complete",
+    "artifact_equivalence_established",
+    "qualification_credit_added",
+    "qualification_execution_authorized",
+    "successor_frozen",
+    "external_interoperability_established",
+    "review_digests"
+  ],
+  "type": "object"
+}
