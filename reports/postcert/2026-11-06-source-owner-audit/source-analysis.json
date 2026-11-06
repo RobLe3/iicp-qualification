@@ -1,0 +1,509 @@
+{
+  "artifact_equivalence_established": false,
+  "authority": "INFORMATIVE_NOT_QUALIFICATION_ACCEPTANCE",
+  "canonical_policy_source": "853b24f889eb23df7343af3d06c738a6a6be0c43",
+  "captured_source_horizon": "2026-11-06T00:30:09.966204+00:00",
+  "components": [
+    {
+      "artifact_equivalence_established": false,
+      "comparison_sha256": "23fc88d7dc8f151baaae1e8aed182551a3edea7fae08ffaaa993ea8895fd7403",
+      "comparison_url": "https://github.com/RobLe3/iicp-client-python/compare/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183...6504a6001003cf3a95c16614101da94fe8adcb50",
+      "development_source": "6504a6001003cf3a95c16614101da94fe8adcb50",
+      "net_changed_path_count": 9,
+      "net_src_path_count": 1,
+      "paths": [
+        {
+          "path": "scripts/pre1_environment_contract.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "added"
+        },
+        {
+          "path": "scripts/pre1_harness_binding.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "added"
+        },
+        {
+          "path": "scripts/pre1_package_execution.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "added"
+        },
+        {
+          "path": "scripts/run_pre1_qualification_case.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/test_pre1_package_execution.py",
+          "path_roles": [
+            "HARNESS_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "added"
+        },
+        {
+          "path": "scripts/test_pre1_prepared_home.py",
+          "path_roles": [
+            "HARNESS_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "added"
+        },
+        {
+          "path": "scripts/test_pre1_qualification_case.py",
+          "path_roles": [
+            "HARNESS_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "src/iicp_client/node.py",
+          "path_roles": [
+            "PRODUCT_RUNTIME_SOURCE"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "tests/test_registration_diagnostic_privacy.py",
+          "path_roles": [
+            "DEVELOPMENT_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "added"
+        }
+      ],
+      "qualified_source": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "range_commit_count": 7,
+      "repository": "RobLe3/iicp-client-python",
+      "source_touching_commits_including_merges": 2
+    },
+    {
+      "artifact_equivalence_established": false,
+      "comparison_sha256": "32dc12c8c52c00fb5d871b77e464bcdf1205b0e2c6de21ee5e5eb13a1e5c7edc",
+      "comparison_url": "https://github.com/RobLe3/iicp-client-typescript/compare/97c768d8b9e90756773103e432c273a7d98ba08e...65f2c213d321a400f1f92d89ab138519d9b2b11f",
+      "development_source": "65f2c213d321a400f1f92d89ab138519d9b2b11f",
+      "net_changed_path_count": 9,
+      "net_src_path_count": 1,
+      "paths": [
+        {
+          "path": "scripts/pre1_environment_contract.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "added"
+        },
+        {
+          "path": "scripts/pre1_harness_binding.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "added"
+        },
+        {
+          "path": "scripts/pre1_package_execution.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "added"
+        },
+        {
+          "path": "scripts/run_pre1_qualification_case.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/test_pre1_package_execution.py",
+          "path_roles": [
+            "HARNESS_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "added"
+        },
+        {
+          "path": "scripts/test_pre1_prepared_home.py",
+          "path_roles": [
+            "HARNESS_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "added"
+        },
+        {
+          "path": "scripts/test_pre1_qualification_case.py",
+          "path_roles": [
+            "HARNESS_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "src/node.ts",
+          "path_roles": [
+            "PRODUCT_RUNTIME_SOURCE"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "tests/registration_diagnostic_privacy.test.ts",
+          "path_roles": [
+            "DEVELOPMENT_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "added"
+        }
+      ],
+      "qualified_source": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "range_commit_count": 8,
+      "repository": "RobLe3/iicp-client-typescript",
+      "source_touching_commits_including_merges": 2
+    },
+    {
+      "artifact_equivalence_established": false,
+      "comparison_sha256": "155bc512821b4139f52ceba320bf673b04b6d3a1b9f2564b81bec0b86717c44c",
+      "comparison_url": "https://github.com/RobLe3/iicp-client-rust/compare/0b8b529262977b6482dd7900d473e7d152ba9293...63e28d1b6c0aa8af460a71ecf79344a06ef80619",
+      "development_source": "63e28d1b6c0aa8af460a71ecf79344a06ef80619",
+      "net_changed_path_count": 10,
+      "net_src_path_count": 4,
+      "paths": [
+        {
+          "path": "CHANGELOG.md",
+          "path_roles": [
+            "NARRATIVE_REQUIRES_CONTRACT_REVIEW"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/pre1_harness_binding.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/pre1_package_execution.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/run_pre1_qualification_case.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/test_pre1_prepared_home.py",
+          "path_roles": [
+            "HARNESS_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "added"
+        },
+        {
+          "path": "src/bin/iicp_node.rs",
+          "path_roles": [
+            "PRODUCT_RUNTIME_SOURCE"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "src/http.rs",
+          "path_roles": [
+            "PRODUCT_RUNTIME_SOURCE"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "src/node.rs",
+          "path_roles": [
+            "PRODUCT_RUNTIME_SOURCE"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "src/tunnel.rs",
+          "path_roles": [
+            "PRODUCT_RUNTIME_SOURCE"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "tests/node_register_tests.rs",
+          "path_roles": [
+            "DEVELOPMENT_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        }
+      ],
+      "qualified_source": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "range_commit_count": 15,
+      "repository": "RobLe3/iicp-client-rust",
+      "source_touching_commits_including_merges": 12
+    },
+    {
+      "artifact_equivalence_established": false,
+      "comparison_sha256": "297d1408ebb79e655cac5da0761254f869899d9d59393d6026d0fde7d26f4f95",
+      "comparison_url": "https://github.com/RobLe3/iicp-directory-php/compare/2dfd228b49c587150a44f448cea1351a9f039d32...11e63a1b2a3846d376810d260bf9ccbbf59b3d7c",
+      "development_source": "11e63a1b2a3846d376810d260bf9ccbbf59b3d7c",
+      "net_changed_path_count": 3,
+      "net_src_path_count": 0,
+      "paths": [
+        {
+          "path": "scripts/pre1_package_execution.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/test_pre1_prepared_home.py",
+          "path_roles": [
+            "HARNESS_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "tests/Unit/NodePolicyManifestVerifierTest.php",
+          "path_roles": [
+            "DEVELOPMENT_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        }
+      ],
+      "qualified_source": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "range_commit_count": 1,
+      "repository": "RobLe3/iicp-directory-php",
+      "source_touching_commits_including_merges": 0
+    },
+    {
+      "artifact_equivalence_established": false,
+      "comparison_sha256": "86d452f9a0fc5f7c059e553cd24fa624ab1829c303ed04b0f01d008607975c09",
+      "comparison_url": "https://github.com/RobLe3/iicp-directory-rust/compare/b95a362ad8f974334994ca73cd20210388a2362f...6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "development_source": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "net_changed_path_count": 4,
+      "net_src_path_count": 0,
+      "paths": [
+        {
+          "path": ".github/workflows/quality.yml",
+          "path_roles": [
+            "DEVELOPMENT_CI"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/pre1_package_execution.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/test_pre1_package_execution.py",
+          "path_roles": [
+            "HARNESS_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/test_pre1_prepared_home.py",
+          "path_roles": [
+            "HARNESS_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        }
+      ],
+      "qualified_source": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "range_commit_count": 8,
+      "repository": "RobLe3/iicp-directory-rust",
+      "source_touching_commits_including_merges": 2
+    },
+    {
+      "artifact_equivalence_established": false,
+      "comparison_sha256": "eea27cb75832e8d553d57ffa7bd036d25fd7fdd1474c7ebcbc9457dc3cbbd0bb",
+      "comparison_url": "https://github.com/RobLe3/iicp-management/compare/9b9c910fe6443068e71152f1a95f41639041c647...723de26a5f0d62dbd160546fd598c513b0b3bee6",
+      "development_source": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+      "net_changed_path_count": 4,
+      "net_src_path_count": 0,
+      "paths": [
+        {
+          "path": "scripts/pre1_harness_binding.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/pre1_package_execution.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/run_pre1_qualification_case.py",
+          "path_roles": [
+            "QUALIFICATION_HARNESS"
+          ],
+          "previous_path": null,
+          "status": "modified"
+        },
+        {
+          "path": "scripts/test_pre1_prepared_home.py",
+          "path_roles": [
+            "HARNESS_REGRESSION"
+          ],
+          "previous_path": null,
+          "status": "added"
+        }
+      ],
+      "qualified_source": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "range_commit_count": 3,
+      "repository": "RobLe3/iicp-management",
+      "source_touching_commits_including_merges": 0
+    }
+  ],
+  "external_interoperability_established": false,
+  "heritage_owner": "RobLe3/iicp.network#1676",
+  "limits": [
+    "Sequential pinned comparisons, not an atomic cross-repository snapshot or permanent main freshness guarantee.",
+    "Final source differences do not erase intermediate changes; source-touch counts include merges and possible inline tests.",
+    "No net src difference is not artifact, build, dependency, behavioral or security equivalence.",
+    "Owner findings decide bounded propositions only, not whole contracts or all supported-scope defects.",
+    "Historical activation counts and operator observations are not current live measurements.",
+    "Raw API captures, local locators and unmerged private source are not published; review digests are not public raw evidence.",
+    "No build, runtime/qualification workload, AWS operation, source authority change or qualification credit from this audit.",
+    "Existing receipt/certificate policy remains candidate-bound; source-role analysis grants no carryover exception.",
+    "Historical completeness, executable reference freezing and independent external interoperability remain unestablished."
+  ],
+  "original_candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "owner_findings": [
+    {
+      "classification": "TRUST_SCOPE_DECISION_WITH_REVIEWED_AS_IS_SOURCE",
+      "new_qualification_credit": 0,
+      "observation_and_interpretation": "Exact reported/qualified receipt methods have identical ASTs; the dictionary has no detached signer/signature/freshness fields. Gateway task_id adjacency does not authenticate that binding. This is a source finding, not a new gateway execution or external experiment.",
+      "owner": "RobLe3/iicp-client-python#142",
+      "owner_contract_complete": false,
+      "owner_state": "OPEN",
+      "owner_url": "https://github.com/RobLe3/iicp-client-python/issues/142",
+      "proposed_disposition": "NO",
+      "proposition": "The receipt object itself supplies externally verifiable execution attestation.",
+      "remaining_evidence_or_decision": "Protocol-owned relying-party trust-scope decision and a join to any enclosing authenticated channel or separately signed artifact. No signing requirement is inferred."
+    },
+    {
+      "classification": "MIXED_EXPERIMENTAL_ELIGIBILITY_GAP_AND_CORRECTED_SUPPORTED_BOUNDARY",
+      "new_qualification_credit": 0,
+      "observation_and_interpretation": "Current exact-source selector filters relay_capable, identity, parsed HTTP(S) authority and validated port, then ranks and returns a host/port. It does not establish authenticated relay eligibility or native reachability. Published parser/port fixes do not supply those assurances. Existing corrected required-fallback availability observations concern a separate boundary and add no original-candidate credit.",
+      "owner": "RobLe3/iicp-client-rust#175",
+      "owner_contract_complete": false,
+      "owner_state": "OPEN",
+      "owner_url": "https://github.com/RobLe3/iicp-client-rust/issues/175",
+      "proposed_disposition": "NO",
+      "proposition": "The current selector function itself verifies an authenticated, unexpired native-worker binding and native reachability before selection.",
+      "remaining_evidence_or_decision": "Retain experimental relay eligibility under Protocol59 with source/provenance/expiry and independent-operator requirements. Continue supported caller/explicit-worker analysis separately; do not implement a new trust authority merely to close this issue."
+    },
+    {
+      "classification": "HISTORICAL_RECOVERY_CAUSE_AND_DURABILITY_EVIDENCE_GAP",
+      "new_qualification_credit": 0,
+      "observation_and_interpretation": "The owner explicitly leaves the0.7.109 operator route/tunnel cause and durability unresolved. Later qualified0.7.110, controlled SUP76/FALLBACK observations and narrow cooldown/availability/selector fixes differ in source and environment; none by itself explains the original incident. Reopening after the first frontier snapshot is preserved.",
+      "owner": "RobLe3/iicp-client-rust#183",
+      "owner_contract_complete": false,
+      "owner_state": "OPEN",
+      "owner_url": "https://github.com/RobLe3/iicp-client-rust/issues/183",
+      "proposed_disposition": "MAYBE",
+      "proposition": "The original operator recovery incident has an established cause and demonstrated durable resolution.",
+      "remaining_evidence_or_decision": "Exact version/configuration and chronology alignment, causal records distinguishing route/registration/credential/supervisor failure, and appropriate evidence across the owner-required heartbeat intervals. No production probing, restart or diagnostic attempt is authorized by this review."
+    },
+    {
+      "classification": "MEASUREMENT_AND_ACTIVATION_GATE_NOT_DEMONSTRATED_CURRENT_DEFECT",
+      "new_qualification_credit": 0,
+      "observation_and_interpretation": "The owner requires at least50active operators, a documented registration-abuse incident or the relevantv1.0contract freeze, followed by measured proposal/rollback andPHP/Rust review. Historical comments describe a disposable measurement and then-unmet thresholds, not present-day operator counts. Qualification/candidate freeze is not silently substituted for the named activation decision.",
+      "owner": "RobLe3/iicp-directory-php#65",
+      "owner_contract_complete": false,
+      "owner_state": "OPEN",
+      "owner_url": "https://github.com/RobLe3/iicp-directory-php/issues/65",
+      "proposed_disposition": "NO",
+      "proposition": "Completed finite qualification alone establishes that this rate-limit tuning activation gate is met.",
+      "remaining_evidence_or_decision": "Current activation evidence is UNVERIFIED here; clarify the exact contract-freeze trigger with its owner. Keep representative shared-NAT/fleet measurement and tuning under existing performance ownership; do not alter limits or infer no current registration defect."
+    },
+    {
+      "classification": "SEPARATE_PRODUCTION_SHADOW_AND_CUTOVER_AUTHORITY",
+      "new_qualification_credit": 0,
+      "observation_and_interpretation": "The current issue explicitly separates local/package/parity evidence from persistent shadow, independent database/signing/credentials, live recovery matrix, production rollback and maintainer cutover approval. Its old published/deployed version paragraphs are dated history, not current version verification.",
+      "owner": "RobLe3/iicp-directory-rust#1",
+      "owner_contract_complete": false,
+      "owner_state": "OPEN",
+      "owner_url": "https://github.com/RobLe3/iicp-directory-rust/issues/1",
+      "proposed_disposition": "NO",
+      "proposition": "Accepted integration qualification automatically satisfies or authorizes the remaining production-shadow/cutover contract.",
+      "remaining_evidence_or_decision": "Keep these operational gates open under this existing owner. Distinguish qualification/API operator evidence inRustDirectory102 from production serving/cutover. No shadow, credential provisioning, live operation or cutover follows."
+    },
+    {
+      "classification": "OPTIONAL_SUCCESSOR_BINDING_PROPOSAL_NOT_CURRENT_BASELINE_DEFECT",
+      "new_qualification_credit": 0,
+      "observation_and_interpretation": "The issue requests an optional non-activating evaluator binding without transferring local authority or changing the frozen baseline. Correspondence is an initial assessment and contributor proposal, not implementation approval or qualification. Reported48conformance cases are not independently reverified here.",
+      "owner": "RobLe3/iicp-management#168",
+      "owner_contract_complete": false,
+      "owner_state": "OPEN",
+      "owner_url": "https://github.com/RobLe3/iicp-management/issues/168",
+      "proposed_disposition": "NO",
+      "proposition": "The owner requires replacing or extending the frozen qualification baseline with the proposed external evaluator now.",
+      "remaining_evidence_or_decision": "Review the separately proposed contract/vector sources, digest/signature/replay conventions and non-activation controls under the existing owner after stabilization priorities. No new capability, contract adoption or external-interoperability conclusion is introduced."
+    }
+  ],
+  "qualification_credit_added": 0,
+  "qualification_execution_authorized": false,
+  "review_digests": {
+    "owner_boundaries": "cd5507bc40c2fcec058cba972d242668791e581ad9b0a2907525c4ba07277fea",
+    "source_tool": "43beaba972e747eca8737dc9eedd3eec3872194669166b794bb632722009b0ad"
+  },
+  "schema": "iicp.postcert-informative-source-owner-analysis.v1",
+  "semantic_analysis_complete": false,
+  "source_collection_manifest_sha256": "9a61305bc6fd21f7a5248a622178b4b3c037b5db1ba303a754e9b3cbc07fe142",
+  "successor_frozen": false,
+  "supported_scope_defect_audit_complete": false,
+  "validation": {
+    "component_candidate_source_bindings_verified": 6,
+    "source_controls_passed": 24,
+    "source_histories_reproduced": 6,
+    "unchanged_existing_policy_files_verified": 3
+  }
+}

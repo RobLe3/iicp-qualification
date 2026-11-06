@@ -103,3 +103,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Selected confidentiality and identity assertions
 
 [Read the reviewed capability-source slices](reports/postcert/2026-11-05-capability-slices/README.md) for selected confidentiality and identity-lifecycle predicates, exact source links and public coordinate-count verification. Shared fixtures do not imply identical assertion coverage or actual process restarts. This is partial source analysis, not a new qualification result or frozen reference baseline.
+
+## Successor-source and owner-boundary audit
+
+[The 6 November source and owner audit](reports/postcert/2026-11-06-source-owner-audit/README.md) compares six pinned component sources, preserves intermediate changes and separates six owner questions from whole-issue completion. It grants no artifact equivalence, qualification credit or execution authority.
