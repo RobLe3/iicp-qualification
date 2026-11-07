@@ -1,0 +1,382 @@
+{
+  "attempt_history": [
+    {
+      "attempt_id": "php-metadata-refusal",
+      "method_executions": 0,
+      "methods_failed": 0,
+      "methods_passed": 0,
+      "outcome": "ADMISSION_REFUSED",
+      "predecessor": null,
+      "profile_id": "php-sqlite"
+    },
+    {
+      "attempt_id": "php-oci-failure",
+      "method_executions": 0,
+      "methods_failed": 0,
+      "methods_passed": 0,
+      "outcome": "SETUP_FAILED",
+      "predecessor": "php-metadata-refusal",
+      "profile_id": "php-sqlite"
+    },
+    {
+      "attempt_id": "php-layout",
+      "method_executions": 4,
+      "methods_failed": 1,
+      "methods_passed": 3,
+      "outcome": "PARTIAL_ORACLE_FAILURE",
+      "predecessor": "php-oci-failure",
+      "profile_id": "php-sqlite"
+    },
+    {
+      "attempt_id": "php-empty-oracle-successor",
+      "method_executions": 1,
+      "methods_failed": 0,
+      "methods_passed": 1,
+      "outcome": "PASS",
+      "predecessor": "php-layout",
+      "profile_id": "php-sqlite"
+    },
+    {
+      "attempt_id": "rust-selector-refusal",
+      "method_executions": 0,
+      "methods_failed": 0,
+      "methods_passed": 0,
+      "outcome": "SELECTOR_REFUSED",
+      "predecessor": null,
+      "profile_id": "rust-memory"
+    },
+    {
+      "attempt_id": "rust-selector-successor",
+      "method_executions": 3,
+      "methods_failed": 0,
+      "methods_passed": 3,
+      "outcome": "PASS",
+      "predecessor": "rust-selector-refusal",
+      "profile_id": "rust-memory"
+    },
+    {
+      "attempt_id": "rust-native-topology",
+      "method_executions": 0,
+      "methods_failed": 0,
+      "methods_passed": 0,
+      "outcome": "ADMISSION_REFUSED",
+      "predecessor": null,
+      "profile_id": "rust-mysql"
+    },
+    {
+      "attempt_id": "rust-linux-wrapper",
+      "method_executions": 0,
+      "methods_failed": 0,
+      "methods_passed": 0,
+      "outcome": "POSTCOMPILE_WRAPPER_FAILED",
+      "predecessor": "rust-native-topology",
+      "profile_id": "rust-mysql"
+    },
+    {
+      "attempt_id": "rust-retained-elf-successor",
+      "method_executions": 1,
+      "methods_failed": 0,
+      "methods_passed": 1,
+      "outcome": "PASS",
+      "predecessor": "rust-linux-wrapper",
+      "profile_id": "rust-mysql"
+    }
+  ],
+  "canonical_evidence_changed": false,
+  "crash_durability_verified": false,
+  "evidence": [
+    {
+      "evidence_id": "php-witness",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "cf0f7f348ae83995954bc3932bcecc3e7ced62840c33f2467c798c65a4939fea"
+    },
+    {
+      "evidence_id": "php-review",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "5086fab4e55fd0c6276d9041a0225db5ac8ec8d261a7c326884142298852c472"
+    },
+    {
+      "evidence_id": "php-oracle-reconciliation",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "d38a0bbdb7aa117eaefe25fb941503b705da22b568d365b8a85177867dd4fb21"
+    },
+    {
+      "evidence_id": "php-absence",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "775b9ccda6092f953d1bc05a099e685165b70520e708cb604914eb9be88404a5"
+    },
+    {
+      "evidence_id": "rust-memory-witness",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "3a17f805a4556f1935a43d402cec1ce6d28465e2a1d6186605fdbaeee78e7a6b"
+    },
+    {
+      "evidence_id": "rust-memory-review",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "73ddfed797a8ac5127e22f906b1971ed7a6761ecea5f7d951056847ec5fbde5e"
+    },
+    {
+      "evidence_id": "rust-mysql-witness",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "389f965f85f74bb89c564c52d1e2768d931941e788136fbc99717b88cd47d7c5"
+    },
+    {
+      "evidence_id": "rust-mysql-review",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "9c9a26c27c525e41122059f425c17c7b78bc45c961b10a18630fc51f450e8064"
+    },
+    {
+      "evidence_id": "rust-mysql-absence",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "8ea62b7e5d83fab37c8e24cd2cac20d1e9bb5db516adc31f81bd1bb33cb68195"
+    },
+    {
+      "evidence_id": "rust-mysql-producer",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "c9cb63837ec873d0203be274ba408ba6476a5bcac1b2fee2d7f57c9141f045a5"
+    },
+    {
+      "evidence_id": "rust-native-refusal",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "6847d983a44c1adf50ff9f85621a64e416acc6c2077b6a36a9b785d7b609a227"
+    },
+    {
+      "evidence_id": "rust-linux-wrapper-failure",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "27f9d95a1fc37f1f02cf459337221dd1ee1609dd7a7446a001ddbca8c65f8795"
+    },
+    {
+      "evidence_id": "php-private-test-source",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "952e6c56f3b003ebbb4813d33051e42f40206f06b3fa95caaf20d1dcaf7e7566"
+    },
+    {
+      "evidence_id": "rust-mysql-private-test-source",
+      "original_bytes_public": false,
+      "retention": "PRIVATE_RETAINED_REVIEWED",
+      "sha256": "248f1fc38a7901258760afa319706b10c49ddc5712bde0e38edba4c18b3261a6"
+    }
+  ],
+  "execution_profiles": [
+    {
+      "backend": "SQLite memory / in-process Laravel HTTP kernel",
+      "component": "php-directory",
+      "failed_method_executions": 1,
+      "method_executions": 5,
+      "passing_distinct_methods": 4,
+      "profile_id": "php-sqlite",
+      "runtime": "PHP 8.3.35 / Linux ARM64 container",
+      "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "source_mode": "Three original frozen methods plus one private test-only oracle"
+    },
+    {
+      "backend": "InMemoryRepo / in-process HTTP kernel",
+      "component": "rust-directory",
+      "failed_method_executions": 0,
+      "method_executions": 3,
+      "passing_distinct_methods": 3,
+      "profile_id": "rust-memory",
+      "runtime": "Rust/Cargo 1.98.0 / native macOS ARM64",
+      "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "source_mode": "Three original frozen methods; explicit source liveness bypass"
+    },
+    {
+      "backend": "MySqlRepo / disposable tmpfs database / in-process HTTP kernel",
+      "component": "rust-directory",
+      "failed_method_executions": 0,
+      "method_executions": 1,
+      "passing_distinct_methods": 1,
+      "profile_id": "rust-mysql",
+      "runtime": "Rust/Cargo 1.98.0 / Linux ARM64 container; MySQL 8.0.46",
+      "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "source_mode": "One new private cfg(test) method; explicit liveness bypass"
+    }
+  ],
+  "historical_inventory_complete": false,
+  "independent_interoperability_established": false,
+  "limits": [
+    "These are selected post-certification observations, not the original qualification execution or an accepted successor.",
+    "Different backends, runtime contexts and assertion depths are not a matched cross-platform or whole-implementation equivalence experiment.",
+    "PHP uses SQLite memory, testing allowances and fake external health; one variant and selected fields do not prove arbitrary extension or complete node-list preservation.",
+    "Rust memory tests use InMemoryRepo and explicit liveness bypass; passing methods do not establish MySQL behavior.",
+    "The separate Rust MySQL method demonstrates fresh-connection readback on tmpfs, not process crash, restart or disk durability.",
+    "All three profiles use an in-process HTTP kernel; real HTTP/TLS, production startup and security are not established.",
+    "PHP original three passing methods were not repeated; its newly authored oracle failed once and only that corrected method was rerun. This is not a clean four-method single run.",
+    "Native MySQL topology refusal and Linux postcompile wrapper failure remain failures. Successful retained-artifact execution does not establish the sole earlier glob cause.",
+    "Raw responses and private execution records are not distributed. Digests identify retained sources but do not make them publicly reproducible.",
+    "Whole capability contracts, complete supported-scope defect clearance, historical preservation, semantic IFRB, successor freeze, external interoperability and release readiness remain incomplete."
+  ],
+  "methods": [
+    {
+      "assertions": [
+        "shared fixture exact pin"
+      ],
+      "evidence_id": "php-witness",
+      "method": "Tests\\Feature\\EffectiveCapabilityProfileTest::test_shared_fixture_is_exactly_pinned",
+      "origin": "ORIGINAL_FROZEN",
+      "outcome": "PASS",
+      "profile_id": "php-sqlite"
+    },
+    {
+      "assertions": [
+        "one effective variant survives registration and node projection"
+      ],
+      "evidence_id": "php-witness",
+      "method": "Tests\\Feature\\EffectiveCapabilityProfileTest::test_effective_variant_survives_registration_and_node_projection",
+      "origin": "ORIGINAL_FROZEN",
+      "outcome": "PASS",
+      "profile_id": "php-sqlite"
+    },
+    {
+      "assertions": [
+        "exact duplicate and duplicate variant identifiers refused"
+      ],
+      "evidence_id": "php-witness",
+      "method": "Tests\\Feature\\EffectiveCapabilityProfileTest::test_exact_duplicates_and_duplicate_variant_ids_are_rejected",
+      "origin": "ORIGINAL_FROZEN",
+      "outcome": "PASS",
+      "profile_id": "php-sqlite"
+    },
+    {
+      "assertions": [
+        "empty capabilities refused with validation_error and unchanged node count"
+      ],
+      "evidence_id": "php-witness",
+      "method": "Tests\\Feature\\PostcertEmptyCapabilityTest::test_empty_capabilities_refused_without_new_node",
+      "origin": "PRIVATE_TEST_ONLY",
+      "outcome": "PASS",
+      "profile_id": "php-sqlite"
+    },
+    {
+      "assertions": [
+        "HTTP kernel201 registration",
+        "same in-memory state discover",
+        "two variants retained",
+        "selected version,phase,variant,feature and optional-extension assertions"
+      ],
+      "evidence_id": "rust-memory-witness",
+      "method": "tests::effective_capability_variants_survive_registration_and_discovery",
+      "origin": "ORIGINAL_FROZEN",
+      "outcome": "PASS",
+      "profile_id": "rust-memory"
+    },
+    {
+      "assertions": [
+        "duplicate intent/variant and negative token limit refused"
+      ],
+      "evidence_id": "rust-memory-witness",
+      "method": "tests::registration_rejects_duplicate_capability_variants_and_invalid_limits",
+      "origin": "ORIGINAL_FROZEN",
+      "outcome": "PASS",
+      "profile_id": "rust-memory"
+    },
+    {
+      "assertions": [
+        "malformed, duplicate and oversized profile sets refused"
+      ],
+      "evidence_id": "rust-memory-witness",
+      "method": "tests::registration_rejects_malformed_or_oversized_capability_profiles",
+      "origin": "ORIGINAL_FROZEN",
+      "outcome": "PASS",
+      "profile_id": "rust-memory"
+    },
+    {
+      "assertions": [
+        "two registered variants retained through fresh-pool node-detail and discovery",
+        "six invalid inputs refused with 422 / validation_error",
+        "checked positive capability fields and one node / two capability rows unchanged after each refusal"
+      ],
+      "evidence_id": "rust-mysql-witness",
+      "method": "tests::postcert_registration_persists_variants_and_refuses_invalid_mysql",
+      "origin": "PRIVATE_TEST_ONLY",
+      "outcome": "PASS",
+      "profile_id": "rust-mysql"
+    }
+  ],
+  "private_evidence_included": false,
+  "qualification_credit": 0,
+  "qualification_workload_executed": false,
+  "real_http_tls_verified": false,
+  "reference_candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "schema": "iicp.directory-kernel-public.v1",
+  "source_metadata": [
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "tests/Feature/EffectiveCapabilityProfileTest.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "25f2235fb239c1eeaa5e163f33b2e82f2c8b52dbe2664e5e99d06de924b063c0",
+      "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Feature/EffectiveCapabilityProfileTest.php"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "bootstrap/app.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "7ca622651c079da6b1ad6842b5aa5b2d5ed3b69afa1059239d685dce3b4920fe",
+      "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/bootstrap/app.php"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "app/Http/Controllers/RegisterController.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "2ded78ffec0820fac57483a6f281e57ad214fd52d85bffb0cc19597f3c04403c",
+      "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Http/Controllers/RegisterController.php"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "composer.lock",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "f811bb53f3a4862d8a7b0cc8095a39ecfae655f5447fc8ef94a3b58c62a85ad9",
+      "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/composer.lock"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/main.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "9de172ee8f008ae43977e91a23dc66cf9cf499c31a74251944331d848577d1a9",
+      "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/main.rs"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/main_tests.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "80672e4fe2c45ddd325e41e02df09e28bb24f6e19444dd004b2d57eac9446251",
+      "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/main_tests.rs"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/repo.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "00a44453ef632cda1e5af47867a8de7c20dad52b231543d4df9e54b8032d053f",
+      "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/repo.rs"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/registration_store.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "c1e65f7aeb857d637dbef4716a956e295611ee32e24b80491e5834aa4e7b2234",
+      "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/registration_store.rs"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "Cargo.lock",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "4a47d155ad1eeed4587ed1b205788b9855d3027c0cbdceb28a5b932d98b15910",
+      "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/Cargo.lock"
+    }
+  ],
+  "successor_frozen": false,
+  "whole_capability_complete": false
+}

@@ -135,3 +135,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Actual SDK caller reference
 
 [The reviewed caller slice](reports/postcert/2026-11-07-sdk-callers/README.md) records fifteen ordinary local outcomes across the three SDK submit implementations, including authorized selection and refusal controls. Synthetic transport, retained bootstrap failure and environment limitations remain explicit. This adds no qualification credit or complete-baseline claim.
+
+## Directory registration witnesses
+
+[Read the reviewed PHP/Rust kernel observations](reports/postcert/2026-11-07-directory-kernels/README.md) for distinct SQLite, in-memory and MySQL method evidence, preserved failed attempts and fresh-connection limits. These zero-credit observations are not a complete capability baseline or cross-platform equivalence claim.

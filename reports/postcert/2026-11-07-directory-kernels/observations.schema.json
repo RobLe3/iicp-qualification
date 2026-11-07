@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "attempt_history": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "attempt_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "method_executions": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "methods_failed": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "methods_passed": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "outcome": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "predecessor": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "minLength": 1,
+                "type": "string"
+              }
+            ]
+          },
+          "profile_id": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "attempt_id",
+          "profile_id",
+          "outcome",
+          "method_executions",
+          "methods_passed",
+          "methods_failed",
+          "predecessor"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "canonical_evidence_changed": {
+      "const": false,
+      "type": "boolean"
+    },
+    "crash_durability_verified": {
+      "const": false,
+      "type": "boolean"
+    },
+    "evidence": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "evidence_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "original_bytes_public": {
+            "type": "boolean"
+          },
+          "retention": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sha256": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidence_id",
+          "sha256",
+          "retention",
+          "original_bytes_public"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "execution_profiles": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "backend": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "component": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "failed_method_executions": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "method_executions": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "passing_distinct_methods": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "profile_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "runtime": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_commit": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_mode": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "profile_id",
+          "component",
+          "source_commit",
+          "runtime",
+          "backend",
+          "source_mode",
+          "method_executions",
+          "passing_distinct_methods",
+          "failed_method_executions"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "historical_inventory_complete": {
+      "const": false,
+      "type": "boolean"
+    },
+    "independent_interoperability_established": {
+      "const": false,
+      "type": "boolean"
+    },
+    "limits": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "methods": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertions": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "evidence_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "method": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "origin": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "outcome": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "profile_id": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "profile_id",
+          "method",
+          "origin",
+          "outcome",
+          "assertions",
+          "evidence_id"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "private_evidence_included": {
+      "const": false,
+      "type": "boolean"
+    },
+    "qualification_credit": {
+      "const": 0,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "qualification_workload_executed": {
+      "const": false,
+      "type": "boolean"
+    },
+    "real_http_tls_verified": {
+      "const": false,
+      "type": "boolean"
+    },
+    "reference_candidate_digest": {
+      "const": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema": {
+      "const": "iicp.directory-kernel-public.v1",
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_metadata": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "commit": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "path": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "repository": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sha256": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "url": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "repository",
+          "commit",
+          "path",
+          "sha256",
+          "url"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "successor_frozen": {
+      "const": false,
+      "type": "boolean"
+    },
+    "whole_capability_complete": {
+      "const": false,
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema",
+    "reference_candidate_digest",
+    "qualification_credit",
+    "qualification_workload_executed",
+    "canonical_evidence_changed",
+    "whole_capability_complete",
+    "successor_frozen",
+    "historical_inventory_complete",
+    "independent_interoperability_established",
+    "real_http_tls_verified",
+    "crash_durability_verified",
+    "private_evidence_included",
+    "source_metadata",
+    "evidence",
+    "execution_profiles",
+    "methods",
+    "attempt_history",
+    "limits"
+  ],
+  "type": "object"
+}
