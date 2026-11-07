@@ -1,0 +1,10 @@
+{
+  "files": {
+    "README.md": "2cdc979bbd31a2e805571c96455e21ecbaf8b251d977265fccdc1d4967eeac37",
+    "analysis.json": "35973f2395fc6f6aa6ee231caf52602527d6ac18889eca7a75133745c3672cd3",
+    "analysis.schema.json": "fa2d24da2646d1aa63d31c7e6ae9a87570d8216a6c77c8d9d1be359543f156dc"
+  },
+  "full_programme_complete": false,
+  "qualification_credit": 0,
+  "schema": "iicp.sdk-release-recovery-manifest.v1"
+}
