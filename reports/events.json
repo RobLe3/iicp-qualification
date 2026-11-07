@@ -2936,6 +2936,61 @@
       "reason": "evidence-gap",
       "source_sha256": "sha256:91f38266fc82d4d0c0439f8e4b185e42e275cf693ba1da3eed7181dfeb229031",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:151beceaf2daa663d6428b06ac9b58d59063df9bf05c1ba11a09c5c5937d5bb6",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-07T17:49:29.469627Z",
+      "outcome": "FAIL",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:1b3787f81c89ef09d053af0d6e6829504f30e9f252c10f31126cc867c295ecf2",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:d6450f3dd113006342ff8b579ed5dc0cac22fc5d2920aaceb2df494effb6ac6c",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-07T17:49:26.601041Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:d3790175e3e32344aeab1aad31f9da7eedb56a3659dd82e36f72bfce3cf4343b",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:95beba84ab747927701ecba80be630c1cebc4390debcc506d46345fb1d8de046",
+      "kind": "ci",
+      "next_gate": "none",
+      "occurred_at": "2026-11-07T17:58:37.256237Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:a903cfc860bf80c6bafa5bf6df50419de296f73b72adc9cbf41f2548ecbdb952",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:ee2ddfcc70338308581cf135e012200961e5af4dbcc4d23192337609655d8396",
+      "kind": "correction",
+      "next_gate": "none",
+      "occurred_at": "2026-11-07T17:58:45.212187Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "correction-merged",
+      "source_sha256": "sha256:0244b157c009596fa6670feaddb9ff94df96ba99be191d388c52f3bbeb97aa91",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:f555c9dfdbffc9b79a55df3c219ddbf6389475be26b0a433b5492e1b379013ea",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-07T17:36:32.366461Z",
+      "outcome": "UNKNOWN",
+      "qualification_credit": 0,
+      "reason": "evidence-gap",
+      "source_sha256": "sha256:1b21e6007fdfebe0e6f495c8a3865628ec7981273d77971fc6a4554beb213254",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
