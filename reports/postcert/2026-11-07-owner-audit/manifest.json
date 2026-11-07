@@ -1,0 +1,10 @@
+{
+  "files": {
+    "README.md": "5b2425e3b7c748702c217fed07fd660e13c5699ab4db8972dfdc2eb6a31bbdc4",
+    "audit.json": "147a274f241542f1f399efed76f9b592583b5409ec9aaf4f2b3c17bf9ff8d8dd",
+    "audit.schema.json": "8a9d12620a2736d27f506905b47513c171a583fd34097571d23fc51e1eb97bf7"
+  },
+  "qualification_credit": 0,
+  "schema": "iicp.owner-body-package-manifest.v1",
+  "whole_goal_complete": false
+}
