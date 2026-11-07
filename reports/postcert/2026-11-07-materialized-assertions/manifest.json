@@ -1,0 +1,10 @@
+{
+  "files": {
+    "README.md": "68d5fb83b89531040cdfcdd7a26545af8e55457afd2c7ffeb0920c30da98147f",
+    "analysis.json": "4b8fc5708cab748ade74dd5a84afaae106f887fcaac46ce57c8fdb2977650a73",
+    "analysis.schema.json": "cfba1a86d9a9dcd441f79f7e1aa6c4f7416c3b6777224a75cdeb0fdc37f8f153"
+  },
+  "full_programme_complete": false,
+  "qualification_credit": 0,
+  "schema": "iicp.assertion-context-manifest.v1"
+}
