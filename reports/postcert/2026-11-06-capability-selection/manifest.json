@@ -1,0 +1,9 @@
+{
+  "files": {
+    "README.md": "c2a7a2db121c32c2b31fb7b37f8a13b1ca4a92eb225afb2340fa9aa47288de2b",
+    "findings.json": "af8a4603709f30cb3c2a881f7cf13b1ce7b9cb290c0eda81e8d3066cbe5c7afa",
+    "findings.schema.json": "5ca4107af63a663807560ca2ed385072454da97512992deb4255e940a12d3c17"
+  },
+  "qualification_credit": 0,
+  "schema": "iicp.capability-selection-public-manifest.v1"
+}

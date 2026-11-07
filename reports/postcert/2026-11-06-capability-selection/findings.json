@@ -1,0 +1,931 @@
+{
+  "candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "diagnostic_difference": {
+    "classification": "OBSERVED_HELPER_DIAGNOSTIC_DIFFERENCE",
+    "directory_marker": false,
+    "hard_eligibility_and_variant_membership_agree": true,
+    "normative_defect_confirmed": false,
+    "original_shared_fixture_oracle_for_extra_marker": false,
+    "protocol_reference_marker": "OMITTED",
+    "sdk_marker": true
+  },
+  "directory_wire_or_storage_executed": false,
+  "distinct_source_contents": 28,
+  "evidence": {
+    "php_retained_source_members": 239,
+    "private_bundle_included_in_public_package": false,
+    "private_bundle_manifest_sha256": "275bba549ef0aedcd5b1baf592382968a69a68b6a5d2197af2c8d87b4212e9c2",
+    "private_controls_pass": 59,
+    "private_observations_sha256": "ec63a5f91685ea304bc671adc14495b4795bc4d52255a0b01ed0a5284bb59034",
+    "public_verification_reexecutes_helpers": false,
+    "selected_rust_packages": 86,
+    "selected_rust_source_files": 3184
+  },
+  "extra_observations": [
+    {
+      "diagnostic_flag_oracle": "UNSPECIFIED_BY_ORIGINAL_SHARED_FIXTURE",
+      "eligible": true,
+      "hard_projection": "PASS",
+      "implementation": "client-python",
+      "observed_preference_unavailable": true,
+      "qualification_case": false,
+      "scenario": "known_preference_absent_from_matching_intent",
+      "variant_ids": [
+        "text-basic",
+        "vision-tools"
+      ]
+    },
+    {
+      "diagnostic_flag_oracle": "UNSPECIFIED_BY_ORIGINAL_SHARED_FIXTURE",
+      "eligible": true,
+      "hard_projection": "PASS",
+      "implementation": "client-python",
+      "observed_preference_unavailable": true,
+      "qualification_case": false,
+      "scenario": "known_preference_only_in_limit_excluded_variant",
+      "variant_ids": [
+        "text-basic"
+      ]
+    },
+    {
+      "diagnostic_flag_oracle": "UNSPECIFIED_BY_ORIGINAL_SHARED_FIXTURE",
+      "eligible": true,
+      "hard_projection": "PASS",
+      "implementation": "client-typescript",
+      "observed_preference_unavailable": true,
+      "qualification_case": false,
+      "scenario": "known_preference_absent_from_matching_intent",
+      "variant_ids": [
+        "text-basic",
+        "vision-tools"
+      ]
+    },
+    {
+      "diagnostic_flag_oracle": "UNSPECIFIED_BY_ORIGINAL_SHARED_FIXTURE",
+      "eligible": true,
+      "hard_projection": "PASS",
+      "implementation": "client-typescript",
+      "observed_preference_unavailable": true,
+      "qualification_case": false,
+      "scenario": "known_preference_only_in_limit_excluded_variant",
+      "variant_ids": [
+        "text-basic"
+      ]
+    },
+    {
+      "diagnostic_flag_oracle": "UNSPECIFIED_BY_ORIGINAL_SHARED_FIXTURE",
+      "eligible": true,
+      "hard_projection": "PASS",
+      "implementation": "client-rust",
+      "observed_preference_unavailable": true,
+      "qualification_case": false,
+      "scenario": "known_preference_absent_from_matching_intent",
+      "variant_ids": [
+        "text-basic",
+        "vision-tools"
+      ]
+    },
+    {
+      "diagnostic_flag_oracle": "UNSPECIFIED_BY_ORIGINAL_SHARED_FIXTURE",
+      "eligible": true,
+      "hard_projection": "PASS",
+      "implementation": "client-rust",
+      "observed_preference_unavailable": true,
+      "qualification_case": false,
+      "scenario": "known_preference_only_in_limit_excluded_variant",
+      "variant_ids": [
+        "text-basic"
+      ]
+    },
+    {
+      "diagnostic_flag_oracle": "UNSPECIFIED_BY_ORIGINAL_SHARED_FIXTURE",
+      "eligible": true,
+      "hard_projection": "PASS",
+      "implementation": "directory-php",
+      "observed_preference_unavailable": false,
+      "qualification_case": false,
+      "scenario": "known_preference_absent_from_matching_intent",
+      "variant_ids": [
+        "text-basic",
+        "vision-tools"
+      ]
+    },
+    {
+      "diagnostic_flag_oracle": "UNSPECIFIED_BY_ORIGINAL_SHARED_FIXTURE",
+      "eligible": true,
+      "hard_projection": "PASS",
+      "implementation": "directory-php",
+      "observed_preference_unavailable": false,
+      "qualification_case": false,
+      "scenario": "known_preference_only_in_limit_excluded_variant",
+      "variant_ids": [
+        "text-basic"
+      ]
+    },
+    {
+      "diagnostic_flag_oracle": "UNSPECIFIED_BY_ORIGINAL_SHARED_FIXTURE",
+      "eligible": true,
+      "hard_projection": "PASS",
+      "implementation": "directory-rust",
+      "observed_preference_unavailable": false,
+      "qualification_case": false,
+      "scenario": "known_preference_absent_from_matching_intent",
+      "variant_ids": [
+        "text-basic",
+        "vision-tools"
+      ]
+    },
+    {
+      "diagnostic_flag_oracle": "UNSPECIFIED_BY_ORIGINAL_SHARED_FIXTURE",
+      "eligible": true,
+      "hard_projection": "PASS",
+      "implementation": "directory-rust",
+      "observed_preference_unavailable": false,
+      "qualification_case": false,
+      "scenario": "known_preference_only_in_limit_excluded_variant",
+      "variant_ids": [
+        "text-basic"
+      ]
+    }
+  ],
+  "historical_inventory_complete": false,
+  "independent_interoperability_established": false,
+  "limits": [
+    "One local host,not the four-platform qualification matrix.",
+    "Python/TS/Rust ranker holders are synthetic,not full product types/constructors or upstream eligibility enforcement.",
+    "PHP installed Composer autoload is metadata-version-aligned;239post-matcher include-file byte snapshots retained,not full frozen vendor/process closure;no Laravel application or .env bootstrap.",
+    "Latest Rust miniature crates use component-specific frozen-lock dependency identities and byte-verified retained sources;they remain subset synthetic projects on Rust1.99,not full original candidate builds or the qualified matrix.",
+    "Rust weighted helper sees a wrapper-limited pool,not execution of its actual client top-k caller or full candidate order.",
+    "No helper observation establishes authorization,final route validity,dispatch,Directory preservation or independent interoperability.",
+    "Known-but-unavailable preference diagnostic has no original shared-fixture oracle;observed helper distinction is not automatically a normative or exposed product defect.",
+    "Normative Directory MUST obligations remain in scope; indexing, registration rejection, persistence and NODELIST wire preservation are not proved here.",
+    "Source links and minimized observations are public; retained private drivers, raw observations and dependency bytes are not distributed.",
+    "No Management/browser coverage, complete discovery contract, performance measurement, qualification rerun, release or new certificate is established."
+  ],
+  "primary_implementations": 5,
+  "qualification_credit": 0,
+  "runtime_profiles": 6,
+  "schema": "iicp.capability-selection-public-findings.v1",
+  "scope": "SOURCE_BOUND_HELPER_OBSERVATIONS_ONE_LOCAL_HOST",
+  "sdk_and_selection_checks": {
+    "client-rust-run": {
+      "draws_per_histogram": 1000,
+      "enclosing_policy_filter_or_dispatch": "NOT_EXECUTED",
+      "holder_validation": "SYNTHETIC_NOT_FULL_NODE_OR_REQUEST_VALIDATION",
+      "invalid_advertisements_rejected": 3,
+      "precedence_and_label_controls": 4,
+      "ranker_decisions": 6,
+      "receipt_profiles": 2,
+      "rust_wrapper_limits_pool_not_real_caller": true,
+      "weighted_distribution_histograms": 2,
+      "weighted_fixed_vectors": 4
+    },
+    "python": {
+      "draws_per_histogram": 1000,
+      "enclosing_policy_filter_or_dispatch": "NOT_EXECUTED",
+      "holder_validation": "SYNTHETIC_NOT_FULL_NODE_OR_REQUEST_VALIDATION",
+      "invalid_advertisements_rejected": 3,
+      "precedence_and_label_controls": 4,
+      "ranker_decisions": 6,
+      "receipt_profiles": 2,
+      "rust_wrapper_limits_pool_not_real_caller": false,
+      "weighted_distribution_histograms": 2,
+      "weighted_fixed_vectors": 4
+    },
+    "typescript22": {
+      "draws_per_histogram": 1000,
+      "enclosing_policy_filter_or_dispatch": "NOT_EXECUTED",
+      "holder_validation": "SYNTHETIC_NOT_FULL_NODE_OR_REQUEST_VALIDATION",
+      "invalid_advertisements_rejected": 3,
+      "precedence_and_label_controls": 4,
+      "ranker_decisions": 6,
+      "receipt_profiles": 2,
+      "rust_wrapper_limits_pool_not_real_caller": false,
+      "weighted_distribution_histograms": 2,
+      "weighted_fixed_vectors": 4
+    },
+    "typescript24": {
+      "draws_per_histogram": 1000,
+      "enclosing_policy_filter_or_dispatch": "NOT_EXECUTED",
+      "holder_validation": "SYNTHETIC_NOT_FULL_NODE_OR_REQUEST_VALIDATION",
+      "invalid_advertisements_rejected": 3,
+      "precedence_and_label_controls": 4,
+      "ranker_decisions": 6,
+      "receipt_profiles": 2,
+      "rust_wrapper_limits_pool_not_real_caller": false,
+      "weighted_distribution_histograms": 2,
+      "weighted_fixed_vectors": 4
+    }
+  },
+  "shared_matching_projection": [
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-python",
+      "scenario": "text_chat_uses_complete_single_variant",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-python",
+      "scenario": "vision_and_tools_match_one_variant",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-python",
+      "scenario": "cross_variant_union_is_forbidden",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-python",
+      "scenario": "unknown_required_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-python",
+      "scenario": "unknown_preference_does_not_change_eligibility",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-python",
+      "scenario": "limit_is_unsatisfied",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-python",
+      "scenario": "stale_required_claim_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-python",
+      "scenario": "policy_denial_is_not_capability_absence",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable",
+        "preserved_extensions"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-python",
+      "scenario": "unknown_optional_extension_is_preserved",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-typescript",
+      "scenario": "text_chat_uses_complete_single_variant",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-typescript",
+      "scenario": "vision_and_tools_match_one_variant",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-typescript",
+      "scenario": "cross_variant_union_is_forbidden",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-typescript",
+      "scenario": "unknown_required_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-typescript",
+      "scenario": "unknown_preference_does_not_change_eligibility",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-typescript",
+      "scenario": "limit_is_unsatisfied",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-typescript",
+      "scenario": "stale_required_claim_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-typescript",
+      "scenario": "policy_denial_is_not_capability_absence",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable",
+        "preserved_extensions"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-typescript",
+      "scenario": "unknown_optional_extension_is_preserved",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-rust",
+      "scenario": "text_chat_uses_complete_single_variant",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-rust",
+      "scenario": "vision_and_tools_match_one_variant",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-rust",
+      "scenario": "cross_variant_union_is_forbidden",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-rust",
+      "scenario": "unknown_required_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-rust",
+      "scenario": "unknown_preference_does_not_change_eligibility",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-rust",
+      "scenario": "limit_is_unsatisfied",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-rust",
+      "scenario": "stale_required_claim_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-rust",
+      "scenario": "policy_denial_is_not_capability_absence",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable",
+        "preserved_extensions"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "client-rust",
+      "scenario": "unknown_optional_extension_is_preserved",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-php",
+      "scenario": "text_chat_uses_complete_single_variant",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-php",
+      "scenario": "vision_and_tools_match_one_variant",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-php",
+      "scenario": "cross_variant_union_is_forbidden",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-php",
+      "scenario": "unknown_required_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-php",
+      "scenario": "unknown_preference_does_not_change_eligibility",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-php",
+      "scenario": "limit_is_unsatisfied",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-php",
+      "scenario": "stale_required_claim_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-php",
+      "scenario": "policy_denial_is_not_capability_absence",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-php",
+      "scenario": "unknown_optional_extension_is_preserved",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-rust",
+      "scenario": "text_chat_uses_complete_single_variant",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-rust",
+      "scenario": "vision_and_tools_match_one_variant",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-rust",
+      "scenario": "cross_variant_union_is_forbidden",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-rust",
+      "scenario": "unknown_required_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-rust",
+      "scenario": "unknown_preference_does_not_change_eligibility",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-rust",
+      "scenario": "limit_is_unsatisfied",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-rust",
+      "scenario": "stale_required_claim_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "refusal_code"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-rust",
+      "scenario": "policy_denial_is_not_capability_absence",
+      "status": "PASS"
+    },
+    {
+      "asserted_fields": [
+        "eligible",
+        "variant_ids",
+        "preference_unavailable"
+      ],
+      "directory_extension_storage_or_wire_preservation": "NOT_EXECUTED",
+      "implementation": "directory-rust",
+      "scenario": "unknown_optional_extension_is_preserved",
+      "status": "PASS"
+    }
+  ],
+  "source_records": 33,
+  "sources": [
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/effective_capability.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "50580aeaa2ca3085107ecf93f4710d92ff51bafa96d124354c4f1955e6bb5c2e",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/effective_capability.py"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/selection.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "ffad656411660cc454254d2918ed2fc41ba7b69a86da80a32dc3870ecf856673",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/selection.py"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "src/iicp_client/types.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "4492c0b0412e86a31565e87315b477b8172d581d87167bc05c39b16f31bd7ec3",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/types.py"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "path": "parity/effective-capability-v1/fixture.json",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "e6e3c32aa7c4cf814e639d3a97cd1c1cb49ac020ed6ebe7e1e16bc2314e14761",
+      "url": "https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/parity/effective-capability-v1/fixture.json"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "src/effective_capability.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "40fa47835355a49931f36426255accacd73606fbf5556c1c7db2a3c3adc341ad",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/effective_capability.ts"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "src/selection.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "7129f7bc634d4862ed7375a2a43cb4bae32f806f873da933c7db28a6ff6c85ae",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/selection.ts"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "src/types.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "6fe17481ba916b7d007caea3619919553011c7266ad0984a925862aa7ca3a1ed",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/types.ts"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "path": "parity/effective-capability-v1/fixture.json",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "e6e3c32aa7c4cf814e639d3a97cd1c1cb49ac020ed6ebe7e1e16bc2314e14761",
+      "url": "https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/parity/effective-capability-v1/fixture.json"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/effective_capability.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "6e69077a8f658fd35f66250097883795037dfd13c06f1718c2b4af9b8ffec40d",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/effective_capability.rs"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/selection.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "70d9fcc8edf0866eb953ab1c5dc09cf480b575f5f9f975610a44ee877e910e37",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/selection.rs"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "src/types.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "ad1d86c23266b30e17b19a45d31e080340ac9a86c33f20cbebbf4439dc3251c8",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/types.rs"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "Cargo.toml",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "c40c2665dd2858d6af2b639a9c4d6025058e682fee440e71049cd335066edd89",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/Cargo.toml"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "Cargo.lock",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "be570d2e735998a4fb585ad74df645de580609ff2cc0b18abf520febc6d2018f",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/Cargo.lock"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "path": "parity/effective-capability-v1/fixture.json",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "e6e3c32aa7c4cf814e639d3a97cd1c1cb49ac020ed6ebe7e1e16bc2314e14761",
+      "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/parity/effective-capability-v1/fixture.json"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "app/Services/EffectiveCapabilityMatcher.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "88e19515edf1fca94deefdad785f6135c74d307dbb73c3325a499d74a08611b8",
+      "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Services/EffectiveCapabilityMatcher.php"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "composer.lock",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "f811bb53f3a4862d8a7b0cc8095a39ecfae655f5447fc8ef94a3b58c62a85ad9",
+      "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/composer.lock"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "path": "parity/effective-capability-v1/fixture.json",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "e6e3c32aa7c4cf814e639d3a97cd1c1cb49ac020ed6ebe7e1e16bc2314e14761",
+      "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/parity/effective-capability-v1/fixture.json"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/effective_capability.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "1c869aa67e8da7014f372e8199ab76e76b2aeb7a95d4cd806f704a41b16c6da5",
+      "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/effective_capability.rs"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/types.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "9f65a8bcc25fdff36353307e6fc1a18206328ddf895f7d950c08bbe6dddbcbe2",
+      "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/types.rs"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "Cargo.toml",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "9c0e7bdb6f2e18c0d920c2a2b56d6444399b6948dc7a5ea680b8de8a5d297cce",
+      "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/Cargo.toml"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "Cargo.lock",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "4a47d155ad1eeed4587ed1b205788b9855d3027c0cbdceb28a5b932d98b15910",
+      "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/Cargo.lock"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "parity/effective-capability-v1/fixture.json",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "e6e3c32aa7c4cf814e639d3a97cd1c1cb49ac020ed6ebe7e1e16bc2314e14761",
+      "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/parity/effective-capability-v1/fixture.json"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "spec/v1.9/node-capability-format.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "9dfb7e20ed011439119fcf00e3d37358b7d92ffff63bbb66b9f65e83e743925e",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/spec/v1.9/node-capability-format.md"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "research/pre-normative-profiles/fixtures/effective-capability-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "e6e3c32aa7c4cf814e639d3a97cd1c1cb49ac020ed6ebe7e1e16bc2314e14761",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/research/pre-normative-profiles/fixtures/effective-capability-v1.json"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "research/pre-normative-profiles/fixtures/selection-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "cacb87b268e480fbf2f288faab3b41e90b9d3ec14b13bd9c0a731c376e4ea3ca",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/research/pre-normative-profiles/fixtures/selection-v1.json"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "schemas/effective-capability-advertisement-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "707da7eebc5e8b55a720386ca713c977beeadd640f4b09eb48ea99573d2b1ab0",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/schemas/effective-capability-advertisement-v1.json"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "schemas/capability-requirements-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "0d234ef4de420b977661d3222c3c9f433332e8224a3320175318338c76e760e9",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/schemas/capability-requirements-v1.json"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "schemas/capability-refusal-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "5d35b57c31eeb176bd7db72bfaf1ccaa84defe864bc63a10c59b97d689e52f9e",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/schemas/capability-refusal-v1.json"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "tools/test_effective_capability_wire_contract.py",
+      "repository": "RobLe3/IICP",
+      "sha256": "123a7f2de8b72eb39988a79a878ec21941c20be8fe95bb39abb7a8262fe9693d",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/tools/test_effective_capability_wire_contract.py"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "docs/architecture/effective-service-capability-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "d193413abf445fd9ff82998c545f52ac905eadafb809dd32cf8fc0680a64fa13",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/docs/architecture/effective-service-capability-v1.json"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "research/pre-normative-profiles/fixtures/effective-capability-taxonomy-v0.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "1cb9519fcdc742fbde6800d2b97169696992aea4a2cc2ef747358898f0c3741d",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/research/pre-normative-profiles/fixtures/effective-capability-taxonomy-v0.json"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "path": "src/main.rs",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "9de172ee8f008ae43977e91a23dc66cf9cf499c31a74251944331d848577d1a9",
+      "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/main.rs"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "docs/architecture/effective-service-capability-semantics.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "8afeb2a854d0e6b58a2a8f52945b0155a2175a83c8fa7742cb2e330d7f2e161d",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/docs/architecture/effective-service-capability-semantics.md"
+    }
+  ],
+  "successor_frozen": false,
+  "whole_capability_complete": false
+}
