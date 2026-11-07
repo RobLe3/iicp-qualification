@@ -155,3 +155,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Materialized assertion context
 
 [The source-bound execution-context successor](reports/postcert/2026-11-07-materialized-assertions/README.md) completes the declared 147-definition source-reference index and distinguishes raw fixtures from staged consumers and installed probes. Read it before treating earlier raw-source limits as complete descriptions of accepted execution. It adds no qualification credit or complete-baseline claim.
+
+## Lifecycle obligation reference
+
+[The source-bound lifecycle obligation supplement](reports/postcert/2026-11-07-lifecycle-obligations/README.md) separates the proposed profile, explicit opt-in amendment, fixture consumers and admitted scenario selectors. It maps partial semantic predicates without treating source presence, cancellation reports or pure accounting decisions as newly executed qualification.

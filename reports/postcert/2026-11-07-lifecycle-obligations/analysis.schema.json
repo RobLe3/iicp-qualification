@@ -1,0 +1,981 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "analysis_authority": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "authority_layers": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "ref": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "type": "integer"
+              },
+              "excerpt_sha256": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "source": {
+                "additionalProperties": false,
+                "properties": {
+                  "commit": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "component": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "path": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "repository": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "commit",
+                  "component",
+                  "path",
+                  "repository",
+                  "sha256"
+                ],
+                "type": "object"
+              },
+              "start_line": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "end_line",
+              "excerpt_sha256",
+              "source",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          "status": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "ref",
+          "status"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "baseline_classification_boundary": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "baseline_frozen": {
+      "const": false,
+      "type": "boolean"
+    },
+    "campaign_dispatch_boundary": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "accepted_credit_changed": {
+            "type": "boolean"
+          },
+          "assertion": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "component": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "existing_assignment_ids": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "pipeline_context": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "scenario": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "scope": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "selected_fixture_loop_is_this_case": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "accepted_credit_changed",
+          "assertion",
+          "component",
+          "existing_assignment_ids",
+          "pipeline_context",
+          "scenario",
+          "scope",
+          "selected_fixture_loop_is_this_case"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "candidate_digest": {
+      "const": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+      "minLength": 1,
+      "type": "string"
+    },
+    "canonical_root_commit": {
+      "const": "106aae6568d12884603068e82248bf1413371690",
+      "minLength": 1,
+      "type": "string"
+    },
+    "capability_classification": {
+      "const": "REQUIRED_STABLE",
+      "minLength": 1,
+      "type": "string"
+    },
+    "capability_id": {
+      "const": "service-lifecycle",
+      "minLength": 1,
+      "type": "string"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "explicit_vector_terminal_rejection_applications": {
+          "type": "integer"
+        },
+        "fixture_vectors": {
+          "type": "integer"
+        },
+        "full_capabilities_verified": {
+          "type": "integer"
+        },
+        "mapped_obligations_partial": {
+          "type": "integer"
+        },
+        "new_runtime_executions": {
+          "type": "integer"
+        },
+        "predicate_source_references": {
+          "type": "integer"
+        },
+        "state_label_walk_source_applications": {
+          "type": "integer"
+        },
+        "unmapped_obligations_in_this_batch": {
+          "type": "integer"
+        },
+        "vector_component_cells": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "explicit_vector_terminal_rejection_applications",
+        "fixture_vectors",
+        "full_capabilities_verified",
+        "mapped_obligations_partial",
+        "new_runtime_executions",
+        "predicate_source_references",
+        "state_label_walk_source_applications",
+        "unmapped_obligations_in_this_batch",
+        "vector_component_cells"
+      ],
+      "type": "object"
+    },
+    "fixture_mirrors": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "byte_equal": {
+            "type": "boolean"
+          },
+          "component": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sha256": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "byte_equal",
+          "component",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "fixture_vector_domain": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "events": {
+                "items": {
+                  "items": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              "expected": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "events",
+              "expected",
+              "id",
+              "kind"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "after_sequence": {
+                "type": "integer"
+              },
+              "expected": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "latest_sequence": {
+                "type": "integer"
+              },
+              "retained_sequences": {
+                "items": {
+                  "type": "integer"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "after_sequence",
+              "expected",
+              "id",
+              "kind",
+              "latest_sequence",
+              "retained_sequences"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "after_sequence": {
+                "type": "integer"
+              },
+              "expected": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "latest_sequence": {
+                "type": "integer"
+              },
+              "replay_window_expired": {
+                "type": "boolean"
+              },
+              "retained_sequences": {
+                "items": {},
+                "type": "array"
+              }
+            },
+            "required": [
+              "after_sequence",
+              "expected",
+              "id",
+              "kind",
+              "latest_sequence",
+              "replay_window_expired",
+              "retained_sequences"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "existing_state": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "expected": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "same_idempotency_key": {
+                "type": "boolean"
+              },
+              "same_request": {
+                "type": "boolean"
+              },
+              "same_task_id": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "existing_state",
+              "expected",
+              "id",
+              "kind",
+              "same_idempotency_key",
+              "same_request",
+              "same_task_id"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "existing_state": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "expected": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "existing_state",
+              "expected",
+              "id",
+              "kind"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "event": {
+                "additionalProperties": false,
+                "properties": {
+                  "is_final": {
+                    "type": "boolean"
+                  },
+                  "progress": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "completed_units": {
+                        "type": "integer"
+                      },
+                      "total_units": {
+                        "type": "integer"
+                      },
+                      "unit": {
+                        "minLength": 1,
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "completed_units",
+                      "total_units",
+                      "unit"
+                    ],
+                    "type": "object"
+                  },
+                  "sequence": {
+                    "type": "integer"
+                  },
+                  "state": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "task_id": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "is_final",
+                  "progress",
+                  "sequence",
+                  "state",
+                  "task_id"
+                ],
+                "type": "object"
+              },
+              "expected": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "forbidden_fields": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "event",
+              "expected",
+              "forbidden_fields",
+              "id",
+              "kind"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "type": "array"
+    },
+    "historical_inventory_complete": {
+      "const": false,
+      "type": "boolean"
+    },
+    "limits": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "obligations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "authority_ref": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "type": "integer"
+              },
+              "excerpt_sha256": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "source": {
+                "additionalProperties": false,
+                "properties": {
+                  "commit": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "component": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "path": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "repository": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "commit",
+                  "component",
+                  "path",
+                  "repository",
+                  "sha256"
+                ],
+                "type": "object"
+              },
+              "start_line": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "end_line",
+              "excerpt_sha256",
+              "source",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          "maturity": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "obligation_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "required_behavior": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "semantic_assertion_mapping": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "authority_ref",
+          "maturity",
+          "obligation_id",
+          "required_behavior",
+          "semantic_assertion_mapping"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "owner": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "private_reviewed_map_sha256": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "qualification_credit": {
+      "const": 0,
+      "type": "integer"
+    },
+    "related_fixture_relations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "byte_equal": {
+            "type": "boolean"
+          },
+          "component": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "fixture": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sha256": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "byte_equal",
+          "component",
+          "fixture",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema": {
+      "const": "iicp.lifecycle-semantic-obligations.v1",
+      "minLength": 1,
+      "type": "string"
+    },
+    "semantic_predicate_joins": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "limitation": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "obligation_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "predicate_source_refs": {
+                "items": {},
+                "type": "array"
+              },
+              "runtime_observation": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "source_join_status": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "whole_obligation_verified": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "limitation",
+              "obligation_id",
+              "predicate_source_refs",
+              "runtime_observation",
+              "source_join_status",
+              "whole_obligation_verified"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "limitation": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "obligation_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "predicate_source_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "excerpt_sha256": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "ref_id": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "source": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "commit": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "component": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "path": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "repository": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "sha256": {
+                          "minLength": 1,
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "commit",
+                        "component",
+                        "path",
+                        "repository",
+                        "sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "end_line",
+                    "excerpt_sha256",
+                    "ref_id",
+                    "source",
+                    "start_line"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "runtime_observation": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "source_join_status": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "whole_obligation_verified": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "limitation",
+              "obligation_id",
+              "predicate_source_refs",
+              "runtime_observation",
+              "source_join_status",
+              "whole_obligation_verified"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "type": "array"
+    },
+    "source_blobs": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "bytes": {
+            "type": "integer"
+          },
+          "commit": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "component": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "path": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "repository": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sha256": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "bytes",
+          "commit",
+          "component",
+          "path",
+          "repository",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "source_status": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "vector_consumer_cells": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "campaign_execution_inferred": {
+            "type": "boolean"
+          },
+          "component": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "explicit_terminal_rejection_from_vector": {
+            "type": "boolean"
+          },
+          "fixture_expected": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "fixture_kind": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "fixture_state_label_walk": {
+            "type": "boolean"
+          },
+          "full_vector_field_conformance_proven": {
+            "type": "boolean"
+          },
+          "reading": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "runtime_executed_in_this_batch": {
+            "type": "boolean"
+          },
+          "source_ref": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "type": "integer"
+              },
+              "excerpt_sha256": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "source": {
+                "additionalProperties": false,
+                "properties": {
+                  "commit": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "component": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "path": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "repository": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "commit",
+                  "component",
+                  "path",
+                  "repository",
+                  "sha256"
+                ],
+                "type": "object"
+              },
+              "start_line": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "end_line",
+              "excerpt_sha256",
+              "source",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          "vector_id": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "campaign_execution_inferred",
+          "component",
+          "explicit_terminal_rejection_from_vector",
+          "fixture_expected",
+          "fixture_kind",
+          "fixture_state_label_walk",
+          "full_vector_field_conformance_proven",
+          "reading",
+          "runtime_executed_in_this_batch",
+          "source_ref",
+          "vector_id"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "analysis_authority",
+    "authority_layers",
+    "baseline_classification_boundary",
+    "baseline_frozen",
+    "campaign_dispatch_boundary",
+    "candidate_digest",
+    "canonical_root_commit",
+    "capability_classification",
+    "capability_id",
+    "counts",
+    "fixture_mirrors",
+    "fixture_vector_domain",
+    "historical_inventory_complete",
+    "limits",
+    "obligations",
+    "owner",
+    "private_reviewed_map_sha256",
+    "qualification_credit",
+    "related_fixture_relations",
+    "schema",
+    "semantic_predicate_joins",
+    "source_blobs",
+    "source_status",
+    "vector_consumer_cells"
+  ],
+  "type": "object"
+}
