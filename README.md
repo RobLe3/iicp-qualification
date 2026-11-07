@@ -131,3 +131,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Enclosing capability contract evidence
 
 [Directory registration/preservation and SDK selection paths](reports/postcert/2026-11-07-enclosing-capability/README.md) distinguish five accepted assignment bodies from complete capability conformance, retain a measured name-guard difference, and keep static source, pure unit observations and original qualification credit separate.
+
+## Actual SDK caller reference
+
+[The reviewed caller slice](reports/postcert/2026-11-07-sdk-callers/README.md) records fifteen ordinary local outcomes across the three SDK submit implementations, including authorized selection and refusal controls. Synthetic transport, retained bootstrap failure and environment limitations remain explicit. This adds no qualification credit or complete-baseline claim.
