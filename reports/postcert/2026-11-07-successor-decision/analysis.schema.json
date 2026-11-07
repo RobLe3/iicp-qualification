@@ -1,0 +1,787 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_slots": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "closure_status": {
+            "type": "string"
+          },
+          "component": {
+            "type": "string"
+          },
+          "original_artifact": {
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "size_bytes": {
+                "type": "integer"
+              },
+              "target": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "kind",
+              "name",
+              "sha256",
+              "size_bytes",
+              "target"
+            ],
+            "type": "object"
+          },
+          "original_build_receipt_sha256": {
+            "type": "string"
+          },
+          "original_component_source": {
+            "type": "string"
+          },
+          "original_package_manifest_sha256": {
+            "type": "string"
+          },
+          "reuse_condition": {
+            "type": "string"
+          },
+          "slot_id": {
+            "type": "string"
+          },
+          "successor_artifact_sha256": {
+            "type": "null"
+          },
+          "successor_source_commit": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "closure_status",
+          "component",
+          "original_artifact",
+          "original_build_receipt_sha256",
+          "original_component_source",
+          "original_package_manifest_sha256",
+          "reuse_condition",
+          "slot_id",
+          "successor_artifact_sha256",
+          "successor_source_commit"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "baseline_frozen": {
+      "type": "boolean"
+    },
+    "binding_rehearsal": {
+      "additionalProperties": false,
+      "properties": {
+        "component_source_mutation_cases": {
+          "type": "integer"
+        },
+        "component_source_mutation_rejections": {
+          "type": "integer"
+        },
+        "new_receipts_issued": {
+          "type": "integer"
+        },
+        "original_candidate_changed": {
+          "type": "boolean"
+        },
+        "original_positive_controls": {
+          "type": "integer"
+        },
+        "original_receipts_modified": {
+          "type": "boolean"
+        },
+        "qualification_credit": {
+          "type": "integer"
+        },
+        "qualification_workloads": {
+          "type": "integer"
+        },
+        "synthetic_candidate_digest_rejections": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "component_source_mutation_cases",
+        "component_source_mutation_rejections",
+        "new_receipts_issued",
+        "original_candidate_changed",
+        "original_positive_controls",
+        "original_receipts_modified",
+        "qualification_credit",
+        "qualification_workloads",
+        "synthetic_candidate_digest_rejections"
+      ],
+      "type": "object"
+    },
+    "candidate_generated": {
+      "type": "boolean"
+    },
+    "canonical_root_commit": {
+      "type": "string"
+    },
+    "cloud_authorized": {
+      "type": "boolean"
+    },
+    "component_source_rows": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "changed_component_paths": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "old_path": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "source_role": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "old_path",
+                "path",
+                "source_role",
+                "status"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "component": {
+            "type": "string"
+          },
+          "observed_public_head": {
+            "type": "string"
+          },
+          "prior_audit_public_head": {
+            "type": "string"
+          },
+          "public_head_changed_since_prior_audit": {
+            "type": "boolean"
+          },
+          "qualified_source": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string"
+          },
+          "source_role_classification_is_equivalence_proof": {
+            "type": "boolean"
+          },
+          "successor_source_selected": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "changed_component_paths",
+          "component",
+          "observed_public_head",
+          "prior_audit_public_head",
+          "public_head_changed_since_prior_audit",
+          "qualified_source",
+          "repository",
+          "source_role_classification_is_equivalence_proof",
+          "successor_source_selected"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "changed_component_paths": {
+          "type": "integer"
+        },
+        "components": {
+          "type": "integer"
+        },
+        "maintained_floor_lock_checks": {
+          "type": "integer"
+        },
+        "original_artifact_slots": {
+          "type": "integer"
+        },
+        "public_component_heads_advanced_since_prior_audit": {
+          "type": "integer"
+        },
+        "selected_advisory_component_rows": {
+          "type": "integer"
+        },
+        "successor_artifacts_bound": {
+          "type": "integer"
+        },
+        "successor_sources_selected": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "changed_component_paths",
+        "components",
+        "maintained_floor_lock_checks",
+        "original_artifact_slots",
+        "public_component_heads_advanced_since_prior_audit",
+        "selected_advisory_component_rows",
+        "successor_artifacts_bound",
+        "successor_sources_selected"
+      ],
+      "type": "object"
+    },
+    "decision_gates": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "status"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "formal_verification_projection": {
+      "additionalProperties": false,
+      "properties": {
+        "campaign_shards": {
+          "type": "integer"
+        },
+        "candidate_bound_admission_evidence_required": {
+          "type": "boolean"
+        },
+        "declared_targets": {
+          "type": "integer"
+        },
+        "ecosystem_certificates": {
+          "type": "integer"
+        },
+        "edge_executions": {
+          "type": "integer"
+        },
+        "extra_admission_execution_count_decided": {
+          "type": "boolean"
+        },
+        "flakes": {
+          "type": "integer"
+        },
+        "new_defect_regressions_and_applicability_review": {
+          "type": "string"
+        },
+        "new_resource_plan_preservation_and_teardown_review": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "sentinel_adds_campaign_credit": {
+          "type": "boolean"
+        },
+        "shards_per_target": {
+          "type": "integer"
+        },
+        "skips": {
+          "type": "integer"
+        },
+        "support_cells": {
+          "type": "integer"
+        },
+        "target_certificates": {
+          "type": "integer"
+        },
+        "waivers": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "campaign_shards",
+        "candidate_bound_admission_evidence_required",
+        "declared_targets",
+        "ecosystem_certificates",
+        "edge_executions",
+        "extra_admission_execution_count_decided",
+        "flakes",
+        "new_defect_regressions_and_applicability_review",
+        "new_resource_plan_preservation_and_teardown_review",
+        "scope",
+        "sentinel_adds_campaign_credit",
+        "shards_per_target",
+        "skips",
+        "support_cells",
+        "target_certificates",
+        "waivers"
+      ],
+      "type": "object"
+    },
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "maintained_source_floor_checks": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "component": {
+                "type": "string"
+              },
+              "full_security_audit": {
+                "type": "boolean"
+              },
+              "lock_role": {
+                "type": "string"
+              },
+              "lock_sha256": {
+                "type": "string"
+              },
+              "policy_commit": {
+                "type": "string"
+              },
+              "policy_sha256": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "violations": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "component",
+              "full_security_audit",
+              "lock_role",
+              "lock_sha256",
+              "policy_commit",
+              "policy_sha256",
+              "status",
+              "violations"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "component": {
+                "type": "string"
+              },
+              "full_security_audit": {
+                "type": "boolean"
+              },
+              "lock_role": {
+                "type": "string"
+              },
+              "lock_sha256": {
+                "type": "string"
+              },
+              "policy_commit": {
+                "type": "string"
+              },
+              "policy_sha256": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "violations": {
+                "items": false,
+                "type": "array"
+              }
+            },
+            "required": [
+              "component",
+              "full_security_audit",
+              "lock_role",
+              "lock_sha256",
+              "policy_commit",
+              "policy_sha256",
+              "status",
+              "violations"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "type": "array"
+    },
+    "original_candidate_file_sha256": {
+      "type": "string"
+    },
+    "original_candidate_manifest_digest": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "package_publication_authorized": {
+      "type": "boolean"
+    },
+    "policy_conclusion": {
+      "type": "string"
+    },
+    "policy_sources": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "commit": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "commit",
+          "path",
+          "repository",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "qualification_credit": {
+      "type": "integer"
+    },
+    "qualification_execution_authorized": {
+      "type": "boolean"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "selected_advisory_source_rows": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "advisory_id": {
+                "type": "string"
+              },
+              "applicability_condition": {
+                "type": "string"
+              },
+              "compiled_artifact_target_feature_callpath_applicability": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "exploitation_or_live_exposure_claimed": {
+                "type": "boolean"
+              },
+              "package": {
+                "type": "string"
+              },
+              "primary_source": {
+                "additionalProperties": false,
+                "properties": {
+                  "commit": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  },
+                  "public_page": {
+                    "type": "string"
+                  },
+                  "repository": {
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "commit",
+                  "path",
+                  "public_page",
+                  "repository",
+                  "sha256",
+                  "url"
+                ],
+                "type": "object"
+              },
+              "upstream_patched_ranges": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "upstream_unaffected_ranges": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "versions": {
+                "additionalProperties": false,
+                "properties": {
+                  "public-development": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "range_status": {
+                        "type": "string"
+                      },
+                      "version": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "range_status",
+                      "version"
+                    ],
+                    "type": "object"
+                  },
+                  "qualified": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "range_status": {
+                        "type": "string"
+                      },
+                      "version": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "range_status",
+                      "version"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "public-development",
+                  "qualified"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "advisory_id",
+              "applicability_condition",
+              "compiled_artifact_target_feature_callpath_applicability",
+              "component",
+              "exploitation_or_live_exposure_claimed",
+              "package",
+              "primary_source",
+              "upstream_patched_ranges",
+              "upstream_unaffected_ranges",
+              "versions"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "advisory_id": {
+                "type": "string"
+              },
+              "applicability_condition": {
+                "type": "string"
+              },
+              "compiled_artifact_target_feature_callpath_applicability": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "exploitation_or_live_exposure_claimed": {
+                "type": "boolean"
+              },
+              "package": {
+                "type": "string"
+              },
+              "primary_source": {
+                "additionalProperties": false,
+                "properties": {
+                  "commit": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  },
+                  "public_page": {
+                    "type": "string"
+                  },
+                  "repository": {
+                    "type": "string"
+                  },
+                  "sha256": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "commit",
+                  "path",
+                  "public_page",
+                  "repository",
+                  "sha256",
+                  "url"
+                ],
+                "type": "object"
+              },
+              "upstream_patched_ranges": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "upstream_unaffected_ranges": {
+                "items": false,
+                "type": "array"
+              },
+              "versions": {
+                "additionalProperties": false,
+                "properties": {
+                  "public-development": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "range_status": {
+                        "type": "string"
+                      },
+                      "version": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "range_status",
+                      "version"
+                    ],
+                    "type": "object"
+                  },
+                  "qualified": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "range_status": {
+                        "type": "string"
+                      },
+                      "version": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "range_status",
+                      "version"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "public-development",
+                  "qualified"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "advisory_id",
+              "applicability_condition",
+              "compiled_artifact_target_feature_callpath_applicability",
+              "component",
+              "exploitation_or_live_exposure_claimed",
+              "package",
+              "primary_source",
+              "upstream_patched_ranges",
+              "upstream_unaffected_ranges",
+              "versions"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "type": "array"
+    },
+    "source_observation_intervals": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "component": {
+            "type": "string"
+          },
+          "observed_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "component",
+          "observed_at"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "state": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "artifact_slots",
+    "baseline_frozen",
+    "binding_rehearsal",
+    "candidate_generated",
+    "canonical_root_commit",
+    "cloud_authorized",
+    "component_source_rows",
+    "counts",
+    "decision_gates",
+    "formal_verification_projection",
+    "limits",
+    "maintained_source_floor_checks",
+    "original_candidate_file_sha256",
+    "original_candidate_manifest_digest",
+    "owner",
+    "package_publication_authorized",
+    "policy_conclusion",
+    "policy_sources",
+    "qualification_credit",
+    "qualification_execution_authorized",
+    "schema",
+    "selected_advisory_source_rows",
+    "source_observation_intervals",
+    "state"
+  ],
+  "title": "Reviewed informative successor decision, not qualification authority",
+  "type": "object"
+}

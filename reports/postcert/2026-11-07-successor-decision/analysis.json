@@ -1,0 +1,1610 @@
+{
+  "artifact_slots": [
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "client-python",
+      "original_artifact": {
+        "kind": "sdist",
+        "name": "iicp_client-0.7.110.tar.gz",
+        "sha256": "sha256:9bac5a0954d1d9572fe755afaf90ffc6f6923dbaa28594db208b6500ed2c50e2",
+        "size_bytes": 676836,
+        "target": "any"
+      },
+      "original_build_receipt_sha256": "sha256:44a536c8a2fa2ab53d06f277397d1f65edc1d4544e91ebe6b6839f6a18d206b9",
+      "original_component_source": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "original_package_manifest_sha256": "sha256:258cf1a7e28c8369a10300c1c7d2753ab2bffa3e46b8956fb5172675c984f9cd",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "client-python::sdist::any::iicp_client-0.7.110.tar.gz",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "client-python",
+      "original_artifact": {
+        "kind": "wheel",
+        "name": "iicp_client-0.7.110-py3-none-any.whl",
+        "sha256": "sha256:85335a36bd2ec270dc563e2492447c3c155debe42fa05be322878f45128e8d5f",
+        "size_bytes": 358734,
+        "target": "any"
+      },
+      "original_build_receipt_sha256": "sha256:44a536c8a2fa2ab53d06f277397d1f65edc1d4544e91ebe6b6839f6a18d206b9",
+      "original_component_source": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "original_package_manifest_sha256": "sha256:258cf1a7e28c8369a10300c1c7d2753ab2bffa3e46b8956fb5172675c984f9cd",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "client-python::wheel::any::iicp_client-0.7.110-py3-none-any.whl",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "client-typescript",
+      "original_artifact": {
+        "kind": "npm-tarball",
+        "name": "iicp-client-0.7.110.tgz",
+        "sha256": "sha256:79f3fa60f97669b1b575fd509fb61aa4dd1599b1ae76f37a6ca1baeb977c8267",
+        "size_bytes": 389974,
+        "target": "any"
+      },
+      "original_build_receipt_sha256": "sha256:5623a7aa62de994faf8bee93d2d332259e95895efb12a798444e2faecd34ab0b",
+      "original_component_source": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "original_package_manifest_sha256": "sha256:14864e9d0630e6321d5bf297fac6de0db4f0b25c8c4271652f2627f276dacb76",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "client-typescript::npm-tarball::any::iicp-client-0.7.110.tgz",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "client-typescript",
+      "original_artifact": {
+        "kind": "package-content-manifest",
+        "name": "iicp-client-0.7.110-package-contents.json",
+        "sha256": "sha256:e957303f9e3ef15263e9a1d15c5827dd4653edd653a99b3b7ad76bab3639851b",
+        "size_bytes": 53278,
+        "target": "any"
+      },
+      "original_build_receipt_sha256": "sha256:5623a7aa62de994faf8bee93d2d332259e95895efb12a798444e2faecd34ab0b",
+      "original_component_source": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "original_package_manifest_sha256": "sha256:14864e9d0630e6321d5bf297fac6de0db4f0b25c8c4271652f2627f276dacb76",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "client-typescript::package-content-manifest::any::iicp-client-0.7.110-package-contents.json",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "client-rust",
+      "original_artifact": {
+        "kind": "crate",
+        "name": "iicp-client-0.7.110.crate",
+        "sha256": "sha256:da1b358bf2aba2160bd8e4c2de48f2e0369c778348a848402c4aa24c38431309",
+        "size_bytes": 601394,
+        "target": "any"
+      },
+      "original_build_receipt_sha256": "sha256:34114adc7e06ab0b838f62b64c3c7f4edd344049fa8a285798fb631487a53e63",
+      "original_component_source": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "original_package_manifest_sha256": "sha256:8a43f6a3efae7482b9a7c076a67c36bbbd9bc02c708b75de252788b7467bc3ec",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "client-rust::crate::any::iicp-client-0.7.110.crate",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "client-rust",
+      "original_artifact": {
+        "kind": "vendored-offline-package",
+        "name": "iicp-client-0.7.110-vendored-offline.tar.gz",
+        "sha256": "sha256:e6abc65b1d55088989c8f109747960b68bf5b2e0f695f75b4bf0088e25c78dea",
+        "size_bytes": 37172959,
+        "target": "any"
+      },
+      "original_build_receipt_sha256": "sha256:34114adc7e06ab0b838f62b64c3c7f4edd344049fa8a285798fb631487a53e63",
+      "original_component_source": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "original_package_manifest_sha256": "sha256:8a43f6a3efae7482b9a7c076a67c36bbbd9bc02c708b75de252788b7467bc3ec",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "client-rust::vendored-offline-package::any::iicp-client-0.7.110-vendored-offline.tar.gz",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "directory-php",
+      "original_artifact": {
+        "kind": "release-archive",
+        "name": "iicp-directory-php-v1.10.94.tar.gz",
+        "sha256": "sha256:7a58d3b053e0569afb436e56a9709aabdd36e9ab12a71b868ac40aabf31c361c",
+        "size_bytes": 793541,
+        "target": "any"
+      },
+      "original_build_receipt_sha256": "sha256:2866ace201b58a9e684d1c7ae61ce0640034c29c5a99c5f1c31df66fb471b8bd",
+      "original_component_source": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "original_package_manifest_sha256": "sha256:f64a98eeed8fa341a8c45795c55bb64fd652400402de4fa95c7c1ac6f018bda8",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "directory-php::release-archive::any::iicp-directory-php-v1.10.94.tar.gz",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "directory-php",
+      "original_artifact": {
+        "kind": "release-manifest",
+        "name": "iicp-directory-php-v1.10.94-release-manifest.json",
+        "sha256": "sha256:4883fde75ae0adbb1cf5c6b24d0434c98bdaf1f258f60052c59796ba588d54e4",
+        "size_bytes": 737,
+        "target": "any"
+      },
+      "original_build_receipt_sha256": "sha256:2866ace201b58a9e684d1c7ae61ce0640034c29c5a99c5f1c31df66fb471b8bd",
+      "original_component_source": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "original_package_manifest_sha256": "sha256:f64a98eeed8fa341a8c45795c55bb64fd652400402de4fa95c7c1ac6f018bda8",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "directory-php::release-manifest::any::iicp-directory-php-v1.10.94-release-manifest.json",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "directory-rust",
+      "original_artifact": {
+        "kind": "release-artifact",
+        "name": "iicp-directory-rs-0.1.16-linux-aarch64",
+        "sha256": "sha256:db0f7da9a45d9b98cd42d590df438f3bd8152012b192c724ff86060d132654b7",
+        "size_bytes": 14313344,
+        "target": "linux-aarch64"
+      },
+      "original_build_receipt_sha256": "sha256:dddcecb0ca0db28c2fff797566c46d23e57c1604f7a412f19f8cd261baaf69dc",
+      "original_component_source": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "original_package_manifest_sha256": "sha256:168c442760bbf5d487d88ab7cf7315d7c34d04257cf9ed2c6be5560c7f617e6a",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "directory-rust::release-artifact::linux-aarch64::iicp-directory-rs-0.1.16-linux-aarch64",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "directory-rust",
+      "original_artifact": {
+        "kind": "release-artifact",
+        "name": "iicp-directory-rs-0.1.16-linux-x86_64",
+        "sha256": "sha256:bba617940d00cfebfb1d01f029800de5c5d4ca6ed1ed9789d3b1d65e64aab4a5",
+        "size_bytes": 15125392,
+        "target": "linux-x86_64"
+      },
+      "original_build_receipt_sha256": "sha256:dddcecb0ca0db28c2fff797566c46d23e57c1604f7a412f19f8cd261baaf69dc",
+      "original_component_source": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "original_package_manifest_sha256": "sha256:168c442760bbf5d487d88ab7cf7315d7c34d04257cf9ed2c6be5560c7f617e6a",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "directory-rust::release-artifact::linux-x86_64::iicp-directory-rs-0.1.16-linux-x86_64",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "directory-rust",
+      "original_artifact": {
+        "kind": "release-manifest",
+        "name": "iicp-directory-rs-0.1.16-release-manifest.json",
+        "sha256": "sha256:9d23eacd64195de99ccd2f68468811ff249badeaad611061cdac5e7e9e288d46",
+        "size_bytes": 349,
+        "target": "any"
+      },
+      "original_build_receipt_sha256": "sha256:dddcecb0ca0db28c2fff797566c46d23e57c1604f7a412f19f8cd261baaf69dc",
+      "original_component_source": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "original_package_manifest_sha256": "sha256:168c442760bbf5d487d88ab7cf7315d7c34d04257cf9ed2c6be5560c7f617e6a",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "directory-rust::release-manifest::any::iicp-directory-rs-0.1.16-release-manifest.json",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "management",
+      "original_artifact": {
+        "kind": "binary",
+        "name": "iicp-management-0.11.0-linux-aarch64.tar.gz",
+        "sha256": "sha256:9dc2a718edc2317ce6066a46b9dca2e4cb62dd347fdfceea2efe087dc84b8856",
+        "size_bytes": 4683663,
+        "target": "linux-aarch64"
+      },
+      "original_build_receipt_sha256": "sha256:d926a91137e7401bbb513fb77eeaa6c1447a767530afac181d8b00db41271de6",
+      "original_component_source": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "original_package_manifest_sha256": "sha256:2679b359e9685cedfe453729ac19abc335aa371f9ba19987cc5f7f03fda1f50a",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "management::binary::linux-aarch64::iicp-management-0.11.0-linux-aarch64.tar.gz",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "management",
+      "original_artifact": {
+        "kind": "binary",
+        "name": "iicp-management-0.11.0-linux-x86_64.tar.gz",
+        "sha256": "sha256:34ae1d31f983ee0eb58b68fa3969b788adb386d92fa377107746f791af1b66ce",
+        "size_bytes": 5459101,
+        "target": "linux-x86_64"
+      },
+      "original_build_receipt_sha256": "sha256:d926a91137e7401bbb513fb77eeaa6c1447a767530afac181d8b00db41271de6",
+      "original_component_source": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "original_package_manifest_sha256": "sha256:2679b359e9685cedfe453729ac19abc335aa371f9ba19987cc5f7f03fda1f50a",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "management::binary::linux-x86_64::iicp-management-0.11.0-linux-x86_64.tar.gz",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "management",
+      "original_artifact": {
+        "kind": "binary",
+        "name": "iicp-management-0.11.0-macos-arm64.tar.gz",
+        "sha256": "sha256:5981b5148fe0403094c68865b4ffb81db64322e29003ad9483dd434d84401110",
+        "size_bytes": 4403375,
+        "target": "macos-arm64"
+      },
+      "original_build_receipt_sha256": "sha256:d926a91137e7401bbb513fb77eeaa6c1447a767530afac181d8b00db41271de6",
+      "original_component_source": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "original_package_manifest_sha256": "sha256:2679b359e9685cedfe453729ac19abc335aa371f9ba19987cc5f7f03fda1f50a",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "management::binary::macos-arm64::iicp-management-0.11.0-macos-arm64.tar.gz",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "management",
+      "original_artifact": {
+        "kind": "binary",
+        "name": "iicp-management-0.11.0-windows-x86_64.tar.gz",
+        "sha256": "sha256:735a507b954a3deb09f13c68005f58062c8c092997f45ce9d0ed5c9bd26fe768",
+        "size_bytes": 5588393,
+        "target": "windows-x86_64"
+      },
+      "original_build_receipt_sha256": "sha256:d926a91137e7401bbb513fb77eeaa6c1447a767530afac181d8b00db41271de6",
+      "original_component_source": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "original_package_manifest_sha256": "sha256:2679b359e9685cedfe453729ac19abc335aa371f9ba19987cc5f7f03fda1f50a",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "management::binary::windows-x86_64::iicp-management-0.11.0-windows-x86_64.tar.gz",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "management",
+      "original_artifact": {
+        "kind": "crate",
+        "name": "iicp-management-core-0.11.0.crate",
+        "sha256": "sha256:2ca53947eb48da285727cc8b52177d75e2a7d29f9653920d25438f04c7ef5b23",
+        "size_bytes": 176666,
+        "target": "any"
+      },
+      "original_build_receipt_sha256": "sha256:d926a91137e7401bbb513fb77eeaa6c1447a767530afac181d8b00db41271de6",
+      "original_component_source": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "original_package_manifest_sha256": "sha256:2679b359e9685cedfe453729ac19abc335aa371f9ba19987cc5f7f03fda1f50a",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "management::crate::any::iicp-management-core-0.11.0.crate",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    },
+    {
+      "closure_status": "UNSELECTED_NOT_BUILT_NOT_FROZEN",
+      "component": "management",
+      "original_artifact": {
+        "kind": "release-manifest",
+        "name": "iicp-management-0.11.0-release-manifest.json",
+        "sha256": "sha256:d0ca4626b08c6c3796d2e6c33cc8330871e8be1ceb00d036b380fafad4e0547c",
+        "size_bytes": 487,
+        "target": "any"
+      },
+      "original_build_receipt_sha256": "sha256:d926a91137e7401bbb513fb77eeaa6c1447a767530afac181d8b00db41271de6",
+      "original_component_source": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "original_package_manifest_sha256": "sha256:2679b359e9685cedfe453729ac19abc335aa371f9ba19987cc5f7f03fda1f50a",
+      "reuse_condition": "Original exact bytes/source/build bindings may be considered only after explicit supported-scope/source selection; artifact reuse is not receipt/credit reuse.",
+      "slot_id": "management::release-manifest::any::iicp-management-0.11.0-release-manifest.json",
+      "successor_artifact_sha256": null,
+      "successor_source_commit": null
+    }
+  ],
+  "baseline_frozen": false,
+  "binding_rehearsal": {
+    "component_source_mutation_cases": 6,
+    "component_source_mutation_rejections": 384,
+    "new_receipts_issued": 0,
+    "original_candidate_changed": false,
+    "original_positive_controls": 64,
+    "original_receipts_modified": false,
+    "qualification_credit": 0,
+    "qualification_workloads": 0,
+    "synthetic_candidate_digest_rejections": 64
+  },
+  "candidate_generated": false,
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "cloud_authorized": false,
+  "component_source_rows": [
+    {
+      "changed_component_paths": [
+        {
+          "old_path": "scripts/pre1_environment_contract.py",
+          "path": "scripts/pre1_environment_contract.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/pre1_harness_binding.py",
+          "path": "scripts/pre1_harness_binding.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/pre1_package_execution.py",
+          "path": "scripts/pre1_package_execution.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/run_pre1_qualification_case.py",
+          "path": "scripts/run_pre1_qualification_case.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/test_pre1_package_execution.py",
+          "path": "scripts/test_pre1_package_execution.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/test_pre1_prepared_home.py",
+          "path": "scripts/test_pre1_prepared_home.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/test_pre1_qualification_case.py",
+          "path": "scripts/test_pre1_qualification_case.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "src/iicp_client/node.py",
+          "path": "src/iicp_client/node.py",
+          "source_role": "PRODUCT_SOURCE_OR_INLINE_TESTS_BODY_REVIEW_REQUIRED",
+          "status": "M"
+        },
+        {
+          "old_path": "tests/test_registration_diagnostic_privacy.py",
+          "path": "tests/test_registration_diagnostic_privacy.py",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "A"
+        }
+      ],
+      "component": "client-python",
+      "observed_public_head": "6504a6001003cf3a95c16614101da94fe8adcb50",
+      "prior_audit_public_head": "6504a6001003cf3a95c16614101da94fe8adcb50",
+      "public_head_changed_since_prior_audit": false,
+      "qualified_source": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "repository": "RobLe3/iicp-client-python",
+      "source_role_classification_is_equivalence_proof": false,
+      "successor_source_selected": false
+    },
+    {
+      "changed_component_paths": [
+        {
+          "old_path": "scripts/pre1_environment_contract.py",
+          "path": "scripts/pre1_environment_contract.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/pre1_harness_binding.py",
+          "path": "scripts/pre1_harness_binding.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/pre1_package_execution.py",
+          "path": "scripts/pre1_package_execution.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/run_pre1_qualification_case.py",
+          "path": "scripts/run_pre1_qualification_case.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/test_pre1_package_execution.py",
+          "path": "scripts/test_pre1_package_execution.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/test_pre1_prepared_home.py",
+          "path": "scripts/test_pre1_prepared_home.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/test_pre1_qualification_case.py",
+          "path": "scripts/test_pre1_qualification_case.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "src/node.ts",
+          "path": "src/node.ts",
+          "source_role": "PRODUCT_SOURCE_OR_INLINE_TESTS_BODY_REVIEW_REQUIRED",
+          "status": "M"
+        },
+        {
+          "old_path": "tests/registration_diagnostic_privacy.test.ts",
+          "path": "tests/registration_diagnostic_privacy.test.ts",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "A"
+        }
+      ],
+      "component": "client-typescript",
+      "observed_public_head": "65f2c213d321a400f1f92d89ab138519d9b2b11f",
+      "prior_audit_public_head": "65f2c213d321a400f1f92d89ab138519d9b2b11f",
+      "public_head_changed_since_prior_audit": false,
+      "qualified_source": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "repository": "RobLe3/iicp-client-typescript",
+      "source_role_classification_is_equivalence_proof": false,
+      "successor_source_selected": false
+    },
+    {
+      "changed_component_paths": [
+        {
+          "old_path": "CHANGELOG.md",
+          "path": "CHANGELOG.md",
+          "source_role": "NARRATIVE",
+          "status": "M"
+        },
+        {
+          "old_path": "Cargo.lock",
+          "path": "Cargo.lock",
+          "source_role": "LOCKED_DEPENDENCY_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "Cargo.toml",
+          "path": "Cargo.toml",
+          "source_role": "BUILD_OR_DEPENDENCY_CONSTRAINT_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/check_dependency_policy.py",
+          "path": "scripts/check_dependency_policy.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/pre1_harness_binding.py",
+          "path": "scripts/pre1_harness_binding.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/pre1_package_execution.py",
+          "path": "scripts/pre1_package_execution.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/run_pre1_qualification_case.py",
+          "path": "scripts/run_pre1_qualification_case.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/test_dependency_policy.py",
+          "path": "scripts/test_dependency_policy.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/test_pre1_prepared_home.py",
+          "path": "scripts/test_pre1_prepared_home.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        },
+        {
+          "old_path": "src/bin/iicp_node.rs",
+          "path": "src/bin/iicp_node.rs",
+          "source_role": "PRODUCT_SOURCE_OR_INLINE_TESTS_BODY_REVIEW_REQUIRED",
+          "status": "M"
+        },
+        {
+          "old_path": "src/http.rs",
+          "path": "src/http.rs",
+          "source_role": "PRODUCT_SOURCE_OR_INLINE_TESTS_BODY_REVIEW_REQUIRED",
+          "status": "M"
+        },
+        {
+          "old_path": "src/node.rs",
+          "path": "src/node.rs",
+          "source_role": "PRODUCT_SOURCE_OR_INLINE_TESTS_BODY_REVIEW_REQUIRED",
+          "status": "M"
+        },
+        {
+          "old_path": "src/tunnel.rs",
+          "path": "src/tunnel.rs",
+          "source_role": "PRODUCT_SOURCE_OR_INLINE_TESTS_BODY_REVIEW_REQUIRED",
+          "status": "M"
+        },
+        {
+          "old_path": "tests/node_register_tests.rs",
+          "path": "tests/node_register_tests.rs",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "M"
+        }
+      ],
+      "component": "client-rust",
+      "observed_public_head": "54e4bdaaee6daadc07d27e1258ed9c27539bd9a0",
+      "prior_audit_public_head": "63e28d1b6c0aa8af460a71ecf79344a06ef80619",
+      "public_head_changed_since_prior_audit": true,
+      "qualified_source": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "repository": "RobLe3/iicp-client-rust",
+      "source_role_classification_is_equivalence_proof": false,
+      "successor_source_selected": false
+    },
+    {
+      "changed_component_paths": [
+        {
+          "old_path": "CHANGELOG.md",
+          "path": "CHANGELOG.md",
+          "source_role": "NARRATIVE",
+          "status": "M"
+        },
+        {
+          "old_path": "Dockerfile.operator",
+          "path": "Dockerfile.operator",
+          "source_role": "PRODUCT_CONFIG_OR_OPERATOR_BUILD_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "README.md",
+          "path": "README.md",
+          "source_role": "NARRATIVE",
+          "status": "M"
+        },
+        {
+          "old_path": "composer.lock",
+          "path": "composer.lock",
+          "source_role": "LOCKED_DEPENDENCY_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "config/app.php",
+          "path": "config/app.php",
+          "source_role": "PRODUCT_CONFIG_OR_OPERATOR_BUILD_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "parity/contract-v1.10.94.json",
+          "path": "parity/contract-v1.10.94.json",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "A"
+        },
+        {
+          "old_path": "parity/discovery-evidence-v1.10.94.json",
+          "path": "parity/discovery-evidence-v1.10.94.json",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/pre1_package_execution.py",
+          "path": "scripts/pre1_package_execution.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/test_pre1_prepared_home.py",
+          "path": "scripts/test_pre1_prepared_home.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "tests/Feature/SharedBehaviorContractTest.php",
+          "path": "tests/Feature/SharedBehaviorContractTest.php",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "tests/Unit/DependencyPathBoundaryTest.php",
+          "path": "tests/Unit/DependencyPathBoundaryTest.php",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "A"
+        },
+        {
+          "old_path": "tests/Unit/DiscoveryEvidenceFixtureTest.php",
+          "path": "tests/Unit/DiscoveryEvidenceFixtureTest.php",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "tests/Unit/NodePolicyManifestVerifierTest.php",
+          "path": "tests/Unit/NodePolicyManifestVerifierTest.php",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "M"
+        }
+      ],
+      "component": "directory-php",
+      "observed_public_head": "8015e8df514eb12b09ee5b4a52e1e6f36dc055af",
+      "prior_audit_public_head": "11e63a1b2a3846d376810d260bf9ccbbf59b3d7c",
+      "public_head_changed_since_prior_audit": true,
+      "qualified_source": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "repository": "RobLe3/iicp-directory-php",
+      "source_role_classification_is_equivalence_proof": false,
+      "successor_source_selected": false
+    },
+    {
+      "changed_component_paths": [
+        {
+          "old_path": ".github/workflows/quality.yml",
+          "path": ".github/workflows/quality.yml",
+          "source_role": "CI_TRUST_OR_EXECUTION_DEFINITION",
+          "status": "M"
+        },
+        {
+          "old_path": "CHANGELOG.md",
+          "path": "CHANGELOG.md",
+          "source_role": "NARRATIVE",
+          "status": "M"
+        },
+        {
+          "old_path": "Cargo.lock",
+          "path": "Cargo.lock",
+          "source_role": "LOCKED_DEPENDENCY_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "Cargo.toml",
+          "path": "Cargo.toml",
+          "source_role": "BUILD_OR_DEPENDENCY_CONSTRAINT_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "compatibility/v0.1.17.json",
+          "path": "compatibility/v0.1.17.json",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "A"
+        },
+        {
+          "old_path": "parity/contract-v1.10.94.json",
+          "path": "parity/contract-v1.10.94.json",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "A"
+        },
+        {
+          "old_path": "parity/discovery-evidence-v1.10.94.json",
+          "path": "parity/discovery-evidence-v1.10.94.json",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "A"
+        },
+        {
+          "old_path": "scripts/check_dependency_policy.py",
+          "path": "scripts/check_dependency_policy.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/pre1_package_execution.py",
+          "path": "scripts/pre1_package_execution.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/test_check_release_compatibility.py",
+          "path": "scripts/test_check_release_compatibility.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/test_dependency_policy.py",
+          "path": "scripts/test_dependency_policy.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/test_pre1_package_execution.py",
+          "path": "scripts/test_pre1_package_execution.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/test_pre1_prepared_home.py",
+          "path": "scripts/test_pre1_prepared_home.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "src/discovery.rs",
+          "path": "src/discovery.rs",
+          "source_role": "PRODUCT_SOURCE_OR_INLINE_TESTS_BODY_REVIEW_REQUIRED",
+          "status": "M"
+        },
+        {
+          "old_path": "src/main_tests.rs",
+          "path": "src/main_tests.rs",
+          "source_role": "PRODUCT_SOURCE_OR_INLINE_TESTS_BODY_REVIEW_REQUIRED",
+          "status": "M"
+        },
+        {
+          "old_path": "tests/discovery_evidence_fixture.rs",
+          "path": "tests/discovery_evidence_fixture.rs",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "tests/pre1_release_boundaries.rs",
+          "path": "tests/pre1_release_boundaries.rs",
+          "source_role": "ASSERTION_FIXTURE_OR_COMPATIBILITY_INPUT",
+          "status": "M"
+        }
+      ],
+      "component": "directory-rust",
+      "observed_public_head": "407818227036b37eb12e8f37eb4bb9926387255e",
+      "prior_audit_public_head": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "public_head_changed_since_prior_audit": true,
+      "qualified_source": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "repository": "RobLe3/iicp-directory-rust",
+      "source_role_classification_is_equivalence_proof": false,
+      "successor_source_selected": false
+    },
+    {
+      "changed_component_paths": [
+        {
+          "old_path": "CHANGELOG.md",
+          "path": "CHANGELOG.md",
+          "source_role": "NARRATIVE",
+          "status": "M"
+        },
+        {
+          "old_path": "Cargo.lock",
+          "path": "Cargo.lock",
+          "source_role": "LOCKED_DEPENDENCY_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "Cargo.toml",
+          "path": "Cargo.toml",
+          "source_role": "BUILD_OR_DEPENDENCY_CONSTRAINT_INPUT",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/check_dependency_policy.py",
+          "path": "scripts/check_dependency_policy.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/pre1_harness_binding.py",
+          "path": "scripts/pre1_harness_binding.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/pre1_package_execution.py",
+          "path": "scripts/pre1_package_execution.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/run_pre1_qualification_case.py",
+          "path": "scripts/run_pre1_qualification_case.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/test_dependency_policy.py",
+          "path": "scripts/test_dependency_policy.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "M"
+        },
+        {
+          "old_path": "scripts/test_pre1_prepared_home.py",
+          "path": "scripts/test_pre1_prepared_home.py",
+          "source_role": "TOOLING_OR_HARNESS_NOT_ARTIFACT_EQUIVALENCE_PROOF",
+          "status": "A"
+        }
+      ],
+      "component": "management",
+      "observed_public_head": "53f8ad0736c2abec89e0297d244ee5871a82e904",
+      "prior_audit_public_head": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+      "public_head_changed_since_prior_audit": true,
+      "qualified_source": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "repository": "RobLe3/iicp-management",
+      "source_role_classification_is_equivalence_proof": false,
+      "successor_source_selected": false
+    }
+  ],
+  "counts": {
+    "changed_component_paths": 71,
+    "components": 6,
+    "maintained_floor_lock_checks": 6,
+    "original_artifact_slots": 17,
+    "public_component_heads_advanced_since_prior_audit": 4,
+    "selected_advisory_component_rows": 18,
+    "successor_artifacts_bound": 0,
+    "successor_sources_selected": 0
+  },
+  "decision_gates": [
+    {
+      "id": "supported-scope-dispositions",
+      "status": "INCOMPLETE"
+    },
+    {
+      "id": "controlled-source-prerequisites",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "final-source-selection",
+      "status": "UNSELECTED"
+    },
+    {
+      "id": "artifact-build-environment-harness-closure",
+      "status": "UNBOUND"
+    },
+    {
+      "id": "formal-qualification",
+      "status": "SEPARATE_EXECUTION_AUTHORITY_REQUIRED"
+    },
+    {
+      "id": "reference-freeze",
+      "status": "NOT_READY"
+    }
+  ],
+  "formal_verification_projection": {
+    "campaign_shards": 64,
+    "candidate_bound_admission_evidence_required": true,
+    "declared_targets": 4,
+    "ecosystem_certificates": 1,
+    "edge_executions": 5590,
+    "extra_admission_execution_count_decided": false,
+    "flakes": 0,
+    "new_defect_regressions_and_applicability_review": "REQUIRED_ADDITIONALLY_NOT_SATISFIED_BY_OLD_CASE_COUNTS",
+    "new_resource_plan_preservation_and_teardown_review": "REQUIRED_BEFORE_SEPARATE_EXECUTION_AUTHORIZATION",
+    "scope": "Existing finite scope only, contingent on reviewed finalcandidate and policy; not launchauthority or an automatic workloadschedule.",
+    "sentinel_adds_campaign_credit": false,
+    "shards_per_target": 16,
+    "skips": 0,
+    "support_cells": 218,
+    "target_certificates": 4,
+    "waivers": 0
+  },
+  "limits": [
+    "Sequential public head observations are dated source inputs, not an atomic freeze or approved successor selection.",
+    "Net path roles and selected dependency ranges do not establish artifact equivalence, exploitability, full advisory clearance or completed supported-scope dispositions.",
+    "Only the existing candidate-binding helper was exercised against derived receipt views; full receipt, environment, preservation, closure and certificate validation were not reproduced here.",
+    "The complete current goal remains unfinished. The original accepted candidate and five project-operated certificates are unchanged; a corrected qualified reference is not established."
+  ],
+  "maintained_source_floor_checks": [
+    {
+      "component": "client-rust",
+      "full_security_audit": false,
+      "lock_role": "qualified",
+      "lock_sha256": "be570d2e735998a4fb585ad74df645de580609ff2cc0b18abf520febc6d2018f",
+      "policy_commit": "54e4bdaaee6daadc07d27e1258ed9c27539bd9a0",
+      "policy_sha256": "5b224643c0b7f5bf10420c49b8b887854d2d63c78819f7d4db3538b0674c0e5e",
+      "status": "FAIL_SELECTED_SOURCE_FLOOR",
+      "violations": [
+        "denied package quinn-proto 0.11.16",
+        "denied package rustls 0.23.45",
+        "denied package rustls-webpki 0.103.15",
+        "denied package tokio 1.53.1",
+        "denied package webpki-roots 1.0.9"
+      ]
+    },
+    {
+      "component": "client-rust",
+      "full_security_audit": false,
+      "lock_role": "public-development",
+      "lock_sha256": "87fb6b521fb4122817852d16584359df167dfbe8dee4926d4363ebbd99d06042",
+      "policy_commit": "54e4bdaaee6daadc07d27e1258ed9c27539bd9a0",
+      "policy_sha256": "5b224643c0b7f5bf10420c49b8b887854d2d63c78819f7d4db3538b0674c0e5e",
+      "status": "PASS_SELECTED_SOURCE_FLOOR",
+      "violations": []
+    },
+    {
+      "component": "directory-rust",
+      "full_security_audit": false,
+      "lock_role": "qualified",
+      "lock_sha256": "4a47d155ad1eeed4587ed1b205788b9855d3027c0cbdceb28a5b932d98b15910",
+      "policy_commit": "407818227036b37eb12e8f37eb4bb9926387255e",
+      "policy_sha256": "26805da435943b95fa68c53815499048cff7727abe5cd0ed3e2cb9f2516564fd",
+      "status": "FAIL_SELECTED_SOURCE_FLOOR",
+      "violations": [
+        "denied package quinn-proto 0.11.15",
+        "denied package rustls 0.23.45",
+        "denied package rustls-webpki 0.103.15",
+        "denied package tokio 1.52.3",
+        "denied package webpki-roots 1.0.7"
+      ]
+    },
+    {
+      "component": "directory-rust",
+      "full_security_audit": false,
+      "lock_role": "public-development",
+      "lock_sha256": "ca5597ae282113d6cb20c53e9c6a29e813c3e028543ff52bb1f10e61c3e4466b",
+      "policy_commit": "407818227036b37eb12e8f37eb4bb9926387255e",
+      "policy_sha256": "26805da435943b95fa68c53815499048cff7727abe5cd0ed3e2cb9f2516564fd",
+      "status": "PASS_SELECTED_SOURCE_FLOOR",
+      "violations": []
+    },
+    {
+      "component": "management",
+      "full_security_audit": false,
+      "lock_role": "qualified",
+      "lock_sha256": "cebd1c27e772c228367bcb572ca6d6376f53b6ed7dd137fd0196b0857ec8f3ba",
+      "policy_commit": "53f8ad0736c2abec89e0297d244ee5871a82e904",
+      "policy_sha256": "26805da435943b95fa68c53815499048cff7727abe5cd0ed3e2cb9f2516564fd",
+      "status": "FAIL_SELECTED_SOURCE_FLOOR",
+      "violations": [
+        "denied package quinn-proto 0.11.17",
+        "denied package rustls 0.23.45",
+        "denied package rustls-webpki 0.103.15",
+        "denied package tokio 1.53.1",
+        "denied package webpki-roots 1.0.9"
+      ]
+    },
+    {
+      "component": "management",
+      "full_security_audit": false,
+      "lock_role": "public-development",
+      "lock_sha256": "6e1738b1181e51c39b6c2066c9d8860ca81ec1b9bbefd93d6340e774f7364cec",
+      "policy_commit": "53f8ad0736c2abec89e0297d244ee5871a82e904",
+      "policy_sha256": "26805da435943b95fa68c53815499048cff7727abe5cd0ed3e2cb9f2516564fd",
+      "status": "PASS_SELECTED_SOURCE_FLOOR",
+      "violations": []
+    }
+  ],
+  "original_candidate_file_sha256": "a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
+  "original_candidate_manifest_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "owner": "RobLe3/iicp.network#1678",
+  "package_publication_authorized": false,
+  "policy_conclusion": "A changed selected product candidate cannot inherit the original candidate-bound receipts under the existing helper/compiler policy. Four target certificates each require16exactshards and candidate-bound validation. Exact new source/artifact/harness/environment/regression scope must be decided and independently reviewed before separately authorized formal qualification. This is not a rule that every documentation/tooling edit outside an unchanged candidate reruns workloads.",
+  "policy_sources": [
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "project/pre1-stability-successor-frozen.json",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "scripts/pre1_evidence.py",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "ee5f7f42c2ca98a2ed32ee15aa5a4aee78dcc66164ef1604498e48f6f6ac6df1"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "scripts/check_pre1_qualification_receipt.py",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "de51817283d1d81b3dddb20501b9d4a7536876cb895bfb331aa6c4047003ced7"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "scripts/compile_pre1_target_certificate.py",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "b2e35837094fd268de17075e9a9d1f8728ec89f804ae3d87296a4bde25c3fbbb"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "path": "scripts/compile_pre1_ecosystem_certificate.py",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "92908d3dce742ed132290c7c34011a35dd575cc35adb83420c4d0cfd2e85213a"
+    }
+  ],
+  "qualification_credit": 0,
+  "qualification_execution_authorized": false,
+  "schema": "iicp.public-successor-decision-reference.v1",
+  "selected_advisory_source_rows": [
+    {
+      "advisory_id": "RUSTSEC-2026-0285",
+      "applicability_condition": "The qualified0.23.45 already satisfies this advisory patchedrange. Do not incorrectly label it affected just because a later maintainedfloor is0.23.46.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "client-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "rustls",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/rustls/RUSTSEC-2026-0285.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0285.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "b4311c4c11df17f9ed99611bcaaccfd2c9f61d141aa6995be880650b9fc950d1",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/rustls/RUSTSEC-2026-0285.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.23.45"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.23.13"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.23.46"
+        },
+        "qualified": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.23.45"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0348",
+      "applicability_condition": "Non-default brotli feature and specified TLS client/server use are required. No-brotli applications are unaffected. Artifactfeature/callpath applicability not established here.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "client-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "rustls",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/rustls/RUSTSEC-2026-0348.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0348.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "99ec103400ea094e34211303d4b87ec52893cd60560e5b192b328f570fb23555",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/rustls/RUSTSEC-2026-0348.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.23.46"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.23.9"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.23.46"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "0.23.45"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0382",
+      "applicability_condition": "Requires certificate paths through distrusted emSign intermediates allowed by configured anchors. This is not proof of that path in an IICP artifact.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "client-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "rustls-webpki",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/rustls-webpki/RUSTSEC-2026-0382.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0382.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "525ad607d24f67fd22a20e70b28b3962a9039962340e3ad1f351c9611772e671",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/rustls-webpki/RUSTSEC-2026-0382.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.103.16, < 0.104.0-alpha.1",
+        ">= 0.104.0-alpha.8"
+      ],
+      "upstream_unaffected_ranges": [],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.103.16"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "0.103.15"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0386",
+      "applicability_condition": "Unix AsyncFd constructor I/O-safety conditions; the advisory is informational unsoundness. Source lock presence does not establish affected API use or Windows applicability.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "client-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "tokio",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/tokio/RUSTSEC-2026-0386.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0386.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "f92ab63fc1641af590f81babf9f211d77bdd7db14b82cb53a3a756a16864b520",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/tokio/RUSTSEC-2026-0386.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 1.51.6, < 1.52.0",
+        ">= 1.53.3"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.3.2"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "1.53.3"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "1.53.1"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0338",
+      "applicability_condition": "Unordered stream read path is affected; the default ordered path is not. QUIC/profile applicability is not established by a lock entry.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "client-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "quinn-proto",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/quinn-proto/RUSTSEC-2026-0338.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0338.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "b10280e3ab921045a7331e28a9f3a69069eaf8cdcb45cc1a22ba2f7e93c960d5",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/quinn-proto/RUSTSEC-2026-0338.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.11.18"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.7.0"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.11.18"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "0.11.16"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0343",
+      "applicability_condition": "Only0.11.17 has this datagram-accounting flaw;0.11.15/0.11.16 must not be marked affected by this advisory. send_datagram_wait is not affected.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "client-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "quinn-proto",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/quinn-proto/RUSTSEC-2026-0343.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0343.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "bb37d180971caeb5ce9925ec68edd6eeb9c6c2b812bd85f8ccabdf0251e8e919",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/quinn-proto/RUSTSEC-2026-0343.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.11.18"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.11.17"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.11.18"
+        },
+        "qualified": {
+          "range_status": "UNAFFECTED_VERSION_RANGE",
+          "version": "0.11.16"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0285",
+      "applicability_condition": "The qualified0.23.45 already satisfies this advisory patchedrange. Do not incorrectly label it affected just because a later maintainedfloor is0.23.46.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "directory-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "rustls",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/rustls/RUSTSEC-2026-0285.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0285.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "b4311c4c11df17f9ed99611bcaaccfd2c9f61d141aa6995be880650b9fc950d1",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/rustls/RUSTSEC-2026-0285.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.23.45"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.23.13"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.23.46"
+        },
+        "qualified": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.23.45"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0348",
+      "applicability_condition": "Non-default brotli feature and specified TLS client/server use are required. No-brotli applications are unaffected. Artifactfeature/callpath applicability not established here.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "directory-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "rustls",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/rustls/RUSTSEC-2026-0348.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0348.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "99ec103400ea094e34211303d4b87ec52893cd60560e5b192b328f570fb23555",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/rustls/RUSTSEC-2026-0348.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.23.46"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.23.9"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.23.46"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "0.23.45"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0382",
+      "applicability_condition": "Requires certificate paths through distrusted emSign intermediates allowed by configured anchors. This is not proof of that path in an IICP artifact.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "directory-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "rustls-webpki",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/rustls-webpki/RUSTSEC-2026-0382.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0382.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "525ad607d24f67fd22a20e70b28b3962a9039962340e3ad1f351c9611772e671",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/rustls-webpki/RUSTSEC-2026-0382.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.103.16, < 0.104.0-alpha.1",
+        ">= 0.104.0-alpha.8"
+      ],
+      "upstream_unaffected_ranges": [],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.103.16"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "0.103.15"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0386",
+      "applicability_condition": "Unix AsyncFd constructor I/O-safety conditions; the advisory is informational unsoundness. Source lock presence does not establish affected API use or Windows applicability.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "directory-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "tokio",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/tokio/RUSTSEC-2026-0386.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0386.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "f92ab63fc1641af590f81babf9f211d77bdd7db14b82cb53a3a756a16864b520",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/tokio/RUSTSEC-2026-0386.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 1.51.6, < 1.52.0",
+        ">= 1.53.3"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.3.2"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "1.53.3"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "1.52.3"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0338",
+      "applicability_condition": "Unordered stream read path is affected; the default ordered path is not. QUIC/profile applicability is not established by a lock entry.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "directory-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "quinn-proto",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/quinn-proto/RUSTSEC-2026-0338.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0338.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "b10280e3ab921045a7331e28a9f3a69069eaf8cdcb45cc1a22ba2f7e93c960d5",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/quinn-proto/RUSTSEC-2026-0338.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.11.18"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.7.0"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.11.18"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "0.11.15"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0343",
+      "applicability_condition": "Only0.11.17 has this datagram-accounting flaw;0.11.15/0.11.16 must not be marked affected by this advisory. send_datagram_wait is not affected.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "directory-rust",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "quinn-proto",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/quinn-proto/RUSTSEC-2026-0343.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0343.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "bb37d180971caeb5ce9925ec68edd6eeb9c6c2b812bd85f8ccabdf0251e8e919",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/quinn-proto/RUSTSEC-2026-0343.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.11.18"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.11.17"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.11.18"
+        },
+        "qualified": {
+          "range_status": "UNAFFECTED_VERSION_RANGE",
+          "version": "0.11.15"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0285",
+      "applicability_condition": "The qualified0.23.45 already satisfies this advisory patchedrange. Do not incorrectly label it affected just because a later maintainedfloor is0.23.46.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "management",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "rustls",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/rustls/RUSTSEC-2026-0285.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0285.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "b4311c4c11df17f9ed99611bcaaccfd2c9f61d141aa6995be880650b9fc950d1",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/rustls/RUSTSEC-2026-0285.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.23.45"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.23.13"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.23.46"
+        },
+        "qualified": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.23.45"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0348",
+      "applicability_condition": "Non-default brotli feature and specified TLS client/server use are required. No-brotli applications are unaffected. Artifactfeature/callpath applicability not established here.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "management",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "rustls",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/rustls/RUSTSEC-2026-0348.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0348.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "99ec103400ea094e34211303d4b87ec52893cd60560e5b192b328f570fb23555",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/rustls/RUSTSEC-2026-0348.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.23.46"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.23.9"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.23.46"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "0.23.45"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0382",
+      "applicability_condition": "Requires certificate paths through distrusted emSign intermediates allowed by configured anchors. This is not proof of that path in an IICP artifact.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "management",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "rustls-webpki",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/rustls-webpki/RUSTSEC-2026-0382.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0382.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "525ad607d24f67fd22a20e70b28b3962a9039962340e3ad1f351c9611772e671",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/rustls-webpki/RUSTSEC-2026-0382.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.103.16, < 0.104.0-alpha.1",
+        ">= 0.104.0-alpha.8"
+      ],
+      "upstream_unaffected_ranges": [],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.103.16"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "0.103.15"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0386",
+      "applicability_condition": "Unix AsyncFd constructor I/O-safety conditions; the advisory is informational unsoundness. Source lock presence does not establish affected API use or Windows applicability.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "management",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "tokio",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/tokio/RUSTSEC-2026-0386.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0386.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "f92ab63fc1641af590f81babf9f211d77bdd7db14b82cb53a3a756a16864b520",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/tokio/RUSTSEC-2026-0386.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 1.51.6, < 1.52.0",
+        ">= 1.53.3"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.3.2"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "1.53.3"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "1.53.1"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0338",
+      "applicability_condition": "Unordered stream read path is affected; the default ordered path is not. QUIC/profile applicability is not established by a lock entry.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "management",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "quinn-proto",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/quinn-proto/RUSTSEC-2026-0338.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0338.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "b10280e3ab921045a7331e28a9f3a69069eaf8cdcb45cc1a22ba2f7e93c960d5",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/quinn-proto/RUSTSEC-2026-0338.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.11.18"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.7.0"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.11.18"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "0.11.17"
+        }
+      }
+    },
+    {
+      "advisory_id": "RUSTSEC-2026-0343",
+      "applicability_condition": "Only0.11.17 has this datagram-accounting flaw;0.11.15/0.11.16 must not be marked affected by this advisory. send_datagram_wait is not affected.",
+      "compiled_artifact_target_feature_callpath_applicability": "UNVERIFIED_NOT_INFERRED_FROM_LOCK",
+      "component": "management",
+      "exploitation_or_live_exposure_claimed": false,
+      "package": "quinn-proto",
+      "primary_source": {
+        "commit": "309392b18f6b17022f82c701f300433126901068",
+        "path": "crates/quinn-proto/RUSTSEC-2026-0343.md",
+        "public_page": "https://rustsec.org/advisories/RUSTSEC-2026-0343.html",
+        "repository": "RustSec/advisory-db",
+        "sha256": "bb37d180971caeb5ce9925ec68edd6eeb9c6c2b812bd85f8ccabdf0251e8e919",
+        "url": "https://raw.githubusercontent.com/RustSec/advisory-db/309392b18f6b17022f82c701f300433126901068/crates/quinn-proto/RUSTSEC-2026-0343.md"
+      },
+      "upstream_patched_ranges": [
+        ">= 0.11.18"
+      ],
+      "upstream_unaffected_ranges": [
+        "< 0.11.17"
+      ],
+      "versions": {
+        "public-development": {
+          "range_status": "PATCHED_VERSION_RANGE",
+          "version": "0.11.18"
+        },
+        "qualified": {
+          "range_status": "AFFECTED_VERSION_RANGE_ONLY_NOT_EXPLOITABILITY",
+          "version": "0.11.17"
+        }
+      }
+    }
+  ],
+  "source_observation_intervals": [
+    {
+      "component": "client-python",
+      "observed_at": "2026-11-07T20:45:57.980301+00:00"
+    },
+    {
+      "component": "client-typescript",
+      "observed_at": "2026-11-07T20:45:58.561732+00:00"
+    },
+    {
+      "component": "client-rust",
+      "observed_at": "2026-11-07T20:45:59.161722+00:00"
+    },
+    {
+      "component": "directory-php",
+      "observed_at": "2026-11-07T20:45:59.743739+00:00"
+    },
+    {
+      "component": "directory-rust",
+      "observed_at": "2026-11-07T20:46:00.299848+00:00"
+    },
+    {
+      "component": "management",
+      "observed_at": "2026-11-07T20:46:00.872853+00:00"
+    }
+  ],
+  "state": "NON_EXECUTING_DECISION_INPUTS_NOT_LAUNCH_READY"
+}

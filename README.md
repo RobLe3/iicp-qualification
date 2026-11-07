@@ -159,3 +159,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Lifecycle obligation reference
 
 [The source-bound lifecycle obligation supplement](reports/postcert/2026-11-07-lifecycle-obligations/README.md) separates the proposed profile, explicit opt-in amendment, fixture consumers and admitted scenario selectors. It maps partial semantic predicates without treating source presence, cancellation reports or pure accounting decisions as newly executed qualification.
+
+## Stabilization successor decision inputs
+
+[The dated source and qualification decision](reports/postcert/2026-11-07-successor-decision/README.md) separates six qualified sources, later public development changes and seventeen unselected artifact slots. It preserves candidate-bound qualification and the remaining source, regression, review and execution gates; it does not launch or freeze a successor.

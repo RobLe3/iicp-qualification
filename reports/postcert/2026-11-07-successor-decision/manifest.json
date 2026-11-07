@@ -1,0 +1,10 @@
+{
+  "analysis_sha256": "f8d66b14139b7a4888bc9b31d33b73e3a54c35c811a9e6b7269e461ff2560e2e",
+  "baseline_frozen": false,
+  "qualification_credit": 0,
+  "qualification_workloads": 0,
+  "readme_sha256": "e11c4b69c778a1f851c2cc9aef7d0ec7a80d2c1b76abbc589513e5bafd73812f",
+  "schema_sha256": "71b1dee4d1738796d8e0ecf464d2a05f7442016a91c6b82567a83e315a2df9a8",
+  "successor_artifacts_bound": 0,
+  "successor_sources_selected": 0
+}
