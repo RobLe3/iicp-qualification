@@ -1,0 +1,2536 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidate_digest": {
+      "const": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a"
+    },
+    "cases": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "assessment": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_sha256": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_body_span": {
+                "type": "string"
+              },
+              "dispatch_spans": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              },
+              "existing_accepted_coordinate_count": {
+                "const": 96,
+                "type": "integer"
+              },
+              "finding": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "const": 0,
+                "type": "integer"
+              },
+              "original_qualification_rerun": {
+                "const": false
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "assertion",
+              "assessment",
+              "case_id",
+              "case_map_sha256",
+              "component",
+              "declared_body_span",
+              "dispatch_spans",
+              "existing_accepted_coordinate_count",
+              "finding",
+              "new_qualification_credit",
+              "original_qualification_rerun",
+              "qualified_product_source_commit"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "assessment": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_sha256": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_body_span": {
+                "type": "string"
+              },
+              "dispatch_spans": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              },
+              "existing_accepted_coordinate_count": {
+                "const": 48,
+                "type": "integer"
+              },
+              "finding": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "const": 0,
+                "type": "integer"
+              },
+              "original_qualification_rerun": {
+                "const": false
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "assertion",
+              "assessment",
+              "case_id",
+              "case_map_sha256",
+              "component",
+              "declared_body_span",
+              "dispatch_spans",
+              "existing_accepted_coordinate_count",
+              "finding",
+              "new_qualification_credit",
+              "original_qualification_rerun",
+              "qualified_product_source_commit"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "assessment": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_sha256": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_body_span": {
+                "type": "string"
+              },
+              "dispatch_spans": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+              },
+              "existing_accepted_coordinate_count": {
+                "const": 6,
+                "type": "integer"
+              },
+              "finding": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "const": 0,
+                "type": "integer"
+              },
+              "original_qualification_rerun": {
+                "const": false
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "assertion",
+              "assessment",
+              "case_id",
+              "case_map_sha256",
+              "component",
+              "declared_body_span",
+              "dispatch_spans",
+              "existing_accepted_coordinate_count",
+              "finding",
+              "new_qualification_credit",
+              "original_qualification_rerun",
+              "qualified_product_source_commit"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "assessment": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_sha256": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_body_span": {
+                "type": "string"
+              },
+              "dispatch_spans": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+              },
+              "existing_accepted_coordinate_count": {
+                "const": 12,
+                "type": "integer"
+              },
+              "finding": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "const": 0,
+                "type": "integer"
+              },
+              "original_qualification_rerun": {
+                "const": false
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "assertion",
+              "assessment",
+              "case_id",
+              "case_map_sha256",
+              "component",
+              "declared_body_span",
+              "dispatch_spans",
+              "existing_accepted_coordinate_count",
+              "finding",
+              "new_qualification_credit",
+              "original_qualification_rerun",
+              "qualified_product_source_commit"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 5,
+      "minItems": 5,
+      "type": "array"
+    },
+    "coordinate_refs": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 210,
+      "minItems": 210,
+      "type": "array"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "cases": {
+          "const": 5,
+          "type": "integer"
+        },
+        "existing_coordinate_refs": {
+          "const": 210,
+          "type": "integer"
+        },
+        "guard_implementations": {
+          "const": 2,
+          "type": "integer"
+        },
+        "observed_name_outcome_differences": {
+          "const": 2,
+          "type": "integer"
+        },
+        "private_metadata_controls": {
+          "const": 26,
+          "type": "integer"
+        },
+        "pure_guard_names_per_implementation": {
+          "const": 11,
+          "type": "integer"
+        },
+        "source_windows": {
+          "const": 36,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "cases",
+        "existing_coordinate_refs",
+        "guard_implementations",
+        "observed_name_outcome_differences",
+        "private_metadata_controls",
+        "pure_guard_names_per_implementation",
+        "source_windows"
+      ],
+      "type": "object"
+    },
+    "current_guard_context": {
+      "additionalProperties": false,
+      "properties": {
+        "commit": {
+          "type": "string"
+        },
+        "guard_expression_sha256": {
+          "type": "string"
+        },
+        "normative_defect_confirmed": {
+          "const": false
+        },
+        "observed_at": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "repository": {
+          "type": "string"
+        },
+        "same_as_frozen_guard": {
+          "const": true
+        },
+        "schema": {
+          "type": "string"
+        },
+        "source_sha256": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "whole_current_product_executed": {
+          "const": false
+        }
+      },
+      "required": [
+        "commit",
+        "guard_expression_sha256",
+        "normative_defect_confirmed",
+        "observed_at",
+        "path",
+        "repository",
+        "same_as_frozen_guard",
+        "schema",
+        "source_sha256",
+        "source_url",
+        "whole_current_product_executed"
+      ],
+      "type": "object"
+    },
+    "historical_inventory_complete": {
+      "const": false
+    },
+    "independent_interoperability_established": {
+      "const": false
+    },
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "minItems": 8,
+      "type": "array"
+    },
+    "name_guard_observations": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "php_accepts": {
+                "const": true
+              },
+              "rust_accepts": {
+                "const": true
+              },
+              "same_outcome": {
+                "const": true
+              }
+            },
+            "required": [
+              "name",
+              "php_accepts",
+              "rust_accepts",
+              "same_outcome"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "php_accepts": {
+                "const": true
+              },
+              "rust_accepts": {
+                "const": false
+              },
+              "same_outcome": {
+                "const": false
+              }
+            },
+            "required": [
+              "name",
+              "php_accepts",
+              "rust_accepts",
+              "same_outcome"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "php_accepts": {
+                "const": false
+              },
+              "rust_accepts": {
+                "const": false
+              },
+              "same_outcome": {
+                "const": true
+              }
+            },
+            "required": [
+              "name",
+              "php_accepts",
+              "rust_accepts",
+              "same_outcome"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 11,
+      "minItems": 11,
+      "type": "array"
+    },
+    "name_guard_scope": {
+      "additionalProperties": false,
+      "properties": {
+        "host_profiles": {
+          "type": "string"
+        },
+        "http_executed": {
+          "const": false
+        },
+        "normative_defect_confirmed": {
+          "const": false
+        },
+        "normative_uniform_name_grammar_established": {
+          "const": false
+        },
+        "raw_extension_schema_only_bounds_name_length": {
+          "const": true
+        },
+        "source_execution": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "host_profiles",
+        "http_executed",
+        "normative_defect_confirmed",
+        "normative_uniform_name_grammar_established",
+        "raw_extension_schema_only_bounds_name_length",
+        "source_execution"
+      ],
+      "type": "object"
+    },
+    "normative_clauses": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "complete_normative_conformance": {
+                "type": "string"
+              },
+              "dedicated_test_execution_claimed": {
+                "const": false
+              },
+              "finding": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_runtime_conformance": {
+                "type": "string"
+              },
+              "source_spans": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 4,
+                "minItems": 4,
+                "type": "array"
+              },
+              "static_paths_supported": {
+                "const": true
+              }
+            },
+            "required": [
+              "complete_normative_conformance",
+              "dedicated_test_execution_claimed",
+              "finding",
+              "id",
+              "new_runtime_conformance",
+              "source_spans",
+              "static_paths_supported"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "complete_normative_conformance": {
+                "type": "string"
+              },
+              "dedicated_test_execution_claimed": {
+                "const": false
+              },
+              "finding": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_runtime_conformance": {
+                "type": "string"
+              },
+              "source_spans": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              },
+              "static_paths_supported": {
+                "const": true
+              }
+            },
+            "required": [
+              "complete_normative_conformance",
+              "dedicated_test_execution_claimed",
+              "finding",
+              "id",
+              "new_runtime_conformance",
+              "source_spans",
+              "static_paths_supported"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "complete_normative_conformance": {
+                "type": "string"
+              },
+              "dedicated_test_execution_claimed": {
+                "const": false
+              },
+              "finding": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_runtime_conformance": {
+                "type": "string"
+              },
+              "source_spans": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 5,
+                "minItems": 5,
+                "type": "array"
+              },
+              "static_paths_supported": {
+                "const": true
+              }
+            },
+            "required": [
+              "complete_normative_conformance",
+              "dedicated_test_execution_claimed",
+              "finding",
+              "id",
+              "new_runtime_conformance",
+              "source_spans",
+              "static_paths_supported"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "complete_normative_conformance": {
+                "type": "string"
+              },
+              "dedicated_test_execution_claimed": {
+                "const": false
+              },
+              "finding": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_runtime_conformance": {
+                "type": "string"
+              },
+              "source_spans": {
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 6,
+                "minItems": 6,
+                "type": "array"
+              },
+              "static_paths_supported": {
+                "const": true
+              }
+            },
+            "required": [
+              "complete_normative_conformance",
+              "dedicated_test_execution_claimed",
+              "finding",
+              "id",
+              "new_runtime_conformance",
+              "source_spans",
+              "static_paths_supported"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "type": "array"
+    },
+    "original_public_analysis_sha256": {
+      "type": "string"
+    },
+    "private_input_index_sha256": {
+      "type": "string"
+    },
+    "private_matrix_sha256": {
+      "type": "string"
+    },
+    "qualification_credit": {
+      "const": 0,
+      "type": "integer"
+    },
+    "qualification_workload_executed": {
+      "const": false
+    },
+    "schema": {
+      "const": "iicp.enclosing-capability-public.v1"
+    },
+    "scope": {
+      "const": "READ_ONLY_STATIC_CONTRACT_AND_EXISTING_ACCEPTED_COORDINATE_MAPPING_WITH_SEPARATE_PURE_GUARD_UNIT_OBSERVATIONS"
+    },
+    "sdk_caller_scope": {
+      "type": "string"
+    },
+    "source_windows": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 204,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 172,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 412,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 380,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 124,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 97,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 61,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 32,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 265,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 248,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 79,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 27,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 323,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 287,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 462,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 420,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 181,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 128,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 615,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 582,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 815,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 783,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 1776,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 1748,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 1189,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 1158,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 1475,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 1376,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 4635,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 4576,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 601,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 533,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 516,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 459,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 1044,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 958,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 1147,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 1116,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 76,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 61,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 66,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 51,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 613,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 558,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 333,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 228,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 174,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 87,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 538,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 500,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 419,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 380,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 564,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 512,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 568,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 527,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 561,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 527,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 579,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 538,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 2025,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 1986,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 548,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 514,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "end_line": {
+                "const": 2706,
+                "type": "integer"
+              },
+              "id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "source_role": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "span_sha256": {
+                "type": "string"
+              },
+              "start_line": {
+                "const": 2667,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "commit",
+              "component",
+              "end_line",
+              "id",
+              "path",
+              "repository",
+              "source_role",
+              "source_sha256",
+              "source_url",
+              "span_sha256",
+              "start_line"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 36,
+      "minItems": 36,
+      "type": "array"
+    },
+    "successor_frozen": {
+      "const": false
+    },
+    "whole_capability_complete": {
+      "const": false
+    }
+  },
+  "required": [
+    "candidate_digest",
+    "cases",
+    "coordinate_refs",
+    "counts",
+    "current_guard_context",
+    "historical_inventory_complete",
+    "independent_interoperability_established",
+    "limits",
+    "name_guard_observations",
+    "name_guard_scope",
+    "normative_clauses",
+    "original_public_analysis_sha256",
+    "private_input_index_sha256",
+    "private_matrix_sha256",
+    "qualification_credit",
+    "qualification_workload_executed",
+    "schema",
+    "scope",
+    "sdk_caller_scope",
+    "source_windows",
+    "successor_frozen",
+    "whole_capability_complete"
+  ],
+  "type": "object"
+}
