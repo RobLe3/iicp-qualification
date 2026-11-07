@@ -1,0 +1,2195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "baseline_frozen": {
+      "type": "boolean"
+    },
+    "candidate_manifest_sha256": {
+      "type": "string"
+    },
+    "capability_dispositions": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "boundary": {
+                "type": "string"
+              },
+              "capability_id": {
+                "type": "string"
+              },
+              "classification": {
+                "type": "string"
+              },
+              "disposition": {
+                "type": "string"
+              },
+              "explicit_direct_relation_count": {
+                "type": "integer"
+              },
+              "full_semantic_conformance_established": {
+                "type": "boolean"
+              },
+              "reference_scope_group": {
+                "type": "string"
+              },
+              "related_case_ids": {
+                "items": false,
+                "type": "array"
+              },
+              "remaining_questions": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "boundary",
+              "capability_id",
+              "classification",
+              "disposition",
+              "explicit_direct_relation_count",
+              "full_semantic_conformance_established",
+              "reference_scope_group",
+              "related_case_ids",
+              "remaining_questions"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "boundary": {
+                "type": "string"
+              },
+              "capability_id": {
+                "type": "string"
+              },
+              "classification": {
+                "type": "string"
+              },
+              "disposition": {
+                "type": "string"
+              },
+              "explicit_direct_relation_count": {
+                "type": "integer"
+              },
+              "full_semantic_conformance_established": {
+                "type": "boolean"
+              },
+              "reference_scope_group": {
+                "type": "string"
+              },
+              "related_case_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "remaining_questions": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "boundary",
+              "capability_id",
+              "classification",
+              "disposition",
+              "explicit_direct_relation_count",
+              "full_semantic_conformance_established",
+              "reference_scope_group",
+              "related_case_ids",
+              "remaining_questions"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "type": "array"
+    },
+    "case_rows": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "accepted_reference_count": {
+                "type": "integer"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_url": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_argv_not_standalone": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "driver_url": {
+                "type": "string"
+              },
+              "effective_context_terms": {
+                "items": false,
+                "type": "array"
+              },
+              "full_semantic_conformance": {
+                "type": "boolean"
+              },
+              "limitation_terms": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "new_qualification_credit": {
+                "type": "integer"
+              },
+              "new_runtime_executions": {
+                "type": "integer"
+              },
+              "predicate_terms": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              },
+              "recorded_directory_flavors": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_modes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_runtimes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_targets": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "review_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "scenario_id": {
+                "type": "string"
+              },
+              "scope_flags": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "type": "string"
+                    },
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "field",
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_interpretation_layer": {
+                "type": "string"
+              },
+              "source_body_refs_not_reproduced": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "source_body_sha256": {
+                      "type": "string"
+                    },
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "source_body_sha256",
+                    "source_ref"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "source_layer_role": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "accepted_reference_count",
+              "assertion",
+              "case_id",
+              "case_map_url",
+              "component",
+              "declared_argv_not_standalone",
+              "driver_url",
+              "effective_context_terms",
+              "full_semantic_conformance",
+              "limitation_terms",
+              "new_qualification_credit",
+              "new_runtime_executions",
+              "predicate_terms",
+              "qualified_product_source_commit",
+              "recorded_directory_flavors",
+              "recorded_modes",
+              "recorded_runtimes",
+              "recorded_targets",
+              "review_ref",
+              "scenario_id",
+              "scope_flags",
+              "scope_interpretation_layer",
+              "source_body_refs_not_reproduced",
+              "source_layer_role"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "accepted_reference_count": {
+                "type": "integer"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_url": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_argv_not_standalone": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "driver_url": {
+                "type": "string"
+              },
+              "effective_context_terms": {
+                "items": false,
+                "type": "array"
+              },
+              "full_semantic_conformance": {
+                "type": "boolean"
+              },
+              "limitation_terms": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "new_qualification_credit": {
+                "type": "integer"
+              },
+              "new_runtime_executions": {
+                "type": "integer"
+              },
+              "predicate_terms": {
+                "items": {
+                  "anyOf": [
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "source_ref": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "access": {
+                              "type": "string"
+                            },
+                            "json_pointer": {
+                              "type": "string"
+                            },
+                            "retained_input_sha256": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "access",
+                            "json_pointer",
+                            "retained_input_sha256"
+                          ],
+                          "type": "object"
+                        },
+                        "value": {
+                          "items": {
+                            "type": "string"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "source_ref",
+                        "value"
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "source_ref": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "access": {
+                              "type": "string"
+                            },
+                            "json_pointer": {
+                              "type": "string"
+                            },
+                            "retained_input_sha256": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "access",
+                            "json_pointer",
+                            "retained_input_sha256"
+                          ],
+                          "type": "object"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "source_ref",
+                        "value"
+                      ],
+                      "type": "object"
+                    }
+                  ]
+                },
+                "type": "array"
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              },
+              "recorded_directory_flavors": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_modes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_runtimes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_targets": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "review_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "scenario_id": {
+                "type": "string"
+              },
+              "scope_flags": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "type": "string"
+                    },
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "field",
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_interpretation_layer": {
+                "type": "string"
+              },
+              "source_body_refs_not_reproduced": {
+                "items": false,
+                "type": "array"
+              },
+              "source_layer_role": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "accepted_reference_count",
+              "assertion",
+              "case_id",
+              "case_map_url",
+              "component",
+              "declared_argv_not_standalone",
+              "driver_url",
+              "effective_context_terms",
+              "full_semantic_conformance",
+              "limitation_terms",
+              "new_qualification_credit",
+              "new_runtime_executions",
+              "predicate_terms",
+              "qualified_product_source_commit",
+              "recorded_directory_flavors",
+              "recorded_modes",
+              "recorded_runtimes",
+              "recorded_targets",
+              "review_ref",
+              "scenario_id",
+              "scope_flags",
+              "scope_interpretation_layer",
+              "source_body_refs_not_reproduced",
+              "source_layer_role"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "accepted_reference_count": {
+                "type": "integer"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_url": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_argv_not_standalone": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "driver_url": {
+                "type": "string"
+              },
+              "effective_context_terms": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "effect": {
+                      "type": "string"
+                    },
+                    "materialized_layer": {
+                      "type": "string"
+                    },
+                    "raw_layer": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "effect",
+                    "materialized_layer",
+                    "raw_layer"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "full_semantic_conformance": {
+                "type": "boolean"
+              },
+              "limitation_terms": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "new_qualification_credit": {
+                "type": "integer"
+              },
+              "new_runtime_executions": {
+                "type": "integer"
+              },
+              "predicate_terms": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              },
+              "recorded_directory_flavors": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_modes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_runtimes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_targets": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "review_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "scenario_id": {
+                "type": "string"
+              },
+              "scope_flags": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "type": "string"
+                    },
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "field",
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_interpretation_layer": {
+                "type": "string"
+              },
+              "source_body_refs_not_reproduced": {
+                "items": false,
+                "type": "array"
+              },
+              "source_layer_role": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "accepted_reference_count",
+              "assertion",
+              "case_id",
+              "case_map_url",
+              "component",
+              "declared_argv_not_standalone",
+              "driver_url",
+              "effective_context_terms",
+              "full_semantic_conformance",
+              "limitation_terms",
+              "new_qualification_credit",
+              "new_runtime_executions",
+              "predicate_terms",
+              "qualified_product_source_commit",
+              "recorded_directory_flavors",
+              "recorded_modes",
+              "recorded_runtimes",
+              "recorded_targets",
+              "review_ref",
+              "scenario_id",
+              "scope_flags",
+              "scope_interpretation_layer",
+              "source_body_refs_not_reproduced",
+              "source_layer_role"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "accepted_reference_count": {
+                "type": "integer"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_url": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_argv_not_standalone": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "driver_url": {
+                "type": "string"
+              },
+              "effective_context_terms": {
+                "items": false,
+                "type": "array"
+              },
+              "full_semantic_conformance": {
+                "type": "boolean"
+              },
+              "limitation_terms": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "new_qualification_credit": {
+                "type": "integer"
+              },
+              "new_runtime_executions": {
+                "type": "integer"
+              },
+              "predicate_terms": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              },
+              "recorded_directory_flavors": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_modes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_runtimes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_targets": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "review_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "scenario_id": {
+                "type": "string"
+              },
+              "scope_flags": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "type": "string"
+                    },
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "field",
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_interpretation_layer": {
+                "type": "string"
+              },
+              "source_body_refs_not_reproduced": {
+                "items": false,
+                "type": "array"
+              },
+              "source_layer_role": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "accepted_reference_count",
+              "assertion",
+              "case_id",
+              "case_map_url",
+              "component",
+              "declared_argv_not_standalone",
+              "driver_url",
+              "effective_context_terms",
+              "full_semantic_conformance",
+              "limitation_terms",
+              "new_qualification_credit",
+              "new_runtime_executions",
+              "predicate_terms",
+              "qualified_product_source_commit",
+              "recorded_directory_flavors",
+              "recorded_modes",
+              "recorded_runtimes",
+              "recorded_targets",
+              "review_ref",
+              "scenario_id",
+              "scope_flags",
+              "scope_interpretation_layer",
+              "source_body_refs_not_reproduced",
+              "source_layer_role"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "accepted_reference_count": {
+                "type": "integer"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_url": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_argv_not_standalone": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "driver_url": {
+                "type": "string"
+              },
+              "effective_context_terms": {
+                "items": false,
+                "type": "array"
+              },
+              "full_semantic_conformance": {
+                "type": "boolean"
+              },
+              "limitation_terms": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "new_qualification_credit": {
+                "type": "integer"
+              },
+              "new_runtime_executions": {
+                "type": "integer"
+              },
+              "predicate_terms": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              },
+              "recorded_directory_flavors": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_modes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_runtimes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_targets": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "review_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "scenario_id": {
+                "type": "string"
+              },
+              "scope_flags": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "type": "string"
+                    },
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "field",
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_interpretation_layer": {
+                "type": "string"
+              },
+              "source_body_refs_not_reproduced": {
+                "items": false,
+                "type": "array"
+              },
+              "source_layer_role": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "accepted_reference_count",
+              "assertion",
+              "case_id",
+              "case_map_url",
+              "component",
+              "declared_argv_not_standalone",
+              "driver_url",
+              "effective_context_terms",
+              "full_semantic_conformance",
+              "limitation_terms",
+              "new_qualification_credit",
+              "new_runtime_executions",
+              "predicate_terms",
+              "qualified_product_source_commit",
+              "recorded_directory_flavors",
+              "recorded_modes",
+              "recorded_runtimes",
+              "recorded_targets",
+              "review_ref",
+              "scenario_id",
+              "scope_flags",
+              "scope_interpretation_layer",
+              "source_body_refs_not_reproduced",
+              "source_layer_role"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "accepted_reference_count": {
+                "type": "integer"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_url": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_argv_not_standalone": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "driver_url": {
+                "type": "string"
+              },
+              "effective_context_terms": {
+                "items": false,
+                "type": "array"
+              },
+              "full_semantic_conformance": {
+                "type": "boolean"
+              },
+              "limitation_terms": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "new_qualification_credit": {
+                "type": "integer"
+              },
+              "new_runtime_executions": {
+                "type": "integer"
+              },
+              "predicate_terms": {
+                "items": false,
+                "type": "array"
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              },
+              "recorded_directory_flavors": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_modes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_runtimes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_targets": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "review_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "scenario_id": {
+                "type": "string"
+              },
+              "scope_flags": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "type": "string"
+                    },
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "field",
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_interpretation_layer": {
+                "type": "string"
+              },
+              "source_body_refs_not_reproduced": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "source_body_sha256": {
+                      "type": "string"
+                    },
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "source_body_sha256",
+                    "source_ref"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "source_layer_role": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "accepted_reference_count",
+              "assertion",
+              "case_id",
+              "case_map_url",
+              "component",
+              "declared_argv_not_standalone",
+              "driver_url",
+              "effective_context_terms",
+              "full_semantic_conformance",
+              "limitation_terms",
+              "new_qualification_credit",
+              "new_runtime_executions",
+              "predicate_terms",
+              "qualified_product_source_commit",
+              "recorded_directory_flavors",
+              "recorded_modes",
+              "recorded_runtimes",
+              "recorded_targets",
+              "review_ref",
+              "scenario_id",
+              "scope_flags",
+              "scope_interpretation_layer",
+              "source_body_refs_not_reproduced",
+              "source_layer_role"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "accepted_reference_count": {
+                "type": "integer"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_url": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_argv_not_standalone": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "driver_url": {
+                "type": "string"
+              },
+              "effective_context_terms": {
+                "items": false,
+                "type": "array"
+              },
+              "full_semantic_conformance": {
+                "type": "boolean"
+              },
+              "limitation_terms": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "new_qualification_credit": {
+                "type": "integer"
+              },
+              "new_runtime_executions": {
+                "type": "integer"
+              },
+              "predicate_terms": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              },
+              "recorded_directory_flavors": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_modes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_runtimes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_targets": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "review_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "scenario_id": {
+                "type": "string"
+              },
+              "scope_flags": {
+                "items": false,
+                "type": "array"
+              },
+              "scope_interpretation_layer": {
+                "type": "string"
+              },
+              "source_body_refs_not_reproduced": {
+                "items": false,
+                "type": "array"
+              },
+              "source_layer_role": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "accepted_reference_count",
+              "assertion",
+              "case_id",
+              "case_map_url",
+              "component",
+              "declared_argv_not_standalone",
+              "driver_url",
+              "effective_context_terms",
+              "full_semantic_conformance",
+              "limitation_terms",
+              "new_qualification_credit",
+              "new_runtime_executions",
+              "predicate_terms",
+              "qualified_product_source_commit",
+              "recorded_directory_flavors",
+              "recorded_modes",
+              "recorded_runtimes",
+              "recorded_targets",
+              "review_ref",
+              "scenario_id",
+              "scope_flags",
+              "scope_interpretation_layer",
+              "source_body_refs_not_reproduced",
+              "source_layer_role"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "accepted_harness_source_commit": {
+                "type": "string"
+              },
+              "accepted_reference_count": {
+                "type": "integer"
+              },
+              "assertion": {
+                "type": "string"
+              },
+              "case_id": {
+                "type": "string"
+              },
+              "case_map_url": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "declared_argv_not_standalone": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "driver_url": {
+                "type": "string"
+              },
+              "effective_context_terms": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "effect": {
+                      "type": "string"
+                    },
+                    "materialized_layer": {
+                      "type": "string"
+                    },
+                    "raw_layer": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "effect",
+                    "materialized_layer",
+                    "raw_layer"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "full_semantic_conformance": {
+                "type": "boolean"
+              },
+              "limitation_terms": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "new_qualification_credit": {
+                "type": "integer"
+              },
+              "new_runtime_executions": {
+                "type": "integer"
+              },
+              "predicate_terms": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "qualified_product_source_commit": {
+                "type": "string"
+              },
+              "recorded_directory_flavors": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_modes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_runtimes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "recorded_targets": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "review_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "scenario_id": {
+                "type": "string"
+              },
+              "scope_flags": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "type": "string"
+                    },
+                    "source_ref": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "access": {
+                          "type": "string"
+                        },
+                        "json_pointer": {
+                          "type": "string"
+                        },
+                        "retained_input_sha256": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access",
+                        "json_pointer",
+                        "retained_input_sha256"
+                      ],
+                      "type": "object"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "field",
+                    "source_ref",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_interpretation_layer": {
+                "type": "string"
+              },
+              "source_body_refs_not_reproduced": {
+                "items": false,
+                "type": "array"
+              },
+              "source_layer_role": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "accepted_harness_source_commit",
+              "accepted_reference_count",
+              "assertion",
+              "case_id",
+              "case_map_url",
+              "component",
+              "declared_argv_not_standalone",
+              "driver_url",
+              "effective_context_terms",
+              "full_semantic_conformance",
+              "limitation_terms",
+              "new_qualification_credit",
+              "new_runtime_executions",
+              "predicate_terms",
+              "qualified_product_source_commit",
+              "recorded_directory_flavors",
+              "recorded_modes",
+              "recorded_runtimes",
+              "recorded_targets",
+              "review_ref",
+              "scenario_id",
+              "scope_flags",
+              "scope_interpretation_layer",
+              "source_body_refs_not_reproduced",
+              "source_layer_role"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "type": "array"
+    },
+    "catalog_obligations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "authority_scope": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "expectation_source_ref": {
+            "additionalProperties": false,
+            "properties": {
+              "access": {
+                "type": "string"
+              },
+              "json_pointer": {
+                "type": "string"
+              },
+              "retained_input_sha256": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "access",
+              "json_pointer",
+              "retained_input_sha256"
+            ],
+            "type": "object"
+          },
+          "expectation_status": {
+            "type": "string"
+          },
+          "full_obligation_verified": {
+            "type": "boolean"
+          },
+          "scenario_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "authority_scope",
+          "category",
+          "expectation_source_ref",
+          "expectation_status",
+          "full_obligation_verified",
+          "scenario_id"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "execution_authorized": {
+      "type": "boolean"
+    },
+    "graph_counts": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted_assignment_references": {
+          "type": "integer"
+        },
+        "capability_classifications": {
+          "additionalProperties": false,
+          "properties": {
+            "COMPATIBILITY_ANCHOR": {
+              "type": "integer"
+            },
+            "EXPERIMENTAL": {
+              "type": "integer"
+            },
+            "OPTIONAL_STABLE": {
+              "type": "integer"
+            },
+            "REQUIRED_STABLE": {
+              "type": "integer"
+            },
+            "RESEARCH": {
+              "type": "integer"
+            },
+            "UNSUPPORTED": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "COMPATIBILITY_ANCHOR",
+            "EXPERIMENTAL",
+            "OPTIONAL_STABLE",
+            "REQUIRED_STABLE",
+            "RESEARCH",
+            "UNSUPPORTED"
+          ],
+          "type": "object"
+        },
+        "capability_families": {
+          "type": "integer"
+        },
+        "case_definitions": {
+          "type": "integer"
+        },
+        "catalog_obligations": {
+          "type": "integer"
+        },
+        "edge_assignment_references": {
+          "type": "integer"
+        },
+        "edge_case_definitions": {
+          "type": "integer"
+        },
+        "edges": {
+          "type": "integer"
+        },
+        "lifecycle_obligations": {
+          "type": "integer"
+        },
+        "new_qualification_credit": {
+          "type": "integer"
+        },
+        "new_runtime_executions": {
+          "type": "integer"
+        },
+        "nodes": {
+          "type": "integer"
+        },
+        "ordinary_witness_slices": {
+          "type": "integer"
+        },
+        "receipt_references": {
+          "type": "integer"
+        },
+        "support_assignment_references": {
+          "type": "integer"
+        },
+        "support_case_definitions": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "accepted_assignment_references",
+        "capability_classifications",
+        "capability_families",
+        "case_definitions",
+        "catalog_obligations",
+        "edge_assignment_references",
+        "edge_case_definitions",
+        "edges",
+        "lifecycle_obligations",
+        "new_qualification_credit",
+        "new_runtime_executions",
+        "nodes",
+        "ordinary_witness_slices",
+        "receipt_references",
+        "support_assignment_references",
+        "support_case_definitions"
+      ],
+      "type": "object"
+    },
+    "historical_inventory_complete": {
+      "type": "boolean"
+    },
+    "lifecycle_obligations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "maturity": {
+            "type": "string"
+          },
+          "obligation_id": {
+            "type": "string"
+          },
+          "required_behavior": {
+            "type": "string"
+          },
+          "semantic_assertion_mapping": {
+            "type": "string"
+          },
+          "whole_obligation_verified": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "maturity",
+          "obligation_id",
+          "required_behavior",
+          "semantic_assertion_mapping",
+          "whole_obligation_verified"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "private_graph_sha256": {
+      "type": "string"
+    },
+    "qualification_credit": {
+      "type": "integer"
+    },
+    "reference_slices": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "obligation_crosswalk": {
+            "type": "string"
+          },
+          "qualification_credit": {
+            "type": "integer"
+          },
+          "qualification_replay": {
+            "type": "boolean"
+          },
+          "slice_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "obligation_crosswalk",
+          "qualification_credit",
+          "qualification_replay",
+          "slice_id"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "source_input_digests": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "state": {
+      "type": "string"
+    },
+    "text_projection": {
+      "type": "string"
+    },
+    "whole_capability_completion": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "baseline_frozen",
+    "candidate_manifest_sha256",
+    "capability_dispositions",
+    "case_rows",
+    "catalog_obligations",
+    "execution_authorized",
+    "graph_counts",
+    "historical_inventory_complete",
+    "lifecycle_obligations",
+    "limits",
+    "private_graph_sha256",
+    "qualification_credit",
+    "reference_slices",
+    "schema",
+    "source_input_digests",
+    "state",
+    "text_projection",
+    "whole_capability_completion"
+  ],
+  "type": "object"
+}

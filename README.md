@@ -163,3 +163,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Stabilization successor decision inputs
 
 [The dated source and qualification decision](reports/postcert/2026-11-07-successor-decision/README.md) separates six qualified sources, later public development changes and seventeen unselected artifact slots. It preserves candidate-bound qualification and the remaining source, regression, review and execution gates; it does not launch or freeze a successor.
+
+## Functional-reference assembly
+
+[The obligation-oriented reference reader](reports/postcert/2026-11-07-functional-reference/README.md) joins all 147 reviewed definitions to existing evidence while keeping raw predicates, staged context, scope limitations and 22 supported/conditional versus six boundary dispositions separate. This is a proposed original-candidate reference, not a frozen successor or new qualification credit.
