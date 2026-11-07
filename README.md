@@ -147,3 +147,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Six-component owner audit
 
 [The dated owner-body audit](reports/postcert/2026-11-07-owner-audit/README.md) indexes 276 public issue bodies and 17 selected correction-source joins. Closed tracker state and source inclusion do not establish complete defect clearance, new qualification credit or historical completeness.
+
+## SDK release and recovery assertion depth
+
+[The reviewed three-SDK source analysis](reports/postcert/2026-11-07-release-recovery/README.md) distinguishes selected metadata, injected-failure and persistence assertions across 19 case definitions. It adds source traceability, not qualification credit or complete offline-install, rollback or recovery guarantees.

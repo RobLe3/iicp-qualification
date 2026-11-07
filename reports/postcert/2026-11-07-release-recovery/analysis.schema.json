@@ -1,0 +1,278 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "accepted_harness_identical_files": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "all_six_defect_clearance": {
+      "const": false,
+      "type": "boolean"
+    },
+    "as_of": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "authority": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "candidate_digest": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "canonical_root_commit": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "case_definitions": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "cases": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertion": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "assertion_depth": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "case_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "component": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "declared_command": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "existing_coordinate_count": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "limitations": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "new_qualification_credit": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "new_runtime_executions": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "scenario": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "selected_predicate": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_commit": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_path": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_sha256": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_url": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "whole_contract_verified": {
+            "const": false,
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "assertion",
+          "assertion_depth",
+          "case_id",
+          "component",
+          "declared_command",
+          "existing_coordinate_count",
+          "limitations",
+          "new_qualification_credit",
+          "new_runtime_executions",
+          "scenario",
+          "selected_predicate",
+          "source_commit",
+          "source_path",
+          "source_sha256",
+          "source_url",
+          "whole_contract_verified"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "correction_source_joins": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "correction_commit": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "correction_url": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "new_runtime_execution": {
+            "const": false,
+            "type": "boolean"
+          },
+          "owner": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "owner_url": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "qualified_commit": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_inclusion": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "whole_issue_acceptance": {
+            "const": false,
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "correction_commit",
+          "correction_url",
+          "new_runtime_execution",
+          "owner",
+          "owner_url",
+          "qualified_commit",
+          "source_inclusion",
+          "whole_issue_acceptance"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "existing_coordinate_references": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "frozen_reference": {
+      "const": false,
+      "type": "boolean"
+    },
+    "historical_inventory_complete": {
+      "const": false,
+      "type": "boolean"
+    },
+    "limits": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "new_qualification_credit": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "new_runtime_executions": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "partial_frontier": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates_outside": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "declared_coordinate_references": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "declared_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "definitions_outside": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "reviewed_coordinate_references": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "reviewed_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "whole_normative_contracts_complete": {
+          "const": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "coordinates_outside",
+        "declared_coordinate_references",
+        "declared_definitions",
+        "definitions_outside",
+        "reviewed_coordinate_references",
+        "reviewed_definitions",
+        "whole_normative_contracts_complete"
+      ],
+      "type": "object"
+    },
+    "retained_qualified_source_files": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "schema": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "accepted_harness_identical_files",
+    "all_six_defect_clearance",
+    "as_of",
+    "authority",
+    "candidate_digest",
+    "canonical_root_commit",
+    "case_definitions",
+    "cases",
+    "correction_source_joins",
+    "existing_coordinate_references",
+    "frozen_reference",
+    "historical_inventory_complete",
+    "limits",
+    "new_qualification_credit",
+    "new_runtime_executions",
+    "partial_frontier",
+    "retained_qualified_source_files",
+    "schema"
+  ],
+  "type": "object"
+}
