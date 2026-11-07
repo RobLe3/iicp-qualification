@@ -139,3 +139,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Directory registration witnesses
 
 [Read the reviewed PHP/Rust kernel observations](reports/postcert/2026-11-07-directory-kernels/README.md) for distinct SQLite, in-memory and MySQL method evidence, preserved failed attempts and fresh-connection limits. These zero-credit observations are not a complete capability baseline or cross-platform equivalence claim.
+
+## Capability assertion depth
+
+[Read the source-linked assertion bridge](reports/postcert/2026-11-07-capability-assertions/README.md) for selected requirements, bounded observations, partial checks and missing witnesses across the three local Directory profiles. The offline semantic replay introduces no new qualification gate or credit.

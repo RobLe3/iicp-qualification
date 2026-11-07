@@ -1,0 +1,389 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assertion_ids": {
+      "const": 12,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "NOT_EXERCISED_IN_SELECTED_WITNESSES": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "PARTIAL_OBSERVATION": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "VERIFIED_BOUNDED_OBSERVATION": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "NOT_EXERCISED_IN_SELECTED_WITNESSES",
+        "PARTIAL_OBSERVATION",
+        "VERIFIED_BOUNDED_OBSERVATION"
+      ],
+      "type": "object"
+    },
+    "declared_parent_contracts": {
+      "const": 4,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "evidence": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "evidence_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "original_bytes_public": {
+            "type": "boolean"
+          },
+          "sha256": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidence_id",
+          "sha256",
+          "original_bytes_public"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "historical_inventory_complete": {
+      "const": false,
+      "type": "boolean"
+    },
+    "independent_interoperability_established": {
+      "const": false,
+      "type": "boolean"
+    },
+    "limits": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "new_qualification_gates_defined": {
+      "const": false,
+      "type": "boolean"
+    },
+    "original_qualification_changed": {
+      "const": false,
+      "type": "boolean"
+    },
+    "private_bridge_sha256": {
+      "const": "a8d465b64bf4ccc904599813678112093210ae686b582921d0d6b08bd20fd703",
+      "minLength": 1,
+      "type": "string"
+    },
+    "private_raw_evidence_included": {
+      "const": false,
+      "type": "boolean"
+    },
+    "profile_assertion_rows": {
+      "const": 36,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "profiles": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "protocol_commit": {
+      "const": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "minLength": 1,
+      "type": "string"
+    },
+    "qualification_credit": {
+      "const": 0,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "reference_candidate_digest": {
+      "const": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+      "minLength": 1,
+      "type": "string"
+    },
+    "rows": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertion_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "assertion_kind": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "authority_evidence": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "authority_lines": {
+            "items": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "contract_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "evidence_class": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "evidence_ids": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "explanation": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "original_campaign_assertion_execution_established": {
+            "type": "boolean"
+          },
+          "profile_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "proof_basis": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "qualification_credit": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "statement": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "status": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "assertion_id",
+          "assertion_kind",
+          "authority_evidence",
+          "authority_lines",
+          "contract_id",
+          "evidence_class",
+          "evidence_ids",
+          "explanation",
+          "original_campaign_assertion_execution_established",
+          "profile_id",
+          "proof_basis",
+          "qualification_credit",
+          "statement",
+          "status"
+        ],
+        "type": "object"
+      },
+      "maxItems": 36,
+      "minItems": 36,
+      "type": "array"
+    },
+    "schema": {
+      "const": "iicp.public-capability-assertion-bridge.v1",
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_metadata": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "commit": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "path": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "repository": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sha256": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "url": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "repository",
+          "commit",
+          "path",
+          "sha256",
+          "url"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "successor_frozen": {
+      "const": false,
+      "type": "boolean"
+    },
+    "vectors": {
+      "additionalProperties": false,
+      "properties": {
+        "expected_capabilities": {
+          "items": {
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "observed_detail_capabilities": {
+          "items": {
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "observed_discovery_capabilities": {
+          "items": {
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "observed_php_empty": {
+          "additionalProperties": false,
+          "properties": {
+            "error_code": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "node_count_after": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "node_count_before": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "status": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "status",
+            "error_code",
+            "node_count_before",
+            "node_count_after"
+          ],
+          "type": "object"
+        },
+        "observed_refusals": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "case": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "error_code": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "row_counts": {
+                "items": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "status": {
+                "minimum": 0,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "case",
+              "status",
+              "error_code",
+              "row_counts"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "expected_capabilities",
+        "observed_detail_capabilities",
+        "observed_discovery_capabilities",
+        "observed_refusals",
+        "observed_php_empty"
+      ],
+      "type": "object"
+    },
+    "whole_capability_complete": {
+      "const": false,
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "reference_candidate_digest",
+    "protocol_commit",
+    "declared_parent_contracts",
+    "assertion_ids",
+    "profiles",
+    "profile_assertion_rows",
+    "counts",
+    "rows",
+    "schema",
+    "qualification_credit",
+    "new_qualification_gates_defined",
+    "original_qualification_changed",
+    "whole_capability_complete",
+    "successor_frozen",
+    "historical_inventory_complete",
+    "independent_interoperability_established",
+    "private_raw_evidence_included",
+    "source_metadata",
+    "evidence",
+    "private_bridge_sha256",
+    "vectors",
+    "limits"
+  ],
+  "type": "object"
+}

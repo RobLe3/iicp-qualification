@@ -1,0 +1,1183 @@
+{
+  "assertion_ids": 12,
+  "counts": {
+    "NOT_EXERCISED_IN_SELECTED_WITNESSES": 19,
+    "PARTIAL_OBSERVATION": 3,
+    "VERIFIED_BOUNDED_OBSERVATION": 14
+  },
+  "declared_parent_contracts": 4,
+  "evidence": [
+    {
+      "evidence_id": "prior-contract-map",
+      "original_bytes_public": false,
+      "sha256": "b6e74ff3b5d5a3e92ea7bb04981250da9e3bf9dafe088582543681ed6eae1eba"
+    },
+    {
+      "evidence_id": "protocol-array-rules",
+      "original_bytes_public": false,
+      "sha256": "9dfb7e20ed011439119fcf00e3d37358b7d92ffff63bbb66b9f65e83e743925e"
+    },
+    {
+      "evidence_id": "protocol-semantics",
+      "original_bytes_public": false,
+      "sha256": "8afeb2a854d0e6b58a2a8f52945b0155a2175a83c8fa7742cb2e330d7f2e161d"
+    },
+    {
+      "evidence_id": "protocol-schema",
+      "original_bytes_public": false,
+      "sha256": "707da7eebc5e8b55a720386ca713c977beeadd640f4b09eb48ea99573d2b1ab0"
+    },
+    {
+      "evidence_id": "php-original-test",
+      "original_bytes_public": false,
+      "sha256": "25f2235fb239c1eeaa5e163f33b2e82f2c8b52dbe2664e5e99d06de924b063c0"
+    },
+    {
+      "evidence_id": "rust-original-tests",
+      "original_bytes_public": false,
+      "sha256": "80672e4fe2c45ddd325e41e02df09e28bb24f6e19444dd004b2d57eac9446251"
+    },
+    {
+      "evidence_id": "php-empty-test",
+      "original_bytes_public": false,
+      "sha256": "952e6c56f3b003ebbb4813d33051e42f40206f06b3fa95caaf20d1dcaf7e7566"
+    },
+    {
+      "evidence_id": "php-original-junit",
+      "original_bytes_public": false,
+      "sha256": "11abcfbba2c4891f4408b06f28c55782cb026415c3e278ad3af53d2ca5616bb3"
+    },
+    {
+      "evidence_id": "php-empty-junit",
+      "original_bytes_public": false,
+      "sha256": "f96c3889eb3b5ba6f03e8ea092468f047337dd60a6988c3d3da6e82ed536527e"
+    },
+    {
+      "evidence_id": "php-empty-response",
+      "original_bytes_public": false,
+      "sha256": "6381f1bca8a7773ccec2a0f44c1181527b04caf7c10e055e7531a6d32d5273ee"
+    },
+    {
+      "evidence_id": "rust-memory-positive-stdout",
+      "original_bytes_public": false,
+      "sha256": "f11e093dde93a27cc5abf5926998efa516f0a2463ecf508bee70d3b6ffbb9ebd"
+    },
+    {
+      "evidence_id": "rust-memory-positive-receipt",
+      "original_bytes_public": false,
+      "sha256": "e46f1376b93b1dfff339283ad246479e7dff3fca494e2962409c4957a7f9190b"
+    },
+    {
+      "evidence_id": "mysql-test-source",
+      "original_bytes_public": false,
+      "sha256": "248f1fc38a7901258760afa319706b10c49ddc5712bde0e38edba4c18b3261a6"
+    },
+    {
+      "evidence_id": "mysql-case-stdout",
+      "original_bytes_public": false,
+      "sha256": "6712060d159ea062572f58faac8eef6e4d684e15c3235664dd6940254c219afe"
+    },
+    {
+      "evidence_id": "mysql-complete",
+      "original_bytes_public": false,
+      "sha256": "b335d976fc61935367903ef2c6ff23a09c79b3a60ac8e5a14daece06e9b36bd9"
+    },
+    {
+      "evidence_id": "mysql-detail",
+      "original_bytes_public": false,
+      "sha256": "e5a6a21a71ab57fc555deb07e8186ad3b62068a4fde76a55cd2c93ff53411f3b"
+    },
+    {
+      "evidence_id": "mysql-discovery",
+      "original_bytes_public": false,
+      "sha256": "080cb1387ac461055e49534dbf25fb3aff86391a09fdb8dcd740bf32eec92a9a"
+    },
+    {
+      "evidence_id": "mysql-registration",
+      "original_bytes_public": false,
+      "sha256": "cb0cb0dc15f6096628b3fadb3edac1f52b0d4615d0d6541944cd8476253aa7a8"
+    },
+    {
+      "evidence_id": "mysql-review",
+      "original_bytes_public": false,
+      "sha256": "9c9a26c27c525e41122059f425c17c7b78bc45c961b10a18630fc51f450e8064"
+    },
+    {
+      "evidence_id": "php-review",
+      "original_bytes_public": false,
+      "sha256": "5086fab4e55fd0c6276d9041a0225db5ac8ec8d261a7c326884142298852c472"
+    },
+    {
+      "evidence_id": "rust-memory-review",
+      "original_bytes_public": false,
+      "sha256": "73ddfed797a8ac5127e22f906b1971ed7a6761ecea5f7d951056847ec5fbde5e"
+    },
+    {
+      "evidence_id": "mysql-refusal-0",
+      "original_bytes_public": false,
+      "sha256": "4baa77b0cc84974c0c4598a6efe21b2240115741c428773c35ad804d531298c7"
+    },
+    {
+      "evidence_id": "mysql-refusal-1",
+      "original_bytes_public": false,
+      "sha256": "7874da38aa106810967f0e103daa689fdcb818895a5bfffe1a0f83b6b9759a10"
+    },
+    {
+      "evidence_id": "mysql-refusal-2",
+      "original_bytes_public": false,
+      "sha256": "91bdb5dcafd20cfe4178383b657e972317f5ea5d64fe30fbf6cdbc36199dad95"
+    },
+    {
+      "evidence_id": "mysql-refusal-3",
+      "original_bytes_public": false,
+      "sha256": "d5bf8e012ae0a5542cbf9b0d50216ea4097073bae352d066e7f59686a0e88eb1"
+    },
+    {
+      "evidence_id": "mysql-refusal-4",
+      "original_bytes_public": false,
+      "sha256": "5e3c5405352984c2c821c5acfd11245fe1665b6c0df580e7b6269137f464997a"
+    },
+    {
+      "evidence_id": "mysql-refusal-5",
+      "original_bytes_public": false,
+      "sha256": "ba0534862c8faec515a93713014686bf5ea2f0ce0b35951c22ff0357f5b19222"
+    }
+  ],
+  "historical_inventory_complete": false,
+  "independent_interoperability_established": false,
+  "limits": [
+    "36rows are12selected analytical questions across3local backend profiles,not campaign assignments,all normative requirements,or mandatory new execution gates.",
+    "14bounded observations,3partial observations and19unexercised rows are not a product-defect count or qualification percentage.",
+    "Passing method/source assertions and rechecked captured values have different proof bases; missing evidence does not show defective code.",
+    "The Profile contract is additive,opt-in and parity-gated; this bridge does not resolve its supported-scope adoption or create a new endpoint.",
+    "Observed vectors are exact allowlisted projections of existing synthetic fixture captures; node IDs,endpoints,private paths,raw error details and credentials are excluded.",
+    "Public checks replay these minimized vectors and validate reviewed source/row identities; they cannot retrieve or independently authenticate unavailable private originals.",
+    "Original failures and dated source-only NOT_EXECUTED records remain preserved. No original qualification credit,full capability conformance,crash durability,real HTTP/TLS,production security,external interoperability or successor freeze is inferred."
+  ],
+  "new_qualification_gates_defined": false,
+  "original_qualification_changed": false,
+  "private_bridge_sha256": "a8d465b64bf4ccc904599813678112093210ae686b582921d0d6b08bd20fd703",
+  "private_raw_evidence_included": false,
+  "profile_assertion_rows": 36,
+  "profiles": [
+    "php-sqlite",
+    "rust-memory",
+    "rust-mysql"
+  ],
+  "protocol_commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+  "qualification_credit": 0,
+  "reference_candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "rows": [
+    {
+      "assertion_id": "CAP-EMPTY.NONEMPTY.ACCEPT",
+      "assertion_kind": "POSITIVE_CONTROL",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        261,
+        272
+      ],
+      "contract_id": "CAP-EMPTY",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-original-junit"
+      ],
+      "explanation": "Original PHP positive method asserts201; one accepted fixture variant.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "PINNED_ASSERTION_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Nonempty valid fixture advertisement is admitted.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-EMPTY.NONEMPTY.ACCEPT",
+      "assertion_kind": "POSITIVE_CONTROL",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        261,
+        272
+      ],
+      "contract_id": "CAP-EMPTY",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-memory-positive-stdout"
+      ],
+      "explanation": "Original Rust positive method asserts201 with two variants.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "PINNED_ASSERTION_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Nonempty valid fixture advertisement is admitted.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-EMPTY.NONEMPTY.ACCEPT",
+      "assertion_kind": "POSITIVE_CONTROL",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        261,
+        272
+      ],
+      "contract_id": "CAP-EMPTY",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-registration"
+      ],
+      "explanation": "Captured registration201 and full method terminalPASS.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "REPLAYED_CAPTURE_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Nonempty valid fixture advertisement is admitted.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-EMPTY.EMPTY.REFUSE422",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        272,
+        272
+      ],
+      "contract_id": "CAP-EMPTY",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-empty-response"
+      ],
+      "explanation": "Corrected new private method and captured422/validation_error with unchanged node count.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "REPLAYED_CAPTURE_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Empty capability array is refused with422 and unchanged checked row count.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-EMPTY.EMPTY.REFUSE422",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        272,
+        272
+      ],
+      "contract_id": "CAP-EMPTY",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-original-tests"
+      ],
+      "explanation": "Selected original methods do not submit an empty array.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Empty capability array is refused with422 and unchanged checked row count.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-EMPTY.EMPTY.REFUSE422",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        272,
+        272
+      ],
+      "contract_id": "CAP-EMPTY",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-refusal-0"
+      ],
+      "explanation": "Captured empty-array422/validation_error and unchanged1node/2capability counts.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "REPLAYED_CAPTURE_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Empty capability array is refused with422 and unchanged checked row count.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.DISTINCT-ID.ACCEPT",
+      "assertion_kind": "POSITIVE_CONTROL",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        261,
+        268
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-original-test"
+      ],
+      "explanation": "Selected PHP positive fixture has only one variant.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Two same-intent fixture variants with distinct explicit IDs are admitted.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.DISTINCT-ID.ACCEPT",
+      "assertion_kind": "POSITIVE_CONTROL",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        261,
+        268
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-memory-positive-stdout"
+      ],
+      "explanation": "Original positive fixture admits two same-intent variants and asserts both distinct IDs.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "PINNED_ASSERTION_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Two same-intent fixture variants with distinct explicit IDs are admitted.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.DISTINCT-ID.ACCEPT",
+      "assertion_kind": "POSITIVE_CONTROL",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        261,
+        268
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-detail"
+      ],
+      "explanation": "New method and raw detail/discovery retain both same-intent distinct IDs.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "REPLAYED_CAPTURE_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Two same-intent fixture variants with distinct explicit IDs are admitted.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.SAME-PAIR.NONIDENTICAL.REFUSE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        264,
+        266
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-original-junit"
+      ],
+      "explanation": "Second duplicate test changes features while retaining intent/variant_id; its422assertion passes.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "PINNED_ASSERTION_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Nonidentical objects sharing intent and variant_id are refused.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.SAME-PAIR.NONIDENTICAL.REFUSE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        264,
+        266
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-original-tests"
+      ],
+      "explanation": "Selected Rust duplicate input is an exact clone with an ID; it cannot isolate the nonidentical same-pair branch.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Nonidentical objects sharing intent and variant_id are refused.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.SAME-PAIR.NONIDENTICAL.REFUSE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        264,
+        266
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-test-source"
+      ],
+      "explanation": "MySQL duplicate input is an exact clone with an ID; no nonidentical same-pair case.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Nonidentical objects sharing intent and variant_id are refused.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.IDLESS.EXACT-DUPLICATE.REFUSE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        264,
+        266
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-original-test"
+      ],
+      "explanation": "Both selected PHP duplicate inputs contain variant_id.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Exact duplicate objects without variant_id are refused.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.IDLESS.EXACT-DUPLICATE.REFUSE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        264,
+        266
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-original-tests"
+      ],
+      "explanation": "Selected duplicate input contains variant_id.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Exact duplicate objects without variant_id are refused.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.IDLESS.EXACT-DUPLICATE.REFUSE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        264,
+        266
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-test-source"
+      ],
+      "explanation": "Selected duplicate input contains variant_id.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Exact duplicate objects without variant_id are refused.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.IDLESS.DISTINCT.ACCEPT",
+      "assertion_kind": "POSITIVE_CONTROL",
+      "authority_evidence": "protocol-semantics",
+      "authority_lines": [
+        39,
+        44
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-original-test"
+      ],
+      "explanation": "No distinct same-intent ID-less positive pair in selected methods.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Distinct same-intent objects without variant_id are admitted.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.IDLESS.DISTINCT.ACCEPT",
+      "assertion_kind": "POSITIVE_CONTROL",
+      "authority_evidence": "protocol-semantics",
+      "authority_lines": [
+        39,
+        44
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-original-tests"
+      ],
+      "explanation": "Positive pair uses explicit distinct IDs.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Distinct same-intent objects without variant_id are admitted.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-UNIQUE.IDLESS.DISTINCT.ACCEPT",
+      "assertion_kind": "POSITIVE_CONTROL",
+      "authority_evidence": "protocol-semantics",
+      "authority_lines": [
+        39,
+        44
+      ],
+      "contract_id": "CAP-UNIQUE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-test-source"
+      ],
+      "explanation": "Positive pair uses explicit distinct IDs.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Distinct same-intent objects without variant_id are admitted.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-PRESERVE.NODE-DETAIL.SELECTED",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        269,
+        271
+      ],
+      "contract_id": "CAP-PRESERVE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-original-junit"
+      ],
+      "explanation": "Node-detail assertions check version,phase,variant,execution capability,limit unit and provenance source. Not all fields.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "PINNED_ASSERTION_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Declared selected vocabulary fields survive node-detail readback.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-PRESERVE.NODE-DETAIL.SELECTED",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        269,
+        271
+      ],
+      "contract_id": "CAP-PRESERVE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-original-tests"
+      ],
+      "explanation": "Selected positive method reads discovery, not node-detail.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Declared selected vocabulary fields survive node-detail readback.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-PRESERVE.NODE-DETAIL.SELECTED",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        269,
+        271
+      ],
+      "contract_id": "CAP-PRESERVE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-detail"
+      ],
+      "explanation": "Raw fresh-pool node-detail and method compare declared fixture fields, matching variants by identity.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "REPLAYED_CAPTURE_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Declared selected vocabulary fields survive node-detail readback.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-PRESERVE.OPTIONAL-EXTENSION.FLAG-AND-VALUE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        269,
+        271
+      ],
+      "contract_id": "CAP-PRESERVE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-original-test"
+      ],
+      "explanation": "PHP asserts required=false but does not assert the extension payload value.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "PINNED_ASSERTION_SUBSET",
+      "qualification_credit": 0,
+      "statement": "Both optional-extension required flag and declared payload survive readback.",
+      "status": "PARTIAL_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-PRESERVE.OPTIONAL-EXTENSION.FLAG-AND-VALUE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        269,
+        271
+      ],
+      "contract_id": "CAP-PRESERVE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-original-tests"
+      ],
+      "explanation": "Rust memory asserts payload enabled=true but not required=false.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "PINNED_ASSERTION_SUBSET",
+      "qualification_credit": 0,
+      "statement": "Both optional-extension required flag and declared payload survive readback.",
+      "status": "PARTIAL_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-PRESERVE.OPTIONAL-EXTENSION.FLAG-AND-VALUE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        269,
+        271
+      ],
+      "contract_id": "CAP-PRESERVE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-detail"
+      ],
+      "explanation": "Captured fixture matches required=false and payload enabled=true.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "REPLAYED_CAPTURE_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Both optional-extension required flag and declared payload survive readback.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-PRESERVE.TYPED-LIMIT.VALUE-AND-UNIT",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        269,
+        271
+      ],
+      "contract_id": "CAP-PRESERVE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-original-test"
+      ],
+      "explanation": "PHP asserts the unit bytes, not its numeric value1048576.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "PINNED_ASSERTION_SUBSET",
+      "qualification_credit": 0,
+      "statement": "Selected numeric limit value and unit survive semantically.",
+      "status": "PARTIAL_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-PRESERVE.TYPED-LIMIT.VALUE-AND-UNIT",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        269,
+        271
+      ],
+      "contract_id": "CAP-PRESERVE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-original-tests"
+      ],
+      "explanation": "Limit is present in input but no selected original assertion checks its output value/unit.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Selected numeric limit value and unit survive semantically.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-PRESERVE.TYPED-LIMIT.VALUE-AND-UNIT",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        269,
+        271
+      ],
+      "contract_id": "CAP-PRESERVE",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-detail"
+      ],
+      "explanation": "Fresh-reader capture matches8192.0 to declared8192 semantically, with unit tokens; bounded fixture only.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "REPLAYED_CAPTURE_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Selected numeric limit value and unit survive semantically.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-NODELIST.TWO-VARIANTS.IDENTITY",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        278,
+        280
+      ],
+      "contract_id": "CAP-NODELIST",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-original-test"
+      ],
+      "explanation": "PHP checks one discover projection version/ID, not a two-variant advertisement.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Discovery retains both same-intent fixture variants and distinct IDs.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-NODELIST.TWO-VARIANTS.IDENTITY",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        278,
+        280
+      ],
+      "contract_id": "CAP-NODELIST",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-memory-positive-stdout"
+      ],
+      "explanation": "Original discovery asserts length2 and both IDs; selected fields only.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "PINNED_ASSERTION_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Discovery retains both same-intent fixture variants and distinct IDs.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-NODELIST.TWO-VARIANTS.IDENTITY",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        278,
+        280
+      ],
+      "contract_id": "CAP-NODELIST",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-discovery"
+      ],
+      "explanation": "Captured matching node has exactly both declared variants, identity-matched independent of order.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "REPLAYED_CAPTURE_AND_PASSING_METHOD",
+      "qualification_credit": 0,
+      "statement": "Discovery retains both same-intent fixture variants and distinct IDs.",
+      "status": "VERIFIED_BOUNDED_OBSERVATION"
+    },
+    {
+      "assertion_id": "CAP-NODELIST.MATCH.NO-CROSS-VARIANT-UNION",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        267,
+        268
+      ],
+      "contract_id": "CAP-NODELIST",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-original-test"
+      ],
+      "explanation": "Selected registration/projection tests do not exercise a capability-requirements matcher.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Capability requirements are matched against one whole variant, without union.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-NODELIST.MATCH.NO-CROSS-VARIANT-UNION",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        267,
+        268
+      ],
+      "contract_id": "CAP-NODELIST",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-original-tests"
+      ],
+      "explanation": "Selected registration/projection tests do not exercise a capability-requirements matcher.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Capability requirements are matched against one whole variant, without union.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-NODELIST.MATCH.NO-CROSS-VARIANT-UNION",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        267,
+        268
+      ],
+      "contract_id": "CAP-NODELIST",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-test-source"
+      ],
+      "explanation": "The MySQL roundtrip does not submit a capability-requirements matching request.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "Capability requirements are matched against one whole variant, without union.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-NODELIST.REQUIRED-EXTENSION.RETAIN-OR-REFUSE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        278,
+        280
+      ],
+      "contract_id": "CAP-NODELIST",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "php-original-test"
+      ],
+      "explanation": "Selected extension is optional, not required.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "php-sqlite",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "A required extension is retained semantically or refused, not accepted/discarded.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-NODELIST.REQUIRED-EXTENSION.RETAIN-OR-REFUSE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        278,
+        280
+      ],
+      "contract_id": "CAP-NODELIST",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "rust-original-tests"
+      ],
+      "explanation": "Selected extension is optional, not required.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-memory",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "A required extension is retained semantically or refused, not accepted/discarded.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    },
+    {
+      "assertion_id": "CAP-NODELIST.REQUIRED-EXTENSION.RETAIN-OR-REFUSE",
+      "assertion_kind": "SCOPED_SEMANTIC_OBLIGATION",
+      "authority_evidence": "protocol-array-rules",
+      "authority_lines": [
+        278,
+        280
+      ],
+      "contract_id": "CAP-NODELIST",
+      "evidence_class": "POSTCERT_ORDINARY_ENGINEERING",
+      "evidence_ids": [
+        "mysql-test-source"
+      ],
+      "explanation": "Selected extension is optional, not required.",
+      "original_campaign_assertion_execution_established": false,
+      "profile_id": "rust-mysql",
+      "proof_basis": "NO_SELECTED_RUNTIME_WITNESS",
+      "qualification_credit": 0,
+      "statement": "A required extension is retained semantically or refused, not accepted/discarded.",
+      "status": "NOT_EXERCISED_IN_SELECTED_WITNESSES"
+    }
+  ],
+  "schema": "iicp.public-capability-assertion-bridge.v1",
+  "source_metadata": [
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "spec/v1.9/node-capability-format.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "9dfb7e20ed011439119fcf00e3d37358b7d92ffff63bbb66b9f65e83e743925e",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/spec/v1.9/node-capability-format.md"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "docs/architecture/effective-service-capability-semantics.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "8afeb2a854d0e6b58a2a8f52945b0155a2175a83c8fa7742cb2e330d7f2e161d",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/docs/architecture/effective-service-capability-semantics.md"
+    },
+    {
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "path": "schemas/effective-capability-advertisement-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "707da7eebc5e8b55a720386ca713c977beeadd640f4b09eb48ea99573d2b1ab0",
+      "url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/schemas/effective-capability-advertisement-v1.json"
+    }
+  ],
+  "successor_frozen": false,
+  "vectors": {
+    "expected_capabilities": [
+      {
+        "input_modalities": [
+          "text"
+        ],
+        "intent": "urn:iicp:intent:llm:chat:v1",
+        "limits": {
+          "context_tokens": {
+            "unit": "tokens",
+            "value": 8192
+          }
+        },
+        "models": [
+          "fixture-small"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "phase": 1,
+        "variant_id": "text-basic",
+        "version": "1.0.0"
+      },
+      {
+        "claim_provenance": {
+          "source": "runtime_introspection"
+        },
+        "extensions": {
+          "org.example.optional-batching": {
+            "required": false,
+            "value": {
+              "enabled": true
+            }
+          }
+        },
+        "features": [
+          "structured_output",
+          "tool_calling"
+        ],
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "intent": "urn:iicp:intent:llm:chat:v1",
+        "models": [
+          "fixture-vision"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "supported_profiles": [
+          "urn:iicp:profile:service-lifecycle:v1"
+        ],
+        "variant_id": "vision-tools"
+      }
+    ],
+    "observed_detail_capabilities": [
+      {
+        "input_modalities": [
+          "text"
+        ],
+        "intent": "urn:iicp:intent:llm:chat:v1",
+        "limits": {
+          "context_tokens": {
+            "unit": "tokens",
+            "value": 8192.0
+          }
+        },
+        "models": [
+          "fixture-small"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "phase": 1,
+        "variant_id": "text-basic",
+        "version": "1.0.0"
+      },
+      {
+        "claim_provenance": {
+          "source": "runtime_introspection"
+        },
+        "extensions": {
+          "org.example.optional-batching": {
+            "required": false,
+            "value": {
+              "enabled": true
+            }
+          }
+        },
+        "features": [
+          "structured_output",
+          "tool_calling"
+        ],
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "intent": "urn:iicp:intent:llm:chat:v1",
+        "models": [
+          "fixture-vision"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "supported_profiles": [
+          "urn:iicp:profile:service-lifecycle:v1"
+        ],
+        "variant_id": "vision-tools"
+      }
+    ],
+    "observed_discovery_capabilities": [
+      {
+        "input_modalities": [
+          "text"
+        ],
+        "intent": "urn:iicp:intent:llm:chat:v1",
+        "limits": {
+          "context_tokens": {
+            "unit": "tokens",
+            "value": 8192.0
+          }
+        },
+        "models": [
+          "fixture-small"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "phase": 1,
+        "variant_id": "text-basic",
+        "version": "1.0.0"
+      },
+      {
+        "claim_provenance": {
+          "source": "runtime_introspection"
+        },
+        "extensions": {
+          "org.example.optional-batching": {
+            "required": false,
+            "value": {
+              "enabled": true
+            }
+          }
+        },
+        "features": [
+          "structured_output",
+          "tool_calling"
+        ],
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "intent": "urn:iicp:intent:llm:chat:v1",
+        "models": [
+          "fixture-vision"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "supported_profiles": [
+          "urn:iicp:profile:service-lifecycle:v1"
+        ],
+        "variant_id": "vision-tools"
+      }
+    ],
+    "observed_php_empty": {
+      "error_code": "validation_error",
+      "node_count_after": 0,
+      "node_count_before": 0,
+      "status": 422
+    },
+    "observed_refusals": [
+      {
+        "case": "empty",
+        "error_code": "validation_error",
+        "row_counts": [
+          1,
+          2
+        ],
+        "status": 422
+      },
+      {
+        "case": "duplicate",
+        "error_code": "validation_error",
+        "row_counts": [
+          1,
+          2
+        ],
+        "status": 422
+      },
+      {
+        "case": "negative-limit",
+        "error_code": "validation_error",
+        "row_counts": [
+          1,
+          2
+        ],
+        "status": 422
+      },
+      {
+        "case": "malformed-profile",
+        "error_code": "validation_error",
+        "row_counts": [
+          1,
+          2
+        ],
+        "status": 422
+      },
+      {
+        "case": "duplicate-profile",
+        "error_code": "validation_error",
+        "row_counts": [
+          1,
+          2
+        ],
+        "status": 422
+      },
+      {
+        "case": "oversized-profiles",
+        "error_code": "validation_error",
+        "row_counts": [
+          1,
+          2
+        ],
+        "status": 422
+      }
+    ]
+  },
+  "whole_capability_complete": false
+}
