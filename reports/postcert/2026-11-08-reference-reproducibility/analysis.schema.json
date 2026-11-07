@@ -1,0 +1,2218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_readiness": {
+      "additionalProperties": false,
+      "properties": {
+        "archive_extraction": {
+          "type": "boolean"
+        },
+        "artifacts_byte_verified": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "artifacts_required": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "artifacts_unresolved": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "candidate_file_sha256": {
+          "type": "string"
+        },
+        "declared_distribution_status": {
+          "type": "string"
+        },
+        "full_reproducibility_established": {
+          "type": "boolean"
+        },
+        "io_accounting": {
+          "type": "string"
+        },
+        "locator_observations": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "matching_copies": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "original_custody_established": {
+          "type": "boolean"
+        },
+        "records": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "availability": {
+                "type": "string"
+              },
+              "component": {
+                "type": "string"
+              },
+              "expected_sha256": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "observation_count": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "source_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "verified_copy_count": {
+                "minimum": 0,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "availability",
+              "component",
+              "expected_sha256",
+              "name",
+              "observation_count",
+              "source_ref",
+              "verified_copy_count"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "time_guard": {
+          "type": "string"
+        },
+        "workload_executed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "archive_extraction",
+        "artifacts_byte_verified",
+        "artifacts_required",
+        "artifacts_unresolved",
+        "candidate_file_sha256",
+        "declared_distribution_status",
+        "full_reproducibility_established",
+        "io_accounting",
+        "locator_observations",
+        "matching_copies",
+        "original_custody_established",
+        "records",
+        "scope",
+        "time_guard",
+        "workload_executed"
+      ],
+      "type": "object"
+    },
+    "artifact_readiness_review_sha256": {
+      "type": "string"
+    },
+    "artifact_readiness_source_sha256": {
+      "type": "string"
+    },
+    "base_graph_sha256": {
+      "type": "string"
+    },
+    "baseline_frozen": {
+      "type": "boolean"
+    },
+    "candidate_manifest_sha256": {
+      "type": "string"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "by_evidence_role": {
+          "additionalProperties": false,
+          "properties": {
+            "ANALYTICAL_REUSE_NOT_ADDITIONAL_OBSERVATION": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "GAP_CONTEXT_NOT_GLOBAL_ABSENCE": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "NON_NORMATIVE_COMPARISON": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "REUSED_ORDINARY_CALLER_OBSERVATION": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "REUSED_PARTIAL_MATCHING_PROJECTION": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "REUSED_REVIEWED_BOUNDED_RUNTIME_ASSERTION": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "REUSED_REVIEWED_PARTIAL_RUNTIME_ASSERTION": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "REUSED_SOURCE_FUNCTION_OBSERVATION": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "REUSED_SOURCE_HELPER_OBSERVATION": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "SOURCE_INTERPRETATION_NOT_RUNTIME": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "SOURCE_INTERPRETATION_NO_SELECTED_DIRECTORY_OBSERVATION": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ANALYTICAL_REUSE_NOT_ADDITIONAL_OBSERVATION",
+            "GAP_CONTEXT_NOT_GLOBAL_ABSENCE",
+            "NON_NORMATIVE_COMPARISON",
+            "REUSED_ORDINARY_CALLER_OBSERVATION",
+            "REUSED_PARTIAL_MATCHING_PROJECTION",
+            "REUSED_REVIEWED_BOUNDED_RUNTIME_ASSERTION",
+            "REUSED_REVIEWED_PARTIAL_RUNTIME_ASSERTION",
+            "REUSED_SOURCE_FUNCTION_OBSERVATION",
+            "REUSED_SOURCE_HELPER_OBSERVATION",
+            "SOURCE_INTERPRETATION_NOT_RUNTIME",
+            "SOURCE_INTERPRETATION_NO_SELECTED_DIRECTORY_OBSERVATION"
+          ],
+          "type": "object"
+        },
+        "directory_bridge_original_statuses": {
+          "additionalProperties": false,
+          "properties": {
+            "NOT_EXERCISED_IN_SELECTED_WITNESSES": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "PARTIAL_OBSERVATION": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "VERIFIED_BOUNDED_OBSERVATION": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "NOT_EXERCISED_IN_SELECTED_WITNESSES",
+            "PARTIAL_OBSERVATION",
+            "VERIFIED_BOUNDED_OBSERVATION"
+          ],
+          "type": "object"
+        },
+        "mapping_links": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "new_qualification_credit": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "new_runtime_executions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "reference_slices": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "scoped_obligations": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "slices_with_scoped_links": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "by_evidence_role",
+        "directory_bridge_original_statuses",
+        "mapping_links",
+        "new_qualification_credit",
+        "new_runtime_executions",
+        "reference_slices",
+        "scoped_obligations",
+        "slices_with_scoped_links"
+      ],
+      "type": "object"
+    },
+    "crosswalk_review_sha256": {
+      "type": "string"
+    },
+    "crosswalk_source_sha256": {
+      "type": "string"
+    },
+    "equal_byte_provenance_groups": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "distinct_provenance_count": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "interpretation": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "distinct_provenance_count",
+          "interpretation",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "execution_authorized": {
+      "type": "boolean"
+    },
+    "historical_inventory_complete": {
+      "type": "boolean"
+    },
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "base_context_is_original_execution_proof": {
+                "type": "boolean"
+              },
+              "base_context_nodes": {
+                "items": false,
+                "type": "array"
+              },
+              "base_slice_node": {
+                "type": "string"
+              },
+              "evidence_role": {
+                "type": "string"
+              },
+              "fresh_runtime_execution": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "obligation_id": {
+                "type": "string"
+              },
+              "observation_refs": {
+                "items": false,
+                "type": "array"
+              },
+              "polarity": {
+                "type": "string"
+              },
+              "review_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_limit_count": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "scope_limit_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "slice_id": {
+                "type": "string"
+              },
+              "source_interpretation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "status": {
+                "type": "string"
+              },
+              "supported_scope": {
+                "additionalProperties": false,
+                "properties": {
+                  "existing_evidence_class": {
+                    "type": "string"
+                  },
+                  "existing_status": {
+                    "type": "string"
+                  },
+                  "new_runtime_methods": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "profile_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "existing_evidence_class",
+                  "existing_status",
+                  "new_runtime_methods",
+                  "profile_id"
+                ],
+                "type": "object"
+              },
+              "whole_contract_satisfied": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "base_context_is_original_execution_proof",
+              "base_context_nodes",
+              "base_slice_node",
+              "evidence_role",
+              "fresh_runtime_execution",
+              "id",
+              "new_qualification_credit",
+              "obligation_id",
+              "observation_refs",
+              "polarity",
+              "review_refs",
+              "scope_limit_count",
+              "scope_limit_ref",
+              "slice_id",
+              "source_interpretation_refs",
+              "status",
+              "supported_scope",
+              "whole_contract_satisfied"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "base_context_is_original_execution_proof": {
+                "type": "boolean"
+              },
+              "base_context_nodes": {
+                "items": false,
+                "type": "array"
+              },
+              "base_slice_node": {
+                "type": "string"
+              },
+              "evidence_role": {
+                "type": "string"
+              },
+              "fresh_runtime_execution": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "obligation_id": {
+                "type": "string"
+              },
+              "observation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "polarity": {
+                "type": "string"
+              },
+              "review_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_limit_count": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "scope_limit_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "slice_id": {
+                "type": "string"
+              },
+              "source_interpretation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "status": {
+                "type": "string"
+              },
+              "supported_scope": {
+                "additionalProperties": false,
+                "properties": {
+                  "not_authorized_endpoint_controls": {
+                    "type": "boolean"
+                  },
+                  "recorded_false_results": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "recorded_true_results": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "source_predicate": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "not_authorized_endpoint_controls",
+                  "recorded_false_results",
+                  "recorded_true_results",
+                  "source_predicate"
+                ],
+                "type": "object"
+              },
+              "whole_contract_satisfied": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "base_context_is_original_execution_proof",
+              "base_context_nodes",
+              "base_slice_node",
+              "evidence_role",
+              "fresh_runtime_execution",
+              "id",
+              "new_qualification_credit",
+              "obligation_id",
+              "observation_refs",
+              "polarity",
+              "review_refs",
+              "scope_limit_count",
+              "scope_limit_ref",
+              "slice_id",
+              "source_interpretation_refs",
+              "status",
+              "supported_scope",
+              "whole_contract_satisfied"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "base_context_is_original_execution_proof": {
+                "type": "boolean"
+              },
+              "base_context_nodes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "base_slice_node": {
+                "type": "string"
+              },
+              "evidence_role": {
+                "type": "string"
+              },
+              "fresh_runtime_execution": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "obligation_id": {
+                "type": "string"
+              },
+              "observation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "polarity": {
+                "type": "string"
+              },
+              "review_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_limit_count": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "scope_limit_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "slice_id": {
+                "type": "string"
+              },
+              "source_interpretation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "status": {
+                "type": "string"
+              },
+              "supported_scope": {
+                "additionalProperties": false,
+                "properties": {
+                  "case_id": {
+                    "type": "string"
+                  },
+                  "expected_model_lists_not_reconstructed_from_minimized_matrix": {
+                    "type": "boolean"
+                  },
+                  "expected_post_calls": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "expected_ranker_calls": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "recorded_sdk_rows": {
+                    "minimum": 0,
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "case_id",
+                  "expected_model_lists_not_reconstructed_from_minimized_matrix",
+                  "expected_post_calls",
+                  "expected_ranker_calls",
+                  "recorded_sdk_rows"
+                ],
+                "type": "object"
+              },
+              "whole_contract_satisfied": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "base_context_is_original_execution_proof",
+              "base_context_nodes",
+              "base_slice_node",
+              "evidence_role",
+              "fresh_runtime_execution",
+              "id",
+              "new_qualification_credit",
+              "obligation_id",
+              "observation_refs",
+              "polarity",
+              "review_refs",
+              "scope_limit_count",
+              "scope_limit_ref",
+              "slice_id",
+              "source_interpretation_refs",
+              "status",
+              "supported_scope",
+              "whole_contract_satisfied"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "base_context_is_original_execution_proof": {
+                "type": "boolean"
+              },
+              "base_context_nodes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "base_slice_node": {
+                "type": "string"
+              },
+              "evidence_role": {
+                "type": "string"
+              },
+              "fresh_runtime_execution": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "obligation_id": {
+                "type": "string"
+              },
+              "observation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "polarity": {
+                "type": "string"
+              },
+              "review_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_limit_count": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "scope_limit_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "slice_id": {
+                "type": "string"
+              },
+              "source_interpretation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "status": {
+                "type": "string"
+              },
+              "supported_scope": {
+                "additionalProperties": false,
+                "properties": {
+                  "existing_bridge_status": {
+                    "type": "string"
+                  },
+                  "existing_explanation": {
+                    "type": "string"
+                  },
+                  "existing_proof_basis": {
+                    "type": "string"
+                  },
+                  "no_original_campaign_assertion_execution_inferred": {
+                    "type": "boolean"
+                  },
+                  "profile_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "existing_bridge_status",
+                  "existing_explanation",
+                  "existing_proof_basis",
+                  "no_original_campaign_assertion_execution_inferred",
+                  "profile_id"
+                ],
+                "type": "object"
+              },
+              "whole_contract_satisfied": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "base_context_is_original_execution_proof",
+              "base_context_nodes",
+              "base_slice_node",
+              "evidence_role",
+              "fresh_runtime_execution",
+              "id",
+              "new_qualification_credit",
+              "obligation_id",
+              "observation_refs",
+              "polarity",
+              "review_refs",
+              "scope_limit_count",
+              "scope_limit_ref",
+              "slice_id",
+              "source_interpretation_refs",
+              "status",
+              "supported_scope",
+              "whole_contract_satisfied"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "base_context_is_original_execution_proof": {
+                "type": "boolean"
+              },
+              "base_context_nodes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "base_slice_node": {
+                "type": "string"
+              },
+              "evidence_role": {
+                "type": "string"
+              },
+              "fresh_runtime_execution": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "obligation_id": {
+                "type": "string"
+              },
+              "observation_refs": {
+                "items": false,
+                "type": "array"
+              },
+              "polarity": {
+                "type": "string"
+              },
+              "review_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_limit_count": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "scope_limit_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "slice_id": {
+                "type": "string"
+              },
+              "source_interpretation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "status": {
+                "type": "string"
+              },
+              "supported_scope": {
+                "additionalProperties": false,
+                "properties": {
+                  "existing_bridge_status": {
+                    "type": "string"
+                  },
+                  "existing_explanation": {
+                    "type": "string"
+                  },
+                  "existing_proof_basis": {
+                    "type": "string"
+                  },
+                  "no_original_campaign_assertion_execution_inferred": {
+                    "type": "boolean"
+                  },
+                  "profile_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "existing_bridge_status",
+                  "existing_explanation",
+                  "existing_proof_basis",
+                  "no_original_campaign_assertion_execution_inferred",
+                  "profile_id"
+                ],
+                "type": "object"
+              },
+              "whole_contract_satisfied": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "base_context_is_original_execution_proof",
+              "base_context_nodes",
+              "base_slice_node",
+              "evidence_role",
+              "fresh_runtime_execution",
+              "id",
+              "new_qualification_credit",
+              "obligation_id",
+              "observation_refs",
+              "polarity",
+              "review_refs",
+              "scope_limit_count",
+              "scope_limit_ref",
+              "slice_id",
+              "source_interpretation_refs",
+              "status",
+              "supported_scope",
+              "whole_contract_satisfied"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "base_context_is_original_execution_proof": {
+                "type": "boolean"
+              },
+              "base_context_nodes": {
+                "items": false,
+                "type": "array"
+              },
+              "base_slice_node": {
+                "type": "string"
+              },
+              "evidence_role": {
+                "type": "string"
+              },
+              "fresh_runtime_execution": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "obligation_id": {
+                "type": "string"
+              },
+              "observation_refs": {
+                "items": false,
+                "type": "array"
+              },
+              "polarity": {
+                "type": "string"
+              },
+              "review_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_limit_count": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "scope_limit_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "slice_id": {
+                "type": "string"
+              },
+              "source_interpretation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "status": {
+                "type": "string"
+              },
+              "supported_scope": {
+                "additionalProperties": false,
+                "properties": {
+                  "complete_normative_conformance": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "complete_normative_conformance"
+                ],
+                "type": "object"
+              },
+              "whole_contract_satisfied": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "base_context_is_original_execution_proof",
+              "base_context_nodes",
+              "base_slice_node",
+              "evidence_role",
+              "fresh_runtime_execution",
+              "id",
+              "new_qualification_credit",
+              "obligation_id",
+              "observation_refs",
+              "polarity",
+              "review_refs",
+              "scope_limit_count",
+              "scope_limit_ref",
+              "slice_id",
+              "source_interpretation_refs",
+              "status",
+              "supported_scope",
+              "whole_contract_satisfied"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "base_context_is_original_execution_proof": {
+                "type": "boolean"
+              },
+              "base_context_nodes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "base_slice_node": {
+                "type": "string"
+              },
+              "evidence_role": {
+                "type": "string"
+              },
+              "fresh_runtime_execution": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "obligation_id": {
+                "type": "string"
+              },
+              "observation_refs": {
+                "items": false,
+                "type": "array"
+              },
+              "polarity": {
+                "type": "string"
+              },
+              "review_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_limit_count": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "scope_limit_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "slice_id": {
+                "type": "string"
+              },
+              "source_interpretation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "status": {
+                "type": "string"
+              },
+              "supported_scope": {
+                "additionalProperties": false,
+                "properties": {
+                  "declared_scope": {
+                    "type": "string"
+                  },
+                  "matched_projection_rows": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "recorded_interpretation": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "declared_scope",
+                  "matched_projection_rows",
+                  "recorded_interpretation"
+                ],
+                "type": "object"
+              },
+              "whole_contract_satisfied": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "base_context_is_original_execution_proof",
+              "base_context_nodes",
+              "base_slice_node",
+              "evidence_role",
+              "fresh_runtime_execution",
+              "id",
+              "new_qualification_credit",
+              "obligation_id",
+              "observation_refs",
+              "polarity",
+              "review_refs",
+              "scope_limit_count",
+              "scope_limit_ref",
+              "slice_id",
+              "source_interpretation_refs",
+              "status",
+              "supported_scope",
+              "whole_contract_satisfied"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "base_context_is_original_execution_proof": {
+                "type": "boolean"
+              },
+              "base_context_nodes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "base_slice_node": {
+                "type": "string"
+              },
+              "evidence_role": {
+                "type": "string"
+              },
+              "fresh_runtime_execution": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "obligation_id": {
+                "type": "string"
+              },
+              "observation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "polarity": {
+                "type": "string"
+              },
+              "review_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_limit_count": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "scope_limit_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "slice_id": {
+                "type": "string"
+              },
+              "source_interpretation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "status": {
+                "type": "string"
+              },
+              "supported_scope": {
+                "additionalProperties": false,
+                "properties": {
+                  "declared_scope": {
+                    "type": "string"
+                  },
+                  "matched_projection_rows": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "recorded_interpretation": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "declared_scope",
+                  "matched_projection_rows",
+                  "recorded_interpretation"
+                ],
+                "type": "object"
+              },
+              "whole_contract_satisfied": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "base_context_is_original_execution_proof",
+              "base_context_nodes",
+              "base_slice_node",
+              "evidence_role",
+              "fresh_runtime_execution",
+              "id",
+              "new_qualification_credit",
+              "obligation_id",
+              "observation_refs",
+              "polarity",
+              "review_refs",
+              "scope_limit_count",
+              "scope_limit_ref",
+              "slice_id",
+              "source_interpretation_refs",
+              "status",
+              "supported_scope",
+              "whole_contract_satisfied"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "base_context_is_original_execution_proof": {
+                "type": "boolean"
+              },
+              "base_context_nodes": {
+                "items": false,
+                "type": "array"
+              },
+              "base_slice_node": {
+                "type": "string"
+              },
+              "evidence_role": {
+                "type": "string"
+              },
+              "fresh_runtime_execution": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "obligation_id": {
+                "type": "string"
+              },
+              "observation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "polarity": {
+                "type": "string"
+              },
+              "review_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_limit_count": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "scope_limit_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "slice_id": {
+                "type": "string"
+              },
+              "source_interpretation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "status": {
+                "type": "string"
+              },
+              "supported_scope": {
+                "additionalProperties": false,
+                "properties": {
+                  "accepted_results": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "observed_names": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "uniform_normative_oracle_established": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "accepted_results",
+                  "observed_names",
+                  "uniform_normative_oracle_established"
+                ],
+                "type": "object"
+              },
+              "whole_contract_satisfied": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "base_context_is_original_execution_proof",
+              "base_context_nodes",
+              "base_slice_node",
+              "evidence_role",
+              "fresh_runtime_execution",
+              "id",
+              "new_qualification_credit",
+              "obligation_id",
+              "observation_refs",
+              "polarity",
+              "review_refs",
+              "scope_limit_count",
+              "scope_limit_ref",
+              "slice_id",
+              "source_interpretation_refs",
+              "status",
+              "supported_scope",
+              "whole_contract_satisfied"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "base_context_is_original_execution_proof": {
+                "type": "boolean"
+              },
+              "base_context_nodes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "base_slice_node": {
+                "type": "string"
+              },
+              "evidence_role": {
+                "type": "string"
+              },
+              "fresh_runtime_execution": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "string"
+              },
+              "new_qualification_credit": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "obligation_id": {
+                "type": "string"
+              },
+              "observation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "polarity": {
+                "type": "string"
+              },
+              "review_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "scope_limit_count": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "scope_limit_ref": {
+                "additionalProperties": false,
+                "properties": {
+                  "access": {
+                    "type": "string"
+                  },
+                  "json_pointer": {
+                    "type": "string"
+                  },
+                  "retained_input_sha256": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "access",
+                  "json_pointer",
+                  "retained_input_sha256"
+                ],
+                "type": "object"
+              },
+              "slice_id": {
+                "type": "string"
+              },
+              "source_interpretation_refs": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    },
+                    "json_pointer": {
+                      "type": "string"
+                    },
+                    "retained_input_sha256": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access",
+                    "json_pointer",
+                    "retained_input_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "status": {
+                "type": "string"
+              },
+              "supported_scope": {
+                "additionalProperties": false,
+                "properties": {
+                  "fragment": {
+                    "type": "string"
+                  },
+                  "original_case_argv_reexecuted": {
+                    "type": "boolean"
+                  },
+                  "recorded_vector_rows": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "second_matrix_is_corroborating_record_not_additional_fixture_coverage": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "fragment",
+                  "original_case_argv_reexecuted",
+                  "recorded_vector_rows",
+                  "second_matrix_is_corroborating_record_not_additional_fixture_coverage"
+                ],
+                "type": "object"
+              },
+              "whole_contract_satisfied": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "base_context_is_original_execution_proof",
+              "base_context_nodes",
+              "base_slice_node",
+              "evidence_role",
+              "fresh_runtime_execution",
+              "id",
+              "new_qualification_credit",
+              "obligation_id",
+              "observation_refs",
+              "polarity",
+              "review_refs",
+              "scope_limit_count",
+              "scope_limit_ref",
+              "slice_id",
+              "source_interpretation_refs",
+              "status",
+              "supported_scope",
+              "whole_contract_satisfied"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "type": "array"
+    },
+    "new_runtime_executions": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "obligations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "source_refs": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "access": {
+                  "type": "string"
+                },
+                "json_pointer": {
+                  "type": "string"
+                },
+                "retained_input_sha256": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "access",
+                "json_pointer",
+                "retained_input_sha256"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "statement_ref": {
+            "additionalProperties": false,
+            "properties": {
+              "access": {
+                "type": "string"
+              },
+              "json_pointer": {
+                "type": "string"
+              },
+              "retained_input_sha256": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "access",
+              "json_pointer",
+              "retained_input_sha256"
+            ],
+            "type": "object"
+          },
+          "whole_contract_satisfied": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "source_refs",
+          "statement_ref",
+          "whole_contract_satisfied"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "qualification_credit": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "retained_lineage": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "class": {
+            "type": "string"
+          },
+          "controlled_record_ref": {
+            "additionalProperties": false,
+            "properties": {
+              "access": {
+                "type": "string"
+              },
+              "json_pointer": {
+                "type": "string"
+              },
+              "retained_input_sha256": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "access",
+              "json_pointer",
+              "retained_input_sha256"
+            ],
+            "type": "object"
+          },
+          "slice_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "class",
+          "controlled_record_ref",
+          "slice_id"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "whole_capability_completion": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "artifact_readiness",
+    "artifact_readiness_review_sha256",
+    "artifact_readiness_source_sha256",
+    "base_graph_sha256",
+    "baseline_frozen",
+    "candidate_manifest_sha256",
+    "counts",
+    "crosswalk_review_sha256",
+    "crosswalk_source_sha256",
+    "equal_byte_provenance_groups",
+    "execution_authorized",
+    "historical_inventory_complete",
+    "limits",
+    "links",
+    "new_runtime_executions",
+    "obligations",
+    "qualification_credit",
+    "retained_lineage",
+    "schema",
+    "state",
+    "whole_capability_completion"
+  ],
+  "type": "object"
+}
