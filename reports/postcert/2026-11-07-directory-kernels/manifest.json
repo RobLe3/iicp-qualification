@@ -1,0 +1,9 @@
+{
+  "files": {
+    "README.md": "f288255511fe08dffaf3cf1796f1d0f234ed27bfcb6fe5437492eb6ae4fdfa25",
+    "observations.json": "7007811ce4456d9b97557b22aa16e3ea2ed6c1f7b606ffa79a0230018ba07b04",
+    "observations.schema.json": "3017d5410eb996804a618276c2974968bf76d90d382a52a6cbf7fe3026e0d01d"
+  },
+  "qualification_credit": 0,
+  "schema": "iicp.directory-kernel-public-manifest.v1"
+}
