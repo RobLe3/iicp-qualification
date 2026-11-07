@@ -1,0 +1,2780 @@
+{
+  "analysis_authority": "Informational derivative only; canonical ledgers, receipt validators and certificates retain authority.",
+  "authority_layers": [
+    {
+      "id": "base-profile",
+      "ref": {
+        "end_line": 7,
+        "excerpt_sha256": "c4e2a4588140aaedc2b90d5fc365a65a748befd936153dff1ae71e178659666b",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "spec/v1.9/iicp-service-lifecycle-profile.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "e825fc5afbeeae0d7b8ef33993a95ea333ee3545bd484f9ca6cdcb90ececd2fa"
+        },
+        "start_line": 3
+      },
+      "status": "PROPOSED_NOT_REQUIRED_FOR_BASE_CONFORMANCE"
+    },
+    {
+      "id": "negotiated-amendment",
+      "ref": {
+        "end_line": 16,
+        "excerpt_sha256": "af51bf6de52810930ba3e673bdcbe1ea9671f36298c6766beb1516a35fa74124",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 8
+      },
+      "status": "PRE_NORMATIVE_OPT_IN_NOT_RATIFIED"
+    },
+    {
+      "id": "amended-states",
+      "ref": {
+        "end_line": 45,
+        "excerpt_sha256": "d1aaeb7fdc4fd4eed696e1063f5a80725184eaf04f3e910152624c81e46bb403",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 25
+      },
+      "status": "EXPLICIT_REFINEMENT_NOT_SILENT_BASE_REPLACEMENT"
+    },
+    {
+      "id": "replay-and-cancellation",
+      "ref": {
+        "end_line": 95,
+        "excerpt_sha256": "44a0ec8ca51a34ae73fed50067f97adafe572daa579f53df5cb9afb0efdfaebd",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 61
+      },
+      "status": "NEGOTIATED_PROFILE_SEMANTICS"
+    },
+    {
+      "id": "single-host-persistence",
+      "ref": {
+        "end_line": 25,
+        "excerpt_sha256": "becb046fabd79fd66e3e07a970483cf43d6748b3231f253647699d25495c2973",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-persistence-v1.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "5539e900e5eb195f5d43efc6a5a3e8bc7e2c9fa2af68da144e0ed5a1d920164d"
+        },
+        "start_line": 13
+      },
+      "status": "OPT_IN_IMPLEMENTATION_CONTRACT_NOT_PROTOCOL_FORMAT"
+    },
+    {
+      "id": "persistence-non-guarantees",
+      "ref": {
+        "end_line": 31,
+        "excerpt_sha256": "fb85642143b2f187e95465d0531226f2fc6d02a9fccc18d2c8c6a8dc6f0987c1",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-persistence-v1.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "5539e900e5eb195f5d43efc6a5a3e8bc7e2c9fa2af68da144e0ed5a1d920164d"
+        },
+        "start_line": 26
+      },
+      "status": "EXPLICIT_EXCLUSIONS"
+    }
+  ],
+  "baseline_classification_boundary": "REQUIRED_STABLE_IN_FROZEN_PROJECT_BASELINE_NOT_GLOBAL_PROFILE_RATIFICATION",
+  "baseline_frozen": false,
+  "campaign_dispatch_boundary": [
+    {
+      "accepted_credit_changed": false,
+      "assertion": "test_sqlite_two_process_crash_recovery_and_single_terminal_winner",
+      "component": "client-python",
+      "existing_assignment_ids": [
+        "process-crash-restart::client-python|cpython-3.11|linux-aarch64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.11|linux-aarch64|php|public",
+        "process-crash-restart::client-python|cpython-3.11|linux-aarch64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.11|linux-aarch64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.11|linux-aarch64|rust|public",
+        "process-crash-restart::client-python|cpython-3.11|linux-aarch64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.11|linux-x86_64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.11|linux-x86_64|php|public",
+        "process-crash-restart::client-python|cpython-3.11|linux-x86_64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.11|linux-x86_64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.11|linux-x86_64|rust|public",
+        "process-crash-restart::client-python|cpython-3.11|linux-x86_64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.11|macos-arm64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.11|macos-arm64|php|public",
+        "process-crash-restart::client-python|cpython-3.11|macos-arm64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.11|macos-arm64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.11|macos-arm64|rust|public",
+        "process-crash-restart::client-python|cpython-3.11|macos-arm64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.11|windows-x86_64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.11|windows-x86_64|php|public",
+        "process-crash-restart::client-python|cpython-3.11|windows-x86_64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.11|windows-x86_64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.11|windows-x86_64|rust|public",
+        "process-crash-restart::client-python|cpython-3.11|windows-x86_64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.12|linux-aarch64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.12|linux-aarch64|php|public",
+        "process-crash-restart::client-python|cpython-3.12|linux-aarch64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.12|linux-aarch64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.12|linux-aarch64|rust|public",
+        "process-crash-restart::client-python|cpython-3.12|linux-aarch64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.12|linux-x86_64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.12|linux-x86_64|php|public",
+        "process-crash-restart::client-python|cpython-3.12|linux-x86_64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.12|linux-x86_64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.12|linux-x86_64|rust|public",
+        "process-crash-restart::client-python|cpython-3.12|linux-x86_64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.12|macos-arm64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.12|macos-arm64|php|public",
+        "process-crash-restart::client-python|cpython-3.12|macos-arm64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.12|macos-arm64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.12|macos-arm64|rust|public",
+        "process-crash-restart::client-python|cpython-3.12|macos-arm64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.12|windows-x86_64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.12|windows-x86_64|php|public",
+        "process-crash-restart::client-python|cpython-3.12|windows-x86_64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.12|windows-x86_64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.12|windows-x86_64|rust|public",
+        "process-crash-restart::client-python|cpython-3.12|windows-x86_64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.13|linux-aarch64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.13|linux-aarch64|php|public",
+        "process-crash-restart::client-python|cpython-3.13|linux-aarch64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.13|linux-aarch64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.13|linux-aarch64|rust|public",
+        "process-crash-restart::client-python|cpython-3.13|linux-aarch64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.13|linux-x86_64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.13|linux-x86_64|php|public",
+        "process-crash-restart::client-python|cpython-3.13|linux-x86_64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.13|linux-x86_64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.13|linux-x86_64|rust|public",
+        "process-crash-restart::client-python|cpython-3.13|linux-x86_64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.13|macos-arm64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.13|macos-arm64|php|public",
+        "process-crash-restart::client-python|cpython-3.13|macos-arm64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.13|macos-arm64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.13|macos-arm64|rust|public",
+        "process-crash-restart::client-python|cpython-3.13|macos-arm64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.13|windows-x86_64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.13|windows-x86_64|php|public",
+        "process-crash-restart::client-python|cpython-3.13|windows-x86_64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.13|windows-x86_64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.13|windows-x86_64|rust|public",
+        "process-crash-restart::client-python|cpython-3.13|windows-x86_64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.14|linux-aarch64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.14|linux-aarch64|php|public",
+        "process-crash-restart::client-python|cpython-3.14|linux-aarch64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.14|linux-aarch64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.14|linux-aarch64|rust|public",
+        "process-crash-restart::client-python|cpython-3.14|linux-aarch64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.14|linux-x86_64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.14|linux-x86_64|php|public",
+        "process-crash-restart::client-python|cpython-3.14|linux-x86_64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.14|linux-x86_64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.14|linux-x86_64|rust|public",
+        "process-crash-restart::client-python|cpython-3.14|linux-x86_64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.14|macos-arm64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.14|macos-arm64|php|public",
+        "process-crash-restart::client-python|cpython-3.14|macos-arm64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.14|macos-arm64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.14|macos-arm64|rust|public",
+        "process-crash-restart::client-python|cpython-3.14|macos-arm64|rust|restricted",
+        "process-crash-restart::client-python|cpython-3.14|windows-x86_64|php|local-only",
+        "process-crash-restart::client-python|cpython-3.14|windows-x86_64|php|public",
+        "process-crash-restart::client-python|cpython-3.14|windows-x86_64|php|restricted",
+        "process-crash-restart::client-python|cpython-3.14|windows-x86_64|rust|local-only",
+        "process-crash-restart::client-python|cpython-3.14|windows-x86_64|rust|public",
+        "process-crash-restart::client-python|cpython-3.14|windows-x86_64|rust|restricted"
+      ],
+      "pipeline_context": "reports/postcert/2026-11-07-materialized-assertions/README.md",
+      "scenario": "process-crash-restart",
+      "scope": "Exact campaign dispatch is the crash/recovery assertion, not every function in its source file.",
+      "selected_fixture_loop_is_this_case": false
+    },
+    {
+      "accepted_credit_changed": false,
+      "assertion": "process crash snapshot restores the last committed state",
+      "component": "client-typescript",
+      "existing_assignment_ids": [
+        "process-crash-restart::client-typescript|node-22|linux-aarch64|php|local-only",
+        "process-crash-restart::client-typescript|node-22|linux-aarch64|php|public",
+        "process-crash-restart::client-typescript|node-22|linux-aarch64|php|restricted",
+        "process-crash-restart::client-typescript|node-22|linux-aarch64|rust|local-only",
+        "process-crash-restart::client-typescript|node-22|linux-aarch64|rust|public",
+        "process-crash-restart::client-typescript|node-22|linux-aarch64|rust|restricted",
+        "process-crash-restart::client-typescript|node-22|linux-x86_64|php|local-only",
+        "process-crash-restart::client-typescript|node-22|linux-x86_64|php|public",
+        "process-crash-restart::client-typescript|node-22|linux-x86_64|php|restricted",
+        "process-crash-restart::client-typescript|node-22|linux-x86_64|rust|local-only",
+        "process-crash-restart::client-typescript|node-22|linux-x86_64|rust|public",
+        "process-crash-restart::client-typescript|node-22|linux-x86_64|rust|restricted",
+        "process-crash-restart::client-typescript|node-22|macos-arm64|php|local-only",
+        "process-crash-restart::client-typescript|node-22|macos-arm64|php|public",
+        "process-crash-restart::client-typescript|node-22|macos-arm64|php|restricted",
+        "process-crash-restart::client-typescript|node-22|macos-arm64|rust|local-only",
+        "process-crash-restart::client-typescript|node-22|macos-arm64|rust|public",
+        "process-crash-restart::client-typescript|node-22|macos-arm64|rust|restricted",
+        "process-crash-restart::client-typescript|node-22|windows-x86_64|php|local-only",
+        "process-crash-restart::client-typescript|node-22|windows-x86_64|php|public",
+        "process-crash-restart::client-typescript|node-22|windows-x86_64|php|restricted",
+        "process-crash-restart::client-typescript|node-22|windows-x86_64|rust|local-only",
+        "process-crash-restart::client-typescript|node-22|windows-x86_64|rust|public",
+        "process-crash-restart::client-typescript|node-22|windows-x86_64|rust|restricted",
+        "process-crash-restart::client-typescript|node-24|linux-aarch64|php|local-only",
+        "process-crash-restart::client-typescript|node-24|linux-aarch64|php|public",
+        "process-crash-restart::client-typescript|node-24|linux-aarch64|php|restricted",
+        "process-crash-restart::client-typescript|node-24|linux-aarch64|rust|local-only",
+        "process-crash-restart::client-typescript|node-24|linux-aarch64|rust|public",
+        "process-crash-restart::client-typescript|node-24|linux-aarch64|rust|restricted",
+        "process-crash-restart::client-typescript|node-24|linux-x86_64|php|local-only",
+        "process-crash-restart::client-typescript|node-24|linux-x86_64|php|public",
+        "process-crash-restart::client-typescript|node-24|linux-x86_64|php|restricted",
+        "process-crash-restart::client-typescript|node-24|linux-x86_64|rust|local-only",
+        "process-crash-restart::client-typescript|node-24|linux-x86_64|rust|public",
+        "process-crash-restart::client-typescript|node-24|linux-x86_64|rust|restricted",
+        "process-crash-restart::client-typescript|node-24|macos-arm64|php|local-only",
+        "process-crash-restart::client-typescript|node-24|macos-arm64|php|public",
+        "process-crash-restart::client-typescript|node-24|macos-arm64|php|restricted",
+        "process-crash-restart::client-typescript|node-24|macos-arm64|rust|local-only",
+        "process-crash-restart::client-typescript|node-24|macos-arm64|rust|public",
+        "process-crash-restart::client-typescript|node-24|macos-arm64|rust|restricted",
+        "process-crash-restart::client-typescript|node-24|windows-x86_64|php|local-only",
+        "process-crash-restart::client-typescript|node-24|windows-x86_64|php|public",
+        "process-crash-restart::client-typescript|node-24|windows-x86_64|php|restricted",
+        "process-crash-restart::client-typescript|node-24|windows-x86_64|rust|local-only",
+        "process-crash-restart::client-typescript|node-24|windows-x86_64|rust|public",
+        "process-crash-restart::client-typescript|node-24|windows-x86_64|rust|restricted"
+      ],
+      "pipeline_context": "reports/postcert/2026-11-07-materialized-assertions/README.md",
+      "scenario": "process-crash-restart",
+      "scope": "Exact campaign dispatch is the crash/recovery assertion, not every function in its source file.",
+      "selected_fixture_loop_is_this_case": false
+    },
+    {
+      "accepted_credit_changed": false,
+      "assertion": "sqlite_two_process_crash_recovery_and_single_terminal_winner",
+      "component": "client-rust",
+      "existing_assignment_ids": [
+        "process-crash-restart::client-rust|msrv-1.86|linux-aarch64|php|local-only",
+        "process-crash-restart::client-rust|msrv-1.86|linux-aarch64|php|public",
+        "process-crash-restart::client-rust|msrv-1.86|linux-aarch64|php|restricted",
+        "process-crash-restart::client-rust|msrv-1.86|linux-aarch64|rust|local-only",
+        "process-crash-restart::client-rust|msrv-1.86|linux-aarch64|rust|public",
+        "process-crash-restart::client-rust|msrv-1.86|linux-aarch64|rust|restricted",
+        "process-crash-restart::client-rust|msrv-1.86|linux-x86_64|php|local-only",
+        "process-crash-restart::client-rust|msrv-1.86|linux-x86_64|php|public",
+        "process-crash-restart::client-rust|msrv-1.86|linux-x86_64|php|restricted",
+        "process-crash-restart::client-rust|msrv-1.86|linux-x86_64|rust|local-only",
+        "process-crash-restart::client-rust|msrv-1.86|linux-x86_64|rust|public",
+        "process-crash-restart::client-rust|msrv-1.86|linux-x86_64|rust|restricted",
+        "process-crash-restart::client-rust|msrv-1.86|macos-arm64|php|local-only",
+        "process-crash-restart::client-rust|msrv-1.86|macos-arm64|php|public",
+        "process-crash-restart::client-rust|msrv-1.86|macos-arm64|php|restricted",
+        "process-crash-restart::client-rust|msrv-1.86|macos-arm64|rust|local-only",
+        "process-crash-restart::client-rust|msrv-1.86|macos-arm64|rust|public",
+        "process-crash-restart::client-rust|msrv-1.86|macos-arm64|rust|restricted",
+        "process-crash-restart::client-rust|msrv-1.86|windows-x86_64|php|local-only",
+        "process-crash-restart::client-rust|msrv-1.86|windows-x86_64|php|public",
+        "process-crash-restart::client-rust|msrv-1.86|windows-x86_64|php|restricted",
+        "process-crash-restart::client-rust|msrv-1.86|windows-x86_64|rust|local-only",
+        "process-crash-restart::client-rust|msrv-1.86|windows-x86_64|rust|public",
+        "process-crash-restart::client-rust|msrv-1.86|windows-x86_64|rust|restricted",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-aarch64|php|local-only",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-aarch64|php|public",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-aarch64|php|restricted",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-aarch64|rust|local-only",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-aarch64|rust|public",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-aarch64|rust|restricted",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-x86_64|php|local-only",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-x86_64|php|public",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-x86_64|php|restricted",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-x86_64|rust|local-only",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-x86_64|rust|public",
+        "process-crash-restart::client-rust|rust-1.98.0|linux-x86_64|rust|restricted",
+        "process-crash-restart::client-rust|rust-1.98.0|macos-arm64|php|local-only",
+        "process-crash-restart::client-rust|rust-1.98.0|macos-arm64|php|public",
+        "process-crash-restart::client-rust|rust-1.98.0|macos-arm64|php|restricted",
+        "process-crash-restart::client-rust|rust-1.98.0|macos-arm64|rust|local-only",
+        "process-crash-restart::client-rust|rust-1.98.0|macos-arm64|rust|public",
+        "process-crash-restart::client-rust|rust-1.98.0|macos-arm64|rust|restricted",
+        "process-crash-restart::client-rust|rust-1.98.0|windows-x86_64|php|local-only",
+        "process-crash-restart::client-rust|rust-1.98.0|windows-x86_64|php|public",
+        "process-crash-restart::client-rust|rust-1.98.0|windows-x86_64|php|restricted",
+        "process-crash-restart::client-rust|rust-1.98.0|windows-x86_64|rust|local-only",
+        "process-crash-restart::client-rust|rust-1.98.0|windows-x86_64|rust|public",
+        "process-crash-restart::client-rust|rust-1.98.0|windows-x86_64|rust|restricted"
+      ],
+      "pipeline_context": "reports/postcert/2026-11-07-materialized-assertions/README.md",
+      "scenario": "process-crash-restart",
+      "scope": "Exact campaign dispatch is the crash/recovery assertion, not every function in its source file.",
+      "selected_fixture_loop_is_this_case": false
+    }
+  ],
+  "candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "capability_classification": "REQUIRED_STABLE",
+  "capability_id": "service-lifecycle",
+  "counts": {
+    "explicit_vector_terminal_rejection_applications": 1,
+    "fixture_vectors": 16,
+    "full_capabilities_verified": 0,
+    "mapped_obligations_partial": 9,
+    "new_runtime_executions": 0,
+    "predicate_source_references": 14,
+    "state_label_walk_source_applications": 15,
+    "unmapped_obligations_in_this_batch": 1,
+    "vector_component_cells": 48
+  },
+  "fixture_mirrors": [
+    {
+      "byte_equal": true,
+      "component": "client-python",
+      "sha256": "7bb6be604278656b960b48e1c07279ae41cb19447140d9dceeeea10f7c90b3c7"
+    },
+    {
+      "byte_equal": true,
+      "component": "client-typescript",
+      "sha256": "7bb6be604278656b960b48e1c07279ae41cb19447140d9dceeeea10f7c90b3c7"
+    },
+    {
+      "byte_equal": true,
+      "component": "client-rust",
+      "sha256": "7bb6be604278656b960b48e1c07279ae41cb19447140d9dceeeea10f7c90b3c7"
+    }
+  ],
+  "fixture_vector_domain": [
+    {
+      "events": [
+        [
+          "accepted",
+          0,
+          false
+        ],
+        [
+          "queued",
+          1,
+          false
+        ],
+        [
+          "running",
+          2,
+          false
+        ],
+        [
+          "completed",
+          3,
+          true
+        ]
+      ],
+      "expected": "accept",
+      "id": "LIFECYCLE-01",
+      "kind": "valid"
+    },
+    {
+      "events": [
+        [
+          "accepted",
+          0,
+          false
+        ],
+        [
+          "running",
+          1,
+          false
+        ],
+        [
+          "streaming",
+          2,
+          false
+        ],
+        [
+          "streaming",
+          3,
+          false
+        ],
+        [
+          "completed",
+          4,
+          true
+        ]
+      ],
+      "expected": "accept",
+      "id": "LIFECYCLE-02",
+      "kind": "valid"
+    },
+    {
+      "events": [
+        [
+          "accepted",
+          0,
+          false
+        ],
+        [
+          "completed",
+          1,
+          true
+        ],
+        [
+          "running",
+          2,
+          false
+        ]
+      ],
+      "expected": "event_after_terminal",
+      "id": "LIFECYCLE-03",
+      "kind": "invalid"
+    },
+    {
+      "events": [
+        [
+          "accepted",
+          0,
+          false
+        ],
+        [
+          "running",
+          2,
+          false
+        ]
+      ],
+      "expected": "sequence_gap",
+      "id": "LIFECYCLE-04",
+      "kind": "invalid"
+    },
+    {
+      "events": [
+        [
+          "accepted",
+          0,
+          false
+        ],
+        [
+          "running",
+          1,
+          false
+        ],
+        [
+          "running",
+          1,
+          false
+        ],
+        [
+          "completed",
+          2,
+          true
+        ]
+      ],
+      "expected": "deduplicate",
+      "id": "LIFECYCLE-05",
+      "kind": "duplicate"
+    },
+    {
+      "events": [
+        [
+          "accepted",
+          0,
+          false
+        ],
+        [
+          "running",
+          1,
+          true
+        ]
+      ],
+      "expected": "terminal_flag_mismatch",
+      "id": "LIFECYCLE-06",
+      "kind": "invalid"
+    },
+    {
+      "events": [
+        [
+          "accepted",
+          0,
+          false
+        ],
+        [
+          "queued",
+          1,
+          false
+        ],
+        [
+          "cancelled",
+          2,
+          true
+        ]
+      ],
+      "expected": "accept",
+      "id": "LIFECYCLE-07",
+      "kind": "valid"
+    },
+    {
+      "events": [
+        [
+          "accepted",
+          0,
+          false
+        ],
+        [
+          "running",
+          1,
+          false
+        ],
+        [
+          "expired",
+          2,
+          true
+        ]
+      ],
+      "expected": "accept",
+      "id": "LIFECYCLE-08",
+      "kind": "valid"
+    },
+    {
+      "after_sequence": 1,
+      "expected": "replay_2_through_4",
+      "id": "LIFECYCLE-09",
+      "kind": "resume",
+      "latest_sequence": 4,
+      "retained_sequences": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "after_sequence": 1,
+      "expected": "resume_unavailable",
+      "id": "LIFECYCLE-10",
+      "kind": "resume",
+      "latest_sequence": 8,
+      "replay_window_expired": true,
+      "retained_sequences": []
+    },
+    {
+      "existing_state": "running",
+      "expected": "return_existing_state_no_execution",
+      "id": "LIFECYCLE-11",
+      "kind": "retry",
+      "same_idempotency_key": true,
+      "same_request": true,
+      "same_task_id": true
+    },
+    {
+      "existing_state": "accepted",
+      "expected": "conflict_no_execution",
+      "id": "LIFECYCLE-12",
+      "kind": "retry",
+      "same_idempotency_key": true,
+      "same_request": false,
+      "same_task_id": true
+    },
+    {
+      "existing_state": "running",
+      "expected": "state_unchanged",
+      "id": "LIFECYCLE-13",
+      "kind": "disconnect"
+    },
+    {
+      "existing_state": "completed",
+      "expected": "return_completed",
+      "id": "LIFECYCLE-14",
+      "kind": "late_cancel"
+    },
+    {
+      "event": {
+        "is_final": false,
+        "progress": {
+          "completed_units": 2,
+          "total_units": 10,
+          "unit": "chunks"
+        },
+        "sequence": 1,
+        "state": "running",
+        "task_id": "t-15"
+      },
+      "expected": "redacted",
+      "forbidden_fields": [
+        "prompt",
+        "payload",
+        "response",
+        "credentials",
+        "endpoint",
+        "peer_topology",
+        "checkpoint_contents"
+      ],
+      "id": "LIFECYCLE-15",
+      "kind": "privacy"
+    },
+    {
+      "events": [
+        [
+          "accepted",
+          0,
+          false
+        ],
+        [
+          "timed_out",
+          1,
+          true
+        ]
+      ],
+      "expected": "accept_as_expired",
+      "id": "LIFECYCLE-16",
+      "kind": "alias"
+    }
+  ],
+  "historical_inventory_complete": false,
+  "limits": [
+    "This is not a replacement qualification validator, receipt admission or candidate compatibility mechanism.",
+    "Matching state-label walks do not assert all sequence/finality/privacy/authorization fields.",
+    "Other test functions may exercise related predicates; absence from these selected consumers is not proof of a global test gap or product defect.",
+    "Source assertions and canonical admitted execution are distinct; no new runtime execution or qualification credit occurs.",
+    "The amendment is explicitly opt-in and pre-normative; REQUIRED_STABLE selects project scope, not standards ratification.",
+    "Whole semantic IFRB and all-capability completion remain unestablished."
+  ],
+  "obligations": [
+    {
+      "authority_ref": {
+        "end_line": 16,
+        "excerpt_sha256": "af51bf6de52810930ba3e673bdcbe1ea9671f36298c6766beb1516a35fa74124",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 8
+      },
+      "maturity": "PRE_NORMATIVE_NEGOTIATED_PROFILE",
+      "obligation_id": "lifecycle-negotiation",
+      "required_behavior": "Unknown optional profiles preserve base behavior; unsupported required profiles refuse before acceptance.",
+      "semantic_assertion_mapping": "BOUNDED_SOURCE_JOINS_ONLY_NOT_WHOLE_OBLIGATION_PASS"
+    },
+    {
+      "authority_ref": {
+        "end_line": 24,
+        "excerpt_sha256": "b316bef4faa363acd933d77de2528a74b7cc51699b2d0d70142a5282d5c19cb0",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 17
+      },
+      "maturity": "PRE_NORMATIVE_NEGOTIATED_PROFILE",
+      "obligation_id": "lifecycle-identifier-binding",
+      "required_behavior": "Task/idempotency reuse with different request-defining content conflicts without another execution or charge.",
+      "semantic_assertion_mapping": "BOUNDED_SOURCE_JOINS_ONLY_NOT_WHOLE_OBLIGATION_PASS"
+    },
+    {
+      "authority_ref": {
+        "end_line": 45,
+        "excerpt_sha256": "d1aaeb7fdc4fd4eed696e1063f5a80725184eaf04f3e910152624c81e46bb403",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 25
+      },
+      "maturity": "PRE_NORMATIVE_NEGOTIATED_PROFILE",
+      "obligation_id": "lifecycle-terminality-and-alias",
+      "required_behavior": "Exactly one terminal event; expired is emitted and timed_out accepted as a deprecated alias. Disconnect is not itself a transition.",
+      "semantic_assertion_mapping": "BOUNDED_SOURCE_JOINS_ONLY_NOT_WHOLE_OBLIGATION_PASS"
+    },
+    {
+      "authority_ref": {
+        "end_line": 60,
+        "excerpt_sha256": "79058f063848507c3bb111eb7ebe5598375fd292da325a8e117bdd06538dea43",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 46
+      },
+      "maturity": "PRE_NORMATIVE_NEGOTIATED_PROFILE",
+      "obligation_id": "lifecycle-sequence-and-duplicate",
+      "required_behavior": "Events have increasing sequence; byte-equivalent duplicates deduplicate; conflicting duplicates refuse; gaps request replay/status.",
+      "semantic_assertion_mapping": "BOUNDED_SOURCE_JOINS_ONLY_NOT_WHOLE_OBLIGATION_PASS"
+    },
+    {
+      "authority_ref": {
+        "end_line": 82,
+        "excerpt_sha256": "4b2177fe493d30a74622699742465233ce184398d03f72e531592ef5c8b7ac52",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 61
+      },
+      "maturity": "PRE_NORMATIVE_NEGOTIATED_PROFILE",
+      "obligation_id": "lifecycle-bounded-replay",
+      "required_behavior": "Observation/resume returns retained events without restarting execution; replay expiry returns resume_unavailable, not resubmission authority.",
+      "semantic_assertion_mapping": "BOUNDED_SOURCE_JOINS_ONLY_NOT_WHOLE_OBLIGATION_PASS"
+    },
+    {
+      "authority_ref": {
+        "end_line": 95,
+        "excerpt_sha256": "42d09e963cc164f954ce9fe5ffd3afd751917db7c3962a99402b16a9ed8edb29",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 83
+      },
+      "maturity": "PRE_NORMATIVE_NEGOTIATED_PROFILE",
+      "obligation_id": "lifecycle-cancellation",
+      "required_behavior": "Cancellation is scoped and idempotent; already committed terminal states are not rewritten; pending stop is distinct from cancellation completion.",
+      "semantic_assertion_mapping": "BOUNDED_SOURCE_JOINS_ONLY_NOT_WHOLE_OBLIGATION_PASS"
+    },
+    {
+      "authority_ref": {
+        "end_line": 106,
+        "excerpt_sha256": "b9bf83f254aaec07ddefd2524594308c78645b5d334c633b06518c9d977fb098",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 96
+      },
+      "maturity": "PRE_NORMATIVE_NEGOTIATED_PROFILE",
+      "obligation_id": "lifecycle-retry-and-accounting",
+      "required_behavior": "Query/status/observe according to acceptance; a separate execution needs an explicit caller decision and new identifiers.",
+      "semantic_assertion_mapping": "BOUNDED_SOURCE_JOINS_ONLY_NOT_WHOLE_OBLIGATION_PASS"
+    },
+    {
+      "authority_ref": {
+        "end_line": 162,
+        "excerpt_sha256": "eb6531609fa15eef1f3f072e147a71ffd3b81392431ebdecee69eff1da449994",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 146
+      },
+      "maturity": "PRE_NORMATIVE_NEGOTIATED_PROFILE",
+      "obligation_id": "lifecycle-authorization",
+      "required_behavior": "Each control operation authenticates and authorizes; cross-task concealment and non-leaking responses remain distinct from a test bearer helper.",
+      "semantic_assertion_mapping": "BOUNDED_SOURCE_JOINS_ONLY_NOT_WHOLE_OBLIGATION_PASS"
+    },
+    {
+      "authority_ref": {
+        "end_line": 187,
+        "excerpt_sha256": "fb803bff0ed877d93f12e5bfa71419a51409156fa81798167670b79c20046a18",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 163
+      },
+      "maturity": "PRE_NORMATIVE_NEGOTIATED_PROFILE",
+      "obligation_id": "lifecycle-runtime-cancellation-evidence",
+      "required_behavior": "A requested cancellation, transport abort, backend acknowledgement, execution stop and released local handle are not equivalent observations.",
+      "semantic_assertion_mapping": "BOUNDED_SOURCE_JOINS_ONLY_NOT_WHOLE_OBLIGATION_PASS"
+    },
+    {
+      "authority_ref": {
+        "end_line": 208,
+        "excerpt_sha256": "a1d1692c25e89c731c9d78384f29b6fe866e71b8218b2cb836d3ed86ad06737e",
+        "source": {
+          "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+          "component": "protocol",
+          "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+          "repository": "RobLe3/IICP",
+          "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+        },
+        "start_line": 188
+      },
+      "maturity": "PRE_NORMATIVE_NEGOTIATED_PROFILE",
+      "obligation_id": "lifecycle-accounting-cardinality",
+      "required_behavior": "At most one execution reservation and idempotent settlement; status/replay creates neither. No price or production credit behavior is established.",
+      "semantic_assertion_mapping": "BOUNDED_SOURCE_JOINS_ONLY_NOT_WHOLE_OBLIGATION_PASS"
+    }
+  ],
+  "owner": "RobLe3/iicp.network#1678",
+  "private_reviewed_map_sha256": "2c079cf8bef28410a8757319422b2d8c25eab5c0a86225bf977dcd3059c86e1c",
+  "qualification_credit": 0,
+  "related_fixture_relations": [
+    {
+      "byte_equal": true,
+      "component": "client-python",
+      "fixture": "service-lifecycle-runtime-control-v1.json",
+      "sha256": "0319a6a19ae5006978f79f01b61368e287e297000d7f377a983e3307cc4b9492"
+    },
+    {
+      "byte_equal": true,
+      "component": "client-typescript",
+      "fixture": "service-lifecycle-runtime-control-v1.json",
+      "sha256": "0319a6a19ae5006978f79f01b61368e287e297000d7f377a983e3307cc4b9492"
+    },
+    {
+      "byte_equal": true,
+      "component": "client-rust",
+      "fixture": "service-lifecycle-runtime-control-v1.json",
+      "sha256": "0319a6a19ae5006978f79f01b61368e287e297000d7f377a983e3307cc4b9492"
+    },
+    {
+      "byte_equal": true,
+      "component": "client-python",
+      "fixture": "service-lifecycle-accounting-v1.json",
+      "sha256": "017b7c7a2bfba740ab0d6844991f77845e7f08f033a909b62d1b5572473f448f"
+    },
+    {
+      "byte_equal": true,
+      "component": "client-typescript",
+      "fixture": "service-lifecycle-accounting-v1.json",
+      "sha256": "017b7c7a2bfba740ab0d6844991f77845e7f08f033a909b62d1b5572473f448f"
+    },
+    {
+      "byte_equal": true,
+      "component": "client-rust",
+      "fixture": "service-lifecycle-accounting-v1.json",
+      "sha256": "017b7c7a2bfba740ab0d6844991f77845e7f08f033a909b62d1b5572473f448f"
+    },
+    {
+      "byte_equal": true,
+      "component": "client-python",
+      "fixture": "service-lifecycle-authorization-v1.json",
+      "sha256": "d1dac29c01aec16b16e5d46cf51501386efebbbf97e9486043e87c9d7e24685d"
+    },
+    {
+      "byte_equal": true,
+      "component": "client-rust",
+      "fixture": "service-lifecycle-authorization-v1.json",
+      "sha256": "d1dac29c01aec16b16e5d46cf51501386efebbbf97e9486043e87c9d7e24685d"
+    }
+  ],
+  "schema": "iicp.lifecycle-semantic-obligations.v1",
+  "semantic_predicate_joins": [
+    {
+      "limitation": "No claim of negotiation coverage from a store transition fixture. Required/optional profile negotiation source remains a separate existing capability review.",
+      "obligation_id": "lifecycle-negotiation",
+      "predicate_source_refs": [],
+      "runtime_observation": "NOT_EXECUTED_IN_THIS_BATCH",
+      "source_join_status": "NOT_MAPPED_IN_THIS_BOUNDED_BATCH",
+      "whole_obligation_verified": false
+    },
+    {
+      "limitation": "Positive duplicate submission returns200 after202; reused key with newtask409; same task changed digest throws. Test stores do not establish real backend execution or billing cardinality. TS selected transition test is not mapped to this full predicate.",
+      "obligation_id": "lifecycle-identifier-binding",
+      "predicate_source_refs": [
+        {
+          "end_line": 138,
+          "excerpt_sha256": "410914cf65e55a057ca6908a218ee90f4854902016ac2b9c572f446608cf1120",
+          "ref_id": "python-http",
+          "source": {
+            "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+            "component": "client-python",
+            "path": "tests/test_service_lifecycle.py",
+            "repository": "RobLe3/iicp-client-python",
+            "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+          },
+          "start_line": 112
+        },
+        {
+          "end_line": 151,
+          "excerpt_sha256": "ec371b6227508b7dba0deadbe7ad9f48701ad1ee722931a97e8ad805ed40a64f",
+          "ref_id": "rust-http",
+          "source": {
+            "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "component": "client-rust",
+            "path": "tests/service_lifecycle.rs",
+            "repository": "RobLe3/iicp-client-rust",
+            "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+          },
+          "start_line": 36
+        }
+      ],
+      "runtime_observation": "NOT_EXECUTED_IN_THIS_BATCH",
+      "source_join_status": "REVIEWED_PARTIAL_SOURCE_PREDICATES_NOT_WHOLE_OBLIGATION_PASS",
+      "whole_obligation_verified": false
+    },
+    {
+      "limitation": "The48 vector-component cells below locate15 state-label walks and one explicit TS terminal rejection; those loops do not validate every input sequence or finality flag.",
+      "obligation_id": "lifecycle-terminality-and-alias",
+      "predicate_source_refs": [],
+      "runtime_observation": "NOT_EXECUTED_IN_THIS_BATCH",
+      "source_join_status": "REVIEWED_PARTIAL_SOURCE_PREDICATES_NOT_WHOLE_OBLIGATION_PASS",
+      "whole_obligation_verified": false
+    },
+    {
+      "limitation": "Bounded buffer tests assert lag offsets/retained sequence lists and terminal closure, not full incoming-event byte-equivalent duplicate or gap-recovery protocol behavior.",
+      "obligation_id": "lifecycle-sequence-and-duplicate",
+      "predicate_source_refs": [
+        {
+          "end_line": 73,
+          "excerpt_sha256": "c1291537a62c077e1e104c68bcdbb457a4a3a153ed8f3c8a04725bc111eb75f4",
+          "ref_id": "python-runtime",
+          "source": {
+            "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+            "component": "client-python",
+            "path": "tests/test_service_lifecycle.py",
+            "repository": "RobLe3/iicp-client-python",
+            "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+          },
+          "start_line": 37
+        },
+        {
+          "end_line": 405,
+          "excerpt_sha256": "8a484185b10ae9e73dd19e342e599de81155b4b67f813979ec7cdc3755061b08",
+          "ref_id": "rust-runtime",
+          "source": {
+            "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "component": "client-rust",
+            "path": "tests/service_lifecycle.rs",
+            "repository": "RobLe3/iicp-client-rust",
+            "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+          },
+          "start_line": 325
+        },
+        {
+          "end_line": 54,
+          "excerpt_sha256": "464d830df7884508f40a77dfece06d04dc83c00b94f17c0c7cbb24e28353410c",
+          "ref_id": "typescript-observation",
+          "source": {
+            "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+            "component": "client-typescript",
+            "path": "tests/service_lifecycle_runtime_control.test.ts",
+            "repository": "RobLe3/iicp-client-typescript",
+            "sha256": "7d9339373dc033587fef32d6521da6465c69190b2cb9dada38526f705449b04b"
+          },
+          "start_line": 34
+        }
+      ],
+      "runtime_observation": "NOT_EXECUTED_IN_THIS_BATCH",
+      "source_join_status": "REVIEWED_PARTIAL_SOURCE_PREDICATES_NOT_WHOLE_OBLIGATION_PASS",
+      "whole_obligation_verified": false
+    },
+    {
+      "limitation": "Selected assertions establish bounded replay refusal and some restoration/offset limits. Function names do not prove no backend re-execution: these bodies do not count actual backend invocations.",
+      "obligation_id": "lifecycle-bounded-replay",
+      "predicate_source_refs": [
+        {
+          "end_line": 207,
+          "excerpt_sha256": "fe8693c808b4e3549f485dc4de50b729e2af91690658d6e7a57368c54c4b7f4b",
+          "ref_id": "python-replay",
+          "source": {
+            "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+            "component": "client-python",
+            "path": "tests/test_service_lifecycle.py",
+            "repository": "RobLe3/iicp-client-python",
+            "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+          },
+          "start_line": 200
+        },
+        {
+          "end_line": 176,
+          "excerpt_sha256": "5801320b9f235e778d11b9985821f4eff659c9993fe870605af3d327bfb2fc2a",
+          "ref_id": "rust-replay",
+          "source": {
+            "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "component": "client-rust",
+            "path": "tests/service_lifecycle.rs",
+            "repository": "RobLe3/iicp-client-rust",
+            "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+          },
+          "start_line": 152
+        },
+        {
+          "end_line": 11,
+          "excerpt_sha256": "ea7dea54a7907f567e7a7473491788d301fc3bfecf5accb5619a661027b1a413",
+          "ref_id": "typescript-snapshot",
+          "source": {
+            "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+            "component": "client-typescript",
+            "path": "tests/service_lifecycle.test.ts",
+            "repository": "RobLe3/iicp-client-typescript",
+            "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+          },
+          "start_line": 11
+        }
+      ],
+      "runtime_observation": "NOT_EXECUTED_IN_THIS_BATCH",
+      "source_join_status": "REVIEWED_PARTIAL_SOURCE_PREDICATES_NOT_WHOLE_OBLIGATION_PASS",
+      "whole_obligation_verified": false
+    },
+    {
+      "limitation": "Python/Rust test source returns existing completed state after cancel; TS source asserts repeated cancelled state. These are different terminal-state controls, not identical cross-platform cases.",
+      "obligation_id": "lifecycle-cancellation",
+      "predicate_source_refs": [
+        {
+          "end_line": 138,
+          "excerpt_sha256": "410914cf65e55a057ca6908a218ee90f4854902016ac2b9c572f446608cf1120",
+          "ref_id": "python-http",
+          "source": {
+            "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+            "component": "client-python",
+            "path": "tests/test_service_lifecycle.py",
+            "repository": "RobLe3/iicp-client-python",
+            "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+          },
+          "start_line": 112
+        },
+        {
+          "end_line": 151,
+          "excerpt_sha256": "ec371b6227508b7dba0deadbe7ad9f48701ad1ee722931a97e8ad805ed40a64f",
+          "ref_id": "rust-http",
+          "source": {
+            "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "component": "client-rust",
+            "path": "tests/service_lifecycle.rs",
+            "repository": "RobLe3/iicp-client-rust",
+            "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+          },
+          "start_line": 36
+        },
+        {
+          "end_line": 11,
+          "excerpt_sha256": "ea7dea54a7907f567e7a7473491788d301fc3bfecf5accb5619a661027b1a413",
+          "ref_id": "typescript-snapshot",
+          "source": {
+            "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+            "component": "client-typescript",
+            "path": "tests/service_lifecycle.test.ts",
+            "repository": "RobLe3/iicp-client-typescript",
+            "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+          },
+          "start_line": 11
+        }
+      ],
+      "runtime_observation": "NOT_EXECUTED_IN_THIS_BATCH",
+      "source_join_status": "REVIEWED_PARTIAL_SOURCE_PREDICATES_NOT_WHOLE_OBLIGATION_PASS",
+      "whole_obligation_verified": false
+    },
+    {
+      "limitation": "Source links cover store idempotency and pure accounting decisions, not real charged execution under ambiguous transport or cross-provider retry.",
+      "obligation_id": "lifecycle-retry-and-accounting",
+      "predicate_source_refs": [
+        {
+          "end_line": 138,
+          "excerpt_sha256": "410914cf65e55a057ca6908a218ee90f4854902016ac2b9c572f446608cf1120",
+          "ref_id": "python-http",
+          "source": {
+            "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+            "component": "client-python",
+            "path": "tests/test_service_lifecycle.py",
+            "repository": "RobLe3/iicp-client-python",
+            "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+          },
+          "start_line": 112
+        },
+        {
+          "end_line": 151,
+          "excerpt_sha256": "ec371b6227508b7dba0deadbe7ad9f48701ad1ee722931a97e8ad805ed40a64f",
+          "ref_id": "rust-http",
+          "source": {
+            "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "component": "client-rust",
+            "path": "tests/service_lifecycle.rs",
+            "repository": "RobLe3/iicp-client-rust",
+            "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+          },
+          "start_line": 36
+        },
+        {
+          "end_line": 13,
+          "excerpt_sha256": "9beab1c08937b4c320fdf5f4ecb2f4061f4fdfe4addb95a985bc39d62e352330",
+          "ref_id": "python-accounting",
+          "source": {
+            "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+            "component": "client-python",
+            "path": "tests/test_service_lifecycle_accounting.py",
+            "repository": "RobLe3/iicp-client-python",
+            "sha256": "5af715c7c00e560246dbaa52a5561b7a5e3a4ea26b26d2c38135c6c2f7a9cc7d"
+          },
+          "start_line": 7
+        },
+        {
+          "end_line": 15,
+          "excerpt_sha256": "b06f7db98f82c4b6d66318ac9a8a2342005d406e917f846c9c9b43b922484097",
+          "ref_id": "typescript-accounting",
+          "source": {
+            "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+            "component": "client-typescript",
+            "path": "tests/service_lifecycle_accounting.test.ts",
+            "repository": "RobLe3/iicp-client-typescript",
+            "sha256": "18585fafc3519ace5ffd47a503ac3e06ce9d80c7408d4ad9b97df53d8160312c"
+          },
+          "start_line": 10
+        },
+        {
+          "end_line": 29,
+          "excerpt_sha256": "b6a59b197c70f9fded23bb72943b3e11aa147432e6c85be7b789006f4edbc63f",
+          "ref_id": "rust-accounting",
+          "source": {
+            "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "component": "client-rust",
+            "path": "tests/service_lifecycle_accounting.rs",
+            "repository": "RobLe3/iicp-client-rust",
+            "sha256": "29d8edfa9cb43e67adfb8fea9b1629b4c0938afb9b4d7faee4e0da185b513c06"
+          },
+          "start_line": 5
+        }
+      ],
+      "runtime_observation": "NOT_EXECUTED_IN_THIS_BATCH",
+      "source_join_status": "REVIEWED_PARTIAL_SOURCE_PREDICATES_NOT_WHOLE_OBLIGATION_PASS",
+      "whole_obligation_verified": false
+    },
+    {
+      "limitation": "Exact source consumers apply ten synthetic authorization cases and HTTP expected-status checks. Deployment identity verification is supplied by the test authorizer. TS remains transport-neutral here, not a demonstrated missing HTTP server.",
+      "obligation_id": "lifecycle-authorization",
+      "predicate_source_refs": [
+        {
+          "end_line": 197,
+          "excerpt_sha256": "5783c5197aed3377a7d7082ea6bd3ce64956c4e5c5e9440ce56e7918f142e2b2",
+          "ref_id": "python-authorizer",
+          "source": {
+            "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+            "component": "client-python",
+            "path": "tests/test_service_lifecycle.py",
+            "repository": "RobLe3/iicp-client-python",
+            "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+          },
+          "start_line": 141
+        },
+        {
+          "end_line": 324,
+          "excerpt_sha256": "d92783b5a2c618ea46caf9cb8eab42b862d4f6208d9971dce177ec05efc4db1c",
+          "ref_id": "rust-authorizer",
+          "source": {
+            "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "component": "client-rust",
+            "path": "tests/service_lifecycle.rs",
+            "repository": "RobLe3/iicp-client-rust",
+            "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+          },
+          "start_line": 212
+        }
+      ],
+      "runtime_observation": "NOT_EXECUTED_IN_THIS_BATCH",
+      "source_join_status": "REVIEWED_PARTIAL_SOURCE_PREDICATES_NOT_WHOLE_OBLIGATION_PASS",
+      "whole_obligation_verified": false
+    },
+    {
+      "limitation": "Synthetic registered handlers and explicitly reported levels test evidence classification/slot cleanup; transport_aborted is not backend_acknowledged or execution_stopped.",
+      "obligation_id": "lifecycle-runtime-cancellation-evidence",
+      "predicate_source_refs": [
+        {
+          "end_line": 73,
+          "excerpt_sha256": "c1291537a62c077e1e104c68bcdbb457a4a3a153ed8f3c8a04725bc111eb75f4",
+          "ref_id": "python-runtime",
+          "source": {
+            "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+            "component": "client-python",
+            "path": "tests/test_service_lifecycle.py",
+            "repository": "RobLe3/iicp-client-python",
+            "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+          },
+          "start_line": 37
+        },
+        {
+          "end_line": 405,
+          "excerpt_sha256": "8a484185b10ae9e73dd19e342e599de81155b4b67f813979ec7cdc3755061b08",
+          "ref_id": "rust-runtime",
+          "source": {
+            "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "component": "client-rust",
+            "path": "tests/service_lifecycle.rs",
+            "repository": "RobLe3/iicp-client-rust",
+            "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+          },
+          "start_line": 325
+        },
+        {
+          "end_line": 33,
+          "excerpt_sha256": "fdbfedcb603173d26ae93b3f7b44b669a794103f795036c77ec172e94f9ddd7e",
+          "ref_id": "typescript-cancellation",
+          "source": {
+            "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+            "component": "client-typescript",
+            "path": "tests/service_lifecycle_runtime_control.test.ts",
+            "repository": "RobLe3/iicp-client-typescript",
+            "sha256": "7d9339373dc033587fef32d6521da6465c69190b2cb9dada38526f705449b04b"
+          },
+          "start_line": 11
+        },
+        {
+          "end_line": 54,
+          "excerpt_sha256": "464d830df7884508f40a77dfece06d04dc83c00b94f17c0c7cbb24e28353410c",
+          "ref_id": "typescript-observation",
+          "source": {
+            "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+            "component": "client-typescript",
+            "path": "tests/service_lifecycle_runtime_control.test.ts",
+            "repository": "RobLe3/iicp-client-typescript",
+            "sha256": "7d9339373dc033587fef32d6521da6465c69190b2cb9dada38526f705449b04b"
+          },
+          "start_line": 34
+        }
+      ],
+      "runtime_observation": "NOT_EXECUTED_IN_THIS_BATCH",
+      "source_join_status": "REVIEWED_PARTIAL_SOURCE_PREDICATES_NOT_WHOLE_OBLIGATION_PASS",
+      "whole_obligation_verified": false
+    },
+    {
+      "limitation": "Pure helper consumers compare decision/reservation/settlement/new-execution fields to the exact shared accounting fixture. No production ledger, price, settlement or charge was executed.",
+      "obligation_id": "lifecycle-accounting-cardinality",
+      "predicate_source_refs": [
+        {
+          "end_line": 13,
+          "excerpt_sha256": "9beab1c08937b4c320fdf5f4ecb2f4061f4fdfe4addb95a985bc39d62e352330",
+          "ref_id": "python-accounting",
+          "source": {
+            "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+            "component": "client-python",
+            "path": "tests/test_service_lifecycle_accounting.py",
+            "repository": "RobLe3/iicp-client-python",
+            "sha256": "5af715c7c00e560246dbaa52a5561b7a5e3a4ea26b26d2c38135c6c2f7a9cc7d"
+          },
+          "start_line": 7
+        },
+        {
+          "end_line": 15,
+          "excerpt_sha256": "b06f7db98f82c4b6d66318ac9a8a2342005d406e917f846c9c9b43b922484097",
+          "ref_id": "typescript-accounting",
+          "source": {
+            "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+            "component": "client-typescript",
+            "path": "tests/service_lifecycle_accounting.test.ts",
+            "repository": "RobLe3/iicp-client-typescript",
+            "sha256": "18585fafc3519ace5ffd47a503ac3e06ce9d80c7408d4ad9b97df53d8160312c"
+          },
+          "start_line": 10
+        },
+        {
+          "end_line": 29,
+          "excerpt_sha256": "b6a59b197c70f9fded23bb72943b3e11aa147432e6c85be7b789006f4edbc63f",
+          "ref_id": "rust-accounting",
+          "source": {
+            "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "component": "client-rust",
+            "path": "tests/service_lifecycle_accounting.rs",
+            "repository": "RobLe3/iicp-client-rust",
+            "sha256": "29d8edfa9cb43e67adfb8fea9b1629b4c0938afb9b4d7faee4e0da185b513c06"
+          },
+          "start_line": 5
+        }
+      ],
+      "runtime_observation": "NOT_EXECUTED_IN_THIS_BATCH",
+      "source_join_status": "REVIEWED_PARTIAL_SOURCE_PREDICATES_NOT_WHOLE_OBLIGATION_PASS",
+      "whole_obligation_verified": false
+    }
+  ],
+  "source_blobs": [
+    {
+      "bytes": 23258,
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "component": "protocol",
+      "path": "pre1/feature-baseline-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "da4ef33aacdd363bbd2830a069efc73aa2e321efaa9753606303651d27d6f133"
+    },
+    {
+      "bytes": 7997,
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "component": "protocol",
+      "path": "spec/v1.9/iicp-service-lifecycle-profile.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "e825fc5afbeeae0d7b8ef33993a95ea333ee3545bd484f9ca6cdcb90ececd2fa"
+    },
+    {
+      "bytes": 6597,
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "component": "protocol",
+      "path": "research/pre-normative-profiles/README.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "5a25e689919e373bdd2cb9cd3fbf63ac1ed51b7a8729c9b5efcbc5ff3012a219"
+    },
+    {
+      "bytes": 14359,
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "component": "protocol",
+      "path": "research/pre-normative-profiles/service-lifecycle-v1-amendment.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "f783137c2eb23ae0f0b9bc714dc065c7ed99ee6dbcc4088bbea68db6183e9122"
+    },
+    {
+      "bytes": 1398,
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "component": "protocol",
+      "path": "research/pre-normative-profiles/service-lifecycle-persistence-v1.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "5539e900e5eb195f5d43efc6a5a3e8bc7e2c9fa2af68da144e0ed5a1d920164d"
+    },
+    {
+      "bytes": 9781,
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "component": "protocol",
+      "path": "research/pre-normative-profiles/fixtures/README.md",
+      "repository": "RobLe3/IICP",
+      "sha256": "b69f8f0eb066d41f027798d012f00a8938d80e62a4a1b2797a53634cfc282185"
+    },
+    {
+      "bytes": 5961,
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "component": "protocol",
+      "path": "research/pre-normative-profiles/fixtures/service-lifecycle-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "7bb6be604278656b960b48e1c07279ae41cb19447140d9dceeeea10f7c90b3c7"
+    },
+    {
+      "bytes": 2271,
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "component": "protocol",
+      "path": "research/pre-normative-profiles/fixtures/service-lifecycle-runtime-control-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "0319a6a19ae5006978f79f01b61368e287e297000d7f377a983e3307cc4b9492"
+    },
+    {
+      "bytes": 2949,
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "component": "protocol",
+      "path": "research/pre-normative-profiles/fixtures/service-lifecycle-persistence-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "b785a929c7c32b1348d5e1b086d18de78d88a083c1e28526482a61bc7906c0b3"
+    },
+    {
+      "bytes": 14246,
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "tests/test_service_lifecycle.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+    },
+    {
+      "bytes": 28469,
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "src/iicp_client/service_lifecycle.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "82f6b53bdb3025c82052eec67be29b46d13c4b97f06a4f3331e24063f563423b"
+    },
+    {
+      "bytes": 5961,
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "parity/service-lifecycle-v1.json",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "7bb6be604278656b960b48e1c07279ae41cb19447140d9dceeeea10f7c90b3c7"
+    },
+    {
+      "bytes": 2271,
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "parity/service-lifecycle-runtime-control-v1.json",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "0319a6a19ae5006978f79f01b61368e287e297000d7f377a983e3307cc4b9492"
+    },
+    {
+      "bytes": 2949,
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "parity/service-lifecycle-persistence-v1.json",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "b785a929c7c32b1348d5e1b086d18de78d88a083c1e28526482a61bc7906c0b3"
+    },
+    {
+      "bytes": 3468,
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "tests/service_lifecycle.test.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+    },
+    {
+      "bytes": 9530,
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "src/service_lifecycle.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "5c3fc4f734ba569d6b294592e15db738789a1137aa16bbe781813be737409536"
+    },
+    {
+      "bytes": 5961,
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "parity/service-lifecycle-v1.json",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "7bb6be604278656b960b48e1c07279ae41cb19447140d9dceeeea10f7c90b3c7"
+    },
+    {
+      "bytes": 2271,
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "parity/service-lifecycle-runtime-control-v1.json",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "0319a6a19ae5006978f79f01b61368e287e297000d7f377a983e3307cc4b9492"
+    },
+    {
+      "bytes": 14697,
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "tests/service_lifecycle.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+    },
+    {
+      "bytes": 26447,
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "src/service_lifecycle.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "77be7c5e60c18f5dfdf998ac07aa93392a274eace60d87b4a962833053cc81fe"
+    },
+    {
+      "bytes": 5961,
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "parity/service-lifecycle-v1.json",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "7bb6be604278656b960b48e1c07279ae41cb19447140d9dceeeea10f7c90b3c7"
+    },
+    {
+      "bytes": 2271,
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "parity/service-lifecycle-runtime-control-v1.json",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "0319a6a19ae5006978f79f01b61368e287e297000d7f377a983e3307cc4b9492"
+    },
+    {
+      "bytes": 2949,
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "parity/service-lifecycle-persistence-v1.json",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "b785a929c7c32b1348d5e1b086d18de78d88a083c1e28526482a61bc7906c0b3"
+    },
+    {
+      "bytes": 3111,
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "tests/service_lifecycle_runtime_control.test.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "7d9339373dc033587fef32d6521da6465c69190b2cb9dada38526f705449b04b"
+    },
+    {
+      "bytes": 8295,
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "tests/service_lifecycle_sqlite.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "79e9d63af43b3cd811d0dad1adf225b07e32507df409f1c7cc66e30bb5a711b0"
+    },
+    {
+      "bytes": 17867,
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "src/service_lifecycle_sqlite.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "74b1297ee254a32b73c662a95032d66726f645250af68e1f981a3f41c01047a1"
+    },
+    {
+      "bytes": 1351,
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "tests/lifecycle_process_helper.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "ca0caf2478cfe2c1850dc0e80e180f00577a13e069c0a1145d5b0bcd10e7fb82"
+    },
+    {
+      "bytes": 10439,
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "component": "protocol",
+      "path": "research/pre-normative-profiles/fixtures/service-lifecycle-accounting-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "017b7c7a2bfba740ab0d6844991f77845e7f08f033a909b62d1b5572473f448f"
+    },
+    {
+      "bytes": 1654,
+      "commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+      "component": "protocol",
+      "path": "research/pre-normative-profiles/fixtures/service-lifecycle-authorization-v1.json",
+      "repository": "RobLe3/IICP",
+      "sha256": "d1dac29c01aec16b16e5d46cf51501386efebbbf97e9486043e87c9d7e24685d"
+    },
+    {
+      "bytes": 682,
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "tests/test_service_lifecycle_accounting.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "5af715c7c00e560246dbaa52a5561b7a5e3a4ea26b26d2c38135c6c2f7a9cc7d"
+    },
+    {
+      "bytes": 3955,
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "src/iicp_client/service_lifecycle_accounting.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "dceacfeb3ea63d92401573e5c2f2744698de6c2dbf2fc3eb255382f2a28ad89b"
+    },
+    {
+      "bytes": 10439,
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "parity/service-lifecycle-accounting-v1.json",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "017b7c7a2bfba740ab0d6844991f77845e7f08f033a909b62d1b5572473f448f"
+    },
+    {
+      "bytes": 1654,
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "parity/service-lifecycle-authorization-v1.json",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "d1dac29c01aec16b16e5d46cf51501386efebbbf97e9486043e87c9d7e24685d"
+    },
+    {
+      "bytes": 790,
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "tests/service_lifecycle_accounting.test.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "18585fafc3519ace5ffd47a503ac3e06ce9d80c7408d4ad9b97df53d8160312c"
+    },
+    {
+      "bytes": 3372,
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "src/service_lifecycle_accounting.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "f0d518fa96f3c06321d135be97b12ab3c4d0227dc4b957319e4344040e97ed49"
+    },
+    {
+      "bytes": 10439,
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "parity/service-lifecycle-accounting-v1.json",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "017b7c7a2bfba740ab0d6844991f77845e7f08f033a909b62d1b5572473f448f"
+    },
+    {
+      "bytes": 1187,
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "tests/service_lifecycle_accounting.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "29d8edfa9cb43e67adfb8fea9b1629b4c0938afb9b4d7faee4e0da185b513c06"
+    },
+    {
+      "bytes": 4898,
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "src/service_lifecycle_accounting.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "4979ff0f4f0c78daa7179b5aba5fb2d304d2ee792c017b0beab3efe77d39286f"
+    },
+    {
+      "bytes": 10439,
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "parity/service-lifecycle-accounting-v1.json",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "017b7c7a2bfba740ab0d6844991f77845e7f08f033a909b62d1b5572473f448f"
+    },
+    {
+      "bytes": 1654,
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "parity/service-lifecycle-authorization-v1.json",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "d1dac29c01aec16b16e5d46cf51501386efebbbf97e9486043e87c9d7e24685d"
+    }
+  ],
+  "source_status": "REVIEWED_BOUNDED_SOURCE_INTERPRETATION_NOT_EXECUTION",
+  "vector_consumer_cells": [
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-01"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-01"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-01"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-02"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-02"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-02"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "event_after_terminal",
+      "fixture_kind": "invalid",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-03"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": true,
+      "fixture_expected": "event_after_terminal",
+      "fixture_kind": "invalid",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "TERMINAL_REJECTION_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-03"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "event_after_terminal",
+      "fixture_kind": "invalid",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-03"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "sequence_gap",
+      "fixture_kind": "invalid",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-04"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "sequence_gap",
+      "fixture_kind": "invalid",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-04"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "sequence_gap",
+      "fixture_kind": "invalid",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-04"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "deduplicate",
+      "fixture_kind": "duplicate",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-05"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "deduplicate",
+      "fixture_kind": "duplicate",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-05"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "deduplicate",
+      "fixture_kind": "duplicate",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-05"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "terminal_flag_mismatch",
+      "fixture_kind": "invalid",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-06"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "terminal_flag_mismatch",
+      "fixture_kind": "invalid",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-06"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "terminal_flag_mismatch",
+      "fixture_kind": "invalid",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-06"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-07"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-07"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-07"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-08"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-08"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept",
+      "fixture_kind": "valid",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-08"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "replay_2_through_4",
+      "fixture_kind": "resume",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-09"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "replay_2_through_4",
+      "fixture_kind": "resume",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-09"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "replay_2_through_4",
+      "fixture_kind": "resume",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-09"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "resume_unavailable",
+      "fixture_kind": "resume",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-10"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "resume_unavailable",
+      "fixture_kind": "resume",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-10"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "resume_unavailable",
+      "fixture_kind": "resume",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-10"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "return_existing_state_no_execution",
+      "fixture_kind": "retry",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-11"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "return_existing_state_no_execution",
+      "fixture_kind": "retry",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-11"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "return_existing_state_no_execution",
+      "fixture_kind": "retry",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-11"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "conflict_no_execution",
+      "fixture_kind": "retry",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-12"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "conflict_no_execution",
+      "fixture_kind": "retry",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-12"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "conflict_no_execution",
+      "fixture_kind": "retry",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-12"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "state_unchanged",
+      "fixture_kind": "disconnect",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-13"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "state_unchanged",
+      "fixture_kind": "disconnect",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-13"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "state_unchanged",
+      "fixture_kind": "disconnect",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-13"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "return_completed",
+      "fixture_kind": "late_cancel",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-14"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "return_completed",
+      "fixture_kind": "late_cancel",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-14"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "return_completed",
+      "fixture_kind": "late_cancel",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-14"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "redacted",
+      "fixture_kind": "privacy",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-15"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "redacted",
+      "fixture_kind": "privacy",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-15"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "redacted",
+      "fixture_kind": "privacy",
+      "fixture_state_label_walk": false,
+      "full_vector_field_conformance_proven": false,
+      "reading": "NOT_CONSUMED_BY_THIS_SELECTED_FIXTURE_LOOP",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-15"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-python",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept_as_expired",
+      "fixture_kind": "alias",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 111,
+        "excerpt_sha256": "9e1a4f974c7985af247b33de64029f3677615c15fc88650f2e54ff79250435e8",
+        "source": {
+          "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "component": "client-python",
+          "path": "tests/test_service_lifecycle.py",
+          "repository": "RobLe3/iicp-client-python",
+          "sha256": "91fd7d2c91c7ba17d261bfec1e7058b8de257fdff14f25691bb892009a87e031"
+        },
+        "start_line": 99
+      },
+      "vector_id": "LIFECYCLE-16"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-typescript",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept_as_expired",
+      "fixture_kind": "alias",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 10,
+        "excerpt_sha256": "21084cd0f4c5c65c7c5248087e6c1fd4ddeecc8c5faa676b8508389b7b1f1016",
+        "source": {
+          "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+          "component": "client-typescript",
+          "path": "tests/service_lifecycle.test.ts",
+          "repository": "RobLe3/iicp-client-typescript",
+          "sha256": "f09cbb079cd490ea5ff481bf63726641909b465a3c8b4e4b469ab09be46b4caf"
+        },
+        "start_line": 10
+      },
+      "vector_id": "LIFECYCLE-16"
+    },
+    {
+      "campaign_execution_inferred": false,
+      "component": "client-rust",
+      "explicit_terminal_rejection_from_vector": false,
+      "fixture_expected": "accept_as_expired",
+      "fixture_kind": "alias",
+      "fixture_state_label_walk": true,
+      "full_vector_field_conformance_proven": false,
+      "reading": "STATE_LABEL_SEQUENCE_AND_FINAL_STATE_ONLY",
+      "runtime_executed_in_this_batch": false,
+      "source_ref": {
+        "end_line": 35,
+        "excerpt_sha256": "05a8a67d1d6568107760fca0f6143206334344bfcb6ec3ad4b0e2cdd24344afb",
+        "source": {
+          "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "component": "client-rust",
+          "path": "tests/service_lifecycle.rs",
+          "repository": "RobLe3/iicp-client-rust",
+          "sha256": "3767464a9ef6d83ab6375cedcfaa072907a6122aa6d0a90ab4d070142c61650b"
+        },
+        "start_line": 8
+      },
+      "vector_id": "LIFECYCLE-16"
+    }
+  ]
+}
