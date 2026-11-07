@@ -1,0 +1,302 @@
+"""Validate/render the reviewed public caller derivative; never run SDKs or qualify."""
+from pathlib import Path
+import argparse
+import hashlib
+import json
+import re
+from jsonschema import Draft202012Validator
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / 'reports/postcert/2026-11-07-sdk-callers'
+SDKS = ('python', 'typescript', 'rust')
+CASES = ('authorized_positive', 'denied_candidates_absent', 'unknown_choice_refused',
+         'no_eligible_refused', 'abstention_uses_builtin')
+EXPECTED = {
+    'authorized_positive': ('b', None, 1, 1),
+    'denied_candidates_absent': ('b', None, 1, 1),
+    'unknown_choice_refused': (None, 'IICP-CANDIDATE-RANKER-REFUSED', 0, 1),
+    'no_eligible_refused': (None, 'IICP-POLICY-ROUTING', 0, 0),
+    'abstention_uses_builtin': ('a', None, 1, 1),
+}
+# Reviewed exact public-source and retained-private-record identities follow.
+SOURCES = [{'commit': '9c5b3d894ee89ef9fcde52ea0ad99d388ed62183',
+  'component': 'python',
+  'path': 'src/iicp_client/_confidentiality.py',
+  'repository': 'RobLe3/iicp-client-python',
+  'sha256': 'fdfe2c599861a0b28383260b592cd99cfc2f1d4898c103da75ba3a6d5ff0a8e7',
+  'url': 'https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/_confidentiality.py'},
+ {'commit': '9c5b3d894ee89ef9fcde52ea0ad99d388ed62183',
+  'component': 'python',
+  'path': 'src/iicp_client/client.py',
+  'repository': 'RobLe3/iicp-client-python',
+  'sha256': 'eef900811aafc824c3e36a1dc04964d59dce83aa23f3fb16664c29bccccc9f4a',
+  'url': 'https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/client.py'},
+ {'commit': '9c5b3d894ee89ef9fcde52ea0ad99d388ed62183',
+  'component': 'python',
+  'path': 'src/iicp_client/routing_policy.py',
+  'repository': 'RobLe3/iicp-client-python',
+  'sha256': '4e420b3df359b37bb6af4fcca19b17b43697fe4a6e0477c458d6408dc5350d05',
+  'url': 'https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/routing_policy.py'},
+ {'commit': '9c5b3d894ee89ef9fcde52ea0ad99d388ed62183',
+  'component': 'python',
+  'path': 'src/iicp_client/selection.py',
+  'repository': 'RobLe3/iicp-client-python',
+  'sha256': 'ffad656411660cc454254d2918ed2fc41ba7b69a86da80a32dc3870ecf856673',
+  'url': 'https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/selection.py'},
+ {'commit': '9c5b3d894ee89ef9fcde52ea0ad99d388ed62183',
+  'component': 'python',
+  'path': 'src/iicp_client/types.py',
+  'repository': 'RobLe3/iicp-client-python',
+  'sha256': '4492c0b0412e86a31565e87315b477b8172d581d87167bc05c39b16f31bd7ec3',
+  'url': 'https://github.com/RobLe3/iicp-client-python/blob/9c5b3d894ee89ef9fcde52ea0ad99d388ed62183/src/iicp_client/types.py'},
+ {'commit': '0b8b529262977b6482dd7900d473e7d152ba9293',
+  'component': 'rust',
+  'path': 'src/client.rs',
+  'repository': 'RobLe3/iicp-client-rust',
+  'sha256': '0b8b2d1944d23b4ac3d7192c093b827d5bb3c37afa32a964da92eaee3ecfad3c',
+  'url': 'https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/client.rs'},
+ {'commit': '0b8b529262977b6482dd7900d473e7d152ba9293',
+  'component': 'rust',
+  'path': 'src/confidentiality.rs',
+  'repository': 'RobLe3/iicp-client-rust',
+  'sha256': '0d982c5cb5d4a0ad27f965051d33eba040b407c7ef99fd2ca1a8dc52238e1078',
+  'url': 'https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/confidentiality.rs'},
+ {'commit': '0b8b529262977b6482dd7900d473e7d152ba9293',
+  'component': 'rust',
+  'path': 'src/routing_policy.rs',
+  'repository': 'RobLe3/iicp-client-rust',
+  'sha256': 'cfe0cbe7b76bfe5178a56ab95e4c3821f7a90fac6fcb6492b96810ae0e4f4df7',
+  'url': 'https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/routing_policy.rs'},
+ {'commit': '0b8b529262977b6482dd7900d473e7d152ba9293',
+  'component': 'rust',
+  'path': 'src/selection.rs',
+  'repository': 'RobLe3/iicp-client-rust',
+  'sha256': '70d9fcc8edf0866eb953ab1c5dc09cf480b575f5f9f975610a44ee877e910e37',
+  'url': 'https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/selection.rs'},
+ {'commit': '0b8b529262977b6482dd7900d473e7d152ba9293',
+  'component': 'rust',
+  'path': 'src/types.rs',
+  'repository': 'RobLe3/iicp-client-rust',
+  'sha256': 'ad1d86c23266b30e17b19a45d31e080340ac9a86c33f20cbebbf4439dc3251c8',
+  'url': 'https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/types.rs'},
+ {'commit': '97c768d8b9e90756773103e432c273a7d98ba08e',
+  'component': 'typescript',
+  'path': 'src/client.ts',
+  'repository': 'RobLe3/iicp-client-typescript',
+  'sha256': 'ca1ca2e3364e4b869714b9bb47fd0a168830de4328ea16b2aa295edda7983ba9',
+  'url': 'https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/client.ts'},
+ {'commit': '97c768d8b9e90756773103e432c273a7d98ba08e',
+  'component': 'typescript',
+  'path': 'src/confidentiality.ts',
+  'repository': 'RobLe3/iicp-client-typescript',
+  'sha256': '0a61595c7c0885cf38fe6cad70dae04d4cb78537c751367c4dbd4060e6403b48',
+  'url': 'https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/confidentiality.ts'},
+ {'commit': '97c768d8b9e90756773103e432c273a7d98ba08e',
+  'component': 'typescript',
+  'path': 'src/routing_policy.ts',
+  'repository': 'RobLe3/iicp-client-typescript',
+  'sha256': 'a2e5b52e75c8bd0b1bb908df30fc52422f3e0574c8c1eff56f7214f97951ad29',
+  'url': 'https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/routing_policy.ts'},
+ {'commit': '97c768d8b9e90756773103e432c273a7d98ba08e',
+  'component': 'typescript',
+  'path': 'src/selection.ts',
+  'repository': 'RobLe3/iicp-client-typescript',
+  'sha256': '7129f7bc634d4862ed7375a2a43cb4bae32f806f873da933c7db28a6ff6c85ae',
+  'url': 'https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/selection.ts'},
+ {'commit': '97c768d8b9e90756773103e432c273a7d98ba08e',
+  'component': 'typescript',
+  'path': 'src/types.ts',
+  'repository': 'RobLe3/iicp-client-typescript',
+  'sha256': '6fe17481ba916b7d007caea3619919553011c7266ad0984a925862aa7ca3a1ed',
+  'url': 'https://github.com/RobLe3/iicp-client-typescript/blob/97c768d8b9e90756773103e432c273a7d98ba08e/src/types.ts'}]
+EVIDENCE = {'final_delivery_review_sha256': 'df08ab101aafce1b665e7873ad04fcfb305f5f8e2a94314445f0b23c99ae222a',
+ 'matrix_review_sha256': '404f2ba76e92f63b4fb30f89f5ad9f8cc1cc77b71370c9219b3dc3ac76e8dafb',
+ 'matrix_sha256': '1a1dd05eaed094cde2c9f16193af30cf460e225a87a0cbb6d90d86a33f1533f9',
+ 'source_pins_sha256': 'b9a80938d18217201ce428c47d0068807dbc896de12f8efd8d31773d4d0b4198',
+ 'tool_identities_sha256': '25f2e0fe7cd20938335862a6e4dd1cc92b31aa8066439c45cfe99d4f38083b35',
+ 'typescript_emitted_closure_sha256': '5d46e0997c5d7063227166f4219f1332f8e6555c68b064e7df39b72ef831a33b'}
+PROFILES = [{'dependency_scope': 'Explicit existing mixed dependency locations; not original qualified '
+                      'environment.',
+  'runtime': 'CPython 3.11.15',
+  'sdk': 'python',
+  'source_mode': 'ORIGINAL_MODULES_HTTP_ALIASES_INTERCEPTED'},
+ {'dependency_scope': 'Strict original NodeNext/ES2022 compiler settings; observed module '
+                      'closure retained privately.',
+  'runtime': 'Node 22.23.2 / TypeScript 5.9.3',
+  'sdk': 'typescript',
+  'source_mode': 'STRICT_COMPILED_ORIGINAL_MODULES_INSTANCE_HTTP_SEAMS'},
+ {'dependency_scope': 'Locked/offline original vendor sources; test executable includes declared '
+                      'cfg(test) I/O instrumentation.',
+  'runtime': 'Rust/Cargo 1.98.0',
+  'sdk': 'rust',
+  'source_mode': 'ORIGINAL_CALLER_TEST_ONLY_HTTP_VARIANT'}]
+ATTEMPTS = [{'actual_case_outcomes_pass': 5,
+  'attempt_id': 'python-original-caller',
+  'outcome': 'PASS',
+  'sdk': 'python',
+  'supersedes': None},
+ {'actual_case_outcomes_pass': 0,
+  'attempt_id': 'typescript-ipc-bootstrap',
+  'outcome': 'BOOTSTRAP_FAIL',
+  'sdk': 'typescript',
+  'supersedes': None},
+ {'actual_case_outcomes_pass': 5,
+  'attempt_id': 'typescript-direct-node-successor',
+  'outcome': 'PASS',
+  'sdk': 'typescript',
+  'supersedes': 'typescript-ipc-bootstrap'},
+ {'actual_case_outcomes_pass': 5,
+  'attempt_id': 'rust-instrumented-caller',
+  'outcome': 'PASS',
+  'sdk': 'rust',
+  'supersedes': None}]
+LIMITS = ['Synthetic Directory/provider responses; no real DNS, TLS, final HTTP transport admission or '
+ 'provider execution.',
+ 'Ranker receives a live in-process request; no claim that an arbitrary ranker cannot leak it.',
+ 'Real request encryption does not establish encrypted-response handling, external authorization '
+ 'or joint interoperability.',
+ 'OS network denial is not exhaustive attempted-I/O telemetry; owned process-group observation '
+ 'is not an escaped-daemon proof.',
+ 'Python mixed dependencies, compiled TypeScript and Rust test-only instrumentation do not '
+ 'establish original qualification environment equivalence.',
+ 'Public hashes identify retained private records; they do not distribute those bytes or permit '
+ 'public reproduction of the original executions.',
+ 'These fifteen outcomes are a bounded caller sample, not fifteen newly credited qualification '
+ 'assertions or complete functional reference coverage.']
+
+def sha(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+def load():
+    return json.loads((DATA / 'observations.json').read_bytes())
+
+def privacy(value):
+    raw = json.dumps(value)
+    for marker in ('/Users/', '/root/', 'arn:aws:', 'GHSA-', 'authorization.json',
+                   'BEGIN PRIVATE KEY', 'AWS_ACCESS_KEY_ID'):
+        if marker in raw:
+            raise ValueError('PRIVATE_MARKER')
+    if re.search(r'\b[0-9]{12}\b', raw):
+        raise ValueError('ACCOUNT_SHAPE')
+
+
+def validate(value):
+    schema = json.loads((DATA / 'observations.schema.json').read_bytes())
+    Draft202012Validator(schema).validate(value)
+    privacy(value)
+    for key in ('case_outcomes_pass', 'expected_case_outcomes', 'result_contract_controls_pass',
+                'qualification_credit'):
+        if type(value[key]) is not int:
+            raise ValueError('EXACT_INTEGER_REQUIRED:' + key)
+    if value['source_metadata'] != SOURCES or value['evidence'] != EVIDENCE:
+        raise ValueError('REVIEWED_SOURCE_OR_EVIDENCE_IDENTITY')
+    if value['execution_profiles'] != PROFILES or value['limits'] != LIMITS:
+        raise ValueError('ENVIRONMENT_OR_SCOPE_CHANGED')
+    rows = value['case_outcomes']
+    if [(r['sdk'], r['case_id']) for r in rows] != [(s, c) for s in SDKS for c in CASES]:
+        raise ValueError('EXACT_CASE_MATRIX')
+    for row in rows:
+        selected, error, posts, ranker = EXPECTED[row['case_id']]
+        wanted = {'selected': selected, 'error_code': error, 'get_calls': 1,
+                  'post_calls': posts, 'ranker_calls': ranker}
+        if any(type(row[k]) is not type(v) or row[k] != v for k, v in wanted.items()):
+            raise ValueError('CASE_CONTRACT_MISMATCH:' + row['case_id'])
+    attempts = value['attempt_history']
+    if attempts != ATTEMPTS:
+        raise ValueError('ATTEMPT_HISTORY_REINTERPRETED')
+    if any(type(a['actual_case_outcomes_pass']) is not int for a in attempts):
+        raise ValueError('ATTEMPT_COUNT_TYPE')
+    if sum(a['actual_case_outcomes_pass'] for a in attempts) != len(rows):
+        raise ValueError('ATTEMPT_CASE_ACCOUNTING')
+    return True
+
+def render(value):
+    validate(value)
+    lines = ['# Actual SDK caller reference slice', '',
+        'This reviewed derivative records fifteen ordinary local caller outcomes: five each for '
+        'the original Python, TypeScript and Rust SDK submit implementations. It adds **zero '
+        'qualification credit**. Original acceptance, candidate identity and certificates remain '
+        'authoritative; this is not a qualified successor or complete functional baseline.', '',
+        '## What executed', '',
+        '| Case | Observed outcome in each SDK | POST calls | Ranker calls |',
+        '|---|---|---:|---:|']
+    names = {'authorized_positive': 'Authorized positive',
+             'denied_candidates_absent': 'Denied candidates excluded',
+             'unknown_choice_refused': 'Foreign ranker choice',
+             'no_eligible_refused': 'No eligible provider',
+             'abstention_uses_builtin': 'Ranker abstention'}
+    for case in CASES:
+        selected, error, posts, ranker = EXPECTED[case]
+        result = 'Selected synthetic provider ' + selected.upper() if selected else 'Refused: `' + error + '`'
+        lines.append(f'| {names[case]} | {result} | {posts} | {ranker} |')
+    lines += ['', 'Higher-scored disallowed-region and keyless providers were placed before eligible '
+        'providers. The authorized positive still selected B. A foreign ranker reference was refused '
+        'before dispatch; abstention retained built-in A selection. Actual request encryption ran. '
+        'The callback receives a live in-process request: this is not isolation of arbitrary ranker code.', '',
+        '## Source and environment boundary', '',
+        'The [normalized observations](observations.json) pin fifteen original source files at exact '
+        'repository revisions. Python uses real modules and intercepted HTTP aliases. TypeScript '
+        'uses strict compilation of the original modules and instance-level HTTP seams. Rust uses '
+        'original caller/policy/selection/types with a declared private `cfg(test)` HTTP variant; '
+        'its executable is not an unmodified whole-crate artifact.', '',
+        '| SDK | Actual local toolchain |', '|---|---|']
+    for profile in value['execution_profiles']:
+        lines.append('| ' + profile['sdk'] + ' | ' + profile['runtime'] + ' |')
+    lines += ['', 'All observations ran on one local macOS ARM64 host. Python used explicit mixed '
+        'existing dependency locations, not the original qualified environment. Source, compiler, '
+        'loaded-module and instrumented-executable identities are retained privately. Local runtime '
+        'agreement does not demonstrate the four-platform qualification matrix.', '',
+        '## Retained failed bootstrap', '',
+        'The first TypeScript stage failed while its launcher created a local IPC socket, before '
+        'caller launch. Its original failed disposition and captures remain retained. After stopping, '
+        'a separately reviewed ordinary-engineering successor used strict ahead-of-time compilation '
+        'and direct Node execution, without relaxing network denial. The failed stage was not erased '
+        'or relabelled PASS. Python and the successful Rust build were not repeated. The sole IPC '
+        'failure cause is not established.', '',
+        'The Rust build also retained an optional debug-stripping warning; review did not treat it '
+        'as a caller failure or suppress it. Rust executed **one test method containing five outcomes**, '
+        'with 250 unrelated methods filtered out. Separately, 23 synthetic result-contract controls '
+        'passed. These counts are not added together.', '', '## Limits', '']
+    lines += ['- ' + item for item in value['limits']]
+    lines += ['', '## Verify this public derivative', '', '```sh',
+        'python3.13 -B scripts/sdk_caller_reference.py check',
+        'python3.13 -B -m unittest discover -s tests -p "test_sdk_caller_reference.py" -v', '```', '',
+        'These commands check the closed schema, case/history accounting, fixed scope, source links, '
+        'sanitization, deterministic text and integrity manifest. They **do not rerun the SDK callers**, '
+        'reproduce private observations or authenticate an arbitrary package copy. Obtain the expected '
+        'manifest digest from the reviewed PR. `render` regenerates only this reviewed derivative\'s '
+        'README and manifest; it does not publish them.', '',
+        '[Root #1678](https://github.com/RobLe3/iicp.network/issues/1678) owns the executable reference. '
+        'The [earlier enclosing-contract analysis](../2026-11-07-enclosing-capability/README.md) retains '
+        'its distinct static-source and Directory gaps. Historical completeness, whole supported-scope '
+        'defect clearance, successor qualification/freeze, external interoperability and release gates '
+        'remain incomplete.', '']
+    return '\n'.join(lines)
+
+def manifest():
+    return {'schema': 'iicp.sdk-caller-public-manifest.v1', 'qualification_credit': 0,
+            'files': {name: sha((DATA / name).read_bytes())
+                      for name in ('observations.json', 'observations.schema.json', 'README.md')}}
+
+def check_package():
+    value = load()
+    validate(value)
+    if (DATA / 'README.md').read_text() != render(value):
+        raise ValueError('STALE_GENERATED_NARRATIVE')
+    if json.loads((DATA / 'manifest.json').read_bytes()) != manifest():
+        raise ValueError('MANIFEST_MISMATCH')
+    return value
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('command', choices=('check', 'render'))
+    args = parser.parse_args()
+    if args.command == 'render':
+        (DATA / 'README.md').write_text(render(load()))
+        (DATA / 'manifest.json').write_text(json.dumps(manifest(), indent=2, sort_keys=True) + '\n')
+    else:
+        check_package()
+    print('PASS: public caller derivative only; no SDK execution or qualification credit')
+
+if __name__ == '__main__':
+    main()

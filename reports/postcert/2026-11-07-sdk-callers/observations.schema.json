@@ -1,0 +1,407 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "attempt_history": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "actual_case_outcomes_pass": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "attempt_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "outcome": {
+            "enum": [
+              "PASS",
+              "BOOTSTRAP_FAIL"
+            ]
+          },
+          "sdk": {
+            "enum": [
+              "python",
+              "typescript",
+              "rust"
+            ]
+          },
+          "supersedes": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "attempt_id",
+          "sdk",
+          "outcome",
+          "actual_case_outcomes_pass",
+          "supersedes"
+        ],
+        "type": "object"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "type": "array"
+    },
+    "candidate_digest": {
+      "const": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+      "type": "string"
+    },
+    "case_outcomes": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "case_id": {
+            "enum": [
+              "authorized_positive",
+              "denied_candidates_absent",
+              "unknown_choice_refused",
+              "no_eligible_refused",
+              "abstention_uses_builtin"
+            ]
+          },
+          "error_code": {
+            "enum": [
+              null,
+              "IICP-CANDIDATE-RANKER-REFUSED",
+              "IICP-POLICY-ROUTING"
+            ]
+          },
+          "get_calls": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "post_calls": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "ranker_calls": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "sdk": {
+            "enum": [
+              "python",
+              "typescript",
+              "rust"
+            ]
+          },
+          "selected": {
+            "enum": [
+              "a",
+              "b",
+              null
+            ]
+          },
+          "status": {
+            "const": "PASS"
+          }
+        },
+        "required": [
+          "sdk",
+          "case_id",
+          "status",
+          "selected",
+          "error_code",
+          "get_calls",
+          "post_calls",
+          "ranker_calls"
+        ],
+        "type": "object"
+      },
+      "maxItems": 15,
+      "minItems": 15,
+      "type": "array"
+    },
+    "case_outcomes_pass": {
+      "const": 15,
+      "type": "integer"
+    },
+    "encrypted_responses_exercised": {
+      "const": false,
+      "type": "boolean"
+    },
+    "evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "final_delivery_review_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "matrix_review_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "matrix_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "source_pins_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "tool_identities_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "typescript_emitted_closure_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "final_delivery_review_sha256",
+        "matrix_review_sha256",
+        "matrix_sha256",
+        "source_pins_sha256",
+        "tool_identities_sha256",
+        "typescript_emitted_closure_sha256"
+      ],
+      "type": "object"
+    },
+    "execution_profiles": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "dependency_scope": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "runtime": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sdk": {
+            "enum": [
+              "python",
+              "typescript",
+              "rust"
+            ]
+          },
+          "source_mode": {
+            "enum": [
+              "ORIGINAL_MODULES_HTTP_ALIASES_INTERCEPTED",
+              "STRICT_COMPILED_ORIGINAL_MODULES_INSTANCE_HTTP_SEAMS",
+              "ORIGINAL_CALLER_TEST_ONLY_HTTP_VARIANT"
+            ]
+          }
+        },
+        "required": [
+          "sdk",
+          "runtime",
+          "source_mode",
+          "dependency_scope"
+        ],
+        "type": "object"
+      },
+      "maxItems": 3,
+      "minItems": 3,
+      "type": "array"
+    },
+    "expected_case_outcomes": {
+      "const": 15,
+      "type": "integer"
+    },
+    "failure_preservation": {
+      "additionalProperties": false,
+      "properties": {
+        "optional_rust_stripping_warning_retained": {
+          "const": true,
+          "type": "boolean"
+        },
+        "original_failure_disposition": {
+          "const": "FAIL_NOT_RECLASSIFIED",
+          "type": "string"
+        },
+        "original_python_repeated": {
+          "const": false,
+          "type": "boolean"
+        },
+        "original_typescript_bootstrap_retained": {
+          "const": true,
+          "type": "boolean"
+        },
+        "sole_ipc_failure_cause_established": {
+          "const": false,
+          "type": "boolean"
+        },
+        "successful_rust_build_repeated": {
+          "const": false,
+          "type": "boolean"
+        },
+        "successor_path": {
+          "const": "STRICT_AHEAD_OF_TIME_COMPILE_AND_DIRECT_NODE",
+          "type": "string"
+        }
+      },
+      "required": [
+        "optional_rust_stripping_warning_retained",
+        "original_failure_disposition",
+        "original_python_repeated",
+        "original_typescript_bootstrap_retained",
+        "sole_ipc_failure_cause_established",
+        "successful_rust_build_repeated",
+        "successor_path"
+      ],
+      "type": "object"
+    },
+    "historical_inventory_complete": {
+      "const": false,
+      "type": "boolean"
+    },
+    "host_scope": {
+      "const": "ONE_LOCAL_MACOS_ARM64_HOST_NOT_FOUR_PLATFORM_QUALIFICATION",
+      "type": "string"
+    },
+    "independent_interoperability_established": {
+      "const": false,
+      "type": "boolean"
+    },
+    "limits": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 7,
+      "minItems": 7,
+      "type": "array"
+    },
+    "observation_date": {
+      "const": "2026-11-07",
+      "type": "string"
+    },
+    "private_evidence_included": {
+      "const": false,
+      "type": "boolean"
+    },
+    "qualification_credit": {
+      "const": 0,
+      "type": "integer"
+    },
+    "qualification_workload_executed": {
+      "const": false,
+      "type": "boolean"
+    },
+    "qualified_environment_equivalence": {
+      "const": false,
+      "type": "boolean"
+    },
+    "real_provider_transport_verified": {
+      "const": false,
+      "type": "boolean"
+    },
+    "request_encryption_exercised": {
+      "const": true,
+      "type": "boolean"
+    },
+    "restricted_or_ticketed_auth_exercised": {
+      "const": false,
+      "type": "boolean"
+    },
+    "result_contract_controls_pass": {
+      "const": 23,
+      "type": "integer"
+    },
+    "schema": {
+      "const": "iicp.sdk-caller-observations.v1",
+      "type": "string"
+    },
+    "scope": {
+      "const": "ORDINARY_LOCAL_CALLER_UNITS_WITH_SYNTHETIC_TRANSPORT",
+      "type": "string"
+    },
+    "source_metadata": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "commit": {
+            "pattern": "^[0-9a-f]{40}$",
+            "type": "string"
+          },
+          "component": {
+            "enum": [
+              "python",
+              "typescript",
+              "rust"
+            ]
+          },
+          "path": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "repository": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sha256": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "url": {
+            "pattern": "^https://github.com/RobLe3/",
+            "type": "string"
+          }
+        },
+        "required": [
+          "component",
+          "repository",
+          "commit",
+          "path",
+          "sha256",
+          "url"
+        ],
+        "type": "object"
+      },
+      "maxItems": 15,
+      "minItems": 15,
+      "type": "array"
+    },
+    "successor_frozen": {
+      "const": false,
+      "type": "boolean"
+    },
+    "whole_capability_complete": {
+      "const": false,
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "attempt_history",
+    "candidate_digest",
+    "case_outcomes",
+    "case_outcomes_pass",
+    "encrypted_responses_exercised",
+    "evidence",
+    "execution_profiles",
+    "expected_case_outcomes",
+    "failure_preservation",
+    "historical_inventory_complete",
+    "host_scope",
+    "independent_interoperability_established",
+    "limits",
+    "observation_date",
+    "private_evidence_included",
+    "qualification_credit",
+    "qualification_workload_executed",
+    "qualified_environment_equivalence",
+    "real_provider_transport_verified",
+    "request_encryption_exercised",
+    "restricted_or_ticketed_auth_exercised",
+    "result_contract_controls_pass",
+    "schema",
+    "scope",
+    "source_metadata",
+    "successor_frozen",
+    "whole_capability_complete"
+  ],
+  "type": "object"
+}

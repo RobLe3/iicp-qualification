@@ -1,0 +1,9 @@
+{
+  "files": {
+    "README.md": "1d5b4c1ba2b9f9450e0f51df575eced1eb795ef8cd99561918157f1f0ae7a5e4",
+    "observations.json": "bc5189dd9594da865f7c248941d8c2fc056861a64a622303439abd18e72de127",
+    "observations.schema.json": "b028342e795ab8185f2bab1c6df66edbe4f22e09f75237fae0e967cb850446b8"
+  },
+  "qualification_credit": 0,
+  "schema": "iicp.sdk-caller-public-manifest.v1"
+}
