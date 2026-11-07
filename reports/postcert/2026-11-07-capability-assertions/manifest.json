@@ -1,0 +1,9 @@
+{
+  "files": {
+    "README.md": "b4b58ece57f8ffb1b31eca3f821efa6a675197070da30e29e9f923c572cddf37",
+    "assertions.json": "52fa37907aa9006d54c1c7c44a1b9e54bf4274c419a196831d8dadba34bafae0",
+    "assertions.schema.json": "713d6e613cc00a37534800240ab78c6a1a1b2f36639ffc6fae65ef200485306c"
+  },
+  "qualification_credit": 0,
+  "schema": "iicp.capability-assertion-public-manifest.v1"
+}
