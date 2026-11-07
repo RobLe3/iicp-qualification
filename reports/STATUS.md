@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-11-07T13:32:57Z**.
+Verified snapshot: **2026-11-07T14:03:50Z**.
 
 `[####################]` **64/64 accepted shards**
 
@@ -16,8 +16,8 @@ Sentinels: **4/4** · Project-operated certificates: **5/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **PASS** (cleanup, 2026-11-07T13:24:58.041172Z).
-- The registered cleanup record reports verification. This reporter did not inspect live resources.
+- Recorded outcome: **PASS** (correction, 2026-11-07T14:00:58.077577Z).
+- A reviewed correction was merged. A merge is not evidence of a subsequent qualification pass.
 - Actual workload launched in this activity: **false**.
 - Next gate: No next action is inferred from this record.
 
