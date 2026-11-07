@@ -167,3 +167,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Functional-reference assembly
 
 [The obligation-oriented reference reader](reports/postcert/2026-11-07-functional-reference/README.md) joins all 147 reviewed definitions to existing evidence while keeping raw predicates, staged context, scope limitations and 22 supported/conditional versus six boundary dispositions separate. This is a proposed original-candidate reference, not a frozen successor or new qualification credit.
+
+## Reference reproducibility supplement
+
+[Reviewed obligation crosswalk and artifact availability](reports/postcert/2026-11-08-reference-reproducibility/README.md) joins nine existing slices without replaying them and records 15/17 original artifact byte identities at examined locators. It does not establish complete preservation, a frozen successor or new qualification credit.
