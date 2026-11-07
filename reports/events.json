@@ -2584,6 +2584,94 @@
       "reason": "cleanup-verified",
       "source_sha256": "sha256:a0679a0fe4c404a08532bbf274b32ac9e10847239ec19fafa8906818a652c686",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:13669f714425b7bb786de90ccbc68c1257810766058a598f58689c8b6f94dd2a",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-07T12:01:46.083270Z",
+      "outcome": "FAIL",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:7e2f938b57f19469a901595a96f03ddb698029ed1269d2c6657a6a3d3135694f",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:c1e4d984d842ab644a699897b8033e6589a0a2ef18f1e35326bc371ac2c1c936",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-07T12:02:36.884444Z",
+      "outcome": "FAIL",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:f29cdd445e76a9f845fe251fc03056cbd2ba79157fc24f7367d37c00723c10f1",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:fa03a5be0d054dadcaf4f7e13e290ceb067966ae9bb54110148c7c1f8d536ac8",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-07T12:04:27.141719Z",
+      "outcome": "FAIL",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:56f5bafa2cffdf6b4876705b1905a4a5c54c1949865ee1b3a275eb9ae234094f",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:2684312b54e5e97ee68904da119bcd1e9abfe2defe0f5cc8b67c901002aa9e9c",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-07T12:07:18.659650Z",
+      "outcome": "REFUSED",
+      "qualification_credit": 0,
+      "reason": "preflight-refused",
+      "source_sha256": "sha256:7b52ccc67725ecd466f0342bc4f4ca57e5c58c25450b6b92822c0b2ecd017390",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:bddbece648ac6cf27a89af05b116b409c84e9ed04d2fa0f80cf0a4edbbfe7d3d",
+      "kind": "correction",
+      "next_gate": "none",
+      "occurred_at": "2026-11-07T12:11:25.710599Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:ca184f36bdb12c044a4f7bf0e7b9064fb58809a836fb16a3d47f994bff8e2345",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:804f4d70ed0d08daf70d44d46c5d1033cdf4c6c4e43683d6e340ced848adf883",
+      "kind": "correction",
+      "next_gate": "none",
+      "occurred_at": "2026-11-07T12:12:40.097315Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:ed45af34a8ae7dcdae4000f151d39ca9ccc033b435cba263039f58924a786b3c",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:503ec656ac901c2bee2e055c3aa7370b63671be1bc95fa6a5987516c5cd1758e",
+      "kind": "blocker",
+      "next_gate": "review-failure",
+      "occurred_at": "2026-11-07T12:13:51.313062Z",
+      "outcome": "FAIL",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:6847d983a44c1adf50ff9f85621a64e416acc6c2077b6a36a9b785d7b609a227",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:93dd52a0caaa3a4876e8c90d99843354f8d13dbbb96e1795a2d5e6be27c43d17",
+      "kind": "cleanup",
+      "next_gate": "none",
+      "occurred_at": "2026-11-07T12:15:58.391251Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "cleanup-verified",
+      "source_sha256": "sha256:39c7523fc764413b916c01af6fb42b18f3732378683fb07444c96d2a2550ac30",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
