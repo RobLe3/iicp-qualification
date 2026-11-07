@@ -143,3 +143,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Capability assertion depth
 
 [Read the source-linked assertion bridge](reports/postcert/2026-11-07-capability-assertions/README.md) for selected requirements, bounded observations, partial checks and missing witnesses across the three local Directory profiles. The offline semantic replay introduces no new qualification gate or credit.
+
+## Six-component owner audit
+
+[The dated owner-body audit](reports/postcert/2026-11-07-owner-audit/README.md) indexes 276 public issue bodies and 17 selected correction-source joins. Closed tracker state and source inclusion do not establish complete defect clearance, new qualification credit or historical completeness.

@@ -1,0 +1,293 @@
+{
+  "$id": "https://github.com/RobLe3/iicp-qualification/owner-body-audit-v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "all_six_supported_defect_clearance": {
+      "const": false
+    },
+    "as_of": {
+      "const": "2026-11-07"
+    },
+    "authority": {
+      "const": "NON_AUTHORIZING_DERIVATIVE_OF_REVIEWED_PUBLIC_OWNER_BODIES_AND_SELECTED_SOURCE_JOINS"
+    },
+    "candidate_digest": {
+      "const": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a"
+    },
+    "canonical_root_commit": {
+      "const": "106aae6568d12884603068e82248bf1413371690"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "closed_body_records": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "correction_source_in_qualified_source": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "development_only_corrections": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "open_body_records": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "owner_body_records": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "selected_correction_records": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "owner_body_records",
+        "closed_body_records",
+        "open_body_records",
+        "selected_correction_records",
+        "correction_source_in_qualified_source",
+        "development_only_corrections"
+      ],
+      "type": "object"
+    },
+    "distinct_defect_count": {
+      "const": "NOT_ESTABLISHED"
+    },
+    "historical_inventory_complete": {
+      "const": false
+    },
+    "new_runtime_validation": {
+      "const": false
+    },
+    "owners": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assessment": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "body_sha256": {
+            "pattern": "^sha256:[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "owner_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "owner_state": {
+            "enum": [
+              "OPEN",
+              "CLOSED"
+            ]
+          },
+          "problem_class": {
+            "enum": [
+              "CLOSED_CHANGE_OR_REVIEW_RECORD",
+              "EVIDENCE_GAP",
+              "EXPERIMENTAL_BEHAVIOR",
+              "MIXED_PRODUCT_HARNESS_EXPERIMENTAL",
+              "MIXED_REQUIRED_EXPERIMENTAL",
+              "MIXED_REQUIRED_OPTIONAL",
+              "OWNER_REPORTED_DEPENDENCY_FINDING",
+              "OWNER_REPORTED_HARNESS_DEFECT",
+              "OWNER_REPORTED_PRODUCT_DEFECT",
+              "OWNER_REPORTED_RELEASE_INTEGRITY_DEFECT",
+              "OWNER_REPORTED_SUSPECTED_DEFECT"
+            ]
+          },
+          "qualification_credit": {
+            "const": 0
+          },
+          "url": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "whole_contract_status": {
+            "const": "NOT_ESTABLISHED_BY_BODY_REVIEW"
+          }
+        },
+        "required": [
+          "owner_id",
+          "url",
+          "owner_state",
+          "body_sha256",
+          "problem_class",
+          "assessment",
+          "whole_contract_status",
+          "qualification_credit"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "qualification_credit": {
+      "const": 0
+    },
+    "schema": {
+      "const": "iicp.owner-body-audit.v1"
+    },
+    "scope_limits": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "selected_corrections": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "correction_source_revision": {
+            "pattern": "^[a-f0-9]{40}$",
+            "type": "string"
+          },
+          "correction_source_url": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "disposition": {
+            "enum": [
+              "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+              "POSTQUALIFIED_DEVELOPMENT_CORRECTION_ONLY"
+            ]
+          },
+          "new_native_validation": {
+            "const": false
+          },
+          "owner_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "owner_url": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "qualification_credit": {
+            "const": 0
+          },
+          "qualified_source_commit": {
+            "pattern": "^[a-f0-9]{40}$",
+            "type": "string"
+          },
+          "qualified_source_url": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "scope_limit": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_observation": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "whole_issue_acceptance_verified": {
+            "const": false
+          }
+        },
+        "required": [
+          "owner_id",
+          "owner_url",
+          "qualified_source_commit",
+          "correction_source_revision",
+          "qualified_source_url",
+          "correction_source_url",
+          "disposition",
+          "source_observation",
+          "scope_limit",
+          "new_native_validation",
+          "whole_issue_acceptance_verified",
+          "qualification_credit"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "source_snapshots": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "captured_from": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "captured_to": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "closed_records": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "issue_records": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "observed_main": {
+            "pattern": "^[a-f0-9]{40}$",
+            "type": "string"
+          },
+          "open_records": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "original_content_location": {
+            "const": "CONTROLLED_ARCHIVE_NOT_DISTRIBUTED"
+          },
+          "qualified_source_commit": {
+            "pattern": "^[a-f0-9]{40}$",
+            "type": "string"
+          },
+          "repository": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "snapshot_sha256": {
+            "pattern": "^sha256:[a-f0-9]{64}$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "repository",
+          "snapshot_sha256",
+          "captured_from",
+          "captured_to",
+          "issue_records",
+          "open_records",
+          "closed_records",
+          "observed_main",
+          "qualified_source_commit",
+          "original_content_location"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema",
+    "as_of",
+    "authority",
+    "canonical_root_commit",
+    "candidate_digest",
+    "source_snapshots",
+    "counts",
+    "owners",
+    "selected_corrections",
+    "distinct_defect_count",
+    "all_six_supported_defect_clearance",
+    "historical_inventory_complete",
+    "new_runtime_validation",
+    "qualification_credit",
+    "scope_limits"
+  ],
+  "type": "object"
+}
