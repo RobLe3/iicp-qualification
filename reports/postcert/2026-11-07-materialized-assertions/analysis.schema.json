@@ -1,0 +1,496 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "accepted_input_equalities": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "accepted_pipeline_captures": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "added_existing_reference_links": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "added_partial_case_definitions": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "as_of": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "authority": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "candidate_digest": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "canonical_root_commit": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "cases": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "accepted_pipeline": {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "path": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "repository": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "sha256": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "commit",
+              "path",
+              "repository",
+              "sha256"
+            ],
+            "type": "object"
+          },
+          "accepted_pipeline_url": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "applicable_modes": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "applicable_runtimes": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "applicable_targets": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "case_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "component": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "declaration_assertion": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "declaration_command": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "effective_source_role": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "existing_reference_count": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "limits": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "new_qualification_credit": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "new_runtime_executions": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "packaged_predicate": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "raw_source": {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "path": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "repository": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "sha256": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "commit",
+              "path",
+              "repository",
+              "sha256"
+            ],
+            "type": "object"
+          },
+          "raw_source_url": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "scenario": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "whole_capability_conformance": {
+            "const": false,
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "accepted_pipeline",
+          "accepted_pipeline_url",
+          "applicable_modes",
+          "applicable_runtimes",
+          "applicable_targets",
+          "case_id",
+          "component",
+          "declaration_assertion",
+          "declaration_command",
+          "effective_source_role",
+          "existing_reference_count",
+          "limits",
+          "new_qualification_credit",
+          "new_runtime_executions",
+          "packaged_predicate",
+          "raw_source",
+          "raw_source_url",
+          "scenario",
+          "whole_capability_conformance"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "context_clarifications": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "case_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "effect": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "materialized_layer": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "raw_layer": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "case_id",
+          "effect",
+          "materialized_layer",
+          "raw_layer"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "corrected_reference_frozen": {
+      "const": false,
+      "type": "boolean"
+    },
+    "crypto_fixture_context": {
+      "additionalProperties": false,
+      "properties": {
+        "fixture_sha256": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "fixture_sha256",
+        "status",
+        "version"
+      ],
+      "type": "object"
+    },
+    "historical_inventory_complete": {
+      "const": false,
+      "type": "boolean"
+    },
+    "limits": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "new_qualification_credit": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "new_runtime_executions": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "prior_source_reports": {
+      "items": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "commit": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "original_unchanged": {
+                "const": true,
+                "type": "boolean"
+              },
+              "path": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "sha256": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "commit",
+              "original_unchanged",
+              "path",
+              "sha256"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "original_unchanged": {
+                "const": true,
+                "type": "boolean"
+              },
+              "path": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "sha256": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "original_unchanged",
+              "path",
+              "sha256"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "type": "array"
+    },
+    "product_defect_inferred": {
+      "const": false,
+      "type": "boolean"
+    },
+    "qualified_input_captures": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "rust_crypto_scope": {
+      "additionalProperties": false,
+      "properties": {
+        "frozen_crate_sha256": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "limit": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "observed_path": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "retained_crate_member_matches_qualified_source": {
+          "const": true,
+          "type": "boolean"
+        },
+        "separate_build_receipt_gates": {
+          "additionalProperties": false,
+          "properties": {
+            "locked_build": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "offline_locked_install": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "online_exact_install": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "package_version_self_report": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "locked_build",
+            "offline_locked_install",
+            "online_exact_install",
+            "package_version_self_report"
+          ],
+          "type": "object"
+        },
+        "separate_runtime_test_source": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "frozen_crate_sha256",
+        "limit",
+        "observed_path",
+        "retained_crate_member_matches_qualified_source",
+        "separate_build_receipt_gates",
+        "separate_runtime_test_source"
+      ],
+      "type": "object"
+    },
+    "schema": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_frontier": {
+      "additionalProperties": false,
+      "properties": {
+        "all_existing_reference_links": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "declared_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "edge_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "edge_references": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "existing_reference_links": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "partial_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "support_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "support_references": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "unlinked_declared_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "whole_capability_conformance": {
+          "const": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "all_existing_reference_links",
+        "declared_definitions",
+        "edge_definitions",
+        "edge_references",
+        "existing_reference_links",
+        "partial_definitions",
+        "support_definitions",
+        "support_references",
+        "unlinked_declared_definitions",
+        "whole_capability_conformance"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "accepted_input_equalities",
+    "accepted_pipeline_captures",
+    "added_existing_reference_links",
+    "added_partial_case_definitions",
+    "as_of",
+    "authority",
+    "candidate_digest",
+    "canonical_root_commit",
+    "cases",
+    "context_clarifications",
+    "corrected_reference_frozen",
+    "crypto_fixture_context",
+    "historical_inventory_complete",
+    "limits",
+    "new_qualification_credit",
+    "new_runtime_executions",
+    "prior_source_reports",
+    "product_defect_inferred",
+    "qualified_input_captures",
+    "rust_crypto_scope",
+    "schema",
+    "source_frontier"
+  ],
+  "type": "object"
+}

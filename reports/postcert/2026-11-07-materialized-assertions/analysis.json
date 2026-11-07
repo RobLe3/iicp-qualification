@@ -1,0 +1,2197 @@
+{
+  "accepted_input_equalities": 32,
+  "accepted_pipeline_captures": 12,
+  "added_existing_reference_links": 378,
+  "added_partial_case_definitions": 43,
+  "as_of": "2026-11-07",
+  "authority": "NON_AUTHORIZING_SOURCE_CONTEXT_SUCCESSOR_NOT_EVIDENCE_READMISSION",
+  "candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "cases": [
+    {
+      "accepted_pipeline": {
+        "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-php/blob/134c0a0f297a120c2e97d5dc891dcac90c293a57/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-php::config-malformed",
+      "component": "directory-php",
+      "declaration_assertion": "test_registration_accepts_documented_custom_intent_and_rejects_invalid_version",
+      "declaration_command": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Feature/OpenApiContractTest.php",
+        "--filter",
+        "/::test_registration_accepts_documented_custom_intent_and_rejects_invalid_version$/"
+      ],
+      "effective_source_role": "INSTALLED_PHPUNIT_HTTP_FAKE",
+      "existing_reference_count": 6,
+      "limits": "Not malformed startup configuration or a real remote-node health exchange.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Registration accepts the documented custom intent, then rejects a v0 custom intent with422; outbound health is faked.",
+      "raw_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Feature/OpenApiContractTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "6c77060833ff0e1bbd2c49932f678c0b8c5512ec84d07a42819dcf62180c2ced"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Feature/OpenApiContractTest.php",
+      "scenario": "config-malformed",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-php/blob/134c0a0f297a120c2e97d5dc891dcac90c293a57/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-php::config-missing",
+      "component": "directory-php",
+      "declaration_assertion": "test_returns_503_when_secret_is_unset",
+      "declaration_command": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Feature/DeployMigrateTest.php",
+        "--filter",
+        "/::test_returns_503_when_secret_is_unset$/"
+      ],
+      "effective_source_role": "INSTALLED_PHPUNIT_INTERNAL_DEPLOY_GUARD",
+      "existing_reference_count": 6,
+      "limits": "Specific deploy-route configuration, not every missing runtime configuration or production deployment.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "An unset deploy secret makes the signed synthetic migration request return503/deploy_disabled.",
+      "raw_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Feature/DeployMigrateTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "1b877a0a1fbdb9d49c336c40ea27ce7b3de30c0945fa25317e0a568822e4d602"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Feature/DeployMigrateTest.php",
+      "scenario": "config-missing",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-php/blob/134c0a0f297a120c2e97d5dc891dcac90c293a57/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-php::disk-full",
+      "component": "directory-php",
+      "declaration_assertion": "test_persistent_storage_failure_is_not_retried_and_rolls_back_partial_state",
+      "declaration_command": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Unit/CreditServiceRetryTest.php",
+        "--filter",
+        "/::test_persistent_storage_failure_is_not_retried_and_rolls_back_partial_state$/"
+      ],
+      "effective_source_role": "INSTALLED_PHPUNIT_DATABASE_ERROR_INJECTION",
+      "existing_reference_count": 6,
+      "limits": "Not actual filesystem exhaustion; the test uses a SQLite QueryException carrying MySQL-style error metadata.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "A reflected CreditService transaction creates a row then throws synthetic storage error1021; one attempt, zero retained rows and no retry warning are asserted.",
+      "raw_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Unit/CreditServiceRetryTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "3e1b8f1aed65835dedb23811591b69ddc954ffa8b3c5d8df0015722745f3273d"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Unit/CreditServiceRetryTest.php",
+      "scenario": "disk-full",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-php/blob/134c0a0f297a120c2e97d5dc891dcac90c293a57/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-php::interrupted-write",
+      "component": "directory-php",
+      "declaration_assertion": "test_outer_transaction_rollback_restores_event_and_chain_head",
+      "declaration_command": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Unit/NodeEventLoggerTest.php",
+        "--filter",
+        "/::test_outer_transaction_rollback_restores_event_and_chain_head$/"
+      ],
+      "effective_source_role": "INSTALLED_PHPUNIT_TRANSACTION_ROLLBACK",
+      "existing_reference_count": 6,
+      "limits": "Not process kill, power-loss durability or every database backend.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "A forced exception after event logging in an outer DB transaction must leave zero events, sequence0 and null predecessor signature.",
+      "raw_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Unit/NodeEventLoggerTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "0e51f1d716fc08567dcfd35ef91b303c2e3bdc6d4bb095f4acee9c3e8ee57a15"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Unit/NodeEventLoggerTest.php",
+      "scenario": "interrupted-write",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-php/blob/134c0a0f297a120c2e97d5dc891dcac90c293a57/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-php::migration-interrupted",
+      "component": "directory-php",
+      "declaration_assertion": "test_interrupted_upgrade_cleanup_removes_disposable_authority",
+      "declaration_command": [
+        "@python",
+        "-m",
+        "unittest",
+        "scripts.test_operator_upgrade_rehearsal.OperatorUpgradeRehearsalTests.test_interrupted_upgrade_cleanup_removes_disposable_authority"
+      ],
+      "effective_source_role": "INSTALLED_PHP_OPERATOR_DATABASE_REHEARSAL",
+      "existing_reference_count": 6,
+      "limits": "The raw declared Python source checks script strings; it is not the executed packaged operation. No production schema or general migration compatibility claim.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Packaged operator probe migrates/seeds the bound previous release, captures backup, runs the current installed release against a staged synthetic checkpoint migration, kills that owned child after its checkpoint, then separately exercises normal release migration and recovery/current/previous readback on the isolated MySQL fixture.",
+      "raw_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "scripts/test_operator_upgrade_rehearsal.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "77b19653edb675494dfe9bcfb7faa4bb83079a502f5f82dfb81fb312350adb1c"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/scripts/test_operator_upgrade_rehearsal.py",
+      "scenario": "migration-interrupted",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-php/blob/134c0a0f297a120c2e97d5dc891dcac90c293a57/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-php::minimum-version",
+      "component": "directory-php",
+      "declaration_assertion": "test_minimum_php_runtime_is_declared_and_candidate_remains_pre1",
+      "declaration_command": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Unit/ReleaseAuthorityTest.php",
+        "--filter",
+        "/::test_minimum_php_runtime_is_declared_and_candidate_remains_pre1$/"
+      ],
+      "effective_source_role": "INSTALLED_PHPUNIT_RUNTIME_AND_METADATA",
+      "existing_reference_count": 6,
+      "limits": "Not an independent Directory stable-release designation; component version axes remain separate.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Checks Composer PHP~8.3.0/platform8.3.30, running PHP>=8.3.0 and<8.4.0, and Directory version<2.0.0.",
+      "raw_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Unit/ReleaseAuthorityTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "d8fe20a0396187880eec8c7c7dbd14aaa06f538e8db02752d393cefe9dc9d3b4"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Unit/ReleaseAuthorityTest.php",
+      "scenario": "minimum-version",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-php/blob/134c0a0f297a120c2e97d5dc891dcac90c293a57/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-php::package-version-self-report",
+      "component": "directory-php",
+      "declaration_assertion": "test_version_truth_and_public_source_authority_are_explicit",
+      "declaration_command": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Unit/ReleaseAuthorityTest.php",
+        "--filter",
+        "/::test_version_truth_and_public_source_authority_are_explicit$/"
+      ],
+      "effective_source_role": "INSTALLED_PHPUNIT_FILE_METADATA",
+      "existing_reference_count": 6,
+      "limits": "Not an HTTP version endpoint or deployed-service observation.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Checks installed VERSION1.10.94, matching config version text and release-policy authority/deployment wording.",
+      "raw_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Unit/ReleaseAuthorityTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "d8fe20a0396187880eec8c7c7dbd14aaa06f538e8db02752d393cefe9dc9d3b4"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Unit/ReleaseAuthorityTest.php",
+      "scenario": "package-version-self-report",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-php/blob/134c0a0f297a120c2e97d5dc891dcac90c293a57/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-php::process-crash-restart",
+      "component": "directory-php",
+      "declaration_assertion": "test_recovered_external_tunnel_endpoint_clears_dead_flag_and_returns_to_discover",
+      "declaration_command": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Feature/NodeLifecycleReachabilityTest.php",
+        "--filter",
+        "/::test_recovered_external_tunnel_endpoint_clears_dead_flag_and_returns_to_discover$/"
+      ],
+      "effective_source_role": "INSTALLED_PHPUNIT_REACHABILITY_WITH_FAKE_HEALTH",
+      "existing_reference_count": 6,
+      "limits": "No real process crash/restart or public tunnel is exercised by this body.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "An initially dead external-tunnel node receives fake successful health; lifecycle command restores reachable flags and subsequent discovery returns that node.",
+      "raw_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Feature/NodeLifecycleReachabilityTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "519408388a42a3640f5487c3f74ff71740b07949dfaf314a3e476a15dea33ceb"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Feature/NodeLifecycleReachabilityTest.php",
+      "scenario": "process-crash-restart",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-php/blob/134c0a0f297a120c2e97d5dc891dcac90c293a57/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-php::rollback-last-supported",
+      "component": "directory-php",
+      "declaration_assertion": "test_upgrade_and_rollback_are_explicit",
+      "declaration_command": [
+        "@python",
+        "-m",
+        "unittest",
+        "scripts.test_operator_upgrade_rehearsal.OperatorUpgradeRehearsalTests.test_upgrade_and_rollback_are_explicit"
+      ],
+      "effective_source_role": "INSTALLED_PHP_OPERATOR_DATABASE_REHEARSAL",
+      "existing_reference_count": 6,
+      "limits": "Harness-managed isolated release/database rehearsal, not production cutover or universal backup/rollback.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Packaged probe verifies bound previous/current releases, seed/backup integrity, current migration/readiness, tamper/restore, previous readiness/migration-status/data, then current forward recovery.",
+      "raw_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "scripts/test_operator_upgrade_rehearsal.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "77b19653edb675494dfe9bcfb7faa4bb83079a502f5f82dfb81fb312350adb1c"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/scripts/test_operator_upgrade_rehearsal.py",
+      "scenario": "rollback-last-supported",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-php/blob/134c0a0f297a120c2e97d5dc891dcac90c293a57/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-php::support",
+      "component": "directory-php",
+      "declaration_assertion": "test_v11093_manifest_pins_outcome_and_restricted_domain_contracts",
+      "declaration_command": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Feature/SharedBehaviorContractTest.php",
+        "--filter",
+        "/::test_v11093_manifest_pins_outcome_and_restricted_domain_contracts$/"
+      ],
+      "effective_source_role": "INSTALLED_PHPUNIT_MANIFEST_AND_FIXTURE_DIGESTS",
+      "existing_reference_count": 6,
+      "limits": "Contract version is distinct from current component runtime1.10.94; fixture hashes do not execute all behavior.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Checks v1.10.93 contract/runtime metadata, named scopes and actual SHA256 of each declared parity fixture.",
+      "raw_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Feature/SharedBehaviorContractTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "8c0b2831d27e96a4fd292b69f2dfd8c285c892e9352efa7339809caa736404fa"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Feature/SharedBehaviorContractTest.php",
+      "scenario": "support",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-php/blob/134c0a0f297a120c2e97d5dc891dcac90c293a57/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "php-8.3"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-php::unsupported-version",
+      "component": "directory-php",
+      "declaration_assertion": "test_registration_rejects_conflicting_sdk_compatibility_versions",
+      "declaration_command": [
+        "@php",
+        "vendor/bin/phpunit",
+        "tests/Feature/RegisterTest.php",
+        "--filter",
+        "/::test_registration_rejects_conflicting_sdk_compatibility_versions$/"
+      ],
+      "effective_source_role": "INSTALLED_PHPUNIT_REGISTRATION_COMPATIBILITY",
+      "existing_reference_count": 6,
+      "limits": "A two-axis consistency rejection, not rejection of every unsupported SDK/protocol/runtime version.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Conflicting sdk_version and sdk_compatibility_version must return422 with the exact matching-fields error.",
+      "raw_source": {
+        "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+        "path": "tests/Feature/RegisterTest.php",
+        "repository": "RobLe3/iicp-directory-php",
+        "sha256": "60b8f0cdc41159f2e6ee19d792bd38204442bd1729e10a79a398e141800dfec0"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Feature/RegisterTest.php",
+      "scenario": "unsupported-version",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::config-malformed",
+      "component": "directory-rust",
+      "declaration_assertion": "config::tests::replica_identity_requires_did_endpoint_and_matching_served_did",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "config::tests::replica_identity_requires_did_endpoint_and_matching_served_did",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_BINARY_STARTUP_REFUSAL",
+      "existing_reference_count": 12,
+      "limits": "Raw unit identity helper is not the dispatched assertion. Different mode-specific refusal branches must not be flattened into one cause.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Probe runs mismatched served/replica DID configuration and expects exit1 plus exact mismatch error; restricted mode expects the earlier forbidden restricted+replica combination error.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/config.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "917004b472f55fecb8d84cfd88f15998533c1d7d1b41eeac338b25270aa8bb7e"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/config.rs",
+      "scenario": "config-malformed",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::config-missing",
+      "component": "directory-rust",
+      "declaration_assertion": "runtime::tests::in_memory_requires_non_production_and_explicit_truthy_value",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "runtime::tests::in_memory_requires_non_production_and_explicit_truthy_value",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_BINARY_STARTUP_REFUSAL",
+      "existing_reference_count": 12,
+      "limits": "Not every missing configuration field; mode setup and its positive controls are separate probe prerequisites.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Installed binary without required DATABASE_URL must exit1 and report the configured missing-database refusal.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/runtime.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "4d73cb409fbf91e012124c003e947c1d319963cb189765b98bc2bd45711012da"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/runtime.rs",
+      "scenario": "config-missing",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::config-permission-denied",
+      "component": "directory-rust",
+      "declaration_assertion": "runtime_health::tests::atomic_snapshot_permission_denied_preserves_private_verified_state",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "runtime_health::tests::atomic_snapshot_permission_denied_preserves_private_verified_state",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_REAL_PERMISSION_FAILURE",
+      "existing_reference_count": 12,
+      "limits": "Not merely the raw injected ErrorKind test; bounded Linux-owned fixture only, not universal ACL semantics.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Unprivileged installed writer first commits a private snapshot; chmod denies directory writes, exact refusal is observed, old bytes/health survive, then writes/progress recover after permissions restore.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/runtime_health.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "521d3e2c3e5b3c9d1b78d37119d1539cbb3e140083018c571750709ae48474fa"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/runtime_health.rs",
+      "scenario": "config-permission-denied",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::disk-full",
+      "component": "directory-rust",
+      "declaration_assertion": "runtime_health::tests::atomic_snapshot_disk_full_preserves_last_verified_state",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "runtime_health::tests::atomic_snapshot_disk_full_preserves_last_verified_state",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_BOUNDED_TMPFS_ENOSPC",
+      "existing_reference_count": 12,
+      "limits": "Not raw injected errno alone or permission to fill the host filesystem; no new exhaustion was performed here.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Probe requires an owned private Linux tmpfs<=16MiB, fills it until actual ENOSPC, checks released writer refusal/unchanged committed snapshot/no temp files/healthy HTTP, frees only its filler and requires recovery progress.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/runtime_health.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "521d3e2c3e5b3c9d1b78d37119d1539cbb3e140083018c571750709ae48474fa"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/runtime_health.rs",
+      "scenario": "disk-full",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::interrupted-write",
+      "component": "directory-rust",
+      "declaration_assertion": "runtime_health::tests::atomic_snapshot_interruption_rejects_partial_generation",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "runtime_health::tests::atomic_snapshot_interruption_rejects_partial_generation",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_SIGNAL_INTERRUPTED_WRITER_AND_READER",
+      "existing_reference_count": 12,
+      "limits": "Specific Linux signal/file-limit model, not arbitrary power failure or all possible interrupted writes.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Owned writer is paused at a stable boundary then prlimit64-byte file cap causes SIGXFSZ; committed generation remains, private partial generation is invalid, installed reader must refuse it, and replacement writer must have new identity and progress.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/runtime_health.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "521d3e2c3e5b3c9d1b78d37119d1539cbb3e140083018c571750709ae48474fa"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/runtime_health.rs",
+      "scenario": "interrupted-write",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::migration-interrupted",
+      "component": "directory-rust",
+      "declaration_assertion": "schema::tests::partial_schema_generation_is_rejected_without_repair",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "schema::tests::partial_schema_generation_is_rejected_without_repair",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_PARTIAL_MYSQL_SCHEMA_REFUSAL",
+      "existing_reference_count": 12,
+      "limits": "Partial-schema model of interrupted migration; it does not kill a live Rust migration or repair the database from the harness.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "After a successful empty-fixture bootstrap positive control, probe creates a partial existing schema, runs installed binary and requires exit1/schema-incompatible refusal, no listener/in-memory fallback and unchanged schema/data.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/schema.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "47969137bdea859c66d64811222e3c2212f80f06ce1f2b8123bf3d8de5bdddb0"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/schema.rs",
+      "scenario": "migration-interrupted",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::minimum-version",
+      "component": "directory-rust",
+      "declaration_assertion": "minimum_rust_version_is_declared_and_candidate_remains_pre1",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "pre1_release_boundaries",
+        "minimum_rust_version_is_declared_and_candidate_remains_pre1",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "BOUND_OFFLINE_SOURCE_BUILD_PLUS_INSTALLED_BINARY",
+      "existing_reference_count": 12,
+      "limits": "Source-built diagnostic binary does not replace the frozen installed artifact. This review does not rerun the build or establish arbitrary toolchain compatibility.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Bound helper checks selected rustc release/native host, performs offline locked source-fixture build and version check, preserves diagnostic evidence, then independently checks immutable installed binary version and HTTP refusal path.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "tests/pre1_release_boundaries.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "56f5be77f347173e57d057e8aa1e8f454b8372feafc95936d24275b464545a39"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/tests/pre1_release_boundaries.rs",
+      "scenario": "minimum-version",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::offline-locked-install",
+      "component": "directory-rust",
+      "declaration_assertion": "offline_candidate_contract_pins_every_release_input",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "pre1_release_boundaries",
+        "offline_candidate_contract_pins_every_release_input",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_DIGEST_BOUND_BINARY_SELF_REPORT",
+      "existing_reference_count": 12,
+      "limits": "Not the raw release-input hash loop, a Cargo dependency install or proof of every offline ecosystem workflow.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Checks private regular executable mode0700, binary SHA256 equals frozen artifact, and exact installed --version exit/output under a minimized environment.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "tests/pre1_release_boundaries.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "56f5be77f347173e57d057e8aa1e8f454b8372feafc95936d24275b464545a39"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/tests/pre1_release_boundaries.rs",
+      "scenario": "offline-locked-install",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::package-version-self-report",
+      "component": "directory-rust",
+      "declaration_assertion": "package_version_self_report_matches_candidate_contract",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "pre1_release_boundaries",
+        "package_version_self_report_matches_candidate_contract",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_VERSION_COMMAND",
+      "existing_reference_count": 12,
+      "limits": "Not merely manifest metadata, and not a production deployment observation.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Installed binary --version must exit0 with exact frozen candidate version output.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "tests/pre1_release_boundaries.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "56f5be77f347173e57d057e8aa1e8f454b8372feafc95936d24275b464545a39"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/tests/pre1_release_boundaries.rs",
+      "scenario": "package-version-self-report",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::process-crash-restart",
+      "component": "directory-rust",
+      "declaration_assertion": "systemd_notify::tests::stale_runtime_withholds_watchdog_even_when_process_and_timer_exist",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "systemd_notify::tests::stale_runtime_withholds_watchdog_even_when_process_and_timer_exist",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_SIGKILL_RESTART_AND_SNAPSHOT",
+      "existing_reference_count": 12,
+      "limits": "Not the raw systemd decision function alone, nor universal crash/power-loss recovery.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Owned installed process is killed by SIGKILL; snapshot evidence remains stable, replacement PID must differ, HTTP identity and snapshot progress must recover.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/systemd_notify.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "d0811ab84626669665526fc720ba5bfc0da2c18847c3c9aad94210f6f7f475b0"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/systemd_notify.rs",
+      "scenario": "process-crash-restart",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::rollback-last-supported",
+      "component": "directory-rust",
+      "declaration_assertion": "last_supported_generation_is_pinned_for_bounded_rollback",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "pre1_release_boundaries",
+        "last_supported_generation_is_pinned_for_bounded_rollback",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_BOUND_PREDECESSOR_DATABASE_REVERSAL",
+      "existing_reference_count": 12,
+      "limits": "Harness-mediated symlink/generation exercise, not execution of the production updater/systemd lane or general arbitrary schema migration reversal.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Probe verifies predecessor digest/version, seeds real HTTP/DB state, switches a managed symlink to current, identifies missing-DB failed-upgrade cause, restores predecessor, and verifies schema/data plus restricted allow/revoke behavior when applicable.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "tests/pre1_release_boundaries.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "56f5be77f347173e57d057e8aa1e8f454b8372feafc95936d24275b464545a39"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/tests/pre1_release_boundaries.rs",
+      "scenario": "rollback-last-supported",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::stale-pid-or-lock",
+      "component": "directory-rust",
+      "declaration_assertion": "service::tests::systemd_ownership_avoids_stale_pid_or_lock_authority",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "service::tests::systemd_ownership_avoids_stale_pid_or_lock_authority",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_ENDPOINT_OWNER_CONTENTION_AND_RESTART",
+      "existing_reference_count": 12,
+      "limits": "Endpoint ownership exercise, not arbitrary stale PID-file reclamation; raw rendered-systemd-unit assertions are not the dispatched probe.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "A competing installed process must exit with address-in-use while healthy owner/snapshot progress survive, followed by owned crash/restart verification.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/service.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "dfd816ca8408a0fb2bfb5b6fa822284d2c4e005c36ed84b0014c30f5417ea4d5"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/service.rs",
+      "scenario": "stale-pid-or-lock",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::support",
+      "component": "directory-rust",
+      "declaration_assertion": "v1_10_80_manifest_pins_both_shared_fixtures",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "behavior_contract_fixture",
+        "v1_10_80_manifest_pins_both_shared_fixtures",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_SUPPORT_DIGESTS_AND_VERSION",
+      "existing_reference_count": 12,
+      "limits": "Stronger than raw manifest-field comparisons, but not execution of every parity vector.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Probe checks exact contract_version/fixture-map fields, hashes the declared behavior and HTTP fixture files against their expected digests, and runs exact installed --version.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "tests/behavior_contract_fixture.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "a3dcd280f5815f757744fee050cb294f4f79738625c4fbd6f24257efcd1c6385"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/tests/behavior_contract_fixture.rs",
+      "scenario": "support",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-directory-rust/blob/6a886a633d50e106ef1e2d5ff21b9e9002e070da/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only",
+        "public",
+        "restricted"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.88",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64"
+      ],
+      "case_id": "directory-rust::unsupported-version",
+      "component": "directory-rust",
+      "declaration_assertion": "tests::registration_rejects_conflicting_sdk_version_axes",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "tests::registration_rejects_conflicting_sdk_version_axes",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "INSTALLED_RUST_HTTP_COMPATIBILITY_REFUSAL",
+      "existing_reference_count": 12,
+      "limits": "Not a universal unsupported-version claim; source helper routes through the scenario-specific HTTP postcondition.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Installed HTTP fixture submits conflicting SDK version axes and requires the bounded response/error contract, with restricted membership adapter when applicable.",
+      "raw_source": {
+        "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+        "path": "src/main_tests.rs",
+        "repository": "RobLe3/iicp-directory-rust",
+        "sha256": "80672e4fe2c45ddd325e41e02df09e28bb24f6e19444dd004b2d57eac9446251"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/main_tests.rs",
+      "scenario": "unsupported-version",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::config-malformed",
+      "component": "management",
+      "declaration_assertion": "runtime_config_preflight_rejects_invalid_config_and_target_mismatch",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "bootstrap",
+        "runtime_config_preflight_rejects_invalid_config_and_target_mismatch",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_CONSUMER_PREFLIGHT",
+      "existing_reference_count": 8,
+      "limits": "Local assessment calls, not an OS file parse or live Management service.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Runtime schema99 is refused as invalid; a valid config paired with runtime evidence for a different target is refused as target mismatch.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/bootstrap.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "7dd7470f49471f34bbb5fd9e8ba037005636ca8c9104986a956347affa9b2933"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/bootstrap.rs",
+      "scenario": "config-malformed",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::config-missing",
+      "component": "management",
+      "declaration_assertion": "workflow_omits_proposal_until_assessment_is_ready",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "bootstrap",
+        "workflow_omits_proposal_until_assessment_is_ready",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_CONSUMER_WORKFLOW_GUARD",
+      "existing_reference_count": 8,
+      "limits": "Not physical deletion of a config file or proof of every missing-input failure.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "NeedsInput/Candidate assessment yields no proposal and no mutation authorization; workflow still validates.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/bootstrap.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "7dd7470f49471f34bbb5fd9e8ba037005636ca8c9104986a956347affa9b2933"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/bootstrap.rs",
+      "scenario": "config-missing",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::config-permission-denied",
+      "component": "management",
+      "declaration_assertion": "adapters::qualification_failure_tests::runtime_config_permission_denied_before_read_is_truthful",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "adapters::qualification_failure_tests::runtime_config_permission_denied_before_read_is_truthful",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_TEST_ONLY_FAULT_FLAG",
+      "existing_reference_count": 8,
+      "limits": "Software-injected refusal, not a real filesystem ACL denial.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Test-only flag returns Io before reading an existing runtime config; original bytes remain and no management-state sidecar appears.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "src/adapters.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "709505fedf433c7368f8f037e605f4f1c2a048759c2deadb0b9cb2b6bedf625a"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/src/adapters.rs",
+      "scenario": "config-permission-denied",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::disk-full",
+      "component": "management",
+      "declaration_assertion": "adapters::qualification_failure_tests::runtime_config_disk_full_before_stage_is_truthful",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "adapters::qualification_failure_tests::runtime_config_disk_full_before_stage_is_truthful",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_TEST_ONLY_FAULT_FLAG",
+      "existing_reference_count": 8,
+      "limits": "Not actual ENOSPC or failure after partial filesystem replacement.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Test-only flag returns Io before staging; original config remains, stage-file count is zero and no state sidecar appears.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "src/adapters.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "709505fedf433c7368f8f037e605f4f1c2a048759c2deadb0b9cb2b6bedf625a"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/src/adapters.rs",
+      "scenario": "disk-full",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::interrupted-write",
+      "component": "management",
+      "declaration_assertion": "runtime_config_interruption_and_readback_failures_are_truthful",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "controller_and_adapters",
+        "runtime_config_interruption_and_readback_failures_are_truthful",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_FILE_ADAPTER_FAULT_INJECTION",
+      "existing_reference_count": 8,
+      "limits": "Real file adapter with software fault points, not a killed process or physical storage outage.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Injects interrupt before replace and verifies original state/no staging residue; readback mismatch rolls back and reports Failed; rollback failure reports PartiallyConverged.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/controller_and_adapters.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "02250743105bf92e4799f141179a6d1d584d41acc8b7dab6eeedf9fc07384620"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/controller_and_adapters.rs",
+      "scenario": "interrupted-write",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::management-invalid-authority",
+      "component": "management",
+      "declaration_assertion": "confirmation_and_automatic_mode_fail_closed",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "progressive_authority",
+        "confirmation_and_automatic_mode_fail_closed",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_PROGRESSIVE_AUTHORITY_REFUSALS",
+      "existing_reference_count": 8,
+      "limits": "Selected body is refusal-only, not complete positive authorization proof.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Confirm mode without actual decision is ApplyNotAuthorized; automatic-within-policy with failed boundary is PolicyBoundaryNotSatisfied.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/progressive_authority.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "70b66d492bfeae6e69a76d368a94871c4212a70732ef490d4c2b5794a9b9983a"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/progressive_authority.rs",
+      "scenario": "management-invalid-authority",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::management-network-disabled",
+      "component": "management",
+      "declaration_assertion": "authorized_local_exercise_converges_without_external_activation",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "sandbox",
+        "authorized_local_exercise_converges_without_external_activation",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_AUTHORIZED_SYNTHETIC_SANDBOX",
+      "existing_reference_count": 8,
+      "limits": "No claim of live deployment or independently observed network isolation from result flags alone.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "A valid signed local gate authorizes a SyntheticAdapter exercise; result converges, declares local-only/project-rehearsal/nonrepresentative and no external activation.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/sandbox.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "e02e8b2031d00b71a1dc45a1b95350adff5572c396305e3f7567de1e1ce5749c"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/sandbox.rs",
+      "scenario": "management-network-disabled",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::management-policy-dispatch-refusal",
+      "component": "management",
+      "declaration_assertion": "unavailable_a_never_falls_back_to_region_or_identity_prohibited_nodes",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "routing_enforcement",
+        "unavailable_a_never_falls_back_to_region_or_identity_prohibited_nodes",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_LOOPBACK_ROUTING_REFUSAL",
+      "existing_reference_count": 8,
+      "limits": "Loopback mock endpoints and selected negative case; neighboring allowed-A positive test exists but is not newly executed or counted here.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Across four strategies, unavailable allowed A cannot fall back to region/identity-prohibited B/C; exact policy refusal, zero ranker calls and no B/C task POST are asserted.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/routing_enforcement.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "fb2168c6b8220389bb58b0e422c699ad43730df2523b57adb664750ee557d782"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/routing_enforcement.rs",
+      "scenario": "management-policy-dispatch-refusal",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::management-secret-redaction",
+      "component": "management",
+      "declaration_assertion": "runtime_aware_bundle_is_v2_minimized_and_schema_valid",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "diagnostics",
+        "runtime_aware_bundle_is_v2_minimized_and_schema_valid",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_DIAGNOSTIC_SCHEMA_AND_MARKERS",
+      "existing_reference_count": 8,
+      "limits": "Finite fixture markers and schema, not a universal private-payload leak audit.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Runtime-aware diagnostic v2 has six artifacts, READY result and no review-runtime action; serialized output excludes three named runtime/PID markers and validates schema/semantic checks.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/diagnostics.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "4dbcde5415299f6cfbb7f04f74567ba11c3323146d4a68161643dc9515c7a048"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/diagnostics.rs",
+      "scenario": "management-secret-redaction",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::minimum-version",
+      "component": "management",
+      "declaration_assertion": "release_manifest_rejects_malformed_versions_and_artifact_drift",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "release_manifest",
+        "release_manifest_rejects_malformed_versions_and_artifact_drift",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_SYNTHETIC_MANIFEST_SCHEMA",
+      "existing_reference_count": 8,
+      "limits": "The body tests release metadata, not compiler minimum; selected compiler validation/offline consumer build are separate shared execution-context checks.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Synthetic current-version manifest is schema-valid and artifact names match version; latest string and wrong artifact-version path are rejected.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/release_manifest.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "f63559596cda105ca0979dc57afbed54c41eb659216466a740ec749c3880678d"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/release_manifest.rs",
+      "scenario": "minimum-version",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::offline-locked-install",
+      "component": "management",
+      "declaration_assertion": "release_manifest_schema_accepts_bounded_non_authorizing_evidence",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "release_manifest",
+        "release_manifest_schema_accepts_bounded_non_authorizing_evidence",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_SYNTHETIC_MANIFEST_SCHEMA",
+      "existing_reference_count": 8,
+      "limits": "Not an install command. Shared package consumer is compiled offline separately; do not merge those layers into one body.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Synthetic developer-preview release manifest is valid with non-authorizing flags; authorizes_deployment=true is rejected.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/release_manifest.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "f63559596cda105ca0979dc57afbed54c41eb659216466a740ec749c3880678d"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/release_manifest.rs",
+      "scenario": "offline-locked-install",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::package-version-self-report",
+      "component": "management",
+      "declaration_assertion": "generated_release_manifest_matches_schema_and_artifact_version",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "release_manifest",
+        "generated_release_manifest_matches_schema_and_artifact_version",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_MANDATORY_FROZEN_MANIFEST_CONSUMER",
+      "existing_reference_count": 8,
+      "limits": "Raw optional env return is removed. This is not a skipped qualification from unset environment, nor public package publication authority.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Driver supplies artifact release-manifest path; staged fixture requires it, checks frozen-pre1 schema branch against candidate source/version, product/channel/binaries, exact field count and non-authorizing flags.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/release_manifest.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "f63559596cda105ca0979dc57afbed54c41eb659216466a740ec749c3880678d"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/release_manifest.rs",
+      "scenario": "package-version-self-report",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::process-crash-restart",
+      "component": "management",
+      "declaration_assertion": "interrupted_execution_observes_state_before_any_retry",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "sandbox",
+        "interrupted_execution_observes_state_before_any_retry",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_SYNTHETIC_INTERRUPTED_EXECUTION",
+      "existing_reference_count": 8,
+      "limits": "Modeled interrupted execution, not a real process crash or production restart.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Sandbox seeds started journal plus observed effect/generation; execution returns PartiallyConverged/effect-observed-after-restart, no apply receipt, verification receipt and no automatic retry.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/sandbox.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "e02e8b2031d00b71a1dc45a1b95350adff5572c396305e3f7567de1e1ce5749c"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/sandbox.rs",
+      "scenario": "process-crash-restart",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::request-timeout",
+      "component": "management",
+      "declaration_assertion": "synthetic_timeout_before_effect_is_truthful_and_does_not_mutate",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "controller_and_adapters",
+        "synthetic_timeout_before_effect_is_truthful_and_does_not_mutate",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_SYNTHETIC_TIMEOUT_BEFORE_EFFECT",
+      "existing_reference_count": 8,
+      "limits": "No measured wall-clock timeout, network deadline or automatic workload retry.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Synthetic adapter returns Timeout twice for simulate timeout-before-effect, with unchanged observed state.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/controller_and_adapters.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "02250743105bf92e4799f141179a6d1d584d41acc8b7dab6eeedf9fc07384620"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/controller_and_adapters.rs",
+      "scenario": "request-timeout",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::rollback-last-supported",
+      "component": "management",
+      "declaration_assertion": "exact_recovery_requires_fresh_authority_and_verifies_previous_state",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "apply_gate",
+        "exact_recovery_requires_fresh_authority_and_verifies_previous_state",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_SIGNED_SYNTHETIC_EXACT_RECOVERY",
+      "existing_reference_count": 8,
+      "limits": "Synthetic adapter state reversal, not package or service-version rollback.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Valid signed gate first converges; separately bound recovery authority/request is signed, strategy tamper is rejected, exact reversal succeeds and has verification receipt/safe-next-action NONE.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/apply_gate.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "676e28b3bf3c090c5a80ae3616d77b064d581d200e87559caf03c9ec4046ba32"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/apply_gate.rs",
+      "scenario": "rollback-last-supported",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::stale-pid-or-lock",
+      "component": "management",
+      "declaration_assertion": "controller_replay_restart_and_binding",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "controller_and_adapters",
+        "controller_replay_restart_and_binding",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_SQLITE_AUTHORITY_REPLAY_REOPEN",
+      "existing_reference_count": 8,
+      "limits": "Not an OS PID-file/lock ownership test or actual process restart.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Signed request advances generation; replay fails; DB reopen preserves generation; wrong audience is rejected and accepted/rejected history survives another reopen.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/controller_and_adapters.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "02250743105bf92e4799f141179a6d1d584d41acc8b7dab6eeedf9fc07384620"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/controller_and_adapters.rs",
+      "scenario": "stale-pid-or-lock",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::support",
+      "component": "management",
+      "declaration_assertion": "prepare_cli_is_one_step_non_authorizing_and_versioned",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "bootstrap_prepare_cli",
+        "prepare_cli_is_one_step_non_authorizing_and_versioned",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_COMPILED_CLI_PREPARATION_AND_VERSION",
+      "existing_reference_count": 8,
+      "limits": "Non-authorizing preparation, not a deployed Management service or external activation.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Compiled crate-consumer CLI prepares local runtime workflow with expected generation0, authorizes_mutation=false and activated=false; --version must match CARGO_PKG_VERSION.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/bootstrap_prepare_cli.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "6b07dddf8050ca1a54a61a5ce1d0d8c94b7dfd5189288edeec363e1e8bd2691a"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/bootstrap_prepare_cli.rs",
+      "scenario": "support",
+      "whole_capability_conformance": false
+    },
+    {
+      "accepted_pipeline": {
+        "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+        "path": "scripts/pre1_package_execution.py",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "0335f8a19a4a34134daafef0e2c738be531846f313465754ab0b82fd90d124df"
+      },
+      "accepted_pipeline_url": "https://github.com/RobLe3/iicp-management/blob/723de26a5f0d62dbd160546fd598c513b0b3bee6/scripts/pre1_package_execution.py",
+      "applicable_modes": [
+        "local-only"
+      ],
+      "applicable_runtimes": [
+        "msrv-1.86",
+        "rust-1.98.0"
+      ],
+      "applicable_targets": [
+        "linux-aarch64",
+        "linux-x86_64",
+        "macos-arm64",
+        "windows-x86_64"
+      ],
+      "case_id": "management::unsupported-version",
+      "component": "management",
+      "declaration_assertion": "unsupported_operation_and_security_extension_fail_closed",
+      "declaration_command": [
+        "@cargo",
+        "test",
+        "--locked",
+        "--test",
+        "profile",
+        "unsupported_operation_and_security_extension_fail_closed",
+        "--",
+        "--exact"
+      ],
+      "effective_source_role": "MANAGEMENT_CRATE_REQUIRED_PROFILE_INTERSECTION_REFUSAL",
+      "existing_reference_count": 8,
+      "limits": "Profile operation/extension compatibility, not a runtime/compiler version parser.",
+      "new_qualification_credit": 0,
+      "new_runtime_executions": 0,
+      "packaged_predicate": "Unsupported delete-domain operation and required security extension yield Incompatible with both exact reason codes.",
+      "raw_source": {
+        "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+        "path": "tests/profile.rs",
+        "repository": "RobLe3/iicp-management",
+        "sha256": "ba31aacd2be8c7f3a3b32c8c7c08f372a583726c00305b33fdb5d4713db649c0"
+      },
+      "raw_source_url": "https://github.com/RobLe3/iicp-management/blob/9b9c910fe6443068e71152f1a95f41639041c647/tests/profile.rs",
+      "scenario": "unsupported-version",
+      "whole_capability_conformance": false
+    }
+  ],
+  "context_clarifications": [
+    {
+      "case_id": "client-typescript::package-version-self-report",
+      "effect": "Successor clarification required for any qualification-context reading of the prior source-only limitation.",
+      "materialized_layer": "rewrite_typescript then packaged_assertions replaces CLI source-read/regex with spawnSync of installed compiled CLI --version, requiring exit0 and exact iicp-node package-version output.",
+      "raw_layer": "Lock metadata and CLI-source regex."
+    },
+    {
+      "case_id": "client-python::process-crash-restart",
+      "effect": "SQLite test predicates unchanged; correct installed-package provenance interpretation.",
+      "materialized_layer": "packaged_assertions removes that override; driver package_command supplies installed-wheel parent/workspace import path and origin guard.",
+      "raw_layer": "Child PYTHONPATH explicitly points to checkout src."
+    },
+    {
+      "case_id": "client-typescript::process-crash-restart",
+      "effect": "Fully written running-state snapshot predicate unchanged; correct installed-module provenance.",
+      "materialized_layer": "rewrite_typescript redirects literal runtime/worker imports to installed node_modules/@iicp/client/dist JavaScript.",
+      "raw_layer": "Child imports ./src/service_lifecycle.ts."
+    },
+    {
+      "case_id": "management::package-version-self-report",
+      "effect": "Do not infer skipped qualification from raw conditional; actual pipeline provides and requires input.",
+      "materialized_layer": "command_environment sets frozen artifact manifest path; management_assertions replaces optional skip with required expect and adds frozen-pre1 manifest checks bound to candidate source/version and non-authorizing flags.",
+      "raw_layer": "Returns without assertion if IICP_RELEASE_MANIFEST unset."
+    },
+    {
+      "case_id": "directory-rust::*",
+      "effect": "Review probe handlers, not raw Rust test bodies alone, to describe accepted execution predicates.",
+      "materialized_layer": "directory_package_command dispatches a bound installed-binary Python probe; scenario-specific checks include real process/filesystem/DB effects in the owning original runs.",
+      "raw_layer": "Declared Cargo unit/integration fixture selector."
+    },
+    {
+      "case_id": "directory-php::migration-interrupted|rollback-last-supported",
+      "effect": "Structural source-body limitation does not describe the packaged operator execution.",
+      "materialized_layer": "Packaged operator probe uses installed previous/current PHP releases and isolated MySQL fixture for migration/restore/readback.",
+      "raw_layer": "Declared Python structural assertions."
+    },
+    {
+      "case_id": "client-python|client-typescript::credential-expired|credential-replayed|credential-rotated|signature-mismatch",
+      "effect": "Earlier all-three-SDK no-production-validator source statement must not describe accepted staged Python/TypeScript execution. Still not persistent replay or real credential rotation.",
+      "materialized_layer": "packaged_assertions replaces those helpers with installed verify_dispatch_ticket_v2 / verifyDispatchTicketV2 and production replay-cache types; replay state is seeded from fixture, and production verifier returns the expected code.",
+      "raw_layer": "Each crypto fixture defines test-local policy decision helper."
+    }
+  ],
+  "corrected_reference_frozen": false,
+  "crypto_fixture_context": {
+    "fixture_sha256": "48be1f06e79da7849367f48deeb7a5ffa71a1de0e21800491dc6bf55d016fb94",
+    "status": "pre-normative",
+    "version": "0.2.0-draft"
+  },
+  "historical_inventory_complete": false,
+  "limits": [
+    "Source declarations, transformed consumers, compiled artifact members and installed probes are separate layers.",
+    "No probe, SDK case, installer, database operation or qualification workload was executed by this source review.",
+    "Raw fixtures are not exhaustive descriptions of their packaged execution; old reports remain unchanged and need this successor context.",
+    "Generic adapter labels do not prove identical validator invocation across components.",
+    "Original accepted PASS outcomes, candidate, receipts, certificates and qualification authority remain unchanged.",
+    "147/147 is complete declared source-reference accounting, not complete functional contracts, historical preservation or a qualified successor.",
+    "Repository commit links identify source locations; restricted or unavailable content is not made publicly retrievable by a link or digest."
+  ],
+  "new_qualification_credit": 0,
+  "new_runtime_executions": 0,
+  "prior_source_reports": [
+    {
+      "commit": "fac43150abf3dc151b0e400e10a39f3db1083519",
+      "original_unchanged": true,
+      "path": "reports/postcert/2026-11-07-release-recovery/analysis.json",
+      "sha256": "35973f2395fc6f6aa6ee231caf52602527d6ac18889eca7a75133745c3672cd3"
+    },
+    {
+      "original_unchanged": true,
+      "path": "reports/postcert/2026-11-06-credential-boundaries/source-map.json",
+      "sha256": "30975641bddcfde3de4072ddcdc049a08dbc33d31e5922043738c2ee0948515b"
+    }
+  ],
+  "product_defect_inferred": false,
+  "qualified_input_captures": 43,
+  "rust_crypto_scope": {
+    "frozen_crate_sha256": "da1b358bf2aba2160bd8e4c2de48f2e0369c778348a848402c4aa24c38431309",
+    "limit": "A generic canonical-runtime-verifier adapter label does not prove per-component validator invocation. Other Rust runtime-verifier tests may supply separate evidence; not assessed here. No new product defect or qualification invalidation inferred.",
+    "observed_path": "Raw test-local Rust policy plus real Ed25519 library; accepted rust_package_command verifies immutable crate/vendor and does not apply Python/TypeScript packaged_assertions transform.",
+    "retained_crate_member_matches_qualified_source": true,
+    "separate_build_receipt_gates": {
+      "locked_build": "PASS",
+      "offline_locked_install": "PASS",
+      "online_exact_install": "PASS",
+      "package_version_self_report": "PASS"
+    },
+    "separate_runtime_test_source": "tests/dispatch_ticket_trust_runtime.rs exists in both qualified Git and exact frozen crate; its source is separate from the four mapped test-local crypto fixture selectors."
+  },
+  "schema": "iicp.materialized-assertion-source-reference.v1",
+  "source_frontier": {
+    "all_existing_reference_links": 5808,
+    "declared_definitions": 147,
+    "edge_definitions": 141,
+    "edge_references": 5590,
+    "existing_reference_links": 5808,
+    "partial_definitions": 147,
+    "support_definitions": 6,
+    "support_references": 218,
+    "unlinked_declared_definitions": 0,
+    "whole_capability_conformance": false
+  }
+}
