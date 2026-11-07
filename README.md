@@ -127,3 +127,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Capability and selection reference slice
 
 [Bounded helper observations](reports/postcert/2026-11-06-capability-selection/README.md) distinguish matching/selection checks from unexecuted Directory wire and storage obligations, preserve an observed diagnostic difference, and document local environment and private-evidence limits. They add no qualification credit.
+
+## Enclosing capability contract evidence
+
+[Directory registration/preservation and SDK selection paths](reports/postcert/2026-11-07-enclosing-capability/README.md) distinguish five accepted assignment bodies from complete capability conformance, retain a measured name-guard difference, and keep static source, pure unit observations and original qualification credit separate.

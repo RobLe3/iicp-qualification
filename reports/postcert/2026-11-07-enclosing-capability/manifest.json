@@ -1,0 +1,9 @@
+{
+  "files": {
+    "README.md": "76b196b5296e9dfedac349844bfbee24631e9ef12aba0e492a7ed5e39e7c215c",
+    "findings.json": "ef7d599ec93ec65300d40258bb99c0b5099c46c2264dbcd2cf9e0a551a96422a",
+    "findings.schema.json": "a15166e5b6c9cf41ec1712e859e6ea4b1ca44e9e254d04468d63aff47e85c481"
+  },
+  "qualification_credit": 0,
+  "schema": "iicp.enclosing-capability-public-manifest.v1"
+}
