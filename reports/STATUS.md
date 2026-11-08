@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-11-07T23:24:27Z**.
+Verified snapshot: **2026-11-08T00:35:58Z**.
 
 `[####################]` **64/64 accepted shards**
 
@@ -16,8 +16,8 @@ Sentinels: **4/4** · Project-operated certificates: **5/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **PASS** (correction, 2026-11-07T23:23:08Z).
-- A reviewed correction was merged. A merge is not evidence of a subsequent qualification pass.
+- Recorded outcome: **UNKNOWN** (blocker, 2026-11-08T00:31:31.804653+00:00).
+- A retained evidence gap was registered. Missing original content is not reconstructed.
 - Actual workload launched in this activity: **false**.
 - Next gate: No next action is inferred from this record.
 
