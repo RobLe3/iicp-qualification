@@ -207,3 +207,7 @@ The [original29-file materialization verification](reports/postcert/2026-11-08-o
 ### Executed finite reference witnesses
 
 [Five local witness groups / 14 unit methods](reports/postcert/2026-11-08-executable-reference-witnesses/README.md) now supplement the source/design review. Their explicit limits, zero qualification credit and controlled-archive reproduction boundary remain separate from original qualification and corrected-baseline freeze.
+
+### Reference continuity and credential witnesses
+
+[The additive reference supplement](reports/postcert/2026-11-08-reference-continuity/README.md) links existing observations, records three bounded opt-in ticket-v2 verifier methods, and checks three frozen SDK package metadata bindings. It adds no qualification credit, default-v1 assurance, historical-completeness declaration or corrected-successor freeze.
