@@ -1,0 +1,242 @@
+{
+  "as_of": "2026-11-08",
+  "boundaries": {
+    "controlled_expected_wording_distributed": false,
+    "corrected_reference_frozen": false,
+    "external_certification_established": false,
+    "historical_inventory_complete": false,
+    "independent_interoperability_established": false,
+    "new_qualification_credit": 0,
+    "original_outcomes_changed": false,
+    "private_coordination_or_source_concerns_distributed": false,
+    "private_originals_distributed": false,
+    "product_defect_clearance_established": false,
+    "release_or_intake_authorized": false,
+    "whole_catalog_conformance_established": false
+  },
+  "caller_cases": [
+    {
+      "accepted_harness_source_commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "case_id": "client-rust::directory-unavailable",
+      "existing_reference_count": 48,
+      "finding": "The selected missing-decision test usesHTTP200, not a transport outage. Qualified discover constructs one configured Directory URL; restricted transport disables/refuses redirects, and transport/decision errors propagate without entering public discovery.",
+      "next_action": "Use the finite authority-preservation property in the reference; retain HTTP200/missing-decision stimulus and separately label unexecuted transport variations.",
+      "not_established": "Actual transport-outage injection, every discovery/submission caller and source-neighbor positive execution are not newly proven.",
+      "qualified_product_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "source_question_status": "RESOLVED_FINITE_SOURCE_SCOPE",
+      "supported_property": "For this configured restricted-discovery call, unusable/missing decision and request errors do not select a public fallback authority."
+    },
+    {
+      "accepted_harness_source_commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "case_id": "directory-php::process-crash-restart",
+      "existing_reference_count": 6,
+      "finding": "Selected feature test restores an existing node identity/reachability after faked healthy external endpoint. Product command updates that same node by ID; it is not a Directory process-crash injection.",
+      "next_action": "Retain the node-health property as a distinct reference assertion; keep actual process-restart proof unresolved or separately linked at matching source/fixture scope. Never run this command on a live database merely to improve documentation.",
+      "not_established": "Process termination/restart durability, all database state and no duplicate authority under actual crash remain separate evidence, not supplied by a healthy HTTPfake.",
+      "qualified_product_source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "source_question_status": "RESOLVED_FINITE_SOURCE_SCOPE",
+      "supported_property": "A live stored node with a dead-endpoint flag recovers routability and the same discovered node ID after the selected successful health observation."
+    },
+    {
+      "accepted_harness_source_commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+      "case_id": "management::stale-pid-or-lock",
+      "existing_reference_count": 8,
+      "finding": "Selected test verifies signed generation/replay and accepted/rejected history through Controller reopen. Actual acceptance uses an immediate SQLite transaction with nonce and expected-generation checks. That is distinct from exclusive ownership of a live IPC endpoint.",
+      "next_action": "Keep logical generation/replay as a finite reference property; clarify separately claimed process or IPC ownership through the existing owner. No whole ownership result follows from this test.",
+      "not_established": "Selected case does not exercise live endpoint ownership or a stale process lease. The neighboring two-connection race test is source only, not selected by any of the18 original Management case commands.",
+      "qualified_product_source_commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "source_question_status": "OWNER_CONTRACT_SCOPE_DECISION_REQUIRED",
+      "supported_property": "Accepted logical generation and bounded decision history persist, replay does not become a new accepted generation, and wrong audience is refused."
+    },
+    {
+      "accepted_harness_source_commit": "0cf46aae4beba4304de55ef99cc3a22f72784f30",
+      "case_id": "client-python::config-missing",
+      "existing_reference_count": 96,
+      "finding": "load_node intentionally returnsNone for optional absence. Qualified serve, explicit-node credits and doctor callers turn required absence into nonzero return and an initialization hint. Optional query identity and best-effort cache have different roles.",
+      "next_action": "Attach the caller source complement and plan a required-missing/valid-guard positive regression at the same gate; do not change the optional loader into unconditional failure.",
+      "not_established": "The selected original load_node test does not execute these callers. Earlier opt-in CIP configuration can occur before the serve guard, so no universal zero-side-effect assertion is made. The displayed standard config path is not proof of actual IICP_HOME resolution.",
+      "qualified_product_source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "source_question_status": "RESOLVED_REQUIRED_CALLER_SOURCE",
+      "supported_property": "For a required named saved config, _serve returns2 and credits/doctor return1 with an actionable init hint; optional API absence is not itself a product defect."
+    },
+    {
+      "accepted_harness_source_commit": "23a57f7c17cabd9867514d85f248004cdb40617e",
+      "case_id": "client-typescript::config-missing",
+      "existing_reference_count": 48,
+      "finding": "loadNode intentionally returnsnull. Qualified runServe, explicit-node credits and doctor return nonzero plus initialization guidance for required absence. Init existence-check, query identity and token cache are optional uses.",
+      "next_action": "Keep optional-versus-required role explicit and add bounded guard regression design; do not invent a missing product refusal or claim that selected lookup executed CLI behavior.",
+      "not_established": "Original selected loadNode test does not execute required CLI callers. No process-wide no-side-effect or environment-specific actual-path assertion follows; opt-in CIP configuration precedes serve guard.",
+      "qualified_product_source_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "source_question_status": "RESOLVED_REQUIRED_CALLER_SOURCE",
+      "supported_property": "Required named-config absence returns2 for serve and1 for credits/doctor with an actionable init hint, while optional lookup remains permitted."
+    }
+  ],
+  "candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "counts": {
+    "bounded_source_questions_resolved": 4,
+    "caller_cases": 5,
+    "existing_references": 206,
+    "new_reference_executions": 0,
+    "owner_scope_questions_retained": 1,
+    "working_reference_candidates": 5
+  },
+  "limitations": [
+    "Source/caller interpretation is not new execution, accepted credit or whole-catalog conformance. Original root ledgers and validators remain qualification authority.",
+    "Five working reference candidates are designs, not five newly executable or verified product tests. Their own finite fixture requirements remain distinct from unrelated process/authority questions.",
+    "Source neighbors and a current implementation file cannot stand in for the old selected runtime command.",
+    "Optional loader absence and required caller refusal are different legitimate contracts. Serve may perform opt-in CIP configuration earlier; no process-wide zero-side-effect claim or hardcoded custom-home path correctness follows.",
+    "The release refresh covers ten existing map owners, six unchanged source files and four already-declared prerequisites. It is not exhaustive implementation, compliance, performance or usability validation.",
+    "No legal applicability, independent participant outcome, deployment or release authorization is established. The qualified-review slot status is a project record, not a legal conclusion.",
+    "Private captures, controlled expected wording, coordination records and non-public source concerns remain outside this derivative. The full programme remains incomplete."
+  ],
+  "release_horizon": {
+    "legal_applicability_assessed": false,
+    "new_readiness_gate_passes": 0,
+    "observed_at": "2026-11-08T08:44:24.656395+00:00",
+    "prerequisite_owner_states": [
+      {
+        "issue": 768,
+        "repository": "RobLe3/iicp.network",
+        "state": "OPEN"
+      },
+      {
+        "issue": 801,
+        "repository": "RobLe3/iicp.network",
+        "state": "OPEN"
+      },
+      {
+        "issue": 1058,
+        "repository": "RobLe3/iicp.network",
+        "state": "OPEN"
+      },
+      {
+        "issue": 94,
+        "repository": "RobLe3/IICP",
+        "state": "OPEN"
+      }
+    ],
+    "previously_declared_prerequisite_owners_refreshed": 4,
+    "qualified_review_slot": {
+      "review_present": false,
+      "source_sha256": "ac7afa1271a829f2659524caa22041f3e6353db1eabe0f5b0471484ded607476",
+      "status": "blank-qualified-review-template"
+    },
+    "reviewed_owner_issue_count": 10,
+    "unchanged_owner_issue_count": 10,
+    "unchanged_policy_source_files": 6
+  },
+  "schema": "iicp.public-caller-source-and-release-horizon.v1",
+  "sources": [
+    {
+      "commit": "4020dadd150d7975be468f04a588dfa5346899a5",
+      "component": "client-rust",
+      "path": "tests/restricted_directory_client.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "role": "ACCEPTED_SELECTED_TEST_SOURCE",
+      "sha256": "07ba83ac4b3cb41b0bd6af974e8c9ba4f5291a86db9c7263860e1142f2ca2995"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "src/client.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "role": "QUALIFIED_PRODUCT_CALLER",
+      "sha256": "0b8b2d1944d23b4ac3d7192c093b827d5bb3c37afa32a964da92eaee3ecfad3c"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "src/http.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "role": "QUALIFIED_PRODUCT_TRANSPORT",
+      "sha256": "12e636998dfc287e30312af06e6fa7456153746273a12ae0c4ee6869ae24f7cc"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "src/restricted_directory.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "role": "QUALIFIED_PRODUCT_POLICY_VALIDATOR",
+      "sha256": "0c093ca2b7db80ba928772d3abcb78446cef55fadab04393d236a51cfc8e6edd"
+    },
+    {
+      "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "component": "directory-php",
+      "path": "tests/Feature/NodeLifecycleReachabilityTest.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "role": "ACCEPTED_SELECTED_TEST_SOURCE",
+      "sha256": "519408388a42a3640f5487c3f74ff71740b07949dfaf314a3e476a15dea33ceb"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "component": "directory-php",
+      "path": "app/Console/Commands/NodeLifecycleCommand.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "role": "QUALIFIED_PRODUCT_LIFECYCLE_CALLER",
+      "sha256": "e0423f1a232796bca65fe721020bb78501579df370df4cf66e4d46be3cd79701"
+    },
+    {
+      "commit": "723de26a5f0d62dbd160546fd598c513b0b3bee6",
+      "component": "management",
+      "path": "tests/controller_and_adapters.rs",
+      "repository": "RobLe3/iicp-management",
+      "role": "ACCEPTED_SELECTED_TEST_SOURCE",
+      "sha256": "02250743105bf92e4799f141179a6d1d584d41acc8b7dab6eeedf9fc07384620"
+    },
+    {
+      "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "component": "management",
+      "path": "src/controller.rs",
+      "repository": "RobLe3/iicp-management",
+      "role": "QUALIFIED_PRODUCT_CONTROLLER",
+      "sha256": "19b6d31b3d3f132ea0e10833044a860df92675f335ad06f79e08f0f1be84f9a4"
+    },
+    {
+      "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "component": "management",
+      "path": "LOCAL_AUTHORITY.md",
+      "repository": "RobLe3/iicp-management",
+      "role": "QUALIFIED_SUPPORTED_AUTHORITY_CONTRACT",
+      "sha256": "2ff8f9f753aa8f835dd9ac24813669390a747ae87951d0829a8258b27a03b979"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "src/iicp_client/identity.py",
+      "repository": "RobLe3/iicp-client-python",
+      "role": "QUALIFIED_OPTIONAL_LOOKUP_API",
+      "sha256": "5cef3be88827e1569b3e1eed429e7a909282a09efe02fa08a721c6862be6251b"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "src/iicp_client/cli.py",
+      "repository": "RobLe3/iicp-client-python",
+      "role": "QUALIFIED_REQUIRED_AND_OPTIONAL_CALLERS",
+      "sha256": "e36b132929c797e437bbb76238388f60e6ae3bcbdb5d448bde850304314eadb4"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "src/identity.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "role": "QUALIFIED_OPTIONAL_LOOKUP_API",
+      "sha256": "13510a6105e9d81fd4f11c8847ef83ba1ed2d9b24e944014f4d1e3e7483acdab"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "src/cli.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "role": "QUALIFIED_REQUIRED_AND_OPTIONAL_CALLERS",
+      "sha256": "b40eca600283c416dffa9d17e9e7ba1706a616fec42301091a1458fd41ea58c7"
+    }
+  ],
+  "validation": {
+    "product_or_controller_runs": 0,
+    "retained_original_schema_controls": 6,
+    "retained_source_role_controls": 34,
+    "successor_design_precision_controls": 6
+  }
+}

@@ -199,3 +199,7 @@ The [original29-file materialization verification](reports/postcert/2026-11-08-o
 ## Finite catalog source alignment
 
 [Source properties, effective context and precise evidence gaps](reports/postcert/2026-11-08-finite-catalog-semantics/README.md) cover the36 existing scenarios without changing accepted credit or publishing controlled catalog wording.
+
+## Required callers and current release dependencies
+
+[Required caller guards, finite recovery/authority predicates and the refreshed dependency horizon](reports/postcert/2026-11-08-caller-source-and-release-horizon/README.md) preserve existing credit and separate source findings from actual runtime evidence.
