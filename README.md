@@ -175,3 +175,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Additional historical correction-source joins
 
 [Seven reviewed source joins](reports/postcert/2026-11-08-correction-source-joins/README.md) extend the selected register to 27 owner records: 24 correction-source inclusions and three development-only corrections. They add no body-review coverage, native execution, qualification credit or whole-issue acceptance.
+
+## Retained original-artifact and historical validation supplement
+
+See the [reviewed retained-evidence supplement](reports/postcert/2026-11-08-retained-execution-proof/README.md) for the additive17/17 current-byte result and bounded database/native-artifact provenance. This does not establish complete historical custody or a frozen successor.

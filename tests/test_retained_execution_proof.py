@@ -1,0 +1,45 @@
+import copy,sys,pathlib,unittest
+from unittest.mock import patch
+sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]/'scripts'))
+import retained_execution_proof as p
+class PublicControls(unittest.TestCase):
+ def setUp(self):self.v=p.load()
+ def reject(self,f):
+  f(self.v)
+  with self.assertRaises(Exception):p.validate(self.v)
+ def test_positive(self):self.assertTrue(p.validate(self.v))
+ def test_generated(self):self.assertTrue(p.check())
+ def test_private_archive_path(self):self.reject(lambda v:v.update(private_path='/Users/synthetic/secret'))
+ def test_candidate(self):self.reject(lambda v:v.update(candidate_digest='sha256:'+'0'*64))
+ def test_source(self):self.reject(lambda v:v.update(canonical_root_commit='0'*40))
+ def test_total(self):self.reject(lambda v:v['artifact_availability'].update(distinct_current_verified=18))
+ def test_prior(self):self.reject(lambda v:v['artifact_availability'].update(prior_verified=16))
+ def test_additional(self):self.reject(lambda v:v['artifact_availability'].update(additional_verified=3))
+ def test_duplicate(self):self.reject(lambda v:v['artifact_availability']['records'].__setitem__(1,copy.deepcopy(v['artifact_availability']['records'][0])))
+ def test_altered_member_hash(self):self.reject(lambda v:v['artifact_availability']['records'][0].update(sha256='sha256:'+'0'*64))
+ def test_wrong_size(self):self.reject(lambda v:v['artifact_availability']['records'][0].update(size_bytes=1))
+ def test_missing_member(self):self.reject(lambda v:v['artifact_availability']['records'].pop())
+ def test_custody(self):self.reject(lambda v:v['artifact_availability'].update(historical_custody_established=True))
+ def test_reproduction(self):self.reject(lambda v:v['artifact_availability'].update(clean_environment_reproduction_established=True))
+ def test_new_ci(self):self.reject(lambda v:v['shared_database_validation']['historical_ci'][0].update(fresh_execution=True))
+ def test_foreign_head(self):self.reject(lambda v:v['shared_database_validation']['historical_ci'][0].update(tested_head='0'*40))
+ def test_invented_per_assertion_pass(self):self.reject(lambda v:v['shared_database_validation']['historical_ci'][0].update(per_assertion_transcript='PASS'))
+ def test_process_restart(self):self.reject(lambda v:v['shared_database_validation'].update(os_process_restart_proved=True))
+ def test_source_decl_as_run(self):self.reject(lambda v:v['shared_database_validation'].update(qualified_source_regressions_rerun=True))
+ def test_pre_normative_promotion(self):self.reject(lambda v:v['shared_database_validation'].update(fixture_status='RATIFIED'))
+ def test_historical_absence_as_fresh(self):self.reject(lambda v:v['native_x86_artifact_provenance'].update(fresh_resource_absence_check=True))
+ def test_later_receipt_as_original(self):self.reject(lambda v:v['remaining_rust148_execution_detail'].update(later_cleanup_receipt_is_original_27_case_proof=True))
+ def test_credit(self):self.reject(lambda v:v['boundaries'].update(qualification_credit=1))
+ def test_runtime(self):self.reject(lambda v:v['boundaries'].update(new_product_test_executions=1))
+ def test_body_doublecredit(self):self.reject(lambda v:v['boundaries'].update(new_issue_body_coverage=104))
+ def test_historical_complete(self):self.reject(lambda v:v['boundaries'].update(historical_inventory_complete=True))
+ def test_whole_scope_clearance(self):self.reject(lambda v:v['boundaries'].update(whole_supported_scope_clearance=True))
+ def test_freeze(self):self.reject(lambda v:v['boundaries'].update(reference_frozen=True))
+ def test_external_certification(self):self.reject(lambda v:v['boundaries'].update(external_certification_established=True))
+ def test_release(self):self.reject(lambda v:v['boundaries'].update(release_authorized=True))
+ def test_schema_tamper(self):
+  old=pathlib.Path.read_bytes
+  def wrong(path):return b'{}' if path.name=='analysis.schema.json' else old(path)
+  with patch.object(pathlib.Path,'read_bytes',wrong):
+   with self.assertRaises(ValueError):p.validate(self.v)
+if __name__=='__main__':unittest.main()

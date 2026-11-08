@@ -1,0 +1,121 @@
+{
+  "artifact_availability": {
+    "additional_verified": 2,
+    "clean_environment_reproduction_established": false,
+    "distinct_current_verified": 17,
+    "historical_custody_established": false,
+    "prior_report": "../2026-11-08-reference-reproducibility/README.md",
+    "prior_verified": 15,
+    "records": [
+      {
+        "evidence_role": "CURRENT_RETAINED_MEMBER_BYTES",
+        "execution": false,
+        "name": "iicp-directory-rs-0.1.16-linux-x86_64",
+        "sha256": "sha256:bba617940d00cfebfb1d01f029800de5c5d4ca6ed1ed9789d3b1d65e64aab4a5",
+        "size_bytes": 15125392
+      },
+      {
+        "evidence_role": "CURRENT_RETAINED_MEMBER_BYTES",
+        "execution": false,
+        "name": "iicp-directory-rs-0.1.16-release-manifest.json",
+        "sha256": "sha256:9d23eacd64195de99ccd2f68468811ff249badeaad611061cdac5e7e9e288d46",
+        "size_bytes": 349
+      }
+    ],
+    "required": 17
+  },
+  "boundaries": {
+    "external_certification_established": false,
+    "historical_inventory_complete": false,
+    "new_issue_body_coverage": 0,
+    "new_product_test_executions": 0,
+    "qualification_credit": 0,
+    "reference_frozen": false,
+    "release_authorized": false,
+    "whole_supported_scope_clearance": false
+  },
+  "candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "limits": [
+    "Current byte availability is not complete historical custody or reproducibility.",
+    "Historical successful CI step metadata and source-selected assertions are not detailed per-test output.",
+    "Modeled repository/service reload is not an OS process restart experiment.",
+    "Later success or source ancestry does not reexecute earlier tests at a changed source.",
+    "The earlier dated15/17 locator observation remains unchanged; this is an additive result.",
+    "The original candidate, accepted receipts, certificates and current27-record source register remain unchanged.",
+    "Raw logs, private source locators, cloud identities and controlled archives are not distributed.",
+    "Archive reader checks are observational and size-bounded, not hard CPU limits or adversarial snapshot isolation.",
+    "PHP freezes its policy clock; Rust uses an advancing database clock, so source and successful step metadata do not prove universal exact-second timing."
+  ],
+  "native_x86_artifact_provenance": {
+    "admission_pr": "https://github.com/RobLe3/iicp.network/pull/1452",
+    "closure_comment": "https://github.com/RobLe3/iicp-directory-rust/issues/137#issuecomment-5752636558",
+    "fresh_resource_absence_check": false,
+    "historical_closure_projection": "https://github.com/RobLe3/iicp.network/blob/106aae6568d12884603068e82248bf1413371690/reports/pre1-qualification/linux-x86_64-directory-rust-successor-replacement-2026-09-20-aws-closure.json",
+    "historical_pass_projection": "https://github.com/RobLe3/iicp.network/blob/106aae6568d12884603068e82248bf1413371690/reports/pre1-qualification/linux-x86_64-directory-rust-successor-replacement-2026-09-20-aws-pass.json",
+    "issue": "https://github.com/RobLe3/iicp-directory-rust/issues/137",
+    "later_artifact_projection": "https://github.com/RobLe3/iicp.network/blob/106aae6568d12884603068e82248bf1413371690/reports/pre1-qualification/linux-x86_64-artifact-successor-2026-10-04-pass.json",
+    "later_qualified_source": "b95a362ad8f974334994ca73cd20210388a2362f",
+    "native_original_source": "ce77bfb7c601cca98b71234cc886c833b33978f2",
+    "recorded_runtime_glibc": "glibc 2.36",
+    "runtime_gate_evidence_role": "ADMITTED_HISTORICAL_PROJECTION_AND_RETAINED_FRAGMENT_NOT_NEW_EXECUTION"
+  },
+  "original_candidate_file_sha256": "a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
+  "remaining_rust148_execution_detail": {
+    "issue": "https://github.com/RobLe3/iicp-client-rust/issues/148",
+    "later_cleanup_receipt_is_original_27_case_proof": false,
+    "original_27_case_result": "OWNER_REPORTED_NOT_DETAILED_RESULT_VERIFIED"
+  },
+  "schema": "iicp.public-retained-execution-proof.v1",
+  "shared_database_validation": {
+    "fixture_commit": "aff38000d8e9465b97a47367c1311722f56c7446",
+    "fixture_path": "research/pre-normative-profiles/fixtures/reputation-hourly-velocity-v0.json",
+    "fixture_repository": "RobLe3/IICP",
+    "fixture_sha256": "5bad81668f405bcc5683712e010d9afe383ce20155a194c50f7ae3c183a40b4f",
+    "fixture_status": "PRE_NORMATIVE_NOT_PROMOTED",
+    "fixture_tag": "v1.10.12",
+    "historical_ci": [
+      {
+        "completed_at": "2026-08-09T12:05:49Z",
+        "fresh_execution": false,
+        "job": 93242076898,
+        "job_conclusion": "success",
+        "merge_commit": "017b75f531f08a933dde67a5a116c4204d48c5f4",
+        "original_detailed_logs": "HTTP410_UNAVAILABLE_AT_QUERIED_ENDPOINT",
+        "per_assertion_transcript": "UNVERIFIED",
+        "pr": 99,
+        "repository": "RobLe3/iicp-directory-php",
+        "run": 31312389950,
+        "tested_head": "959a2f685eb9e82b565c07010b281d2de3c66549",
+        "url": "https://github.com/RobLe3/iicp-directory-php/actions/runs/31312389950/job/93242076898"
+      },
+      {
+        "completed_at": "2026-08-09T12:00:37Z",
+        "fresh_execution": false,
+        "job": 93241417565,
+        "job_conclusion": "success",
+        "merge_commit": "82e50a6c9718ca20b4fea589a3bc854a1ceed85e",
+        "original_detailed_logs": "HTTP410_UNAVAILABLE_AT_QUERIED_ENDPOINT",
+        "per_assertion_transcript": "UNVERIFIED",
+        "pr": 58,
+        "repository": "RobLe3/iicp-directory-rust",
+        "run": 31312126949,
+        "tested_head": "78fa52d55306ae1daae1dc362ca6a72a0befac99",
+        "url": "https://github.com/RobLe3/iicp-directory-rust/actions/runs/31312126949/job/93241417565"
+      }
+    ],
+    "os_process_restart_proved": false,
+    "php_regression_file_unchanged_at_qualified_source": true,
+    "php_rust_fixture_bytes_identical": true,
+    "qualified_source_regressions_rerun": false,
+    "rust_regression_file_unchanged_at_qualified_source": false,
+    "scoped_expectations": [
+      "shared concurrent positive budget",
+      "3599-second same window",
+      "3600-second new window",
+      "persisted repository/service reload",
+      "negative delta preserves positive budget"
+    ]
+  },
+  "state": "REVIEWED_DERIVATIVE_NOT_NEW_QUALIFICATION"
+}

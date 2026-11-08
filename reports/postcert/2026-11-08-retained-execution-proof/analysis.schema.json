@@ -1,0 +1,348 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_availability": {
+      "additionalProperties": false,
+      "properties": {
+        "additional_verified": {
+          "type": "integer"
+        },
+        "clean_environment_reproduction_established": {
+          "type": "boolean"
+        },
+        "distinct_current_verified": {
+          "type": "integer"
+        },
+        "historical_custody_established": {
+          "type": "boolean"
+        },
+        "prior_report": {
+          "type": "string"
+        },
+        "prior_verified": {
+          "type": "integer"
+        },
+        "records": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "evidence_role": {
+                "type": "string"
+              },
+              "execution": {
+                "type": "boolean"
+              },
+              "name": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "size_bytes": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "evidence_role",
+              "execution",
+              "name",
+              "sha256",
+              "size_bytes"
+            ],
+            "type": "object"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": "array"
+        },
+        "required": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "additional_verified",
+        "clean_environment_reproduction_established",
+        "distinct_current_verified",
+        "historical_custody_established",
+        "prior_report",
+        "prior_verified",
+        "records",
+        "required"
+      ],
+      "type": "object"
+    },
+    "boundaries": {
+      "additionalProperties": false,
+      "properties": {
+        "external_certification_established": {
+          "type": "boolean"
+        },
+        "historical_inventory_complete": {
+          "type": "boolean"
+        },
+        "new_issue_body_coverage": {
+          "type": "integer"
+        },
+        "new_product_test_executions": {
+          "type": "integer"
+        },
+        "qualification_credit": {
+          "type": "integer"
+        },
+        "reference_frozen": {
+          "type": "boolean"
+        },
+        "release_authorized": {
+          "type": "boolean"
+        },
+        "whole_supported_scope_clearance": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "external_certification_established",
+        "historical_inventory_complete",
+        "new_issue_body_coverage",
+        "new_product_test_executions",
+        "qualification_credit",
+        "reference_frozen",
+        "release_authorized",
+        "whole_supported_scope_clearance"
+      ],
+      "type": "object"
+    },
+    "candidate_digest": {
+      "type": "string"
+    },
+    "canonical_root_commit": {
+      "type": "string"
+    },
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 9,
+      "minItems": 9,
+      "type": "array"
+    },
+    "native_x86_artifact_provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "admission_pr": {
+          "type": "string"
+        },
+        "closure_comment": {
+          "type": "string"
+        },
+        "fresh_resource_absence_check": {
+          "type": "boolean"
+        },
+        "historical_closure_projection": {
+          "type": "string"
+        },
+        "historical_pass_projection": {
+          "type": "string"
+        },
+        "issue": {
+          "type": "string"
+        },
+        "later_artifact_projection": {
+          "type": "string"
+        },
+        "later_qualified_source": {
+          "type": "string"
+        },
+        "native_original_source": {
+          "type": "string"
+        },
+        "recorded_runtime_glibc": {
+          "type": "string"
+        },
+        "runtime_gate_evidence_role": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "admission_pr",
+        "closure_comment",
+        "fresh_resource_absence_check",
+        "historical_closure_projection",
+        "historical_pass_projection",
+        "issue",
+        "later_artifact_projection",
+        "later_qualified_source",
+        "native_original_source",
+        "recorded_runtime_glibc",
+        "runtime_gate_evidence_role"
+      ],
+      "type": "object"
+    },
+    "original_candidate_file_sha256": {
+      "type": "string"
+    },
+    "remaining_rust148_execution_detail": {
+      "additionalProperties": false,
+      "properties": {
+        "issue": {
+          "type": "string"
+        },
+        "later_cleanup_receipt_is_original_27_case_proof": {
+          "type": "boolean"
+        },
+        "original_27_case_result": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "issue",
+        "later_cleanup_receipt_is_original_27_case_proof",
+        "original_27_case_result"
+      ],
+      "type": "object"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "shared_database_validation": {
+      "additionalProperties": false,
+      "properties": {
+        "fixture_commit": {
+          "type": "string"
+        },
+        "fixture_path": {
+          "type": "string"
+        },
+        "fixture_repository": {
+          "type": "string"
+        },
+        "fixture_sha256": {
+          "type": "string"
+        },
+        "fixture_status": {
+          "type": "string"
+        },
+        "fixture_tag": {
+          "type": "string"
+        },
+        "historical_ci": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "completed_at": {
+                "type": "string"
+              },
+              "fresh_execution": {
+                "type": "boolean"
+              },
+              "job": {
+                "type": "integer"
+              },
+              "job_conclusion": {
+                "type": "string"
+              },
+              "merge_commit": {
+                "type": "string"
+              },
+              "original_detailed_logs": {
+                "type": "string"
+              },
+              "per_assertion_transcript": {
+                "type": "string"
+              },
+              "pr": {
+                "type": "integer"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "run": {
+                "type": "integer"
+              },
+              "tested_head": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "completed_at",
+              "fresh_execution",
+              "job",
+              "job_conclusion",
+              "merge_commit",
+              "original_detailed_logs",
+              "per_assertion_transcript",
+              "pr",
+              "repository",
+              "run",
+              "tested_head",
+              "url"
+            ],
+            "type": "object"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": "array"
+        },
+        "os_process_restart_proved": {
+          "type": "boolean"
+        },
+        "php_regression_file_unchanged_at_qualified_source": {
+          "type": "boolean"
+        },
+        "php_rust_fixture_bytes_identical": {
+          "type": "boolean"
+        },
+        "qualified_source_regressions_rerun": {
+          "type": "boolean"
+        },
+        "rust_regression_file_unchanged_at_qualified_source": {
+          "type": "boolean"
+        },
+        "scoped_expectations": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "minItems": 5,
+          "type": "array"
+        }
+      },
+      "required": [
+        "fixture_commit",
+        "fixture_path",
+        "fixture_repository",
+        "fixture_sha256",
+        "fixture_status",
+        "fixture_tag",
+        "historical_ci",
+        "os_process_restart_proved",
+        "php_regression_file_unchanged_at_qualified_source",
+        "php_rust_fixture_bytes_identical",
+        "qualified_source_regressions_rerun",
+        "rust_regression_file_unchanged_at_qualified_source",
+        "scoped_expectations"
+      ],
+      "type": "object"
+    },
+    "state": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "artifact_availability",
+    "boundaries",
+    "candidate_digest",
+    "canonical_root_commit",
+    "limits",
+    "native_x86_artifact_provenance",
+    "original_candidate_file_sha256",
+    "remaining_rust148_execution_detail",
+    "schema",
+    "shared_database_validation",
+    "state"
+  ],
+  "type": "object"
+}
