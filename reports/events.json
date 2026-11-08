@@ -4179,6 +4179,105 @@
       "reason": "blocker-changed",
       "source_sha256": "sha256:25cee3dffb39f608ec7e20ea860566651704712533ad5c0ba1de77d1ba41e22a",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:9320e5f388dbdb0bbae871388ddb2ae5a5019a54e2fcd761ca7703443ab91f55",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T09:11:28.387653Z",
+      "outcome": "UNKNOWN",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:279cb095b93a298f347935609c6777b837711d11bc4f45cfdf89c222a3138b76",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:50d0e3978901186406d16124410d065cc4ce91aae695929f66cad3a6ea5ebed5",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T09:11:28.387653Z",
+      "outcome": "REFUSED",
+      "qualification_credit": 0,
+      "reason": "preflight-refused",
+      "source_sha256": "sha256:1337fedee16780f0d073403c8f59c266e33eea2ccc65fa4f177946f374f89dd4",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:229f76264c7f0723bf4cd40e9e6420115395c1c9d5acb6bb5c0fec875fde82b5",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T09:00:14.075129+00:00",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:405002f8e27f3d4fc8f8c1a6fe765c92a33d29a9d3d2cf1e19631b3cf5468f9a",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:bf0430d5b64a5ff31f66ffab63e0d17811644f644f59b8f8d989e6c81e7cafca",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T09:11:28.387653Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:3512b8fd1ffe6984fe5dcc3794daa71a7459e636efc6a76b5a2df13156c50e72",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:54ad2dfb13109b69d1ec7e39822533aaa8ed191120081a23fde91a1bcb9c84dd",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T09:11:28.387653Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:a3fb89c8032c480496a948540ff0387d9b39176417f6902b7a36f468cde19241",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:30b0d53d5019c05bfd216f57222d648b6ad1c7a770790c2b9f03bd2dd471e839",
+      "kind": "ci",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T09:09:48Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:b83849a9b63d9a7deb276bc02c6fdf5b6f82dce406b40d87567ef05a1d0c0f80",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:657e1ffe8e2b335c0ba7d5ac391437e31a506a620beb9bc040b3292133b6e66a",
+      "kind": "correction",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T09:10:29Z",
+      "outcome": "MERGED",
+      "qualification_credit": 0,
+      "reason": "correction-merged",
+      "source_sha256": "sha256:79d1e9c904f9697423f01f2fafd5c773a4a2eac211f446625a3b76a1529ee035",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:02e46dd2ca2c2813d6c63a977f035fe9fef6963d16eef5868e15fdd6f361ee73",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T09:11:28.387653Z",
+      "outcome": "UNKNOWN",
+      "qualification_credit": 0,
+      "reason": "evidence-gap",
+      "source_sha256": "sha256:b574149c34a869217ec0dbbe311d7b3b604453c1e12711f0d02fcabdfea541ec",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:c3473b264544b6265cd0d959d66fa4bae4cfb80ddf88123c752d04adc09588f8",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T09:11:28.387653Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:005520c5b4175880c03c38b7d55fa6c1441c8e48fc78ee08e7478e3bee4c54f8",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
