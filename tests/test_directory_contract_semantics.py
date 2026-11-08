@@ -1,0 +1,47 @@
+import copy,json,sys,unittest
+from pathlib import Path
+from jsonschema.exceptions import ValidationError
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+import directory_contract_semantics as m
+class DirectorySemanticsProjectionControls(unittest.TestCase):
+ def reject(self,fn):
+  v=copy.deepcopy(m.load());fn(v)
+  with self.assertRaises((ValueError,ValidationError)) as caught:m.validate(v)
+  self.assertIsNotNone(caught.exception)
+ def test_positive_fixed_derivative(self):self.assertTrue(m.validate(m.load()))
+ def test_current_generated_files_and_manifest(self):self.assertTrue(m.check())
+ def test_deterministic_render(self):self.assertEqual(m.render(m.load()),m.render(json.loads(json.dumps(m.load()))))
+ def test_declared_reference_units(self):
+  r=m.load()['reference_accounting'];self.assertEqual(r['existing_support_references']+r['existing_edge_references'],r['existing_reference_count']);self.assertEqual(r['support_definitions']+r['edge_definitions'],r['case_definitions'])
+ def test_three_column_dynamic_table_escaped(self):
+  rows=[s for s in m.render(m.load()).splitlines() if s.startswith('|')];self.assertTrue(rows);self.assertTrue(all(s.count('|')==4 for s in rows))
+ def test_wrong_candidate_rejected(self):self.reject(lambda v:v.update(candidate_digest='sha256:'+'0'*64))
+ def test_wrong_root_source_rejected(self):self.reject(lambda v:v.update(canonical_root_commit='0'*40))
+ def test_new_reference_credit_rejected(self):self.reject(lambda v:v['boundaries'].update(new_qualification_credit=1))
+ def test_boolean_credit_rejected(self):self.reject(lambda v:v['boundaries'].update(new_qualification_credit=False))
+ def test_new_qualifying_tests_rejected(self):self.reject(lambda v:v['boundaries'].update(new_qualifying_tests=17))
+ def test_runtime_execution_inflation_rejected(self):self.reject(lambda v:v['boundaries'].update(new_runtime_execution=True))
+ def test_original_receipt_reopen_claim_rejected(self):self.reject(lambda v:v['boundaries'].update(original_receipts_reopened=True))
+ def test_whole_owner_closure_rejected(self):self.reject(lambda v:v['owner_clauses'][0].update(whole_clause_verified=True))
+ def test_atom_count_inflation_rejected(self):self.reject(lambda v:v['owner_clauses'][0]['proposed_atom_ids'].append('extra'))
+ def test_duplicate_owner_rejected(self):self.reject(lambda v:v['owner_clauses'].__setitem__(1,copy.deepcopy(v['owner_clauses'][0])))
+ def test_duplicate_context_rejected(self):self.reject(lambda v:v['rust_adapter_context'].__setitem__(1,copy.deepcopy(v['rust_adapter_context'][0])))
+ def test_foreign_target_rejected(self):self.reject(lambda v:v['reference_accounting'].update(targets=['windows-x86_64']))
+ def test_missing_reference_rejected(self):self.reject(lambda v:v['reference_accounting'].update(existing_reference_count=431))
+ def test_support_edge_confusion_rejected(self):self.reject(lambda v:v['reference_accounting'].update(existing_support_references=414,existing_edge_references=18))
+ def test_static_route_metadata_promoted_rejected(self):self.reject(lambda v:v['boundaries'].update(all43_http_routes_execution_established=True))
+ def test_definition_unit_conflation_rejected(self):self.reject(lambda v:v['shared_contracts'].update(behavior_vector_definitions=43))
+ def test_historical_contract_rebound_rejected(self):self.reject(lambda v:v['shared_contracts'].update(contract_version='v1.10.94'))
+ def test_production_parity_claim_rejected(self):self.reject(lambda v:v['boundaries'].update(production_operational_parity_established=True))
+ def test_external_interop_claim_rejected(self):self.reject(lambda v:v['boundaries'].update(independent_interoperability_established=True))
+ def test_external_certificate_claim_rejected(self):self.reject(lambda v:v['boundaries'].update(independent_external_certification_established=True))
+ def test_frozen_successor_claim_rejected(self):self.reject(lambda v:v['boundaries'].update(corrected_successor_frozen=True))
+ def test_zero_known_defects_claim_rejected(self):self.reject(lambda v:v['boundaries'].update(zero_known_defects_established=True))
+ def test_historical_completeness_claim_rejected(self):self.reject(lambda v:v['boundaries'].update(historical_inventory_complete=True))
+ def test_authority_added_rejected(self):self.reject(lambda v:v.update(qualification_authority='replacement'))
+ def test_policy_claim_rewrite_rejected(self):self.reject(lambda v:v['policy_findings'].__setitem__(0,'Production is authorized'))
+ def test_private_path_rejected(self):self.reject(lambda v:v['limitations'].append('/Users/synthetic/marker'))
+ def test_cloud_identity_rejected(self):self.reject(lambda v:v['limitations'].append('arn:aws:synthetic'))
+ def test_sensitive_advisory_marker_rejected(self):self.reject(lambda v:v['limitations'].append('GHSA-synthetic-marker'))
+ def test_private_account_shape_rejected(self):self.reject(lambda v:v['limitations'].append('123456789012'))
+if __name__=='__main__':unittest.main(verbosity=2)
