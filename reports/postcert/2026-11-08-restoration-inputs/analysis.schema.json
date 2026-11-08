@@ -1,0 +1,426 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "boundaries": {
+      "additionalProperties": false,
+      "properties": {
+        "cloud_operations_performed": {
+          "type": "boolean"
+        },
+        "corrected_successor_frozen": {
+          "type": "boolean"
+        },
+        "historical_inventory_complete": {
+          "type": "boolean"
+        },
+        "independent_external_certification_established": {
+          "type": "boolean"
+        },
+        "new_assignment_credit": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "original_evidence_mutated": {
+          "type": "boolean"
+        },
+        "private_originals_distributed": {
+          "type": "boolean"
+        },
+        "qualification_credit": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "qualification_workloads_performed": {
+          "type": "boolean"
+        },
+        "runtime_execution_performed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "cloud_operations_performed",
+        "corrected_successor_frozen",
+        "historical_inventory_complete",
+        "independent_external_certification_established",
+        "new_assignment_credit",
+        "original_evidence_mutated",
+        "private_originals_distributed",
+        "qualification_credit",
+        "qualification_workloads_performed",
+        "runtime_execution_performed"
+      ],
+      "type": "object"
+    },
+    "candidate_digest": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "canonical_root_commit": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "classification": {
+      "additionalProperties": false,
+      "properties": {
+        "component_scoped_groups": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "components": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "distinct_digests_by_role": {
+          "additionalProperties": false,
+          "properties": {
+            "execution_artifact_sha256": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "fixtures_sha256": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "installed_payload_sha256": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "package_execution_sha256": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "qualification_environment_sha256": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "runtime_map_sha256": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "test_dependencies_sha256": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "execution_artifact_sha256",
+            "fixtures_sha256",
+            "installed_payload_sha256",
+            "package_execution_sha256",
+            "qualification_environment_sha256",
+            "runtime_map_sha256",
+            "test_dependencies_sha256"
+          ],
+          "type": "object"
+        },
+        "existing_assignment_references": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "identity_roles": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "component_scoped_groups",
+        "components",
+        "distinct_digests_by_role",
+        "existing_assignment_references",
+        "identity_roles"
+      ],
+      "type": "object"
+    },
+    "controls": {
+      "additionalProperties": false,
+      "properties": {
+        "binding_observer_passed": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "controls_are_synthetic_metadata_not_product_execution": {
+          "type": "boolean"
+        },
+        "environment_observer_passed": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "grouping_passed": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "locator_target_and_attempt_passed": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "binding_observer_passed",
+        "controls_are_synthetic_metadata_not_product_execution",
+        "environment_observer_passed",
+        "grouping_passed",
+        "locator_target_and_attempt_passed"
+      ],
+      "type": "object"
+    },
+    "findings": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 6,
+      "minItems": 6,
+      "type": "array"
+    },
+    "limits": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 7,
+      "minItems": 7,
+      "type": "array"
+    },
+    "new_raw_locator_question": {
+      "additionalProperties": false,
+      "properties": {
+        "additional_locators": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "distinct_raw_identities": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "elapsed_seconds": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "global_absence_established": {
+          "type": "boolean"
+        },
+        "matching_metadata_objects": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "metadata_identities": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "metadata_inventories": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "original_objects_opened_by_query": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "query_runs": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "raw_identities_unlocated_in_fixed_prefix": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "receipt_references": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "reference_roles_with_match": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "additional_locators",
+        "distinct_raw_identities",
+        "elapsed_seconds",
+        "global_absence_established",
+        "matching_metadata_objects",
+        "metadata_identities",
+        "metadata_inventories",
+        "original_objects_opened_by_query",
+        "query_runs",
+        "raw_identities_unlocated_in_fixed_prefix",
+        "receipt_references",
+        "reference_roles_with_match"
+      ],
+      "type": "object"
+    },
+    "original_metadata_availability": {
+      "additionalProperties": false,
+      "properties": {
+        "installed_tree_restoration_established": {
+          "type": "boolean"
+        },
+        "original_binding_files": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "original_environment_objects": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "package_binding_identities": {
+          "additionalProperties": false,
+          "properties": {
+            "recorded": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "resolved": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "recorded",
+            "resolved"
+          ],
+          "type": "object"
+        },
+        "prepared_result_linked_receipts": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "qualification_environment_identities": {
+          "additionalProperties": false,
+          "properties": {
+            "recorded": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "resolved": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "recorded",
+            "resolved"
+          ],
+          "type": "object"
+        },
+        "resolved_target": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "runtime_map_identities": {
+          "additionalProperties": false,
+          "properties": {
+            "recorded": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "resolved": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "recorded",
+            "resolved"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "installed_tree_restoration_established",
+        "original_binding_files",
+        "original_environment_objects",
+        "package_binding_identities",
+        "prepared_result_linked_receipts",
+        "qualification_environment_identities",
+        "resolved_target",
+        "runtime_map_identities"
+      ],
+      "type": "object"
+    },
+    "preserved_observations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "type": "array"
+    },
+    "private_review_digests": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sha256": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "maxItems": 6,
+      "minItems": 6,
+      "type": "array"
+    },
+    "receipt_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "existing_receipt_files_hash_matched": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "prepared_result_reference_present": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "qualification_environment_reference_present": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "runtime_map_reference_present": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "existing_receipt_files_hash_matched",
+        "prepared_result_reference_present",
+        "qualification_environment_reference_present",
+        "runtime_map_reference_present"
+      ],
+      "type": "object"
+    },
+    "schema": {
+      "const": "iicp.postcert.restoration-input-analysis.v1"
+    },
+    "state": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "boundaries",
+    "candidate_digest",
+    "canonical_root_commit",
+    "classification",
+    "controls",
+    "findings",
+    "limits",
+    "new_raw_locator_question",
+    "original_metadata_availability",
+    "preserved_observations",
+    "private_review_digests",
+    "receipt_metadata",
+    "schema",
+    "state"
+  ],
+  "type": "object"
+}
