@@ -195,3 +195,7 @@ The [original29-file materialization verification](reports/postcert/2026-11-08-o
 ## Directory semantic and operational boundaries
 
 [Shared fixture definitions, actual accepted-adapter scope and separate operational gates](reports/postcert/2026-11-08-directory-contract-semantics/README.md) reconcile six owner conjunctions without new execution, credit or checkbox completion.
+
+## Finite catalog source alignment
+
+[Source properties, effective context and precise evidence gaps](reports/postcert/2026-11-08-finite-catalog-semantics/README.md) cover the36 existing scenarios without changing accepted credit or publishing controlled catalog wording.

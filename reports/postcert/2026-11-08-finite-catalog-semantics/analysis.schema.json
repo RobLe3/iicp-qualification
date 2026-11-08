@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "boundaries": {
+      "additionalProperties": false,
+      "properties": {
+        "corrected_reference_frozen": {
+          "type": "boolean"
+        },
+        "exact_controlled_expectation_text_distributed": {
+          "type": "boolean"
+        },
+        "external_certification_established": {
+          "type": "boolean"
+        },
+        "historical_inventory_complete": {
+          "type": "boolean"
+        },
+        "independent_interoperability_established": {
+          "type": "boolean"
+        },
+        "new_qualification_credit": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "new_qualifying_tests": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "original_capture_reinspection": {
+          "type": "boolean"
+        },
+        "original_outcomes_changed": {
+          "type": "boolean"
+        },
+        "private_originals_distributed": {
+          "type": "boolean"
+        },
+        "release_authorized": {
+          "type": "boolean"
+        },
+        "runtime_witness_joins_verified": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "whole_catalog_conformance_established": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "corrected_reference_frozen",
+        "exact_controlled_expectation_text_distributed",
+        "external_certification_established",
+        "historical_inventory_complete",
+        "independent_interoperability_established",
+        "new_qualification_credit",
+        "new_qualifying_tests",
+        "original_capture_reinspection",
+        "original_outcomes_changed",
+        "private_originals_distributed",
+        "release_authorized",
+        "runtime_witness_joins_verified",
+        "whole_catalog_conformance_established"
+      ],
+      "type": "object"
+    },
+    "candidate_digest": {
+      "type": "string"
+    },
+    "canonical_root_commit": {
+      "type": "string"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "cross_case_coordinate_pairs": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "cross_case_environment_different_pairs": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "cross_case_environment_matched_pairs": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "cross_case_links": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "edge_case_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "existing_edge_references": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "scenarios": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source_fit_counts": {
+          "additionalProperties": false,
+          "properties": {
+            "APPLICABILITY_CLARIFICATION_REQUIRED": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "CROSS_CASE_COMPLEMENT_REQUIRED": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "DIRECT_FINITE_PROPERTY": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "PARTIAL_EXPECTATION_WITNESS": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "PREPARATION_CONTRACT_JOIN_REQUIRED": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "APPLICABILITY_CLARIFICATION_REQUIRED",
+            "CROSS_CASE_COMPLEMENT_REQUIRED",
+            "DIRECT_FINITE_PROPERTY",
+            "PARTIAL_EXPECTATION_WITNESS",
+            "PREPARATION_CONTRACT_JOIN_REQUIRED"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "cross_case_coordinate_pairs",
+        "cross_case_environment_different_pairs",
+        "cross_case_environment_matched_pairs",
+        "cross_case_links",
+        "edge_case_definitions",
+        "existing_edge_references",
+        "scenarios",
+        "source_fit_counts"
+      ],
+      "type": "object"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 141,
+      "minItems": 1,
+      "type": "array"
+    },
+    "private_matrix_sha256": {
+      "type": "string"
+    },
+    "private_source_review_sha256": {
+      "type": "string"
+    },
+    "scenario_analysis": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "cases": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "accepted_harness_source_commit": {
+                  "type": "string"
+                },
+                "case_id": {
+                  "type": "string"
+                },
+                "component": {
+                  "type": "string"
+                },
+                "existing_accepted_reference_count": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "next_evidence_action": {
+                  "type": "string"
+                },
+                "positive_control": {
+                  "type": "string"
+                },
+                "qualified_product_source_commit": {
+                  "type": "string"
+                },
+                "source_fit": {
+                  "type": "string"
+                },
+                "supported_source_property": {
+                  "type": "string"
+                },
+                "unresolved_or_excluded_scope": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "accepted_harness_source_commit",
+                "case_id",
+                "component",
+                "existing_accepted_reference_count",
+                "next_evidence_action",
+                "positive_control",
+                "qualified_product_source_commit",
+                "source_fit",
+                "supported_source_property",
+                "unresolved_or_excluded_scope"
+              ],
+              "type": "object"
+            },
+            "maxItems": 141,
+            "minItems": 1,
+            "type": "array"
+          },
+          "interpretation": {
+            "type": "string"
+          },
+          "scenario_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "cases",
+          "interpretation",
+          "scenario_id"
+        ],
+        "type": "object"
+      },
+      "maxItems": 141,
+      "minItems": 1,
+      "type": "array"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "validation": {
+      "additionalProperties": false,
+      "properties": {
+        "elapsed_seconds": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "independent_source_review": {
+          "type": "string"
+        },
+        "private_synthetic_controls": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "elapsed_seconds",
+        "independent_source_review",
+        "private_synthetic_controls"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "as_of",
+    "boundaries",
+    "candidate_digest",
+    "canonical_root_commit",
+    "counts",
+    "limitations",
+    "private_matrix_sha256",
+    "private_source_review_sha256",
+    "scenario_analysis",
+    "schema",
+    "validation"
+  ],
+  "type": "object"
+}
