@@ -1,0 +1,46 @@
+import copy,sys,unittest,re
+from pathlib import Path
+from jsonschema import ValidationError
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+import owner_contract_evidence as m
+class OwnerContractEvidenceTests(unittest.TestCase):
+    def setUp(self):self.v=m.load()
+    def reject(self,change):
+        v=copy.deepcopy(self.v);change(v)
+        with self.assertRaises((ValueError,ValidationError)):m.validate(v)
+    def test_positive_reviewed_shape(self):self.assertTrue(m.validate(self.v))
+    def test_generated_files(self):self.assertTrue(m.check())
+    def test_render_is_deterministic(self):self.assertEqual(m.render(self.v),m.render(copy.deepcopy(self.v)))
+    def test_runtime_table_has_three_columns_with_semver_alternation(self):
+        rows=[line for line in m.render(self.v).splitlines() if line.startswith('| client-')]
+        self.assertEqual(len(rows),2)
+        for row in rows:self.assertEqual(len(re.split(r'(?<!\\)\|',row)[1:-1]),3)
+        self.assertTrue(any(r'\|\|' in row for row in rows))
+    def test_exact_owner_scope(self):self.assertEqual(len(self.v['clauses']),19);self.assertEqual(sum(self.v['category_counts'].values()),19)
+    def test_no_unchecked_clause_closed(self):self.reject(lambda v:v['clauses'][0].update(complete_clause_verified=True))
+    def test_no_checkbox_promotion(self):self.reject(lambda v:v['owner_clause_accounting'].update(checked_preserved=19))
+    def test_no_old_owner_criteria_waived(self):self.reject(lambda v:v['owner_clause_accounting'].update(total=31))
+    def test_no_representative_clause_removal(self):self.reject(lambda v:v['category_counts'].update(REPRESENTATIVE_HUMAN_EVIDENCE=0))
+    def test_no_qualification_credit(self):self.reject(lambda v:v['boundaries'].update(new_qualification_credit=192))
+    def test_no_existing_proofs_counted_as_new_tests(self):self.reject(lambda v:v['boundaries'].update(new_qualifying_tests=192))
+    def test_no_runtime_promotion(self):self.reject(lambda v:v['boundaries'].update(new_runtime_execution=True))
+    def test_no_zero_known_defect_claim(self):self.reject(lambda v:v['boundaries'].update(zero_known_defects_established=True))
+    def test_no_false_successor_freeze(self):self.reject(lambda v:v['boundaries'].update(corrected_successor_frozen=True))
+    def test_no_historical_completeness(self):self.reject(lambda v:v['boundaries'].update(historical_inventory_complete=True))
+    def test_no_authority_gate_change(self):self.reject(lambda v:v['boundaries'].update(release_gate_changed=True))
+    def test_no_intake_opening(self):self.reject(lambda v:v['representative_policy'].update(intake_open=True))
+    def test_no_automated_participant_credit(self):self.reject(lambda v:v['representative_policy'].update(automation_or_maintainer_rehearsals_as_participants=True))
+    def test_no_threshold_reduction(self):self.reject(lambda v:v['representative_policy'].update(minimum_distinct_observations_per_workflow=1))
+    def test_no_success_rate_reduction(self):self.reject(lambda v:v['representative_policy'].update(unassisted_success_threshold_percent_each_workflow=50))
+    def test_no_invented_observation_total(self):self.reject(lambda v:v['representative_policy'].update(actual_overall_observation_total='280PASS'))
+    def test_static_metadata_not_timing_proof(self):self.reject(lambda v:v['runtime_bounds'][0].update(post_matrix_narrowing_event_established=True))
+    def test_no_registry_claim(self):self.reject(lambda v:v['runtime_bounds'][0].update(current_registry_or_publication_state_checked=True))
+    def test_runtime_family_not_every_patch(self):self.reject(lambda v:v['runtime_bounds'][0].update(every_patch_or_interpreter_executed=True))
+    def test_no_full_package_clause_promotion(self):self.reject(lambda v:v['package_context_joins']['rows'][0].update(whole_owner_clause_verified=True))
+    def test_no_clean_install_claim(self):self.reject(lambda v:v['package_context_joins']['rows'][0].update(clean_install_transaction_proved_by_this_join=True))
+    def test_rust_context_not_removed(self):self.reject(lambda v:v['package_context_joins']['materialized_context'].update(rust='static only; no offline context'))
+    def test_no_private_host_paths(self):self.reject(lambda v:v['limits'].append('/Users/synthetic/private'))
+    def test_no_private_resource_identifiers(self):self.reject(lambda v:v['limits'].append('arn:aws:synthetic'))
+    def test_no_account_shapes(self):self.reject(lambda v:v['limits'].append('123456789012'))
+    def test_no_foreign_source_commit(self):self.reject(lambda v:v.update(canonical_root_commit='0'*40))
+if __name__=='__main__':unittest.main()

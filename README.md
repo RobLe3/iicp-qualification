@@ -187,3 +187,7 @@ The [original29-file materialization verification](reports/postcert/2026-11-08-o
 ## Original restoration-input audit
 
 [Typed identities and retained original metadata](reports/postcert/2026-11-08-restoration-inputs/README.md) separates hash roles, ten retained macOS bindings and environment/runtime metadata from unproved runtime restoration. It preserves unresolved historical locators without changing qualification credit.
+
+## Remaining component-owner contracts
+
+[Evidence classes, runtime bounds and accepted package context](reports/postcert/2026-11-08-owner-contract-evidence/README.md) explains the nineteen unchecked clauses without treating them as nineteen product defects or changing release requirements.
