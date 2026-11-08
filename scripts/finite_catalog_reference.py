@@ -46,4 +46,36 @@ def check():
  v=load();text=render(v);require((DATA/'README.md').read_text()==text,'narrative differs')
  expected={'analysis_sha256':DATA_PIN,'schema_sha256':SCHEMA_PIN,'readme_sha256':sha(text.encode()),'new_qualification_credit':0,'private_originals_distributed':False}
  require(json.loads((DATA/'manifest.json').read_text())==expected,'manifest differs');return True
-if __name__=='__main__':check();print('PASS: fixed finite-catalog source interpretation; no qualification authority.')
+
+# Additive fixed derivative: caller roles and declared release dependency horizon.
+CALLER_DATA=ROOT/'reports/postcert/2026-11-08-caller-source-and-release-horizon'
+CALLER_DATA_PIN='6e74c9640288d82a3fcb51ca58343083b87c70b85beea3e1e5accb57bef44a53'
+CALLER_SCHEMA_PIN='cfed6ad0f302c26042b02ec7b94445a6d94dc76ce263043431397cb4f1d092d3'
+def load_callers():return json.loads((CALLER_DATA/'analysis.json').read_bytes())
+def validate_callers(v):
+ privacy(v);raw=(CALLER_DATA/'analysis.schema.json').read_bytes();require(sha(raw)==CALLER_SCHEMA_PIN,'caller schema identity');Draft202012Validator(json.loads(raw)).validate(v)
+ rows=v['caller_cases'];require(len(rows)==len({r['case_id'] for r in rows})==5,'caller scope');require(sum(r['existing_reference_count'] for r in rows)==206,'caller reference scope')
+ require(v['counts']=={'caller_cases':5,'existing_references':206,'bounded_source_questions_resolved':4,'owner_scope_questions_retained':1,'working_reference_candidates':5,'new_reference_executions':0},'caller counts')
+ release=v['release_horizon'];require((release['reviewed_owner_issue_count'],release['unchanged_owner_issue_count'],release['unchanged_policy_source_files'],release['previously_declared_prerequisite_owners_refreshed'])==(10,10,6,4),'release refresh scope')
+ require(release['new_readiness_gate_passes']==0 and release['legal_applicability_assessed'] is False,'release maturity inflation')
+ require(len(release['prerequisite_owner_states'])==4 and all(x['state']=='OPEN' for x in release['prerequisite_owner_states']),'prerequisite state')
+ for k,x in v['boundaries'].items():
+  if k=='new_qualification_credit':require(type(x)is int and x==0,'caller credit')
+  else:require(x is False,'caller authority/disclosure inflation')
+ require(sha(canonical(v))==CALLER_DATA_PIN,'reviewed caller identity');return True
+def render_callers(v):
+ validate_callers(v)
+ lines=['# Caller roles and release dependencies: interpret the scoped evidence','','This additive source review preserves five original cases and206 existing reference coordinates. It neither changes qualification credit nor establishes a corrected frozen baseline.','',
+ '## What the source settles','','Four bounded source questions are resolved and one owner-scope question remains explicit. There are five working reference designs, not five new product executions.','',
+ 'Optional saved-identity lookup can correctly return absence. Required CLI callers can still refuse with initialization guidance. PHP node-health recovery is not an injected Directory crash. Management logical generations and process/IPC ownership are different predicates. A restricted-Directory missing-decision refusal must retain its actual HTTP200 stimulus rather than be called a transport outage.','']
+ for r in v['caller_cases']:
+  lines+=['### '+r['case_id'],'',r['finding'],'','Supported finite source property: '+r['supported_property'],'','Not established: '+r['not_established'],'','Next: '+r['next_action'],'']
+ lines+=['## Release dependency horizon','','Ten existing owner issues retain unchanged state/body/comment content; six policy/source files retain their reviewed hashes. Four previously declared dependency owners were also read without issue mutation:','', '| Owner | State |','|---|---|']
+ lines += ['| '+x['repository']+'#'+str(x['issue'])+' | '+x['state']+' |' for x in v['release_horizon']['prerequisite_owner_states']]
+ lines += ['', 'The canonical qualified-review slot remains a blank template with review_present=false. This is source status, not a legal conclusion or a claim about every possible external review. No new readiness pass, participant intake or release authority follows.','',
+ '## Validation and limits','','Retained controls:34 source-role and6 original schema checks. Six focused successor checks validate the corrected finite fixture requirements. These are metadata/source-design controls, not product or qualification executions. Required public projection review and exact-head CI remain separate delivery gates.','']+['- '+x for x in v['limitations']]
+ lines+=['','See [pinned sources](SOURCES.md), [the complete finite-catalog supplement](../2026-11-08-finite-catalog-semantics/README.md) and [canonical status](../../STATUS.md).',''];return '\n'.join(lines)
+def check_callers():
+ v=load_callers();text=render_callers(v);require((CALLER_DATA/'README.md').read_text()==text,'caller narrative differs');require(json.loads((CALLER_DATA/'manifest.json').read_text())=={'analysis_sha256':CALLER_DATA_PIN,'schema_sha256':CALLER_SCHEMA_PIN,'readme_sha256':sha(text.encode()),'new_qualification_credit':0,'private_originals_distributed':False},'caller manifest differs');return True
+if __name__=='__main__':
+ check();check_callers();print('PASS: fixed source-interpretation derivatives; no qualification authority.')

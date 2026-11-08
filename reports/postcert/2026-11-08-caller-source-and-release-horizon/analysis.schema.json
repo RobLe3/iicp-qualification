@@ -1,0 +1,339 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "boundaries": {
+      "additionalProperties": false,
+      "properties": {
+        "controlled_expected_wording_distributed": {
+          "type": "boolean"
+        },
+        "corrected_reference_frozen": {
+          "type": "boolean"
+        },
+        "external_certification_established": {
+          "type": "boolean"
+        },
+        "historical_inventory_complete": {
+          "type": "boolean"
+        },
+        "independent_interoperability_established": {
+          "type": "boolean"
+        },
+        "new_qualification_credit": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "original_outcomes_changed": {
+          "type": "boolean"
+        },
+        "private_coordination_or_source_concerns_distributed": {
+          "type": "boolean"
+        },
+        "private_originals_distributed": {
+          "type": "boolean"
+        },
+        "product_defect_clearance_established": {
+          "type": "boolean"
+        },
+        "release_or_intake_authorized": {
+          "type": "boolean"
+        },
+        "whole_catalog_conformance_established": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "controlled_expected_wording_distributed",
+        "corrected_reference_frozen",
+        "external_certification_established",
+        "historical_inventory_complete",
+        "independent_interoperability_established",
+        "new_qualification_credit",
+        "original_outcomes_changed",
+        "private_coordination_or_source_concerns_distributed",
+        "private_originals_distributed",
+        "product_defect_clearance_established",
+        "release_or_intake_authorized",
+        "whole_catalog_conformance_established"
+      ],
+      "type": "object"
+    },
+    "caller_cases": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "accepted_harness_source_commit": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          },
+          "existing_reference_count": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "finding": {
+            "type": "string"
+          },
+          "next_action": {
+            "type": "string"
+          },
+          "not_established": {
+            "type": "string"
+          },
+          "qualified_product_source_commit": {
+            "type": "string"
+          },
+          "source_question_status": {
+            "type": "string"
+          },
+          "supported_property": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "accepted_harness_source_commit",
+          "case_id",
+          "existing_reference_count",
+          "finding",
+          "next_action",
+          "not_established",
+          "qualified_product_source_commit",
+          "source_question_status",
+          "supported_property"
+        ],
+        "type": "object"
+      },
+      "maxItems": 206,
+      "minItems": 1,
+      "type": "array"
+    },
+    "candidate_digest": {
+      "type": "string"
+    },
+    "canonical_root_commit": {
+      "type": "string"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "bounded_source_questions_resolved": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "caller_cases": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "existing_references": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "new_reference_executions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "owner_scope_questions_retained": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "working_reference_candidates": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "bounded_source_questions_resolved",
+        "caller_cases",
+        "existing_references",
+        "new_reference_executions",
+        "owner_scope_questions_retained",
+        "working_reference_candidates"
+      ],
+      "type": "object"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 206,
+      "minItems": 1,
+      "type": "array"
+    },
+    "release_horizon": {
+      "additionalProperties": false,
+      "properties": {
+        "legal_applicability_assessed": {
+          "type": "boolean"
+        },
+        "new_readiness_gate_passes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "observed_at": {
+          "type": "string"
+        },
+        "prerequisite_owner_states": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "issue": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "issue",
+              "repository",
+              "state"
+            ],
+            "type": "object"
+          },
+          "maxItems": 206,
+          "minItems": 1,
+          "type": "array"
+        },
+        "previously_declared_prerequisite_owners_refreshed": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "qualified_review_slot": {
+          "additionalProperties": false,
+          "properties": {
+            "review_present": {
+              "type": "boolean"
+            },
+            "source_sha256": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "review_present",
+            "source_sha256",
+            "status"
+          ],
+          "type": "object"
+        },
+        "reviewed_owner_issue_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "unchanged_owner_issue_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "unchanged_policy_source_files": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "legal_applicability_assessed",
+        "new_readiness_gate_passes",
+        "observed_at",
+        "prerequisite_owner_states",
+        "previously_declared_prerequisite_owners_refreshed",
+        "qualified_review_slot",
+        "reviewed_owner_issue_count",
+        "unchanged_owner_issue_count",
+        "unchanged_policy_source_files"
+      ],
+      "type": "object"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "commit": {
+            "type": "string"
+          },
+          "component": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "commit",
+          "component",
+          "path",
+          "repository",
+          "role",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "maxItems": 206,
+      "minItems": 1,
+      "type": "array"
+    },
+    "validation": {
+      "additionalProperties": false,
+      "properties": {
+        "product_or_controller_runs": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "retained_original_schema_controls": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "retained_source_role_controls": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "successor_design_precision_controls": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "product_or_controller_runs",
+        "retained_original_schema_controls",
+        "retained_source_role_controls",
+        "successor_design_precision_controls"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "as_of",
+    "boundaries",
+    "caller_cases",
+    "candidate_digest",
+    "canonical_root_commit",
+    "counts",
+    "limitations",
+    "release_horizon",
+    "schema",
+    "sources",
+    "validation"
+  ],
+  "type": "object"
+}
