@@ -183,3 +183,7 @@ See the [reviewed retained-evidence supplement](reports/postcert/2026-11-08-reta
 ## Original materialization and reference scope
 
 The [original29-file materialization verification](reports/postcert/2026-11-08-original-materialization/README.md) adds package/build-companion closure and clarifies remaining runtime and successor gates. It changes no accepted qualification or release authority.
+
+## Original restoration-input audit
+
+[Typed identities and retained original metadata](reports/postcert/2026-11-08-restoration-inputs/README.md) separates hash roles, ten retained macOS bindings and environment/runtime metadata from unproved runtime restoration. It preserves unresolved historical locators without changing qualification credit.

@@ -1,0 +1,128 @@
+{
+  "boundaries": {
+    "cloud_operations_performed": false,
+    "corrected_successor_frozen": false,
+    "historical_inventory_complete": false,
+    "independent_external_certification_established": false,
+    "new_assignment_credit": 0,
+    "original_evidence_mutated": false,
+    "private_originals_distributed": false,
+    "qualification_credit": 0,
+    "qualification_workloads_performed": false,
+    "runtime_execution_performed": false
+  },
+  "candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "classification": {
+    "component_scoped_groups": 529,
+    "components": 6,
+    "distinct_digests_by_role": {
+      "execution_artifact_sha256": 7,
+      "fixtures_sha256": 8,
+      "installed_payload_sha256": 7,
+      "package_execution_sha256": 236,
+      "qualification_environment_sha256": 12,
+      "runtime_map_sha256": 10,
+      "test_dependencies_sha256": 171
+    },
+    "existing_assignment_references": 5808,
+    "identity_roles": 7
+  },
+  "controls": {
+    "binding_observer_passed": 17,
+    "controls_are_synthetic_metadata_not_product_execution": true,
+    "environment_observer_passed": 12,
+    "grouping_passed": 19,
+    "locator_target_and_attempt_passed": 8
+  },
+  "findings": [
+    "Raw artifact hashes, named content-map hashes and context-bearing binding hashes are different identity roles; their distinct counts are not missing-file or execution counts.",
+    "Package bindings include workspace and installed-package paths. Dependency identities can include generated configuration, private transient fixture inputs and tool snapshots.",
+    "The prepared-result publication uses raw file bytes, while package bindings, qualification environments and runtime maps use their own canonical-object conventions.",
+    "Ten retained original macOS full bindings and two environment/runtime objects match the recorded identities. The prepared-result raw file matches references in all sixteen macOS receipts.",
+    "The new fixed raw-file metadata lookup returned the already-known macOS publication only. Seven identities were unlocated in that prefix, not proven globally absent.",
+    "Original metadata identity does not establish retained dependency trees, historical custody, available executable environments or whole semantic reference completeness."
+  ],
+  "limits": [
+    "This is a minimized reporting derivative. Public checks do not open original metadata, reproduce the private lookup or execute products.",
+    "The original macOS input draft supplied discovery paths, not proof of the original producer invocation. Exact recorded identities establish which metadata bytes are retained.",
+    "The locator query used a fixed historical prefix, not complete discovery. Excluded, unindexed, archived-member and later sources remain outside that result.",
+    "Missing historical representations must remain explicit. They are not automatically current product defects or invalid accepted receipts.",
+    "The original 29-file candidate materialization remains a separate verified observation. It is not a corrected successor freeze.",
+    "Historical private input preservation and future safe semantic regression fixtures are distinct tasks. Exact recreation of transient paths or secrets is not imposed as a new normative product requirement.",
+    "The complete post-certification goal remains incomplete; supported-scope defect dispositions, held prerequisites, successor qualification and full applicable semantic reference gates remain."
+  ],
+  "new_raw_locator_question": {
+    "additional_locators": 0,
+    "distinct_raw_identities": 8,
+    "elapsed_seconds": 10.814,
+    "global_absence_established": false,
+    "matching_metadata_objects": 1,
+    "metadata_identities": 778978,
+    "metadata_inventories": 895,
+    "original_objects_opened_by_query": 0,
+    "query_runs": 1,
+    "raw_identities_unlocated_in_fixed_prefix": 7,
+    "receipt_references": 32,
+    "reference_roles_with_match": 16
+  },
+  "original_metadata_availability": {
+    "installed_tree_restoration_established": false,
+    "original_binding_files": 10,
+    "original_environment_objects": 2,
+    "package_binding_identities": {
+      "recorded": 236,
+      "resolved": 10
+    },
+    "prepared_result_linked_receipts": 16,
+    "qualification_environment_identities": {
+      "recorded": 12,
+      "resolved": 1
+    },
+    "resolved_target": "macos-arm64",
+    "runtime_map_identities": {
+      "recorded": 10,
+      "resolved": 1
+    }
+  },
+  "preserved_observations": [
+    "An initial metadata probe assumed an optional historical receipt field was present; the absent field was recorded explicitly without changing accepted qualification.",
+    "A prepared-baseline size admission refused content reading; the bound was not increased for that observation.",
+    "An initial canonical prepared-result probe matched no receipt references. Source inspection established raw-file hashing; the original probe and additive correction remain retained.",
+    "Pre-execution query review held the wrapper for missing durable attempt and upfront aggregate-size admission. Both were corrected and reviewed before its single execution."
+  ],
+  "private_review_digests": [
+    {
+      "kind": "identity_classification",
+      "sha256": "ebfb5dcb6835c92dd77727d00389fbaf684dd7975ead1eb5492cb6d3751ffdfc"
+    },
+    {
+      "kind": "classification_arithmetic_addendum",
+      "sha256": "1a1a55fcca2fea6b517852523540be10a8d017ed8e6ebca8447378f4abf7f1aa"
+    },
+    {
+      "kind": "receipt_metadata",
+      "sha256": "0ce3342b0ecdbe7bd4ab000ce6df829f89ae63a255df17ab3761589ed0fb6cb2"
+    },
+    {
+      "kind": "macos_original_metadata",
+      "sha256": "c30acab294302782df1c7f00ff49f592608c8b19cccb5953b12144b5dafd307e"
+    },
+    {
+      "kind": "new_query_preparation",
+      "sha256": "ae9d88d8c889404db0b6b7fb01a491dc938bd1691222bc81c2085d462b22a705"
+    },
+    {
+      "kind": "new_query_result",
+      "sha256": "c34d85d51ed765539c9228061b1f1ce13d8ca8e586a2cda358f345dbd0ab6605"
+    }
+  ],
+  "receipt_metadata": {
+    "existing_receipt_files_hash_matched": 64,
+    "prepared_result_reference_present": 32,
+    "qualification_environment_reference_present": 64,
+    "runtime_map_reference_present": 64
+  },
+  "schema": "iicp.postcert.restoration-input-analysis.v1",
+  "state": "REVIEWED_METADATA_NOT_RUNTIME_RESTORATION"
+}
