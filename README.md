@@ -171,3 +171,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Reference reproducibility supplement
 
 [Reviewed obligation crosswalk and artifact availability](reports/postcert/2026-11-08-reference-reproducibility/README.md) joins nine existing slices without replaying them and records 15/17 original artifact byte identities at examined locators. It does not establish complete preservation, a frozen successor or new qualification credit.
+
+## Additional historical correction-source joins
+
+[Seven reviewed source joins](reports/postcert/2026-11-08-correction-source-joins/README.md) extend the selected register to 27 owner records: 24 correction-source inclusions and three development-only corrections. They add no body-review coverage, native execution, qualification credit or whole-issue acceptance.

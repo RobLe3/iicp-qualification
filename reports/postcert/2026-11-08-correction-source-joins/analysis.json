@@ -1,0 +1,865 @@
+{
+  "baseline_frozen": false,
+  "candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "controlled_register_sha256": "1d3b649838d67a3148369c366cc2f3cad33dee15a51215b0ece85e06d6d7d840",
+  "counts": {
+    "additional_selected_records": 7,
+    "body_records_already_reviewed": 261,
+    "development_only_corrections": 3,
+    "new_body_coverage": 0,
+    "prior_selected_records": 20,
+    "qualified_source_inclusions": 24,
+    "test_source_declarations": 20,
+    "total_selected_records": 27
+  },
+  "execution_authorized": false,
+  "historical_inventory_complete": false,
+  "limits": [
+    "Selected owner records are not distinct current product defects or complete owner contracts.",
+    "All prior20 selected rows and the existing261-body review remain preserved. The rejected duplicate104-body pass adds zero coverage.",
+    "Source ancestry plus retained source/test declarations is not original incident cause, new runtime execution, packaged-byte identity or successor qualification.",
+    "Public source links expose already-public component revisions; controlled source captures, actual private locators and catalog expectations are not exported.",
+    "Original finite qualification, certificates and private disclosure gates are unchanged."
+  ],
+  "new_product_test_executions": 0,
+  "php95_original_ci_provenance": {
+    "checks": [
+      {
+        "completed_at": "2026-08-08T09:07:06Z",
+        "conclusion": "success",
+        "details_url": "https://github.com/RobLe3/iicp-directory-php/actions/runs/31249671687/job/93083895119",
+        "head_sha": "1888fe5c3f4a1a97beeb9c4792a8e80a0cd4c706",
+        "id": 93083895119,
+        "name": "operator-image",
+        "started_at": "2026-08-08T09:01:36Z",
+        "status": "completed"
+      },
+      {
+        "completed_at": "2026-08-08T09:03:47Z",
+        "conclusion": "success",
+        "details_url": "https://github.com/RobLe3/iicp-directory-php/actions/runs/31249671687/job/93083895107",
+        "head_sha": "1888fe5c3f4a1a97beeb9c4792a8e80a0cd4c706",
+        "id": 93083895107,
+        "name": "php-control-plane",
+        "started_at": "2026-08-08T09:01:36Z",
+        "status": "completed"
+      },
+      {
+        "completed_at": "2026-08-08T09:04:02Z",
+        "conclusion": "success",
+        "details_url": "https://github.com/RobLe3/iicp-directory-php/actions/runs/31249671687/job/93083895092",
+        "head_sha": "1888fe5c3f4a1a97beeb9c4792a8e80a0cd4c706",
+        "id": 93083895092,
+        "name": "php-coverage",
+        "started_at": "2026-08-08T09:01:36Z",
+        "status": "completed"
+      },
+      {
+        "completed_at": "2026-08-08T09:03:52Z",
+        "conclusion": "success",
+        "details_url": "https://github.com/RobLe3/iicp-directory-php/actions/runs/31249671687/job/93083895081",
+        "head_sha": "1888fe5c3f4a1a97beeb9c4792a8e80a0cd4c706",
+        "id": 93083895081,
+        "name": "php-quality",
+        "started_at": "2026-08-08T09:01:36Z",
+        "status": "completed"
+      },
+      {
+        "completed_at": "2026-08-08T09:02:20Z",
+        "conclusion": "success",
+        "details_url": "https://github.com/RobLe3/iicp-directory-php/actions/runs/31249671687/job/93083895070",
+        "head_sha": "1888fe5c3f4a1a97beeb9c4792a8e80a0cd4c706",
+        "id": 93083895070,
+        "name": "event-log-concurrency",
+        "started_at": "2026-08-08T09:01:36Z",
+        "status": "completed"
+      }
+    ],
+    "detailed_job_log_readback": "HTTP_410_NO_ASSERTION_OR_SKIP_TRANSCRIPT_ACQUIRED",
+    "new_ci_execution": false,
+    "original_pr_head": "1888fe5c3f4a1a97beeb9c4792a8e80a0cd4c706",
+    "original_workflow_sha256": "efe189df201826b8d59dc3912c3f7117bcd316b67da89a8f5196a41fca9d57f8",
+    "original_workflow_url": "https://github.com/RobLe3/iicp-directory-php/blob/1888fe5c3f4a1a97beeb9c4792a8e80a0cd4c706/.github/workflows/control-plane-parity.yml",
+    "qualification_credit": 0
+  },
+  "prior_selected_records": [
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-python#136"
+    },
+    {
+      "disposition": "POSTQUALIFIED_DEVELOPMENT_CORRECTION_ONLY",
+      "issue": "RobLe3/iicp-client-python#145"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-rust#168"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-rust#169"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-rust#171"
+    },
+    {
+      "disposition": "POSTQUALIFIED_DEVELOPMENT_CORRECTION_ONLY",
+      "issue": "RobLe3/iicp-client-rust#185"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-typescript#115"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-typescript#116"
+    },
+    {
+      "disposition": "POSTQUALIFIED_DEVELOPMENT_CORRECTION_ONLY",
+      "issue": "RobLe3/iicp-client-typescript#124"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-directory-rust#142"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-directory-php#54"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-directory-php#55"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-directory-rust#100"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-directory-rust#55"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-management#139"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-management#141"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-management#159"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-python#112"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-typescript#98"
+    },
+    {
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-rust#135"
+    }
+  ],
+  "qualification_credit": 0,
+  "rows": [
+    {
+      "correction_commit": "5f0ee7a1b3fd1cc696b3e9dcf98ca2bac59e9676",
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-rust#146",
+      "issue_url": "https://github.com/RobLe3/iicp-client-rust/issues/146",
+      "limits": [
+        "Exact Git ancestry and source assertions only; no current runtime result, packaged-byte claim or new qualification.",
+        "The five test-source declarations are not five newly executed/passing tests.",
+        "The legacy-only-when-missing test sets no canonical snapshot; the preference test uses valid canonical and invalid legacy. This does not supply an executed invalid-canonical/valid-legacy counterpart.",
+        "The no-fallback-on-invalid/read-error property remains a source-control-flow interpretation here, not fresh CLI execution.",
+        "The original accepted candidate and previously reviewed body frontier remain unchanged; this join must receive independent review before adding it to the selected correction register."
+      ],
+      "native_validation_executed_here": false,
+      "qualification_credit": 0,
+      "qualified_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "repository": "RobLe3/iicp-client-rust",
+      "retained_source_row_ref": {
+        "access": "CONTROLLED_INPUT_NOT_DISTRIBUTED",
+        "json_pointer": "/rows/0",
+        "sha256": "ae0b347429392cd784427d532e5c2558ee333a7ef78d62da6e2e77bd14ea8a89"
+      },
+      "scoped_source_finding": "Canonical IICP_HOME health paths and missing-only legacy fallback survive in the qualified CLI source.",
+      "source_refs": [
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "bc53dae87b685bf946615244f547a063863c6e2af063e39dfc649267c7423915",
+          "line": 625,
+          "repository_path": "src/bin/iicp_node.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/bin/iicp_node.rs#L625"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "bc53dae87b685bf946615244f547a063863c6e2af063e39dfc649267c7423915",
+          "line": 642,
+          "repository_path": "src/bin/iicp_node.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/bin/iicp_node.rs#L642"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "bc53dae87b685bf946615244f547a063863c6e2af063e39dfc649267c7423915",
+          "line": 654,
+          "repository_path": "src/bin/iicp_node.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/bin/iicp_node.rs#L654"
+        }
+      ],
+      "test_declarations": [
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "healthcheck_reports_live_snapshot",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "8f2877d5d903dce0f920c75bc8d3d7e83903ea0f3c6b467063b151dd5a90ae04",
+            "line": 11,
+            "repository_path": "tests/runtime_health_cli.rs",
+            "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/runtime_health_cli.rs#L11"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "healthcheck_missing_snapshot_is_indeterminate",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "8f2877d5d903dce0f920c75bc8d3d7e83903ea0f3c6b467063b151dd5a90ae04",
+            "line": 36,
+            "repository_path": "tests/runtime_health_cli.rs",
+            "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/runtime_health_cli.rs#L36"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "healthcheck_honors_iicp_home",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "8f2877d5d903dce0f920c75bc8d3d7e83903ea0f3c6b467063b151dd5a90ae04",
+            "line": 48,
+            "repository_path": "tests/runtime_health_cli.rs",
+            "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/runtime_health_cli.rs#L48"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "healthcheck_reads_legacy_default_home_only_when_canonical_is_missing",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "8f2877d5d903dce0f920c75bc8d3d7e83903ea0f3c6b467063b151dd5a90ae04",
+            "line": 70,
+            "repository_path": "tests/runtime_health_cli.rs",
+            "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/runtime_health_cli.rs#L70"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "healthcheck_prefers_iicp_home_over_legacy_default_home",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "8f2877d5d903dce0f920c75bc8d3d7e83903ea0f3c6b467063b151dd5a90ae04",
+            "line": 92,
+            "repository_path": "tests/runtime_health_cli.rs",
+            "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/runtime_health_cli.rs#L92"
+          }
+        }
+      ],
+      "whole_issue_acceptance_verified_here": false
+    },
+    {
+      "correction_commit": "3a13bbcb5c9433c0e5fcf26f8e43223922734130",
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-rust#148",
+      "issue_url": "https://github.com/RobLe3/iicp-client-rust/issues/148",
+      "limits": [
+        "Process-instance token is Linux-specific; no new Windows/macOS token capability is inferred. Unknown/current ownership refuses ordinary takeover.",
+        "Retained PR body reports local unit/static and a27-case root Docker gate; these are owner-recorded results, not newly executed or rehydrated runtime proof.",
+        "This does not re-audit every filesystem race or whole instance-lock security contract."
+      ],
+      "native_validation_executed_here": false,
+      "qualification_credit": 0,
+      "qualified_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "repository": "RobLe3/iicp-client-rust",
+      "retained_source_row_ref": {
+        "access": "CONTROLLED_INPUT_NOT_DISTRIBUTED",
+        "json_pointer": "/rows/1",
+        "sha256": "ae0b347429392cd784427d532e5c2558ee333a7ef78d62da6e2e77bd14ea8a89"
+      },
+      "scoped_source_finding": "Linux boot/start-time lock metadata distinguishes reused processes while current/unknown ownership remains protected.",
+      "source_refs": [
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "041dcb4ac8ed976ea3f3163cbb58d0f0e7c0d24db3dd3d9da4201cafea902256",
+          "line": 168,
+          "repository_path": "src/instance_lock.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/instance_lock.rs#L168"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "041dcb4ac8ed976ea3f3163cbb58d0f0e7c0d24db3dd3d9da4201cafea902256",
+          "line": 171,
+          "repository_path": "src/instance_lock.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/instance_lock.rs#L171"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "041dcb4ac8ed976ea3f3163cbb58d0f0e7c0d24db3dd3d9da4201cafea902256",
+          "line": 169,
+          "repository_path": "src/instance_lock.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/instance_lock.rs#L169"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "041dcb4ac8ed976ea3f3163cbb58d0f0e7c0d24db3dd3d9da4201cafea902256",
+          "line": 182,
+          "repository_path": "src/instance_lock.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/instance_lock.rs#L182"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "041dcb4ac8ed976ea3f3163cbb58d0f0e7c0d24db3dd3d9da4201cafea902256",
+          "line": 75,
+          "repository_path": "src/instance_lock.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/instance_lock.rs#L75"
+        }
+      ],
+      "test_declarations": [
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "reused_live_pid_with_different_process_identity_is_recovered",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "041dcb4ac8ed976ea3f3163cbb58d0f0e7c0d24db3dd3d9da4201cafea902256",
+            "line": 303,
+            "repository_path": "src/instance_lock.rs",
+            "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/instance_lock.rs#L303"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "live_pid_with_matching_process_identity_is_refused",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "041dcb4ac8ed976ea3f3163cbb58d0f0e7c0d24db3dd3d9da4201cafea902256",
+            "line": 316,
+            "repository_path": "src/instance_lock.rs",
+            "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/instance_lock.rs#L316"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "malformed_existing_owner_fails_closed",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "041dcb4ac8ed976ea3f3163cbb58d0f0e7c0d24db3dd3d9da4201cafea902256",
+            "line": 329,
+            "repository_path": "src/instance_lock.rs",
+            "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/instance_lock.rs#L329"
+          }
+        }
+      ],
+      "whole_issue_acceptance_verified_here": false
+    },
+    {
+      "correction_commit": "f428e9da82142c2d7ee8aaee70756f89134d52cf",
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-client-rust#44",
+      "issue_url": "https://github.com/RobLe3/iicp-client-rust/issues/44",
+      "limits": [
+        "Shared health-state reads and successful re-registration updates survive in helper and inlined production paths; source review is not a new HTTP/provider observation.",
+        "Initial configuration seeding and effective-capability variants remain separate context; no claim every startup/registration path is fully covered.",
+        "Old closure comments report rollout/REACH results and route a separate observation window to root469; original logs are not rehydrated here."
+      ],
+      "native_validation_executed_here": false,
+      "qualification_credit": 0,
+      "qualified_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "repository": "RobLe3/iicp-client-rust",
+      "retained_source_row_ref": {
+        "access": "CONTROLLED_INPUT_NOT_DISTRIBUTED",
+        "json_pointer": "/rows/2",
+        "sha256": "ae0b347429392cd784427d532e5c2558ee333a7ef78d62da6e2e77bd14ea8a89"
+      },
+      "scoped_source_finding": "Shared public model state and successful re-registration updates survive in the helper and production heartbeat paths.",
+      "source_refs": [
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "1cbe1e77c0c90781a57bbc5eba67cd37c3da37671bbb1e85bd2fcb84ebe88cca",
+          "line": 781,
+          "repository_path": "src/node.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/node.rs#L781"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "1cbe1e77c0c90781a57bbc5eba67cd37c3da37671bbb1e85bd2fcb84ebe88cca",
+          "line": 2669,
+          "repository_path": "src/node.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/node.rs#L2669"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "1cbe1e77c0c90781a57bbc5eba67cd37c3da37671bbb1e85bd2fcb84ebe88cca",
+          "line": 2120,
+          "repository_path": "src/node.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/node.rs#L2120"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "1cbe1e77c0c90781a57bbc5eba67cd37c3da37671bbb1e85bd2fcb84ebe88cca",
+          "line": 3079,
+          "repository_path": "src/node.rs",
+          "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/src/node.rs#L3079"
+        }
+      ],
+      "test_declarations": [
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "test_model_drift_triggers_reregister",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "7bfa11d8763e4f24313d63c276d84a91f60cfb028fbd66a9efbd180429dd0da6",
+            "line": 971,
+            "repository_path": "tests/node_tests.rs",
+            "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/node_tests.rs#L971"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "test_failed_model_drift_reregister_preserves_public_models",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "7bfa11d8763e4f24313d63c276d84a91f60cfb028fbd66a9efbd180429dd0da6",
+            "line": 1028,
+            "repository_path": "tests/node_tests.rs",
+            "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/node_tests.rs#L1028"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "test_no_reregister_on_empty_backend_models",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "7bfa11d8763e4f24313d63c276d84a91f60cfb028fbd66a9efbd180429dd0da6",
+            "line": 1072,
+            "repository_path": "tests/node_tests.rs",
+            "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+            "url": "https://github.com/RobLe3/iicp-client-rust/blob/0b8b529262977b6482dd7900d473e7d152ba9293/tests/node_tests.rs#L1072"
+          }
+        }
+      ],
+      "whole_issue_acceptance_verified_here": false
+    },
+    {
+      "correction_commit": "e340e7b83ef8aac5e4b270ceba844d9df6360efc",
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-directory-php#102",
+      "issue_url": "https://github.com/RobLe3/iicp-directory-php/issues/102",
+      "limits": [
+        "Source selects latest timestamp then largest ID among tied candidates per metric, not all historical rows for PHP-side deduplication.",
+        "The source regression uses2000 historical rows and out-of-order backfill; no new load, latency, memory or capacity measurement was made.",
+        "Reported production diagnosis/timing in the old PR is not independently rehydrated here and does not authorize operations or a new observation window."
+      ],
+      "native_validation_executed_here": false,
+      "qualification_credit": 0,
+      "qualified_source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "repository": "RobLe3/iicp-directory-php",
+      "retained_source_row_ref": {
+        "access": "CONTROLLED_INPUT_NOT_DISTRIBUTED",
+        "json_pointer": "/rows/3",
+        "sha256": "ae0b347429392cd784427d532e5c2558ee333a7ef78d62da6e2e77bd14ea8a89"
+      },
+      "scoped_source_finding": "SQL selects the newest timestamp per metric and resolves tied rows by ID before hydration.",
+      "source_refs": [
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "7f0db269785f64b01e27c7dc4be38e8ac6dd57dfdc5cb0cc675a827710ba51bf",
+          "line": 301,
+          "repository_path": "app/Http/Controllers/StatsController.php",
+          "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+          "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Http/Controllers/StatsController.php#L301"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "7f0db269785f64b01e27c7dc4be38e8ac6dd57dfdc5cb0cc675a827710ba51bf",
+          "line": 307,
+          "repository_path": "app/Http/Controllers/StatsController.php",
+          "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+          "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Http/Controllers/StatsController.php#L307"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "7f0db269785f64b01e27c7dc4be38e8ac6dd57dfdc5cb0cc675a827710ba51bf",
+          "line": 311,
+          "repository_path": "app/Http/Controllers/StatsController.php",
+          "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+          "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Http/Controllers/StatsController.php#L311"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "7f0db269785f64b01e27c7dc4be38e8ac6dd57dfdc5cb0cc675a827710ba51bf",
+          "line": 314,
+          "repository_path": "app/Http/Controllers/StatsController.php",
+          "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+          "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Http/Controllers/StatsController.php#L314"
+        }
+      ],
+      "test_declarations": [
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "test_stats_aggregate_selects_one_latest_row_per_metric_from_large_history",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "5e658fae8c3d2f3678f2e4129922a45c20cd6fb18249b696a4a55b23f2e38e00",
+            "line": 475,
+            "repository_path": "tests/Feature/StatsTest.php",
+            "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+            "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Feature/StatsTest.php#L475"
+          }
+        }
+      ],
+      "whole_issue_acceptance_verified_here": false
+    },
+    {
+      "correction_commit": "f2d9bafe90dc17bd1353d7250b2e52e5f34443db",
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-directory-php#95",
+      "issue_url": "https://github.com/RobLe3/iicp-directory-php/issues/95",
+      "limits": [
+        "Qualified source refactors through upsertLocked/applyLocked and adds metrics-batch idempotency; it is not byte-identical to the original patch.",
+        "Node-first locking scopes serialization to the existing authoritative node row. No arbitrary missing-node or universal DB behavior claim.",
+        "Concurrency test requires mysql and pcntl, forks separate processes/connections and otherwise skips; source presence is not evidence those preconditions or executions passed here.",
+        "PR source reports SQLite expected skips and a separate local MariaDB result; neither becomes qualification credit or an independent external result."
+      ],
+      "native_validation_executed_here": false,
+      "qualification_credit": 0,
+      "qualified_source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "repository": "RobLe3/iicp-directory-php",
+      "retained_source_row_ref": {
+        "access": "CONTROLLED_INPUT_NOT_DISTRIBUTED",
+        "json_pointer": "/rows/4",
+        "sha256": "ae0b347429392cd784427d532e5c2558ee333a7ef78d62da6e2e77bd14ea8a89"
+      },
+      "scoped_source_finding": "Node-first and reputation row locks remain inside a bounded-retry transaction, with persisted hourly-window reset.",
+      "source_refs": [
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "e0325cffded6cf6bdcb32ff0a7ab6e11c2137839c121df9f12e88d1f85790df8",
+          "line": 64,
+          "repository_path": "app/Services/ReputationService.php",
+          "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+          "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Services/ReputationService.php#L64"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "e0325cffded6cf6bdcb32ff0a7ab6e11c2137839c121df9f12e88d1f85790df8",
+          "line": 66,
+          "repository_path": "app/Services/ReputationService.php",
+          "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+          "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Services/ReputationService.php#L66"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "e0325cffded6cf6bdcb32ff0a7ab6e11c2137839c121df9f12e88d1f85790df8",
+          "line": 75,
+          "repository_path": "app/Services/ReputationService.php",
+          "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+          "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Services/ReputationService.php#L75"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "e0325cffded6cf6bdcb32ff0a7ab6e11c2137839c121df9f12e88d1f85790df8",
+          "line": 87,
+          "repository_path": "app/Services/ReputationService.php",
+          "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+          "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Services/ReputationService.php#L87"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "e0325cffded6cf6bdcb32ff0a7ab6e11c2137839c121df9f12e88d1f85790df8",
+          "line": 120,
+          "repository_path": "app/Services/ReputationService.php",
+          "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+          "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/app/Services/ReputationService.php#L120"
+        }
+      ],
+      "test_declarations": [
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "test_rt01b_window_boundary_is_closed_at_3600_seconds",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "a69ba9976537fae3e1ee71749b4fc6386822e6c5eea71a1e146989f43ce3a2eb",
+            "line": 229,
+            "repository_path": "tests/Feature/ReputationServiceTest.php",
+            "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+            "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Feature/ReputationServiceTest.php#L229"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "test_rt01b_negative_delta_does_not_consume_or_restore_positive_budget",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "a69ba9976537fae3e1ee71749b4fc6386822e6c5eea71a1e146989f43ce3a2eb",
+            "line": 248,
+            "repository_path": "tests/Feature/ReputationServiceTest.php",
+            "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+            "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Feature/ReputationServiceTest.php#L248"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "test_concurrent_heartbeats_share_one_persisted_hourly_budget",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "f00df00f1baaddf2ba489c9b681d02c6770a01b2da9ca78c2b09baeee324d871",
+            "line": 43,
+            "repository_path": "tests/Feature/ReputationVelocityConcurrencyTest.php",
+            "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+            "url": "https://github.com/RobLe3/iicp-directory-php/blob/2dfd228b49c587150a44f448cea1351a9f039d32/tests/Feature/ReputationVelocityConcurrencyTest.php#L43"
+          }
+        }
+      ],
+      "whole_issue_acceptance_verified_here": false
+    },
+    {
+      "correction_commit": "ce77bfb7c601cca98b71234cc886c833b33978f2",
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-directory-rust#137",
+      "issue_url": "https://github.com/RobLe3/iicp-directory-rust/issues/137",
+      "limits": [
+        "Build/runtime image manifests are digest-pinned; source enforces target platform, isolated non-root binary version execution and declared runtime glibc before admitting the fragment.",
+        "Observed test-source bodies mock Docker commands/outputs; they are not native executable portability results.",
+        "PR138 records an ARM result and explicitly leaves the x86 oldest-runtime replacement gate pending. No x86 closure is inferred from that source/PR or later accepted counts alone.",
+        "D12 unresolved current x86 binary/release-manifest locators remain availability gaps, not proof of global loss or invalidation of original accepted receipts."
+      ],
+      "native_validation_executed_here": false,
+      "qualification_credit": 0,
+      "qualified_source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "repository": "RobLe3/iicp-directory-rust",
+      "retained_source_row_ref": {
+        "access": "CONTROLLED_INPUT_NOT_DISTRIBUTED",
+        "json_pointer": "/rows/5",
+        "sha256": "ae0b347429392cd784427d532e5c2558ee333a7ef78d62da6e2e77bd14ea8a89"
+      },
+      "scoped_source_finding": "Digest-pinned Bookworm construction/runtime checks survive; this is not a native x86 execution result.",
+      "source_refs": [
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "5a8604c79c462179ad8e35d9be60ad2cfc1a20f52d028ae77bea8fc48dbef793",
+          "line": 5,
+          "repository_path": "ops/pre1-artifact/Dockerfile",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/ops/pre1-artifact/Dockerfile#L5"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "9fead0cd2e426cd97cb3d71ecd5f931e74b238e83933144deb43b3154e82e460",
+          "line": 33,
+          "repository_path": "scripts/build_pre1_candidate_artifacts.py",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/scripts/build_pre1_candidate_artifacts.py#L33"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "9fead0cd2e426cd97cb3d71ecd5f931e74b238e83933144deb43b3154e82e460",
+          "line": 96,
+          "repository_path": "scripts/build_pre1_candidate_artifacts.py",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/scripts/build_pre1_candidate_artifacts.py#L96"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "9fead0cd2e426cd97cb3d71ecd5f931e74b238e83933144deb43b3154e82e460",
+          "line": 108,
+          "repository_path": "scripts/build_pre1_candidate_artifacts.py",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/scripts/build_pre1_candidate_artifacts.py#L108"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "9fead0cd2e426cd97cb3d71ecd5f931e74b238e83933144deb43b3154e82e460",
+          "line": 124,
+          "repository_path": "scripts/build_pre1_candidate_artifacts.py",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/scripts/build_pre1_candidate_artifacts.py#L124"
+        }
+      ],
+      "test_declarations": [
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "test_portable_binary_build_uses_pinned_platform_and_oldest_runtime",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "b12bd4f194a9e140c5b4d4f0fff808453b1753e24f0cb7aa71f6adacc4f52b0a",
+            "line": 50,
+            "repository_path": "scripts/test_pre1_candidate_artifacts.py",
+            "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+            "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/scripts/test_pre1_candidate_artifacts.py#L50"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "test_portable_binary_build_rejects_newer_runtime_baseline",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "b12bd4f194a9e140c5b4d4f0fff808453b1753e24f0cb7aa71f6adacc4f52b0a",
+            "line": 89,
+            "repository_path": "scripts/test_pre1_candidate_artifacts.py",
+            "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+            "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/scripts/test_pre1_candidate_artifacts.py#L89"
+          }
+        }
+      ],
+      "whole_issue_acceptance_verified_here": false
+    },
+    {
+      "correction_commit": "955f3fb932597186a8d98044d9eac2f0a0769988",
+      "disposition": "CORRECTION_SOURCE_IN_QUALIFIED_SOURCE",
+      "issue": "RobLe3/iicp-directory-rust#76",
+      "issue_url": "https://github.com/RobLe3/iicp-directory-rust/issues/76",
+      "limits": [
+        "The probe wrapper confirms a first failure with one additional probe. Direct transition storage is transaction/signing gated; heartbeat clears dormancy in its transaction.",
+        "REACTIVATE append in the observed heartbeat path is conditional on configured signing material. No unconditional signed-event guarantee is inferred.",
+        "Owner comments explicitly transferred independently authenticated valid-relay eligibility to Protocol59/root524 because relay_capable alone is insufficient. The original whole acceptance contract is not newly proved.",
+        "Old local277-test/MySQL results are owner-recorded assertions; no native DB/probe/route execution or external interoperability occurred here."
+      ],
+      "native_validation_executed_here": false,
+      "qualification_credit": 0,
+      "qualified_source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "repository": "RobLe3/iicp-directory-rust",
+      "retained_source_row_ref": {
+        "access": "CONTROLLED_INPUT_NOT_DISTRIBUTED",
+        "json_pointer": "/rows/6",
+        "sha256": "ae0b347429392cd784427d532e5c2558ee333a7ef78d62da6e2e77bd14ea8a89"
+      },
+      "scoped_source_finding": "Dormancy reactivation and confirmed direct-route transition source survives, with transaction/signing boundaries.",
+      "source_refs": [
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "895ba60c765f6b0639819bc6baf9bd2e9e33256c696528c2407b22dcee2ff89a",
+          "line": 981,
+          "repository_path": "src/db.rs",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/db.rs#L981"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "895ba60c765f6b0639819bc6baf9bd2e9e33256c696528c2407b22dcee2ff89a",
+          "line": 997,
+          "repository_path": "src/db.rs",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/db.rs#L997"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "895ba60c765f6b0639819bc6baf9bd2e9e33256c696528c2407b22dcee2ff89a",
+          "line": 1007,
+          "repository_path": "src/db.rs",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/db.rs#L1007"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "3f953f44478ddbb273c948c454db55faf885f70450771e5109aee94285845690",
+          "line": 42,
+          "repository_path": "src/background.rs",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/background.rs#L42"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "3f953f44478ddbb273c948c454db55faf885f70450771e5109aee94285845690",
+          "line": 45,
+          "repository_path": "src/background.rs",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/background.rs#L45"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "895ba60c765f6b0639819bc6baf9bd2e9e33256c696528c2407b22dcee2ff89a",
+          "line": 4014,
+          "repository_path": "src/db.rs",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/db.rs#L4014"
+        },
+        {
+          "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+          "file_sha256": "895ba60c765f6b0639819bc6baf9bd2e9e33256c696528c2407b22dcee2ff89a",
+          "line": 4004,
+          "repository_path": "src/db.rs",
+          "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+          "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/db.rs#L4004"
+        }
+      ],
+      "test_declarations": [
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "successful_probe_does_not_issue_confirmation_probe",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "3f953f44478ddbb273c948c454db55faf885f70450771e5109aee94285845690",
+            "line": 348,
+            "repository_path": "src/background.rs",
+            "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+            "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/background.rs#L348"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "one_failed_probe_cannot_produce_a_failed_route_observation",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "3f953f44478ddbb273c948c454db55faf885f70450771e5109aee94285845690",
+            "line": 360,
+            "repository_path": "src/background.rs",
+            "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+            "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/background.rs#L360"
+          }
+        },
+        {
+          "execution_here": "NOT_EXECUTED",
+          "name": "two_failed_probes_produce_a_confirmed_failure",
+          "source_ref": {
+            "evidence_role": "QUALIFIED_SOURCE_REFERENCE_NOT_EXECUTION",
+            "file_sha256": "3f953f44478ddbb273c948c454db55faf885f70450771e5109aee94285845690",
+            "line": 376,
+            "repository_path": "src/background.rs",
+            "source_commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+            "url": "https://github.com/RobLe3/iicp-directory-rust/blob/b95a362ad8f974334994ca73cd20210388a2362f/src/background.rs#L376"
+          }
+        }
+      ],
+      "whole_issue_acceptance_verified_here": false
+    }
+  ],
+  "schema": "iicp.public-additional-correction-source-joins.v1",
+  "source_review_sha256": "811af3ab0bbe3ac4972454e3b5b532a76ec6d957033df910e2c4ea264ba18d4c",
+  "state": "REVIEWED_SOURCE_INCLUSION_NOT_WHOLE_DEFECT_CLEARANCE",
+  "whole_supported_scope_clearance": false
+}

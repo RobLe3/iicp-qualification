@@ -1,0 +1,382 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "baseline_frozen": {
+      "type": "boolean"
+    },
+    "candidate_digest": {
+      "type": "string"
+    },
+    "controlled_register_sha256": {
+      "type": "string"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "additional_selected_records": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "body_records_already_reviewed": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "development_only_corrections": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "new_body_coverage": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "prior_selected_records": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "qualified_source_inclusions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "test_source_declarations": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "total_selected_records": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "additional_selected_records",
+        "body_records_already_reviewed",
+        "development_only_corrections",
+        "new_body_coverage",
+        "prior_selected_records",
+        "qualified_source_inclusions",
+        "test_source_declarations",
+        "total_selected_records"
+      ],
+      "type": "object"
+    },
+    "execution_authorized": {
+      "type": "boolean"
+    },
+    "historical_inventory_complete": {
+      "type": "boolean"
+    },
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "new_product_test_executions": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "php95_original_ci_provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "checks": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "completed_at": {
+                "type": "string"
+              },
+              "conclusion": {
+                "type": "string"
+              },
+              "details_url": {
+                "type": "string"
+              },
+              "head_sha": {
+                "type": "string"
+              },
+              "id": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "started_at": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "completed_at",
+              "conclusion",
+              "details_url",
+              "head_sha",
+              "id",
+              "name",
+              "started_at",
+              "status"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "detailed_job_log_readback": {
+          "type": "string"
+        },
+        "new_ci_execution": {
+          "type": "boolean"
+        },
+        "original_pr_head": {
+          "type": "string"
+        },
+        "original_workflow_sha256": {
+          "type": "string"
+        },
+        "original_workflow_url": {
+          "type": "string"
+        },
+        "qualification_credit": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "checks",
+        "detailed_job_log_readback",
+        "new_ci_execution",
+        "original_pr_head",
+        "original_workflow_sha256",
+        "original_workflow_url",
+        "qualification_credit"
+      ],
+      "type": "object"
+    },
+    "prior_selected_records": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "disposition": {
+            "type": "string"
+          },
+          "issue": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "disposition",
+          "issue"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "qualification_credit": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "rows": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "correction_commit": {
+            "type": "string"
+          },
+          "disposition": {
+            "type": "string"
+          },
+          "issue": {
+            "type": "string"
+          },
+          "issue_url": {
+            "type": "string"
+          },
+          "limits": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "native_validation_executed_here": {
+            "type": "boolean"
+          },
+          "qualification_credit": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "qualified_source_commit": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string"
+          },
+          "retained_source_row_ref": {
+            "additionalProperties": false,
+            "properties": {
+              "access": {
+                "type": "string"
+              },
+              "json_pointer": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "access",
+              "json_pointer",
+              "sha256"
+            ],
+            "type": "object"
+          },
+          "scoped_source_finding": {
+            "type": "string"
+          },
+          "source_refs": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_role": {
+                  "type": "string"
+                },
+                "file_sha256": {
+                  "type": "string"
+                },
+                "line": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "repository_path": {
+                  "type": "string"
+                },
+                "source_commit": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "evidence_role",
+                "file_sha256",
+                "line",
+                "repository_path",
+                "source_commit",
+                "url"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "test_declarations": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "execution_here": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "source_ref": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_role": {
+                      "type": "string"
+                    },
+                    "file_sha256": {
+                      "type": "string"
+                    },
+                    "line": {
+                      "minimum": 0,
+                      "type": "integer"
+                    },
+                    "repository_path": {
+                      "type": "string"
+                    },
+                    "source_commit": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "evidence_role",
+                    "file_sha256",
+                    "line",
+                    "repository_path",
+                    "source_commit",
+                    "url"
+                  ],
+                  "type": "object"
+                }
+              },
+              "required": [
+                "execution_here",
+                "name",
+                "source_ref"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "whole_issue_acceptance_verified_here": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "correction_commit",
+          "disposition",
+          "issue",
+          "issue_url",
+          "limits",
+          "native_validation_executed_here",
+          "qualification_credit",
+          "qualified_source_commit",
+          "repository",
+          "retained_source_row_ref",
+          "scoped_source_finding",
+          "source_refs",
+          "test_declarations",
+          "whole_issue_acceptance_verified_here"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "source_review_sha256": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "whole_supported_scope_clearance": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "baseline_frozen",
+    "candidate_digest",
+    "controlled_register_sha256",
+    "counts",
+    "execution_authorized",
+    "historical_inventory_complete",
+    "limits",
+    "new_product_test_executions",
+    "php95_original_ci_provenance",
+    "prior_selected_records",
+    "qualification_credit",
+    "rows",
+    "schema",
+    "source_review_sha256",
+    "state",
+    "whole_supported_scope_clearance"
+  ],
+  "type": "object"
+}
