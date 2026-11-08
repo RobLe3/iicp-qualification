@@ -4509,6 +4509,160 @@
       "reason": "blocker-changed",
       "source_sha256": "sha256:ac7cd052196f83dfb5b2678b2f541981f67097f2bbb57fb8d6fd16721df11fa2",
       "workload_launched": false
+    },
+    {
+      "event_id": "sha256:293f8ae9429de356db8f8a1dc9c067ec85703c38fd4ce5e98d0e63d86bf9d5f0",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T11:45:33.212783Z",
+      "outcome": "UNKNOWN",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:ae8d548375f589112a88ae25b42eaa75621857510cac79dff377a20192d4a0ea",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:5c3c83ec3f8ce40ec256860f36cb0c8a6e95e89f8d084e2787d70a4e582f18fb",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T11:47:15.875890Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:2b9fc1f3c965dab07638ab1a789d474eb9f69aa85e68ed0a34da8201733fd251",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:42b60c83dfbf66b25430dff790e9388f9bacd2e02802377daeb8c8a60fa3a59e",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T11:48:03.425750Z",
+      "outcome": "REFUSED",
+      "qualification_credit": 0,
+      "reason": "preflight-refused",
+      "source_sha256": "sha256:23ead0f5961e0d7b12100bd1172131e754c915b7d1cb0f17954ffda5f078bdc7",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:e8dbaf2d51c58cc573bb71616658df3ba039fadc4a92c9658e515414eb94ed94",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T11:49:15.767286Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:8c8247d3223d42d7a412bb4aced063a62a2323b230d1721730f856ebc4cc69b6",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:4729f59342355ccd768d50d4d0c294482b82d14625ad39aec61bd324da2a018e",
+      "kind": "diagnostic",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T11:49:31.177980Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "run-completed",
+      "source_sha256": "sha256:e9e1b113cb63cc82a1b308442a7e29ff9ff7ae5b3cc1efbfb04706205d97362b",
+      "workload_launched": true
+    },
+    {
+      "event_id": "sha256:6a7a8dbe501fad475eb9c1248f34e3fd13e29101f44572b8b8e4033097427a2e",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T11:50:53.760395Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:dd27e3366ab109aec84bd534e23752343706d89cca4ed76b339fedc8e31e9ae5",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:60b460ebef3488a6fe3cb84588cbc93384c0d1c8570adbdd02839f2db48aac33",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T11:57:25.511846Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:a77cd82040f8c7d9bcebd143e3e97290c0673f0abd0af6f0b8ddbc5d68ad7f66",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:4271e2446482433bd6eceefa2c699bf434eec23038a09373aa4815a7225fa254",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T12:01:42.504825Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:813372107a7a8f11644ccbedbeff0082817364d5a0a46a0564f1a308a3660aa1",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:c627ee9260de58dc8c4116d8ba8e0cd2a8ac9de174bcdd03d31658912f8ce6b2",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T12:05:01.550975Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:3f0bba6c8221d862ad03b3bac7037a35edf969cc3f44c7154059a448771f061a",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:c791f3cb65487425147af14ebd5b28704c8ffd0348b9b81ffa888a05ea57f6a2",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T12:04:07.373945Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:d901b48332fb29efa265cbed6c98a06fd8a25a6a3bb5b036f14ab358520de90f",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:389a102188be98f828287cb1f0dd49fc358b47dca59d57205a9b0b12905d1e02",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T12:07:33.963354Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:7a60d53cacdfd2487b4b130766b97d74c94fab9071578b103648b1135769cfdd",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:8ed3976f13c06961ccdec45eb8aff8893643f703780253c51a4fc34c9b81b4ba",
+      "kind": "ci",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T12:09:37Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "ci-terminal",
+      "source_sha256": "sha256:535721f41c845cb640a27cbd6e02edb906131ea0c84dc532edd4997314ee11ef",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:099b4646a59659f4d3d4c70db2596cc66723cd6291d16b53935ac9ea63212d7e",
+      "kind": "correction",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T12:10:52Z",
+      "outcome": "MERGED",
+      "qualification_credit": 0,
+      "reason": "correction-merged",
+      "source_sha256": "sha256:daef242d27c317e810211334ac61645ff234044d64f626f13f0e5f6c19ee43a2",
+      "workload_launched": false
+    },
+    {
+      "event_id": "sha256:da0acb458a5e7942444131654c0dcdb4117373c2fe921b6f9a34250ab24d215d",
+      "kind": "blocker",
+      "next_gate": "none",
+      "occurred_at": "2026-11-08T12:11:32Z",
+      "outcome": "PASS",
+      "qualification_credit": 0,
+      "reason": "blocker-changed",
+      "source_sha256": "sha256:9c94c8c18f3f607247ed690b35c7d88233e921355d893a98664c24c28e1dbc24",
+      "workload_launched": false
     }
   ],
   "schema": "iicp.qualification-events.v1"
