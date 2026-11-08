@@ -1,0 +1,43 @@
+"""Fixed public derivative controls, not product execution or credit validation."""
+from pathlib import Path
+import copy,json,sys,unittest
+from jsonschema import ValidationError
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+import finite_catalog_reference as m
+class LocalWitnessTests(unittest.TestCase):
+ def reject(self,change):
+  v=copy.deepcopy(m.load_witnesses());change(v)
+  with self.assertRaises((ValueError,ValidationError)):m.validate_witnesses(v)
+ def test_01_fixed_positive(self):self.assertTrue(m.validate_witnesses(m.load_witnesses()))
+ def test_02_generated_files(self):self.assertTrue(m.check_witnesses())
+ def test_03_predecessors_preserved(self):self.assertTrue(m.check());self.assertTrue(m.check_callers())
+ def test_04_deterministic_render(self):self.assertEqual(m.render_witnesses(m.load_witnesses()),m.render_witnesses(json.loads(json.dumps(m.load_witnesses()))))
+ def test_05_fourteen_unit_methods(self):self.assertEqual(sum(r['local_unit_test_methods_passed'] for r in m.load_witnesses()['groups']),14)
+ def test_06_original_references_unchanged(self):self.assertEqual(sum(r['existing_reference_count'] for r in m.load_witnesses()['groups']),206)
+ def test_07_no_foreign_candidate(self):self.reject(lambda v:v.update(original_candidate_identity='sha256:'+'0'*64))
+ def test_08_no_foreign_root(self):self.reject(lambda v:v.update(canonical_root_commit='0'*40))
+ def test_09_no_foreign_source(self):self.reject(lambda v:v['sources'][0].update(commit='0'*40))
+ def test_10_no_missing_group(self):self.reject(lambda v:v['groups'].pop())
+ def test_11_no_duplicate_group(self):self.reject(lambda v:v['groups'].__setitem__(1,copy.deepcopy(v['groups'][0])))
+ def test_12_no_test_inflation(self):self.reject(lambda v:v['counts'].update(local_unit_test_methods_passed=5590))
+ def test_13_no_credit(self):self.reject(lambda v:v['counts'].update(new_qualification_credit=1))
+ def test_14_bool_not_credit(self):self.reject(lambda v:v['counts'].update(new_qualification_credit=False))
+ def test_15_no_local_admission(self):self.reject(lambda v:v['groups'][0].update(status='QUALIFIED'))
+ def test_16_no_group_credit(self):self.reject(lambda v:v['groups'][0].update(qualification_credit=1))
+ def test_17_no_source_change_claim(self):self.reject(lambda v:v['groups'][0].update(product_source_changed=True))
+ def test_18_no_original_rewrite(self):self.reject(lambda v:v['boundaries'].update(original_outcomes_changed=True))
+ def test_19_no_frozen_reference(self):self.reject(lambda v:v['boundaries'].update(corrected_reference_frozen=True))
+ def test_20_no_history_complete(self):self.reject(lambda v:v['boundaries'].update(historical_inventory_complete=True))
+ def test_21_no_defect_clearance(self):self.reject(lambda v:v['boundaries'].update(product_defect_clearance_established=True))
+ def test_22_no_external_interop(self):self.reject(lambda v:v['boundaries'].update(independent_interoperability_established=True))
+ def test_23_no_external_certification(self):self.reject(lambda v:v['boundaries'].update(external_certification_established=True))
+ def test_24_no_release_or_intake(self):self.reject(lambda v:v['boundaries'].update(release_or_intake_authorized=True))
+ def test_25_no_whole_catalog(self):self.reject(lambda v:v['boundaries'].update(whole_catalog_conformance_established=True))
+ def test_26_no_private_path(self):self.reject(lambda v:v['limitations'].append('/Users/synthetic/marker'))
+ def test_27_no_private_coordination(self):self.reject(lambda v:v['boundaries'].update(private_coordination_or_source_concerns_distributed=True))
+ def test_28_no_controlled_expectation(self):self.reject(lambda v:v['groups'][0].update(exact_controlled_expectation='synthetic'))
+ def test_29_no_cloud_identity(self):self.reject(lambda v:v['limitations'].append('arn:aws:synthetic'))
+ def test_30_no_changed_runtime(self):self.reject(lambda v:v['groups'][-1].update(runtime='PHP 8.5'))
+ def test_31_no_unexecuted_process_claim(self):self.reject(lambda v:v['groups'][-1].update(executed_scope='Directory process crash proven'))
+ def test_32_no_unreviewed_scope(self):self.reject(lambda v:v['groups'][2].update(executed_scope='Exclusive process ownership proven'))
+if __name__=='__main__':unittest.main(verbosity=2)

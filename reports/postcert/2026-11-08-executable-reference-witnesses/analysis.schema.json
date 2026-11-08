@@ -1,0 +1,269 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "boundaries": {
+      "additionalProperties": false,
+      "properties": {
+        "controlled_expected_wording_distributed": {
+          "type": "boolean"
+        },
+        "corrected_reference_frozen": {
+          "type": "boolean"
+        },
+        "external_certification_established": {
+          "type": "boolean"
+        },
+        "historical_inventory_complete": {
+          "type": "boolean"
+        },
+        "independent_interoperability_established": {
+          "type": "boolean"
+        },
+        "original_outcomes_changed": {
+          "type": "boolean"
+        },
+        "private_coordination_or_source_concerns_distributed": {
+          "type": "boolean"
+        },
+        "private_originals_distributed": {
+          "type": "boolean"
+        },
+        "product_defect_clearance_established": {
+          "type": "boolean"
+        },
+        "release_or_intake_authorized": {
+          "type": "boolean"
+        },
+        "whole_catalog_conformance_established": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "controlled_expected_wording_distributed",
+        "corrected_reference_frozen",
+        "external_certification_established",
+        "historical_inventory_complete",
+        "independent_interoperability_established",
+        "original_outcomes_changed",
+        "private_coordination_or_source_concerns_distributed",
+        "private_originals_distributed",
+        "product_defect_clearance_established",
+        "release_or_intake_authorized",
+        "whole_catalog_conformance_established"
+      ],
+      "type": "object"
+    },
+    "canonical_root_commit": {
+      "type": "string"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "current_admission_controls": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "existing_reference_coordinates": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "finite_witness_groups": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "local_unit_test_methods_passed": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "new_qualification_credit": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "product_test_retries": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "retained_stopped_local_fixtures": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "successful_profile_controls": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "current_admission_controls",
+        "existing_reference_coordinates",
+        "finite_witness_groups",
+        "local_unit_test_methods_passed",
+        "new_qualification_credit",
+        "product_test_retries",
+        "retained_stopped_local_fixtures",
+        "successful_profile_controls"
+      ],
+      "type": "object"
+    },
+    "frozen_manifest_sha256": {
+      "type": "string"
+    },
+    "groups": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "component": {
+            "type": "string"
+          },
+          "executed_scope": {
+            "type": "string"
+          },
+          "existing_reference_count": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 206,
+            "minItems": 1,
+            "type": "array"
+          },
+          "local_unit_test_methods_passed": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "original_case_id": {
+            "type": "string"
+          },
+          "product_source_changed": {
+            "type": "boolean"
+          },
+          "qualification_credit": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "retained_result_sha256": {
+            "type": "string"
+          },
+          "runtime": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "working_reference_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "component",
+          "executed_scope",
+          "existing_reference_count",
+          "limitations",
+          "local_unit_test_methods_passed",
+          "original_case_id",
+          "product_source_changed",
+          "qualification_credit",
+          "retained_result_sha256",
+          "runtime",
+          "source_commit",
+          "status",
+          "target",
+          "working_reference_id"
+        ],
+        "type": "object"
+      },
+      "maxItems": 206,
+      "minItems": 1,
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 206,
+      "minItems": 1,
+      "type": "array"
+    },
+    "original_candidate_identity": {
+      "type": "string"
+    },
+    "review": {
+      "additionalProperties": false,
+      "properties": {
+        "retained_review_sha256": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "retained_review_sha256",
+        "scope"
+      ],
+      "type": "object"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "commit": {
+            "type": "string"
+          },
+          "component": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "commit",
+          "component",
+          "path",
+          "repository",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "maxItems": 206,
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "as_of",
+    "boundaries",
+    "canonical_root_commit",
+    "counts",
+    "frozen_manifest_sha256",
+    "groups",
+    "limitations",
+    "original_candidate_identity",
+    "review",
+    "schema",
+    "sources"
+  ],
+  "type": "object"
+}
