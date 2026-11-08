@@ -1,0 +1,393 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "boundaries": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted_records_changed": {
+          "type": "boolean"
+        },
+        "artifact_extraction": {
+          "type": "boolean"
+        },
+        "corrected_reference_frozen": {
+          "type": "boolean"
+        },
+        "corrected_successor_selected": {
+          "type": "boolean"
+        },
+        "external_certification_established": {
+          "type": "boolean"
+        },
+        "historical_custody_proved": {
+          "type": "boolean"
+        },
+        "historical_inventory_complete": {
+          "type": "boolean"
+        },
+        "new_case_or_assignment_credit": {
+          "type": "integer"
+        },
+        "product_execution": {
+          "type": "boolean"
+        },
+        "qualification_credit": {
+          "type": "integer"
+        },
+        "release_authorized": {
+          "type": "boolean"
+        },
+        "runtime_restoration_proved": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "accepted_records_changed",
+        "artifact_extraction",
+        "corrected_reference_frozen",
+        "corrected_successor_selected",
+        "external_certification_established",
+        "historical_custody_proved",
+        "historical_inventory_complete",
+        "new_case_or_assignment_credit",
+        "product_execution",
+        "qualification_credit",
+        "release_authorized",
+        "runtime_restoration_proved"
+      ],
+      "type": "object"
+    },
+    "candidate_digest": {
+      "type": "string"
+    },
+    "candidate_file_sha256": {
+      "type": "string"
+    },
+    "canonical_root_commit": {
+      "type": "string"
+    },
+    "existing_index_reuse": {
+      "additionalProperties": false,
+      "properties": {
+        "assertion_marker_harness_tree_and_outer_template_matches": {
+          "type": "integer"
+        },
+        "cases_matching_specific_staging_notes": {
+          "type": "integer"
+        },
+        "components": {
+          "additionalProperties": false,
+          "properties": {
+            "client-python": {
+              "type": "integer"
+            },
+            "client-rust": {
+              "type": "integer"
+            },
+            "client-typescript": {
+              "type": "integer"
+            },
+            "directory-php": {
+              "type": "integer"
+            },
+            "directory-rust": {
+              "type": "integer"
+            },
+            "management": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "client-python",
+            "client-rust",
+            "client-typescript",
+            "directory-php",
+            "directory-rust",
+            "management"
+          ],
+          "type": "object"
+        },
+        "new_registry_created": {
+          "type": "boolean"
+        },
+        "other_cases_inferred_missing_staging": {
+          "type": "boolean"
+        },
+        "specific_staging_context_notes": {
+          "type": "integer"
+        },
+        "templates_executed": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "assertion_marker_harness_tree_and_outer_template_matches",
+        "cases_matching_specific_staging_notes",
+        "components",
+        "new_registry_created",
+        "other_cases_inferred_missing_staging",
+        "specific_staging_context_notes",
+        "templates_executed"
+      ],
+      "type": "object"
+    },
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 6,
+      "minItems": 6,
+      "type": "array"
+    },
+    "materialization_digest": {
+      "type": "string"
+    },
+    "observed_at": {
+      "type": "string"
+    },
+    "original_checker": {
+      "additionalProperties": false,
+      "properties": {
+        "errors": {
+          "type": "integer"
+        },
+        "hard_subprocess_timeout_seconds": {
+          "type": "integer"
+        },
+        "local_invocations": {
+          "type": "integer"
+        },
+        "measured_total_io_bytes_available": {
+          "type": "boolean"
+        },
+        "non_authorizing": {
+          "type": "boolean"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "source_file_size_admission_limit_bytes": {
+          "type": "integer"
+        },
+        "source_files": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "file_sha256": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "file_sha256",
+              "path",
+              "url"
+            ],
+            "type": "object"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "type": "array"
+        },
+        "status": {
+          "type": "string"
+        },
+        "subprocess_elapsed_seconds": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "errors",
+        "hard_subprocess_timeout_seconds",
+        "local_invocations",
+        "measured_total_io_bytes_available",
+        "non_authorizing",
+        "scope",
+        "source_file_size_admission_limit_bytes",
+        "source_files",
+        "status",
+        "subprocess_elapsed_seconds"
+      ],
+      "type": "object"
+    },
+    "prior_limited_companion_observation": {
+      "additionalProperties": false,
+      "properties": {
+        "absent_paths": {
+          "type": "integer"
+        },
+        "declared_paths": {
+          "type": "integer"
+        },
+        "different_historical_companion_paths": {
+          "type": "integer"
+        },
+        "distinct_exact_companions": {
+          "type": "integer"
+        },
+        "later_declared_original_root_companions": {
+          "type": "integer"
+        },
+        "prior_observation_preserved": {
+          "type": "boolean"
+        },
+        "roots": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "absent_paths",
+        "declared_paths",
+        "different_historical_companion_paths",
+        "distinct_exact_companions",
+        "later_declared_original_root_companions",
+        "prior_observation_preserved",
+        "roots"
+      ],
+      "type": "object"
+    },
+    "private_observation_sha256": {
+      "type": "string"
+    },
+    "remaining_gates": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5,
+      "minItems": 5,
+      "type": "array"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "scope_assessment_sha256": {
+      "type": "string"
+    },
+    "scope_history": {
+      "additionalProperties": false,
+      "properties": {
+        "correction_recorded_after_observation": {
+          "type": "boolean"
+        },
+        "original_contracts_preserved": {
+          "type": "boolean"
+        },
+        "prior_local_no_reread_clause_exceeded": {
+          "type": "boolean"
+        },
+        "standing_goal_authority_expanded": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "correction_recorded_after_observation",
+        "original_contracts_preserved",
+        "prior_local_no_reread_clause_exceeded",
+        "standing_goal_authority_expanded"
+      ],
+      "type": "object"
+    },
+    "scope_preservation": {
+      "additionalProperties": false,
+      "properties": {
+        "applicable_existing_obligations_waived": {
+          "type": "integer"
+        },
+        "classification_changes": {
+          "type": "integer"
+        },
+        "compatibility_anchor_families": {
+          "type": "integer"
+        },
+        "conditional_optional_families": {
+          "type": "integer"
+        },
+        "experimental_research_unsupported_families": {
+          "type": "integer"
+        },
+        "feature_baseline_url": {
+          "type": "string"
+        },
+        "protocol_source_commit": {
+          "type": "string"
+        },
+        "required_stable_families": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "applicable_existing_obligations_waived",
+        "classification_changes",
+        "compatibility_anchor_families",
+        "conditional_optional_families",
+        "experimental_research_unsupported_families",
+        "feature_baseline_url",
+        "protocol_source_commit",
+        "required_stable_families"
+      ],
+      "type": "object"
+    },
+    "state": {
+      "type": "string"
+    },
+    "verified_counts": {
+      "additionalProperties": false,
+      "properties": {
+        "artifacts": {
+          "type": "integer"
+        },
+        "components": {
+          "type": "integer"
+        },
+        "existing_assignment_materialization_references": {
+          "type": "integer"
+        },
+        "existing_case_registry_joins": {
+          "type": "integer"
+        },
+        "files": {
+          "type": "integer"
+        },
+        "package_build_companions": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "artifacts",
+        "components",
+        "existing_assignment_materialization_references",
+        "existing_case_registry_joins",
+        "files",
+        "package_build_companions"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "boundaries",
+    "candidate_digest",
+    "candidate_file_sha256",
+    "canonical_root_commit",
+    "existing_index_reuse",
+    "limits",
+    "materialization_digest",
+    "observed_at",
+    "original_checker",
+    "prior_limited_companion_observation",
+    "private_observation_sha256",
+    "remaining_gates",
+    "schema",
+    "scope_assessment_sha256",
+    "scope_history",
+    "scope_preservation",
+    "state",
+    "verified_counts"
+  ],
+  "type": "object"
+}

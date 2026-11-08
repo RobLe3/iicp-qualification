@@ -179,3 +179,7 @@ See the [reviewed FALLBACK successor closeout](reports/stabilization/2026-11-05-
 ## Retained original-artifact and historical validation supplement
 
 See the [reviewed retained-evidence supplement](reports/postcert/2026-11-08-retained-execution-proof/README.md) for the additive17/17 current-byte result and bounded database/native-artifact provenance. This does not establish complete historical custody or a frozen successor.
+
+## Original materialization and reference scope
+
+The [original29-file materialization verification](reports/postcert/2026-11-08-original-materialization/README.md) adds package/build-companion closure and clarifies remaining runtime and successor gates. It changes no accepted qualification or release authority.

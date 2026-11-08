@@ -1,0 +1,117 @@
+{
+  "boundaries": {
+    "accepted_records_changed": false,
+    "artifact_extraction": false,
+    "corrected_reference_frozen": false,
+    "corrected_successor_selected": false,
+    "external_certification_established": false,
+    "historical_custody_proved": false,
+    "historical_inventory_complete": false,
+    "new_case_or_assignment_credit": 0,
+    "product_execution": false,
+    "qualification_credit": 0,
+    "release_authorized": false,
+    "runtime_restoration_proved": false
+  },
+  "candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "candidate_file_sha256": "a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "existing_index_reuse": {
+    "assertion_marker_harness_tree_and_outer_template_matches": 147,
+    "cases_matching_specific_staging_notes": 39,
+    "components": {
+      "client-python": 27,
+      "client-rust": 28,
+      "client-typescript": 27,
+      "directory-php": 22,
+      "directory-rust": 25,
+      "management": 18
+    },
+    "new_registry_created": false,
+    "other_cases_inferred_missing_staging": false,
+    "specific_staging_context_notes": 7,
+    "templates_executed": 0
+  },
+  "limits": [
+    "This verifies the original candidate materialization, not a new corrected or released candidate.",
+    "All147case joins and5808assignment references reuse existing records; no new workload or qualification credit.",
+    "Original file identities and recorded PASS documents do not prove fresh execution of their declared build/runtime gates.",
+    "Size census and pre/post identity observations are not metered total IO, a hard decompression quota or adversarial snapshot isolation.",
+    "Public validation checks this fixed derivative; original-byte verification requires the controlled archive.",
+    "Existing optional/excluded scope remains unchanged; unknown applicable behavior is not waived."
+  ],
+  "materialization_digest": "sha256:7dfcf15c4809f86f3981c4ee87e954923c6ff422e4a480628ee8a4f90e8a048e",
+  "observed_at": "2026-11-08T01:37:20.537781+00:00",
+  "original_checker": {
+    "errors": 0,
+    "hard_subprocess_timeout_seconds": 240,
+    "local_invocations": 1,
+    "measured_total_io_bytes_available": false,
+    "non_authorizing": true,
+    "scope": "Hashes original files; validates package/build records and Management tar member sets/modes without extracting or executing products.",
+    "source_file_size_admission_limit_bytes": 268435456,
+    "source_files": [
+      {
+        "file_sha256": "7ffc2c7cc5cce2905d688c55689a3600117efb317ec000f67724e1987fcfe061",
+        "path": "scripts/verify_pre1_candidate_artifacts.py",
+        "url": "https://github.com/RobLe3/iicp.network/blob/106aae6568d12884603068e82248bf1413371690/scripts/verify_pre1_candidate_artifacts.py"
+      },
+      {
+        "file_sha256": "b74b0147cb1f5a7a7e9ba44e41fbb2fa0f7d13f2205dad81b17d39c8d9595434",
+        "path": "scripts/check_pre1_stability_candidate.py",
+        "url": "https://github.com/RobLe3/iicp.network/blob/106aae6568d12884603068e82248bf1413371690/scripts/check_pre1_stability_candidate.py"
+      },
+      {
+        "file_sha256": "ee5f7f42c2ca98a2ed32ee15aa5a4aee78dcc66164ef1604498e48f6f6ac6df1",
+        "path": "scripts/pre1_evidence.py",
+        "url": "https://github.com/RobLe3/iicp.network/blob/106aae6568d12884603068e82248bf1413371690/scripts/pre1_evidence.py"
+      }
+    ],
+    "status": "PASS",
+    "subprocess_elapsed_seconds": 0.211
+  },
+  "prior_limited_companion_observation": {
+    "absent_paths": 22,
+    "declared_paths": 48,
+    "different_historical_companion_paths": 16,
+    "distinct_exact_companions": 10,
+    "later_declared_original_root_companions": 12,
+    "prior_observation_preserved": true,
+    "roots": 4
+  },
+  "private_observation_sha256": "e2940dbd26897911b676aa9b8e033f83b03506399534e4dbf92f944e5eea899f",
+  "remaining_gates": [
+    "Known supported-scope findings and private disclosure prerequisites.",
+    "Exact final corrected successor selection and required separately authorized formal qualification.",
+    "Installed dependency, fixture and environment restoration for the executable reference.",
+    "Applicable semantic behavior/limitation mapping and unresolved wider contract evidence.",
+    "Source-universe historical accounting with unavailable records retained as gaps."
+  ],
+  "schema": "iicp.public-original-materialization.v1",
+  "scope_assessment_sha256": "f77edd8342e3f18f0d2ef57ca5abdde979104cad1a532995aa51f8207d4c9990",
+  "scope_history": {
+    "correction_recorded_after_observation": true,
+    "original_contracts_preserved": true,
+    "prior_local_no_reread_clause_exceeded": true,
+    "standing_goal_authority_expanded": false
+  },
+  "scope_preservation": {
+    "applicable_existing_obligations_waived": 0,
+    "classification_changes": 0,
+    "compatibility_anchor_families": 2,
+    "conditional_optional_families": 3,
+    "experimental_research_unsupported_families": 6,
+    "feature_baseline_url": "https://github.com/RobLe3/IICP/blob/2d240649cf8d11a235132658a599e22ebcba6620/pre1/feature-baseline-v1.json",
+    "protocol_source_commit": "2d240649cf8d11a235132658a599e22ebcba6620",
+    "required_stable_families": 17
+  },
+  "state": "VERIFIED_ORIGINAL_MATERIALIZATION_NOT_CORRECTED_REFERENCE",
+  "verified_counts": {
+    "artifacts": 17,
+    "components": 6,
+    "existing_assignment_materialization_references": 5808,
+    "existing_case_registry_joins": 147,
+    "files": 29,
+    "package_build_companions": 12
+  }
+}
