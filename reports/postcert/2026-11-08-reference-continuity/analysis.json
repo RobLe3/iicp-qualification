@@ -1,0 +1,145 @@
+{
+  "as_of": "2026-11-08",
+  "boundaries": {
+    "accepted_evidence_changed": false,
+    "corrected_successor_frozen": false,
+    "external_interoperability_established": false,
+    "historical_inventory_complete": false,
+    "independent_external_certification_established": false,
+    "private_originals_distributed": false,
+    "qualification_authority_changed": false,
+    "release_or_deployment_authorized": false
+  },
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "counts": {
+    "formal_criterion_updates": 0,
+    "metadata_controls_passed": 23,
+    "new_attempt_guard_controls_passed": 6,
+    "new_opt_in_v2_product_unit_methods": 3,
+    "previous_local_witness_groups_linked": 5,
+    "previous_product_unit_methods": 14,
+    "qualification_credit": 0,
+    "reference_adapter_controls_passed": 38,
+    "sdk_primary_archive_metadata_joins": 3,
+    "whole_original_cases_completed": 0
+  },
+  "credential_witnesses": {
+    "attempts": 1,
+    "component": "client-python",
+    "default_v1_path_tested": false,
+    "limitations": [
+      "Opt-in pre-normative v2 only; not default-v1 authentication or required stable capability completion.",
+      "In-memory replay state only; no durable restart, concurrent or distributed replay guarantee, or provider side-effect oracle.",
+      "Different active-key acceptance is not a rotation procedure, bundle update or revocation-propagation experiment.",
+      "Public signed fixed-time fixtures and local pinned dependencies do not reproduce every original campaign environment."
+    ],
+    "local_target": "macos-arm64",
+    "methods_passed": 3,
+    "observations": [
+      "A valid signed ticket first accepts, then exact reuse refuses; in-memory replay membership and input claims remain unchanged by refusal.",
+      "An expired signing key refuses while a valid active-key fixture accepts through the same production verifier.",
+      "A revoked signing key refuses while a different active-key fixture accepts under the same fixed trust bundle."
+    ],
+    "profile": "OPT_IN_PRE_NORMATIVE_DISPATCH_TICKET_V2",
+    "retained_result_sha256": "e9e1b113cb63cc82a1b308442a7e29ff9ff7ae5b3cc1efbfb04706205d97362b",
+    "retained_review_sha256": "dd27e3366ab109aec84bd534e23752343706d89cca4ed76b339fedc8e31e9ae5",
+    "runtime": "Python 3.14.10",
+    "source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183"
+  },
+  "limitations": [
+    "These analytical joins and local units supplement, not replace, the original 64-shard qualification. No original whole-case obligation or formal criterion is newly completed.",
+    "The full post-certification programme remains incomplete. Source decisions, disclosure clearance, formal corrected-successor qualification and freeze remain separate gates.",
+    "Private captures, fixture controls and archive locators are retained separately. Digests alone do not establish public availability, preservation or complete reproducibility.",
+    "Public validation verifies this fixed reviewed derivative and Markdown/JSON consistency, not inaccessible private execution evidence."
+  ],
+  "original_candidate_identity": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "package_metadata": {
+    "archives_executed_or_extracted_to_disk": 0,
+    "limitations": [
+      "Version and runtime-constraint declarations agree with the frozen source/package bindings; they are not newly executed CLI self-report, installation or minimum-runtime tests.",
+      "Original build receipt PASS labels remain claims; historical installer invocation and custody are not newly established.",
+      "An embedded VCS source identity or candidate tag is not proof of SDK registry publication."
+    ],
+    "retained_review_sha256": "a77cd82040f8c7d9bcebd143e3e97290c0673f0abd0af6f0b8ddbc5d68ad7f66",
+    "rows": [
+      {
+        "archive_name": "iicp_client-0.7.110-py3-none-any.whl",
+        "archive_sha256": "85335a36bd2ec270dc563e2492447c3c155debe42fa05be322878f45128e8d5f",
+        "component": "client-python",
+        "frozen_source_version": "0.7.110",
+        "historical_offline_installer_linkage_resolved": false,
+        "new_runtime_self_report_executed": false,
+        "observed_archive_metadata": {
+          "name": "iicp-client",
+          "runtime_constraint": "<3.15,>=3.11",
+          "source_declaration_version": "0.7.110",
+          "version": "0.7.110"
+        },
+        "qualified_source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+        "sdk_tag_or_registry_publication_verified": false
+      },
+      {
+        "archive_name": "iicp-client-0.7.110.tgz",
+        "archive_sha256": "79f3fa60f97669b1b575fd509fb61aa4dd1599b1ae76f37a6ca1baeb977c8267",
+        "component": "client-typescript",
+        "frozen_source_version": "0.7.110",
+        "historical_offline_installer_linkage_resolved": false,
+        "new_runtime_self_report_executed": false,
+        "observed_archive_metadata": {
+          "name": "@iicp/client",
+          "runtime_constraint": "^22.0.0 || ^24.0.0",
+          "version": "0.7.110"
+        },
+        "qualified_source_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+        "sdk_tag_or_registry_publication_verified": false
+      },
+      {
+        "archive_name": "iicp-client-0.7.110.crate",
+        "archive_sha256": "da1b358bf2aba2160bd8e4c2de48f2e0369c778348a848402c4aa24c38431309",
+        "component": "client-rust",
+        "frozen_source_version": "0.7.110",
+        "historical_offline_installer_linkage_resolved": false,
+        "new_runtime_self_report_executed": false,
+        "observed_archive_metadata": {
+          "embedded_vcs_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+          "name": "iicp-client",
+          "runtime_constraint": "1.86",
+          "version": "0.7.110"
+        },
+        "qualified_source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+        "sdk_tag_or_registry_publication_verified": false
+      }
+    ]
+  },
+  "reference_integration": {
+    "new_product_execution": false,
+    "original_graph_modified": false,
+    "original_source_designs_rewritten": false,
+    "retained_review_sha256": "2b9fc1f3c965dab07638ab1a789d474eb9f69aa85e68ed0a34da8201733fd251",
+    "scope": "Five previously executed witness groups linked to existing working assertions and required case/predicate/limitations context."
+  },
+  "schema": "iicp.public-reference-continuity.v1",
+  "sources": [
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "src/iicp_client/dispatch_ticket_trust.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "ae085b46182c4609e1fa6980ca6e30423615ffe4f7e24782a9f2f1c4ddf85d52"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "parity/dispatch-ticket-trust-v2-crypto.json",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "48be1f06e79da7849367f48deeb7a5ffa71a1de0e21800491dc6bf55d016fb94"
+    },
+    {
+      "commit": "106aae6568d12884603068e82248bf1413371690",
+      "component": "qualification",
+      "path": "project/pre1-stability-successor-frozen.json",
+      "repository": "RobLe3/iicp.network",
+      "sha256": "a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73"
+    }
+  ]
+}

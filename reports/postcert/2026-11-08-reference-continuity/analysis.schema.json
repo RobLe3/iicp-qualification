@@ -1,0 +1,684 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "const": "2026-11-08",
+      "type": "string"
+    },
+    "boundaries": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted_evidence_changed": {
+          "const": false,
+          "type": "boolean"
+        },
+        "corrected_successor_frozen": {
+          "const": false,
+          "type": "boolean"
+        },
+        "external_interoperability_established": {
+          "const": false,
+          "type": "boolean"
+        },
+        "historical_inventory_complete": {
+          "const": false,
+          "type": "boolean"
+        },
+        "independent_external_certification_established": {
+          "const": false,
+          "type": "boolean"
+        },
+        "private_originals_distributed": {
+          "const": false,
+          "type": "boolean"
+        },
+        "qualification_authority_changed": {
+          "const": false,
+          "type": "boolean"
+        },
+        "release_or_deployment_authorized": {
+          "const": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "accepted_evidence_changed",
+        "corrected_successor_frozen",
+        "external_interoperability_established",
+        "historical_inventory_complete",
+        "independent_external_certification_established",
+        "private_originals_distributed",
+        "qualification_authority_changed",
+        "release_or_deployment_authorized"
+      ],
+      "type": "object"
+    },
+    "canonical_root_commit": {
+      "const": "106aae6568d12884603068e82248bf1413371690",
+      "type": "string"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "formal_criterion_updates": {
+          "const": 0,
+          "type": "integer"
+        },
+        "metadata_controls_passed": {
+          "const": 23,
+          "type": "integer"
+        },
+        "new_attempt_guard_controls_passed": {
+          "const": 6,
+          "type": "integer"
+        },
+        "new_opt_in_v2_product_unit_methods": {
+          "const": 3,
+          "type": "integer"
+        },
+        "previous_local_witness_groups_linked": {
+          "const": 5,
+          "type": "integer"
+        },
+        "previous_product_unit_methods": {
+          "const": 14,
+          "type": "integer"
+        },
+        "qualification_credit": {
+          "const": 0,
+          "type": "integer"
+        },
+        "reference_adapter_controls_passed": {
+          "const": 38,
+          "type": "integer"
+        },
+        "sdk_primary_archive_metadata_joins": {
+          "const": 3,
+          "type": "integer"
+        },
+        "whole_original_cases_completed": {
+          "const": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "formal_criterion_updates",
+        "metadata_controls_passed",
+        "new_attempt_guard_controls_passed",
+        "new_opt_in_v2_product_unit_methods",
+        "previous_local_witness_groups_linked",
+        "previous_product_unit_methods",
+        "qualification_credit",
+        "reference_adapter_controls_passed",
+        "sdk_primary_archive_metadata_joins",
+        "whole_original_cases_completed"
+      ],
+      "type": "object"
+    },
+    "credential_witnesses": {
+      "additionalProperties": false,
+      "properties": {
+        "attempts": {
+          "const": 1,
+          "type": "integer"
+        },
+        "component": {
+          "const": "client-python",
+          "type": "string"
+        },
+        "default_v1_path_tested": {
+          "const": false,
+          "type": "boolean"
+        },
+        "limitations": {
+          "items": false,
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "const": "Opt-in pre-normative v2 only; not default-v1 authentication or required stable capability completion.",
+              "type": "string"
+            },
+            {
+              "const": "In-memory replay state only; no durable restart, concurrent or distributed replay guarantee, or provider side-effect oracle.",
+              "type": "string"
+            },
+            {
+              "const": "Different active-key acceptance is not a rotation procedure, bundle update or revocation-propagation experiment.",
+              "type": "string"
+            },
+            {
+              "const": "Public signed fixed-time fixtures and local pinned dependencies do not reproduce every original campaign environment.",
+              "type": "string"
+            }
+          ],
+          "type": "array"
+        },
+        "local_target": {
+          "const": "macos-arm64",
+          "type": "string"
+        },
+        "methods_passed": {
+          "const": 3,
+          "type": "integer"
+        },
+        "observations": {
+          "items": false,
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "const": "A valid signed ticket first accepts, then exact reuse refuses; in-memory replay membership and input claims remain unchanged by refusal.",
+              "type": "string"
+            },
+            {
+              "const": "An expired signing key refuses while a valid active-key fixture accepts through the same production verifier.",
+              "type": "string"
+            },
+            {
+              "const": "A revoked signing key refuses while a different active-key fixture accepts under the same fixed trust bundle.",
+              "type": "string"
+            }
+          ],
+          "type": "array"
+        },
+        "profile": {
+          "const": "OPT_IN_PRE_NORMATIVE_DISPATCH_TICKET_V2",
+          "type": "string"
+        },
+        "retained_result_sha256": {
+          "const": "e9e1b113cb63cc82a1b308442a7e29ff9ff7ae5b3cc1efbfb04706205d97362b",
+          "type": "string"
+        },
+        "retained_review_sha256": {
+          "const": "dd27e3366ab109aec84bd534e23752343706d89cca4ed76b339fedc8e31e9ae5",
+          "type": "string"
+        },
+        "runtime": {
+          "const": "Python 3.14.10",
+          "type": "string"
+        },
+        "source_commit": {
+          "const": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+          "type": "string"
+        }
+      },
+      "required": [
+        "attempts",
+        "component",
+        "default_v1_path_tested",
+        "limitations",
+        "local_target",
+        "methods_passed",
+        "observations",
+        "profile",
+        "retained_result_sha256",
+        "retained_review_sha256",
+        "runtime",
+        "source_commit"
+      ],
+      "type": "object"
+    },
+    "limitations": {
+      "items": false,
+      "maxItems": 4,
+      "minItems": 4,
+      "prefixItems": [
+        {
+          "const": "These analytical joins and local units supplement, not replace, the original 64-shard qualification. No original whole-case obligation or formal criterion is newly completed.",
+          "type": "string"
+        },
+        {
+          "const": "The full post-certification programme remains incomplete. Source decisions, disclosure clearance, formal corrected-successor qualification and freeze remain separate gates.",
+          "type": "string"
+        },
+        {
+          "const": "Private captures, fixture controls and archive locators are retained separately. Digests alone do not establish public availability, preservation or complete reproducibility.",
+          "type": "string"
+        },
+        {
+          "const": "Public validation verifies this fixed reviewed derivative and Markdown/JSON consistency, not inaccessible private execution evidence.",
+          "type": "string"
+        }
+      ],
+      "type": "array"
+    },
+    "original_candidate_identity": {
+      "const": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+      "type": "string"
+    },
+    "package_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "archives_executed_or_extracted_to_disk": {
+          "const": 0,
+          "type": "integer"
+        },
+        "limitations": {
+          "items": false,
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "const": "Version and runtime-constraint declarations agree with the frozen source/package bindings; they are not newly executed CLI self-report, installation or minimum-runtime tests.",
+              "type": "string"
+            },
+            {
+              "const": "Original build receipt PASS labels remain claims; historical installer invocation and custody are not newly established.",
+              "type": "string"
+            },
+            {
+              "const": "An embedded VCS source identity or candidate tag is not proof of SDK registry publication.",
+              "type": "string"
+            }
+          ],
+          "type": "array"
+        },
+        "retained_review_sha256": {
+          "const": "a77cd82040f8c7d9bcebd143e3e97290c0673f0abd0af6f0b8ddbc5d68ad7f66",
+          "type": "string"
+        },
+        "rows": {
+          "items": false,
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "archive_name": {
+                  "const": "iicp_client-0.7.110-py3-none-any.whl",
+                  "type": "string"
+                },
+                "archive_sha256": {
+                  "const": "85335a36bd2ec270dc563e2492447c3c155debe42fa05be322878f45128e8d5f",
+                  "type": "string"
+                },
+                "component": {
+                  "const": "client-python",
+                  "type": "string"
+                },
+                "frozen_source_version": {
+                  "const": "0.7.110",
+                  "type": "string"
+                },
+                "historical_offline_installer_linkage_resolved": {
+                  "const": false,
+                  "type": "boolean"
+                },
+                "new_runtime_self_report_executed": {
+                  "const": false,
+                  "type": "boolean"
+                },
+                "observed_archive_metadata": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "name": {
+                      "const": "iicp-client",
+                      "type": "string"
+                    },
+                    "runtime_constraint": {
+                      "const": "<3.15,>=3.11",
+                      "type": "string"
+                    },
+                    "source_declaration_version": {
+                      "const": "0.7.110",
+                      "type": "string"
+                    },
+                    "version": {
+                      "const": "0.7.110",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "runtime_constraint",
+                    "source_declaration_version",
+                    "version"
+                  ],
+                  "type": "object"
+                },
+                "qualified_source_commit": {
+                  "const": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+                  "type": "string"
+                },
+                "sdk_tag_or_registry_publication_verified": {
+                  "const": false,
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "archive_name",
+                "archive_sha256",
+                "component",
+                "frozen_source_version",
+                "historical_offline_installer_linkage_resolved",
+                "new_runtime_self_report_executed",
+                "observed_archive_metadata",
+                "qualified_source_commit",
+                "sdk_tag_or_registry_publication_verified"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "archive_name": {
+                  "const": "iicp-client-0.7.110.tgz",
+                  "type": "string"
+                },
+                "archive_sha256": {
+                  "const": "79f3fa60f97669b1b575fd509fb61aa4dd1599b1ae76f37a6ca1baeb977c8267",
+                  "type": "string"
+                },
+                "component": {
+                  "const": "client-typescript",
+                  "type": "string"
+                },
+                "frozen_source_version": {
+                  "const": "0.7.110",
+                  "type": "string"
+                },
+                "historical_offline_installer_linkage_resolved": {
+                  "const": false,
+                  "type": "boolean"
+                },
+                "new_runtime_self_report_executed": {
+                  "const": false,
+                  "type": "boolean"
+                },
+                "observed_archive_metadata": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "name": {
+                      "const": "@iicp/client",
+                      "type": "string"
+                    },
+                    "runtime_constraint": {
+                      "const": "^22.0.0 || ^24.0.0",
+                      "type": "string"
+                    },
+                    "version": {
+                      "const": "0.7.110",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "runtime_constraint",
+                    "version"
+                  ],
+                  "type": "object"
+                },
+                "qualified_source_commit": {
+                  "const": "97c768d8b9e90756773103e432c273a7d98ba08e",
+                  "type": "string"
+                },
+                "sdk_tag_or_registry_publication_verified": {
+                  "const": false,
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "archive_name",
+                "archive_sha256",
+                "component",
+                "frozen_source_version",
+                "historical_offline_installer_linkage_resolved",
+                "new_runtime_self_report_executed",
+                "observed_archive_metadata",
+                "qualified_source_commit",
+                "sdk_tag_or_registry_publication_verified"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "archive_name": {
+                  "const": "iicp-client-0.7.110.crate",
+                  "type": "string"
+                },
+                "archive_sha256": {
+                  "const": "da1b358bf2aba2160bd8e4c2de48f2e0369c778348a848402c4aa24c38431309",
+                  "type": "string"
+                },
+                "component": {
+                  "const": "client-rust",
+                  "type": "string"
+                },
+                "frozen_source_version": {
+                  "const": "0.7.110",
+                  "type": "string"
+                },
+                "historical_offline_installer_linkage_resolved": {
+                  "const": false,
+                  "type": "boolean"
+                },
+                "new_runtime_self_report_executed": {
+                  "const": false,
+                  "type": "boolean"
+                },
+                "observed_archive_metadata": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "embedded_vcs_source_commit": {
+                      "const": "0b8b529262977b6482dd7900d473e7d152ba9293",
+                      "type": "string"
+                    },
+                    "name": {
+                      "const": "iicp-client",
+                      "type": "string"
+                    },
+                    "runtime_constraint": {
+                      "const": "1.86",
+                      "type": "string"
+                    },
+                    "version": {
+                      "const": "0.7.110",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "embedded_vcs_source_commit",
+                    "name",
+                    "runtime_constraint",
+                    "version"
+                  ],
+                  "type": "object"
+                },
+                "qualified_source_commit": {
+                  "const": "0b8b529262977b6482dd7900d473e7d152ba9293",
+                  "type": "string"
+                },
+                "sdk_tag_or_registry_publication_verified": {
+                  "const": false,
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "archive_name",
+                "archive_sha256",
+                "component",
+                "frozen_source_version",
+                "historical_offline_installer_linkage_resolved",
+                "new_runtime_self_report_executed",
+                "observed_archive_metadata",
+                "qualified_source_commit",
+                "sdk_tag_or_registry_publication_verified"
+              ],
+              "type": "object"
+            }
+          ],
+          "type": "array"
+        }
+      },
+      "required": [
+        "archives_executed_or_extracted_to_disk",
+        "limitations",
+        "retained_review_sha256",
+        "rows"
+      ],
+      "type": "object"
+    },
+    "reference_integration": {
+      "additionalProperties": false,
+      "properties": {
+        "new_product_execution": {
+          "const": false,
+          "type": "boolean"
+        },
+        "original_graph_modified": {
+          "const": false,
+          "type": "boolean"
+        },
+        "original_source_designs_rewritten": {
+          "const": false,
+          "type": "boolean"
+        },
+        "retained_review_sha256": {
+          "const": "2b9fc1f3c965dab07638ab1a789d474eb9f69aa85e68ed0a34da8201733fd251",
+          "type": "string"
+        },
+        "scope": {
+          "const": "Five previously executed witness groups linked to existing working assertions and required case/predicate/limitations context.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "new_product_execution",
+        "original_graph_modified",
+        "original_source_designs_rewritten",
+        "retained_review_sha256",
+        "scope"
+      ],
+      "type": "object"
+    },
+    "schema": {
+      "const": "iicp.public-reference-continuity.v1",
+      "type": "string"
+    },
+    "sources": {
+      "items": false,
+      "maxItems": 3,
+      "minItems": 3,
+      "prefixItems": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "commit": {
+              "const": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+              "type": "string"
+            },
+            "component": {
+              "const": "client-python",
+              "type": "string"
+            },
+            "path": {
+              "const": "src/iicp_client/dispatch_ticket_trust.py",
+              "type": "string"
+            },
+            "repository": {
+              "const": "RobLe3/iicp-client-python",
+              "type": "string"
+            },
+            "sha256": {
+              "const": "ae085b46182c4609e1fa6980ca6e30423615ffe4f7e24782a9f2f1c4ddf85d52",
+              "type": "string"
+            }
+          },
+          "required": [
+            "commit",
+            "component",
+            "path",
+            "repository",
+            "sha256"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "commit": {
+              "const": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+              "type": "string"
+            },
+            "component": {
+              "const": "client-python",
+              "type": "string"
+            },
+            "path": {
+              "const": "parity/dispatch-ticket-trust-v2-crypto.json",
+              "type": "string"
+            },
+            "repository": {
+              "const": "RobLe3/iicp-client-python",
+              "type": "string"
+            },
+            "sha256": {
+              "const": "48be1f06e79da7849367f48deeb7a5ffa71a1de0e21800491dc6bf55d016fb94",
+              "type": "string"
+            }
+          },
+          "required": [
+            "commit",
+            "component",
+            "path",
+            "repository",
+            "sha256"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "commit": {
+              "const": "106aae6568d12884603068e82248bf1413371690",
+              "type": "string"
+            },
+            "component": {
+              "const": "qualification",
+              "type": "string"
+            },
+            "path": {
+              "const": "project/pre1-stability-successor-frozen.json",
+              "type": "string"
+            },
+            "repository": {
+              "const": "RobLe3/iicp.network",
+              "type": "string"
+            },
+            "sha256": {
+              "const": "a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
+              "type": "string"
+            }
+          },
+          "required": [
+            "commit",
+            "component",
+            "path",
+            "repository",
+            "sha256"
+          ],
+          "type": "object"
+        }
+      ],
+      "type": "array"
+    }
+  },
+  "required": [
+    "as_of",
+    "boundaries",
+    "canonical_root_commit",
+    "counts",
+    "credential_witnesses",
+    "limitations",
+    "original_candidate_identity",
+    "package_metadata",
+    "reference_integration",
+    "schema",
+    "sources"
+  ],
+  "type": "object"
+}
