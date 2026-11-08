@@ -191,3 +191,7 @@ The [original29-file materialization verification](reports/postcert/2026-11-08-o
 ## Remaining component-owner contracts
 
 [Evidence classes, runtime bounds and accepted package context](reports/postcert/2026-11-08-owner-contract-evidence/README.md) explains the nineteen unchecked clauses without treating them as nineteen product defects or changing release requirements.
+
+## Directory semantic and operational boundaries
+
+[Shared fixture definitions, actual accepted-adapter scope and separate operational gates](reports/postcert/2026-11-08-directory-contract-semantics/README.md) reconcile six owner conjunctions without new execution, credit or checkbox completion.

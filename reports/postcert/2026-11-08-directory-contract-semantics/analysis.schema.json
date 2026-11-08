@@ -1,0 +1,377 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "boundaries": {
+      "additionalProperties": false,
+      "properties": {
+        "all43_http_routes_execution_established": {
+          "type": "boolean"
+        },
+        "corrected_successor_frozen": {
+          "type": "boolean"
+        },
+        "historical_inventory_complete": {
+          "type": "boolean"
+        },
+        "independent_external_certification_established": {
+          "type": "boolean"
+        },
+        "independent_interoperability_established": {
+          "type": "boolean"
+        },
+        "new_qualification_credit": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "new_qualifying_tests": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "new_runtime_execution": {
+          "type": "boolean"
+        },
+        "original_receipts_reopened": {
+          "type": "boolean"
+        },
+        "private_originals_distributed": {
+          "type": "boolean"
+        },
+        "product_source_repairs": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "production_operational_parity_established": {
+          "type": "boolean"
+        },
+        "release_or_cutover_authorized": {
+          "type": "boolean"
+        },
+        "whole_owner_clause_changes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "zero_known_defects_established": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "original_receipts_reopened",
+        "new_runtime_execution",
+        "new_qualification_credit",
+        "new_qualifying_tests",
+        "whole_owner_clause_changes",
+        "product_source_repairs",
+        "historical_inventory_complete",
+        "corrected_successor_frozen",
+        "zero_known_defects_established",
+        "all43_http_routes_execution_established",
+        "production_operational_parity_established",
+        "independent_interoperability_established",
+        "independent_external_certification_established",
+        "release_or_cutover_authorized",
+        "private_originals_distributed"
+      ],
+      "type": "object"
+    },
+    "candidate_digest": {
+      "type": "string"
+    },
+    "canonical_root_commit": {
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 64,
+      "minItems": 1,
+      "type": "array"
+    },
+    "owner_clauses": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "owner_body_sha256": {
+            "type": "string"
+          },
+          "owner_clause_id": {
+            "type": "string"
+          },
+          "proposed_atom_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 64,
+            "minItems": 1,
+            "type": "array"
+          },
+          "whole_clause_verified": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "owner_clause_id",
+          "owner_body_sha256",
+          "proposed_atom_ids",
+          "whole_clause_verified"
+        ],
+        "type": "object"
+      },
+      "maxItems": 64,
+      "minItems": 1,
+      "type": "array"
+    },
+    "policy_findings": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 64,
+      "minItems": 1,
+      "type": "array"
+    },
+    "reference_accounting": {
+      "additionalProperties": false,
+      "properties": {
+        "case_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "components": {
+          "additionalProperties": false,
+          "properties": {
+            "directory-php": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "directory-rust": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "directory-php",
+            "directory-rust"
+          ],
+          "type": "object"
+        },
+        "edge_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "existing_edge_references": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "existing_reference_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "existing_support_references": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "original_receipt_reference_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "support_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "targets": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 64,
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "case_definitions",
+        "support_definitions",
+        "edge_definitions",
+        "existing_support_references",
+        "existing_edge_references",
+        "existing_reference_count",
+        "components",
+        "original_receipt_reference_count",
+        "targets"
+      ],
+      "type": "object"
+    },
+    "rust_adapter_context": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "case_id": {
+            "type": "string"
+          },
+          "effective_source_predicate": {
+            "type": "string"
+          },
+          "function": {
+            "type": "string"
+          },
+          "function_sha256": {
+            "type": "string"
+          },
+          "limitation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "case_id",
+          "function",
+          "function_sha256",
+          "effective_source_predicate",
+          "limitation"
+        ],
+        "type": "object"
+      },
+      "maxItems": 64,
+      "minItems": 1,
+      "type": "array"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "shared_contracts": {
+      "additionalProperties": false,
+      "properties": {
+        "behavior_sha256": {
+          "type": "string"
+        },
+        "behavior_vector_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "byte_equal_fixture_pairs": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "contract_version": {
+          "type": "string"
+        },
+        "http_route_metadata_definitions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "http_sha256": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "contract_version",
+        "behavior_sha256",
+        "http_sha256",
+        "byte_equal_fixture_pairs",
+        "behavior_vector_definitions",
+        "http_route_metadata_definitions"
+      ],
+      "type": "object"
+    },
+    "shared_validation": {
+      "additionalProperties": false,
+      "properties": {
+        "byte_equal_source_functions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "existing_cross_flavor_coordinates": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "inference": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "byte_equal_source_functions",
+        "existing_cross_flavor_coordinates",
+        "inference"
+      ],
+      "type": "object"
+    },
+    "source_review_sha256": {
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "commit": {
+            "type": "string"
+          },
+          "component": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "component",
+          "repository",
+          "commit",
+          "path",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "maxItems": 64,
+      "minItems": 1,
+      "type": "array"
+    },
+    "validation": {
+      "additionalProperties": false,
+      "properties": {
+        "private_overlay_controls": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "private_owner_atom_controls": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source_and_metadata_only": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "private_overlay_controls",
+        "private_owner_atom_controls",
+        "source_and_metadata_only"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema",
+    "canonical_root_commit",
+    "candidate_digest",
+    "as_of",
+    "reference_accounting",
+    "shared_contracts",
+    "shared_validation",
+    "rust_adapter_context",
+    "owner_clauses",
+    "policy_findings",
+    "sources",
+    "source_review_sha256",
+    "validation",
+    "boundaries",
+    "limitations"
+  ],
+  "type": "object"
+}

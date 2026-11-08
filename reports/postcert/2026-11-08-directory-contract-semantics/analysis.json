@@ -1,0 +1,306 @@
+{
+  "as_of": "2026-11-08",
+  "boundaries": {
+    "all43_http_routes_execution_established": false,
+    "corrected_successor_frozen": false,
+    "historical_inventory_complete": false,
+    "independent_external_certification_established": false,
+    "independent_interoperability_established": false,
+    "new_qualification_credit": 0,
+    "new_qualifying_tests": 0,
+    "new_runtime_execution": false,
+    "original_receipts_reopened": false,
+    "private_originals_distributed": false,
+    "product_source_repairs": 0,
+    "production_operational_parity_established": false,
+    "release_or_cutover_authorized": false,
+    "whole_owner_clause_changes": 0,
+    "zero_known_defects_established": false
+  },
+  "candidate_digest": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "limitations": [
+    "Counts are existing reference joins, not new executed tests. Root ledgers, accepted receipts and certificate validators remain qualification authority.",
+    "Seventeen behavior-vector definitions and forty-three HTTP metadata records are different units; neither equals complete protocol conformance.",
+    "Raw unit-test bodies can differ from the exact installed adapter dispatch. Preserve both source layers and their limits.",
+    "A lookup for PHP PARITY.md was an invalid filename assumption at the pinned commit, not a product defect. Five actual release/operations/parity policies and two qualified READMEs were used.",
+    "The initial analytical preparation refused an incorrect one-toolchain assumption. Corrected Rust coverage uses MSRV1.88 and Rust1.98.0, two Linux architectures and three modes, with one rust flavor.",
+    "The six whole owner conjunctions remain unverified and unchanged. Twenty-one analytical atoms are not twenty-one completed owner requirements.",
+    "Private source captures, original outputs, credentials and operational locators are not distributed here. The full post-certification programme remains incomplete."
+  ],
+  "owner_clauses": [
+    {
+      "owner_body_sha256": "469fc5576172f267a6e706999a789ee286e8d8c7217ee1523ca63913aea198ba",
+      "owner_clause_id": "RobLe3/iicp-directory-php#140:2",
+      "proposed_atom_ids": [
+        "PHP140.2.behavior",
+        "PHP140.2.http",
+        "PHP140.2.catalog"
+      ],
+      "whole_clause_verified": false
+    },
+    {
+      "owner_body_sha256": "469fc5576172f267a6e706999a789ee286e8d8c7217ee1523ca63913aea198ba",
+      "owner_clause_id": "RobLe3/iicp-directory-php#140:3",
+      "proposed_atom_ids": [
+        "PHP140.3.bootstrap",
+        "PHP140.3.backup",
+        "PHP140.3.restart",
+        "PHP140.3.migrate",
+        "PHP140.3.rollback"
+      ],
+      "whole_clause_verified": false
+    },
+    {
+      "owner_body_sha256": "469fc5576172f267a6e706999a789ee286e8d8c7217ee1523ca63913aea198ba",
+      "owner_clause_id": "RobLe3/iicp-directory-php#140:5",
+      "proposed_atom_ids": [
+        "PHP140.5.authority",
+        "PHP140.5.production-rollback"
+      ],
+      "whole_clause_verified": false
+    },
+    {
+      "owner_body_sha256": "f58b1e18b83fa133231fe30bcbb99ee5eccedb2497ad2f4ba1df8c3a95a8e062",
+      "owner_clause_id": "RobLe3/iicp-directory-rust#102:1",
+      "proposed_atom_ids": [
+        "RUST102.1.http",
+        "RUST102.1.config",
+        "RUST102.1.compatibility"
+      ],
+      "whole_clause_verified": false
+    },
+    {
+      "owner_body_sha256": "f58b1e18b83fa133231fe30bcbb99ee5eccedb2497ad2f4ba1df8c3a95a8e062",
+      "owner_clause_id": "RobLe3/iicp-directory-rust#102:3",
+      "proposed_atom_ids": [
+        "RUST102.3.reach",
+        "RUST102.3.restart",
+        "RUST102.3.credentials",
+        "RUST102.3.backup",
+        "RUST102.3.migrate",
+        "RUST102.3.rollback"
+      ],
+      "whole_clause_verified": false
+    },
+    {
+      "owner_body_sha256": "f58b1e18b83fa133231fe30bcbb99ee5eccedb2497ad2f4ba1df8c3a95a8e062",
+      "owner_clause_id": "RobLe3/iicp-directory-rust#102:4",
+      "proposed_atom_ids": [
+        "RUST102.4.catalog",
+        "RUST102.4.parity"
+      ],
+      "whole_clause_verified": false
+    }
+  ],
+  "policy_findings": [
+    "Persistent production-equivalent REACH and production rollback remain separate preview-promotion/cutover gates. This analysis maps their ownership; it neither executes nor waives them.",
+    "A frozen versioned reference is not a permanent future Rust operator-ABI promise. Documented HTTP/integrity changes remain subject to shared-contract review.",
+    "PHP expand-first schema changes may remain after application rollback. Do not infer universal destructive migration reversal.",
+    "The PHP-authority statement is a qualified-source policy boundary, not a fresh live-production observation.",
+    "PHP node-health recovery, released-artifact operator recovery and production service recovery are distinct evidence scopes.",
+    "Rust migration evidence follows documented empty-database bootstrap and incompatible-existing-schema refusal; it does not establish automatic incremental migrations."
+  ],
+  "reference_accounting": {
+    "case_definitions": 47,
+    "components": {
+      "directory-php": 132,
+      "directory-rust": 300
+    },
+    "edge_definitions": 45,
+    "existing_edge_references": 414,
+    "existing_reference_count": 432,
+    "existing_support_references": 18,
+    "original_receipt_reference_count": 32,
+    "support_definitions": 2,
+    "targets": [
+      "linux-aarch64",
+      "linux-x86_64"
+    ]
+  },
+  "rust_adapter_context": [
+    {
+      "case_id": "directory-rust::credential-missing",
+      "effective_source_predicate": "Installed HTTP POST /v1/peers without a bearer credential must return401.",
+      "function": "http_postcondition",
+      "function_sha256": "bffd254e3110a1068066a91c3e01a7355a9af9dad9e010c9bbc2ff6ebfdcee32",
+      "limitation": "Does not establish every protected route or authority role."
+    },
+    {
+      "case_id": "directory-rust::credential-expired",
+      "effective_source_predicate": "Installed snapshot HTTP checks a signed non-expired unregistered control (401 with specific registration cause), then an expired token (401/token_expired).",
+      "function": "replica_snapshot_postcondition",
+      "function_sha256": "48dbd5ae29f78c0f57ef534edcca58cd4fde6cde583c2ab7af770830204057de",
+      "limitation": "The non-expired unregistered control is not authorized snapshot access; registered authorized access is checked separately by rotation."
+    },
+    {
+      "case_id": "directory-rust::credential-rotated",
+      "effective_source_predicate": "Installed replica registration and snapshot access succeed; re-registration retains replica ID and changes token; old token fails401/rotated while replacement succeeds200.",
+      "function": "replica_snapshot_postcondition",
+      "function_sha256": "48dbd5ae29f78c0f57ef534edcca58cd4fde6cde583c2ab7af770830204057de",
+      "limitation": "Specific replica/snapshot role, not universal bearer revocation or all credential classes."
+    },
+    {
+      "case_id": "directory-rust::credential-replayed",
+      "effective_source_predicate": "Installed registration/heartbeat plus SQL observes first accepted HMAC verification, refuses replay from advancing verified_at, rotates challenges and accepts a fresh response afterward.",
+      "function": "credential_replay_postcondition",
+      "function_sha256": "d0f0c3911c4cde6effc43136d3e8c7d954a787981c6f7be688e589744f2db2c9",
+      "limitation": "Heartbeat may still return200 while cryptographic liveness is refused; not raw fixture-set membership or all replay protocols."
+    },
+    {
+      "case_id": "directory-rust::signature-mismatch",
+      "effective_source_predicate": "Installed HTTP/SQL checks initial and valid heartbeat verification; one HMAC nibble is tampered, verified_at must not advance, challenge rotates, and subsequent valid response recovers.",
+      "function": "signature_mismatch_postcondition",
+      "function_sha256": "9ce75fa68ae17257d271e9206b27af92ece83a7f007a877a6c18a8ad50d69e1e",
+      "limitation": "Not the raw replica-event Ed25519 unit predicate; no claim about all signed event paths."
+    },
+    {
+      "case_id": "directory-rust::rate-limit",
+      "effective_source_predicate": "Installed registration accepts60 expected422 validation controls, refuses two admissions429/IICP-E034/retry_after60 within the bounded window, then validation recovers after the window.",
+      "function": "registration_rate_postcondition",
+      "function_sha256": "07c6cac6596022c553b91bbd4945c4bd54e8b7ed363e24db65950868458d70d9",
+      "limitation": "Not a general throughput benchmark, universal rate policy or every rate-limited endpoint."
+    }
+  ],
+  "schema": "iicp.public-directory-contract-semantics.v1",
+  "shared_contracts": {
+    "behavior_sha256": "61f84608db554cf2a3da02c46e01f27c77e57c9553ade0da8c5a017860d73f3f",
+    "behavior_vector_definitions": 17,
+    "byte_equal_fixture_pairs": 3,
+    "contract_version": "v1.10.80",
+    "http_route_metadata_definitions": 43,
+    "http_sha256": "62fad592a33305a754353c43f6476d257f01ccf6e3cfdbf391d03717ce4796b5"
+  },
+  "shared_validation": {
+    "byte_equal_source_functions": 7,
+    "existing_cross_flavor_coordinates": 18,
+    "inference": "Existing acceptance plus exact bound driver/adapter output guards, not fresh raw-output inspection or an independent runtime reproduction."
+  },
+  "source_review_sha256": "ba4d3af99d71a28814551bf04555487a4455f75b1ca328f76f9160ae896d8cd0",
+  "sources": [
+    {
+      "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "component": "directory-php",
+      "path": "parity/contract-v1.10.80.json",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "63c6e4e5b2490974956eeacb606631240489b855093870d54049b161c3cd519c"
+    },
+    {
+      "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "component": "directory-php",
+      "path": "parity/behavior-contract-v1.json",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "61f84608db554cf2a3da02c46e01f27c77e57c9553ade0da8c5a017860d73f3f"
+    },
+    {
+      "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "component": "directory-php",
+      "path": "parity/http-contract-v1.json",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "62fad592a33305a754353c43f6476d257f01ccf6e3cfdbf391d03717ce4796b5"
+    },
+    {
+      "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "component": "directory-php",
+      "path": "scripts/pre1_installed_discovery.py",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "c2700cb0d53b9a7486cd10906efc2bc169b4a268b0e025aaa0a050862972525e"
+    },
+    {
+      "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "component": "directory-rust",
+      "path": "parity/contract-v1.10.80.json",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "63c6e4e5b2490974956eeacb606631240489b855093870d54049b161c3cd519c"
+    },
+    {
+      "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "component": "directory-rust",
+      "path": "parity/behavior-contract-v1.json",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "61f84608db554cf2a3da02c46e01f27c77e57c9553ade0da8c5a017860d73f3f"
+    },
+    {
+      "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "component": "directory-rust",
+      "path": "parity/http-contract-v1.json",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "62fad592a33305a754353c43f6476d257f01ccf6e3cfdbf391d03717ce4796b5"
+    },
+    {
+      "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "component": "directory-rust",
+      "path": "scripts/pre1_installed_discovery.py",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "6ee9b409b60b1e35e2809c203612081c63be1a541c9402504159e020f3160b95"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "component": "directory-php",
+      "path": "README.md",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "368fd3d4e8ef82750b26ffcbf315258f2f1a9082c0e697a1aee5df6c548cb1a3"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "component": "directory-rust",
+      "path": "README.md",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "5788591e2db65bd5aa7aca0c9995344ea0f48089106470179a44d3630f780e21"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "component": "directory-php",
+      "path": "RELEASE_POLICY.md",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "d7c16437adf6afd1829d6fb5be71ca4b9cdfb3debdb8ea12133441d48d9d435d"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "component": "directory-php",
+      "path": "OPERATIONS.md",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "1b3f6909332e4df2ae236b5640f8e2e65a2816f1b3c056b011f871c42499d815"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "component": "directory-rust",
+      "path": "RELEASE_POLICY.md",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "c253ca4685e78d9660143aae3dddb822dd2d14f4a28cb419a0d15ec722af5851"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "component": "directory-rust",
+      "path": "OPERATIONS.md",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "37baf9547176be53b25b89a02f2091bcc65995e08ed4b0cc20f68f55a37d9d6e"
+    },
+    {
+      "commit": "b95a362ad8f974334994ca73cd20210388a2362f",
+      "component": "directory-rust",
+      "path": "PARITY.md",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "7914511293d940f9393cc03ee60efbea4897d48da4085c8046e2fe979d38626b"
+    },
+    {
+      "commit": "134c0a0f297a120c2e97d5dc891dcac90c293a57",
+      "component": "directory-php",
+      "path": "scripts/pre1_package_execution.py",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "b0187f49b5c123bd3f3817db9f3535ed8a6b68a1dfa68bc4db53bfa6ad8cc59f"
+    },
+    {
+      "commit": "6a886a633d50e106ef1e2d5ff21b9e9002e070da",
+      "component": "directory-rust",
+      "path": "scripts/pre1_package_execution.py",
+      "repository": "RobLe3/iicp-directory-rust",
+      "sha256": "7c0115946e3f161a5388ffe303751f197313ceb666358c4f709ac9655a25294d"
+    }
+  ],
+  "validation": {
+    "private_overlay_controls": 31,
+    "private_owner_atom_controls": 16,
+    "source_and_metadata_only": true
+  }
+}
