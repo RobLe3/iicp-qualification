@@ -77,5 +77,35 @@ def render_callers(v):
  lines+=['','See [pinned sources](SOURCES.md), [the complete finite-catalog supplement](../2026-11-08-finite-catalog-semantics/README.md) and [canonical status](../../STATUS.md).',''];return '\n'.join(lines)
 def check_callers():
  v=load_callers();text=render_callers(v);require((CALLER_DATA/'README.md').read_text()==text,'caller narrative differs');require(json.loads((CALLER_DATA/'manifest.json').read_text())=={'analysis_sha256':CALLER_DATA_PIN,'schema_sha256':CALLER_SCHEMA_PIN,'readme_sha256':sha(text.encode()),'new_qualification_credit':0,'private_originals_distributed':False},'caller manifest differs');return True
+
+# Additive fixed derivative: executed finite local witnesses, never campaign credit.
+WITNESS_DATA=ROOT/'reports/postcert/2026-11-08-executable-reference-witnesses'
+WITNESS_DATA_PIN='e8a95439046d7f9d82fbe635ee0464bfa9b8c35bcd3afb2088c65d017862ab68'
+WITNESS_SCHEMA_PIN='39994773aba47700952413406c2c769fa7e77f44881d5c690d3f216fbbe4be34'
+def load_witnesses():return json.loads((WITNESS_DATA/'analysis.json').read_bytes())
+def validate_witnesses(v):
+ privacy(v);raw=(WITNESS_DATA/'analysis.schema.json').read_bytes();require(sha(raw)==WITNESS_SCHEMA_PIN,'witness schema identity');Draft202012Validator(json.loads(raw)).validate(v)
+ rows=v['groups'];require(len(rows)==len({r['original_case_id'] for r in rows})==5,'witness group scope')
+ require(sum(r['local_unit_test_methods_passed'] for r in rows)==14 and sum(r['existing_reference_count'] for r in rows)==206,'witness unit/reference accounting')
+ require(v['counts']=={'finite_witness_groups':5,'local_unit_test_methods_passed':14,'existing_reference_coordinates':206,'successful_profile_controls':8,'current_admission_controls':10,'retained_stopped_local_fixtures':2,'product_test_retries':0,'new_qualification_credit':0},'witness count scope')
+ require(type(v['counts']['new_qualification_credit'])is int and v['counts']['new_qualification_credit']==0,'witness credit type')
+ for r in rows:require(r['status']=='LOCAL_UNIT_PASS' and type(r['qualification_credit'])is int and r['qualification_credit']==0 and r['product_source_changed']is False,'witness admission/source inflation')
+ require(all(x is False for x in v['boundaries'].values()),'witness authority/disclosure inflation')
+ require(sha(canonical(v))==WITNESS_DATA_PIN,'reviewed witness identity');return True
+def render_witnesses(v):
+ validate_witnesses(v)
+ lines=['# Finite reference witnesses: five local groups executed','','Five bounded local witness groups passed 14 unit test methods against unchanged qualified source. These are new local observations, not new qualification credit or a frozen corrected reference.','',
+ '## Counts and scope','','| Component | Local test methods | Scope |','|---|---:|---|']
+ for r in v['groups']:lines+=['| '+r['component']+' | '+str(r['local_unit_test_methods_passed'])+' | '+r['executed_scope']+' |']
+ lines+=['','The five original case links retain 206 existing reference coordinates; none is newly credited. Eight actual profile controls and ten synthetic admission controls supported the local execution. Two newly created local fixtures are retained stopped, not deleted. Original refusals remain in the controlled archive.','',
+ '## Per-group boundaries','']
+ for r in v['groups']:
+  lines+=['### '+r['working_reference_id'],'','Target/runtime: '+r['target']+' / '+r['runtime']+'. Original case link: `'+r['original_case_id']+'`.','']+['- '+x for x in r['limitations']]+['']
+ lines+=['## What public validation can establish','','The fixed-data validator checks reviewed report identity, closed fields, arithmetic, privacy and Markdown/JSON consistency. It does not execute the SDKs, reconstruct original runs or verify inaccessible private captures. The non-authoring review accepted retained execution evidence within the stated scope; it is not external certification.','',
+ '## Remaining limits','']+['- '+x for x in v['limitations']]
+ lines+=['','See [source/provenance notes](SOURCES.md), [the preceding source/design interpretation](../2026-11-08-caller-source-and-release-horizon/README.md) and [canonical status](../../STATUS.md).',''];return '\n'.join(lines)
+def check_witnesses():
+ v=load_witnesses();text=render_witnesses(v);require((WITNESS_DATA/'README.md').read_text()==text,'witness narrative differs');require(json.loads((WITNESS_DATA/'manifest.json').read_text())=={'analysis_sha256':WITNESS_DATA_PIN,'schema_sha256':WITNESS_SCHEMA_PIN,'readme_sha256':sha(text.encode()),'new_qualification_credit':0,'private_originals_distributed':False},'witness manifest differs');return True
+
 if __name__=='__main__':
- check();check_callers();print('PASS: fixed source-interpretation derivatives; no qualification authority.')
+ check();check_callers();check_witnesses();print('PASS: fixed reference derivatives; no qualification authority.')

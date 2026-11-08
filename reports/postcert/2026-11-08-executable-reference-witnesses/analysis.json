@@ -1,0 +1,231 @@
+{
+  "as_of": "2026-11-08",
+  "boundaries": {
+    "controlled_expected_wording_distributed": false,
+    "corrected_reference_frozen": false,
+    "external_certification_established": false,
+    "historical_inventory_complete": false,
+    "independent_interoperability_established": false,
+    "original_outcomes_changed": false,
+    "private_coordination_or_source_concerns_distributed": false,
+    "private_originals_distributed": false,
+    "product_defect_clearance_established": false,
+    "release_or_intake_authorized": false,
+    "whole_catalog_conformance_established": false
+  },
+  "canonical_root_commit": "106aae6568d12884603068e82248bf1413371690",
+  "counts": {
+    "current_admission_controls": 10,
+    "existing_reference_coordinates": 206,
+    "finite_witness_groups": 5,
+    "local_unit_test_methods_passed": 14,
+    "new_qualification_credit": 0,
+    "product_test_retries": 0,
+    "retained_stopped_local_fixtures": 2,
+    "successful_profile_controls": 8
+  },
+  "frozen_manifest_sha256": "a694b7961e9edf66524bbdc4d08ce3a864d51d97e1c3fa5aed724ff9b4cb1d73",
+  "groups": [
+    {
+      "component": "client-python",
+      "executed_scope": "Optional absence, missing required serve configuration and valid saved configuration passing the same guard.",
+      "existing_reference_count": 96,
+      "limitations": [
+        "Not full service startup or authentication.",
+        "Credits and doctor branches were not executed in this batch.",
+        "Actionable initialization guidance is not proof of accurate custom-home diagnostic paths."
+      ],
+      "local_unit_test_methods_passed": 3,
+      "original_case_id": "client-python::config-missing",
+      "product_source_changed": false,
+      "qualification_credit": 0,
+      "retained_result_sha256": "c1b1155528022f403bce9206c27bc54fd0eb6795061fc7e97f3542d19de6bb07",
+      "runtime": "Python 3.14.10",
+      "source_commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "status": "LOCAL_UNIT_PASS",
+      "target": "macos-arm64",
+      "working_reference_id": "IFRB-PROP-PY-REQUIRED-NODE-CONFIG-v1"
+    },
+    {
+      "component": "client-typescript",
+      "executed_scope": "Optional absence and required serve refusal, with a valid saved-configuration control crossing the same guard.",
+      "existing_reference_count": 48,
+      "limitations": [
+        "Fresh compiled output and dependency bytes were checked before execution.",
+        "Not full service startup or authentication.",
+        "No new credits or doctor branch execution inferred."
+      ],
+      "local_unit_test_methods_passed": 3,
+      "original_case_id": "client-typescript::config-missing",
+      "product_source_changed": false,
+      "qualification_credit": 0,
+      "retained_result_sha256": "b7a56c25b372dcf0a6e2c533e65ff8e7f017ff1d12ea40213255711003aa9806",
+      "runtime": "Node.js 22.23.2",
+      "source_commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "status": "LOCAL_UNIT_PASS",
+      "target": "macos-arm64",
+      "working_reference_id": "IFRB-PROP-TS-REQUIRED-NODE-CONFIG-v1"
+    },
+    {
+      "component": "management",
+      "executed_scope": "Accepted logical generation survives reopen; replay and wrong-audience requests refuse with retained decision history.",
+      "existing_reference_count": 8,
+      "limitations": [
+        "No daemon or process-ownership experiment.",
+        "Rejection history may append; no universal error-atomicity claim.",
+        "The original broader process-lifecycle question remains separate."
+      ],
+      "local_unit_test_methods_passed": 1,
+      "original_case_id": "management::stale-pid-or-lock",
+      "product_source_changed": false,
+      "qualification_credit": 0,
+      "retained_result_sha256": "90a279f9c9897aeb2b2329bad8f1350e5e99b2700359329f88cb3fa62af6d70a",
+      "runtime": "Rust 1.99.1",
+      "source_commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "status": "LOCAL_UNIT_PASS",
+      "target": "macos-arm64",
+      "working_reference_id": "IFRB-PROP-MGMT-DECISION-GENERATION-PERSISTENCE-v1"
+    },
+    {
+      "component": "client-rust",
+      "executed_scope": "Two decision-validation units plus configured discovery success and a missing-decision, single-request refusal.",
+      "existing_reference_count": 48,
+      "limitations": [
+        "The integration refusal is not an arbitrary-egress-attempt detector.",
+        "No new runtime transport-outage or redirect test.",
+        "The successful policy was host-local TCP, not strict loopback or exact-port isolation."
+      ],
+      "local_unit_test_methods_passed": 4,
+      "original_case_id": "client-rust::directory-unavailable",
+      "product_source_changed": false,
+      "qualification_credit": 0,
+      "retained_result_sha256": "aa67b0e80298ba4119b5c09b3131b35758a7701495137f900783a451232a74b8",
+      "runtime": "Rust 1.99.1",
+      "source_commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "status": "LOCAL_UNIT_PASS",
+      "target": "macos-arm64",
+      "working_reference_id": "IFRB-PROP-RUST-RESTRICTED-DISCOVERY-AUTHORITY-v1"
+    },
+    {
+      "component": "directory-php",
+      "executed_scope": "Healthy/unhealthy reachability and same-node recovery/discovery in a disposable memory database with fake HTTP observations.",
+      "existing_reference_count": 6,
+      "limitations": [
+        "Not actual Directory process-crash/restart proof.",
+        "Existing development security allowances remain isolated-test limitations.",
+        "Two stopped local fixtures are retained; no old-resource deletion occurred."
+      ],
+      "local_unit_test_methods_passed": 3,
+      "original_case_id": "directory-php::process-crash-restart",
+      "product_source_changed": false,
+      "qualification_credit": 0,
+      "retained_result_sha256": "01d77fdfe71929c139188217e3252d82991da13548113eff690ccf4ad8ab6f7e",
+      "runtime": "PHP 8.3.33",
+      "source_commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "status": "LOCAL_UNIT_PASS",
+      "target": "linux-arm64-local-container",
+      "working_reference_id": "IFRB-PROP-PHP-NODE-REACHABILITY-RECOVERY-v1"
+    }
+  ],
+  "limitations": [
+    "Five finite witness groups and 14 unit methods are not five completed whole catalog requirements or 14 new qualifying edges. Original root records retain qualification authority.",
+    "The original finite qualification remains 64 shards, 218 support cells, 5,590 edge executions, four sentinels and five project-operated certificates. This batch issues no credit.",
+    "Original refusals and preparation failures remain retained separately; later local success does not rewrite them. No product test was automatically retried.",
+    "These are new focused local environments, not byte-identical reproductions of every original qualification target. Do not infer cross-platform agreement or performance from their counts or timings.",
+    "Python/TypeScript control scripts and raw captures remain in the controlled documentation handoff. Public hashes and source links alone do not establish complete public reproducibility or artifact preservation.",
+    "No Directory process-crash, exclusive process ownership, transport-outage, redirect or arbitrary-egress-attempt claim follows beyond the explicit executed scope.",
+    "Reference freeze, supported-defect clearance, historical completeness and remaining release requirements stay separate. The full programme remains incomplete."
+  ],
+  "original_candidate_identity": "sha256:e7c9aa192be21cdc5ee96e793ab97084137452653cde7580cffd22cf3890618a",
+  "review": {
+    "retained_review_sha256": "1d620320b124078084c7e5bbcaba8b4a44b3698a8683db32eb38954fbed7dd7d",
+    "scope": "Non-authoring retained source, control, execution and boundary review; not independent external certification."
+  },
+  "schema": "iicp.public-finite-local-reference-witnesses.v1",
+  "sources": [
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "src/iicp_client/identity.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "5cef3be88827e1569b3e1eed429e7a909282a09efe02fa08a721c6862be6251b"
+    },
+    {
+      "commit": "9c5b3d894ee89ef9fcde52ea0ad99d388ed62183",
+      "component": "client-python",
+      "path": "src/iicp_client/cli.py",
+      "repository": "RobLe3/iicp-client-python",
+      "sha256": "e36b132929c797e437bbb76238388f60e6ae3bcbdb5d448bde850304314eadb4"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "src/identity.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "13510a6105e9d81fd4f11c8847ef83ba1ed2d9b24e944014f4d1e3e7483acdab"
+    },
+    {
+      "commit": "97c768d8b9e90756773103e432c273a7d98ba08e",
+      "component": "client-typescript",
+      "path": "src/cli.ts",
+      "repository": "RobLe3/iicp-client-typescript",
+      "sha256": "b40eca600283c416dffa9d17e9e7ba1706a616fec42301091a1458fd41ea58c7"
+    },
+    {
+      "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "component": "management",
+      "path": "src/controller.rs",
+      "repository": "RobLe3/iicp-management",
+      "sha256": "19b6d31b3d3f132ea0e10833044a860df92675f335ad06f79e08f0f1be84f9a4"
+    },
+    {
+      "commit": "9b9c910fe6443068e71152f1a95f41639041c647",
+      "component": "management",
+      "path": "tests/controller_and_adapters.rs",
+      "repository": "RobLe3/iicp-management",
+      "sha256": "02250743105bf92e4799f141179a6d1d584d41acc8b7dab6eeedf9fc07384620"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "src/client.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "0b8b2d1944d23b4ac3d7192c093b827d5bb3c37afa32a964da92eaee3ecfad3c"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "src/http.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "12e636998dfc287e30312af06e6fa7456153746273a12ae0c4ee6869ae24f7cc"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "src/restricted_directory.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "0c093ca2b7db80ba928772d3abcb78446cef55fadab04393d236a51cfc8e6edd"
+    },
+    {
+      "commit": "0b8b529262977b6482dd7900d473e7d152ba9293",
+      "component": "client-rust",
+      "path": "tests/restricted_directory_client.rs",
+      "repository": "RobLe3/iicp-client-rust",
+      "sha256": "07ba83ac4b3cb41b0bd6af974e8c9ba4f5291a86db9c7263860e1142f2ca2995"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "component": "directory-php",
+      "path": "app/Console/Commands/NodeLifecycleCommand.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "e0423f1a232796bca65fe721020bb78501579df370df4cf66e4d46be3cd79701"
+    },
+    {
+      "commit": "2dfd228b49c587150a44f448cea1351a9f039d32",
+      "component": "directory-php",
+      "path": "tests/Feature/NodeLifecycleReachabilityTest.php",
+      "repository": "RobLe3/iicp-directory-php",
+      "sha256": "519408388a42a3640f5487c3f74ff71740b07949dfaf314a3e476a15dea33ceb"
+    }
+  ]
+}

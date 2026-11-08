@@ -203,3 +203,7 @@ The [original29-file materialization verification](reports/postcert/2026-11-08-o
 ## Required callers and current release dependencies
 
 [Required caller guards, finite recovery/authority predicates and the refreshed dependency horizon](reports/postcert/2026-11-08-caller-source-and-release-horizon/README.md) preserve existing credit and separate source findings from actual runtime evidence.
+
+### Executed finite reference witnesses
+
+[Five local witness groups / 14 unit methods](reports/postcert/2026-11-08-executable-reference-witnesses/README.md) now supplement the source/design review. Their explicit limits, zero qualification credit and controlled-archive reproduction boundary remain separate from original qualification and corrected-baseline freeze.
