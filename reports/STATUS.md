@@ -1,6 +1,6 @@
 # Qualification status
 
-Verified snapshot: **2026-11-08T12:12:35Z**.
+Verified snapshot: **2026-11-16T11:06:36Z**.
 
 `[####################]` **64/64 accepted shards**
 
@@ -16,10 +16,10 @@ Sentinels: **4/4** · Project-operated certificates: **5/5**
 
 ## Latest registered activity
 
-- Recorded outcome: **PASS** (blocker, 2026-11-08T12:11:32Z).
+- Recorded outcome: **REFUSED** (blocker, 2026-11-16T02:13:38.267103+00:00).
 - The recorded blocker or next permitted action changed; no additional authority is granted.
 - Actual workload launched in this activity: **false**.
-- Next gate: No next action is inferred from this record.
+- Next gate: Obtain the applicable exact authorization before execution.
 
 ## Evidence and limits
 
